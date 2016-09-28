@@ -30,13 +30,13 @@ two missing placeholders -- 88 and 99. The arguments for washer are:
 3.  `value` is the value that replaces the anything in `...`
 
 
-{% highlight r %}
+```
 library(furniture)
 
 df <- data.frame(x = c(1, 2, 1, 1, 9, 0, 1), 
                  y = c(5, 8, 9, 88, 99, 4, 9))
 washer(df$x, 9)
-{% endhighlight %}
+```
 ```
 ## [1]  1  2  1  1 NA  0  1
 ```
