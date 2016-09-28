@@ -2,7 +2,7 @@
 markdown:         kramdown
 syntax-highlighting:
   enabled : true
-  css: syntax.css
+
 
 # Permalinks
 permalink:        pretty
@@ -21,7 +21,7 @@ author:
 paginate:         5
 
 # Custom vars
-version:          2.0.0
+version:          GitHub Hosted
 
 github:
   repo:           https://github.com/tysonstanley
