@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         kramdown
+syntax-highlighting:
+  enabled : true
+  css: syntax.css
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Chaos to Clarity in R
+tagline:          'R Made SimpleR'
+description:      'I love programming in #rstats, making #dataviz, dabbling in #DataScience, researching #adolescentHealth and #chronicIllness. I am Tyson Barrett.'
+url:              https://tysonstanley.github.io
+baseurl:          ''
+
+author:
+  name:           'Tyson S. Barrett'
+  url:            https://twitter.com/healthandstats
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/tysonstanley
+

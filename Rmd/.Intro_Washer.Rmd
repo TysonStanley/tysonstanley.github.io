@@ -1,0 +1,60 @@
+---
+title: "Wash Your Data"
+author: "Tyson Barrett"
+date: "2016-09-01"
+output: md_document
+---
+
+The `washer()` function in the `furniture` R package can be used to clean your data in several situations. I'll show you a few situations where it is particularly helpful.
+
+To install, use the following code to install from GitHub.
+
+```{r setup, eval=FALSE}
+library(devtools)
+install_github("tysonstanley/furniture")
+```
+
+## Placeholders
+
+If you have data that has placeholders for missingness or another value, `washer()`. For example, in the following data.frame the x variable contains a single missing value placeholder -- 9. The variable, y, has two missing placeholders -- 88 and 99. The arguments for washer are:
+
+`washer(x, ..., value=NA)`
+
+1. `x` is a variable. It can be numeric, factor, or character.
+2. `...` is a list of values or functions.
+3. `value` is what replaces the values from `...`
+
+```{r placeholders}
+library(furniture)
+df <- data.frame(x = c(1, 2, 1, 1, 9, 0, 1), 
+                 y = c(5, 8, 9, 88, 99, 4, 9))
+washer(df$x, 9)
+washer(df$y, 88, 99)
+```
+
+
+## Combining Levels
+
+Sometimes there are several small levels in a categorical variable that you would like to combine into an "other" category. This can save a lot of time writing a bunch of `ifelse` statements.
+
+```{r combine}
+fct <- factor(c(rep(1, 30), rep(2, 20), rep(3, 5), rep(4, 2)), 
+              labels = c("BigGroup", "MidGroup", "Small", "Tiny"))
+washer(fct, "Small", "Tiny", value="Other")
+```
+
+Since `washer()` converts factors to character vectors, you can add a simple `as.factor()` to retain factor status.
+
+```{r combine2}
+as.factor(washer(fct, "Small", "Tiny", value="Other"))
+```
+
+Note that this may change the order of your factor. 
+
+```{r}
+factor(washer(fct, "Small", "Tiny", value="Other"), 
+       levels = c("MidGroup", "BigGroup", "Other"))
+```
+
+
+
