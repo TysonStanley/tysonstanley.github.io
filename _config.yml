@@ -1,8 +1,5 @@
 # Dependencies
 markdown:         kramdown
-syntax-highlighting:
-  enabled : true
-  css: public/css/syntax.css
 
 # Permalinks
 permalink:        pretty
