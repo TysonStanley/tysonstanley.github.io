@@ -2,7 +2,7 @@
 markdown:         kramdown
 syntax-highlighting:
   enabled : true
-  css: syntax.css
+  css: public/css/syntax.css
 
 # Permalinks
 permalink:        pretty
