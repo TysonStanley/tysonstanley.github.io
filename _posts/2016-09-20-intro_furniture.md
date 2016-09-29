@@ -8,21 +8,29 @@ comments: true
 
 ![Table in Forest]({{ site.baseurl }}/assets/images/table_in_forest.jpg)
 
-# Introducing {% highlight r %} furniture {% endhighlight %}
+# Introducing `furniture`
+This R package provides "furniture" for quantitative researchers.
 
 > Furniture is meant to be used and enjoyed. - Natalie Morales
 
-The new `furniture` R package is currently available on github (it will be submitted to CRAN very soon). It can be downloaded via:
+Natalie Morales is right. Furniture is meant for our enjoyment. This package provides functions that are just like furniture--they provide something to look at but they are also there to make your life better.
+
+I know there are over 9,000 packages on CRAN alone but there are many reasons to pay some attention. `furniture` contains functions that are particularly useful for both exploratory data analysis and publishing your results. In conjunction with the **tidy tools** that Hadley Wickham and the RStudio team have developed, `furniture` becomes a valuable tool to understand your data and communicate it.
+
+I'll demonstrate, on data from the 2011-2012 release of the [NHANES][NHANES] data, how we can explore the relationship between demographic characteristics and dietary and other health behaviors in children and adolescents.  I have provided the data [here]( {{ site.url }}/blog/assets/Data/NHANES.zip).
+
+The CRAN 1.0.1 version can be downloaded via:
+{% highlight r %}
+install.packages("furniture")
+{% endhighlight %}
+
+The developmental version (1.1.0) can be downloaded via:
 {% highlight r %}
 if (!require(devtools){
   install.packages(devtools)
 }
 devtools::install_github("tysonstanley/furniture")
 {% endhighlight %}
-
-I know there are over 9,000 packages on CRAN alone but there are many reasons to pay some attention. `furniture` contains functions that are particularly useful for both exploratory data analysis and publishing your results. In conjunction with the **tidy tools** that Hadley Wickham and the RStudio team have developed, `furniture` becomes a valuable tool to understand your data and communicate it.
-
-I'll demonstrate, on data from the 2011-2012 release of the [NHANES][NHANES] data, how we can explore the relationship between demographic characteristics and dietary and other health behaviors in children and adolescents.  I have provided the data [here]( {{ site.url }}/blog/assets/Data/NHANES.zip).
 
 ## Example
 
