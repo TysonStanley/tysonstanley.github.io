@@ -3,7 +3,6 @@ layout: post
 title: "Simple Table 1 in R"
 author: Tyson S. Barrett
 comments: true
-date:   2016-08-27 18:36:06 -0600
 categories: jekyll update
 ---
 
