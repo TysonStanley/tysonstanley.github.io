@@ -2,7 +2,6 @@
 layout: post
 title: "Wash Your Data"
 author: "Tyson Barrett"
-date: "2016-09-01"
 comments: true
 categories: jekyll update
 ---
