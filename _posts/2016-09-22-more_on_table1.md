@@ -7,7 +7,7 @@ categories: jekyll update
 ---
 
 As a follow up to my first post introducing the `furniture` package, I
-wanted to show a much more in depth demonstration of `table1()`'s
+wanted to show a much more in depth demonstration of `table1`'s
 capabilities and ease of use. It is the star function of the package, afterall. To prep the data, I will also use another important function in the package--`washer()`--that allows easy cleaning of variables.
 
 Similarly to my post on `furniture` we will use NHANES (see [my post

@@ -17,14 +17,14 @@ Natalie Morales is right. Furniture is meant for our enjoyment. This package pro
 
 I know there are over 9,000 packages on CRAN alone but there are many reasons to pay some attention. `furniture` contains functions that are particularly useful for both exploratory data analysis and publishing your results. In conjunction with the **tidy tools** that Hadley Wickham and the RStudio team have developed, `furniture` becomes a valuable tool to understand your data and communicate it.
 
-I'll demonstrate, on data from the 2011-2012 release of the [NHANES][NHANES] data, how we can explore the relationship between demographic characteristics and dietary and other health behaviors in children and adolescents.  I have provided the data [here]( {{ site.url }}/blog/assets/Data/NHANES.zip).
+I'll demonstrate, on data from the 2011-2012 release of the [NHANES][NHANES] data, how we can explore the relationship between demographic characteristics and dietary and other health behaviors in children and adolescents. I have provided the data [here]( {{ site.url }}/blog/assets/Data/NHANES.zip).
 
-The CRAN 1.0.1 version can be downloaded via:
+Before we start, you can download the package in two ways. The first, the stable version (1.0.1) on CRAN can be downloaded via:
 {% highlight r %}
 install.packages("furniture")
 {% endhighlight %}
 
-The developmental version (1.1.0) can be downloaded via:
+The second option is the developmental version (1.1.0), which can be downloaded from GitHub via:
 {% highlight r %}
 if (!require(devtools){
   install.packages(devtools)
@@ -59,7 +59,7 @@ d <- list.files() %>%                   ## gets list of files in working directo
          paq710, paq706) %>%
   filter(ridageyr < 20)                 ## only adolescents and children 
 
-names(d) <- c("id", "gender", "age", "asthma", "loseweight", ## renames the variables
+names(d) <- c("id", "gender", "age", "asthma", "loseweight",  ## renames the variables
               "tv_hrs", "act60")  
               
 {% endhighlight %}
@@ -68,7 +68,6 @@ Now we have a data frame `d` that has our variables and only contains the childr
 
 1. `washer`
 2. `table1`
-3. `frames`
 
 First, washer takes a variable and several values and changes them to another value (the default is `NA`). Here we are replacing place holder values in the data with `NA`. 
 
@@ -100,7 +99,9 @@ We also model the data using a poisson distribution and a log link (our outcomes
 
 {% highlight r %}
 ### 3. Check descriptives using table1()
-table1(d, act60, tv_hrs, gender, age, splitby = ~asthma, test = TRUE)
+table1(d, act60, tv_hrs, gender, age, 
+       splitby = ~asthma, 
+       test = TRUE)
 {% endhighlight %}
 
 ```
@@ -117,29 +118,14 @@ table1(d, act60, tv_hrs, gender, age, splitby = ~asthma, test = TRUE)
                8.75 (5.39) 10.28 (5.21)                          
 ```
 
-{% highlight r %}
-### 4. Model and report average marginal effects via frames()
-fit = glm(tv_hrs ~ asthma + gender + age, data=d, family = poisson(link = "log"))
-ame = frames(fit, bootsize = 100)     ## Produce average marginal effect of poisson model
-round(ame$AME, 3) * (60)              ## Change units: in minutes, instead of hours
-{% endhighlight %}
 
 
-```
-               AME Lower Upper
-(Intercept)  72.78 67.26 78.66
-asthmaYes     7.74  0.00 13.98
-genderfemale -1.92 -6.36  2.64
-age           1.80  1.32  2.28
-```
-
-Overall, it appears kids with asthma watch 8 minutes more TV per day. Whether this is a meaningful amount, I'm not sure. Regardless, I hope this demonstrated to a small degree, the benefits the `furniture` package offers. I will certainly post on more in depth uses of each of the functions in `furniture` (e.g., the many ways to use the `table1` function and use it to produce a publish-ready table). 
+I hope this demonstrated to a small degree, the benefits the `furniture` package offers. I will certainly post on more in depth uses of each of the functions in `furniture` (e.g., the many ways to use the `table1` function and use it to produce a publish-ready table). 
 
 To review:
 
-1. There are great data cleaning tools in `furniture` (e.g., `washer`)
-2. There are great exploratory data analysis and communicating tools. The main function for this is `table1`, which provides a simple function to get important information about means and counts of the variables of interest and an understanding of the the relationships in the data. Further, it is well formatted for easy reporting, potentially in a publishable report.
-3. Average marginal effects provide additional tools to understand your models and the relationships you are analyzing.
+1. There is a simple data cleaning tool in `furniture` (i.e., `washer`).
+2. There is a great exploratory data analysis and communicating tool in `table1`. It provides a simple function to get important information about means and counts of the variables of interest and an understanding of the the relationships in the data. Further, it is well formatted for easy reporting, potentially in a publishable report.
 
 If you have suggestions, or find a bug, please comment below or email me: <t.barrett@aggiemail.usu.edu>.
 
