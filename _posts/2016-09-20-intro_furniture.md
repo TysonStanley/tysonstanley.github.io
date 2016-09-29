@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Introducing the Furniture R Package!"
-date:   2016-08-23 13:36:06 -0600
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
@@ -9,7 +8,7 @@ comments: true
 
 ![Table in Forest]({{ site.baseurl }}/assets/images/table_in_forest.jpg)
 
-# Introducing `furniture`
+# Introducing {% highlight r %} furniture {% endhighlight %}
 
 > Furniture is meant to be used and enjoyed. - Natalie Morales
 
@@ -162,4 +161,4 @@ If you have suggestions, or find a bug, please comment below or email me: <t.bar
 {% endif %}
 
 [NHANES]: http://wwwn.cdc.gov/nchs/nhanes/search/nhanes11_12.aspx
-[dplyr]: {{ site.url}}/blog/assets/images/dplyr.pdf
+[dplyr]: {{ site.url}}/assets/images/dplyr.pdf
