@@ -36,7 +36,7 @@ d <- list.files()[1:4] %>%                   ## gets list of files in working di
          paq710, paq706, dpq010, dpq020, dpq030,
          dpq040, dpq050, dpq060, dpq070, dpq080,
          dpq090, dpq100) %>%
-  filter(ridageyr < 30)                 ## only adolescents and children 
+  filter(ridageyr < 30)                 ## only young adults and children 
   
 names(d) <- c("id", "gender", "age", "asthma", "loseweight",  ## renames the variables
               "tv_hrs", "act60", paste0("dep", 1:10))  
@@ -54,7 +54,7 @@ type1 = function(x){
   }
 }
 
-d[] <- map(d, type1)
+d <- dmap(d, type1)
 
 ## If TV is 8 then that meant no hours watched, changed to 0
 d$tv_hrs <- washer(d$tv_hrs, 8, value=0)
