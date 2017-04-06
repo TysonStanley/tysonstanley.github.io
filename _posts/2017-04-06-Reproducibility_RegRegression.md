@@ -10,7 +10,7 @@ Below is a Prezi presentation I have prepared for a presentation I am doing on *
 
 It does not provide code on actually performing it. For that, I am going to post another time with the code and the reasoning behind each step.
 
-<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="550" height="400" src="https://prezi.com/embed/jjw8kev_00qk/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0am1TWHIwR0RnL09jSVkzVEx0OEVtakFnPT0&amp;landing_sign=i8yXOpqg1v3U0Si_kylHELbHCAb31NVPpqIN204PjvM"></iframe>
+<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="600" height="400" src="https://prezi.com/embed/jjw8kev_00qk/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0am1TWHIwR0RnL09jSVkzVEx0OEVtakFnPT0&amp;landing_sign=i8yXOpqg1v3U0Si_kylHELbHCAb31NVPpqIN204PjvM"></iframe>
 
 Thanks for following! And feel free to comment below.
 
