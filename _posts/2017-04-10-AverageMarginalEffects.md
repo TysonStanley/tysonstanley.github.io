@@ -10,7 +10,7 @@ comments: true
 
 Part of my dissertation work regards AMEs in their use with 2-part models. The presentation below was made for a seminar that I presented in and highlights the attributes of AMEs, especially in regards to logistic regression GLMs. The Monte Carlo simulation model that it proposed is partially done and will be finished soon. A paper presenting the method and the results of the simulation in much more depth will be appearing soon (I'll update this post and post anew once that it is the case).
 
-<iframe src="https://docs.google.com/presentation/d/1xRZ412P6NksYolxaRifw90u0g4NTodw-ywaknNDdgJo/embed?start=false&loop=true&delayms=60000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/1xRZ412P6NksYolxaRifw90u0g4NTodw-ywaknNDdgJo/embed?start=false&loop=true&delayms=60000" frameborder="0" width="650" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 Please feel free to post a question or a comment below. Thank you!
 
