@@ -12,7 +12,12 @@ It does not provide code on actually performing it. For that, I am going to post
 
 <iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="600" height="400" src="https://prezi.com/embed/jjw8kev_00qk/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0am1TWHIwR0RnL09jSVkzVEx0OEVtakFnPT0&amp;landing_sign=i8yXOpqg1v3U0Si_kylHELbHCAb31NVPpqIN204PjvM"></iframe>
 
-Thanks for following! And feel free to comment below.
+In a related presentation--made as a workshop for the college I work for--I present a walk through, with some R code (near the end), to perform Lasso, Ridge, and Elastic Net.
+
+<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="600" height="400" src="https://prezi.com/embed/v26jihakfxxj/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0OUNXczFBUnl0di9pbElmeFptS0Q2T3RBPT0&amp;landing_sign=iZap7pMvD_uDtUD0igIYW5AsWtyUP4nFyJqQ5rLZh6A"></iframe>
+
+They present similar information, and so I figured I'd include them together here. 
+
 
 
 {% if page.comments %} 
