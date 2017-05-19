@@ -8,6 +8,8 @@ comments: true
 
 I am currently teaching an Intro to R class for Health, Behavioral, Educational, and Social Scientists. As such, I created a [PDF handout]({{ site.baseurl }}/assets/images/DataCleaning_Handout.pdf) describing the base function `reshape()`. It is a powerful function to change your data from wide format to long format and vice versa. Other functions, including those in the `tidyverse`, are very helpful too (e.g., `gather()` and `spread()`) although I do not cover these in any depth in the handout.
 
+A PNG copy of the handout is shown below.
+
 ![Reshape]({{ site.baseurl }}/assets/images/DataCleaning_Handout.png)
 
 
