@@ -10,6 +10,8 @@ I have written a book entitled **R for the Health, Behavioral, and Social Scienc
 
 The data necessary for several chapters of the book can be downloaded [here]({{site.baseurl}} /assets/Data/NHANES_2012.rda). The code below shows the additional steps taken to clean it up (if you are interested---no pressure!).
 
+\tiny
+
 {% highlight r %}
 library(foreign)
 library(furniture)
