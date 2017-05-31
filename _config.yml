@@ -17,8 +17,6 @@ author:
 
 paginate:         6
 
-# Custom vars
-version:          1.5.1
 
 github:
   repo:           https://github.com/tysonstanley
