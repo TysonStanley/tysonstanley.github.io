@@ -6,8 +6,8 @@ permalink:        pretty
 
 # Setup
 title:            Chaos to Clarity in R
-tagline:          ' R Made SimpleR'
-description:      '#Rstats Enthusiast, Statistician, and Prevention Researcher'
+tagline:          'Tyson S. Barrett'
+description:      'Finding the clarity among the chaos of data'
 url:              https://tysonstanley.github.io
 baseurl:          ''
 
@@ -17,12 +17,8 @@ author:
 
 paginate:         6
 
-
 github:
   repo:           https://github.com/tysonstanley
-
 twitter:          https://twitter.com/healthandstats
-
 researchgate:     https://www.researchgate.net/profile/Tyson_Barrett
-
 orcid:            orcid.org/0000-0002-2137-1391

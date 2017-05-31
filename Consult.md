@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Consulting
-permalink: /Consult/
+permalink: /consult/
 ---
 
 ![Computer on Table]({{ site.baseurl }}/assets/images/table-computer.jpg)

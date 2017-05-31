@@ -1,7 +1,7 @@
 ---
 layout: page
 title: R for the Health, Behavioral, and Social Sciences
-permalink: /R/
+permalink: /r/
 ---
 
 [![Rstats]({{ site.baseurl }}/assets/images/Cover.png)]( {{site.baseurl}} /Rstats/)
