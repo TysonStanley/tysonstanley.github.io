@@ -1,10 +1,8 @@
 ---
 layout: page
-title: furniture
+title: The `furniture` `R` package
 permalink: /furniture/
 ---
-
-# The `furniture` `R` package
 
 The news from each release of the `furniture` package can be found here.
 
