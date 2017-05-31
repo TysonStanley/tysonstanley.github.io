@@ -7,7 +7,7 @@ permalink:        pretty
 # Setup
 title:            Chaos to Clarity in R
 tagline:          ' R Made SimpleR'
-description:      '#Rstats Enthusiast, Statistician, and Prevention Researcher. [**Orcid**](http://orcid.org/0000-0002-2137-1391) and [**ResearchGate**](https://www.researchgate.net/profile/Tyson_Barrett)'
+description:      '#Rstats Enthusiast, Statistician, and Prevention Researcher. I am Tyson S. Barrett.'
 url:              https://tysonstanley.github.io
 baseurl:          ''
 
@@ -21,3 +21,8 @@ paginate:         6
 github:
   repo:           https://github.com/tysonstanley
 
+twitter:          https://twitter.com/healthandstats
+
+researchgate:     https://www.researchgate.net/profile/Tyson_Barrett
+
+orcid:            orcid.org/0000-0002-2137-1391
