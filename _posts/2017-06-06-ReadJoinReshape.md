@@ -65,7 +65,7 @@ df = list.files(pattern="*.csv") %>%
           timevar = "Time")
 {% endhighlight %}
 
-We selected variables and then reshaped the data into long form (see [my previous post]({{ site.baseurl }}//jekyll/update/2017/05/18/ReshapingWithReshape) on reshaping) all while reading in and combining the individual files.
+We selected variables and then reshaped the data into long form (see [my previous post](https://tysonstanley.github.io//jekyll/update/2017/05/18/ReshapingWithReshape/) on reshaping) all while reading in and combining the individual files.
 
 ## R Does It Again
 
