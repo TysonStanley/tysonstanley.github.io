@@ -12,7 +12,7 @@ Many take the manual way, with copying-and-pasting over and over again in a spre
 
 In `R`, we can pull in all the data, join them and reshape within a single reproducible script. 
 
-# Example 1
+## Example 1
 
 For a quick example, we have 10 `.csv` files (you can have many more and of different types). Each have different variables on the same people. So in this case, we want to join these files. The code below does the trick.
 
@@ -29,7 +29,9 @@ df = list.files(pattern="*.csv") %>%
 
 This succinctly grabs all `.csv` files in the directory (`list.files(pattern="*.csv")` finds all file names that have `.csv` in the name), reads them in (`lapply(read.csv)` repeatedly applies the `read.csv()` to each file), and uses `Reduce()` to apply `full_join()` to each file that was read in to produce one beautiful `data.frame`.
 
-# Example 2
+With a few lines of code, we have combined any number of files together into one `data.frame`.
+
+## Example 2
 
 Say you had data on the same variables (e.g., ID, demographics, outcome measures) but for different people across your files. If this is the case, a small tweak will do it. Namely, we use `do.call(rbind, .)` to "row bind" each of the files together. In other words, we glue each file to the bottom of the other.
 
@@ -44,7 +46,11 @@ df = list.files(pattern="*.csv") %>%
   do.call(rbind, .)
 {% endhighlight %}
 
-There you have it. Enjoy the simple beauty that `R` provides :) 
+Again, we have a single `data.frame` containing all the data from all of the `.csv` files in the working directory.
+
+## R Does It Again
+
+There you have it. Enjoy the simple beauty that `R` provides and let me know if you have any questions :) 
 
 
 
