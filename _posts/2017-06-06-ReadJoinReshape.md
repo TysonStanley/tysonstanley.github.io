@@ -17,7 +17,6 @@ In `R`, we can pull in all the data, join them and reshape within a single repro
 For a quick example, we have 10 `.csv` files (you can have many more and of different types). Each have different variables on the same people. So in this case, we want to join these files. The code below does the trick.
 
 {% highlight r %}
-library(foreign)
 library(tidyverse)
 
 setwd("Where/Your/Data/Is/Located/")
@@ -36,7 +35,6 @@ With a few lines of code, we have combined any number of files together into one
 Say you had data on the same variables (e.g., ID, demographics, outcome measures) but for different people across your files. If this is the case, a small tweak will do it. Namely, we use `do.call(rbind, .)` to "row bind" each of the files together. In other words, we glue each file to the bottom of the other.
 
 {% highlight r %}
-library(foreign)
 library(tidyverse)
 
 setwd("Where/Your/Data/Is/Located/")
@@ -47,6 +45,27 @@ df = list.files(pattern="*.csv") %>%
 {% endhighlight %}
 
 Again, we have a single `data.frame` containing all the data from all of the `.csv` files in the working directory.
+
+## Example 3
+
+Finally, I wanted to highlight that we can clean the data within this step as well.
+
+{% highlight r %}
+library(tidyverse)
+
+setwd("Where/Your/Data/Is/Located/")
+
+df = list.files(pattern="*.csv") %>%
+  lapply(read.csv) %>%
+  do.call(rbind, .) %>%
+  select(ID, var1, var2, var3) %>%
+  reshape(varying = list(c("var1", "var2", "var3")),
+          v.names = c("var"),
+          direction = "long",
+          timevar = "Time")
+{% endhighlight %}
+
+We selected variables and then reshaped the data into long form (see [my previous post]({{ site.baseurl }}//jekyll/update/2017/05/18/ReshapingWithReshape) on reshaping) all while reading in and combining the individual files.
 
 ## R Does It Again
 
