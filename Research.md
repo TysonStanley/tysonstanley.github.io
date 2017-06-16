@@ -14,8 +14,8 @@ Currently, I have two main resources to for you to check out my published work: 
 
 As a researcher, I am a methodologist and prevention researcher. As such, my research falls under two main areas:
 
-1. Method development dealing mainly with integrating machine learning, econometrics, and mediation analysis.
-2. Substantive research regarding adolescent health; specifically, the effects of chronic illness on mental health and economic mobility outcomes.
+1. Method development dealing mainly with machine learning, econometrics, mediation analysis, and mixture modeling.
+2. Substantive research regarding adolescent health; specifically, the effects of chronic illness and disability on mental, physical, and developmental health.
 
 ## Machine Learning, Econometrics, Mediation, and Mixture Modeling
 
