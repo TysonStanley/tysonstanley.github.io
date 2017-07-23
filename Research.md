@@ -4,7 +4,6 @@ title: Research
 permalink: /research/
 ---
 
-![Social Data Science Lab]({{ site.baseurl }}/assets/images/SDS_Logo.jpg)
 
 # My Research ID's
 
