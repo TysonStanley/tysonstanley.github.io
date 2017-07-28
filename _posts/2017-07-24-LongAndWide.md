@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New Functions in "
+title: "Reshaping Data with Long() and Wide()"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
@@ -8,7 +8,7 @@ comments: true
 
 As part of the newest CRAN version of `furniture`, I included two new functions that allow simple reshaping of data frames. It is simply a wrapper of `reshape()` but has some added benefits. Check out the cheatsheet below.
 
-[![Reshaping]({{ site.baseurl }}/assets/images/LongWide_Handout.jpg)]({{ site.baseurl }}/assets/images/LongWide_Handout.jpg)
+[![Reshaping]({{ site.baseurl }}/assets/images/LongWide_Handout.jpg)]({{ site.baseurl }}/assets/images/LongWide_Handout.pdf)
 
 
 
