@@ -22,22 +22,22 @@ The table below highlights the ways I can (and often have) contributed to a proj
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> Research </td>
+   <td style="text-align:left;"> Research <br> (Scientific or <br>Business Improvement)</td>
    <td style="text-align:left;"> &lt; 5 Stakeholders </td>
    <td style="text-align:left;"> Technical Reports<br>Published Papers<br>Data Management<br>Data Cleaning<br>R Code<br>Replicable Workflow </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Research </td>
+   <td style="text-align:left;"> Research <br> (Scientific or <br>Business Improvement) </td>
    <td style="text-align:left;"> 5 + Stakeholders </td>
    <td style="text-align:left;"> Technical Reports<br>Published Papers<br>Data Management<br>Data Cleaning<br>R Code<br>Replicable Workflow </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Production </td>
+   <td style="text-align:left;"> Production <br> (Part of a larger system)</td>
    <td style="text-align:left;"> &lt; 5 Stakeholders </td>
    <td style="text-align:left;"> Production Level Code<br>Technical Reports<br>Data Cleaning </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Production </td>
+   <td style="text-align:left;"> Production <br> (Part of a larger system)</td>
    <td style="text-align:left;"> 5 + Stakeholders </td>
    <td style="text-align:left;"> Production Level Code<br>Technical Reports<br>Data Cleaning </td>
   </tr>
