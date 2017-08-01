@@ -15,9 +15,9 @@ The table below highlights the ways I can (and often have) contributed to a proj
 <table>
  <thead>
   <tr>
-   <th style="text-align:left;"> Project </th>
-   <th style="text-align:left;"> Size </th>
-   <th style="text-align:left;"> Output </th>
+   <th style="text-align:left;"> Project Type </th>
+   <th style="text-align:left;"> Size of the Project </th>
+   <th style="text-align:left;"> Output Produced by<br>Thinking Stats </th>
   </tr>
  </thead>
 <tbody>
