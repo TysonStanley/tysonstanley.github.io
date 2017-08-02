@@ -30,3 +30,33 @@ The table below highlights the ways I can (and often have) contributed to a proj
   </tr>
 </tbody>
 </table>
+
+Charges associated with each service depends on the amount of time necessary to complete the project. This often is related to the number of stakeholders, and so that will also be taken into account. Again, however, the in-take is free and is not part of the projects' bid. To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form below. I try to respond to either within 48 hours.
+
+<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+  First name:<br>
+  Name:<br>
+  <input type="text" name="entry.1906098226" id="entry.1906098226"><br>
+  Email:<br>
+  <input type="text" name="entry.815077072" id = "entry.815077072"><br>
+  Daytime Phone Number:<br>
+  <input type="text" name="entry.1692136309" id = "entry.1692136309"><br>
+  Project Type: Research or Production:<br>
+  <input type="text" name="entry.830671445" id = "entry.830671445">
+  Company or Organization Name:<br>
+  <input type="text" name="entry.126928977" id = "entry.126928977">
+  <input type="submit" value="Submit">
+</form>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
+
+
