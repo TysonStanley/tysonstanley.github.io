@@ -43,7 +43,7 @@ To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form be
   Project Type (see table): <input type="text" name="entry.830671445" id = "entry.830671445"><br>
   Company or Organization Name: <input type="text" name="entry.126928977" id = "entry.126928977"><br>
   Any additional comments:<br>
-  <input type="text" name="entry.1522113980" id = "entry.1522113980"><br>
+  <input type="text" name="entry.1522113980" id = "entry.1522113980"><br><br>
   <input type="submit" value="Submit">
 </form>
 
@@ -109,7 +109,7 @@ textarea {
 input[type=submit] {
     padding:10px 15px; 
     background:#F2F3F4; 
-    border:0 #ccc;
+    border:1px #ccc;
     cursor:pointer;
     -webkit-border-radius: 10px;
     border-radius: 10px; 
