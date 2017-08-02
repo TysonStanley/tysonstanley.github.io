@@ -35,7 +35,7 @@ Charges associated with each service depends on the amount of time necessary to 
 
 To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form below. I try to respond to either within 48 hours.
 
-<div name="Form">
+<div id="formdiv">
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onclick="submitted=true;">
   <input type="text" name="entry.1906098226" id="entry.1906098226" placeholder="Name..." required><br>
   <input type="text" name="entry.815077072" id = "entry.815077072" placeholder="Email..." required><br>
@@ -64,7 +64,7 @@ function ReplaceForm()
 var IDofForm = "gform";
 
 // Specify the id of the div containing the form.
-var IDofDivWithForm = "Form";
+var IDofDivWithForm = "formdiv";
 
 // Specify the id of the div with the content to replace the form with.
 var IDforReplacement = "for_replacement";
