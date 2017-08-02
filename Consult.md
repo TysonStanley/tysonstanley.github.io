@@ -113,8 +113,7 @@ input[type=submit] {
     cursor:pointer;
     -webkit-border-radius: 10px;
     border-radius: 10px; 
-    font: 1em serif;
     font-color:#F9FBFC;
-    font-family: "PT Sans", Helvetica, Arial, serif;
+    font-family: Helvetica, serif;
 }
 </style>
