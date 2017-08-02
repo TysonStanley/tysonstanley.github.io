@@ -43,7 +43,7 @@ To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form be
   <input type="text" name="entry.830671445" id = "entry.830671445" placeholder="Project Type (Production or Reseach)..." ><br>
   <input type="text" name="entry.126928977" id = "entry.126928977" placeholder="Company or Organization Name..."><br>
   <input type="text" name="entry.1522113980" id = "entry.1522113980" placeholder="Any additional comments..."><br>
-  <input type="button" onclick="ReplaceForm()" value="Submit"">
+  <input type="button" onclick="ReplaceForm()" value="Submit">
 </form>
 </div>
 
