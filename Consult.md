@@ -49,8 +49,6 @@ To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form be
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-<script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted=false;</script>
 <script type="text/javascript">
 $('#gform').on('submit', function(e) {
   $('#gform *').fadeOut(2000);
@@ -65,8 +63,6 @@ form {
   width: 400px;
   /* To see the outline of the form */
   padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
 }
 
 form div + div {
@@ -81,7 +77,7 @@ label {
 }
 
 input[type=text] {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -107,8 +103,8 @@ textarea {
 }
 
 input[type=submit] {
-    padding:15px 15px; 
-    background:#2471A3; 
+    padding:5px 15px; 
+    background:#D35400; 
     margin: 4px 2px;
     cursor:pointer;
     -webkit-border-radius: 10px;
