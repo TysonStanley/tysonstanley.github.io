@@ -50,9 +50,8 @@ To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form be
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
 <div id="for_replacement" style="display:none;">
-<p>
-<b>Your request has been processed.</b>
-<br>Expect to hear from me within 48-72 hours.
+<b>Your request has been processed.</b><br>
+Expect to hear from me within 48-72 hours.
 </div>
 
 <script type="text/javascript">
