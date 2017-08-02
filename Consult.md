@@ -114,7 +114,7 @@ input[type=submit] {
     -webkit-border-radius: 10px;
     border-radius: 10px; 
     font: 1em serif;
-    text-color:#F9FBFC;
+    font-color:#F9FBFC;
     font-family: "PT Sans", Helvetica, Arial, serif;
 }
 </style>
