@@ -108,12 +108,11 @@ textarea {
 
 input[type=submit] {
     padding:10px 15px; 
-    background:#2471A3; 
+    background:#F2F3F4; 
     border:0 #ccc;
     cursor:pointer;
     -webkit-border-radius: 10px;
     border-radius: 10px; 
-    font-color:#F9FBFC;
     font-family: Helvetica, serif;
 }
 </style>
