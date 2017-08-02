@@ -50,35 +50,19 @@ To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form be
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
 <div id="for_replacement" style="display:none;">
-<b>Your request has been processed.</b><br>
-Expect to hear from me within 48-72 hours.
+<b>Your request has been processed and will be reviewed soon.</b><br>
 </div>
 
 <script type="text/javascript">
-function ReplaceForm()
+function ReplaceForm() 
 {
-// Three places to customize:
-
-// Specify the id of the form.
 var IDofForm = "gform";
-
-// Specify the id of the div containing the form.
 var IDofDivWithForm = "formdiv";
-
-// Specify the id of the div with the content to replace the form with.
 var IDforReplacement = "for_replacement";
-
-// End of customizations.
-
-// This line submits the form. (If Ajax processed, call Ajax function, instead.)
 document.getElementById(IDofForm).submit();
-
-// This replaces the form with the replacement content.
 document.getElementById(IDofDivWithForm).innerHTML = document.getElementById(IDforReplacement).innerHTML;
 }
 </script>
-
-
 
 
 <style>
@@ -99,7 +83,7 @@ label {
 }
 
 input[type=text] {
-    width: 70%;
+    width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
