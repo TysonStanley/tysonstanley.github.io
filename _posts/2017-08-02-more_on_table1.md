@@ -393,6 +393,20 @@ can continue in the piping.
 This example isn't incredibly useful, but hopefully it illustrates that
 it can flow easily within a pipe.
 
+Stratify by Two or More Variables
+---------------------------------
+
+It is possible to stratify by two or more variables as well. This can be done via:
+
+{% highlight r %}
+  table1(d,
+         gender, age, dep1, dep4, dep5, dep6, 
+         splitby = ~interaction(loseweight, asthma), 
+           test = TRUE, 
+           var.names = c("Gender", "Age", "Little Interest", "Tired", "Appetite", "Feel Bad"))
+{% endhighlight %}
+
+
 Conclusion
 ----------
 
