@@ -77,7 +77,7 @@ label {
 }
 
 input[type=text] {
-    width: 40%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -107,8 +107,6 @@ input[type=submit] {
     background:#D35400; 
     margin: 4px 2px;
     cursor:pointer;
-    -webkit-border-radius: 10px;
-    border-radius: 10px; 
     font-family: Helvetica, serif;
     color: white;
 }
