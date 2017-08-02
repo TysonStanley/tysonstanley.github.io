@@ -128,12 +128,29 @@ textarea {
     resize: none;
 }
 
-input[type=submit] {
-    padding:5px 15px; 
-    background:#D35400; 
-    margin: 4px 2px;
-    cursor:pointer;
-    font-family: Helvetica, serif;
-    color: white;
+#button {
+    display: block;
+    width:150px;
+    margin:10px auto;
+    padding:7px 13px;
+    text-align:center;
+    background:#D35400;
+    font-size:20px;
+    font-family: 'Helvetica', serif;
+    color:#ffffff;
+    white-space: nowrap;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+
+#button:active {
+    vertical-align: top;
+    padding-top: 8px;
+}
+
+.one a {
+    text-decoration: none;
 }
 </style>
