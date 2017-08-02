@@ -35,26 +35,50 @@ Charges associated with each service depends on the amount of time necessary to 
 
 To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form below. I try to respond to either within 48 hours.
 
-
+<div name="Form">
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  Name: <input type="text" name="entry.1906098226" id="entry.1906098226" required><br>
-  Email: <input type="text" name="entry.815077072" id = "entry.815077072" required><br>
-  Daytime Phone Number: <input type="text" name="entry.1692136309" id = "entry.1692136309"><br>
-  Project Type (see table): <input type="text" name="entry.830671445" id = "entry.830671445"><br>
-  Company or Organization Name: <input type="text" name="entry.126928977" id = "entry.126928977"><br>
-  Any additional comments:<br>
-  <input type="text" name="entry.1522113980" id = "entry.1522113980"><br><br>
-  <input type="submit" value="Submit">
+  <input type="text" name="entry.1906098226" id="entry.1906098226" placeholder="Name..." required><br>
+  <input type="text" name="entry.815077072" id = "entry.815077072" placeholder="Email..." required><br>
+  <input type="text" name="entry.1692136309" id = "entry.1692136309" placeholder="Daytime Phone Number..." ><br>
+  <input type="text" name="entry.830671445" id = "entry.830671445 placeholder="Project Type (see table)..."><br>
+  <input type="text" name="entry.126928977" id = "entry.126928977" placeholder="Company or Organization Name..."><br>
+  <input type="text" name="entry.1522113980" id = "entry.1522113980" placeholder="Any additional comments..."><br><br>
+  <input type="button" onclick="ReplaceForm()" value="Submit" style="width:300px;">
 </form>
+</div>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+<div id="for_replacement" style="display:none;">
+<p>
+<b>Your request has been processed.</b>
+<br>Expect to hear from me within 48-72 hours.
+</div>
 
 <script type="text/javascript">
-$('#gform').on('submit', function(e) {
-  $('#gform *').fadeOut(2000);
-  $('#gform').prepend('Your submission has been processed.');
-  });
+function ReplaceForm()
+{
+// Three places to customize:
+
+// Specify the id of the form.
+var IDofForm = "gform";
+
+// Specify the id of the div containing the form.
+var IDofDivWithForm = "Form";
+
+// Specify the id of the div with the content to replace the form with.
+var IDforReplacement = "for_replacement";
+
+// End of customizations.
+
+// This line submits the form. (If Ajax processed, call Ajax function, instead.)
+document.getElementById(IDofForm).submit();
+
+// This replaces the form with the replacement content.
+document.getElementById(IDofDivWithForm).innerHTML = document.getElementById(IDforReplacement).innerHTML;
+}
 </script>
+
+
+
 
 <style>
 form {
