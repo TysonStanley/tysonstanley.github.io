@@ -42,7 +42,7 @@ To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form be
   Daytime Phone Number: <input type="text" name="entry.1692136309" id = "entry.1692136309"><br>
   Project Type (see table): <input type="text" name="entry.830671445" id = "entry.830671445"><br>
   Company or Organization Name: <input type="text" name="entry.126928977" id = "entry.126928977"><br>
-  Any additional comments about project or request:<br>
+  Any additional comments:<br>
   <input type="text" name="entry.1522113980" id = "entry.1522113980"><br>
   <input type="submit" value="Submit">
 </form>
@@ -114,7 +114,7 @@ input[type=submit] {
     -webkit-border-radius: 10px;
     border-radius: 10px; 
     font: 1em serif;
-    text-color:#000;
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    text-color:#F9FBFC;
+    font-family: "PT Sans", Helvetica, Arial, serif;
 }
 </style>
