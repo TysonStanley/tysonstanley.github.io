@@ -6,6 +6,11 @@ author: Tyson S. Barrett
 comments: true
 ---
 
+This has been updated to work with the most recent version of the `furniture` package.
+
+--------
+
+
 ![Table in Forest]({{ site.baseurl }}/assets/images/table_in_forest.jpg)
 
 # Introducing `furniture`
@@ -99,8 +104,10 @@ We also model the data using a poisson distribution and a log link (our outcomes
 
 {% highlight r %}
 ### 3. Check descriptives using table1()
-table1(d, act60, tv_hrs, gender, age, 
+table1(d, 
+       act60, tv_hrs, gender, age, 
        splitby = ~asthma, 
+       output = "full",
        test = TRUE)
 {% endhighlight %}
 

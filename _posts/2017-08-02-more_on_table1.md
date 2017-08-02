@@ -6,6 +6,11 @@ comments: true
 categories: jekyll update
 ---
 
+This has been updated to work with the most recent version of the `furniture` package.
+
+---------
+
+
 As a follow up to my first post introducing the `furniture` package, I
 wanted to show a much more in depth demonstration of `table1`'s
 capabilities and ease of use. It is the star function of the package, afterall. To prep the data, I will also use another important function in the package--`washer()`--that allows easy cleaning of variables.
@@ -279,7 +284,7 @@ cleaned it and are now ready to report relationships. Note, you may get a warnin
 table1(d, gender, age, dep1, dep4, dep5, dep6,  
        splitby = ~loseweight, 
        test = TRUE, 
-       format_output = "stars",
+       output = "stars",
        splitby_labels = c("Loseweight", "No Loseweight"),
        var_names = c("Gender", "Age", "Little Interest", "Tired", "Appetite", "Feel Bad"))
 {% endhighlight %}
@@ -331,18 +336,16 @@ can continue in the piping.
     table1(gender, age, dep1, dep4, dep5, dep6, 
            splitby = ~loseweight, 
            test = TRUE, 
-           format.output = "stars",
+           output = "stars",
            splitby_labels = c("Loseweight", "No Loseweight"),
-           var.names = c("Gender", "Age", "Little Interest", "Tired", "Appetite", "Feel Bad"),
-           piping = TRUE) %>%
+           var.names = c("Gender", "Age", "Little Interest", "Tired", "Appetite", "Feel Bad")) %>%
     filter(age > 20 & age < 50) %>%
     table1(gender, age, dep1, dep4, dep5, dep6, 
            splitby = ~loseweight, 
            test = TRUE, 
-           format.output = "stars",
+           output = "stars",
            splitby_labels = c("Loseweight", "No Loseweight"),
-           var_names = c("Gender", "Age", "Little Interest", "Tired", "Appetite", "Feel Bad"),
-           piping = TRUE)
+           var_names = c("Gender", "Age", "Little Interest", "Tired", "Appetite", "Feel Bad"))
 {% endhighlight %}
 ```
     ##                   Loseweight No Loseweight    

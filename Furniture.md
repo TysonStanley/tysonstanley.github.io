@@ -6,6 +6,16 @@ permalink: /furniture/
 
 The news from each release of the `furniture` `R` package can be found here.
 
+----------
+
+## Release 1.5.4
+
+No major changes to existing functions. Added two new functions:
+
+1. `long()`
+1. `wide()` 
+
+These are wrappers of the `stats::reshape()` function. It simplifies the syntax and allows for reshaping of unbalanced data (e.g., one measure has five instances, one has three, another has four). Powerfully, these can all be done in one step. The package provides some guidance and also this [visual](https://tysonstanley.github.io//jekyll/update/2017/07/24/LongAndWide/).
 
 ## Release 1.5.0
 
