@@ -35,8 +35,8 @@ Charges associated with each service depends on the amount of time necessary to 
 
 
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-  Name: <input type="text" name="entry.1906098226" id="entry.1906098226"><br>
-  Email: <input type="text" name="entry.815077072" id = "entry.815077072"><br>
+  Name: <input type="text" name="entry.1906098226" id="entry.1906098226" required><br>
+  Email: <input type="text" name="entry.815077072" id = "entry.815077072" required><br>
   Daytime Phone Number: <input type="text" name="entry.1692136309" id = "entry.1692136309"><br>
   Project Type (see table): <input type="text" name="entry.830671445" id = "entry.830671445"><br>
   Company or Organization Name: <input type="text" name="entry.126928977" id = "entry.126928977"><br>
@@ -81,7 +81,7 @@ label {
 input, textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
-  font: 1em sans-serif;
+  font: 1em serif;
 
   /* To give the same size to all text fields */
   width: 300px;
@@ -102,5 +102,14 @@ textarea {
 
   /* To give enough room to type some text */
   height: 5em;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 </style>
