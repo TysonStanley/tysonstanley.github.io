@@ -36,16 +36,18 @@ Charges associated with each service depends on the amount of time necessary to 
 To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form below. I try to respond to either within 48 hours.
 
 <div name="Form">
-<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onclick="submitted=true;">
   <input type="text" name="entry.1906098226" id="entry.1906098226" placeholder="Name..." required><br>
   <input type="text" name="entry.815077072" id = "entry.815077072" placeholder="Email..." required><br>
   <input type="text" name="entry.1692136309" id = "entry.1692136309" placeholder="Daytime Phone Number..." ><br>
-  <input type="text" name="entry.830671445" id = "entry.830671445 placeholder="Project Type..."><br>
+  <input type="text" name="entry.830671445" id = "entry.830671445" placeholder="Project Type (Production or Reseach)..." ><br>
   <input type="text" name="entry.126928977" id = "entry.126928977" placeholder="Company or Organization Name..."><br>
   <input type="text" name="entry.1522113980" id = "entry.1522113980" placeholder="Any additional comments..."><br><br>
   <input type="button" onclick="ReplaceForm()" value="Submit" style="width:300px;">
 </form>
 </div>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
 <div id="for_replacement" style="display:none;">
 <p>
