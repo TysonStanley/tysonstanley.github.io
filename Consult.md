@@ -31,7 +31,6 @@ The table below highlights the ways I can (and often have) contributed to a proj
 </tbody>
 </table>
 
-Charges associated with each service depends on the amount of time necessary to complete the project. This often is related to the number of stakeholders, and so that will also be taken into account. Again, however, the in-take is free and is not part of the projects' bid. 
 
 ### Contact Me
 
