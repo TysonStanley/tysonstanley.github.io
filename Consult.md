@@ -6,11 +6,9 @@ permalink: /thinkingstats/
 
 ![]({{ site.baseurl }}/assets/images/thinkingstats_logo.jpg)
 
-My small consulting company is called *Thinking Stats*. It is based in Utah, but is available to serve throughout the United States.
+*Thinking Stats* is my consulting company dealing with data management/cleaning, data analytics and statistical modeling. It is currently headquartered in Utah.
 
-I have consulted on projects in education, communication sciences, economics, psychology, and biology. Contact me for a free intake appointment.
-
-The table below highlights the ways I can (and often have) contributed to a project.
+I have consulted on projects in education, communication sciences, economics, psychology, and biology. The table below highlights the ways I can (and often have) contributed to a project.
 
 <table>
  <thead>
@@ -34,7 +32,7 @@ The table below highlights the ways I can (and often have) contributed to a proj
 
 ## Contact Me
 
-To contact me,
+Contact me for a *free intake appointment*. To contact me,
 
 - Email me at <t.barrett@aggiemail.usu.edu>, or 
 - Fill out the form below. 
