@@ -33,6 +33,7 @@ The table below highlights the ways I can (and often have) contributed to a proj
 
 Charges associated with each service depends on the amount of time necessary to complete the project. This often is related to the number of stakeholders, and so that will also be taken into account. Again, however, the in-take is free and is not part of the projects' bid. To contact me, email me at <t.barrett@aggiemail.usu.edu> or fill out the form below. I try to respond to either within 48 hours.
 
+
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeM_ttqtQXmCcawVZfYJ__3PqLt8LxPJClW5y_Rkp8kkV0mzQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
   Name: <input type="text" name="entry.1906098226" id="entry.1906098226"><br>
   Email: <input type="text" name="entry.815077072" id = "entry.815077072"><br>
