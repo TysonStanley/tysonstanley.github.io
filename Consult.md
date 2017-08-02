@@ -32,7 +32,7 @@ The table below highlights the ways I can (and often have) contributed to a proj
 </table>
 
 
-### Contact Me
+## Contact Me
 
 To contact me,
 
@@ -69,7 +69,6 @@ document.getElementById(IDofForm).submit();
 document.getElementById(IDofDivWithForm).innerHTML = document.getElementById(IDforReplacement).innerHTML;
 }
 </script>
-
 
 <style>
 form {
