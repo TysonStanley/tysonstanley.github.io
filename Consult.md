@@ -80,39 +80,40 @@ label {
   text-align: right;
 }
 
-input, textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1em serif;
-
-  /* To give the same size to all text fields */
-  width: 300px;
-  box-sizing: border-box;
-
-  /* To harmonize the look & feel of text field border */
-  border: 1px solid #999;
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
 
-input:focus, textarea:focus {
-  /* To give a little highlight on active elements */
-  border-color: #000;
+input[type=text]:focus {
+    width: 100%;
 }
 
 textarea {
-  /* To properly align multiline text fields with their labels */
-  vertical-align: top;
-
-  /* To give enough room to type some text */
-  height: 5em;
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
 }
 
 input[type=submit] {
-    padding:10px 15px; 
-    background:#F2F3F4; 
-    border:1px #ccc;
+    padding:15px 15px; 
+    background:#2471A3; 
+    margin: 4px 2px;
     cursor:pointer;
     -webkit-border-radius: 10px;
     border-radius: 10px; 
     font-family: Helvetica, serif;
+    color: white;
 }
 </style>
