@@ -24,12 +24,19 @@ df_long = long(df,
 ggplot(df_long, aes(value, variable, fill = variable, color = variable)) +
   geom_joy2(alpha = .65) +
   theme_bw() +
-  scale_color_manual(values = c("coral2", "darkorchid3", "chartreuse4", "dodgerblue4", "firebrick4"),
+  scale_color_manual(values = c("coral2", "darkorchid2", "chartreuse2", "dodgerblue2", "firebrick3"),
                      guide = FALSE) +
-  scale_fill_manual(values = c("coral2", "darkorchid3", "chartreuse4", "dodgerblue4", "firebrick4"),
+  scale_fill_manual(values = c("coral2", "darkorchid2", "chartreuse2", "dodgerblue2", "firebrick3"),
                     guide = FALSE) +
   labs(x = "",
        y = "") +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
-        panel.border = element_blank())
+        panel.border = element_blank(),
+        panel.background = element_rect(fill = "#2E4053"),
+        axis.line = element_blank(),
+        panel.grid.major.x = element_line(color = "grey50", size = .1),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor = element_line(color = "grey50", size = .05)) +
+  coord_cartesian(ylim = c(1,5.75))
+
