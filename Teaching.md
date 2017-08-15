@@ -10,7 +10,7 @@ permalink: /teaching/
 
 I have taught an introductory/intermediate graduate R course for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and all it has to offer.
 
-I have lots of material that can be found at: [Graduate R Courses](https://github.com/TysonStanley/Graduate_R_Courses).
+I have lots of material that can be found at: [Graduate R Courses--GitHub](https://github.com/TysonStanley/Graduate_R_Courses) and [Graduate R Courses](https://tysonstanley.github.io/Graduate_R_Courses/).
 
 My most recent class material (for Fall 2017 1 credit course) can be found below:
 
