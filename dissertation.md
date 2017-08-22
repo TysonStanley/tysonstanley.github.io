@@ -12,7 +12,7 @@ My dissertation is entitled: *Marginal Mediation: A New Framework for Interpreta
 
 My presentation for my dissertation proposal can be found [here](https://tysonstanley.github.io/Proposal/). It uses `remark.js` as implemented in `R` by Yihui in the `xaringan` package. Feel free to check it out.
 
-I'll post the manuscript soon.
+My proposal manuscript is available [here]({{ site.baseurl }} /assets/Manuscript/MarginalMediation_Proposal.pdf). The manuscript was written entirely in `Rmarkdown` using a Latex template.
 
 ### Defense
 
