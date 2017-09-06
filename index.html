@@ -16,11 +16,11 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
-    <h2 class="post-title">
+    <h1 class="post-title">
       <a href="{{ site.url }}/{{ post.url }}">
         {{ post.title }}
       </a>
-    </h2>
+    </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
    {{ post.excerpt }}
