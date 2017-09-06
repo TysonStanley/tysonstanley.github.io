@@ -10,8 +10,8 @@ tagline:          'Tyson S. Barrett'
 description:      'Finding the clarity among the chaos of data'
 url:              https://tysonstanley.github.io
 baseurl:          ''
-description2:     'Bio-behavioral Data Scientist and #Rstats Enthusiast. This site contains: (1) #rstats blog, (2) my research and teaching portfolio, and (3) my data science consulting company--Thinking Stats.'
-description3:     'I am currently a researher (and PhD Candidate) at Utah State University in Quantitative Psychology. I am a statistical and data science consultant for the college. I am interested in reproducibility of research, exploratory data analysis, machine learning, and mediation analysis.'
+description2:     'This site contains: (1) #rstats blog, (2) my research and teaching portfolio, and (3) my data science consulting company--Thinking Stats.'
+description3:     'Bio-behavioral Data Scientist and #Rstats Enthusiast. I am currently a researher (and PhD Candidate) at Utah State University in Quantitative Psychology. I am a statistical and data science consultant for the college. I am interested in reproducibility of research, exploratory data analysis, machine learning, and mediation analysis.'
 
 author:
   name:           'Tyson S. Barrett'
