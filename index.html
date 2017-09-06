@@ -5,7 +5,7 @@ title: Home
 
 <div class="header-bar">
   <h1>{{ site.tagline }}</h1>
-  <h2>{{ site.description2 }}</h2>
+  <a> {{ site.description2 }}</a>
 </div>
 
 <br>
@@ -16,11 +16,11 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
-    <h1 class="post-title">
+    <h2 class="post-title">
       <a href="{{ site.url }}/{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
+    </h2>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
    {{ post.excerpt }}
