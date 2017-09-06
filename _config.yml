@@ -10,6 +10,7 @@ tagline:          'Tyson S. Barrett'
 description:      'Finding the clarity among the chaos of data'
 url:              https://tysonstanley.github.io
 baseurl:          ''
+description2:     '#Rstats Enthusiast, Bio-Behavioral Social Scientist, and Data Science Instructor in the social sciences.'
 
 author:
   name:           'Tyson S. Barrett'

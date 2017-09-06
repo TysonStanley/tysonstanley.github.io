@@ -3,6 +3,11 @@ layout: default
 title: Home
 ---
 
+<div class="header-bar">
+  <h1>{{ site.tagline }}</h1>
+  <h2>{{ site.description2 }}</h2>
+</div>
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
