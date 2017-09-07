@@ -5,8 +5,8 @@ markdown:         kramdown
 permalink:        pretty
 
 # Setup
-title:            Chaos to Clarity
-tagline:          'Tyson S. Barrett'
+title:            TysonBarrett.com
+tagline:          'Chaos to Clarity'
 description:      'Finding the clarity among the chaos of data'
 url:              https://tysonstanley.github.io
 baseurl:          ''
