@@ -8,7 +8,7 @@ categories: jekyll update
 
 Recently, our paper *Furniture for Quantitative Scientists* was posted in the R Journal. This paper discusses the use of descriptive statistics in exploring data through the `furniture` package. See the [R Journal](https://journal.r-project.org/archive/2017/RJ-2017-037/RJ-2017-037.pdf) for the manuscript.
 
-<iframe src="https://giphy.com/embed/pa37AAGzKXoek" width="480" height="362" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dancing-fresh-prince-of-bel-air-carlton-pa37AAGzKXoek">via GIPHY</a></p>
+<div style="width:60%;height:0;padding-bottom:75%;position:center;"><iframe src="https://giphy.com/embed/pa37AAGzKXoek" width="60%" height="60%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/dancing-fresh-prince-of-bel-air-carlton-pa37AAGzKXoek">via GIPHY</a></p>
 
 
 {% if page.comments %} 
