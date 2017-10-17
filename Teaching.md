@@ -19,7 +19,7 @@ My most recent class material can be found below:
 1. [Review of Tidyverse](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/01_Review.html)
 2. [Tables and Viz's](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/02_tables_viz.html)
 3. [Replicable Workflow in R](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/03_RepWorkflow.html)
-4. [GitHub](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/04_github.html)
+4. [Basics of Git and GitHub](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/04_github.html)
 5. [Creating an R Package](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/05_OwnPackage.html)
 
 ### Intro
