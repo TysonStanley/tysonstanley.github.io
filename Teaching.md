@@ -38,4 +38,7 @@ My most recent class material can be found below:
 
 I will also be using Andrew Heiss's great walkthrough of replicating Minard's 1812 plot with `ggplot2` (found [here](https://www.andrewheiss.com/blog/2017/08/10/exploring-minards-1812-plot-with-ggplot2/)).
 
-More will be updated later.
+# Workshops
+
+1. [Mediation Analysis](http://tysonbarrett.com/Workshops/MediationAnalysis.html)
+
