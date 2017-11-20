@@ -4,6 +4,15 @@ title: Teaching
 permalink: /teaching/
 ---
 
+# Workshops
+
+1. [Mediation Analysis](http://tysonbarrett.com/Workshops/MediationAnalysis.html)
+
+# Other Talks
+
+1. [Health Data Science](http://tysonbarrett.com/healthdatascience/index.html)
+
+
 # Teaching
 
 ## R Courses
@@ -38,7 +47,4 @@ My most recent class material can be found below:
 
 I will also be using Andrew Heiss's great walkthrough of replicating Minard's 1812 plot with `ggplot2` (found [here](https://www.andrewheiss.com/blog/2017/08/10/exploring-minards-1812-plot-with-ggplot2/)).
 
-# Workshops
-
-1. [Mediation Analysis](http://tysonbarrett.com/Workshops/MediationAnalysis.html)
 
