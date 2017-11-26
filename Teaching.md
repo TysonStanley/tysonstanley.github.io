@@ -11,6 +11,7 @@ permalink: /teaching/
 # Other Talks
 
 1. [Health Data Science](http://tysonbarrett.com/healthdatascience/index.html)
+2. [Data Joins](http://tysonbarrett.com/data_joins_demonstration/Presentation.html)
 
 
 # Teaching
