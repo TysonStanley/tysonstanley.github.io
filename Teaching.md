@@ -6,12 +6,12 @@ permalink: /teaching/
 
 # Workshops
 
-1. [Mediation Analysis](http://tysonbarrett.com/Workshops/MediationAnalysis.html)
+1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
 
 # Other Talks
 
-1. [Health Data Science](http://tysonbarrett.com/healthdatascience/index.html)
-2. [Data Joins](http://tysonbarrett.com/data_joins_demonstration/Presentation.html)
+1. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
+2. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
 
 
 # Teaching
