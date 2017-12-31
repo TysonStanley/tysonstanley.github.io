@@ -16,6 +16,19 @@ permalink: /teaching/
 
 # Teaching
 
+## Intro to Statistics (EDUC/PSY 6600)
+
+1. [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/00_Ch1_Intro.html)
+2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch2_DataViz.html)
+3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch3_CenterSpread.html)
+
+
+## Applied Statistical Analysis (EDUC 6050)
+
+1. [Week 1](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf)
+
+
+
 ## R Courses
 
 I have taught an introductory/intermediate graduate R course for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and all it has to offer.
