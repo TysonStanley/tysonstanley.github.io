@@ -8,15 +8,17 @@ permalink: /teaching/
 
 1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
 
-# Other Talks
+# Academic Talks
 
 1. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
 2. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
 
 
-# Teaching
+# Courses
 
-## Intro to Statistics (EDUC/PSY 6600)
+## Research Design and Analysis I (EDUC/PSY 6600)
+
+This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses.
 
 1. [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/00_APAStyle_EDUC_6600_2018.pdf), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/00_Ch1_Intro.html)
 2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch2_DataViz.html)
@@ -24,6 +26,8 @@ permalink: /teaching/
 
 
 ## Applied Statistical Analysis (EDUC 6050)
+
+This is an introduction to statistics for master's level social scientists. It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
 
 1. [Week 1](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf)
 2. [Week 2](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf)
