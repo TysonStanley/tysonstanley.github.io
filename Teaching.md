@@ -26,6 +26,7 @@ permalink: /teaching/
 ## Applied Statistical Analysis (EDUC 6050)
 
 1. [Week 1](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf)
+2. [Week 2](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf)
 
 
 
