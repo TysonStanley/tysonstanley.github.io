@@ -20,7 +20,7 @@ permalink: /teaching/
 
 This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses.
 
-1. [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex](http://tysonbarrett.com/EDUC-6600/Slides/00_R_Resources.html), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/00_Ch1_Intro.html)
+1. [Intro to the Class](http://tysonbarrett.com/EDUC-6600/Slides/00_Syllabus_2018.pdf), [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex](http://tysonbarrett.com/EDUC-6600/Slides/00_R_Resources.html), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/00_Ch1_Intro.html)
 2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch2_DataViz.html)
 3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch3_CenterSpread.html)
 
