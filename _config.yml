@@ -11,7 +11,7 @@ description:      'Finding the clarity among the chaos of data'
 url:              https://tysonstanley.github.io
 baseurl:          ''
 description2:     'This site is a compilation of: (1) my #rstats blog, (2) my research and teaching portfolio, and (3) information about my data science consulting company -- Thinking Stats. See the sidebar for more information.'
-description3:     'I am a Health Data Scientist and #Rstats Enthusiast. I am currently a researcher (and PhD Candidate) at Utah State University in Quantitative Psychology. I consult on statistical and data science issues for the college (including public health, education, psychology, and other social sciences). I am particularly interested in the reproducibility of research, exploratory data analysis, machine learning, and mediation analysis.'
+description3:     'I am a Clinical Data Scientist and #Rstats Enthusiast. I am a Research Assistant Professor at Utah State University. In addition to my own research, I consult on data science issues for the college (including public health, education, psychology, and other social sciences).'
 
 author:
   name:           'Tyson S. Barrett'
