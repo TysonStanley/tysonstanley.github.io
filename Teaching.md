@@ -16,7 +16,7 @@ permalink: /teaching/
 
 # Courses
 
-<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="100" width="500">
+<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="500">
 
 
 ## Research Design and Analysis I (EDUC/PSY 6600)
