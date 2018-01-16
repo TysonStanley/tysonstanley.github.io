@@ -35,7 +35,7 @@ This is an introduction to statistics for master's level social scientists. It f
 
 
 <br>
-<img src="https://www.r-project.org/logo/Rlogo.png" alt="R_logo" height="200" width="500">
+<img src="https://www.r-project.org/logo/Rlogo.png" alt="R_logo" height="250" width="250">
 
 I have taught an introductory/intermediate graduate R course for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and all it has to offer.
 
