@@ -37,7 +37,7 @@ This is an introduction to statistics for master's level social scientists. It f
 <br>
 <img src="https://www.r-project.org/logo/Rlogo.png" alt="R Foundation Logo" height="200" width="250">
 
-I have taught an introductory/intermediate graduate R course for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and all it has to offer.
+These are introductory and intermediate graduate R courses for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
 
 I have lots of material that can be found at: [Graduate R Courses--GitHub](https://github.com/TysonStanley/Graduate_R_Courses) and [Graduate R Courses](https://tysonstanley.github.io/Graduate_R_Courses/).
 
@@ -63,7 +63,6 @@ My most recent class material can be found below:
 7. [Other Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/07_OtherModels.pdf)
 8. [Functions, Functions, Functions](https://tysonstanley.github.io/Graduate_R_Courses/intro/06_MultilevelModels.pdf)
 9. [More on Visualizations](https://tysonstanley.github.io/Graduate_R_Courses/intro/09_AdvancedPlotting.pdf)
-
 
 I will also be using Andrew Heiss's great walkthrough of replicating Minard's 1812 plot with `ggplot2` (found [here](https://www.andrewheiss.com/blog/2017/08/10/exploring-minards-1812-plot-with-ggplot2/)).
 
