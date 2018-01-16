@@ -16,6 +16,9 @@ permalink: /teaching/
 
 # Courses
 
+<img src="https://github.com/TysonStanley/tysonstanley.github.io/tree/master/assets/images/RDA1_logo.png" alt="RDA1_logo" height="100" width="500">
+
+
 ## Research Design and Analysis I (EDUC/PSY 6600)
 
 This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. We are putting together a [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/)---especially with using R.
