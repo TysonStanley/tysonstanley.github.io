@@ -25,7 +25,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch3_CenterSpread.html)
 
 <br>
-<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="ASA_logo" height="200" width="500">
+<img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
 
 This is an introduction to statistics for master's level social scientists. It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
 
