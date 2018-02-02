@@ -35,6 +35,7 @@ This is an introduction to statistics for master's level social scientists. It f
 2. [Week 2](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf)
 3. [Week 3](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pdf)
 4. [Week 4](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pdf)
+5. [Week 5](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pdf)
 
 
 <br>
