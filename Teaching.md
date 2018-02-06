@@ -25,6 +25,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch3_CenterSpread.html)
 4. [Chapter 4](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch4_Zscores.html)
 5. [Chapter 5](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch5_HypoTest.html)
+6. [Chapter 6](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch6_CI_tDist.html)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
