@@ -101,9 +101,9 @@ fit for all the other universities. My guess is that it is a great starting
 point for you to match your own situation's guidelines.
 
 This file has comments throughout to highlight what each section is
-doing. It includes the formatting of the title page as well. The title
-page, using the `Params:` section of the YAML. It does this as, while
-knitting, a file called `preamble.tex` is written through a function
+doing. It includes the formatting of the title page as well. Using the `Params:` 
+section of the YAML, the title page is populated with the information put there.
+It does this as, while knitting, a file called `preamble.tex` is written through a function
 that is found early in the RMarkdown file. This function comes through
 the `dissertateUSU` R package on GitHub (download with
 `devtools::install_github("tysonstanley/dissertateUSU"`)). After
@@ -129,13 +129,16 @@ that takes the information from the `Params:`, places them in a
 In the preceding image, you may have noticed the use of the R chunk
 option: `child = 'abstract.Rmd'`. This means it takes the `abstract.Rmd`
 file in the same directory and knits in within the main .Rmd file. That
-is, the abstract file that I wrote in .Rmd, will appear within the file.
+is, the abstract file that I wrote in a separate RMarkdown file, 
+will appear within the main output with the formatting provided in the main
+.Rmd file.
 
 This general appraoch of using the `child =` option allows you to write
-each chapter within its own .Rmd file. This allows editing and error
-finding to go much more smoothly. You'll see in the OSF repository that
-I have my files for all my chapters and the different front matter
-(abstracts, dedication, acknowledgement, etc.).
+each chapter within its own .Rmd file (without worrying too much about
+formatting). This allows editing and error finding to go much more smoothly. 
+You'll see in the OSF repository that I have my files for all my chapters and 
+the different front matter (abstracts, dedication, acknowledgement, etc.). 
+These are very simple .Rmd files.
 
 This is how the majority of the writing went. I added the writing and
 other information, including R code (which is printed in the
