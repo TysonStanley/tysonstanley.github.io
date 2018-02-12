@@ -165,6 +165,12 @@ I'm hoping between this post and the OSF repository, this provides you
 with the information to start writing and formatting your dissertation
 within RMarkdown.
 
+#### Other Things
+
+- For spell checking, I used the built in spell check in RStudio. It wasn't perfect but worked really well.
+- For version control, I used the Open Science Framework (OSF; where I have the files linked). I would have used Git and GitHub had there been collaborators that knew how to use it. This worked well as it provides a simplified version control system while providing tools to share it later.
+- I used some simulations in my dissertation. I used a regular script file to write these and run them (using the terminal when possible). I pasted this code within the manuscript toward the end of the writing (when I knew the simulations were done). This allowed me to include them in the appendices more easily.
+
 As a final note, I recommend using RStudio Projects as well. These help
 keep things more organized, especially when it comes to saving and
 reading in different files.
