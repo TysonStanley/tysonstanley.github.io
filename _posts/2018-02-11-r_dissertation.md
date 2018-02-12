@@ -251,8 +251,8 @@ if you have time!
 
 
 
-{% if page.comments %}
-
+{% if page.comments %} 
+<div id="disqus_thread"></div>
 <script>
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -273,9 +273,5 @@ if you have time!
         (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>
-Please enable JavaScript to view the
-<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
-powered by Disqus.</a>
-</noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
