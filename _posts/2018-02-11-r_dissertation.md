@@ -8,7 +8,8 @@ comments: true
 
 A few days ago I announced that I had completed the requirements for a
 PhD in Quantitative Psychology and (maybe more interestingly) that I had
-written my entire dissertation in Rmarkdown.
+written my entire dissertation in Rmarkdown. It was more of a shoutout to 
+@RStudio but the interest in how I did it was exciting.
 
 <blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">
@@ -43,7 +44,7 @@ Writing with RMarkdown
 First, I want to talk about how I went about writing a dissertation in
 RMarkdown. With the advent of `bookdown`, a number of people asked if
 that was the tool I used to write my dissertation. Although it is a
-fantastic tool that I have used [elsewhere](), I wanted the flexibility
+fantastic tool that I have used [elsewhere](http://tysonbarrett.com/Rstats/), I wanted the flexibility
 of using pure RMarkdown. What I mean by that is that I needed to be able
 to integrate Latex formatting files within the system without having to
 learn the ins-and-outs of `bookdown`.
@@ -143,7 +144,7 @@ end of the document took a little bit of hacking to make it work right.
 ![]({{ site.baseurl }}/assets/images/dissertateUSU_ref.png)
 ![]({{ site.baseurl }}/assets/images/dissertateUSU_ref2.png)
 
-This "hack" required using `<div id="refs"></div>` to force the
+This "hack" required using `<div id="refs"></div>` (line 205 in the image) to force the
 references to be printed before the appendices and CV. Further, the
 appendix files essentially grab the code used in the manuscript and,
 using `echo=TRUE` in the R chunks, prints them nicely.
@@ -239,6 +240,9 @@ This was a quick introduction to how I wrote my dissertation using
 RMarkdown. I hope it was helpful to at least get started on the road to
 using RMarkdown for your own scientific writing. Please leave feedback
 if you have time!
+
+
+
 
 {% if page.comments %}
 
