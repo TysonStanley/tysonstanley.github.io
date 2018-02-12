@@ -168,7 +168,7 @@ I'm hoping between this post and the OSF repository, this provides you
 with the information to start writing and formatting your dissertation
 within RMarkdown.
 
-#### Other Things
+### Other Things
 
 - For spell checking, I used the built in spell check in RStudio. It wasn't perfect but worked really well.
 - For version control, I used the Open Science Framework (OSF; where I have the files linked). I would have used Git and GitHub had there been collaborators that knew how to use it. This worked well as it provides a simplified version control system while providing tools to share it later.
