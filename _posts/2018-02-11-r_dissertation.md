@@ -92,12 +92,13 @@ RMarkdown, you are probably familiar with. These include the title,
 author, output, bibliography, and nocite. The documentation for this can
 be found at [RMarkdown's website](https://rmarkdown.rstudio.com). The
 other pieces are more rare but still documented as useful YAML options
-in RMarkdown. Among these, `documentclass: DissertateUSU`. This pulls
+in RMarkdown. Among these, `documentclass: DissertateUSU` is important. This pulls
 information from another file called `DissertateUSU.cls`, which
 ultimately controls much of the formatting of the outputted PDF file.
-This file was heavily adjusted by my colleague and me to match the
-specified formatting for Utah State University (thus the dissertateUSU
-name).
+This file was made particularly to match the specified formatting for 
+Utah State University (thus the dissertateUSU name) and thus won't be a perfect
+fit for all the other universities. My guess is that it is a great starting 
+point for you to match your own situation's guidelines.
 
 This file has comments throughout to highlight what each section is
 doing. It includes the formatting of the title page as well. The title
