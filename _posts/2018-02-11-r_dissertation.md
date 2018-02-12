@@ -26,6 +26,7 @@ for providing those incredible tools
 10, 2018</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 Several indicated that they'd like to see the process I went through to
 do this. Questions included:
 
@@ -107,14 +108,14 @@ the `dissertateUSU` R package on GitHub (download with
 installing the package, I recommend using the template to get going
 using the approach shown below.
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/template_dissertateUSU.png)
+![](%{{ site.baseurl }}assets/images/template_dissertateUSU.png)
 
 This provides a starting template for the main .Rmd file. It doesn't
 include the R chunks but you can easily add those. It will look
 something like that below (minus the R chunks but I recommend, as I said
 before, adding them).
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/dissertateUSU1.png)
+![]({{ site.baseurl }}/assets/images/dissertateUSU1.png)
 
 For those familiar with RMarkdown, this starting R chunk (the only one
 present in the template) is important for the remainder of the file.
@@ -139,8 +140,8 @@ other information, including R code (which is printed in the
 appendices). However, the References, the appendices and the CV at the
 end of the document took a little bit of hacking to make it work right.
 
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/dissertateUSU_ref.png)
-![](%7B%7B%20site.baseurl%20%7D%7D/assets/images/dissertateUSU_ref2.png)
+![](%{{ site.baseurl }}assets/images/dissertateUSU_ref.png)
+![](%{{ site.baseurl }}assets/images/dissertateUSU_ref2.png)
 
 This "hack" required using `<div id="refs"></div>` to force the
 references to be printed before the appendices and CV. Further, the
