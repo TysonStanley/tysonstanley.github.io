@@ -108,7 +108,7 @@ the `dissertateUSU` R package on GitHub (download with
 installing the package, I recommend using the template to get going
 using the approach shown below.
 
-![](%{{ site.baseurl }}assets/images/template_dissertateUSU.png)
+![]({{ site.baseurl }}/assets/images/template_dissertateUSU.png)
 
 This provides a starting template for the main .Rmd file. It doesn't
 include the R chunks but you can easily add those. It will look
@@ -140,8 +140,8 @@ other information, including R code (which is printed in the
 appendices). However, the References, the appendices and the CV at the
 end of the document took a little bit of hacking to make it work right.
 
-![](%{{ site.baseurl }}assets/images/dissertateUSU_ref.png)
-![](%{{ site.baseurl }}assets/images/dissertateUSU_ref2.png)
+![]({{ site.baseurl }}/assets/images/dissertateUSU_ref.png)
+![]({{ site.baseurl }}/assets/images/dissertateUSU_ref2.png)
 
 This "hack" required using `<div id="refs"></div>` to force the
 references to be printed before the appendices and CV. Further, the
