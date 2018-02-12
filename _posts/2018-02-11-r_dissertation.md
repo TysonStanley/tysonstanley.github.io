@@ -57,8 +57,8 @@ like this:
 
       ---
       documentclass: DissertateUSU
-      title: 'Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects'
-      author: Tyson S. Barrett
+      title: 'Title'
+      author: Your Name
       output:
         pdf_document:
           latex_engine: xelatex
@@ -77,14 +77,14 @@ like this:
         @Hastie2009
       params:
         year: '2018'
-        degree: 'Doctor of Philosophy'
-        field: 'Quantitative Psychology'
-        chair: 'Ginger Lockhart, Ph.D.'
-        committee1: 'Jamison Fargo, Ph.D.'
-        committee2: 'Rick Cruz, Ph.D.'
-        committee3: 'Michael Levin, Ph.D.'
-        committee4: 'Adele Cutler, Ph.D.'
-        gradschool: 'Mark McLellan, Ph.D.'
+        degree: 'Your Degree'
+        field: 'Your Field'
+        chair: 'Your Chair'
+        committee1: 'Committee Member 1'
+        committee2: 'Committee Member 2'
+        committee3: 'Committee Member 3'
+        committee4: 'Committee Member 4'
+        gradschool: 'Graduate School Dean'
       ---
 
 Most of it contains pieces that, if you've used somewhat more advanced
