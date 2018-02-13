@@ -20,14 +20,14 @@ permalink: /teaching/
 
 This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. We are putting together a [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/)---especially with using R.
 
-1. [Intro to the Class](http://tysonbarrett.com/EDUC-6600/Slides/00_Syllabus_2018_Spring.pdf), [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex](http://tysonbarrett.com/EDUC-6600/Slides/00_R_Resources.html), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/00_Ch1_Intro.html)
-2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch2_DataViz.html)
-3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch3_CenterSpread.html)
-4. [Chapter 4](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch4_Zscores.html)
-5. [Chapter 5](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch5_HypoTest.html)
-6. [Chapter 6](http://tysonbarrett.com/EDUC-6600/Slides/01_Ch6_CI_tDist.html)
-7. [Chapter 7 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/02_Ch7_ttest.pdf) or [Chapter 7 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/02_Ch7_ttest.pptx)
-8. [Chapter 8 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/02_Ch8_power.pdf) or [Chapter 8 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/02_Ch8_power.pptx)
+1. [Intro to the Class](http://tysonbarrett.com/EDUC-6600/Slides/u00_Syllabus_2018_Spring.pdf), [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/u00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/u00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex](http://tysonbarrett.com/EDUC-6600/Slides/u00_R_Resources.html), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/u00_Ch1_Intro.html)
+2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.html)
+3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch3_CenterSpread.html)
+4. [Chapter 4](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.html)
+5. [Chapter 5](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch5_HypoTest.html)
+6. [Chapter 6](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch6_CI_tDist.html)
+7. [Chapter 7 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pdf) or [Chapter 7 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pptx)
+8. [Chapter 8 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pdf) or [Chapter 8 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pptx)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
