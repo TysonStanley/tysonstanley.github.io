@@ -18,7 +18,16 @@ permalink: /teaching/
 
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="500">
 
-This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. We are putting together a [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/)---especially with using R.
+This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
+
+### Resources
+
+- We are putting together a [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/)---especially with using R.
+- A [PDF](http://tysonbarrett.com/EDUC-6600/Resources/formulas.pdf) with all the formulas we use in the class.
+- A [PDF](http://tysonbarrett.com/EDUC-6600/Resources/tables.pdf) with all the tables we use in the class.
+- A [Box Folder](https://usu.app.box.com/folder/44325607147) that contains nearly all the material used for the class (homework assignments, data, articles).
+
+### Lecture Slides
 
 1. [Intro to the Class](http://tysonbarrett.com/EDUC-6600/Slides/u00_Syllabus_2018_Spring.pdf), [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/u00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/u00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex](http://tysonbarrett.com/EDUC-6600/Slides/u00_R_Resources.html), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/u00_Ch1_Intro.html)
 2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.html)
@@ -33,6 +42,8 @@ This is an introduction to statistics at a graduate level (generally PhD student
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
 
 This is an introduction to statistics for master's level social scientists. It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
+
+### Lecture Slides
 
 1. [Week 1](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf)
 2. [Week 2](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf)
