@@ -52,6 +52,7 @@ This is an introduction to statistics for master's level social scientists. It f
 4. [Week 4](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pdf)
 5. [Week 5](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pdf)
 6. [Week 6](http://tysonbarrett.com/EDUC-6050/Slides/06_EDUC_6050_2018.pdf)
+6. [Week 7](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pdf)
 
 <br>
 <img src="https://www.r-project.org/logo/Rlogo.png" alt="R Foundation Logo" height="200" width="250">
