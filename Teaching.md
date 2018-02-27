@@ -38,6 +38,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 7. [Chapter 7 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pdf) or [Chapter 7 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pptx)
 8. [Chapter 8 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pdf) or [Chapter 8 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pptx)
 9. [Chapter 9](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch9_LinReg.html)
+10. [Chapter 10](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.html)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
