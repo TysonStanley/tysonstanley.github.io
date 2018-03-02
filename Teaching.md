@@ -30,15 +30,15 @@ This is an introduction to statistics at a graduate level (generally PhD student
 ### Lecture Slides
 
 1. [Intro to the Class](http://tysonbarrett.com/EDUC-6600/Slides/u00_Syllabus_2018_Spring.pdf), [Intro to the Textbook](http://tysonbarrett.com/EDUC-6600/Slides/u00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review](http://tysonbarrett.com/EDUC-6600/Slides/u00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex](http://tysonbarrett.com/EDUC-6600/Slides/u00_R_Resources.html), and [Chapter 1](http://tysonbarrett.com/EDUC-6600/Slides/u00_Ch1_Intro.html)
-2. [Chapter 2](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.html)
-3. [Chapter 3](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch3_CenterSpread.html)
-4. [Chapter 4](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.html)
-5. [Chapter 5](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch5_HypoTest.html)
-6. [Chapter 6](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch6_CI_tDist.html)
+2. [Chapter 2 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.pdf) or [Chapter 2 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.html)
+3. [Chapter 3 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch3_CenterSpread.pdf) or [Chapter 3 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch3_CenterSpread.html)
+4. [Chapter 4 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.pdf) or [Chapter 4 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.html)
+5. [Chapter 5 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch5_HypoTest.pdf) or [Chapter 5 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch5_HypoTest.html)
+6. [Chapter 6 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch6_CI_tDist.pdf) or [Chapter 6 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch6_CI_tDist.html)
 7. [Chapter 7 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pdf) or [Chapter 7 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pptx)
 8. [Chapter 8 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pdf) or [Chapter 8 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pptx)
-9. [Chapter 9](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch9_Cor.html)
-10. [Chapter 10](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.html)
+9. [Chapter 9 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch9_Cor.pdf) or [Chapter 9 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch9_Cor.html)
+10. [Chapter 10 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.pdf) or [Chapter 10 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.html)
 11. [Chapter 11 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch11_matchedt.pdf) or [Chapter 11 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch11_matchedt.pptx)
 
 <br>
