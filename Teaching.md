@@ -52,13 +52,13 @@ This is an introduction to statistics for master's level social scientists. It f
 ### Lecture Slides
 
 1. Week 1 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-2. Week 2 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-3. Week 3 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-4. Week 4 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-5. Week 5 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-6. Week 6 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/06_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-7. Week 7 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-8. Week 8 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/08_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
+2. Week 2 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx)
+3. Week 3 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pptx)
+4. Week 4 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pptx)
+5. Week 5 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pptx)
+6. Week 6 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/06_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/06_EDUC_6050_2018.pptx)
+7. Week 7 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pptx)
+8. Week 8 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/08_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/08_EDUC_6050_2018.pptx)
 
 <br>
 <img src="https://www.r-project.org/logo/Rlogo.png" alt="R Foundation Logo" height="200" width="250">
