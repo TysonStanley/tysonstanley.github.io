@@ -20,21 +20,21 @@ This post is for walking through the use of `afex`, includig
 following ficticious data set:
 
 {% highlight r %}
-    set.seed(42)
-    z <- data.frame(a1 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)),
-                    b  = rep(c("A", "B", "C"), each = 100),
-                    c  = factor(rbinom(300, 1, .5)),
-                    ID = 1:300,
-                    a2 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)),
-                    a3 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)))
+set.seed(42)
+z <- data.frame(a1 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)),
+                b  = rep(c("A", "B", "C"), each = 100),
+                c  = factor(rbinom(300, 1, .5)),
+                ID = 1:300,
+                a2 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)),
+                a3 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)))
 {% endhighlight %}
 
 and we will load:
 
 {% highlight r %}
-    library(lsmeans)
-    library(afex)
-    library(tidyverse)
+library(lsmeans)
+library(afex)
+library(tidyverse)
 {% endhighlight %}
 
 One-Way ANOVA
@@ -48,13 +48,10 @@ different syntax. To use `aov_car()`, we are essentially using aov with
 a few adjustments.
 
 {% highlight r %}
-    aov1 <- z %>%
-      aov_car(a1 ~ b + Error(ID),
-              data = .)
-
-    ## Contrasts set to contr.sum for the following variables: b
-
-    aov1
+aov1 <- z %>%
+  aov_car(a1 ~ b + Error(ID),
+          data = .)
+aov1
 {% endhighlight %}
 
     ## Anova Table (Type 3 tests)
@@ -74,10 +71,14 @@ We can check assumptions fairly quickly with the `plot()` function and
 pulling out the `aov` object from `aov1`.
 
 {% highlight r %}
-    plot(aov1$aov)
+aov1$aov %>%
+  plot()
 {% endhighlight %}
 
-![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-1.png)![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-2.png)![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-3.png)![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-4.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-2.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-3.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-4.png)
 
 From here, we can obtain the least squares means and plot them with
 `ggplot2` showing the mean and the confidence interval. It is important
@@ -86,24 +87,24 @@ it actually is functionality that `afex` provides. As such, using
 `lsmeans::lsmeans()` will through an error.
 
 {% highlight r %}
-    aov1 %>%
-      lsmeans(specs = "b") %>%
-      data.frame %>%
-      ggplot(aes(b, lsmean)) +
-        geom_point() +
-        geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
+aov1 %>%
+  lsmeans(specs = "b") %>%
+  data.frame %>%
+  ggplot(aes(b, lsmean)) +
+    geom_point() +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
 {% endhighlight %}
 
-![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 We can also look at some PostHoc type analyses using the `lsmeans()`
 object.
 
 {% highlight r %}
-    aov1 %>%
-      lsmeans(specs = "b") %>%
-      pairs() %>%
-      update(by=NULL, adjust = "tukey")
+aov1 %>%
+  lsmeans(specs = "b") %>%
+  pairs() %>%
+  update(by=NULL, adjust = "tukey")
 {% endhighlight %}
 
     ##  contrast  estimate        SE  df t.ratio p.value
@@ -123,11 +124,11 @@ are for `aov_4()` for most situations because it uses the syntax of
 `lme4::lmer()`.
 
 {% highlight r %}
-    z %>%
-      aov_ez(id = "ID",
-             dv = "a1",
-             between = "b",
-             data = .)
+z %>%
+  aov_ez(id = "ID",
+         dv = "a1",
+         between = "b",
+         data = .)
 {% endhighlight %}
 
     ## Contrasts set to contr.sum for the following variables: b
@@ -145,9 +146,9 @@ The same checks and tests as shown before are possible here.
 #### `afex::aov_4()`
 
 {% highlight r %}
-    z %>%
-      aov_4(a1 ~ b + (1|ID),
-            data = .)
+z %>%
+  aov_4(a1 ~ b + (1|ID),
+        data = .)
 {% endhighlight %}
 
     ## Contrasts set to contr.sum for the following variables: b
@@ -169,28 +170,22 @@ Two or more factors can be included as well. These are very similar to
 their One-Way ANOVA counterparts.
 
 {% highlight r %}
-    aov2 <- z %>%
-      aov_car(a1 ~ b * c + Error(ID),
-              data = .)
+aov2 <- z %>%
+  aov_car(a1 ~ b * c + Error(ID),
+          data = .)
 
-    ## Contrasts set to contr.sum for the following variables: b, c
+aov2.1 <- z %>%
+  select(a1, b, c, ID) %>%
+  aov_ez(id = "ID",
+         dv = "a1",
+         between = c("b", "c"),
+         data = .)
 
-    aov2.1 <- z %>%
-      select(a1, b, c, ID) %>%
-      aov_ez(id = "ID",
-             dv = "a1",
-             between = c("b", "c"),
-             data = .)
+aov2 <- z %>%
+  aov_4(a1 ~ b * c + (1|ID),
+        data = .)
 
-    ## Contrasts set to contr.sum for the following variables: b, c
-
-    aov2 <- z %>%
-      aov_4(a1 ~ b * c + (1|ID),
-            data = .)
-
-    ## Contrasts set to contr.sum for the following variables: b, c
-
-    aov2
+aov2
 {% endhighlight %}
 
     ## Anova Table (Type 3 tests)
@@ -206,21 +201,17 @@ their One-Way ANOVA counterparts.
 You can remove the interaction in the following ways:
 
 {% highlight r %}
-    aov2.1 <- z %>%
-      aov_car(a1 ~ b + c + Error(ID),
-              data = .)
+aov2.1 <- z %>%
+  aov_car(a1 ~ b + c + Error(ID),
+          data = .)
 
-    ## Contrasts set to contr.sum for the following variables: b, c
+## Not sure how to remove it from `aov_ez()`
 
-    ## Not sure how to remove it from `aov_ez()`
+aov2.1 <- z %>%
+  aov_4(a1 ~ b + c + (1|ID),
+        data = .)
 
-    aov2.1 <- z %>%
-      aov_4(a1 ~ b + c + (1|ID),
-            data = .)
-
-    ## Contrasts set to contr.sum for the following variables: b, c
-
-    aov2.1
+aov2.1
 {% endhighlight %}
 
     ## Anova Table (Type 3 tests)
@@ -235,28 +226,31 @@ You can remove the interaction in the following ways:
 We can check some assumptions using the `plot()` function.
 
 {% highlight r %}
-    aov2$aov %>%
-      plot()
+aov2$aov %>%
+  plot()
 {% endhighlight %}
 
-![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-1.png)![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-2.png)![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-3.png)![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-4.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-2.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-3.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-4.png)
 
 From here, we can obtain the least squares means and plot them with
 `ggplot2` showing the mean and the confidence interval by our other
 factor.
 
 {% highlight r %}
-    aov2 %>%
-      lsmeans(specs = c("b", "c")) %>%
-      data.frame %>%
-      ggplot(aes(b, lsmean, group = c, color = c)) +
-        geom_point(position = position_dodge(width = .3)) +
-        geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
-                      position = position_dodge(width = .3),
-                      width = .2)
+aov2 %>%
+  lsmeans(specs = c("b", "c")) %>%
+  data.frame %>%
+  ggplot(aes(b, lsmean, group = c, color = c)) +
+    geom_point(position = position_dodge(width = .3)) +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                  position = position_dodge(width = .3),
+                  width = .2)
 {% endhighlight %}
 
-![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 ### Repeated Measures ANOVA
 
@@ -264,8 +258,8 @@ Repeated measures is now much like the other types of ANOVA. The major
 difference is that we need to change the format of the data.
 
 {% highlight r %}
-    z_long <- z %>%
-      tidyr::gather("meas", "value", a1, a2, a3)
+z_long <- z %>%
+  tidyr::gather("meas", "value", a1, a2, a3)
 {% endhighlight %}
 
     ## # A tibble: 900 x 5
@@ -284,10 +278,10 @@ difference is that we need to change the format of the data.
     ## # ... with 890 more rows
 
 {% highlight r %}
-    aov_rm <- z_long %>%
-      aov_car(value ~ 1 + Error(ID/meas),
-              data = .)
-    aov_rm
+aov_rm <- z_long %>%
+  aov_car(value ~ 1 + Error(ID/meas),
+          data = .)
+aov_rm
 {% endhighlight %}
 
     ## Anova Table (Type 3 tests)
@@ -305,10 +299,10 @@ overall. It uses code that makes more sense to me so I'll show it here
 (I won't be showing how to use `aov_ez()` for repeated measures).
 
 {% highlight r %}
-    aov_rm <- z_long %>%
-      aov_4(value ~ 1 + (meas|ID),
-            data = .)
-    aov_rm
+aov_rm <- z_long %>%
+  aov_4(value ~ 1 + (meas|ID),
+        data = .)
+aov_rm
 {% endhighlight %}
 
     ## Anova Table (Type 3 tests)
@@ -327,8 +321,8 @@ happen so we can do the following (note the use of `lm` instead of
 `aov`).
 
 {% highlight r %}
-    aov_rm$lm %>%
-      plot()
+aov_rm$lm %>%
+  plot()
 {% endhighlight %}
 
     Error: 'plot.mlm' is not implemented yet
@@ -337,15 +331,15 @@ We can obtain the least squares means and plot them with `ggplot2`
 showing the mean and the confidence interval.
 
 {% highlight r %}
-    aov_rm %>%
-      lsmeans(specs = "meas") %>%
-      data.frame %>%
-      ggplot(aes(meas, lsmean)) +
-        geom_point() +
-        geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
+aov_rm %>%
+  lsmeans(specs = "meas") %>%
+  data.frame %>%
+  ggplot(aes(meas, lsmean)) +
+    geom_point() +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
 {% endhighlight %}
 
-![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-18-1.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-18-1.png)
 
 Mixed Models
 ------------
@@ -354,13 +348,10 @@ Similarly to the repeated measures ANOVA, I'm going to focus on
 `aov_4()`.
 
 {% highlight r %}
-    mixed_mod <- z_long %>%
-      aov_4(value ~ b + c + (meas|ID),
-            data = .)
-
-    ## Contrasts set to contr.sum for the following variables: b, c
-
-    mixed_mod
+mixed_mod <- z_long %>%
+  aov_4(value ~ b + c + (meas|ID),
+        data = .)
+mixed_mod
 {% endhighlight %}
 
     ## Anova Table (Type 3 tests)
@@ -381,8 +372,8 @@ We have the same issue of checking assumptions here as the repeated
 measures ANOVA
 
 {% highlight r %}
-    mixed_mod$lm %>%
-      plot()
+mixed_mod$lm %>%
+  plot()
 {% endhighlight %}
 
       Error: 'plot.mlm' is not implemented yet
@@ -391,18 +382,18 @@ Finally, we can check out the least-squares means across groups and
 time.
 
 {% highlight r %}
-    mixed_mod %>%
-      lsmeans(specs = c("meas", "b", "c")) %>%
-      data.frame %>%
-      ggplot(aes(meas, lsmean, group = b, color = b)) +
-        geom_point() +
-        geom_line() +
-        geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
-                      width = .2) +
-        facet_grid(~c)
+mixed_mod %>%
+  lsmeans(specs = c("meas", "b", "c")) %>%
+  data.frame %>%
+  ggplot(aes(meas, lsmean, group = b, color = b)) +
+    geom_point() +
+    geom_line() +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                  width = .2) +
+    facet_grid(~c)
 {% endhighlight %}
 
-![](2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-21-1.png)
+![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-21-1.png)
 
 There you have it! I believe `afex` is a valuable contribution to `R`,
 particularly in dealing with factorial and repeated-measures ANOVA.
