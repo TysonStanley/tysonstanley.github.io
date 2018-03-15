@@ -11,7 +11,7 @@ We recently switched our graduate statistics courses to `R` from SPSS
 methods, particularly the repeated measures flavor of ANOVA, `R` isn't
 as seamless as almost every other statistical approach. As such, my
 colleague [Sarah Schwartz](sarahschwartzstats.com) found the
-[`afex`](https://github.com/singmann/afex) package that looks like it
+[`afex` package](https://github.com/singmann/afex) that looks like it
 can be helpful in simplifying the code and increasing the amount of
 useful information obtained.
 
