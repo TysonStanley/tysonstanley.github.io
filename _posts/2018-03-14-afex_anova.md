@@ -75,10 +75,10 @@ aov1$aov %>%
   plot()
 {% endhighlight %}
 
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-1.png)
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-2.png)
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-3.png)
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-4.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-2.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-3.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-4-4.png)
 
 From here, we can obtain the least squares means and plot them with
 `ggplot2` showing the mean and the confidence interval. It is important
@@ -95,7 +95,7 @@ aov1 %>%
     geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
 {% endhighlight %}
 
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 We can also look at some PostHoc type analyses using the `lsmeans()`
 object.
@@ -230,10 +230,10 @@ aov2$aov %>%
   plot()
 {% endhighlight %}
 
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-1.png)
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-2.png)
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-3.png)
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-4.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-2.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-3.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-11-4.png)
 
 From here, we can obtain the least squares means and plot them with
 `ggplot2` showing the mean and the confidence interval by our other
@@ -250,7 +250,7 @@ aov2 %>%
                   width = .2)
 {% endhighlight %}
 
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 ### Repeated Measures ANOVA
 
@@ -339,7 +339,7 @@ aov_rm %>%
     geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
 {% endhighlight %}
 
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-18-1.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-18-1.png)
 
 Mixed Models
 ------------
@@ -393,7 +393,7 @@ mixed_mod %>%
     facet_grid(~c)
 {% endhighlight %}
 
-![]( {{ site.url }}/blog/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-21-1.png)
+![]( {{ site.baseurl }}/assets/RMD/2018-03-14-afex_anova_files/figure-markdown_strict/unnamed-chunk-21-1.png)
 
 There you have it! I believe `afex` is a valuable contribution to `R`,
 particularly in dealing with factorial and repeated-measures ANOVA.
