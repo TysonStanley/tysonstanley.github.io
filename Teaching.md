@@ -42,7 +42,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 11. [Chapter 11 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch11_matchedt.pdf) or [Chapter 11 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch11_matchedt.pptx)
 12. [Chapter 12 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch12_oneANOVA.pdf) or [Chapter 12 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch12_oneANOVA.pptx)
 13. [Chapter 13 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch13_multcomp.pdf) or [Chapter 13 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch13_multcomp.pptx)
-14. [Chapter 13 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pdf) or [Chapter 13 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pptx) and [Chapter 13 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pdf) or [Chapter 13 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pptx) 
+14. [Chapter 14 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pdf) or [Chapter 14 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pptx) and [Chapter 14 Example (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pdf) or [Chapter 14 Example (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pptx) 
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
