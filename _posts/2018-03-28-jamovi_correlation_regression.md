@@ -10,21 +10,15 @@ comments: true
 
 This post is part of a series--demonstrating the use of Jamovi--mainly because some of my students asked for it. Notably, this is using version 0.8.6.0.
 
+Note: This starts by assuming you know how to get data into Jamovi and start getting descriptive statistics.
+
 ## Correlation
 
-Getting data into Jamovi is fairly straightforward if your data are in CSV, Excel, SPSS, Stata, and others. To import existing data, click on the upper left corner of Jamovi on the three horizontal lines. This opens up what is shown in the following screen shot. From here, you find the data file on your computer, select it, and select "open".
 
-![]( {{ site.baseurl }}/assets/Jamovi/DataTypes.png)
 
-From here, we can change the variable types by double clicking on the variable name. The bubbles or ruler tell us what kind of variable it is.
 
-![]( {{ site.baseurl }}/assets/Jamovi/VarTypes.png)
 
-Now that these are prepped, much of the data cleaning is much like you do in Microsoft Excel (although I recommend cleaning in a program other than Jamovi since at this point you can only do basic adjustments in Jamovi).
-
-At the top of Jamovi's GUI, there are a number of tabs that are different analyses that you can do, including `Exploration`, `T-Tests`, etc. For this demonstration, we are going to show the `Exploration` tab.
-
-## Regression
+## Linear Regression
 
 
 
