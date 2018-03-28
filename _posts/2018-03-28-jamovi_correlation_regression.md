@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using to Jamovi: Introduction"
+title: "Using to Jamovi: Correlation and Regression"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
