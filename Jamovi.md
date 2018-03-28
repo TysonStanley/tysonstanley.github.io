@@ -1,18 +1,13 @@
 ---
 layout: page
-title: REDCap
-permalink: /redcap/
+title: Jamovi Tutorials
+permalink: /jamovi/
 ---
 
-This page is for keeping track of REDCap resources.
+I am creating a series of Jamovi tutorials for my Applied Statistical Analysis graduate course. The following are links that you can follow to the tutorials.
 
-## Getting Started
+1. [Intro to Jamovi](http://tysonbarrett.com//jekyll/update/2018/03/28/jamovi/)
+2. [Correlations and Regressions in Jamovi](http://tysonbarrett.com//jekyll/update/2018/03/28/jamovi_correlation_regression/)
 
-
-## Randomization into Groups
-
-
-## Automatic Emailing
-
-
+More to come...
 
