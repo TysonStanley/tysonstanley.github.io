@@ -30,11 +30,11 @@ The menu below, "Expected Proportions" allows us to customize how many we expect
 
 ## Chi Square Test of Independence
 
-The test of independence is also in the `Frequencies` tab and then `TIndependent Samples`.
+The test of independence is also in the `Frequencies` tab and then `Independent Samples`.
 
 ![]( {{ site.baseurl }}/assets/Jamovi/chi_05.png)
 
-Clicking on this provides this screen where we can put in two variables, one into "Rows" and another in "Columns".
+Clicking on this provides this screen (below) where we can put in two variables, one into "Rows" and another in "Columns" ("Counts" is used if we have summary data with counts for our variables; "Layers" allows us to do a chi square by group.)
 
 ![]( {{ site.baseurl }}/assets/Jamovi/chi_06.png)
 ![]( {{ site.baseurl }}/assets/Jamovi/chi_07.png)
