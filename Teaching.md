@@ -18,11 +18,11 @@ permalink: /teaching/
 
 <img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" height="200" width="550">
 
-This class is coming in the fall (2018). It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer.
+This class is coming in the fall (2018). It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
 
 <br>
-<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="500">
+<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
 
 This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
@@ -54,7 +54,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 
 
 <br>
-<img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
+<img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="540">
 
 This is an introduction to statistics for master's level social scientists. It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
 
