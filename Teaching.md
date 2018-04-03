@@ -44,6 +44,8 @@ This is an introduction to statistics at a graduate level (generally PhD student
 13. [Chapter 13 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch13_multcomp.pdf) or [Chapter 13 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch13_multcomp.pptx)
 14. [Chapter 14 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pdf) or [Chapter 14 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pptx) and 
 [Chapter 14 Example (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pdf) or [Chapter 14 Example (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pptx) 
+13. [Chapter 15 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pdf) or [Chapter 15 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pptx)
+
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="500">
