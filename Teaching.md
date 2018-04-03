@@ -16,6 +16,12 @@ permalink: /teaching/
 
 # Courses
 
+<img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" height="200" width="500">
+
+This class is coming in the fall (2018). It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer.
+
+
+<br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="500">
 
 This is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
@@ -44,7 +50,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 13. [Chapter 13 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch13_multcomp.pdf) or [Chapter 13 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch13_multcomp.pptx)
 14. [Chapter 14 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pdf) or [Chapter 14 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pptx) and 
 [Chapter 14 Example (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pdf) or [Chapter 14 Example (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pptx) 
-13. [Chapter 15 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pdf) or [Chapter 15 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pptx)
+15. [Chapter 15 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pdf) or [Chapter 15 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pptx)
 
 
 <br>
