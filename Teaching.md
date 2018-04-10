@@ -51,6 +51,7 @@ This is an introduction to statistics at a graduate level (generally PhD student
 14. [Chapter 14 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pdf) or [Chapter 14 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorial.pptx) and 
 [Chapter 14 Example (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pdf) or [Chapter 14 Example (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u04_Ch14_factorialExample.pptx) 
 15. [Chapter 15 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pdf) or [Chapter 15 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pptx)
+  - An `R` Example of RM ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch15_rmANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch15_rmANOVA.Rmd)
 16. [Chapter 16 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch16_mixANOVA.pdf) or [Chapter 16 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch16_mixANOVA.pptx) 
   - An `R` Example of Mixed ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.Rmd)
 17. [Chapter 19-20 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pdf) or [Chapter 19-20 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pptx)
