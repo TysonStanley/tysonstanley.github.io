@@ -76,6 +76,7 @@ This is an introduction to statistics for master's level social scientists. It f
 11. Week 11 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/11_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/11_EDUC_6050_2018.pptx)
   - Example data for class about poverty: [OMV](http://tysonbarrett.com/EDUC-6050/Data/poverty.omv)
 12. Week 12 - Chi Square Activity and Review (no slides)
+13. Week 13 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/12_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/12_EDUC_6050_2018.pptx)
 
 
 <br>
