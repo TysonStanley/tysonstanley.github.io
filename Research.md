@@ -7,7 +7,7 @@ permalink: /research/
 
 # My Research ID's
 
-Currently, I have two main resources to for you to check out my published work: [**Orcid**](http://orcid.org/0000-0002-2137-1391) and [**ResearchGate**](https://www.researchgate.net/profile/Tyson_Barrett). Feel free to check these out and let me know what you think, especially if you'd like to collaborate.
+Currently, I have two main resources to for you to check out my published work: <a href="https://orcid.org/0000-0002-2137-1391" target="orcid.widget" rel="noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">orcid.org/0000-0002-2137-1391</a> and [**ResearchGate**](https://www.researchgate.net/profile/Tyson_Barrett). Feel free to check these out and let me know what you think, especially if you'd like to collaborate.
 
 # Research Areas
 
