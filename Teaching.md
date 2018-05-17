@@ -13,6 +13,9 @@ permalink: /teaching/
 1. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
 2. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
 
+# UseR Group (Logan)
+
+1. Customizing RStudio and `ggplot2` [PPTX](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
 
 # Courses
 
