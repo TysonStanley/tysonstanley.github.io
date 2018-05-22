@@ -19,4 +19,4 @@ To sign in once you have an account, visit [https://redcap.cehs.usu.edu](https:/
 
 ## Short Presentation Regarding Secure Data Collection
 
-[Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.html)
+[Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)

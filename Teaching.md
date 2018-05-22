@@ -7,7 +7,7 @@ permalink: /teaching/
 # Workshops
 
 1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
-2. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.html)
+2. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
 
 # Academic Talks
 
