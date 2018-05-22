@@ -12,6 +12,11 @@ The *Center for Research Informatics* at the University of Chicago has a fantast
 
 ## Getting An Account (at Utah State University)
 
-I'll post the link shortly.
+To obtain a REDCap account at Utah State University, click [here](https://redcap.cehs.usu.edu/surveys/index.php?s=MDNHMDKPNM) to access the form. You may request an account for colleagues as well, as long as you are connected to Utah State University (preferrably in the College of Education and Human Services).
+
+To sign in once you have an account, visit [https://redcap.cehs.usu.edu](https://redcap.cehs.usu.edu).
 
 
+## Short Presentation Regarding Secure Data Collection
+
+[Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.html)
