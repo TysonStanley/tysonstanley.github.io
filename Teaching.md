@@ -24,6 +24,9 @@ permalink: /teaching/
 
 This class is coming in the fall (2018). It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
+1. Introductions to the class [PPXT](https://cehs-research.github.io/EDUC-7610/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/00_EDUC7610_IntroR.html) or [PDF](https://cehs-research.github.io/EDUC-7610/00_EDUC7610_IntroR.pdf)
+2. Chapter 1
+
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
