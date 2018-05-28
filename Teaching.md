@@ -27,7 +27,10 @@ All course material is shared under the GNU General Public License.
 This class is coming in the fall (2018). It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
 1. Introductions to the class [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.html) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.pdf)
-2. Chapter 1
+2. Chapter 1 [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf)
+  - Examples [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.pdf)
+3. Chapter 2 [PPXT]() or [PDF]()
+  - Examples [PPXT]() or [PDF]()
 
 
 <br>
