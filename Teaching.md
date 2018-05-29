@@ -28,9 +28,10 @@ This class is coming in the fall (2018). It is a class all about regression, inc
 
 1. Introductions to the class [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.html) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.pdf)
 2. Chapter 1 [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf)
-  - Examples [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.pdf)
+  - Readings: [Tidy Data](https://cehs-research.github.io/EDUC-7610/Readings/Hadley_TidyData_2014.pdf) and [Data Guidelines](https://cehs-research.github.io/EDUC-7610/Readings/Broman_DataSpreadsheets_2017.pdf)
+  - Examples [PPXT](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.html)
 3. Chapter 2 [PPXT]() or [PDF]()
-  - Examples [PPXT]() or [PDF]()
+  - Examples [HTML]() or [RMD]()
 
 
 <br>
