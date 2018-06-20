@@ -34,8 +34,8 @@ This class is coming in the Fall of 2018. It is a class all about regression, in
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg_example.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg_example.Rmd)
 4. Chapter 3 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example.Rmd)
-5. Chapter 4 [PPTX]() or [PDF]()
-  - Examples [HTML]() or [RMD]()
+5. Chapter 4 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example.Rmd)
 
 
 <br>
