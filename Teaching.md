@@ -108,6 +108,7 @@ This course is an undergraduate-level research methods class for psychology majo
 
 
 <br>
+<br>
 <img src="https://www.r-project.org/logo/Rlogo.png" alt="R Foundation Logo" height="200" width="250">
 
 These are introductory and intermediate graduate R courses for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
