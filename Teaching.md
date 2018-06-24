@@ -98,7 +98,7 @@ This is an introduction to statistics for master's level social scientists. It f
 
 
 <br>
-<img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" height="200" width="540">
+<img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" height="230" width="500">
 
 This course is an undergraduate-level research methods class for psychology majors (although it is applicable to many other social sciences). It covers the entirety of the basic research process, from question formulation to communicating results. Below are the resources I provide for the class.
 
