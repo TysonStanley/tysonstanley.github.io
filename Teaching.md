@@ -96,6 +96,17 @@ This is an introduction to statistics for master's level social scientists. It f
 13. Week 13 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/12_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/12_EDUC_6050_2018.pptx)
 14. Week 14 - Review of Class Material - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/14_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/14_EDUC_6050_2018.pptx)
 
+
+<br>
+<img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" height="200" width="540">
+
+This course is an undergraduate-level research methods class for psychology majors (although it is applicable to many other social sciences). It covers the entirety of the basic research process, from question formulation to communicating results. Below are the resources I provide for the class.
+
+### Lecture Slides
+
+1. Will be posted soon...
+
+
 <br>
 <img src="https://www.r-project.org/logo/Rlogo.png" alt="R Foundation Logo" height="200" width="250">
 
