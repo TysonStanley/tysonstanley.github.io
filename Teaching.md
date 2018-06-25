@@ -24,7 +24,7 @@ All course material is shared under the GNU General Public License.
 
 <img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" height="200" width="550">
 
-This class is coming in the Fall of 2018. It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. Both a subset of the [General Social Survey](https://cehs-research.github.io/EDUC-7610/GSS_Data/Data/GSS_reduced_example.csv) data set and a [data set used in Quas et al. about high risk youth](https://cehs-research.github.io/EDUC-7610/HighRisk_Data/HighRisk.csv) data set will be used in the examples.
+This class is coming in the Fall of 2018. It is a class all about regression, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. I'll be posting resources for this starting in the summer. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. Both a subset of the [General Social Survey](https://cehs-research.github.io/EDUC-7610/GSS_Data/Data/GSS_reduced_example.csv) data set and a [data set used in Quas et al. about high risk youth](https://cehs-research.github.io/EDUC-7610/HighRisk_Data/HighRisk.csv) data set will be used in the examples. The book we'll use throughout the class, and is connected to the lecture slides, is [Regression Analysis and Linear Models by Richard Darlington and Andrew Hayes](https://www.guilford.com/books/Regression-Analysis-and-Linear-Models/Darlington-Hayes/9781462521135/reviews).
 
 ### Lecture Slides
 
@@ -38,7 +38,8 @@ This class is coming in the Fall of 2018. It is a class all about regression, in
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example.Rmd)
 5. Chapter 4 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example.Rmd)
-
+6. Chapter 5 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example.Rmd)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
