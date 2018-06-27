@@ -43,6 +43,8 @@ This class is all about applying regression analysis and linear models, includin
 7. Chapter 6 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example.Rmd)
 
+
+
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
 
