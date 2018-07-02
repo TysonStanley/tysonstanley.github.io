@@ -44,7 +44,8 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example.Rmd)
 8. Chapter 7 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction_example.Rmd)
-
+8. Chapter 8 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example.Rmd)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
