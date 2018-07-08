@@ -21,6 +21,8 @@ To sign in once you have an account, visit [https://redcap.cehs.usu.edu](https:/
 
 Recently, we moved the servers that REDCap ran on to a new building and in the process the IP addresses changed. Because of this, your browser may be going very slowly when you try to pull up [https://redcap.cehs.usu.edu](https://redcap.cehs.usu.edu). For now, our best answer is to clear your DNS cache. This is different than clearing your browser history. Below, I highlight how you can do this for each system (assuming your computer is fairly up-to-date).
 
+In addition to what is explained below, it may be good to clear the browsing history of your browser.
+
 #### Mac Users
 
 Open the terminal app (in the Spotlight Search, search for "Terminal" and it should pull up there). Type the following command and then press enter.
