@@ -28,24 +28,27 @@ This class is all about applying regression analysis and linear models, includin
 
 ### Lecture Slides
 
-1. Introductions to the class [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.html) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.pdf)
-2. Chapter 1 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf)
+1. Introductions to the class [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.html) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.pdf) and Chapter 1 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf)
   - Readings: [Tidy Data](https://cehs-research.github.io/EDUC-7610/Readings/Hadley_TidyData_2014.pdf) and [Data Guidelines](https://cehs-research.github.io/EDUC-7610/Readings/Broman_DataSpreadsheets_2017.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.html)
-3. Chapter 2 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg.pdf)
+2. Chapter 2 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg_example.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg_example.Rmd)
-4. Chapter 3 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pdf)
+3. Chapter 3 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example.Rmd)
-5. Chapter 4 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pdf)
+4. Chapter 4 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example.Rmd)
-6. Chapter 5 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pdf)
+5. Chapter 5 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example.Rmd)
-7. Chapter 6 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pdf)
+6. Chapter 6 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example.Rmd)
-8. Chapter 7 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pdf)
+7. Chapter 7 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction_example.Rmd)
 8. Chapter 8 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example.Rmd)
+9. Chapter 9 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat_example.Rmd)
+
+
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
