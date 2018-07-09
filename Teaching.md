@@ -45,9 +45,9 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction_example.Rmd)
 8. Chapter 8 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example.Rmd)
-9. Chapter 9 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pdf)
+9. Chapter 9 and 10 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat_example.Rmd)
-
+10. Chapter 11 ...
 
 
 <br>
