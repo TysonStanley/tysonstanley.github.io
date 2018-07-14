@@ -47,8 +47,10 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/08_EDUC7610_importance_example.Rmd)
 9. Chapter 9 and 10 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/09_EDUC7610_multicat_example.Rmd)
-10. Chapter 11 ...
-
+10. Chapter 11 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/11_EDUC7610_multipletest.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/11_EDUC7610_multipletest.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/11_EDUC7610_multipletest_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/11_EDUC7610_multipletest_example.Rmd)
+11. Chapter 12 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example.Rmd)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
