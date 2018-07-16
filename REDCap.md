@@ -53,3 +53,6 @@ Open the terminal window and type the following command and then press enter:
 sudo /etc/init.d/nscd restart
 {% endhighlight %}
 
+#### Conclusion
+
+These should provide a temporary help. If it slows again, you can try doing this again. We are working on a more permanent fix for this.
