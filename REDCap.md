@@ -14,6 +14,8 @@ The *Center for Research Informatics* at the University of Chicago has a fantast
 
 [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
 
+<br>
+
 # REDCap at Utah State University
 ## Getting An Account
 
