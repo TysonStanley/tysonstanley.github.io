@@ -29,7 +29,7 @@ In addition to what is explained below, it may be good to clear the browsing his
 
 #### Mac Users
 
-Open the terminal app (in the Spotlight Search, search for "Terminal" and it should pull up there). Type the following command and then press enter.
+Quit all browser applications. Open the terminal app (in the Spotlight Search, search for "Terminal" and it should pull up there). Type the following command and then press enter.
 
 {% highlight bash %}
 sudo killall -HUP mDNSResponder
@@ -39,7 +39,7 @@ It will ask for the computer's password at this point. Enter the password and th
 
 #### Windows Users
 
-Press the Windows Key or hover your mouse over the bottom left corner and click the Windows Icon. Begin typing "Command Prompt". It should pull up for you. Right-click the application and select Run as Administrator. Once you are in the app, run the following command in the command line and hit enter:
+Close all browser programs. Press the Windows Key or hover your mouse over the bottom left corner and click the Windows Icon. Begin typing "Command Prompt". It should pull up for you. Right-click the application and select Run as Administrator. Once you are in the app, run the following command in the command line and hit enter:
 
 {% highlight bash %}
 ipconfig /flushdns
