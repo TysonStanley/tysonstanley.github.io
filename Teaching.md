@@ -51,6 +51,9 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/11_EDUC7610_multipletest_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/11_EDUC7610_multipletest_example.Rmd)
 11. Chapter 12 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example.Rmd)
+12. Chapter 13 and 14 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pdf)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example.Rmd)
+
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
