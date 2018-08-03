@@ -53,15 +53,12 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example.Rmd)
 12. Chapter 13 and 14 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example.Rmd)
-13. Chapter 16 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)
+13. Chapters 16 and 17 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.Rmd)
-14. Chapter 17 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/17_EDUC7610_misc.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/17_EDUC7610_misc.pdf)
-  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/17_EDUC7610_misc_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/17_EDUC7610_misc_example.Rmd)
-15. Chapter 18 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pdf)
+14. Chapter 18 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example.Rmd)
-16. Chapter 15 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pdf)
+15. Chapter 15 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation_example.Rmd)
-
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
