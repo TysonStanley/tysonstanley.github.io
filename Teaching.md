@@ -54,7 +54,7 @@ This class is all about applying regression analysis and linear models, includin
 12. Chapter 13 and 14 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example.Rmd)
 13. Chapters 16 and 17 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)
-  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.Rmd)
+  - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.Rmd)
 14. Chapter 18 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example.Rmd)
 15. Chapter 15 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pdf)
