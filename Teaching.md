@@ -57,7 +57,7 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.Rmd)
 14. Chapter 18 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example.Rmd)
-15. Chapter 15 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation.pdf)
+15. Chapter 15 [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation_example.Rmd)
 
 <br>
