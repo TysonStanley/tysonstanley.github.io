@@ -126,7 +126,7 @@ This course is an undergraduate-level research methods class for psychology majo
 
 ### Lecture Slides
 
-1. Will be posted soon...
+1. Chapter 1 [PDF](https://cehs-research.github.io/PSY-3500/Slides/01_PSY3500_science.pdf)
 
 
 <br>
