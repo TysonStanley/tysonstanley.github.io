@@ -8,6 +8,7 @@ permalink: /teaching/
 
 1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
 2. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
+3. [Intro to the DSDU](https://tysonstanley.github.io/Workshops/2018COMMDE_Retreat.pdf)
 
 # Academic Talks
 
