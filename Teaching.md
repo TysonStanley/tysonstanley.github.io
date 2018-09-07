@@ -62,6 +62,13 @@ This class is all about applying regression analysis and linear models, includin
 15. Chapter 15 [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/15_EDUC7610_mediation_example.Rmd)
 
+### Homework Assignments
+
+1. Homework 1 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW1) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW1.Rmd)
+2. Homework 2 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW2) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW2.Rmd)
+3. Homework 3 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW3) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW3.Rmd)
+4. Homework 4 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW4) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW4.Rmd)
+
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
 
