@@ -39,6 +39,7 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example.Rmd)
 4. Chapter 4 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/04_EDUC7610_inference_example.Rmd)
+  - Extra Stuff [HTML](https://cehs-research.github.io/EDUC-7610/GuessAge) or [RMD](https://cehs-research.github.io/EDUC-7610/GuessAge.Rmd)
 5. Chapter 5 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example.Rmd)
 6. Chapter 6 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pdf)
