@@ -15,6 +15,8 @@ I am the Managing Director of the Data Science & Discovery Unit (DSDU) within th
 
 > "Data, I think, is one of the most powerful mechanisms for telling stories. I take a huge pile of data and I try to get it to tell stories." – Steven Levitt, Co-author of Freakonomics
 
+In the unit, we help train in basic data manipulation and cleaning such as shown [here](https://github.com/gadenbuie/tidy-animated-verbs/#tidy-data) by [Garrick](https://github.com/gadenbuie).
+
 
 # Methodoligical Development in Complex Data
 
