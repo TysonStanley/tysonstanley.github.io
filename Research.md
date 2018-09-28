@@ -9,6 +9,13 @@ permalink: /research/
 
 Currently, I have two main resources to for you to check out my published work: [**ORCID ID**](https://orcid.org/0000-0002-2137-1391) and [**ResearchGate**](https://www.researchgate.net/profile/Tyson_Barrett). Feel free to check these out and let me know what you think, especially if you'd like to collaborate.
 
+# Data Science & Discovery Unit
+
+I am the Managing Director of the Data Science & Discovery Unit (DSDU) within the Office of Research Services at Utah State University. This [link]( {{ site.baseurl }}/assets/images/StatStudio_DSDU.png) explains some of the duties of the DSDU and how it relates to one of the other similar units in the Office of Research Services.
+
+
+
+
 # Methodoligical Development in Complex Data
 
 As a researcher, I am a methodologist, both in development of new methodologies and the application of modern methodologies to complex data. Two areas in which complex data are common, but approaches to analyze them are few, include mediation analysis and conversational analyses. To improve mediation analysis, we have developed a new framework for using mediation analysis in categorical and non-normal data situations. This, although in dissertation form, is being prepared for peer-reviewed publication. At some future point, I believe that mediation analysis, in this more flexible form, can also help inform on the ways in which communication succeeds or fails. Another promising approach to understanding how communication succeeds or fails is measurement of the communication phenomenon of conversational entrainment. Our work here, in conjunction with [Stephanie Borrie](http://www.humaninteractionlab.com), [Visar Berisha](http://www.public.asu.edu/~visar/), and [Megan Willi](https://www.researchgate.net/profile/Megan_Willi)---although relatively new---provides an approach to using both expert clinical assessments and objective acoustic-prosodic measures to understand complex conversational phenomena. It increases the amount of information that is used in the final estimates and measures used. Ultimately, my work aims to increase the interpretability and replicability of research in complex data situations, particularly those situations relevant to communication. 
