@@ -13,7 +13,7 @@ Currently, I have two main resources to for you to check out my published work: 
 
 I am the Managing Director of the Data Science & Discovery Unit (DSDU) within the Office of Research Services at Utah State University. This [link]( {{ site.baseurl }}/assets/images/StatStudio_DSDU.png) explains some of the duties of the DSDU and how it relates to one of the other similar units in the Office of Research Services.
 
-
+> "Data, I think, is one of the most powerful mechanisms for telling stories. I take a huge pile of data and I try to get it to tell stories." – Steven Levitt, Co-author of Freakonomics
 
 
 # Methodoligical Development in Complex Data
