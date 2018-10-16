@@ -134,6 +134,10 @@ This is an introduction to statistics for master's level social scientists. It f
 
 This course is an undergraduate-level research methods class for psychology majors (although it is applicable to many other social sciences). It covers the entirety of the basic research process, from question formulation to communicating results. Below are the resources I provide for the class.
 
+### Book
+
+[Research Methods for Psychology](https://crumplab.github.io/ResearchMethods/Methods_Crump.pdf) by Crump, Price, Jhangiani, Chiang, & Leighton
+
 ### Lecture Slides
 
 1. Introduction [HTML](https://cehs-research.github.io/PSY-3500/Slides/00_PSY3500_intros.html) and Chapter 1 [PDF](https://cehs-research.github.io/PSY-3500/Slides/01_PSY3500_science.pdf)
