@@ -68,7 +68,7 @@ This class is all about applying regression analysis and linear models, includin
 1. Homework 1 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW1) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW1.Rmd)
 2. Homework 2 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW2.html) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW2.Rmd)
 3. Homework 3 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW3) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW3.Rmd)
-4. Homework 4 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW4) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW4.Rmd)
+4. Homework 4 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW4.html) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW4.Rmd)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
