@@ -1,0 +1,392 @@
+---
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    includes: 
+      in_header: preamble.tex
+---
+
+<!-- Name -->
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Oct 18, 2018
+\normalsize
+\vspace{10pt}
+
+<!-- General Info -->
+\begin{tabular}{rl}
+    \textsc{Address:}   & 2800 Old Main Hill, Logan, UT 84322 \\
+    \textsc{Email:}     & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
+    \textsc{Website:}   & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
+    \textsc{Phone:}     & 435-797-0120
+\end{tabular}
+
+<!-- Education -->
+\vspace{8pt}
+\section{EDUCATION}
+\vspace{-5pt}
+\hrule
+\vspace{5pt}
+
+<!--  Paste the following into the table below once the Masters starts
+\textsc{M.S. Communication Sciences} & \emph{In Progress} \\
+  & \emph{Utah State University}\\
+ \multicolumn{2}{c}{} \\
+ \multicolumn{2}{c}{} \\ 
+-->
+
+\begin{tabular}{l|p{8cm}}
+ \textsc{Ph.D. Quantitative Psychology } & \emph{Feb 2018}\\
+ & \emph{Utah State University}\\
+ &\footnotesize{\emph{\href{https://www.researchgate.net/publication/323946090_Marginal_Mediation_Analysis_A_New_Framework_for_Interpretable_Mediated_Effects?channel=doi&linkId=5ab418a60f7e9b4897c79cab&showFulltext=true}{Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects}}}\\
+ \multicolumn{2}{c}{} \\
+ \multicolumn{2}{c}{} \\
+
+ \textsc{B.S. Economics} & \emph{May 2014} \\
+  & \emph{Utah State University}\\
+ &\footnotesize{\emph{Cum Laude}}\\
+ \multicolumn{2}{c}{} \\
+\textsc{B.S. Psychology} & \emph{May 2014} \\
+ & \emph{Utah State University}\\
+&\footnotesize{\emph{Cum Laude}}
+\end{tabular}
+
+<!-- Research Areas -->
+\vspace{10pt}
+\section{RESEARCH AREAS}
+\vspace{-5pt}
+\hrule
+
+\indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, R Programming and Software Development
+
+\indent \hspace*{.1in} \textsc{Secondary:} Methodology in Communication Disorders, Machine Learning, Model Interpretability
+
+\normalsize
+
+<!-- Research Experience -->
+\vspace{10pt}
+\section{RESEARCH EXPERIENCE}
+\vspace{-5pt}
+\hrule
+\vspace{-8pt}
+
+\singlespacing
+
+\indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-Present
+\newline \hspace*{.6in} \emph{Principle Investigator of the Social Data Lab}
+\newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
+\newline \hspace*{.6in} \emph{Supervisor: Jamison Fargo, PhD, Associate Dean for Research}
+
+\indent \hspace*{.1in} \small\textbf{Research Assistant}, Prevention Science Lab, Utah State University \hfill 2016-2018
+\newline \hspace*{.6in} \emph{Advisor: Ginger Lockhart, PhD}
+
+\indent \hspace*{.1in} \small\textbf{Statistical and Data Science Consultant}, Utah State University \hfill 2016-2018
+\newline \hspace*{.6in} \emph{Advisors: Sarah Schwartz, PhD and Jamison Fargo, PhD}
+
+\indent \hspace*{.1in} \small\textbf{WOC Research Assistant}, Veteran Affairs SLC \hfill 2016-2018
+\newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
+
+\newpage
+
+<!-- Published Works -->
+\vspace{10pt}
+\section{PEER-REVIEWED PUBLISHED WORKS}
+\vspace{-5pt}
+\hrule
+\hspace{.1in}\footnotesize{* Denotes that I was the project methodologist or data scientist}
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\normalsize
+
+\textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53.
+
+\vspace{-4pt}
+\forceindent $-$ Code and Data: [doi: 10.17605/OSF.IO/8THWF](https://osf.io/8thwf/)
+
+*Leopold, S., Healy, E. W., Youngdahl, C., \textbf{Barrett, T.S.}, & Apoux, F. (2018). Speech-material and talker effects in speech band importance. \emph{Journal of the Acoustical Society of America, 143}(3). doi: 10.1121/1.5026787.
+
+Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2018). Understanding dysrhythmic speech: When rhythm doesn't matter and learning doesn't happen. \emph{Journal of the Acoustical Society of American Express Letters, 143}(5). doi: 10.1121/1.5037620.
+
+\textbf{Barrett, T.S.} \& Brignone, E. (2017). Furniture for Quantitative Scientists. \emph{R Journal, 9}(2), 142-146.
+
+Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2017). Generalized Adaptation to Dysarthric Speech. \emph{Journal of Speech, Language, and Hearing Research, 60}, 3110-3117. doi: 10.1044/2017_JSLHR-S-17-0127.
+
+\textbf{Barrett, T.S.} \& White, K.R. (2017). Trends in Hearing Loss Among Adolescents. \emph{Pediatrics, 140}(6), e20170619. doi: 10.1542/peds.2017-0619.
+
+Fargo, J.D., Brignone, E., Metraux, S., Peterson, R., Carter, M.E., \textbf{Barrett, T.}, Palmer, M., Redd, A., Samore, M.H., \& Gundlapalli, A.V. (2017). Homelessness Following Disability-Related Discharges from Active Duty Military Service in Afghanistan and Iraq. \emph{Disability and Health Journal, 10}, 592-599. doi: 10.1016/j.dhjo.2017.03.003.
+
+*Brown, L.T., Mohr, K.A.J., Wilcox, B.R., \& \textbf{Barrett, T.S.} (2017). The effects of dyad reading and text difficulty on third-graders’ reading achievement. \emph{Journal of Educational Research.} doi: 10.1080/00220671.2017.1310711
+
+Brignone, E., Gundlapalli, A.V., Blais, R.K., Kimerling, R., \textbf{Barrett, T.S.}, Nelson, R.E., Carter, M.E., Samore, M.A., \& Fargo, J.D. (2017). Increased Health Care Utilization and Costs among Veterans with a Positive Screen for Military Sexual Trauma. \emph{Medical Care, 55}, S70-S77. doi: 10.1097/MLR.0000000000000767
+
+Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (2017). Network-behavior dynamics of adolescent friendships, alcohol use, and physical activity. \emph{Health Psychology, 36}(6), 577-586. doi: 10.1037/hea0000483
+
+Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2017). Rhythm perception and its role in perception and learning of dysrhythmic speech. \emph{Journal of Speech, Language, and Hearing Research, 60}(3), 1-10. doi: 10.1044/2016_JSLHR-S-16-0094
+
+Behl, D., White, K., \textbf{Barrett, T.}, Blaiser, K., Callow-Heusser, C., \& Croshaw, T. (2017). A Multisite Study Evaluating the Benefits of Early Intervention via Telepractice. \emph{Infant and Young Children, 30}(2), 147-161.
+
+\textbf{Barrett, T.S.} \& White, K. R. (2016). Prevalence and Trends of Childhood Hearing Loss Based on Federally-funded National Surveys: 1994–2013. \emph{Journal of Early Hearing Detection and Intervention, 1}(2), 8-16.
+
+Doutré, S. M., \textbf{Barrett, T.S.}, Greenlee, J. \& White, K. R. (2016). Losing Ground: Awareness of Congenital Cytomegalovirus in the United States. \emph{Journal of Early Hearing Detection and Intervention, 1}(2), 39-48.
+
+Munoz, K., Rusk, S.E.P., Nelson, L., Preston, E., White, K.R., \textbf{Barrett, T.S.} \& Twohig, M.P. (2016). Pediatric Hearing Aid Management: Parent Reported Needs for Learning Support. \emph{Ear and Hearing Journal. 37}(6), 703-709.
+
+Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Reynolds, K. (2015). Ecological Momentary Assessment of Urban Adolescents’ Technology Use and Cravings for Unhealthy Snacks and Drinks: Differences by Ethnicity and Sex. \emph{Journal of the Academy of Nutrition and Dietetics, 115}(5), 759-766.
+
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+\vspace{5pt}
+\subsection{Under Review/In Revision}
+\vspace{-5pt}
+\hrule
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{6pt}
+\noindent
+
+Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (in revision). Syncing up for a good conversation: A Multidimensional framework for quantifying entrainment. \emph{JSHLR}.
+
+Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in revision). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
+
+\textbf{Barrett, T.S.} \& Lockhart, G. (in revision). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}.
+
+Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (under review). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
+
+
+<!-- Prep Ones 
+- In Preparation
+
+\textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
+
+Larson, A., \textbf{Barrett, T.S.} \& Someone, Else. (under review). LENA. \emph{ASHA}.
+
+Ong, C. \textbf{Barrett, T.S.}, others. Perfectionism.
+
+Barker, B. \textbf{Barrett, T.S.}, others. Perception in Noise.
+
+Levin, M. \textbf{Barrett, T.S.}, others. ACT RCT.
+
+-->
+
+
+<!-- Published Works in Conference Proceedings -->
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+
+\vspace{10pt}
+\section{PEER-REVIEWED CONFERENCE PROCEEDINGS}
+\vspace{-5pt}
+\hrule
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\normalsize
+
+Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). A discriminative acoustic-prosodic approach for measuring local entrainment. \emph{Proceedings of INTERSPEECH 2018.} Paper number 1419, 1–5. (four reviewers, 50\% acceptance rate).
+
+\vspace{-4pt}
+\forceindent $-$ ArXiv Pre-Print: [1804.08663](http://arxiv.org/abs/1804.08663)
+
+
+
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+
+<!-- Other Publications -->
+\vspace{20pt}
+\section{OTHER PUBLICATIONS}
+\vspace{-5pt}
+\hrule
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{6pt}
+\noindent
+
+**R for the Health, Behavioral, and Social Sciences** --- A primer on using R for researchers in health, behavioral, and social sciences including importing data, data manipulation, data modeling, and data visualization. Currently published online at tysonstanley.github.io/Rstats/.
+
+**The furniture R package (Published on CRAN and GitHub)** --- Contains functions to help with several aspects of research in the health, behavioral, and social sciences. The main functions---`table1()` and `tableC()`---produce descriptive statistics and correlations in well-formatted tables (as commonly seen as the "Table 1" of academic journals). Over 8,000 downloads (see tysonbarrett.com/furniture).
+
+**The MarginalMediation R package (Published on CRAN and GitHub)** --- Contains functions to perform Marginal Mediation. Papers discussing the method and software are forthcoming (see tysonbarrett.com/MarginalMediation).
+
+**Autoscore (Shiny Online App and R Package)** --- The online shiny app automatically scores word identification in speech perception research, such as studies involving listener understanding of speech in background noise or disordered speech. The program uses a flexible number of rules that determine whether a response set of words (i.e., listener transcriptions) match a target set of words (i.e., speech corpus). The R package provides the same functionality, and more, via the R statistical environment.
+
+
+<!-- Selected Presentations -->
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+\vspace{20pt}
+\section{SELECTED PRESENTATIONS}
+\vspace{-5pt}
+\hrule
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{6pt}
+\noindent
+
+<!--
+Vazquez, A.L., Chou, T., Navarro, C., **Barrett, T. S.**, & Domenech Rodríguez, M.M. (2019, March). Examining caregiver perceived need for and utilization of adolescent counseling services through machine learning. Poster presented at the Society for Research in Child Development, Baltimore, MD.
+-->
+Vazquez, A. L., Domenech Rodríguez, M. M., **Barrett, T.S.**, Amador Buenabad, N., & Villatoro Velazquez J. A. (2018, September) Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair). Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación. Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
+
+**Barrett, T.S.**, & Lockhart, G. (2017). Enhancing the Exploration and Communication of
+Big Data in Prevention Science. Poster presented at the Annual Meeting of the Society of Prevention Research, Washington, DC. *Received "Distinguished Poster Award" and "Abstract of Distinction."*
+
+**Barrett, T.S.**, & Lockhart, G. (2017). Exploring the Predictors of Marijuana Use Among Adolescents with Asthma. Oral presentation at the Utah State University Research Symposium, Logan, UT.
+
+Sanghavi, K., White, K., **Barrett, T.S.**, Wylie, A., Raspa, M., Cashman, D., Vogel, B. Caggana, M. & Bodurtha, J. (2017). Poster presented at the Early Hearing Detection and Intervention Conference, Atlanta, GA. *Received "Outstanding Poster Award."*
+
+Brignone, E., Gundlapalli, A.V., **Barrett, T.S.**, Blais, R.K., Nelson, R.E., Carter, M.E., Kimerling, R., Samore, M.H., Fargo, J.D. (2016). Cost of Care among Male and Female Veterans with a Positive Screen for Military Sexual Trauma. Poster presented at the 2016 Annual Meeting of the International Conference of Psychology, Yokohama, Japan.
+
+**Barrett, T.S.**, Munoz, K. & White, K. (2016). How well do parent report hearing loss in their children? Poster presented at the Early Hearing Detection and Intervention Conference, San Diego, CA.
+
+**Barrett, T.S.**, Munoz, K. & White, K. (2016). Accounting for Temporary Loss in National Studies on Hearing Loss. Poster presented at the Early Hearing Detection and Intervention Conference, San Diego, CA.
+
+**Barrett, T.S.**, Munoz, K. & White, K. (2016). An Evaluation of Early Intervention delivered via Video Conferencing. Poster presented at the Early Hearing Detection and Intervention Conference, San Diego, CA.
+
+Stevens, V., **Barrett, T.S.** & Nelson, R. (2016). Distribution and Daily Cost of Care in a Pediatric Hospital. Oral presentation to the Pediatric Guidance Council of Intermountain Healthcare, Salt Lake City, UT.
+
+**Barrett, T.S.**, Munoz, K. & White, K. (2015). Refinements to estimating prevalence of hearing loss in children. Poster presented at the Utah State University Research Symposium, Logan, UT.
+
+**Barrett, T.S.**, Prante, M., Peterson, R., Fargo, J.D., Pyle, N. (2014). Predictors of employability among homeless youth. Poster presented at the Psi-Chi Undergraduate Research Conference at Idaho State University, Pocatello, ID. *Best Undergraduate Poster Presentation Award.*
+
+**Barrett, T.S.**, Holland, D. (2014). Nascent Entrepreneurship, Impulsivity, and Self- Efficacy. Poster presented at the Research on Capitol Hill, Salt Lake City, UT.
+
+Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round table discussion at the Babson Business Conference, Paris, France.
+
+<!-- Awards -->
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+\vspace{20pt}
+\section{AWARDS}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+- Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
+- Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
+- Outstanding Poster Award (Annual Meeting of EHDI)
+- Dean’s Scholarship (full tuition for two years)
+- Best Poster Presentation (Psi-Chi Undergraduate Conference)
+
+
+<!-- Teaching Interests -->
+\vspace{20pt}
+\section{TEACHING INTERESTS}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+\subsection{\textsc{Primary Interest: Quantitative Methods}}
+
+- Undergraduate and Graduate Statistics (ANOVA and Regression [OLS, GLM])
+- Multilevel Modeling (Hierarchical Linear Modeling, GEE, Mixed Effects)
+- Mediation Analysis (Marginal Mediation, Moderated Mediation)
+- Reproducible Research (Research Methods, Open Science Framework)
+- R for the Social Sciences (Undergraduate and Graduate Level)
+- Exploratory Data Analysis
+- Structural Equation Modeling (Psychometrics and Measurement Models, Mixture Modeling)
+- Research Methods (Undergraduate and Graduate Level)
+
+\subsection{\textsc{Secondary Interest: Public Health}}
+
+- Research in Public Health
+- Disabilities (Hearing Loss, Developmental Disabilities)
+
+
+<!-- Teaching Experience -->
+\section{TEACHING EXPERIENCE}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+\subsection{\textsc{Instructor}}
+
+- **Applied Statistical Analysis** (EDUC 6050)
+    - Spring 2018
+    - Graduate-level applied statistics course for non-research degrees
+    - Most Recent Student-Responded Ratings:
+        - Overall:
+        - Teaching: 
+
+- **Research Design \& Analysis I** (EDUC 6600)
+    - Spring 2018
+    - Graduate-level applied statistics course for PhD students
+    - Most Recent Student-Responded Ratings:
+        - Overall:
+        - Teaching: 
+
+- **R for the Health, Behavioral, Educational, and Social Sciences I and II**
+    - 2016 - Present
+    - Created, Developed, and Taught
+    - Graduate Level
+    - Most Recent Student-Responded Ratings:
+        - Overall: 4.5 out of 5.0
+        - Teaching: 4.9 out of 5.0
+
+\vspace{10pt}
+\subsection{\textsc{Teaching Assistant}}
+
+- **Econometrics I** (Graduate Level) 
+    - Fall 2016
+- **Psychological Statistics** (Undergraduate Level) 
+    - 2014 – 2015
+
+
+<!-- Methdological Training -->
+\vspace{20pt}
+\section{METHODOLOGICAL TRAINING}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+- Regression, Generalized Linear Models
+- Mixed Effects, Generalized Linear Models
+- Machine Learning
+    - CART
+    - Random Forest
+    - Regularized Regression
+    - Boosting/Bagging
+    - Cross-Validation
+- Social Network Analysis
+- Data Visualization
+    - Static and Dynamic Visuals
+
+<!-- Software and Programming Experience -->
+\vspace{20pt}
+\section{SOFTWARE AND PROGRAMMING EXPERIENCE}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+1. **R and RMarkdown: Expert (4 years of daily use)**
+    - Database Queries, Creation, and Management
+    - Data Analytics
+    - Website Creation
+    - Program Development and Deployment 
+2. **REDCap: Moderate Experience (1 year of weekly use)**
+    - Database Creation
+    - Data Entry and Survey Creation and Deployment
+    - Data Management via REDCap API
+3. **SQL: Some Experience (4 years of occasional use)**
+    - Database Queries and Database Management 
+    - Data Analytics
+4. **Python: Minor Experience (1 year of occasional use)**
+    - Data Analytics
+    - MTurk customization
