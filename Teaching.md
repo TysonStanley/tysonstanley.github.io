@@ -151,6 +151,17 @@ This course is an undergraduate-level research methods class for psychology majo
 9. Chapter 11 [PDF](https://cehs-research.github.io/PSY-3500/Slides/09_PSY3500_singlesubject.pdf)
 10. Chapter 7 [PDF](https://cehs-research.github.io/PSY-3500/Slides/10_PSY3500_ethics.pdf)
 
+### Assignments
+
+1. [Plagiarism Form](https://cehs-research.github.io/PSY-3500/Assignments/PlagiarismStatement.pdf)
+2. [Literature Review](https://cehs-research.github.io/PSY-3500/Assignments/LiteratureReview.pdf)
+3. [Survey/Scale](https://cehs-research.github.io/PSY-3500/Assignments/Survey_Scale.pdf)
+4. [Consent Form](https://cehs-research.github.io/PSY-3500/Assignments/consentform.pdf)
+5. [Methods Section](https://cehs-research.github.io/PSY-3500/Assignments/Methods.pdf)
+6. [Abstract](https://cehs-research.github.io/PSY-3500/Assignments/Abstract.pdf)
+7. [Final Proposal](https://cehs-research.github.io/PSY-3500/Assignments/FinalProposal.pdf)
+
+
 <br>
 <br>
 <img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" height="200" width="450">
