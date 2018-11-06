@@ -58,6 +58,11 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example.Rmd)
 13. Chapters 16 and 17 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.Rmd)
+  - Additional Reading:
+      - [Measurement Error and Reproducibility](http://science.sciencemag.org/content/sci/355/6325/584.full.pdf)
+      - [Measurement Error in Practice](http://www.quantpsy.org/pubs/cole_preacher_2014.pdf)
+      - Missing Data - see Little, R. J., & Rubin, D. B. (2014). Statistical analysis with missing data (Vol. 333). John Wiley & Sons.
+      - [Missing Data Overview](http://journals.sagepub.com/doi/pdf/10.1177/1094428114548590)
 14. Chapter 18 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/18_EDUC7610_glm_example.Rmd)
 15. Chapter 15 [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
@@ -68,7 +73,6 @@ This class is all about applying regression analysis and linear models, includin
 1. Homework 1 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW1) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW1.Rmd)
 2. Homework 2 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW2.html) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW2.Rmd)
 3. Homework 3 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW3) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW3.Rmd)
-4. Homework 4 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW4.html) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW4.Rmd)
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">

@@ -100,20 +100,19 @@ output:
 
 \normalsize
 
-\textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53.
+Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (in press). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
 
-\vspace{-4pt}
-\forceindent $-$ Code and Data: [doi: 10.17605/OSF.IO/8THWF](https://osf.io/8thwf/)
+\textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53. \img{osf_data.png}{https://osf.io/8thwf}\img{osf_materials.png}{https://osf.io/8thwf}
 
 *Leopold, S., Healy, E. W., Youngdahl, C., \textbf{Barrett, T.S.}, & Apoux, F. (2018). Speech-material and talker effects in speech band importance. \emph{Journal of the Acoustical Society of America, 143}(3). doi: 10.1121/1.5026787.
 
 Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2018). Understanding dysrhythmic speech: When rhythm doesn't matter and learning doesn't happen. \emph{Journal of the Acoustical Society of American Express Letters, 143}(5). doi: 10.1121/1.5037620.
 
-\textbf{Barrett, T.S.} \& Brignone, E. (2017). Furniture for Quantitative Scientists. \emph{R Journal, 9}(2), 142-146.
+\textbf{Barrett, T.S.} \& Brignone, E. (2017). Furniture for Quantitative Scientists. \emph{R Journal, 9}(2), 142-146. \img{osf_data.png}{https://cran.r-project.org/web/packages/furniture/index.html}\img{osf_materials.png}{https://cran.r-project.org/web/packages/furniture/index.html}
 
 Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2017). Generalized Adaptation to Dysarthric Speech. \emph{Journal of Speech, Language, and Hearing Research, 60}, 3110-3117. doi: 10.1044/2017_JSLHR-S-17-0127.
 
-\textbf{Barrett, T.S.} \& White, K.R. (2017). Trends in Hearing Loss Among Adolescents. \emph{Pediatrics, 140}(6), e20170619. doi: 10.1542/peds.2017-0619.
+\textbf{Barrett, T.S.} \& White, K.R. (2017). Trends in Hearing Loss Among Adolescents. \emph{Pediatrics, 140}(6), e20170619. doi: 10.1542/peds.2017-0619. \img{osf_materials.png}{https://osf.io/w5t2f/}
 
 Fargo, J.D., Brignone, E., Metraux, S., Peterson, R., Carter, M.E., \textbf{Barrett, T.}, Palmer, M., Redd, A., Samore, M.H., \& Gundlapalli, A.V. (2017). Homelessness Following Disability-Related Discharges from Active Duty Military Service in Afghanistan and Iraq. \emph{Disability and Health Journal, 10}, 592-599. doi: 10.1016/j.dhjo.2017.03.003.
 
@@ -131,7 +130,7 @@ Behl, D., White, K., \textbf{Barrett, T.}, Blaiser, K., Callow-Heusser, C., \& C
 
 Doutré, S. M., \textbf{Barrett, T.S.}, Greenlee, J. \& White, K. R. (2016). Losing Ground: Awareness of Congenital Cytomegalovirus in the United States. \emph{Journal of Early Hearing Detection and Intervention, 1}(2), 39-48.
 
-Munoz, K., Rusk, S.E.P., Nelson, L., Preston, E., White, K.R., \textbf{Barrett, T.S.} \& Twohig, M.P. (2016). Pediatric Hearing Aid Management: Parent Reported Needs for Learning Support. \emph{Ear and Hearing Journal. 37}(6), 703-709.
+Muñoz, K., Rusk, S.E.P., Nelson, L., Preston, E., White, K.R., \textbf{Barrett, T.S.} \& Twohig, M.P. (2016). Pediatric Hearing Aid Management: Parent Reported Needs for Learning Support. \emph{Ear and Hearing Journal. 37}(6), 703-709.
 
 Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Reynolds, K. (2015). Ecological Momentary Assessment of Urban Adolescents’ Technology Use and Cravings for Unhealthy Snacks and Drinks: Differences by Ethnicity and Sex. \emph{Journal of the Academy of Nutrition and Dietetics, 115}(5), 759-766.
 
@@ -149,17 +148,19 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
-Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (in revision). Syncing up for a good conversation: A Multidimensional framework for quantifying entrainment. \emph{JSHLR}.
+Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (under review). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
 
 Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in revision). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
 
-\textbf{Barrett, T.S.} \& Lockhart, G. (in revision). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}.
+\textbf{Barrett, T.S.} \& Lockhart, G. (in revision). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
 Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (under review). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
 
 
 <!-- Prep Ones 
 - In Preparation
+
+Barrett, T.S., Borrie, S.A., & Yoho, S.E. (in preparation). Autoscore: An R package for scoring listener transcripts for research and the clinic.
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
 
