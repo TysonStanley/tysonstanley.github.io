@@ -7,7 +7,7 @@ output:
 ---
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Oct 18, 2018
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Nov 10, 2018
 \normalsize
 \vspace{10pt}
 
@@ -100,6 +100,8 @@ output:
 
 \normalsize
 
+Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in press). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
+
 Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (in press). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
 
 \textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53. \img{osf_data.png}{https://osf.io/8thwf}\img{osf_materials.png}{https://osf.io/8thwf}
@@ -148,9 +150,7 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
-Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (under review). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
-
-Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in revision). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
+Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (in revision). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
 
 \textbf{Barrett, T.S.} \& Lockhart, G. (in revision). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
@@ -160,7 +160,7 @@ Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& T
 <!-- Prep Ones 
 - In Preparation
 
-Barrett, T.S., Borrie, S.A., & Yoho, S.E. (in preparation). Autoscore: An R package for scoring listener transcripts for research and the clinic.
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (in preparation). Autoscore: An R package for scoring listener transcripts for research and the clinic.
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
 
@@ -216,13 +216,19 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \setlength{\parskip}{6pt}
 \noindent
 
-**R for the Health, Behavioral, and Social Sciences** --- A primer on using R for researchers in health, behavioral, and social sciences including importing data, data manipulation, data modeling, and data visualization. Currently published online at tysonstanley.github.io/Rstats/.
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2018). autoscore. URL: github.com/autoscore/autoscore. R package version 0.3.8.
 
-**The furniture R package (Published on CRAN and GitHub)** --- Contains functions to help with several aspects of research in the health, behavioral, and social sciences. The main functions---`table1()` and `tableC()`---produce descriptive statistics and correlations in well-formatted tables (as commonly seen as the "Table 1" of academic journals). Over 8,000 downloads (see tysonbarrett.com/furniture).
+\textbf{Barrett, T.S.}. (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation.
 
-**The MarginalMediation R package (Published on CRAN and GitHub)** --- Contains functions to perform Marginal Mediation. Papers discussing the method and software are forthcoming (see tysonbarrett.com/MarginalMediation).
+\textbf{Barrett, T.S.}. (2018). MarginalMediation: Marginal Mediation. URL: tysonbarrett.com/MarginalMediation. R package version 0.5.1.
 
-**Autoscore (Shiny Online App and R Package)** --- The online shiny app automatically scores word identification in speech perception research, such as studies involving listener understanding of speech in background noise or disordered speech. The program uses a flexible number of rules that determine whether a response set of words (i.e., listener transcriptions) match a target set of words (i.e., speech corpus). The R package provides the same functionality, and more, via the R statistical environment.
+\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.8.7.
+
+\textbf{Barrett, T.S.}. (2018). R for the Health, Behavioral, and Social Sciences. URL: tysonbarrett.com/Rstats/.
+
+
+
+
 
 
 <!-- Selected Presentations -->
