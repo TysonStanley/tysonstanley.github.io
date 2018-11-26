@@ -160,6 +160,8 @@ This course is an undergraduate-level research methods class for psychology majo
 11. Methods Section [PDF](https://cehs-research.github.io/PSY-3500/Slides/11_PSY3500_methodsection.pdf)
 12. Chapter 8 [PDF](https://cehs-research.github.io/PSY-3500/Slides/12_PSY3500_control.pdf)
 13. Chapter 12 [PDF](https://cehs-research.github.io/PSY-3500/Slides/13_PSY3500_pres.pdf)
+14. Chapter 13 [PDF](https://cehs-research.github.io/PSY-3500/Slides/14_PSY3500_descriptives.pdf)
+15. Chapter 14 [PDF](https://cehs-research.github.io/PSY-3500/Slides/15_PSY3500_inference.pdf)
 
 ### Assignments
 

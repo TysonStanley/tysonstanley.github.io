@@ -7,7 +7,7 @@ output:
 ---
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Nov 10, 2018
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Nov 16, 2018
 \normalsize
 \vspace{10pt}
 
@@ -100,6 +100,8 @@ output:
 
 \normalsize
 
+\textbf{Barrett, T.S.} \& Lockhart, G. (in press). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
+
 Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in press). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (in press). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
@@ -152,7 +154,6 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (in revision). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
 
-\textbf{Barrett, T.S.} \& Lockhart, G. (in revision). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
 Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (under review). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
 
