@@ -79,6 +79,8 @@ This class is all about applying regression analysis and linear models, includin
 
 1. [Polynomials and Interactions](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Ch12_17)
 
+
+
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
 
