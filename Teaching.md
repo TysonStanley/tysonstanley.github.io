@@ -206,7 +206,7 @@ My most recent class material can be found below:
 5. [Generalized Linear Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/05_GeneralizedLinearModels.pdf)
 6. [Multilevel Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/06_MultilevelModels.pdf)
 7. [Other Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/07_OtherModels.pdf)
-8. [Functions, Functions, Functions](https://tysonstanley.github.io/Graduate_R_Courses/intro/06_MultilevelModels.pdf)
+8. [Functions, Functions, Functions](https://tysonstanley.github.io/Graduate_R_Courses/intro/08_Functions.pdf)
 9. [More on Visualizations](https://tysonstanley.github.io/Graduate_R_Courses/intro/09_AdvancedPlotting.pdf)
 
 I will also be using Andrew Heiss's great walkthrough of replicating Minard's 1812 plot with `ggplot2` (found [here](https://www.andrewheiss.com/blog/2017/08/10/exploring-minards-1812-plot-with-ggplot2/)).

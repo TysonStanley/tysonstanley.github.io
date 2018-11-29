@@ -7,7 +7,7 @@ output:
 ---
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Nov 16, 2018
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Nov 26, 2018
 \normalsize
 \vspace{10pt}
 
@@ -157,6 +157,7 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (in revision). Autoscore: An op
 
 Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (under review). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
 
+Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
 <!-- Prep Ones 
 - In Preparation
