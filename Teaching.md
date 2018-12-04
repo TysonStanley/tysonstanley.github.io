@@ -196,6 +196,7 @@ My most recent class material can be found below:
 4. [Basics of Git and GitHub](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/04_github.html)
 5. [Creating an R Package](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/05_OwnPackage.html)
 6. [Miscellaneous Topics](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/06_Misc.html)
+7. [More on Functions](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/07_Functions2.html)
 
 ### Intro
 
