@@ -7,7 +7,7 @@ output:
 ---
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Nov 26, 2018
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Dec 20, 2018
 \normalsize
 \vspace{10pt}
 
@@ -25,13 +25,6 @@ output:
 \vspace{-5pt}
 \hrule
 \vspace{5pt}
-
-<!--  Paste the following into the table below once the Masters starts
-\textsc{M.S. Communication Sciences} & \emph{In Progress} \\
-  & \emph{Utah State University}\\
- \multicolumn{2}{c}{} \\
- \multicolumn{2}{c}{} \\ 
--->
 
 \begin{tabular}{l|p{8cm}}
  \textsc{Ph.D. Quantitative Psychology } & \emph{Feb 2018}\\
@@ -100,6 +93,8 @@ output:
 
 \normalsize
 
+Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (in press). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
+
 \textbf{Barrett, T.S.} \& Lockhart, G. (in press). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
 Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in press). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
@@ -152,12 +147,12 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
-Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (in revision). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
-
 
 Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (under review). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
 
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
+
+Long, E., \textbf{Barrett, T.S.}, & Lockhart, G. (under review). Chronic Health Conditions and Adolescent Friendship: Perspectives from Social Network Analysis. \emph{International Journal of Adolescent Medicine and Health}.
 
 <!-- Prep Ones 
 - In Preparation
