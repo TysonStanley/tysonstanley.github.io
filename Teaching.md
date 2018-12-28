@@ -182,21 +182,11 @@ This course is an undergraduate-level research methods class for psychology majo
 <br>
 <img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" height="200" width="450">
 
-These are introductory and intermediate graduate R courses for scientists in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
+These are introductory ([Syllabus]({{ site.baseurl }} /assets/Syllabi/Syllabus_IntroR.html)) and intermediate ([Syllabus]({{ site.baseurl }} /assets/Syllabi/Syllabus_InterR.html)) R courses for researchers in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
 
 I have lots of material that can be found at: [Graduate R Courses--GitHub](https://github.com/TysonStanley/Graduate_R_Courses) and [Graduate R Courses](https://tysonstanley.github.io/Graduate_R_Courses/).
 
 My most recent class material can be found below:
-
-### Intermediate
-
-1. [Review of Tidyverse](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/01_Review.html)
-2. [Tables and Viz's](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/02_tables_viz.html)
-3. [Replicable Workflow in R](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/03_RepWorkflow.html)
-4. [Basics of Git and GitHub](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/04_github.html)
-5. [Creating an R Package](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/05_OwnPackage.html)
-6. [Miscellaneous Topics](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/06_Misc.html)
-7. [More on Functions](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/07_Functions2.html)
 
 ### Intro
 
@@ -212,4 +202,12 @@ My most recent class material can be found below:
 
 I will also be using Andrew Heiss's great walkthrough of replicating Minard's 1812 plot with `ggplot2` (found [here](https://www.andrewheiss.com/blog/2017/08/10/exploring-minards-1812-plot-with-ggplot2/)).
 
+### Intermediate
 
+1. [Review of Tidyverse](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/01_Review.html)
+2. [Tables and Viz's](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/02_tables_viz.html)
+3. [Replicable Workflow in R](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/03_RepWorkflow.html)
+4. [Basics of Git and GitHub](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/04_github.html)
+5. [Creating an R Package](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/05_OwnPackage.html)
+6. [Miscellaneous Topics](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/06_Misc.html)
+7. [More on Functions](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/07_Functions2.html)
