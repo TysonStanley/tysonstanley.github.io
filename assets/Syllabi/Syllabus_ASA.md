@@ -20,6 +20,8 @@ permalink: /syllabus/asa
 
 </div>
 
+<br>
+
 **Materials:** 
 
 -	Carlson, K.A. and Winquist, J.R. (2017). *An Introduction to Statistics: An Active Learning Approach* (2nd Ed.). Sage Publications.
