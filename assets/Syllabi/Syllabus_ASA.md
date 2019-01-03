@@ -7,7 +7,7 @@ permalink: /syllabus/asa
 # Applied Statistical Analysis
 #### EDUC 6050
 
-<div style="background-color: #FCF3CF; padding: 20px;">
+<div style="background-color: #FEF9E7; padding: 20px;">
 
 <strong>Instructor:</strong> <br>
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
@@ -21,7 +21,7 @@ permalink: /syllabus/asa
 </div>
 
 
-**Materials:** 
+## Materials:
 
 -	Carlson, K.A. and Winquist, J.R. (2017). *An Introduction to Statistics: An Active Learning Approach* (2nd Ed.). Sage Publications.
 - Canvas (my.usu.edu) Please check Canvas frequently for course updates, assignments, & grades.
@@ -169,7 +169,7 @@ Students are required to complete all courses for which they are registered by t
 
 
 <style>
-  h1   {text-align: left; color: #196F3D;}
+  h1   {text-align: left; color: #0E6251;}
   h2   {color: #21618C;}
   h4   {text-align: left;}
 </style>
