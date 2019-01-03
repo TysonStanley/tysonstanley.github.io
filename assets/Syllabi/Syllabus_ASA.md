@@ -8,6 +8,7 @@ permalink: /syllabus/asa
 #### EDUC 6050
 
 <div style="background-color: #FCF3CF;">
+
 **Instructor:** <br>
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
 &nbsp; &nbsp; tyson.barrett@usu.edu <br>
@@ -16,6 +17,7 @@ permalink: /syllabus/asa
 &nbsp; &nbsp; Wed 4:30 - 7:15 pm <br>
 **Office Hours:** <br>
 &nbsp; &nbsp; Wed 3:00 - 4:15 pm
+
 </div>
 
 **Materials:** 
