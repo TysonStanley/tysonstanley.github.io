@@ -161,3 +161,12 @@ Students are required to complete all courses for which they are registered by t
 ## Tentative Schedule:
 
 ![]( {{ site.baseurl }}/assets/Syllabi/Schedule_ASA.png)
+
+
+
+<style>
+  h2   {color: #21618C;}
+</style>
+
+
+
