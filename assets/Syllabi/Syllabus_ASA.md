@@ -165,6 +165,7 @@ Students are required to complete all courses for which they are registered by t
 
 
 <style>
+  h1   {align: center;}
   h2   {color: #21618C;}
 </style>
 
