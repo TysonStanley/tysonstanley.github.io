@@ -52,15 +52,15 @@ Reasonable accommodation will be provided for all persons with disabilities in o
 
 Chapters are based on *R for Health, Behavioral, and Social Scientists* unless otherwise indicated.
 
-| &nbsp;  |     Topic               | Chapter  | Packet
-|---------|:------------------------|:--------:|:-------:
-| Week 1  | Intro and Import Data   | 1        | 1
-| Week 2  | Tidyverse               | 2        | 2
-| Week 3  | More Tidyverse          | 2        | 2
-| Week 4  | Tables and Visuals      | 3        | 3
-| Week 5  | Review and Catch Up     | 1-3      | &nbsp;
-| Week 6  | Statistics in R         | 4-5      | 4
-| Week 7  | More Statistics in R    | 6-7      | 4
+| &nbsp;  |     Topic               | Chapter                   | Packet
+|---------|:------------------------|:-------------------------:|:-------:
+| Week 1  | Intro and Import Data   | 1                         | 1
+| Week 2  | Tidyverse               | 2; 5 (MD); 5 (R4DS)       | 2
+| Week 3  | More Tidyverse          | 2; 5 (MD); 5 (R4DS)       | 2
+| Week 4  | Tables and Visuals      | 3; 3 (MD); 3 (R4DS)       | 3
+| Week 5  | Review and Catch Up     | 1-3                       | &nbsp;
+| Week 6  | Statistics in R         | 4-5                       | 4
+| Week 7  | More Statistics in R    | 6-7                       | 4
 
 
 
