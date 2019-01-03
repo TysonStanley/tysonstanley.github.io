@@ -7,7 +7,7 @@ permalink: /syllabus/asa
 # Applied Statistical Analysis
 #### EDUC 6050
 
-<div style="background-color: #FCF3CF;">
+<div style="background-color: #FCF3CF; margin-left: 40px;">
 
 **Instructor:** <br>
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
