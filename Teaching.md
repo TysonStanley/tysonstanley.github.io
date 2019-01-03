@@ -182,7 +182,7 @@ This course is an undergraduate-level research methods class for psychology majo
 <br>
 <img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" height="200" width="450">
 
-These are introductory ([Syllabus]({{ site.baseurl }} /assets/Syllabi/Syllabus_IntroR)) and intermediate ([Syllabus]({{ site.baseurl }} /assets/Syllabi/Syllabus_InterR)) R courses for researchers in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
+These are introductory ([Syllabus]({{ site.baseurl }} /syllabus/introR)) and intermediate ([Syllabus]({{ site.baseurl }} /syllabus/interR)) R courses for researchers in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
 
 I have lots of material that can be found at: [Graduate R Courses--GitHub](https://github.com/TysonStanley/Graduate_R_Courses) and [Graduate R Courses](https://tysonstanley.github.io/Graduate_R_Courses/).
 
