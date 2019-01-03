@@ -80,7 +80,7 @@ NOTE: Final is comprehensive but it will focus much more heavily on topics cover
 The standard grade breakdown used by Utah State University will be followed to assign the student a letter grade. The final percentage will be determined by dividing the student’s total points earned by the total number of possible points:
 
 | Grade   |     Percentages         
-|--------:|:-----------------------:
+|:-------:|:-----------------------:
 | A       | > 93%
 | A-      | 90 - 92%            
 | B+      | 87 - 89%
