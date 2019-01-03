@@ -24,7 +24,7 @@ permalink: /syllabus/asa
 ## Materials:
 
 -	Carlson, K.A. and Winquist, J.R. (2017). *An Introduction to Statistics: An Active Learning Approach* (2nd Ed.). Sage Publications.
-- Canvas (my.usu.edu) Please check Canvas frequently for course updates, assignments, & grades.
+- Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
 - [Jamovi](https://www.jamovi.org) software (free and open source; similar to SPSS; downloading and installing are discussed in class)
 - Optional: Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
 
