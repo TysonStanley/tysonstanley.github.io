@@ -7,15 +7,15 @@ permalink: /syllabus/asa
 # Applied Statistical Analysis
 #### EDUC 6050
 
-<div style="background-color: #FCF3CF; margin-left: 40px;">
+<div style="background-color: #FCF3CF; padding-left: 40px;">
 
-**Instructor:** <br>
+<strong>Instructor:</strong> <br>
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
 &nbsp; &nbsp; tyson.barrett@usu.edu <br>
 &nbsp; &nbsp; 435-797-0120 <br>
-**Class:** <br>
+<strong>Class:</strong> <br>
 &nbsp; &nbsp; Wed 4:30 - 7:15 pm <br>
-**Office Hours:** <br>
+<strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; Wed 3:00 - 4:15 pm
 
 </div>
