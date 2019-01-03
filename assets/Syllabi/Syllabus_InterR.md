@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Syllabus - Intermediate R
+permalink: /syllabus/interR
 ---
 
 # R for the Health, Behavioral, Educational, and Social Scientists 2

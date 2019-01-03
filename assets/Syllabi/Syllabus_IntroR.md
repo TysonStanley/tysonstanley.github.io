@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Syllabus - Introductory R
+permalink: /syllabus/introR
 ---
 
 # R for the Health, Behavioral, Educational, and Social Scientists 1
