@@ -46,7 +46,7 @@ Reasonable accommodation will be provided for all persons with disabilities in o
 
 - Feb 28 – First Day of Classes
 -	April 25 – Final Day of Class
--	March 2 – Final Project Due
+-	May 2 – Final Project Due
 
 **Tentative Schedule:**
 
