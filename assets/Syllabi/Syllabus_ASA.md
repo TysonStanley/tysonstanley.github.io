@@ -155,11 +155,11 @@ Reasonable accommodation will be provided for all persons with disabilities in o
 
 Students are required to complete all courses for which they are registered by the end of the semester. In some cases, a student may be unable to complete all of the coursework because of extenuating circumstances, but not due to poor performance or to retain financial aid. In such cases an ‘I’ will be submitted as the grade for the semester. The term 'extenuating' circumstances includes:
 
-(1) incapacitating illness which prevents a student from attending classes for aminimum period of twoweeks,
-(2) a death in the immediate family,
-(3) financial responsibilities requiring a student to alter a work schedule to secure employment,
-(4) change in work schedule as required by an employer, or
-(5) other emergencies deemed appropriate by the instructor.
+1) incapacitating illness which prevents a student from attending classes for aminimum period of twoweeks,
+2) a death in the immediate family,
+3) financial responsibilities requiring a student to alter a work schedule to secure employment,
+4) change in work schedule as required by an employer, or
+5) other emergencies deemed appropriate by the instructor.
 
 
 ## Tentative Schedule:
