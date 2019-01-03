@@ -116,10 +116,11 @@ This is an introduction to statistics at a graduate level (generally PhD student
   - An `R` Example of Mixed ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.Rmd)
 17. [Chapter 19-20 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pdf) or [Chapter 19-20 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pptx)
 
+
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="540">
 
-This is an introduction to statistics for master's level social scientists. It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
+This is an introduction to statistics for master's level social scientists ([Syllabus](http://tysonbarrett.com/syllabus/asa)). It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
 
 ### Lecture Slides
 
