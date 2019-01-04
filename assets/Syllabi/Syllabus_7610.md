@@ -19,7 +19,7 @@ permalink: /syllabus/educ7610
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; Tuesday and Thursday 3:00 - 4:15 pm
 <br>
-<strong>Teaching Assistant: Alejandro Vasquez</strong> <br>
+<strong>Teaching Assistant: Alejandro Vazquez</strong> <br>
 &nbsp; &nbsp; Email: alejandro.vazquez@aggiemail.usu.edu <br>
 &nbsp; &nbsp; Office Hours: By appointment (EDUC 405)
 
