@@ -52,28 +52,29 @@ Finally, you are expected to read all course material and have become familiar w
 
 ## Four Components of Your Grade:
 
-**I. Statistics Organizer, 20% of grade**
+**I. Discussions, 30% of grade**
 
-It is important that you read the material *PRIOR* to the designated lecture, as well as read through the associated homework assignment. By so doing, this ensures class time may be more valuably spent on answering questions and preparing you for assignments. To facilitate this, a Statistics Organizer is required. This contains information regarding: statistical procedure, appropriate circumstances for use, assumptions of the statistical test, key statistics and their meaning, important notes or variations. You need to develop this organizer early and keep up with it through the semester. You will turn in the organizer at certain points throughout the semester.
+By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time. It is of upmost importance that students read the material *PRIOR* to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering questions and preparing students for assignments. To facilitate this, a discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the readings, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
 
-Because students are able to use their notes on examinations (explained below), this is not only your statistics cheat sheet for life but also for exams.
-Each student must compose his or her own. Statistics Organizers must NOT be a copy of the lecture notes. It can be in any electronic format (.docx, .pptx, .html, etc.), although it is best if the document is a PDF when you print it for exams.
+Discussion points will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion point.
 
-**II. Research Portfolio, 20% of grade**
+These can be printed out and used as notes for the lectures and the exams.
+
+**II. Research Portfolio, 15% of grade**
 
 An important aspect of this course is discovering how statistics are used in your field. You must find a minimum of TEN journal articles in your field with a quantitative component (look for numbers). Create a grid (in Excel or Word) that states the author, year, journal, major research questions, the major constructs (IV or DV), the different statistical methods, and brief summary of findings. Finally, write a roughly two-paragraph response to each article on how the statistical information provided an insight into the research questions (in other words, what did we learn within these studies that we didn’t already know?). In addition, near the end of the semester we will have you share some of the more interesting articles that you found with the class.
 
 **III. Assignments, 30% of grade**
 
-SIX equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you collect (via a survey that we develop the first day of class) or any other data source that you are interested in. Half of the homework is done on Canvas while the other half is done in Jamovi and turned in via Canvas. Both are due the same day at the same time.
+SIX equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you collect (via a survey that we develop the first day of class) or any other data source that you are interested in. Half of the homework is done on Canvas while the other half is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
 
 All assignments are REQUIRED: NO scores will be dropped. Students may work together, however each student must turn in his or her own work, not photocopies or identical replicates. Assignments are due by 11:59pm on the due date (see course schedule). Details on what is required to be turned in will be posted on canvas. Late assignments turned in within 24 hours of the due date will receive half the score earned. No points will be awarded thereafter.
 
-**IV. Examinations, 30% of grade**
+**IV. Examinations, 25% of grade**
 
 TWO equally weighted examinations will be given during this course. Examinations will be given IN CLASS and will require less than 60 minutes. Examinations will cover material discussed in class AND in the readings. All formulas needed will be provided on examinations (unless noted during examination reviews). Applicable statistical tables will also be provided where necessary. Calculators may be used, but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
-Both of the exams are REQUIRED: NO scores will be dropped. Examinations may consist of definitions, multiple choice questions, computations, output interpretations, and short-answer essays. You may use you own printed statistical organizer, homework, and other notes during examinations. Only 60 minutes will be given, so be prepared.
+Both of the exams are REQUIRED: NO scores will be dropped. Examinations may consist of definitions, multiple choice questions, computations, output interpretations, and short-answer essays. You may use your notes and homework during examinations. Only 60 minutes will be given, so be prepared.
 
 Please make every effort not to miss examinations as they cannot be rescheduled unless there is documented evidence for the reason of absence (e.g., serious illness, accident, court). In the event of an emergency the student must contact the instructor immediately and BEFORE the examination.
 
