@@ -66,7 +66,7 @@ An important aspect of this course is discovering how statistics are used in you
 
 **III. Assignments, 30% of grade**
 
-SIX equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you collect (via a survey that we develop the first day of class) or any other data source that you are interested in. Half of the homework is done on Canvas while the other half is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
+SIX equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you collect (via a survey that we develop the first day of class) or any other data source that you are interested in. Part of the homework is done on Canvas while the other part is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
 
 All assignments are REQUIRED: NO scores will be dropped. Students may work together, however each student must turn in his or her own work, not photocopies or identical replicates. Assignments are due by 11:59pm on the due date (see course schedule). Details on what is required to be turned in will be posted on canvas. Late assignments turned in within 24 hours of the due date will receive half the score earned. No points will be awarded thereafter.
 
