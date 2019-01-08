@@ -29,7 +29,7 @@ This class ([Syllabus]({{ site.baseurl }} /syllabus/educ7610)) is all about appl
 
 ### Lecture Slides
 
-1. Introductions to the class [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.html) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.pdf) and Chapter 1 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf)
+1. Introductions to the class [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_Intro.pdf) and to R and RStudio [HTML](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/00_EDUC7610_IntroR.Rmd) and Chapter 1 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf)
   - Readings: [Tidy Data](https://cehs-research.github.io/EDUC-7610/Readings/Hadley_TidyData_2014.pdf) and [Data Guidelines](https://cehs-research.github.io/EDUC-7610/Readings/Broman_DataSpreadsheets_2017.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/01_EDUC7610_stat_control_example.html)
 2. Chapter 2 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/02_EDUC7610_simple_reg.pdf)
