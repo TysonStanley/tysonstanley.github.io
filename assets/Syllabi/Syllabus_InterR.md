@@ -11,6 +11,7 @@ permalink: /syllabus/interR
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
 &nbsp; &nbsp; tyson.barrett@usu.edu <br>
 &nbsp; &nbsp; 435-797-0120 <br>
+&nbsp; &nbsp; EDUC 456 <br>
 **Class:** <br>
 &nbsp; &nbsp; Thursday 12:00 – 1:00 pm <br>
 **Office Hours:** <br>

@@ -117,6 +117,12 @@ This is an introduction to statistics at a graduate level (generally PhD student
 17. [Chapter 19-20 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pdf) or [Chapter 19-20 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pptx)
 
 
+
+
+<!-- 
+  Applied Statistical Analysis 
+-->
+
 <br>
 <img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="540">
 

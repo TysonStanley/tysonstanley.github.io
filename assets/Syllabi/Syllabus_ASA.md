@@ -13,8 +13,10 @@ permalink: /syllabus/asa
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
 &nbsp; &nbsp; tyson.barrett@usu.edu <br>
 &nbsp; &nbsp; 435-797-0120 <br>
+&nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
 &nbsp; &nbsp; Wed 4:30 - 7:15 pm <br>
+&nbsp; &nbsp; HPER 114 <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; Wed 3:00 - 4:15 pm
 
