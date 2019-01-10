@@ -60,7 +60,7 @@ This is a lecture and applied skills course. Students will be expected to demons
 
 ## Preparation & Attendance:
 
-The nature of this course requires regular class attendance and participation. The student is therefore expected to read assigned chapters and any assigned readings UBEFOREU each class session in order to be prepared for classroom activities and discussion (see ‘Summaries’ below). Please note that this is a 3-credit course in a 15-week period, requiring an average of approximately 9 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class lectures as some material covered in class will not be covered in the text. All information covered in the text and lectures can be used for examination questions. 
+The nature of this course requires regular class attendance and participation. The student is therefore expected to read assigned chapters and any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 15-week period, requiring an average of approximately 9 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class lectures as some material covered in class will not be covered in the text. All information covered in the text and lectures can be used for examination questions. 
 
 ## Three Components of Your Grade:
 
