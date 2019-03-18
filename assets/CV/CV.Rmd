@@ -7,7 +7,7 @@ output:
 ---
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Dec 20, 2018
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Mar 01, 2019
 \normalsize
 \vspace{10pt}
 
@@ -93,13 +93,19 @@ output:
 
 \normalsize
 
-Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (in press). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America.} \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
+<!--
+*Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (in press). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
+-->
 
-\textbf{Barrett, T.S.} \& Lockhart, G. (in press). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
+*Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (in press). Chronic health conditions and adolescent friendships: Perspectives for social network analysis. \emph{International Journal of Adolescent Medicine and Health}.
 
-Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (in press). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics}.
+Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (2019). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America, 145}(1), 392-399. \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
 
-Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (in press). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
+Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (2019). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics, 81}(2), 558-570.
+
+Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (2019). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}, 1-14. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
+
+\textbf{Barrett, T.S.} \& Lockhart, G. (2018). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}, 1-10. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
 \textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53. \img{osf_data.png}{https://osf.io/8thwf}\img{osf_materials.png}{https://osf.io/8thwf}
 
@@ -119,7 +125,7 @@ Fargo, J.D., Brignone, E., Metraux, S., Peterson, R., Carter, M.E., \textbf{Barr
 
 Brignone, E., Gundlapalli, A.V., Blais, R.K., Kimerling, R., \textbf{Barrett, T.S.}, Nelson, R.E., Carter, M.E., Samore, M.A., \& Fargo, J.D. (2017). Increased Health Care Utilization and Costs among Veterans with a Positive Screen for Military Sexual Trauma. \emph{Medical Care, 55}, S70-S77. doi: 10.1097/MLR.0000000000000767
 
-Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (2017). Network-behavior dynamics of adolescent friendships, alcohol use, and physical activity. \emph{Health Psychology, 36}(6), 577-586. doi: 10.1037/hea0000483
+*Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (2017). Network-behavior dynamics of adolescent friendships, alcohol use, and physical activity. \emph{Health Psychology, 36}(6), 577-586. doi: 10.1037/hea0000483
 
 Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2017). Rhythm perception and its role in perception and learning of dysrhythmic speech. \emph{Journal of Speech, Language, and Hearing Research, 60}(3), 1-10. doi: 10.1044/2016_JSLHR-S-16-0094
 
@@ -129,7 +135,7 @@ Behl, D., White, K., \textbf{Barrett, T.}, Blaiser, K., Callow-Heusser, C., \& C
 
 Doutré, S. M., \textbf{Barrett, T.S.}, Greenlee, J. \& White, K. R. (2016). Losing Ground: Awareness of Congenital Cytomegalovirus in the United States. \emph{Journal of Early Hearing Detection and Intervention, 1}(2), 39-48.
 
-Muñoz, K., Rusk, S.E.P., Nelson, L., Preston, E., White, K.R., \textbf{Barrett, T.S.} \& Twohig, M.P. (2016). Pediatric Hearing Aid Management: Parent Reported Needs for Learning Support. \emph{Ear and Hearing Journal. 37}(6), 703-709.
+*Muñoz, K., Rusk, S.E.P., Nelson, L., Preston, E., White, K.R., \textbf{Barrett, T.S.} \& Twohig, M.P. (2016). Pediatric Hearing Aid Management: Parent Reported Needs for Learning Support. \emph{Ear and Hearing Journal. 37}(6), 703-709.
 
 Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Reynolds, K. (2015). Ecological Momentary Assessment of Urban Adolescents’ Technology Use and Cravings for Unhealthy Snacks and Drinks: Differences by Ethnicity and Sex. \emph{Journal of the Academy of Nutrition and Dietetics, 115}(5), 759-766.
 
@@ -148,20 +154,19 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \noindent
 
 
-Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (under review). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
+\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}.
 
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
-Long, E., \textbf{Barrett, T.S.}, & Lockhart, G. (under review). Chronic Health Conditions and Adolescent Friendship: Perspectives from Social Network Analysis. \emph{International Journal of Adolescent Medicine and Health}.
+Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
+
 
 <!-- Prep Ones 
 - In Preparation
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (in preparation). Autoscore: An R package for scoring listener transcripts for research and the clinic.
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (in preparation). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America - Express Letter}.
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
-
-Larson, A., \textbf{Barrett, T.S.} \& Someone, Else. (under review). LENA. \emph{ASHA}.
 
 Ong, C. \textbf{Barrett, T.S.}, others. Perfectionism.
 
@@ -213,7 +218,9 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \setlength{\parskip}{6pt}
 \noindent
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2018). autoscore. URL: github.com/autoscore/autoscore. R package version 0.3.8.
+\textbf{Barrett, T.S.} (2019). rjasa. URL: github.com/tysonstanley/rjasa. R package version 0.1.0.
+
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version 0.4.0.
 
 \textbf{Barrett, T.S.}. (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation.
 
@@ -326,7 +333,7 @@ Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round
     - Spring 2018
     - Graduate-level applied statistics course for non-research degrees
     - Most Recent Student-Responded Ratings:
-        - Overall:
+        - Overall: 
         - Teaching: 
 
 - **Research Design \& Analysis I** (EDUC 6600)
@@ -343,6 +350,13 @@ Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round
     - Most Recent Student-Responded Ratings:
         - Overall: 4.5 out of 5.0
         - Teaching: 4.9 out of 5.0
+
+- **Research Methods** (PSY 3500)
+    - Fall 2018
+    - Undergraduate-level psychological research methods
+    - Most Recent Student-Responded Ratings:
+        - Overall:
+        - Teaching: 
 
 \vspace{10pt}
 \subsection{\textsc{Teaching Assistant}}
