@@ -21,6 +21,11 @@ permalink: /teaching/
 
 # Courses
 
+
+<!--
+Regression Analysis
+-->
+
 All course material is shared under the GNU General Public License.
 
 <img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" height="200" width="550">
@@ -77,9 +82,12 @@ This class ([Syllabus]({{ site.baseurl }} /syllabus/educ7610)) is all about appl
 
 ### Review Material
 
-1. [Polynomials and Interactions](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Ch12_17)
+1. Interactions - [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interactions.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interactions.pdf)
+2. [Polynomials and Interactions (A Little Outdated)](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Ch12_17)
 
-
+<!--
+ANOVA Course
+-->
 
 <br>
 <img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" height="200" width="540">
