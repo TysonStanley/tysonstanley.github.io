@@ -153,6 +153,7 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America}.
 
 \textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}.
 
@@ -163,8 +164,6 @@ Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Explorin
 
 <!-- Prep Ones 
 - In Preparation
-
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (in preparation). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America - Express Letter}.
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
 
