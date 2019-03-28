@@ -6,6 +6,23 @@ output:
       in_header: preamble.tex
 ---
 
+```{r scholar_info, echo = FALSE, warning = FALSE, message = FALSE}
+library(scholar)
+library(tidyverse)
+
+your.id <- "UWdXXEoAAAAJ" # This is your google scholar ID
+profile <- get_profile(your.id)
+pubs <- get_publications(your.id, cstart = 0, pagesize = 100, flush = FALSE)
+citations <- get_citation_history(your.id)
+
+## Custom Code to make bib file from scholar ID
+# url("https://scholar.googleusercontent.com/citations?view_op=export_citations&user=UWdXXEoAAAAJ&citsig=AMD79ooAAAAAXJvG8fCoULONM8SZwt9CLrw1g3CGG9nm&hl=en") %>% 
+#   readLines() %>% 
+#   paste("\n") %>% 
+#   cat(file = "pubs.bib")
+```
+
+
 <!-- Name -->
 \hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Mar 01, 2019
 \normalsize
@@ -13,10 +30,13 @@ output:
 
 <!-- General Info -->
 \begin{tabular}{rl}
-    \textsc{Address:}   & 2800 Old Main Hill, Logan, UT 84322 \\
-    \textsc{Email:}     & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
-    \textsc{Website:}   & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
-    \textsc{Phone:}     & 435-797-0120
+    \textsc{Address:}     & 2800 Old Main Hill, Logan, UT 84322 \\
+    \textsc{Email:}       & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
+    \textsc{Website:}     & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
+    \textsc{Phone:}       & 435-797-0120 \\
+    \textsc{ORCID:}       & \href{https://orcid.org/0000-0002-2137-1391}{0000-0002-2137-1391} \\
+    \textsc{Citations:}   & `r profile$total_cites` (since 2015) \\
+    \textsc{H Index:}     & `r profile$h_index` (since 2015) 
 \end{tabular}
 
 <!-- Education -->
@@ -84,7 +104,7 @@ output:
 \section{PEER-REVIEWED PUBLISHED WORKS}
 \vspace{-5pt}
 \hrule
-\hspace{.1in}\footnotesize{* Denotes that I was the project methodologist or data scientist}
+\footnotesize \hspace{4pt} * Denotes that I was the project methodologist or data scientist
 
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
@@ -153,13 +173,14 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America}.
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}
 
-\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}.
+\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}. \img{osf_data.png}{https://osf.io/an7hg/}\img{osf_materials.png}{https://github.com/tysonstanley/MarginalMediation}
 
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
 Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
+
 
 
 <!-- Prep Ones 
@@ -200,7 +221,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \forceindent $-$ ArXiv Pre-Print: [1804.08663](http://arxiv.org/abs/1804.08663)
 
 
-
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
@@ -230,6 +250,30 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \textbf{Barrett, T.S.}. (2018). R for the Health, Behavioral, and Social Sciences. URL: tysonbarrett.com/Rstats/.
 
 
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+
+\vspace{10pt}
+\section{CITATION SUMMARY}
+\vspace{-5pt}
+\hrule
+\vspace{20pt}
+
+```{r citation_fig, fig.width=8, fig.height=2, echo = FALSE, warning = FALSE, message = FALSE}
+ggplot(citations, aes(year, cites, color = year)) +
+  geom_line() +
+  geom_point(size = 2) +
+  geom_text(aes(label = cites),
+            nudge_y = 4) +
+  labs(x = "Year", 
+       y = "Citation Count\n(by Year)",
+       caption = "Note: Data for citations in 2019 incomplete") +
+  theme_classic() +
+  scale_color_viridis_c() +
+  theme(legend.position = "none",
+        axis.line = element_line(color = "black", size = .4))
+```
 
 
 
@@ -239,7 +283,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 \noindent
-\vspace{20pt}
+\vspace{10pt}
 \section{SELECTED PRESENTATIONS}
 \vspace{-5pt}
 \hrule
