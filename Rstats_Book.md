@@ -1,7 +1,7 @@
 ---
 layout: page
-title: R for Researchers: An Introduction
-permalink: /r/
+title: R for Researchers
+permalink: /r4research/
 ---
 
 [![Rstats]({{ site.baseurl }}/assets/images/Cover1.jpg)]( {{site.baseurl}} /Rstats/)
