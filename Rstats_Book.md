@@ -1,12 +1,12 @@
 ---
 layout: page
-title: R for the Health, Behavioral, and Social Sciences
+title: R for Researchers: An Introduction
 permalink: /r/
 ---
 
 [![Rstats]({{ site.baseurl }}/assets/images/Cover1.jpg)]( {{site.baseurl}} /Rstats/)
 
-I have written a book entitled **R for Researchers in Public Health, Behavior, Education, and Psychology** designed to help teach `R` to health, behavioral, and social scientists that have little or no experience with `R`. The online version is available at [tysonstanley.github.io/Rstats]( {{site.baseurl}} /Rstats/).
+I have written a book entitled **R for Researchers: An Introduction** designed to help teach `R` to health, behavioral, and social scientists that have little or no experience with `R`. The online version is available at [tysonstanley.github.io/Rstats]( {{site.baseurl}} /Rstats/).
 
 The data used in the examples for several chapters of the book can be downloaded [here]({{site.baseurl}} /assets/Data/NHANES_2012.rda). The code below shows the additional steps taken to clean it up if you want to copy the examples. There are practice code and data for you that you can download from within each chapter that is separate from this data.
 
