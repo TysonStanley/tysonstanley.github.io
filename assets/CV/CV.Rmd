@@ -24,7 +24,7 @@ citations <- get_citation_history(your.id)
 
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Mar 01, 2019
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Mar 30, 2019
 \normalsize
 \vspace{10pt}
 
@@ -99,11 +99,35 @@ citations <- get_citation_history(your.id)
 
 \newpage
 
+<!-- Grants -->
+\vspace{10pt}
+\noindent
+\section{FUNDING}
+\vspace{-5pt}
+\hrule
+\vspace{-1pt}
+\footnotesize \hspace{4pt} * Denotes that I was the methodologist or data scientist on the proposal
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\normalsize
+
+*Hoopes, K. (Principal), Smith, J. (Co-Principal), Sulzer, S. (Co-Principal), Israelsen, C. E. (Co-Principal), Blais, R. (Co-Principal), Bressel, E. (Co-Principal), Mason, J. (Co- Principal), \textbf{Barrett, T.} (Co-Principal), "Equine Human Interaction with Veterans", Sponsored by USU Extension Grants Program, Utah State University, (May 1, 2019 - December 31, 2019). $11,640. Current Status: Funded
+
+
 <!-- Published Works -->
 \vspace{10pt}
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
 \section{PEER-REVIEWED PUBLISHED WORKS}
 \vspace{-5pt}
 \hrule
+\vspace{3pt}
 \footnotesize \hspace{4pt} * Denotes that I was the project methodologist or data scientist
 
 \setlength{\parindent}{-.5in}
@@ -129,7 +153,7 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (2019). Syncing 
 
 \textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53. \img{osf_data.png}{https://osf.io/8thwf}\img{osf_materials.png}{https://osf.io/8thwf}
 
-*Leopold, S., Healy, E. W., Youngdahl, C., \textbf{Barrett, T.S.}, & Apoux, F. (2018). Speech-material and talker effects in speech band importance. \emph{Journal of the Acoustical Society of America, 143}(3). doi: 10.1121/1.5026787.
+*Yoho, S.E., Healy, E. W., Youngdahl, C., \textbf{Barrett, T.S.}, & Apoux, F. (2018). Speech-material and talker effects in speech band importance. \emph{Journal of the Acoustical Society of America, 143}(3). doi: 10.1121/1.5026787.
 
 Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2018). Understanding dysrhythmic speech: When rhythm doesn't matter and learning doesn't happen. \emph{Journal of the Acoustical Society of American Express Letters, 143}(5). doi: 10.1121/1.5037620.
 
@@ -179,6 +203,8 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
+Ong, C. W., Lee, E. B., Krafft, J., Terry, C. L. \textbf{Barrett, T.S.}, Levin, M. E., & Twohig, M. P. (under review). A Randomized Controlled Trial of Acceptance and Commitment Therapy for Clinical Perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.
+
 Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
 
 
@@ -188,11 +214,7 @@ Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Explorin
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
 
-Ong, C. \textbf{Barrett, T.S.}, others. Perfectionism.
-
 Barker, B. \textbf{Barrett, T.S.}, others. Perception in Noise.
-
-Levin, M. \textbf{Barrett, T.S.}, others. ACT RCT.
 
 -->
 
@@ -241,13 +263,13 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 
 \textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version 0.4.0.
 
-\textbf{Barrett, T.S.}. (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation.
+\textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation.
 
-\textbf{Barrett, T.S.}. (2018). MarginalMediation: Marginal Mediation. URL: tysonbarrett.com/MarginalMediation. R package version 0.5.1.
+\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation. URL: tysonbarrett.com/MarginalMediation. R package version 0.7.0.
 
-\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.8.7.
+\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.9.0.
 
-\textbf{Barrett, T.S.}. (2018). R for the Health, Behavioral, and Social Sciences. URL: tysonbarrett.com/Rstats/.
+\textbf{Barrett, T.S.} (2018). R for the Health, Behavioral, and Social Sciences. URL: tysonbarrett.com/Rstats/.
 
 
 \setlength{\parindent}{0in}
@@ -255,7 +277,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \setlength{\parskip}{0pt}
 
 \vspace{10pt}
-\section{CITATION SUMMARY}
+\section{CITATION COUNT HISTORY}
 \vspace{-5pt}
 \hrule
 \vspace{20pt}
@@ -270,7 +292,8 @@ ggplot(citations, aes(year, cites, color = year)) +
        y = "Citation Count\n(by Year)",
        caption = "Note: Data for citations in 2019 incomplete") +
   theme_classic() +
-  scale_color_viridis_c() +
+  scale_color_viridis_c(direction = -1,
+                        begin = .1, end = .9) +
   theme(legend.position = "none",
         axis.line = element_line(color = "black", size = .4))
 ```
@@ -283,7 +306,6 @@ ggplot(citations, aes(year, cites, color = year)) +
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 \noindent
-\vspace{10pt}
 \section{SELECTED PRESENTATIONS}
 \vspace{-5pt}
 \hrule
@@ -295,7 +317,8 @@ ggplot(citations, aes(year, cites, color = year)) +
 <!--
 Vazquez, A.L., Chou, T., Navarro, C., **Barrett, T. S.**, & Domenech Rodríguez, M.M. (2019, March). Examining caregiver perceived need for and utilization of adolescent counseling services through machine learning. Poster presented at the Society for Research in Child Development, Baltimore, MD.
 -->
-Vazquez, A. L., Domenech Rodríguez, M. M., **Barrett, T.S.**, Amador Buenabad, N., & Villatoro Velazquez J. A. (2018, September) Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair). Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación. Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
+
+Vazquez, A. L., Domenech Rodríguez, M. M., **Barrett, T.S.**, Amador Buenabad, N., & Villatoro Velazquez, J. A. (2018, September) Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair). Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación. Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
 
 **Barrett, T.S.**, & Lockhart, G. (2017). Enhancing the Exploration and Communication of
 Big Data in Prevention Science. Poster presented at the Annual Meeting of the Society of Prevention Research, Washington, DC. *Received "Distinguished Poster Award" and "Abstract of Distinction."*
@@ -322,26 +345,26 @@ Stevens, V., **Barrett, T.S.** & Nelson, R. (2016). Distribution and Daily Cost 
 
 Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round table discussion at the Babson Business Conference, Paris, France.
 
-<!-- Awards -->
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 \noindent
-\vspace{20pt}
-\section{AWARDS}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
+\subsection{\textsc{Professional Development Activities Attended}}
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{6pt}
+\noindent
 
-- Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
-- Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
-- Outstanding Poster Award (Annual Meeting of EHDI)
-- Dean’s Scholarship (full tuition for two years)
-- Best Poster Presentation (Psi-Chi Undergraduate Conference)
+RStudio Conference sponsored by RStudio. Training on advanced features of R and RStudio, including training on data wrangling, reproducible analyses, and database access. January 2019.
+
 
 
 <!-- Teaching Interests -->
-\vspace{20pt}
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+\vspace{10pt}
 \section{TEACHING INTERESTS}
 \vspace{-5pt}
 \hrule
@@ -370,47 +393,41 @@ Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round
 \hrule
 \vspace{10pt}
 
-\subsection{\textsc{Instructor}}
-
 - **Applied Statistical Analysis** (EDUC 6050)
-    - Spring 2018
     - Graduate-level applied statistics course for non-research degrees
-    - Most Recent Student-Responded Ratings:
-        - Overall: 
-        - Teaching: 
 
 - **Research Design \& Analysis I** (EDUC 6600)
-    - Spring 2018
     - Graduate-level applied statistics course for PhD students
-    - Most Recent Student-Responded Ratings:
-        - Overall:
-        - Teaching: 
+
+- **Research Design \& Analysis II** (EDUC 7610)
+    - Graduate-level linear regression course for PhD students
 
 - **R for the Health, Behavioral, Educational, and Social Sciences I and II**
-    - 2016 - Present
     - Created, Developed, and Taught
     - Graduate Level
-    - Most Recent Student-Responded Ratings:
-        - Overall: 4.5 out of 5.0
-        - Teaching: 4.9 out of 5.0
 
 - **Research Methods** (PSY 3500)
-    - Fall 2018
     - Undergraduate-level psychological research methods
-    - Most Recent Student-Responded Ratings:
-        - Overall:
-        - Teaching: 
-
-\vspace{10pt}
-\subsection{\textsc{Teaching Assistant}}
-
-- **Econometrics I** (Graduate Level) 
-    - Fall 2016
-- **Psychological Statistics** (Undergraduate Level) 
-    - 2014 – 2015
 
 
-<!-- Methdological Training -->
+\subsubsection{\hspace{10pt} \emph{MOST RECENT TEACHING EVALUATIONS (Summer/Fall 2018)}}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+       & Much  &       &         &        & Much   \\
+Course & Lower & Lower & Similar & Higher & Higher \\
+\hline
+Research Methods (PSY 3500)                & & & & X & \\
+Applied Statistical Analysis (EDUC 6050)   & & & & X & \\
+R Course I \& II (Continuing Ed Credit)    & & & & X & \\
+Research Design \& Analysis I (EDUC 6600)  & & & & & X \\
+Research Design \& Analysis II (EDUC 7610) & & & & X & \\
+\hline
+\end{tabular}
+\end{center}
+
+<!-- Methodological Training -->
 \vspace{20pt}
 \section{METHODOLOGICAL TRAINING}
 \vspace{-5pt}
@@ -451,3 +468,19 @@ Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round
 4. **Python: Minor Experience (1 year of occasional use)**
     - Data Analytics
     - MTurk customization
+    
+    
+<!-- Awards -->
+\vspace{10pt}
+\section{AWARDS}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+- Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
+- Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
+- Outstanding Poster Award (Annual Meeting of EHDI)
+- Dean’s Scholarship (full tuition for two years)
+- Best Poster Presentation (Psi-Chi Undergraduate Conference)
+
+
