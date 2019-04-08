@@ -253,12 +253,25 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \vspace{-5pt}
 \hrule
 
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{.25in}
+\setlength{\parskip}{0pt}
+\noindent
+\subsection{Books}
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
-\setlength{\parskip}{6pt}
 \noindent
 
 \textbf{Barrett, T.S.} (in development). *R for Researchers: An Introduction.* Online access: tysonbarrett.com/Rstats/.
+
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{.25in}
+\setlength{\parskip}{0pt}
+\noindent
+\subsection{R Packages}
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\noindent
 
 \textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version 0.1.1. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
 
@@ -268,11 +281,21 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 
 \textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version 0.4.0. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
 
-\textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
-
-\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation. URL: tysonbarrett.com/MarginalMediation. R package version 0.7.0. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
+\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation Analysis. URL: tysonbarrett.com/MarginalMediation. R package version 0.7.0. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
 
 \textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.9.0. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
+
+
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{.25in}
+\setlength{\parskip}{0pt}
+\noindent
+\subsection{Dissertation}
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\noindent
+
+\textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
 
 \newpage
