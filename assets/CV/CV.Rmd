@@ -24,7 +24,7 @@ citations <- get_citation_history(your.id)
 
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: Mar 30, 2019
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: April 7, 2019
 \normalsize
 \vspace{10pt}
 
@@ -115,7 +115,7 @@ citations <- get_citation_history(your.id)
 
 \normalsize
 
-*Hoopes, K. (Principal), Smith, J. (Co-Principal), Sulzer, S. (Co-Principal), Israelsen, C. E. (Co-Principal), Blais, R. (Co-Principal), Bressel, E. (Co-Principal), Mason, J. (Co- Principal), \textbf{Barrett, T.} (Co-Principal), "Equine Human Interaction with Veterans", Sponsored by USU Extension Grants Program, Utah State University, (May 1, 2019 - December 31, 2019). $11,640. Current Status: Funded
+*Hoopes, K. (Principal), Smith, J. (Co-Principal), Sulzer, S. (Co-Principal), Israelsen, C. E. (Co-Principal), Blais, R. (Co-Principal), Bressel, E. (Co-Principal), Mason, J. (Co- Principal), \textbf{Barrett, T.S.} (Co-Principal), "Equine Human Interaction with Veterans", Sponsored by USU Extension Grants Program, Utah State University, (May 1, 2019 - December 31, 2019). $11,640. Current Status: Funded
 
 
 <!-- Published Works -->
@@ -128,7 +128,7 @@ citations <- get_citation_history(your.id)
 \vspace{-5pt}
 \hrule
 \vspace{3pt}
-\footnotesize \hspace{4pt} * Denotes that I was the project methodologist or data scientist
+\footnotesize \hspace{4pt} * Denotes that I was the methodologist or data scientist on the project
 
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
@@ -137,9 +137,8 @@ citations <- get_citation_history(your.id)
 
 \normalsize
 
-<!--
-*Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (in press). Longitudinal Effects of a 2-Year Meditation and Buddhism Program on Well-being, Quality of Life, and Valued Living. \emph{Mindfulness}.
--->
+
+*Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (in press). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness}. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
 *Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (in press). Chronic health conditions and adolescent friendships: Perspectives for social network analysis. \emph{International Journal of Adolescent Medicine and Health}.
 
@@ -199,7 +198,7 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 \textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}
 
-\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}. \img{osf_data.png}{https://osf.io/an7hg/}\img{osf_materials.png}{https://github.com/tysonstanley/MarginalMediation}
+\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}. \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
 
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
@@ -250,7 +249,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 
 <!-- Other Publications -->
 \vspace{20pt}
-\section{OTHER PUBLICATIONS}
+\section{OTHER PUBLISHED WORKS}
 \vspace{-5pt}
 \hrule
 
@@ -259,18 +258,24 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \setlength{\parskip}{6pt}
 \noindent
 
+\textbf{Barrett, T.S.} (in development). *R for Researchers: An Introduction.* Online access: tysonbarrett.com/Rstats/.
+
+\textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version 0.1.1. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
+
+\textbf{Barrett, T.S.} (2019). connectivity. URL: github.com/tysonstanley/connectivity. R package version 0.1.0. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
+
 \textbf{Barrett, T.S.} (2019). rjasa. URL: github.com/tysonstanley/rjasa. R package version 0.1.0.
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version 0.4.0.
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version 0.4.0. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
 
-\textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation.
+\textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
-\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation. URL: tysonbarrett.com/MarginalMediation. R package version 0.7.0.
+\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation. URL: tysonbarrett.com/MarginalMediation. R package version 0.7.0. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
 
-\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.9.0.
+\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.9.0. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
 
-\textbf{Barrett, T.S.} (2018). R for the Health, Behavioral, and Social Sciences. URL: tysonbarrett.com/Rstats/.
 
+\newpage
 
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
@@ -345,11 +350,14 @@ Stevens, V., **Barrett, T.S.** & Nelson, R. (2016). Distribution and Daily Cost 
 
 Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round table discussion at the Babson Business Conference, Paris, France.
 
+\vspace{10pt}
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 \noindent
 \subsection{\textsc{Professional Development Activities Attended}}
+\vspace{-5pt}
+\hrule
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
 \setlength{\parskip}{6pt}
