@@ -24,7 +24,7 @@ citations <- get_citation_history(your.id)
 
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: April 7, 2019
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: April 8, 2019
 \normalsize
 \vspace{10pt}
 
@@ -68,9 +68,9 @@ citations <- get_citation_history(your.id)
 \vspace{-5pt}
 \hrule
 
-\indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, R Programming and Software Development
+\indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, Accessible Methodology Using R Programming
 
-\indent \hspace*{.1in} \textsc{Secondary:} Methodology in Communication Disorders, Machine Learning, Model Interpretability
+\indent \hspace*{.1in} \textsc{Secondary:} Applied Methodology in Communication Disorders, Model Interpretability
 
 \normalsize
 
@@ -318,10 +318,11 @@ ggplot(citations, aes(year, cites, color = year)) +
             nudge_y = 4) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
-       caption = "Note: Data for citations in 2019 incomplete") +
+       caption = "Note: Data for citations in 2019 only until April.") +
   theme_classic() +
   scale_color_viridis_c(direction = -1,
-                        begin = .1, end = .9) +
+                        begin = .1, 
+                        end = .9) +
   theme(legend.position = "none",
         axis.line = element_line(color = "black", size = .4))
 ```
@@ -342,11 +343,13 @@ ggplot(citations, aes(year, cites, color = year)) +
 \setlength{\parskip}{6pt}
 \noindent
 
-<!--
-Vazquez, A.L., Chou, T., Navarro, C., **Barrett, T. S.**, & Domenech Rodríguez, M.M. (2019, March). Examining caregiver perceived need for and utilization of adolescent counseling services through machine learning. Poster presented at the Society for Research in Child Development, Baltimore, MD.
--->
+Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, Villodas, M.T., & Domenech Rodríguez, M.M. (2019, November). Machine learning predicts caregiver perceived need for and utilization of adolescent counseling services for youth at-risk for maltreatment. In M. D. Hetzel-Riggin (Chair). Addressing violence, abuse, and trauma throughout the socioecological model. Symposium submitted for presentation at the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
+ 
+Vázquez, A.L., **Barrett, T.S.**, Domenech Rodríguez, M.M., Bustos, M., Gutierrez, M., Amador Buenabad, N.G., & Villatoro Velazquez J.A. (2019, March). The influence of perceived parenting on substance initiation among Latinx children. Poster presented at the Society for Research in Child Development, Baltimore, MD.
+ 
+Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, & Domenech Rodríguez, M.M. (2019, March). Examining caregiver perceived need for and utilization of adolescent counseling services through machine learning. Poster presented at the Society for Research in Child Development, Baltimore, MD.
 
-Vazquez, A. L., Domenech Rodríguez, M. M., **Barrett, T.S.**, Amador Buenabad, N., & Villatoro Velazquez, J. A. (2018, September) Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair). Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación. Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
+Vázquez, A. L., Domenech Rodríguez, M. M., **Barrett, T.S.**, Amador Buenabad, N., & Villatoro Velazquez, J. A. (2018, September) Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair). Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación. Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
 
 **Barrett, T.S.**, & Lockhart, G. (2017). Enhancing the Exploration and Communication of
 Big Data in Prevention Science. Poster presented at the Annual Meeting of the Society of Prevention Research, Washington, DC. *Received "Distinguished Poster Award" and "Abstract of Distinction."*
