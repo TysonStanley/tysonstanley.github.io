@@ -79,6 +79,8 @@ This class ([Syllabus]({{ site.baseurl }} /syllabus/educ7610)) is all about appl
 2. Homework 2 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW2.html) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW2.Rmd)
 3. Homework 3 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW3) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW3.Rmd)
 4. (Optional) Homework 4 [HTML](https://cehs-research.github.io/EDUC-7610/Homework/HW4) and [RMD](https://cehs-research.github.io/EDUC-7610/Homework/HW4.Rmd)
+5. Final Project [HTML](https://cehs-research.github.io/EDUC-7610/Homework/Final)
+  - Example Final Project [PDF](https://cehs-research.github.io/EDUC-7610/Homework/Example Final Project.pdf) and [Word](https://cehs-research.github.io/EDUC-7610/Homework/Example Final Project.docx)
 
 ### Review Material
 
