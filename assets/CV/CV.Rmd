@@ -35,14 +35,14 @@ citations <- get_citation_history(your.id)
     \textsc{Website:}     & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
     \textsc{Phone:}       & 435-797-0120 \\
     \textsc{ORCID:}       & \href{https://orcid.org/0000-0002-2137-1391}{0000-0002-2137-1391} \\
+    \textsc{OSF:}         & \href{osf.io/gkjbx}{osf.io/gkjbx} \\
     \textsc{Citations:}   & `r profile$total_cites` (since 2015) \\
     \textsc{H Index:}     & `r profile$h_index` (since 2015) 
 \end{tabular}
 
 <!-- Education -->
-\vspace{8pt}
+\vspace{6pt}
 \section{EDUCATION}
-\vspace{-5pt}
 \hrule
 \vspace{5pt}
 
@@ -63,9 +63,8 @@ citations <- get_citation_history(your.id)
 \end{tabular}
 
 <!-- Research Areas -->
-\vspace{10pt}
+\vspace{8pt}
 \section{RESEARCH AREAS}
-\vspace{-5pt}
 \hrule
 
 \indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, Accessible Methodology Using R Programming
@@ -75,9 +74,8 @@ citations <- get_citation_history(your.id)
 \normalsize
 
 <!-- Research Experience -->
-\vspace{10pt}
+\vspace{8pt}
 \section{RESEARCH EXPERIENCE}
-\vspace{-5pt}
 \hrule
 \vspace{-8pt}
 
@@ -97,13 +95,18 @@ citations <- get_citation_history(your.id)
 \indent \hspace*{.1in} \small\textbf{WOC Research Assistant}, Veteran Affairs SLC \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
 
-\newpage
+<!-- Education -->
+\vspace{3pt}
+\section{OTHER PROFESSIONAL APPOINTMENTS}
+\hrule
+
+\indent \hspace*{.1in} \small\textbf{Center for Open Science Ambassador } \img{cos_logo.png}{https://osf.io/gkjbx} \hfill 2019-Present
+
 
 <!-- Grants -->
 \vspace{10pt}
 \noindent
 \section{FUNDING}
-\vspace{-5pt}
 \hrule
 \vspace{-1pt}
 \footnotesize \hspace{4pt} * Denotes that I was the methodologist or data scientist on the proposal
