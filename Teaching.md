@@ -28,7 +28,7 @@ Regression Analysis
 
 All course material is shared under the GNU General Public License.
 
-<img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" width="50%">
+<img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" width="70%">
 
 This class ([Syllabus]({{ site.baseurl }} /syllabus/educ7610)) is all about applying regression analysis and linear models, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. The book we'll use throughout the class, and that drives the structure of the lecture slides, is [Regression Analysis and Linear Models](https://www.guilford.com/books/Regression-Analysis-and-Linear-Models/Darlington-Hayes/9781462521135/reviews) by Richard Darlington and Andrew Hayes. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. A subset of the [General Social Survey](https://cehs-research.github.io/EDUC-7610/GSS_Data/Data/GSS_reduced_example.csv) data set, a [data set used in Quas et al. about high risk youth](https://cehs-research.github.io/EDUC-7610/HighRisk_Data/HighRisk.csv) data set, and a [data set regarding poverty, violence, and teen birth rates per state](https://cehs-research.github.io/EDUC-7610/Poverty_Data/poverty.xlsx) will be used in the examples. We will also pull from [FiveThirtyEight's open data on GitHub](https://github.com/fivethirtyeight/data) occassionally throughout the class (many of these data sets can be used for your class project as well if they have both continuous and categorical predictors).
 
@@ -95,7 +95,7 @@ ANOVA Course
 -->
 
 <br>
-<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" width="50%">
+<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" width="70%">
 
 This course ([Syllabus]({{ site.baseurl }} /syllabus/educ6600)) is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
@@ -137,7 +137,7 @@ This course ([Syllabus]({{ site.baseurl }} /syllabus/educ6600)) is an introducti
 -->
 
 <br>
-<img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" height="200" width="540">
+<img src="{{ site.baseurl }}/assets/images/ASA_logo.png" alt="ASA_logo" width="70%">
 
 This is an introduction to statistics for master's level social scientists ([Syllabus](http://tysonbarrett.com/syllabus/asa)). It focuses on the applied aspects of data analysis and statistics. Topics include working with data in spreadsheets and [Jamovi](https://www.jamovi.org/), data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA, correlation, regression).
 
@@ -162,7 +162,7 @@ This is an introduction to statistics for master's level social scientists ([Syl
 
 <br>
 <br>
-<img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" height="200" width="450">
+<img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="70%">
 
 These are introductory ([Syllabus]({{ site.baseurl }} /syllabus/introR)) and intermediate ([Syllabus]({{ site.baseurl }} /syllabus/interR)) R courses for researchers in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
 
@@ -193,7 +193,7 @@ My most recent class material can be found below:
 
 <br>
 <br>
-<img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" height="230" width="500">
+<img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" width="70%">
 
 This course is an undergraduate-level research methods class for psychology majors (although it is applicable to many other social sciences). It covers the entirety of the basic research process, from question formulation to communicating results. Below are the resources I provide for the class.
 
