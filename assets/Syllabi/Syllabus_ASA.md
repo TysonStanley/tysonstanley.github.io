@@ -15,10 +15,10 @@ permalink: /syllabus/asa
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Wed 4:30 - 7:15 pm <br>
-&nbsp; &nbsp; HPER 114 <br>
+&nbsp; &nbsp; Wed TBA <br>
+&nbsp; &nbsp; TBA <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; Wed 3:00 - 4:15 pm
+&nbsp; &nbsp; TBA
 
 </div>
 
@@ -28,6 +28,7 @@ permalink: /syllabus/asa
 -	Carlson, K.A. and Winquist, J.R. (2017). *An Introduction to Statistics: An Active Learning Approach* (2nd Ed.). Sage Publications.
 - Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
 - [Jamovi](https://www.jamovi.org) software (free and open source; similar to SPSS; downloading and installing are discussed in class)
+- [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) for Exams
 - Optional: Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
 
 ## Course Purpose:
@@ -37,7 +38,7 @@ This course is an applied introduction to statistical methods commonly used in e
 **Essential Questions for this Course:**
 
 - What is quantitative research?
-- How does data inform our world?
+- In what ways can data inform our world?
 - How are data analyzed?
 
 ## Course Structure:
@@ -64,21 +65,21 @@ These can be printed out and used as notes for the lectures and the exams.
 
 **II. Research Portfolio, 15% of grade**
 
-An important aspect of this course is discovering how statistics are used in your field. You must find a minimum of TEN journal articles in your field with a quantitative component (look for numbers). Create a grid (in Excel or Word) that states the author, year, journal, major research questions, the major constructs (IV or DV), the different statistical methods, and brief summary of findings. Finally, write a roughly two-paragraph response to each article on how the statistical information provided an insight into the research questions (in other words, what did we learn within these studies that we didn’t already know?). In addition, near the end of the semester we will have you share some of the more interesting articles that you found with the class.
+An important aspect of this course is discovering how statistics are used in your field. For each of the four units, you will need to find one research article in your field that uses one of the techniques we covered in that unit. For example, in Unit 1 we cover t-tests and could, therefore, need to find an article that used at least one t-test. The assignment will include turning in the article with 3 - 5 bullet points about their methods (anything interesting, new, or weird that you saw).
 
 **III. Assignments, 30% of grade**
 
-SIX equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you collect (via a survey that we develop the first day of class) or any other data source that you are interested in. Part of the homework is done on Canvas (based on questions from the book's "Practice Tests" at the end of each chapter) while the other part is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
+FOUR equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you have access to (e.g. in your lab) or any other data source that you are interested in. Part of the homework is done on Canvas (based on questions from the book's "Practice Tests" at the end of each chapter) while the other part is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
 
 All assignments are REQUIRED: NO scores will be dropped. Students may work together, however each student must turn in his or her own work, not photocopies or identical replicates. Assignments are due by 11:59pm on the due date (see course schedule). Details on what is required to be turned in will be posted on canvas. Late assignments turned in within 24 hours of the due date will receive half the score earned. No points will be awarded thereafter.
 
 **IV. Examinations, 25% of grade**
 
-TWO equally weighted examinations will be given during this course. Examinations will be given IN CLASS and will require less than 60 minutes. Examinations will cover material discussed in class AND in the readings. All formulas needed will be provided on examinations (unless noted during examination reviews). Applicable statistical tables will also be provided where necessary. Calculators may be used, but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
+TWO equally weighted examinations will be given during this course. Examinations will be given OUTSIDE OF CLASS and will generally require less than 60 minutes. In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/).
 
-Both of the exams are REQUIRED: NO scores will be dropped. Examinations may consist of definitions, multiple choice questions, computations, output interpretations, and short-answer essays. You may use your notes and homework during examinations. Only 60 minutes will be given, so be prepared.
+Examinations will cover material discussed in class AND in the readings. All formulas needed will be provided on examinations (unless noted during examination reviews). Applicable statistical tables will also be provided where necessary. Calculators may be used, but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
-Please make every effort not to miss examinations as they cannot be rescheduled unless there is documented evidence for the reason of absence (e.g., serious illness, accident, court). In the event of an emergency the student must contact the instructor immediately and BEFORE the examination.
+Both of the exams are REQUIRED: NO scores will be dropped. Examinations will consist of multiple choice questions and output interpretations. You may use your notes and homework during examinations.
 
 NOTE: Final is comprehensive but it will focus much more heavily on topics covered after the mid-term.
 

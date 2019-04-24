@@ -1,10 +1,10 @@
 ---
 layout: default
 title: "Research Design and Analysis II"
-permalink: /syllabus/educ7610
+permalink: /syllabus/educ6600
 ---
 
-# Research Design and Analysis II
+# Research Design and Analysis I
 #### EDUC 7610
 
 <div style="background-color: #FEF9E7; padding: 20px;">
@@ -15,10 +15,10 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; TBA <br>
-&nbsp; &nbsp; TBA <br>
+&nbsp; &nbsp; 3:30 pm - 4:45 pm Mondays and Wednesdays <br>
+&nbsp; &nbsp; HPER 110 <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; TBA
+&nbsp; &nbsp; 2:00 pm - 3:15 pm Mondays and Wednesdays
 <br>
 <strong>Teaching Assistant: TBA</strong> <br>
 &nbsp; &nbsp; Email: TBA<br>
@@ -29,7 +29,8 @@ permalink: /syllabus/educ7610
 
 ## Materials:
 
--	Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
+- Cohen, B. H. (2008). *Explaining Psychological Statistics (4th Ed.).* New York: Wiley. (electronic copy accessible through the USU library for free)
+- eBook: Cohen Companion in R (free online at www.sarahschwartzstats.com )
 - Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
 - R and RStudio software (both are free; downloading and installing are discussed in class)
 - [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) for Exams
@@ -39,20 +40,13 @@ permalink: /syllabus/educ7610
 
 ## Course Purpose:
 
-Research Design & Analysis II is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. This course will mostly focus on the general linear model, the building block of nearly all analyses discussed in EDUC/PSY 6600.
+Research Design & Analysis I is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. 
 
-**Essential Questions for this Course:**
-
-- What is quantitative research?
-- How does data inform our world?
-- How are data analyzed?
-
-## Two Prerequisites:
+## Prerequisite:
 
 1.	Completion of EDUC/PSY 6570 ‘Introduction to Educational & Psychological Research’ (or approved equivalent)
-2.	Completion of EDUC/PSY 6600
 
-These prerequisites are mandated by the College of Education & Human Services to ensure that each student has the necessary background knowledge to be successful in this course. Both EDUC/PSY 6570 and EDUC/PSY 6600 must be completed with a passing grade prior to enrolling in EDUC/PSY 7610, precluding concurrent enrollment.
+This prerequisite is mandated by the College of Education & Human Services to ensure that each student has the necessary background knowledge to be successful in this course. The prerequisite can be taken concurrently with this class.
 
 
 ## Course Structure:
@@ -84,7 +78,7 @@ The Final Project will consist of using at least one major method from 3 of the 
 
 **IV. Examinations, 30% of grade**
 
-Three equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in class and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
+Four equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in class and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
 Your lowest score on the exams will be dropped. Because of this, no exams will be made up unless the University requires that you be given an exception. In the event of an emergency the student must contact the instructor immediately and BEFORE the examination. Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
 
@@ -173,7 +167,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_summer.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_6600_fall.png)
 
 
 
