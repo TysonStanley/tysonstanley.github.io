@@ -5,7 +5,7 @@ permalink: /syllabus/educ6600
 ---
 
 # Research Design and Analysis I
-#### EDUC 7610
+#### EDUC/PSY 6600
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
