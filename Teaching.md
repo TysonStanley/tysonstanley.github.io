@@ -101,10 +101,9 @@ This course ([Syllabus]({{ site.baseurl }} /syllabus/educ6600)) is an introducti
 
 ### Resources
 
-- We are putting together a [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/)---especially with using R.
+- A [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/) to help with the homework---especially with using R.
 - A [PDF](http://tysonbarrett.com/EDUC-6600/Resources/formulas.pdf) with all the formulas we use in the class.
 - A [PDF](http://tysonbarrett.com/EDUC-6600/Resources/tables.pdf) with all the tables we use in the class.
-- A [Box Folder](https://usu.app.box.com/folder/44325607147) that contains nearly all the material used for the class (homework assignments, data, articles).
 
 ### Lecture Slides
 
