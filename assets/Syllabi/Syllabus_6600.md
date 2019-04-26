@@ -42,11 +42,12 @@ permalink: /syllabus/educ6600
 
 Research Design & Analysis I is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. 
 
-## Prerequisite:
+## Prerequisite or Co-requisite:
 
-1.	Completion of EDUC/PSY 6570 ‘Introduction to Educational & Psychological Research’ (or approved equivalent)
+1.	Completion or concurrent enrollment of EDUC/PSY 6570 ‘Introduction to Educational & Psychological Research’ (or approved equivalent)
 
-This prerequisite is mandated by the College of Education & Human Services to ensure that each student has the necessary background knowledge to be successful in this course. The prerequisite can be taken concurrently with this class.
+This prerequisite/co-requisite is mandated by the College of Education & Human Services to ensure that each student has the necessary background knowledge to be successful in this course. To sign up for both concurrently, send an email to Tressa Haderlie (<tressa.haderlie@usu.edu>) with the following information: 1) Student name, 2) A#, 3) Course to take at the same time as EDUC 6570 (eg, EDUC 6600, PSY 6600), 4) Semester/term wishing to take EDUC 6570 and 6600 concurrently (eg, Summer, Fall, Spring).
+
 
 
 ## Course Structure:
@@ -61,7 +62,7 @@ The nature of this course requires regular class attendance and participation. T
 
 **I.  Discussions, 25% of grade**
 
-By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time (this is not an introductory course).  It is of upmost importance that students read the material PRIOR to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering higher level questions and preparing students for assignments, but more importantly for conducting your own research. To facilitate this, a chapter discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the chapter, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
+By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time (this is not an introductory course).  It is of utmost importance that students read the material PRIOR to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering higher level questions and preparing students for assignments, but more importantly for conducting your own research. To facilitate this, a chapter discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the chapter, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
 
 We will cover all 18 chapters in this course. You will need to provide discussion points for all the chapters except for chapter 1. Each student must compose his or her own. Discussion points must NOT be a copy of the lecture notes. Discussion points will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion point.
 
