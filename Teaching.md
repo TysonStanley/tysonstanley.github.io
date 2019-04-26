@@ -4,7 +4,7 @@ title: Teaching
 permalink: /teaching/
 ---
 
-# Workshops
+# Workshops/Presentations
 
 1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
 2. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
