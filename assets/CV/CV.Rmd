@@ -24,7 +24,7 @@ citations <- get_citation_history(your.id)
 
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: April 8, 2019
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: May 1, 2019
 \normalsize
 \vspace{10pt}
 
@@ -41,7 +41,7 @@ citations <- get_citation_history(your.id)
 \end{tabular}
 
 <!-- Education -->
-\vspace{6pt}
+\vspace{5pt}
 \section{EDUCATION}
 \hrule
 \vspace{5pt}
@@ -63,7 +63,7 @@ citations <- get_citation_history(your.id)
 \end{tabular}
 
 <!-- Research Areas -->
-\vspace{8pt}
+\vspace{6pt}
 \section{RESEARCH AREAS}
 \hrule
 
@@ -74,8 +74,8 @@ citations <- get_citation_history(your.id)
 \normalsize
 
 <!-- Research Experience -->
-\vspace{8pt}
-\section{RESEARCH EXPERIENCE}
+\vspace{6pt}
+\section{RESEARCH APPOINTMENTS}
 \hrule
 \vspace{-8pt}
 
@@ -84,13 +84,12 @@ citations <- get_citation_history(your.id)
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-Present
 \newline \hspace*{.6in} \emph{Principle Investigator of the Social Data Lab}
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
-\newline \hspace*{.6in} \emph{Supervisor: Jamison Fargo, PhD, Associate Dean for Research}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant}, Prevention Science Lab, Utah State University \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisor: Ginger Lockhart, PhD}
 
 \indent \hspace*{.1in} \small\textbf{Statistical and Data Science Consultant}, Utah State University \hfill 2016-2018
-\newline \hspace*{.6in} \emph{Advisors: Sarah Schwartz, PhD and Jamison Fargo, PhD}
+\newline \hspace*{.6in} \emph{Supervisors: Sarah Schwartz, PhD and Jamison Fargo, PhD}
 
 \indent \hspace*{.1in} \small\textbf{WOC Research Assistant}, Veteran Affairs SLC \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
@@ -100,7 +99,9 @@ citations <- get_citation_history(your.id)
 \section{OTHER PROFESSIONAL APPOINTMENTS}
 \hrule
 
-\indent \hspace*{.1in} \small\textbf{Center for Open Science Ambassador } \img{cos_logo.png}{https://osf.io/gkjbx} \hfill 2019-Present
+\indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science Ambassador }} \hfill 2019-Present
+
+\indent \hspace*{.1in} \small\textbf{\href{https://f1000.com/prime}{F1000Prime Faculty Member}} \href{https://f1000.com/prime}{in Quantitative Psychology}  \hfill 2019-Present
 
 
 <!-- Grants -->
@@ -199,6 +200,10 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
+Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
+
+Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
+
 \textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}
 
 \textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}. \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
@@ -207,8 +212,6 @@ Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & T
 
 Ong, C. W., Lee, E. B., Krafft, J., Terry, C. L. \textbf{Barrett, T.S.}, Levin, M. E., & Twohig, M. P. (under review). A Randomized Controlled Trial of Acceptance and Commitment Therapy for Clinical Perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.
 
-Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
-
 
 
 <!-- Prep Ones 
@@ -216,7 +219,7 @@ Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Explorin
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
 
-Barker, B. \textbf{Barrett, T.S.}, others. Perception in Noise.
+Nelson, L., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. Classroom Listening Experiences of Students who are DHH using LIFE-R.
 
 -->
 
@@ -276,17 +279,17 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \setlength{\leftskip}{1in}
 \noindent
 
-\textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version 0.1.1. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
+\textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version `r packageVersion("dissertateUSU")`. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
 
-\textbf{Barrett, T.S.} (2019). connectivity. URL: github.com/tysonstanley/connectivity. R package version 0.1.0. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
+\textbf{Barrett, T.S.} (2019). connectivity. URL: github.com/tysonstanley/connectivity. R package version `r packageVersion("connectivity")`. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
 
-\textbf{Barrett, T.S.} (2019). rjasa. URL: github.com/tysonstanley/rjasa. R package version 0.1.0.
+\textbf{Barrett, T.S.} (2019). rjasa. URL: github.com/tysonstanley/rjasa. R package version `r packageVersion("rjasa")`.
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version 0.4.0. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version `r packageVersion("autoscore")`. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
 
-\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation Analysis. URL: tysonbarrett.com/MarginalMediation. R package version 0.7.0. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
+\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation Analysis. URL: tysonbarrett.com/MarginalMediation. R package version `r packageVersion("MarginalMediation")`. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
 
-\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version 1.9.0. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
+\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
 
 
 \setlength{\parindent}{0in}
