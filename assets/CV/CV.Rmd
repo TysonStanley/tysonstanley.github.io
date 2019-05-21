@@ -20,13 +20,18 @@ citations <- get_citation_history(your.id)
 #   readLines() %>% 
 #   paste("\n") %>% 
 #   cat(file = "pubs.bib")
+
+today <- lubridate::today()
+month <- months(today)
+day <- lubridate::day(today)
+year <- lubridate::year(today)
 ```
 
 
 <!-- Name -->
-\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: May 1, 2019
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: `r month` `r day`, `r year`
 \normalsize
-\vspace{10pt}
+\vspace{8pt}
 
 <!-- General Info -->
 \begin{tabular}{rl}
@@ -41,10 +46,11 @@ citations <- get_citation_history(your.id)
 \end{tabular}
 
 <!-- Education -->
-\vspace{5pt}
+\vspace{0pt}
 \section{EDUCATION}
+\vspace{-1pt}
 \hrule
-\vspace{5pt}
+\vspace{3pt}
 
 \begin{tabular}{l|p{8cm}}
  \textsc{Ph.D. Quantitative Psychology } & \emph{Feb 2018}\\
@@ -63,8 +69,9 @@ citations <- get_citation_history(your.id)
 \end{tabular}
 
 <!-- Research Areas -->
-\vspace{6pt}
+\vspace{1pt}
 \section{RESEARCH AREAS}
+\vspace{-1pt}
 \hrule
 
 \indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, Accessible Methodology Using R Programming
@@ -74,8 +81,9 @@ citations <- get_citation_history(your.id)
 \normalsize
 
 <!-- Research Experience -->
-\vspace{6pt}
+\vspace{1pt}
 \section{RESEARCH APPOINTMENTS}
+\vspace{-1pt}
 \hrule
 \vspace{-8pt}
 
@@ -95,13 +103,13 @@ citations <- get_citation_history(your.id)
 \newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
 
 <!-- Education -->
-\vspace{3pt}
+\vspace{1pt}
 \section{OTHER PROFESSIONAL APPOINTMENTS}
 \hrule
 
-\indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science Ambassador }} \hfill 2019-Present
+\indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
 
-\indent \hspace*{.1in} \small\textbf{\href{https://f1000.com/prime}{F1000Prime Faculty Member}} \href{https://f1000.com/prime}{in Quantitative Psychology}  \hfill 2019-Present
+\indent \hspace*{.1in} \small\textbf{\href{https://f1000.com/prime/thefaculty/member/1070302}{F1000Prime Faculty Member}} in Quantitative Psychology  \hfill 2019-Present
 
 
 <!-- Grants -->
@@ -142,17 +150,19 @@ citations <- get_citation_history(your.id)
 \normalsize
 
 
+*Ong, C.W., Lee, E. B., Krafft, J., Terry, C.L., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (in press). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.    
+
 *Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (in press). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness}. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
 *Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (in press). Chronic health conditions and adolescent friendships: Perspectives for social network analysis. \emph{International Journal of Adolescent Medicine and Health}.
+
+\textbf{Barrett, T.S.} \& Lockhart, G. (2019). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science, 20}(4), 575-584. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (2019). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America, 145}(1), 392-399. \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
 
 Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (2019). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics, 81}(2), 558-570.
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (2019). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}, 1-14. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
-
-\textbf{Barrett, T.S.} \& Lockhart, G. (2018). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science}, 1-10. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
 
 \textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53. \img{osf_data.png}{https://osf.io/8thwf}\img{osf_materials.png}{https://osf.io/8thwf}
 
@@ -204,18 +214,17 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 
 Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Journal of the Acoustical Society of America}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}
-
-\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{Behavior Research Methods}. \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
-
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
-Ong, C. W., Lee, E. B., Krafft, J., Terry, C. L. \textbf{Barrett, T.S.}, Levin, M. E., & Twohig, M. P. (under review). A Randomized Controlled Trial of Acceptance and Commitment Therapy for Clinical Perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.
-
+\textbf{Barrett, T.S.}. (under review). The Use of R in the Social Sciences and Psychology. \emph{R Journal}.
 
 
 <!-- Prep Ones 
 - In Preparation
+
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}
+
+\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{}. \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
 
@@ -317,6 +326,9 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 \vspace{20pt}
 
 ```{r citation_fig, fig.width=8, fig.height=2, echo = FALSE, warning = FALSE, message = FALSE}
+month <- months(lubridate::today())
+year <- lubridate::year(lubridate::today())
+
 ggplot(citations, aes(year, cites, color = year)) +
   geom_line() +
   geom_point(size = 2) +
@@ -324,7 +336,7 @@ ggplot(citations, aes(year, cites, color = year)) +
             nudge_y = 4) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
-       caption = "Note: Data for citations in 2019 only until April.") +
+       caption = paste("Note: Data for citations in", year,"only until", month)) +
   theme_classic() +
   scale_color_viridis_c(direction = -1,
                         begin = .1, 
