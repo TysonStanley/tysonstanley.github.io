@@ -6,6 +6,7 @@ permalink: /syllabus/educ7610
 
 # Research Design and Analysis II
 #### EDUC 7610
+#### Summer 2019
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
