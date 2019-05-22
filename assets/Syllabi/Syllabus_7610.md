@@ -15,15 +15,16 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; TBA <br>
-&nbsp; &nbsp; TBA <br>
+&nbsp; &nbsp; Monday and Wednesday 12:00 pm - 2:45 pm <br>
+&nbsp; &nbsp; SCCE 310 <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; TBA
+&nbsp; &nbsp; Monday and Wednesday 11:00 am - 11:45 am (and by appointment)
 <br>
+<!--
 <strong>Teaching Assistant: TBA</strong> <br>
 &nbsp; &nbsp; Email: TBA<br>
 &nbsp; &nbsp; Office Hours: By appointment
-
+-->
 </div>
 
 
@@ -40,12 +41,6 @@ permalink: /syllabus/educ7610
 ## Course Purpose:
 
 Research Design & Analysis II is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. This course will mostly focus on the general linear model, the building block of nearly all analyses discussed in EDUC/PSY 6600.
-
-**Essential Questions for this Course:**
-
-- What is quantitative research?
-- How does data inform our world?
-- How are data analyzed?
 
 ## Two Prerequisites:
 
