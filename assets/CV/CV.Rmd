@@ -149,6 +149,7 @@ year <- lubridate::year(today)
 
 \normalsize
 
+*Ong, C.W., Barney, J.L., \textbf{Barrett, T.S.}, Lee, E.B., Levin, M.E., & Twohig, M.P. (in press). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Contextual Behavioral Science}.
 
 *Ong, C.W., Lee, E. B., Krafft, J., Terry, C.L., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (in press). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.    
 
@@ -213,8 +214,6 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
 Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
-
-Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
 \textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Automating with Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}.
 
