@@ -362,6 +362,8 @@ ggplot(citations, aes(year, cites, color = year)) +
 \setlength{\parskip}{6pt}
 \noindent
 
+Ong, C.W., Lee, E.B., Krafft, J., Terry, C.L., **Barrett, T.S.**, Levin, M.E., & Twohig, M.P. (2019, November). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. In C. W. Ong (Chair), Using acceptance and commitment therapy for different clinical presentations: Evidence-based adaptations. Symposium conducted at the 53rd annual convention of the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
+
 Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, Villodas, M.T., & Domenech Rodríguez, M.M. (2019, November). Machine learning predicts caregiver perceived need for and utilization of adolescent counseling services for youth at-risk for maltreatment. In M. D. Hetzel-Riggin (Chair). Addressing violence, abuse, and trauma throughout the socioecological model. Symposium submitted for presentation at the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
  
 Vázquez, A.L., **Barrett, T.S.**, Domenech Rodríguez, M.M., Bustos, M., Gutierrez, M., Amador Buenabad, N.G., & Villatoro Velazquez J.A. (2019, March). The influence of perceived parenting on substance initiation among Latinx children. Poster presented at the Society for Research in Child Development, Baltimore, MD.
