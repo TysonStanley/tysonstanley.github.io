@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2019.4.11)  21 MAY 2019 13:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2019.4.11)  4 JUN 2019 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -804,6 +804,10 @@ File: osf_data.png Graphic file (type bmp)
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
 [3]
+File: osf_data.png Graphic file (type bmp)
+<osf_data.png>
+File: osf_materials.png Graphic file (type bmp)
+<osf_materials.png>
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
 File: connectivity_hex.jpg Graphic file (type bmp)
@@ -811,7 +815,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (0.24669pt too wide) in paragraph at lines 498--501
+Overfull \hbox (0.24669pt too wide) in paragraph at lines 504--507
  []\TU/lmr/bx/n/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (20
 19). autoscore. URL: github.com/autoscore/autoscore.
  []
@@ -830,20 +834,20 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [5]
 
 LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
-(Font)              using `TU/lmr/bx/n' instead on input line 648.
+(Font)              using `TU/lmr/bx/n' instead on input line 654.
 
 [6]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 758.
+(hyperref)                than one, level fixed on input line 764.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 895.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 901.
 [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 895.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 901.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 895.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 895.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 901.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 901.
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: EE9E78656EB549A90D05135119BA8179.
 

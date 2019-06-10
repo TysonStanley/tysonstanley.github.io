@@ -216,13 +216,15 @@ Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring
 
 Ong, C. W., Barney, J. L., \textbf{Barrett, T.S.}, Lee, E. B., Levin, M. E., & Twohig, M. P. (under review). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Anxiety Disorders}.
 
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Automating with Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}.
+
 \textbf{Barrett, T.S.}. (under review). The Use of R in the Social Sciences and Psychology. \emph{R Journal}.
 
 
 <!-- Prep Ones 
 - In Preparation
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}
+
 
 \textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{}. \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
 
