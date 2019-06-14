@@ -215,8 +215,6 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 
 Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (under review). Automating with Autoscore: An R package for scoring listener transcripts for research and the clinic. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://github.com/autoscore/autoscore}\img{osf_materials.png}{https://github.com/autoscore/autoscore}.
-
 \textbf{Barrett, T.S.}. (under review). The Use of R in the Social Sciences and Psychology. \emph{R Journal}.
 
 
@@ -232,6 +230,27 @@ Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring
 Nelson, L., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. Classroom Listening Experiences of Students who are DHH using LIFE-R.
 
 -->
+
+<!-- Published Works in Conference Proceedings -->
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+
+\vspace{10pt}
+\section{PUBLISHED PRE-PRINTS}
+\vspace{-5pt}
+\hrule
+\vspace{3pt}
+\footnotesize \hspace{4pt} Pre-prints yet to be published in a peer-reviewed journal \normalsize
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts.\emph{PsyArXiv}. Retrieved from psyarxiv.com/d8au4. \img{osf_data.png}{https://osf.io/htqvr/}\img{osf_materials.png}{https://osf.io/htqvr/}
+
 
 
 <!-- Published Works in Conference Proceedings -->
@@ -313,8 +332,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). 
 
 \textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
-
-\newpage
 
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
