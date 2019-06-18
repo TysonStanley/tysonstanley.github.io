@@ -24,26 +24,12 @@ permalink: /teaching/
 
 All course material is shared under the GNU General Public License (GPL-3).
 
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
-<div class="container">
-  <div class="row">
-    
-    <div class="col">
-      
-      <p> EDUC/PSY 6600 </p>
-      
-      <a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="80%"></a>
-    
-    </div>
-    <div class="col">
-      
-      <p> EDUC/PSY 7610 </p>
-      
-      <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="80%"></a>
 
-    </div>
-  </div>
-</div>
+|---------------------|-----------------------|
+| <a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="80%"></a> | <p> EDUC/PSY 7610 </p> |
+
+
+<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="80%"></a>
 
 <!--
 Regression Analysis
