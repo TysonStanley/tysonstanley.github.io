@@ -22,18 +22,18 @@ permalink: /teaching/
 
 # Courses
 
-Click on the logo of the class to access the course materials.^[All course material is shared under the GNU General Public License (GPL-3).]
+Click on the logo of the class to access the course materials. All course material is shared under the GNU General Public License (GPL-3).
 
 
 <!--
 Regression Analysis
 -->
-<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="100%"></a>
+<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></a>
 
 <!--
 Statistical Foundations
 -->
-<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="100%"></a>
+<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></a>
 
 <!-- 
   Applied Statistical Analysis 
