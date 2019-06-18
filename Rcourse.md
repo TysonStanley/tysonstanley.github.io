@@ -10,11 +10,9 @@ These are introductory and intermediate R courses for researchers in health, beh
 
 My most recent class material can be found below:
 
-[Intro Syllabus]({{ site.baseurl }} /syllabus/introR)
-
-[Intermediate Syllabus]({{ site.baseurl }} /syllabus/interR)
-
 ### Intro
+
+[Intro Syllabus]({{ site.baseurl }} /syllabus/introR)
 
 1. [Intro to R](https://tysonstanley.github.io/Graduate_R_Courses/intro/01_IntroSlides.pdf)
 2. [Intro to Tidyverse](https://tysonstanley.github.io/Graduate_R_Courses/intro/02_Tidyverse.pdf)
@@ -27,6 +25,8 @@ My most recent class material can be found below:
 9. [More on Visualizations](https://tysonstanley.github.io/Graduate_R_Courses/intro/09_AdvancedPlotting.pdf)
 
 ### Intermediate
+
+[Intermediate Syllabus]({{ site.baseurl }} /syllabus/interR)
 
 1. [Review of Tidyverse](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/01_Review.html)
 2. [Tables and Viz's](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/02_tables_viz.html)

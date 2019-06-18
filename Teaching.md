@@ -26,14 +26,10 @@ Click on the logo of the class to access the course materials. All course materi
 
 
 <!--
-Regression Analysis
+  Foundations and Regression Analysis
 -->
-<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></a>
+<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%" align="left"></a> <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%" align="right"></a>
 
-<!--
-Statistical Foundations
--->
-<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></a>
 
 <!-- 
   Applied Statistical Analysis 
