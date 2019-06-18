@@ -213,21 +213,18 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
-Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
+*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
 
 \textbf{Barrett, T.S.}. (under review). The Use of R in the Social Sciences and Psychology. \emph{R Journal}.
+
+*Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (under review). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
+
 
 
 <!-- Prep Ones 
 - In Preparation
 
-
-
-\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (under review). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{}. \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
-
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
-
-Nelson, L., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. Classroom Listening Experiences of Students who are DHH using LIFE-R.
 
 -->
 
@@ -249,8 +246,9 @@ Nelson, L., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& Whi
 \setlength{\parskip}{5pt}
 \noindent
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts.\emph{PsyArXiv}. Retrieved from psyarxiv.com/d8au4. \img{osf_data.png}{https://osf.io/htqvr/}\img{osf_materials.png}{https://osf.io/htqvr/}
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/d8au4 \img{osf_data.png}{https://osf.io/htqvr/}\img{osf_materials.png}{https://osf.io/htqvr/}
 
+\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (2019, June 18). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/fgm8t \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
 
 
 <!-- Published Works in Conference Proceedings -->
@@ -271,7 +269,9 @@ Nelson, L., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& Whi
 
 \normalsize
 
-Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. and Berisha, V. (2018). A discriminative acoustic-prosodic approach for measuring local entrainment. \emph{Proceedings of INTERSPEECH 2018.} Paper number 1419, 1–5. (four reviewers, 50\% acceptance rate).
+Lubold, N. Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., & Berisha, V. (accepted). Do Conversational Partners Entrain on Articulatory Precision? \emph{Proceedings of INTERSPEECH 2019.} Paper number 1786, 1–5. (three reviewers, 50\% acceptance rate).
+
+Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A discriminative acoustic-prosodic approach for measuring local entrainment. \emph{Proceedings of INTERSPEECH 2018.} Paper number 1419, 1–5. (four reviewers, 50\% acceptance rate).
 
 \vspace{-4pt}
 \forceindent $-$ ArXiv Pre-Print: [1804.08663](http://arxiv.org/abs/1804.08663)

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.5.16)  14 JUN 2019 14:34
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.6.17)  18 JUN 2019 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -871,6 +871,10 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
+File: osf_data.png Graphic file (type bmp)
+<osf_data.png>
+File: osf_materials.png Graphic file (type bmp)
+<osf_materials.png>
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
 File: connectivity_hex.jpg Graphic file (type bmp)
@@ -878,7 +882,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (0.24669pt too wide) in paragraph at lines 526--529
+Overfull \hbox (0.24669pt too wide) in paragraph at lines 542--545
  []\TU/lmr/bx/n/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (20
 19). autoscore. URL: github.com/autoscore/autoscore.
  []
@@ -887,29 +891,30 @@ File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
+[4]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[4] [5]
+[5]
 
 LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
-(Font)              using `TU/lmr/bx/n' instead on input line 682.
+(Font)              using `TU/lmr/bx/n' instead on input line 698.
 
 [6]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 792.
+(hyperref)                than one, level fixed on input line 808.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 929.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 945.
 [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 929.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 945.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 929.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 929.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 945.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 945.
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 292E50C137913DCB5CA9690BC223A735.
 
@@ -917,10 +922,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 23776 strings out of 494894
- 449938 string characters out of 6173843
- 569494 words of memory out of 5000000
- 27469 multiletter control sequences out of 15000+600000
+ 23775 strings out of 494894
+ 449821 string characters out of 6175873
+ 570494 words of memory out of 5000000
+ 27470 multiletter control sequences out of 15000+600000
  545089 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  46i,9n,68p,799b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
