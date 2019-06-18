@@ -9,8 +9,6 @@ permalink: /teaching/foundations
 
 This course is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
-### Syllabus
-
 [Syllabus]({{ site.baseurl }} /syllabus/educ6600)
 
 ### Resources

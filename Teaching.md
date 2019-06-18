@@ -24,15 +24,31 @@ permalink: /teaching/
 
 All course material is shared under the GNU General Public License (GPL-3).
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+<div class="container">
+  <div class="row">
+    
+    <div class="col">
+      
+      <a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></a>
+    
+    </div>
+    <div class="col">
+      
+      <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></a>
+
+    </div>
+  </div>
+</div>
+
 <!--
 Regression Analysis
 -->
-<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></a>
 
 <!--
 Statistical Foundations
 -->
-<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></a>
+
 
 <!-- 
   Applied Statistical Analysis 
