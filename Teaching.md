@@ -29,10 +29,12 @@ Click on the logo of the class to access the course materials. All course materi
   Foundations and Regression Analysis
 -->
 
+<div>
 #### PhD Level Courses
 
 <a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="45%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="45%" align="right"></a>
 
+</div>
 <!--
   Applied and R
 -->
@@ -40,10 +42,12 @@ Click on the logo of the class to access the course materials. All course materi
 &nbsp;
 <br>
 
+<div>
 #### Graduate Level Applied Courses
 
 <a href="{{ site.baseurl }}/teaching/applied"><img src="{{ site.baseurl }}/assets/images/ASA_logo.png" width="45%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/rcourse"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="45%" align="right"></a>
 
+</div>
 <!--
   Research Methods
 -->
