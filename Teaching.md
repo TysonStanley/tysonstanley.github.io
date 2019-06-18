@@ -22,22 +22,18 @@ permalink: /teaching/
 
 # Courses
 
+All course material is shared under the GNU General Public License (GPL-3).
 
 <!--
 Regression Analysis
 -->
-
-All course material is shared under the GNU General Public License (GPL-3).
-
-## Regression Analysis <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="RDA1_logo" width="30%"></a>
+<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></a>
 
 
 <!--
 Statistical Foundations
 -->
-
-<br>
-## Statistical Foundations <a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" width="30%">,/a>
+<h2 href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></a>
 
 
 <!-- 
