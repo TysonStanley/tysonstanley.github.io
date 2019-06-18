@@ -28,17 +28,19 @@ Click on the logo of the class to access the course materials. All course materi
 <!--
   Foundations and Regression Analysis
 -->
-<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%" align="left"></a> <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%" align="right"></a>
+<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%" align="right"></a>
 
 <!--
   Applied and R
 -->
 <br>
-<a href="{{ site.baseurl }}/teaching/applied"><img src="{{ site.baseurl }}/assets/images/ASA_logo.png" width="50%" align="left"></a> <a href="{{ site.baseurl }}/teaching/rcourse"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="50%" align="right"></a>
+
+<a href="{{ site.baseurl }}/teaching/applied"><img src="{{ site.baseurl }}/assets/images/ASA_logo.png" width="50%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/rcourse"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="50%" align="right"></a>
 
 <!--
   Research Methods
 -->
 <br>
+
 <a href="{{ site.baseurl }}/teaching/psychmethods"><img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" width="50%"></a>
 
