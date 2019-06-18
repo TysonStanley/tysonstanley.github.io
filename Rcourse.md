@@ -4,6 +4,8 @@ title: "Intro and Intermediate R Courses"
 permalink: /teaching/rcourse
 ---
 
+<img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="60%">
+
 These are introductory and intermediate R courses for researchers in health, behavioral, social, and educational sciences. The material is taught to be used by very applied individuals with minimal statistical training. The overall goal is to empower reproducible research using R and RMarkdown.
 
 My most recent class material can be found below:

@@ -37,7 +37,7 @@ Statistical Foundations
 <!-- 
   Applied Statistical Analysis 
 -->
-<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="50%"></a>
+<a href="{{ site.baseurl }}/teaching/applied"><img src="{{ site.baseurl }}/assets/images/ASA_logo.png" width="60%"></a>
 
 <!-- 
   R Course

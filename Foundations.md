@@ -4,8 +4,8 @@ title: "Statistical Foundations"
 permalink: /teaching/foundations
 ---
 
-<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" width="30%" align="right">
-## Statistical Foundations 
+<img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="RDA1_logo" width="35%" align="right">
+# Statistical Foundations 
 
 This course is an introduction to statistics at a graduate level (generally PhD students take this course in preparation for further statistical training). Discussion includes topics such as data visualization, exploratory data analysis, and statistical tests (t-tests, ANOVA). This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
