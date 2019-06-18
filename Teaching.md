@@ -49,7 +49,7 @@ Click on the logo of the class to access the course materials. All course materi
   Research Methods
 -->
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 <h4>Undergraduate</h4>
 
