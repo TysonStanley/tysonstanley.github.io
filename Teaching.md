@@ -32,7 +32,7 @@ Click on the logo of the class to access the course materials. All course materi
 <div>
 <h4>PhD Level Courses</h4>
 
-<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="45%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="45%" align="right"></a>
+<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="44%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="45%" align="right"></a>
 
 </div>
 
