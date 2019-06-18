@@ -27,7 +27,7 @@ All course material is shared under the GNU General Public License (GPL-3).
 <!--
 Regression Analysis
 -->
-<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></h2>
+<h2 href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></h2>
 
 <!--
 Statistical Foundations
