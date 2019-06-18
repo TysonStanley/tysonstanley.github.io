@@ -27,25 +27,25 @@ All course material is shared under the GNU General Public License (GPL-3).
 <!--
 Regression Analysis
 -->
-<h2 href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></h2>
+<a href="{{ site.baseurl }}/teaching/regression"><img src="{{ site.baseurl }}/assets/images/RDA2_logo.png" alt="Reg_logo" width="50%"></a>
 
 <!--
 Statistical Foundations
 -->
-<h2 href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></h2>
+<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/RDA1_logo.png" alt="Found_logo" width="50%"></a>
 
 <!-- 
   Applied Statistical Analysis 
 -->
-<h2 href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="50%"></h2>
+<a href="{{ site.baseurl }}/teaching/foundations"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="50%"></a>
 
 <!-- 
   R Course
 -->
-<h2 href="{{ site.baseurl }}/teaching/rcourse"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="60%"></h2>
+<a href="{{ site.baseurl }}/teaching/rcourse"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="60%"></a>
 
 <!-- 
   Research Methods
 -->
-<h2 href="{{ site.baseurl }}/teaching/psychmethods"><img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" width="60%"></h2>
+<a href="{{ site.baseurl }}/teaching/psychmethods"><img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" width="60%"></a>
 
