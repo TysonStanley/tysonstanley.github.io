@@ -39,7 +39,7 @@ Click on the logo of the class to access the course materials. All course materi
 <!--
   Applied and R
 -->
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 #### Graduate-Level Applied Courses
 
 <a href="{{ site.baseurl }}/teaching/applied"><img src="{{ site.baseurl }}/assets/images/ASA_logo.png" width="45%" align="left"></a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ site.baseurl }}/teaching/rcourse"><img src="{{ site.baseurl }}/assets/images/Rstats_logo.png" width="45%" align="right"></a>
@@ -49,7 +49,7 @@ Click on the logo of the class to access the course materials. All course materi
   Research Methods
 -->
 
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
 <h4>Undergraduate</h4>
 
