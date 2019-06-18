@@ -1,3 +1,3 @@
-# Blog on `#rstats` and `#dataviz`
+# My Website
 
-My blog containing introductions and tutorials on `#rstats`, particularly on exploratory data analysis and data visualization.
+My website contains my resources for my classes, my CV and related research material, and my blog about `#rstats`.

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Research Design and Analysis II"
+title: "Regression Analysis"
 permalink: /syllabus/educ7610
 ---
 
-# Research Design and Analysis II
+# Regression Analysis
 #### EDUC 7610
 #### Summer 2019
 

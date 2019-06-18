@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Research Design and Analysis II"
+title: "Statistical Foundations"
 permalink: /syllabus/educ6600
 ---
 
-# Research Design and Analysis I
+# Statistical Foundations
 #### EDUC/PSY 6600
 
 <div style="background-color: #FEF9E7; padding: 20px;">
