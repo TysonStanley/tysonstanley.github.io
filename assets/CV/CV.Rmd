@@ -308,7 +308,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\leftskip}{1in}
 \noindent
 
-\textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version `r packageVersion("dissertateUSU")`. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
+\textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version `r packageVersion("dissertateUSU")`. doi: 10.5281/zenodo.3240640. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
 
 \textbf{Barrett, T.S.} (2019). connectivity. URL: github.com/tysonstanley/connectivity. R package version `r packageVersion("connectivity")`. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
 

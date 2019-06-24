@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.6.17)  18 JUN 2019 00:23
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.6.17)  23 JUN 2019 23:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -882,7 +882,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (0.24669pt too wide) in paragraph at lines 542--545
+Overfull \hbox (0.24669pt too wide) in paragraph at lines 543--546
  []\TU/lmr/bx/n/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (20
 19). autoscore. URL: github.com/autoscore/autoscore.
  []
@@ -901,20 +901,20 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [5]
 
 LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
-(Font)              using `TU/lmr/bx/n' instead on input line 698.
+(Font)              using `TU/lmr/bx/n' instead on input line 699.
 
 [6]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 808.
+(hyperref)                than one, level fixed on input line 809.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 945.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 946.
 [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 945.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 946.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 945.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 945.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 946.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 946.
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 292E50C137913DCB5CA9690BC223A735.
 
