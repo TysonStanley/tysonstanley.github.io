@@ -27,6 +27,8 @@ This class is all about applying regression analysis and linear models, includin
   - Extra Stuff [HTML](https://cehs-research.github.io/EDUC-7610/GuessAge) or [RMD](https://cehs-research.github.io/EDUC-7610/GuessAge.Rmd)
 5. Chapter 5 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example.Rmd)
+  - Review Material for Exam 1: [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interpretation.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interpretation.pdf)
+  - Me, trying to explain why the slope changes when you control for a variable related to both X and Y while the correlation changes if the control variable is related to Y: [VennDiagram.mp4]({{ site.baseurl }}/assets/Videos/VennDiagram.mp4)
 6. Chapter 6 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example.Rmd)
 7. Chapter 7 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pdf)
@@ -41,6 +43,7 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/12_EDUC7610_nonlinear_example.Rmd)
 12. Chapter 13 and 14 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/13_EDUC7610_interactions_example.Rmd)
+  - Review of Interactions - [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interactions.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interactions.pdf)
 13. Chapters 16 and 17 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/16_EDUC7610_assumptions_example.Rmd)
   - [Measurement Error and Reproducibility](http://science.sciencemag.org/content/sci/355/6325/584.full.pdf)
@@ -62,8 +65,6 @@ This class is all about applying regression analysis and linear models, includin
 5. Final Project [HTML](https://cehs-research.github.io/EDUC-7610/Homework/Final)
   - Example Final Project [PDF](https://cehs-research.github.io/EDUC-7610/Homework/Example Final Project.pdf) and [Word](https://cehs-research.github.io/EDUC-7610/Homework/Example Final Project.docx)
 
-### Review Material
+### Outdated Material
 
-1. General Interpretation - [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interpretation.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interpretation.pdf)
-2. Interactions - [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interactions.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interactions.pdf)
-3. [Polynomials and Interactions (A Little Outdated)](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Ch12_17)
+1. [Polynomials and Interactions (A Little Outdated)](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Ch12_17)
