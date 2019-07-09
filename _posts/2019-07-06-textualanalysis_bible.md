@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "`data.table` and Text Analysis using the Bible"
+title: "`data.table` and Text Analysis: Analyzing the Four Gospels"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
