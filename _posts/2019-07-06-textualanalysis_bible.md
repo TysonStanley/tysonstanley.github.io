@@ -24,12 +24,12 @@ Finally, can’t forget the `tidytext` package for preparing and analyzing
 the text.
 
 {% highlight r %}
-    library(data.table)
-    library(tidyverse)
-    library(scriptuRs)
-    library(quanteda)
-    library(tm)
-    library(tidytext)
+library(data.table)
+library(tidyverse)
+library(scriptuRs)
+library(quanteda)
+library(tm)
+library(tidytext)
 {% endhighlight %}
 
 Below I grab the `new_testament` data set (King James Version), create a
@@ -40,17 +40,17 @@ lifting and ultimately creates a list column (a variable that has a list
 inside of it). To get it to a more useful form, we unnest it.
 
 {% highlight r %}
-    ## Grab the new testament
-    nt <- scriptuRs::new_testament
+## Grab the new testament
+nt <- scriptuRs::new_testament
 
-    ## Make a data.table
-    gospels <- data.table(nt)
+## Make a data.table
+gospels <- data.table(nt)
 
-    ## Tokenize the text with just the four gospels
-    gospels <- gospels[book_title %in% c("Matthew", "Mark", "Luke", "John")] %>% 
-      .[, tokens := purrr::map(text, ~tm::MC_tokenizer(.x))]
-    gospels2 <- unnest(gospels, tokens)
-    head(gospels2[, .(book_title, chapter_number, verse_number, tokens)])
+## Tokenize the text with just the four gospels
+gospels <- gospels[book_title %in% c("Matthew", "Mark", "Luke", "John")] %>% 
+  .[, tokens := purrr::map(text, ~tm::MC_tokenizer(.x))]
+gospels2 <- unnest(gospels, tokens)
+head(gospels2[, .(book_title, chapter_number, verse_number, tokens)])
 {% endhighlight %}
 
     ##    book_title chapter_number verse_number     tokens
@@ -83,10 +83,10 @@ vector, then give the variable a 1, otherwise a 0. We did the same for
 the `satan` variable.
 
 {% highlight r %}
-    gospels2 <- gospels2 %>% 
-      .[, tokens := stringr::str_to_lower(tokens)] %>% 
-      .[, god := ifelse(tokens %in% syn_god, 1, 0)] %>% 
-      .[, satan := ifelse(tokens %in% syn_satan, 1, 0)]
+gospels2 <- gospels2 %>% 
+  .[, tokens := stringr::str_to_lower(tokens)] %>% 
+  .[, god := ifelse(tokens %in% syn_god, 1, 0)] %>% 
+  .[, satan := ifelse(tokens %in% syn_satan, 1, 0)]
 {% endhighlight %}
 
 This next step calculates by book, chapter, and verse, whether any of
@@ -95,21 +95,21 @@ the verses within each book and chapter), are referencing God. Finally,
 the pipe plots it using the `ggplot2` package.
 
 {% highlight r %}
-    gospels2[, verse_god := ifelse(sum(god) > 0, 1, 0), by = .(book_title, chapter_number, verse_number)] %>% 
-      .[, (sum(verse_god)/length(unique(verse_number))), by = .(book_title, chapter_number)] %>% 
-      ggplot(aes(chapter_number, V1, color = book_title)) +
-        geom_point(size = .1) +
-        geom_line() +
-        facet_wrap(~book_title) +
-        labs(y = "Percent of Verses Referencing God",
-             x = "Chapter")  +
-        theme_minimal() +
-        theme(legend.position = "none",
-              panel.grid.major.y = element_blank()) +
-        scale_color_viridis_d()
+gospels2[, verse_god := ifelse(sum(god) > 0, 1, 0), by = .(book_title, chapter_number, verse_number)] %>% 
+  .[, (sum(verse_god)/length(unique(verse_number))), by = .(book_title, chapter_number)] %>% 
+  ggplot(aes(chapter_number, V1, color = book_title)) +
+    geom_point(size = .1) +
+    geom_line() +
+    facet_wrap(~book_title) +
+    labs(y = "Percent of Verses Referencing God",
+         x = "Chapter")  +
+    theme_minimal() +
+    theme(legend.position = "none",
+          panel.grid.major.y = element_blank()) +
+    scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06_textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Overall, the four books consistently reference God about 5-15% of the
 verses reference God across the chapters. John appears to reference the
@@ -119,21 +119,21 @@ referencing &gt;10%.
 Now for the references to Satan.
 
 {% highlight r %}
-    gospels2[, verse_satan := ifelse(sum(satan) > 0, 1, 0), by = .(book_title, chapter_number, verse_number)] %>% 
-      .[, (sum(verse_satan)/length(unique(verse_number))), by = .(book_title, chapter_number)] %>% 
-      ggplot(aes(chapter_number, V1, color = book_title)) +
-        geom_point(size = .1) +
-        geom_line() +
-        facet_wrap(~book_title) +
-        labs(y = "Percent of Verses Referencing God",
-             x = "Chapter")  +
-        theme_minimal() +
-        theme(legend.position = "none",
-              panel.grid.major.y = element_blank()) +
-        scale_color_viridis_d()
+gospels2[, verse_satan := ifelse(sum(satan) > 0, 1, 0), by = .(book_title, chapter_number, verse_number)] %>% 
+  .[, (sum(verse_satan)/length(unique(verse_number))), by = .(book_title, chapter_number)] %>% 
+  ggplot(aes(chapter_number, V1, color = book_title)) +
+    geom_point(size = .1) +
+    geom_line() +
+    facet_wrap(~book_title) +
+    labs(y = "Percent of Verses Referencing God",
+         x = "Chapter")  +
+    theme_minimal() +
+    theme(legend.position = "none",
+          panel.grid.major.y = element_blank()) +
+    scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06_textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 Much, much lower compared to the references to God. The spikes are the
 chapters wherein the temptations of Satan to Jesus are presented. But
@@ -146,53 +146,53 @@ The next question deals with the sentiment of the writing. Using the
 of each book.
 
 {% highlight r %}
-    gospels2 %>% 
-      merge(tidytext::get_sentiments("nrc"), by.x = "tokens", by.y = "word") %>% 
-      .[, .N, by = .(book_title, sentiment)] %>% 
-      .[, n := N/sum(N), by = .(book_title)] %>% 
-      ggplot(aes(n, sentiment, color = sentiment)) +
-        geom_point() + 
-        geom_segment(aes(xend = 0, yend = sentiment)) +
-        facet_wrap(~book_title)  +
-        theme_minimal() +
-        theme(legend.position = "none",
-              panel.grid.major.y = element_blank()) +
-        labs(x = "Proportion of Book",
-             y = "",
-             title = "Sentiment Analysis",
-             subtitle = "Sentiments from the NRC Lexicon from {tidytext}") +
-        scale_color_viridis_d()
+gospels2 %>% 
+  merge(tidytext::get_sentiments("nrc"), by.x = "tokens", by.y = "word") %>% 
+  .[, .N, by = .(book_title, sentiment)] %>% 
+  .[, n := N/sum(N), by = .(book_title)] %>% 
+  ggplot(aes(n, sentiment, color = sentiment)) +
+    geom_point() + 
+    geom_segment(aes(xend = 0, yend = sentiment)) +
+    facet_wrap(~book_title)  +
+    theme_minimal() +
+    theme(legend.position = "none",
+          panel.grid.major.y = element_blank()) +
+    labs(x = "Proportion of Book",
+         y = "",
+         title = "Sentiment Analysis",
+         subtitle = "Sentiments from the NRC Lexicon from {tidytext}") +
+    scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06_textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 {% highlight r %}
-    thing <- gospels2 %>% 
-      merge(tidytext::get_sentiments("nrc"), by.x = "tokens", by.y = "word") %>% 
-      .[, .N, by = .(book_title, chapter_number, sentiment)] %>% 
-      .[, n := N/sum(N), by = .(book_title, chapter_number)]
-    thing %>% 
-      ggplot(aes(chapter_number, n, color = sentiment, group = sentiment)) +
-        geom_line() +
-        facet_wrap(~book_title) +
-        geom_text(data = filter(group_by(thing, book_title), 
-                                chapter_number == max(chapter_number)),
-                  aes(label = sentiment),
-                  hjust = 0, size = 3,
-                  nudge_x = 1) +
-        geom_point(data = group_by(thing, book_title) %>% filter(chapter_number == max(chapter_number))) +
-        theme_minimal() +
-        theme(legend.position = "none",
-              panel.grid.minor.y = element_blank()) +
-        labs(x = "Chapter",
-             y = "Proportion of Chapter",
-             title = "Sentiment Analysis",
-             subtitle = "Sentiments from the NRC Lexicon from {tidytext}") +
-        coord_cartesian(xlim = c(0, 35)) +
-        scale_color_viridis_d()
+thing <- gospels2 %>% 
+  merge(tidytext::get_sentiments("nrc"), by.x = "tokens", by.y = "word") %>% 
+  .[, .N, by = .(book_title, chapter_number, sentiment)] %>% 
+  .[, n := N/sum(N), by = .(book_title, chapter_number)]
+thing %>% 
+  ggplot(aes(chapter_number, n, color = sentiment, group = sentiment)) +
+    geom_line() +
+    facet_wrap(~book_title) +
+    geom_text(data = filter(group_by(thing, book_title), 
+                            chapter_number == max(chapter_number)),
+              aes(label = sentiment),
+              hjust = 0, size = 3,
+              nudge_x = 1) +
+    geom_point(data = group_by(thing, book_title) %>% filter(chapter_number == max(chapter_number))) +
+    theme_minimal() +
+    theme(legend.position = "none",
+          panel.grid.minor.y = element_blank()) +
+    labs(x = "Chapter",
+         y = "Proportion of Chapter",
+         title = "Sentiment Analysis",
+         subtitle = "Sentiments from the NRC Lexicon from {tidytext}") +
+    coord_cartesian(xlim = c(0, 35)) +
+    scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06_textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 ### Readability
 
@@ -228,9 +228,9 @@ function and then summarize with the mean and standard deviation of the
 reading score.
 
 {% highlight r %}
-    gospels2 %>% 
-      .[, readability := quanteda::textstat_readability(text)$Flesch] %>%
-      .[, .(Mean = mean(readability), SD = sd(readability)), by = book_title]
+gospels2 %>% 
+  .[, readability := quanteda::textstat_readability(text)$Flesch] %>%
+  .[, .(Mean = mean(readability), SD = sd(readability)), by = book_title]
 {% endhighlight %}
 
     ##    book_title     Mean       SD
@@ -250,9 +250,9 @@ First we look at book length. Mark was the shortest; Luke was the
 longest (not too surprising if you’ve read these books before).
 
 {% highlight r %}
-    gospels2 %>% 
-      .[, .N, by = book_title] %>% 
-      .[order(N)]
+gospels2 %>% 
+  .[, .N, by = book_title] %>% 
+  .[order(N)]
 {% endhighlight %}
 
     ##    book_title     N
@@ -266,9 +266,9 @@ book. We go back to our original `gospels` data table to do this
 (without the unnesting).
 
 {% highlight r %}
-    gospels %>% 
-      .[, gram3 := purrr::map(tokens, ~quanteda::char_ngrams(.x, 3))] %>% 
-      .[, gram5 := purrr::map(tokens, ~quanteda::char_ngrams(.x, 5))]
+gospels %>% 
+  .[, gram3 := purrr::map(tokens, ~quanteda::char_ngrams(.x, 3))] %>% 
+  .[, gram5 := purrr::map(tokens, ~quanteda::char_ngrams(.x, 5))]
 {% endhighlight %}
 
 The following lines are a bit convoluted but I’ll attempt to explain
@@ -284,28 +284,28 @@ our three letter words a factor and put them in the order of average
 counts. Lastly, we plot it.
 
 {% highlight r %}
-    unnest(gospels, gram3) %>% 
-      .[, gram3 := stringr::str_replace_all(gram3, "_", " ")] %>% 
-      .[!stringr::str_detect(tolower(gram3), "tell|said|saith|say|answered|which|that|the|verily|and|pass|came")] %>% 
-      .[, .N, by = .(book_title, gram3)] %>% 
-      .[order(-N)] %>% 
-      .[, .SD[1:10], by = book_title] %>% 
-      .[, avg_count := mean(N), by = gram3] %>% 
-      .[order(avg_count)] %>% 
-      .[, gram := fct_inorder(gram3)] %>% 
-      ggplot(aes(N, gram, color = book_title)) +
-        geom_point() +
-        geom_segment(aes(yend = gram3, xend = 0)) +
-        facet_wrap(~book_title, scales = "free") +
-        theme_minimal() +
-        theme(legend.position = "none",
-              panel.grid.major.y = element_blank()) +
-        labs(x = "Number of Occurances",
-             y = "") +
-        scale_color_viridis_d()
+unnest(gospels, gram3) %>% 
+  .[, gram3 := stringr::str_replace_all(gram3, "_", " ")] %>% 
+  .[!stringr::str_detect(tolower(gram3), "tell|said|saith|say|answered|which|that|the|verily|and|pass|came")] %>% 
+  .[, .N, by = .(book_title, gram3)] %>% 
+  .[order(-N)] %>% 
+  .[, .SD[1:10], by = book_title] %>% 
+  .[, avg_count := mean(N), by = gram3] %>% 
+  .[order(avg_count)] %>% 
+  .[, gram := fct_inorder(gram3)] %>% 
+  ggplot(aes(N, gram, color = book_title)) +
+    geom_point() +
+    geom_segment(aes(yend = gram3, xend = 0)) +
+    facet_wrap(~book_title, scales = "free") +
+    theme_minimal() +
+    theme(legend.position = "none",
+          panel.grid.major.y = element_blank()) +
+    labs(x = "Number of Occurances",
+         y = "") +
+    scale_color_viridis_d()
 {% endhighlight %}
 
-![]({{ site.baseurl }}/_posts/2019-07-06_textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![]({{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 This shows the most common three-word sequences. Several are common
 across the books: kingdom of God (heaven), Son of man, and other
@@ -314,28 +314,28 @@ references to heaven.
 We follow the same procedure for the five word sequences.
 
 {% highlight r %}
-    unnest(gospels, gram5) %>% 
-      .[, gram5 := stringr::str_replace_all(gram5, "_", " ")] %>% 
-      .[!stringr::str_detect(tolower(gram5), "tell|said|saith|say|answered|which|that|the|verily|and|pass|came")] %>% 
-      .[, .N, by = .(book_title, gram5)] %>% 
-      .[order(-N)] %>% 
-      .[, .SD[1:10], by = book_title] %>% 
-      .[, avg_count := mean(N), by = gram5] %>% 
-      .[order(avg_count)] %>% 
-      .[, gram := fct_inorder(gram5)] %>% 
-      ggplot(aes(N, gram, color = book_title)) +
-        geom_point() +
-        geom_segment(aes(yend = gram5, xend = 0)) +
-        facet_wrap(~book_title, scales = "free") +
-        theme_minimal() +
-        theme(legend.position = "none",
-              panel.grid.major.y = element_blank()) +
-        labs(x = "Number of Occurances",
-             y = "") +
-        scale_color_viridis_d()
+unnest(gospels, gram5) %>% 
+  .[, gram5 := stringr::str_replace_all(gram5, "_", " ")] %>% 
+  .[!stringr::str_detect(tolower(gram5), "tell|said|saith|say|answered|which|that|the|verily|and|pass|came")] %>% 
+  .[, .N, by = .(book_title, gram5)] %>% 
+  .[order(-N)] %>% 
+  .[, .SD[1:10], by = book_title] %>% 
+  .[, avg_count := mean(N), by = gram5] %>% 
+  .[order(avg_count)] %>% 
+  .[, gram := fct_inorder(gram5)] %>% 
+  ggplot(aes(N, gram, color = book_title)) +
+    geom_point() +
+    geom_segment(aes(yend = gram5, xend = 0)) +
+    facet_wrap(~book_title, scales = "free") +
+    theme_minimal() +
+    theme(legend.position = "none",
+          panel.grid.major.y = element_blank()) +
+    labs(x = "Number of Occurances",
+         y = "") +
+    scale_color_viridis_d()
 {% endhighlight %}
 
-![]({{ site.baseurl }}/_posts/2019-07-06_textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![]({{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
 This shows the most common five-word sequences. Interestingly, this is
 quite different from the three-word sequences. This is partly due to the
