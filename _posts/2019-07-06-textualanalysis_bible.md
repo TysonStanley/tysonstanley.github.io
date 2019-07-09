@@ -73,8 +73,8 @@ First, we look at the references to God and Satan. We start by creating
 a vector of synonyms for God and then for Satan.
 
 {% highlight r %}
-    syn_god <- c("god", "messiah", "jesus", "christ", "jehovah", "savior", "redeemer", "lord")
-    syn_satan <- c("satan", "devil", "lucifer", "tempter", "accuser", "perdition")
+syn_god <- c("god", "messiah", "jesus", "christ", "jehovah", "savior", "redeemer", "lord")
+syn_satan <- c("satan", "devil", "lucifer", "tempter", "accuser", "perdition")
 {% endhighlight %}
 
 Then we grab `gospels` and make the `tokens` variable to lower, create
@@ -109,7 +109,7 @@ gospels2[, verse_god := ifelse(sum(god) > 0, 1, 0), by = .(book_title, chapter_n
     scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/assets/images/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Overall, the four books consistently reference God about 5-15% of the
 verses reference God across the chapters. John appears to reference the
@@ -133,7 +133,7 @@ gospels2[, verse_satan := ifelse(sum(satan) > 0, 1, 0), by = .(book_title, chapt
     scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/assets/images/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 Much, much lower compared to the references to God. The spikes are the
 chapters wherein the temptations of Satan to Jesus are presented. But
@@ -164,7 +164,7 @@ gospels2 %>%
     scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/assets/images/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 {% highlight r %}
 thing <- gospels2 %>% 
@@ -192,7 +192,7 @@ thing %>%
     scale_color_viridis_d()
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/assets/images/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
 ### Readability
 
@@ -305,7 +305,7 @@ unnest(gospels, gram3) %>%
     scale_color_viridis_d()
 {% endhighlight %}
 
-![]({{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![]({{ site.baseurl }}/assets/images/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 This shows the most common three-word sequences. Several are common
 across the books: kingdom of God (heaven), Son of man, and other
@@ -335,7 +335,7 @@ unnest(gospels, gram5) %>%
     scale_color_viridis_d()
 {% endhighlight %}
 
-![]({{ site.baseurl }}/_posts/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-13-1.png)
+![]({{ site.baseurl }}/assets/images/2019-07-06-textualanalysis_bible_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
 This shows the most common five-word sequences. Interestingly, this is
 quite different from the three-word sequences. This is partly due to the
