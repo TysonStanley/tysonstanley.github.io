@@ -8,9 +8,10 @@ comments: true
 
 
 The `data.table` package has been a fun thing to learn about this week.
+
 Since getting into R several years ago, I had known `data.table` was a
 fast and efficient tool for larger data sets. I had tried using it but
-got confused early on and, unfortunately, switched to what I knew (just
+got confused early on and, unfortunately, switched to what I knew (mainly just
 `data.frame`s).
 
 Then came along the `tidyverse`. Suddenly, R was straightforward; I was
@@ -35,11 +36,11 @@ reference”.
 To help both you and me remember some of the ways that `data.table`
 works, I put this small post together.
 
-What does it mean to modify by reference?
------------------------------------------
+What does it mean to "modify by reference?"
+-------------------------------------------
 
-Well, it essentially means we are not creating a new object when we make
-certain types of changes to a data table.
+Well, it essentially means we are not creating a new object (by copying) when we make
+certain types of changes to a data table. There are different forms of copying (shallow and deep) but we won't dive into that here. Instead, I just want to highlight the basics of it.
 
 To start, let’s create a data table.
 
@@ -66,7 +67,7 @@ dt
     ##  999:  1.33421477  0.2147001
     ## 1000:  0.48826897 -0.1454968
 
-This object is, to the computer:
+This object is located in the computer at:
 
 {% highlight r %}
 tracemem(dt)
@@ -74,8 +75,7 @@ tracemem(dt)
 
     ## [1] "<0x7f85af59c200>"
 
-If we make changes to `dt` in the way `data.table` likes to, then the
-object is not copied (or else the criptic `"<...>"` message would show
+This means that the name `dt` is just pointing to that location, where the data table with two variables lives. If we make changes to `dt` in the way `data.table` likes to (by reference), then the object is not copied (or else the criptic `"<...>"` message would show
 up telling us we made a copy).
 
 {% highlight r %}
@@ -96,7 +96,9 @@ dt
     ##  999:  1.33421477  0.2147001  1.3059844
     ## 1000:  0.48826897 -0.1454968  1.2999326
 
-This approach means that if we make a new pointer (in essence a new name
+So now that same location: `"<0x7f85af59c200>"` holds a data table with 3 variables.
+
+Importantly, this approach means that if we make a new pointer (in essence a new name
 that points to the same data), then changes to one makes changes to the
 other. This can be seen with us creating a new “object” called `dt2`. In
 reality, `dt2` just points to the same data that `dt` was pointing to.
@@ -134,8 +136,8 @@ dt3 <- dt
 dt3$a <- rnorm(1000)
 {% endhighlight %}
 
-    ## tracemem[0x7f85af59c200 -> 0x7f85b69052c8]: eval eval withVisible withCallingHandlers handle timing_fn evaluate_call <Anonymous> evaluate in_dir block_exec call_block process_group.block process_group withCallingHandlers process_file <Anonymous> <Anonymous> 
-    ## tracemem[0x7f85b69052c8 -> 0x7f85b693de48]: copy $<-.data.table $<- eval eval withVisible withCallingHandlers handle timing_fn evaluate_call <Anonymous> evaluate in_dir block_exec call_block process_group.block process_group withCallingHandlers process_file <Anonymous> <Anonymous>
+    ## tracemem[0x7f85af59c200 -> 0x7f85b69052c8]
+    ## tracemem[0x7f85b69052c8 -> 0x7f85b693de48]: copy $<-.data.table
 
 {% highlight r %}
 dt3
@@ -155,7 +157,7 @@ dt3
     ## 1000:  0.48826897 -0.1454968  0.25290591
 
 We can also see this by looking at our `dt` object and making sure there
-isn’t a new variable called `a` in it.
+isn’t a new variable called `a` in it. Turns out, there isn't. So we, in this case, did not modify by reference.
 
 {% highlight r %}
 dt
@@ -175,27 +177,24 @@ dt
     ## 1000:  0.48826897 -0.1454968
 
 So why would `data.table` want to perform this way? It is because it is
-far more efficient. We aren’t making copies of things every time we make
+really efficient. We aren’t making copies of things every time we make
 a change. This is hugely beneficial in large data sets, where RAM can
 get used up with all the copies. In smaller data, this is often not a
-big issue.
-
-Notably, the `dt3$a <- rnorm(1000)` code doesn’t change the type of
+big issue.^[Notably, the `dt3$a <- rnorm(1000)` code doesn’t change the type of
 object it is—its still a data table. That means, you have the choice to
-use “by reference” or “by copy”.
+use “by reference” or “by copy”.]
 
 The take-home message is two-fold:
 
-1.  Modifying by reference is efficient.
+1.  Modifying by reference is efficient, but can be surprising if you do not expect/understand it.
 2.  `data.table` gives you the option to modify by reference or by
     making a copy.
 
-For more information, run:
+For more information about this specific topic, run:
 
 `vignette("datatable-reference-semantics")`
 
-in R to see the great vignette explaining this further (and more
-clearly).
+in R to see the great vignette explaining this further (and more clearly).
 
 So what happens when we pipe?
 -----------------------------
@@ -217,11 +216,12 @@ operations doesn't add any appreciable overhead.
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+This shows that regardless of the size of data, piping and chaining are very similar. 
 So, nope. Piping is not a slower version of using `data.table`. Rather,
 it is about using the fast features of `data.table` that will give you
-the benefit, not how you pipe/chain.
+the benefit, not if you pipe or chain.
 
-To see how this ends up working, consider:
+To see how piping with data table ends up working, consider:
 
 {% highlight r %}
 dt[, z := rnorm(1000)] %>% 
@@ -239,7 +239,7 @@ you can go ahead and use it in `data.table`.
 So what is the point?
 ---------------------
 
-The point, here, is that `data.table` is a powerful framework for
+The main point, here, is that `data.table` is a powerful framework for
 working with data. It does some things differently, and these things are
 important. If you ignore “by reference” changes, you’ll probably regret
 it. But in the right situations (probably a lot of them), it is amazing
@@ -247,10 +247,8 @@ to use.
 
 <iframe src="https://giphy.com/embed/sDjIG2QtbXKta" width="451" height="480" frameBorder="0" class="giphy-embed" allowFullScreen>
 </iframe>
-<p>
-<a href="https://giphy.com/gifs/ron-swanson-parks-and-recreation-sDjIG2QtbXKta">via
-GIPHY</a>
-</p>
+
+
 {% if page.comments %}
 <script>
     /**
