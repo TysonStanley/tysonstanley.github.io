@@ -29,6 +29,7 @@ This class is all about applying regression analysis and linear models, includin
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/05_EDUC7610_extending_example.Rmd)
   - Review Material for Exam 1: [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interpretation.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Interpretation.pdf)
   - Me, trying to explain why the slope changes when you control for a variable related to both X and Y while the correlation changes if the control variable is related to Y: [VennDiagram.mp4]({{ site.baseurl }}/assets/Videos/VennDiagram.mp4)
+  - Why Correlation Changes When Slope Doesn't Sometimes When Controlling: [PPTX]](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Slope_Correlation.pptx) and [PDF](https://cehs-research.github.io/EDUC-7610/Slides/20_Review_Slope_Correlation.pdf)
 6. Chapter 6 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control.pdf)
   - Examples [HTML](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example) or [RMD](https://cehs-research.github.io/EDUC-7610/Slides/06_EDUC7610_control_example.Rmd)
 7. Chapter 7 [PPTX](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pptx) or [PDF](https://cehs-research.github.io/EDUC-7610/Slides/07_EDUC7610_prediction.pdf)
