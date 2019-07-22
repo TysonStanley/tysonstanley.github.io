@@ -62,20 +62,11 @@ theme_set(theme_dark() +
 {% endhighlight %}
 
 To start, we’ll set up our data situation that we want to assess. We’ll
-use a moderate effect size—Cohen’s d—of 0.5.^[What many researchers do not realize is how much
-overlap a **moderate-sized** effect size has.] This can be seen as:
+use a moderate effect size—Cohen’s d—of 0.5. (What many researchers do not realize is how much
+overlap a **moderate-sized** effect size has!) This can be seen as:
 
-$$
-y_{i,control} = Normal(0,1)
-$$
-
-and
-
-$$
-y_{i,treatment} = Normal(0.5,1)
-$$
-
-which, simulated, looks like this:
+*y*<sub>*i,control*</sub> = Normal(0,1)
+*y*<sub>*i,treatment*</sub> = Normal(0.5,1)
 
 ![]({{ site.baseurl }}/assets/images/2019-07-21-BayesianSims_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
@@ -84,7 +75,7 @@ the conclusion that there is a difference between the groups with a
 Bayesian linear model? As I mentioned before, we’ll define power the
 classical way—the ability to reject the null hypothesis given the null
 hypothesis is false. In future posts, we’ll look at other ways this can
-be defined (e.g. probability that the null is true).
+be defined (e.g. probability that the null is true).
 
 To do the simulations, as A. Solomon Kurz suggests, we’ll start with a
 base model. This will take advantage of the speed of `brms` (which is
