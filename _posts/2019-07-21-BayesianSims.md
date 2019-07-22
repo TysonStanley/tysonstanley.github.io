@@ -65,8 +65,11 @@ To start, we’ll set up our data situation that we want to assess. We’ll
 use a moderate effect size—Cohen’s d—of 0.5. (What many researchers do not realize is how much
 overlap a **moderate-sized** effect size has!) This can be seen as:
 
+<div style='text-align: center'>
 *y*<sub>*i,control*</sub> = Normal(0,1)
+
 *y*<sub>*i,treatment*</sub> = Normal(0.5,1)
+</div>
 
 ![]({{ site.baseurl }}/assets/images/2019-07-21-BayesianSims_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
