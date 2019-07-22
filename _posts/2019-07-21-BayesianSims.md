@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Why I Chose to Learn `data.table` (and such related things)"
+title: "Bayesian Power Analysis with `data.table`, `tidyverse`, and `brms`"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
 ---
+
+I've been studying two main topics in depth over this summer: 1) `data.table` and 2) Bayesian statistics. I've loved learning both and, in this post, I will combine them into a single workflow. 
 
 This post is a replication of [a
 post](https://solomonkurz.netlify.com/post/bayesian-power-analysis-part-i/)
@@ -69,7 +71,7 @@ as:
 *y*<sub>*i*, *c**o**n**t**r**o**l*</sub> = Normal(0, 1)
 *y*<sub>*i*, *t**r**e**a**t**m**e**n**t*</sub> = Normal(0.5, 1)
 
-![](BayesianSims_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![]({{ site.baseurl }}/assets/images/2019-07-21-BayesianSims_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 With this effect size, what kind of sample size is sufficient to draw
 the conclusion that there is a difference between the groups with a
@@ -427,8 +429,11 @@ ggplot(cur, aes(seed, estimate, ymin = lower, ymax = upper)) +
 
 If this were for a grant proposal or something similar, I’d probably
 want to try some different priors, ones that are more informed by pilot
-studies or other previous studies. For now, we’ll end with what we have
-and store it for future use.
+studies or other previous studies. 
+
+But for now, I'm going to stick with this and enjoy the fact that `data.table`, `tidyverse`, and `brms` make it something very complicated far less overwhelming.
+
+<iframe src="https://giphy.com/embed/6vWVzDv19i3MQ" width="480" height="431" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheezburger-drunk-ron-swanson-6vWVzDv19i3MQ">via GIPHY</a></p>
 
 
 [1] Note that this is very different, though subtly, from that of
