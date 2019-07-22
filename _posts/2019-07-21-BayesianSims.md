@@ -62,14 +62,20 @@ theme_set(theme_dark() +
 {% endhighlight %}
 
 To start, we’ll set up our data situation that we want to assess. We’ll
-use a moderate effect size—Cohen’s d—of 0.5.
-<label for="tufte-mn-" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-" class="margin-toggle"><span
-class="marginnote">What many researchers do not realize is how much
-overlap a **moderate-sized** effect size has.</span> This can be seen
-as:
+use a moderate effect size—Cohen’s d—of 0.5.^[What many researchers do not realize is how much
+overlap a **moderate-sized** effect size has.] This can be seen as:
 
-*y*<sub>*i*, *c**o**n**t**r**o**l*</sub> = Normal(0, 1)
-*y*<sub>*i*, *t**r**e**a**t**m**e**n**t*</sub> = Normal(0.5, 1)
+$$
+y_{i,control} = Normal(0,1)
+$$
+
+and
+
+$$
+y_{i,treatment} = Normal(0.5,1)
+$$
+
+which, simulated, looks like this:
 
 ![]({{ site.baseurl }}/assets/images/2019-07-21-BayesianSims_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
@@ -433,7 +439,7 @@ studies or other previous studies.
 
 But for now, I'm going to stick with this and enjoy the fact that `data.table`, `tidyverse`, and `brms` make it something very complicated far less overwhelming.
 
-<iframe src="https://giphy.com/embed/6vWVzDv19i3MQ" width="480" height="431" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheezburger-drunk-ron-swanson-6vWVzDv19i3MQ">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/6vWVzDv19i3MQ" width="480" height="431" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 
 [1] Note that this is very different, though subtly, from that of
