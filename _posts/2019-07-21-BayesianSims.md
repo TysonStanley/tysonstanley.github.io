@@ -63,7 +63,7 @@ theme_set(theme_dark() +
 
 To start, we’ll set up our data situation that we want to assess. We’ll
 use a moderate effect size—Cohen’s d—of 0.5. (What many researchers do not realize is how much
-overlap a **moderate-sized** effect size has!) This can be seen as:
+overlap a *moderate-sized* effect size has!) This can be seen as:
 
 <div style='text-align: center'>
 *y*<sub>*i,control*</sub> = Normal(0,1)
