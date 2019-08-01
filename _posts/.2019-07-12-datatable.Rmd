@@ -116,6 +116,13 @@ The point, here, is that `data.table` is a powerful framework for working with d
 
 <iframe src="https://giphy.com/embed/sDjIG2QtbXKta" width="451" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ron-swanson-parks-and-recreation-sDjIG2QtbXKta">via GIPHY</a></p>
 
+#### Session Info
+
+```{r}
+sessioninfo::session_info()
+```
+
+
 
 {% if page.comments %}
 <script>
