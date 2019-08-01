@@ -7,9 +7,6 @@ comments: true
 ---
 
 
-What is this?
-=============
-
 I get a lot of questions about how to investigate missing values in a
 data set. So I’m putting this short post together to help me better
 explain how to handle it.
