@@ -1,0 +1,11 @@
+base
+papaja
+data.table
+dplyr
+tidyr
+stringr
+scriptuRs
+pryr
+microbenchmark
+ggplot2
+ggbeeswarm

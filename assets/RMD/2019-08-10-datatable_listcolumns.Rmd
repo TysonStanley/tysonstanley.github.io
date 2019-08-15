@@ -1,0 +1,142 @@
+---
+title: "List-columns in `data.table`"
+author: "Tyson S. Barrett"
+date: "8/10/2019"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+set.seed(84322)
+```
+
+Before we do anything, we'll load `pryr` for some analyses later on.
+```{r}
+library(pryr)
+```
+
+Our core packages for these analyses are `data.table`, `dplyr`, and `tidyr`.
+```{r core_packages}
+library(data.table)
+library(dplyr)
+library(tidyr)
+```
+
+We also want to use some important text analysis packages, along with `scriptuRs`.
+```{r text_packages}
+library(scriptuRs)
+library(quanteda)
+library(tm)
+library(tidytext)
+```
+
+Below, we start with grabbing the New Testament from the `scriptuRs` package and make it a data table.
+```{r data}
+nt <- data.table(scriptuRs::new_testament)
+```
+
+We will filter in just the four "gospels" and select a few important variables.
+```{r only_gospels}
+gospels <- nt[book_title %in% c("Matthew", "Mark", "Luke", "John"), 
+              .(book_id, chapter_number, verse_number, book_title, text)]
+```
+
+Because we want to work with the individual words in the verses, we need to tokenize the corpus. There are two ways we can go about this:
+
+1. Using `purrr::map()` and then `unnest()`.
+2. Using the `by` argument in `data.table`.
+
+```{r two_approaches}
+gospels2 <- gospels[, .(book_id, chapter_number, verse_number, book_title, text,
+                        tokens = purrr::map(text, ~tm::MC_tokenizer(.x)))] %>% 
+  unnest()
+gospels3 <- gospels[, 
+                    .(tokens = tm::MC_tokenizer(text)), 
+                    by = .(book_id, chapter_number, verse_number, book_title, text)]
+```
+
+Turns out, these produce the exact same data table.
+```{r two_approaches2}
+all.equal(gospels2, gospels3)
+```
+
+And both take about the same amount of memory and time to complete. Importantly, the vast majority of the time it takes is due to the `tm::MC_tokenizer()` function.
+```{r two_approaches3, cache = TRUE}
+exp1 = expression(gospels[, .(book_id, chapter_number, verse_number, book_title, text,
+                              tokens = purrr::map(text, ~tm::MC_tokenizer(.x)))] %>% unnest())
+exp2 = expression(gospels[, .(tokens = tm::MC_tokenizer(text)), 
+                          by = .(book_id, chapter_number, verse_number, book_title, text)])
+
+pryr::mem_change(eval(exp1))
+pryr::mem_change(eval(exp2))
+
+microbenchmark::microbenchmark("unnest" = eval(exp1),
+                               "by" = eval(exp2), 
+                               times = 10)
+```
+
+As such, we'll use the `purrr::map()` approach since it gives us the intermediate data, that of **list-columns**. This time we'll use `:=` to simplify the workflow. This will modify-in-place, changing the `gospels` object without copying it.
+```{r create_list_column}
+gospels[, tokens := purrr::map(text, ~tm::MC_tokenizer(.x))]
+```
+
+The `tokens` list-column looks like this.
+```{r list_column}
+gospels[, .(tokens)]
+```
+
+We can unnest it with:
+```{r regular_unnest}
+unnested <- unnest(gospels)
+```
+
+We can also nest it again. If we use it raw like this:
+```{r regular_nest}
+renest <- nest(unnested, tokens, .key = "tokens")
+class(renest)
+```
+
+But this returns a data frame, and no longer a data table. Instead, we are going to use a custom function that uses the power of the `by` argument in `data.table`.
+```{r nest_custom}
+nest_dt <- function(dt, ..., .key = "data", by = "id"){
+  stopifnot(is.data.table(dt))
+  
+  j <- substitute(list(...))
+  by <- substitute(by)
+  
+  express <- dt[, list(eval(j)), by = eval(by)]
+  setnames(express, old = "V1", new = .key)
+  express
+}
+```
+
+Let's compare this to the regular `nest()` with the `as.data.table()`.
+```{r test_nest_custom, cache = TRUE}
+regular <- expression(nest(unnested, tokens, .key = "tokens"))
+regular_dt <- expression(nest(unnested, tokens, .key = "tokens") %>% as.data.table())
+custom <- expression(nest_dt(unnested, tokens, .key = "tokens", 
+                             by = .(book_id, chapter_number, verse_number, book_title, text)))
+
+mem_change(eval(regular))
+mem_change(eval(regular_dt))
+mem_change(eval(custom))
+
+microbenchmark::microbenchmark(eval(regular),
+                               eval(regular_dt),
+                               eval(custom), 
+                               times = 100)
+```
+
+Using the `data.table` approach is *far* faster---about `r round(450/17)` times faster!
+
+
+
+
+
+
+
+

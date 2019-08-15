@@ -149,6 +149,9 @@ year <- lubridate::year(today)
 
 \normalsize
 
+Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (in press). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech
+\emph{Journal of Speech, Language, and Hearing Research}.
+
 *Ong, C.W., Barney, J.L., \textbf{Barrett, T.S.}, Lee, E.B., Levin, M.E., & Twohig, M.P. (in press). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Contextual Behavioral Science}.
 
 *Ong, C.W., Lee, E. B., Krafft, J., Terry, C.L., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (in press). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.    
@@ -215,11 +218,9 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
 
-\textbf{Barrett, T.S.}. (under review). The Use of R in the Social Sciences and Psychology. \emph{R Journal}.
-
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (under review). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
 
-
+\textbf{Barrett, T.S.} (under review). Six Reasons to Consider Using R in Psychological Research. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://osf.io/436d7/}\img{osf_materials.png}{https://osf.io/436d7/}
 
 <!-- Prep Ones 
 - In Preparation
@@ -246,9 +247,11 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 \setlength{\parskip}{5pt}
 \noindent
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/d8au4 \img{osf_data.png}{https://osf.io/htqvr/}\img{osf_materials.png}{https://osf.io/htqvr/}
+\textbf{Barrett, T.S.} (2019, August 15). Six Reasons to Consider Using R in Psychological Research. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/8mb6d \img{osf_data.png}{https://osf.io/436d7/}\img{osf_materials.png}{https://osf.io/436d7/}
 
 \textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (2019, June 18). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/fgm8t \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
+
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/d8au4 \img{osf_data.png}{https://osf.io/htqvr/}\img{osf_materials.png}{https://osf.io/htqvr/}
 
 
 <!-- Published Works in Conference Proceedings -->

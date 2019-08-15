@@ -1,0 +1,216 @@
+---
+title             : "Working with list-columns in `data.table`: Proposal for `rstudio::conf(2020)`"
+shorttitle        : "List-columns in data.table"
+author: 
+  - name          : "Tyson S. Barrett"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "2800 Old Main, Logan, UT 84322"
+    email         : "tyson.barrett@usu.edu"
+affiliation:
+  - id            : "1"
+    institution   : "Utah State University"
+abstract: |
+  The use of *list-columns* in data frames and tibbles is well documented [e.g. @jenny], providing a cognitively efficient way to organize results of complex data (e.g. several statistical models, groupings of text, data summaries, or even graphics) with corresponding data. For example, we can store text of a verse in a list for each verse, chapter, book, and volume. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data.  In turn, this can reduce the difficulty to appropriately analyze the data stored in the list-column. \newline
+  
+  Because of its efficiency and speed, being able to use `data.table` to work with list-columns would be beneficial in many data contexts (i.e. to reduce memory usage in large data sets). I show how one can create list-columns in a data table using `purrr::map()` and the `by` argument in `data.table`. I further show the `tidyr::nest()` function and show a more efficient approach when using a data table. Results using `microbenchmark` and `pryr` show the speed and efficiency of using `data.table` to work with list-columns. An example walk-through is provided in the appendix herein. 
+
+keywords          : "rstudio::conf, data.table, tidyr, list-columns"
+bibliography      : ["r-references.bib"]
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+documentclass     : "apa6"
+classoption       : "doc"
+output            : 
+  papaja::apa6_pdf:
+    highlight: tango
+nocite: |
+  - @R-base
+  - @R-data.table
+  - @R-dplyr
+  - @R-microbenchmark
+  - @R-pryr
+  - @R-tidyr
+  - @R-papaja
+  - @R-scripuRs
+  - @R-stringr
+  - @R-scriptuRs
+  - @R-ggbeeswarm
+  - @R-ggplot2
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library(data.table)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(scriptuRs)
+library(pryr)
+library(microbenchmark)
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed,
+                      echo = TRUE)
+```
+
+
+
+# References
+```{r create_r-references, echo = FALSE}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
+
+\newpage
+# Appendix
+
+To demonstrate list-columns in `data.table`, let's start with grabbing the New Testament text from the `scriptuRs` package and make it a data table. From this data table, I filtered in just the four "gospels" and selected a few important variables.
+```{r data}
+nt <- data.table(scriptuRs::new_testament)
+gospels <- 
+  nt[book_title %in% c("Matthew", "Mark", "Luke", "John"), 
+     .(book_id, chapter_number, verse_number, book_title, text)]
+```
+
+Because we want to work with the individual words in the verses, we need to tokenize the corpus. There are two main ways we can go about this:
+
+1. Using `purrr::map()` and then `unnest()`.
+2. Using the `by` argument in `data.table`.
+
+\noindent Turns out, these produce the exact same data table.
+```{r two_approaches}
+gospels2 <- 
+  gospels[, .(book_id, chapter_number, verse_number, book_title, text,
+              tokens = purrr::map(text, ~tm::MC_tokenizer(.x)))] %>% 
+  unnest()
+gospels3 <- 
+  gospels[, .(tokens = tm::MC_tokenizer(text)), 
+          by = .(book_id, chapter_number, verse_number, book_title, text)]
+all.equal(gospels2, gospels3)
+```
+
+\noindent And both take about the same amount of memory and time to complete. 
+```{r two_approaches3}
+exp1 <- expression(
+  gospels[, .(book_id, chapter_number, verse_number, book_title, text,
+              tokens = purrr::map(text, ~tm::MC_tokenizer(.x)))] %>% 
+    unnest()
+)
+exp2 <- expression(
+  gospels[, .(tokens = tm::MC_tokenizer(text)), 
+          by = .(book_id, chapter_number, verse_number, book_title, text)]
+)
+```
+```{r two_approaches4, cache = TRUE, echo = FALSE}
+data.frame(
+  kilobytes = 
+    rbind("exp1" = mem_change(eval(exp1))/1000,
+          "exp2" = mem_change(eval(exp2))/1000)
+)
+
+microbenchmark::microbenchmark("unnest" = eval(exp1),
+                               "by" = eval(exp2), 
+                               times = 10)
+```
+
+\noindent As such, we'll use the `purrr::map()` approach since it gives us the intermediate data, that of **list-columns**. This time we'll use `:=` to simplify the workflow. This will modify-in-place, changing the `gospels` object without copying it.
+```{r create_list_column}
+gospels[, tokens := purrr::map(text, ~tm::MC_tokenizer(.x))]
+gospels[, .(tokens)]
+```
+
+With this updated `gospels` data table, we can unnest it with `tidyr::unnest()`.
+```{r regular_unnest}
+unnested_gospels <- unnest(gospels)
+```
+\noindent We can also nest it again. If we use it raw with `tidyr::nest()`, it produces a data frame (no longer a data table).
+```{r regular_nest, eval = FALSE}
+nest(unnested_gospels, tokens, .key = "tokens") %>% 
+  class()
+```
+\noindent Instead, we are going to use a custom function that uses the power of the `by` argument in `data.table` to keep the data a data table while taking advantage of the efficiency and speed of `data.table`.
+```{r nest_custom}
+nest_dt <- function(dt, ..., .key = "data", by = "id"){
+  stopifnot(is.data.table(dt))
+  
+  j <- substitute(list(...))
+  by <- substitute(by)
+  
+  express <- dt[, list(eval(j)), by = eval(by)]
+  setnames(express, old = "V1", new = .key)
+  express
+}
+```
+
+Since having a `data.table` may be important for our workflow, this custom function be compared with the regular `tidyr::nest()` function with the `data.table()`. Below, the `tidyr::nest()` without `data.table()` is also compared, showing that the results are not due to the addition of `data.table()`.
+```{r test_nest_custom}
+regular <- expression(
+  nest(unnested_gospels, tokens, .key = "tokens")
+)
+regular_dt <- expression(
+  nest(unnested_gospels, tokens, .key = "tokens") %>% data.table()
+)
+custom <- expression(
+  nest_dt(unnested_gospels, tokens, .key = "tokens", 
+          by = .(book_id, chapter_number, verse_number, book_title, text))
+)
+```
+```{r test_nest_custom2, cache = TRUE, echo = FALSE, results='asis'}
+library(ggbeeswarm)
+options(xtable.comment = FALSE)
+data.frame(
+  kilobytes = 
+    rbind("regular" = mem_change(eval(regular))/1000,
+          "regular_dt" = mem_change(eval(regular_dt))/1000,
+          "custom" = mem_change(eval(custom))/1000)
+) %>% 
+  xtable::xtable(caption = "Memory change from using each nesting approach.") %>% 
+  print(caption.placement = "top",
+        table.placement ="tb")
+```
+```{r test_nest_custom3, cache = TRUE, echo = FALSE}
+timings <- 
+  microbenchmark::microbenchmark(eval(regular),
+                                 eval(regular_dt),
+                                 eval(custom), 
+                                 times = 100)
+p <- data.table("time" = timings$time/1000000, 
+                "expr" = timings$expr) %>% 
+  .[, expr := factor(expr, labels = c("Regular", "Regular (DT)", "Custom"))] %>% 
+  ggplot(aes(expr, time, color = expr, fill = expr)) +
+    geom_beeswarm(size = 1.5, alpha = .8) +
+    theme_minimal() +
+    theme(panel.grid.major.x = element_blank(),
+          legend.position = "none") +
+    labs(y = expression(paste("Milliseconds (", log[10], " Scale)")),
+         x = "") +
+    scale_y_log10() +
+    scale_color_viridis_d()
+ggsave(here::here("assets/rstudio_conf_2020/timings.png"), plot = p,
+       height = 4, width = 5)
+```
+
+Results of these comparisons for this data set show that using the `data.table` approach is far more efficient ($\approx$ 64,000 kB for `tidyr::nest()` vs. 54 kB for `data.table` with `by` argument; see Table 1) and far faster (see Figure 1), yet produces the list-columns just as is desired. Beyond the comparisons, however, this example shows that the benefits of list-columns can be found in data tables.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{timings.png}
+  \caption{Speed comparisons for each nesting approach.}
+\end{figure}
