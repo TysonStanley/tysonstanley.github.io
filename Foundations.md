@@ -43,8 +43,10 @@ This course is an introduction to statistics at a graduate level (generally PhD 
 
 Homework #1
 
-- Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
-- Questions: 
+- On Canvas: Answer the questions on canvas for the first part of the homework.
+- Application: Using the following data and questions file, complete the application part of the homework.
+    - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
+    - Questions: 
 
 Homework #2
 
