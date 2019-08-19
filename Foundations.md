@@ -13,13 +13,12 @@ This course is an introduction to statistics at a graduate level (generally PhD 
 
 ### Resources
 
-- A [book that should help with the homework](https://sarbearschwartz.github.io/Quant_I/) to help with the homework---especially with using R.
 - A [PDF](http://tysonbarrett.com/EDUC-6600/Resources/formulas.pdf) with all the formulas we use in the class.
 - A [PDF](http://tysonbarrett.com/EDUC-6600/Resources/tables.pdf) with all the tables we use in the class.
 
 ### Lecture Slides
 
-1. [Intro to the Class (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u00_Syllabus_2018_Summer.pdf), [Intro to the Textbook (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u00_R_Resources.html), and [Chapter 1 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u00_Ch1_Intro.html)
+1. [Intro to the Class (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u00_Syllabus.pdf), [Intro to the Textbook (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u00_CohenTextbook_EDUC_6600_2018.pdf), [APA Style Review (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u00_APAStyle_EDUC_6600_2018.pdf), [Getting Started with R, RStudio, and Latex (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u00_R_Resources.html), and [Chapter 1 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u00_Ch1_Intro.html)
 2. [Chapter 2 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.pdf) or [Chapter 2 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch2_DataViz.html)
 3. [Chapter 3 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch3_CenterSpread.pdf) or [Chapter 3 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch3_CenterSpread.html)
 4. [Chapter 4 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.pdf) or [Chapter 4 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.html)
