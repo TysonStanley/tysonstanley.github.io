@@ -41,28 +41,28 @@ This course is an introduction to statistics at a graduate level (generally PhD 
 
 ## Assignments
 
-Homework #1
+#### Homework #1
 
 - On Canvas: Answer the questions on canvas for the first part of the homework.
 - Application: Using the following data and questions file, complete the application part of the homework.
     - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
     - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW1/HW1.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW1/HW1.pdf)
 
-Homework #2
+#### Homework #2
 
 - On Canvas: Answer the questions on canvas for the first part of the homework.
 - Application: Using the following data and questions file, complete the application part of the homework.
     - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
     - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW2/HW2.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW2/HW2.pdf)
     
-Homework #3
+#### Homework #3
 
 - On Canvas: Answer the questions on canvas for the first part of the homework.
 - Application: Using the following data and questions file, complete the application part of the homework.
     - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
     - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW3/HW3.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW3/HW3.pdf)
     
-Homework #4
+#### Homework #4
 
 - On Canvas: Answer the questions on canvas for the first part of the homework.
 - Application: Using the following data and questions file, complete the application part of the homework.
