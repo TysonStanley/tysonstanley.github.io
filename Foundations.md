@@ -39,4 +39,14 @@ This course is an introduction to statistics at a graduate level (generally PhD 
   - An `R` Example of Mixed ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.Rmd)
 17. [Chapter 19-20 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pdf) or [Chapter 19-20 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pptx)
 
+## Assignments
 
+Homework #1
+
+- Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
+- Questions: 
+
+Homework #2
+
+- Data:
+- Questions:
