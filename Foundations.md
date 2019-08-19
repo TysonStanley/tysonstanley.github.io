@@ -50,5 +50,21 @@ Homework #1
 
 Homework #2
 
-- Data:
-- Questions:
+- On Canvas: Answer the questions on canvas for the first part of the homework.
+- Application: Using the following data and questions file, complete the application part of the homework.
+    - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
+    - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW2/HW2.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW2/HW2.pdf)
+    
+Homework #3
+
+- On Canvas: Answer the questions on canvas for the first part of the homework.
+- Application: Using the following data and questions file, complete the application part of the homework.
+    - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
+    - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW3/HW3.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW3/HW3.pdf)
+    
+Homework #4
+
+- On Canvas: Answer the questions on canvas for the first part of the homework.
+- Application: Using the following data and questions file, complete the application part of the homework.
+    - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
+    - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW4/HW4.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW4/HW4.pdf)
