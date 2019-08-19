@@ -46,7 +46,7 @@ Homework #1
 - On Canvas: Answer the questions on canvas for the first part of the homework.
 - Application: Using the following data and questions file, complete the application part of the homework.
     - Data: [Ihno Data Set]({{ site.baseurl }}/assets/Data/Ihno_Data.zip)
-    - Questions: 
+    - Questions: [Rmd File](http://tysonbarrett.com/EDUC-6600/Assignments/HW1/HW1.Rmd) and [PDF](http://tysonbarrett.com/EDUC-6600/Assignments/HW1/HW1.pdf)
 
 Homework #2
 
