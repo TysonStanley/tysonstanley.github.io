@@ -220,7 +220,7 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (under review). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
 
-\textbf{Barrett, T.S.} (under review). Six Reasons to Consider Using R in Psychological Research. \emph{Advances in Methods and Practices in Psychological Science}. \img{osf_data.png}{https://osf.io/436d7/}\img{osf_materials.png}{https://osf.io/436d7/}
+\textbf{Barrett, T.S.} (under review). Six Reasons to Consider Using R in Psychological Research. \emph{Psychological Methods}. \img{osf_data.png}{https://osf.io/436d7/}\img{osf_materials.png}{https://osf.io/436d7/}
 
 <!-- Prep Ones 
 - In Preparation
