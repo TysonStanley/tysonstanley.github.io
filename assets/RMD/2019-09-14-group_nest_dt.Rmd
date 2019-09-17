@@ -1,0 +1,24 @@
+---
+title: "Group Nesting in `data.table`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# `group_nest()`
+
+The popularity of nesting data (i.e. using list-columns) in `R` is clear when we consider it now has a `group_*()` function for it directly in `dplyr`. Nesting, in general, is a technique to organize data, models, meta-data, and more. However, the documentation of using nesting in `data.table` is lacking. 
+
+To show off the 
+
+
+
+
+
+
+
+
+
+

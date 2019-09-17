@@ -41,8 +41,8 @@ year <- lubridate::year(today)
     \textsc{Phone:}       & 435-797-0120 \\
     \textsc{ORCID:}       & \href{https://orcid.org/0000-0002-2137-1391}{0000-0002-2137-1391} \\
     \textsc{OSF:}         & \href{osf.io/gkjbx}{osf.io/gkjbx} \\
-    \textsc{Citations:}   & `r profile$total_cites` (since 2015) \\
-    \textsc{H Index:}     & `r profile$h_index` (since 2015) 
+    \textsc{Citations:}   & `r profile$total_cites` \\
+    \textsc{H Index:}     & `r profile$h_index`
 \end{tabular}
 
 <!-- Education -->
@@ -152,15 +152,15 @@ year <- lubridate::year(today)
 Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (in press). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech
 \emph{Journal of Speech, Language, and Hearing Research}.
 
-*Ong, C.W., Barney, J.L., \textbf{Barrett, T.S.}, Lee, E.B., Levin, M.E., & Twohig, M.P. (in press). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Contextual Behavioral Science}.
+*Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., & Twohig, M.P. (2019). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness, 10}(10), 2095-2109. doi: 10.1007/s12671-019-01165-z.     \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
-*Ong, C.W., Lee, E. B., Krafft, J., Terry, C.L., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (in press). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders}.    
+*Ong, C.W., Barney, J.L., \textbf{Barrett, T.S.}, Lee, E.B., Levin, M.E., & Twohig, M.P. (2019). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Contextual Behavioral Science, 13}. doi: 10.1016/j.jcbs.2019.06.005.
 
-*Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., \& Twohig, M.P. (in press). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness}. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
-
-*Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (in press). Chronic health conditions and adolescent friendships: Perspectives for social network analysis. \emph{International Journal of Adolescent Medicine and Health}.
+*Ong, C.W., Lee, E. B., Krafft, J., Terry, C.L., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (2019). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders, 22}. doi: 10.1016/j.jocrd.2019.100444. 
 
 \textbf{Barrett, T.S.} \& Lockhart, G. (2019). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science, 20}(4), 575-584. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
+
+*Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (2019). Chronic health conditions and adolescent friendships: Perspectives for social network analysis. \emph{International Journal of Adolescent Medicine and Health}. doi: 10.1515/ijamh-2018-0293.
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (2019). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America, 145}(1), 392-399. \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
 
@@ -216,11 +216,9 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
-*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{American Journal of Speech-Language Pathology}.
+*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (under review). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
-
-\textbf{Barrett, T.S.} (under review). Six Reasons to Consider Using R in Psychological Research. \emph{Behavior Research Methods}. \img{osf_data.png}{https://osf.io/436d7/}\img{osf_materials.png}{https://osf.io/436d7/}
 
 <!-- Prep Ones 
 - In Preparation
@@ -240,7 +238,7 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 \vspace{-5pt}
 \hrule
 \vspace{3pt}
-\footnotesize \hspace{4pt} Pre-prints yet to be published in a peer-reviewed journal \normalsize
+\footnotesize \hspace{4pt} Pre-prints not otherwise published in a peer-reviewed journal \normalsize
 
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
@@ -272,7 +270,7 @@ Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing 
 
 \normalsize
 
-Lubold, N. Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., & Berisha, V. (accepted). Do Conversational Partners Entrain on Articulatory Precision? \emph{Proceedings of INTERSPEECH 2019.} Paper number 1786, 1–5. (three reviewers, 50\% acceptance rate).
+Lubold, N. Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., & Berisha, V. (2019). Do Conversational Partners Entrain on Articulatory Precision? \emph{Proceedings of INTERSPEECH 2019.} Paper number 1786, 1–5. (three reviewers, 50\% acceptance rate). doi: 10.21437/Interspeech.2019-1786
 
 Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A discriminative acoustic-prosodic approach for measuring local entrainment. \emph{Proceedings of INTERSPEECH 2018.} Paper number 1419, 1–5. (four reviewers, 50\% acceptance rate).
 
