@@ -36,3 +36,8 @@ My most recent class material can be found below:
 6. [Miscellaneous Topics](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/06_Misc.html)
 7. [More on Functions](https://tysonstanley.github.io/Graduate_R_Courses/intermediate/07_Functions2.html)
 
+
+### Handouts
+
+1. [Intro Handout]({{ site.baseurl }} /assets/images/R_Cheatsheet_6600.pdf)
+2. [Long-Wide Handout]({{ site.baseurl }} /assets/images/LongWide_Handout.pdf)

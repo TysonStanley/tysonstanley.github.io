@@ -1,0 +1,306 @@
+---
+title: "Probing 2-Way Interactions in Multilevel Models"
+author: "JMH"
+date: "9/11/2019"
+output:  
+  html_document:
+    highlight: tango
+    toc: true        
+    toc_depth: 2 
+    number_sections: true
+---
+
+
+
+```{r set-option, setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, error=FALSE)
+library(tidyverse)
+library(haven)        # read in SPSS dataset
+library(furniture)    # nice table1() descriptives
+library(stargazer)    # display nice tables: summary & regression
+library(texreg)       # Convert Regression Output to LaTeX or HTML Tables
+library(RColorBrewer) # nice color palettes for plots
+library(gridExtra)    # place ggplots together as one plot
+library(psych)        # contains some useful functions, like headTail
+library(car)          # Companion to Applied Regression
+library(nlme)         # non-linear mixed-effects models
+library(lme4)         # Linear, generalized linear, & nonlinear mixed models
+library(lmerTest)     # Tests on lmer objects
+library(HLMdiag)      # Diagnostic Tools for for nlme & lmer4
+library(sjstats)      # ICC calculations
+library(optimx)       # Different optimizers to solve mlm's
+```
+
+
+
+```{r}
+popRaw = haven::read_sav("https://github.com/MultiLevelAnalysis/Datasets-third-edition-Multilevel-book/raw/master/chapter%202/popularity/SPSS/popular2.sav") %>% 
+    haven::as_factor()             # retain the labels from SPSS --> factor
+
+popularity = popRaw %>%   
+    dplyr::mutate(id = paste(class, pupil,
+                             sep = "_") %>%   # create a unique id for each student (char)
+                      factor()) %>%             # declare id is a factor
+    dplyr::select(id, pupil:popteach)         # reduce the variables included
+```
+
+
+# Fitting Model and Specifying Simple Intercepts and Simple Slopes
+```{r}
+model = lme4::lmer(popular ~ sex + extrav*texp + (extrav|class),
+                   data = popularity,
+                   REML = TRUE)
+
+# Full form model
+# model = lme4::lmer(popular ~ sex + extrav + texp + extrav:texp + (extrav|class),
+#                    data = popularity,
+#                    REML = TRUE)
+
+texreg::screenreg(model)
+```
+<br>
+
+1) Write out model equation
+$$y_{ij} = \gamma_{00} + \gamma_{10} X_{ij} + \gamma_{20} X_{ij} + \gamma_{01} Z_j + \gamma_{21} X_{ij} Z_j + \mu_{0j} + \mu_{2j} + e_{ij}$$
+<br>
+
+2) Separate fixed effects from random effects
+$$y_{ij} = (\gamma_{00} + \gamma_{10} X_{ij} + \gamma_{20} X_{ij} + \gamma_{01} Z_j + \gamma_{21} X_{ij} Z_j) + (\mu_{0j} + \mu_{2j} + e_{ij})$$
+<br>
+
+3) Derive prediction equation
+$$E[y|X, Z] = \hat\gamma_{00} + \hat\gamma_{10} X_{ij} + \hat\gamma_{20} X_{ij} + \hat\gamma_{01} Z_j + \hat\gamma_{21} X_{ij} Z_j$$
+<br>
+
+4) Separate simple intercept from simple slope - this indirectly defines the focal predictor and moderator
+$$E[y|X, Z] = (\hat\gamma_{00} + \hat\gamma_{10} X_{ij} + \hat\gamma_{20} X_{ij}) + (\hat\gamma_{01} Z_j + \hat\gamma_{21} X_{ij} Z_j)$$
+<br>
+
+5) Formally define focal predictor (Level 2: Z) and moderator (Level 1: X)
+$$E[y|X, Z] = (\hat\gamma_{00} + \hat\gamma_{10} X_{ij} + \hat\gamma_{20} X_{ij}) + (\hat\gamma_{01} + \hat\gamma_{21} X_{ij}) Z_j$$
+<br>
+
+6) Define simple intercept ($\omega_0$) and simple slope ($\omega_1$)
+$$\omega_0 = \hat\gamma_{00} + \hat\gamma_{10} X_{ij} + \hat\gamma_{20} X_{ij}$$
+
+$$\omega_1 = \hat\gamma_{01} + \hat\gamma_{21} X_{ij}$$
+<br>
+
+
+<!-- ############################################################################################## -->
+<!-- ############################################################################################## -->
+# Methods of Probing Interactions (Preacher et al., 2006)
+## Simple Slopes Technique
+
+1) Specify conditional values of X (EXT) to evaluate significance for simple slope of y regressed on Z (TEXP)  
+* For continuous variables, this requires the "pick-a-point" method (Rogosa, 1980)  
+* First, I get some descriptives and will use the mean, +1 SD, and -1 SD (Cohen & Cohen, 1983)  
+* Values of `r 5.215 - 1.262`, 5.215, and `r 5.215 + 1.262` for $X$
+
+$$\omega_1 = \hat\gamma_{01} + \hat\gamma_{21} X_{ij}$$
+
+```{r, results = 'asis'}
+popularity %>% 
+  dplyr::select(extrav) %>% 
+  data.frame() %>% 
+  stargazer::stargazer(title  = "Descriptive statistics, aggregate over entire sample",
+                       header = FALSE,
+                       type = "html")
+```
+
+
+```{r, echo = TRUE}
+low = mean(popularity$extrav, na.rm = TRUE) - sd(popularity$extrav, na.rm = TRUE)
+mid = mean(popularity$extrav, na.rm = TRUE)
+upp = mean(popularity$extrav, na.rm = TRUE) + sd(popularity$extrav, na.rm = TRUE)
+
+modelSum = summary(model)
+omegaLow = modelSum$coefficients[3] + modelSum$coefficients[5] * low
+omegaMid = modelSum$coefficients[3] + modelSum$coefficients[5] * mid
+omegaUpp = modelSum$coefficients[3] + modelSum$coefficients[5] * upp
+```
+
+
+<!-- ############################################################################################## -->
+2) Calculate standard error of $\hat\omega_1$
+
+* Variance of $\hat\omega_1$
+
+$$var(\hat\omega_1 | z) = var(\hat\gamma_{01}) + 2Xcov(\hat\gamma_{01}, \hat\gamma_{21}) + X^2 var(\hat\gamma_{21})$$
+
+* Covariance matrix
+```{r, echo = TRUE}
+vcov(model)
+```
+
+* Calculate SE of $\hat\omega_1$ for each value of X
+
+```{r}
+seLow = sqrt(.001609389
+             + 2 * low * -.00009232641
+             + low^2 * .000006526482)
+
+seMid = sqrt(.001609389
+             + 2 * mid * -.00009232641
+             + mid^2 * .000006526482)
+
+seUpp = sqrt(.001609389
+             + 2 * upp * -.00009232641
+             + upp^2 * .000006526482)
+
+```
+
+
+<!-- ############################################################################################## -->
+3) Form critical ratios for each value of X  
+
+$$t = \frac{\hat\omega_1 - 0}{SE_{\hat\omega_1}}$$
+
+```{r}
+tLow = omegaLow / seLow
+tMid = omegaMid / seMid
+tUpp = omegaUpp / seUpp
+```
+
+
+<!-- ############################################################################################## -->
+4) Calculate $df$ and critical $t$-values
+
+* Degrees of freedom = $N - p - 1$  
+```{r}
+df = length(popularity$popular) - length(modelSum$coefficients) - 1
+```
+
+
+* Critical $t$-values
+```{r}
+tCrit = qt(c(.025, .975), df = df)
+```
+
+
+<!-- ############################################################################################## -->
+5) Determine significance
+
+* If any of the $t$-values are above or below $\pm t$-crit, respectively, then the simple slope of the focal predictor (Z) is significant at that conditional value of X
+```{r}
+paste("t-crit:", tCrit)
+paste("t-value for lower conditional value:", tLow)
+paste("t-value for middle conditional value:", tMid)
+paste("t-value for upper conditional value:", tUpp)
+```
+
+
+6) Plot that S**t  
+
+* Calculating predicted values  
+
+```{r, echo = TRUE}
+simpleData = bind_rows(
+    data.frame(texp = c(0:25)) %>% mutate(extrav = 5.215 - 1.262),
+    data.frame(texp = c(0:25)) %>% mutate(extrav = 5.215),
+    data.frame(texp = c(0:25)) %>% mutate(extrav = 5.215 + 1.262)) %>% 
+    mutate(popularity = (modelSum$coefficients[3] + modelSum$coefficients[5] * extrav) * texp,
+           extrav = factor(extrav))
+```
+
+* Plot
+```{r}
+ggplot(simpleData, aes(x = texp, y = popularity, color = extrav)) +
+    geom_line() +
+    theme_classic() +
+    labs(x = "Teacher Experience", y = "Popularity")
+```
+Conclusion: The slope of teacher experience is significantly different from 0 at $\pm$1 SD of the mean and at the mean of extraversion.
+<br>
+
+
+<!-- ############################################################################################## -->
+<!-- ############################################################################################## -->
+## Johnson-Neyman Technique
+1) Start with the $t$-statistic
+
+$$\pm t = \frac{\hat\omega_1}{SE_{\hat\omega_1}}$$
+
+Expand
+
+$$\pm t = \frac{(\hat\gamma_{01} + \hat\gamma_{21}X)}{var(\hat\gamma_{01}) + 2Xcov(\hat\gamma_{01}, \hat\gamma_{21}) + X^2 var(\hat\gamma_{21})}$$
+<br>
+
+2) Find values of X that solve for $t$  
+* X can be found by solving the following quadratic (Carden, Holtzman, Strube, 2017):  
+
+$$X_{lower}, X_{upper} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+where
+
+$$a = t_{\alpha/2}^2 Var(\hat\gamma_{21}) - \hat\gamma_3^2,$$
+
+$$b = 2 t_{\alpha/2}^2 Cov(\hat\gamma_1, \hat\gamma_{21}) - 2 \hat\gamma_1 \hat\gamma_{21},$$
+
+$$c = t_{\alpha/2}^2 Var(\hat\gamma_1) - \hat\gamma_1^2$$
+
+```{r, echo = TRUE}
+a = qt(.025, df)^2 * .000006526482 - modelSum$coefficients[5] ^ 2
+
+
+b = 2 * qt(.025, df)^2 * -.00009232641 - 2 * modelSum$coefficients[3] * modelSum$coefficients[5]
+
+
+c = qt(.025, df)^2 * .001609389 - modelSum$coefficients[3]^2
+  
+# Functions for solving quadratic equation (Hatzistavrou, https://rpubs.com/kikihatzistavrou/80124)
+# Constructing delta
+delta = function(a, b, c){
+      b^2 - 4*a*c
+}
+
+# Constructing Quadratic Formula
+result = function(a, b, c){
+  if(delta(a, b, c) > 0){ # First case where Delta > 0
+        x1 = (-b + sqrt(delta(a, b, c)))/(2*a)
+        x2 = (-b - sqrt(delta(a, b, c)))/(2*a)
+        return(c(x1, x2))
+  }
+  else if(delta(a, b, c) == 0){ # Second case where Delta = 0
+        x = -b/(2*a)
+        return(x)
+  }
+  else {"There are no real roots."} # Third case where Delta < 0
+}
+```
+
+```{r}
+paste("The regions of significance for the slope of teacher experience, conditioned on extraversion are significant beyond", result(a, b, c)[1], "and", result(a, b, c)[2], "points of extraversion. This is outside the range of extraversion; therefore, the slope of teacher experience is significantly different from 0 at all values of extraversion.")
+```
+<br>
+
+3. Plotting  
+* Calculating estimates of the slope for teacher experience as a function of extraversion  
+```{r, echo = TRUE}
+jnData = data.frame(extrav = c(1:50)) %>% 
+  mutate(texp = modelSum$coefficients[3] + modelSum$coefficients[5] * extrav)
+```
+
+
+```{r}
+jnData %>% 
+  ggplot() +
+  aes(x = extrav,
+      y = texp) +
+  geom_line() +
+  theme_bw() +
+  labs(x = "Extraversion",
+       y = "Simple Slope of Teacher Experience Predicting Popularity") +
+  theme(legend.key.width = unit(2, "cm"),
+        legend.background = element_rect(color = "Black"),
+        legend.position = c(1, 0),
+        legend.justification = c(1, 0)) +
+  geom_vline(xintercept = c(result(a, b, c)), linetype = 2)
+```
+
+
+
+
+
+
+
