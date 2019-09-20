@@ -149,6 +149,8 @@ year <- lubridate::year(today)
 
 \normalsize
 
+Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in press). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
+
 Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (in press). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech
 \emph{Journal of Speech, Language, and Hearing Research}.
 
@@ -213,8 +215,6 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\leftskip}{1in}
 \setlength{\parskip}{6pt}
 \noindent
-
-Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in revision). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
 
