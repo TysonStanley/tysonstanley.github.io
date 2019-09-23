@@ -216,9 +216,16 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
+Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.}. (under review). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
+
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (under review). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
+
+Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Prevention Science}.
+
+*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., & Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism \emph{Behavior Therapy}.
+
 
 <!-- Prep Ones 
 - In Preparation
