@@ -10,15 +10,17 @@ author:
 affiliation:
   - id            : "1"
     institution   : "Utah State University"
+    
 abstract: |
-  The use of *list-columns* in data frames and tibbles is well documented [e.g. @jenny], providing a cognitively efficient way to organize results of complex data (e.g. several statistical models, groupings of text, data summaries, or even graphics) with corresponding data. For example, we can store text of a verse in a list for each verse, chapter, book, and volume. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data.  In turn, this can reduce the difficulty to appropriately analyze the data stored in the list-column. Because of its efficiency and speed, being able to use `data.table` to work with list-columns would be beneficial in many data contexts (i.e. to reduce memory usage in large data sets). I show how one can create list-columns in a data table using `purrr::map()` and the `by` argument in `data.table`. I further show the `dplyr::group_nest()` function and show a more efficient approach when using a data table. Results using `bench::mark()` show the speed and efficiency of using `data.table` to work with list-columns. An example walk-through is provided in the appendix herein. 
+  The use of *list-columns* in data frames and tibbles in the R statistical environment is well documented [e.g. @jenny], providing a cognitively efficient way to organize results of complex data (e.g. several statistical models, groupings of text, data summaries, or even graphics) with corresponding data. For example, one can store student information within classrooms, player information within teams, or even analyses within groups. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data. In turn, this can reduce the difficulty to appropriately analyze the data stored in the list-column. Because of its efficiency and speed, being able to use `data.table` to work with list-columns would be beneficial in many data contexts (i.e. to reduce memory usage in large data sets). I show how one can create list-columns in a data table using the `by` argument in `data.table` and `purrr::map()`. This is done using an example data set on professional basketball player information. I compare the behavior of the `data.table` approach to the `dplyr::group_nest()` function. Results using `bench::mark()` show the speed and efficiency of using `data.table` to work with list-columns. 
+  
 keywords          : "data.table, dplyr, list-columns, nesting"
 bibliography      : ["r-references.bib"]
-floatsintext      : no
+floatsintext      : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-linenumbers       : no
+linenumbers       : yes
 mask              : no
 draft             : no
 documentclass     : "apa6"
@@ -40,30 +42,31 @@ library(bench)
 library(ggbeeswarm)
 library(janitor)
 library(performance)
+library(lobstr)
 ```
-
 
 ```{r analysis-preferences}
 # Seed for random number generation
-set.seed(42)
+set.seed(84322)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed,
                       echo = TRUE)
 ```
 
 # Introduction
 
-The use of *list-columns* in data frames and tibbles provides a cognitively efficient way to organize results of complex data (e.g. several statistical models, groupings of text, data summaries, or even graphics) with corresponding data. It is often called "nested" data, where information is, in essence, nested within a column of data. For example, we can store text of a verse in a list for each verse, chapter, book, and volume. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data. We could also nest students within classrooms, players within teams, and measures within individuals. 
+The use of *list-columns* in data frames and tibbles in the R statistical environment [@R-base] provides a cognitively efficient way to organize complex data (e.g. several statistical models, groupings of text, data summaries, or even graphics) with corresponding data in a concise manner. It has become a common approach to wrangling data in the `tidyverse`, with functions across `dplyr` and `tidyr` providing functionality to work with list-columns [@R-dplyr; @R-tidyr; @jenny]. 
 
-In turn, nesting can reduce the difficulty to appropriately analyze the data stored in the list-column. Using functions like `lapply()` or `purrr::map*()` makes further analysis of the nested data more intuitive.
+This format is often called "nested" data, where information is, in essence, nested within a column of data. For example, one can store individual words of a verse in a list for each verse, chapter, book, and volume. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data. 
 
-Because of its efficiency and speed, being able to use `data.table` to work with list-columns would be beneficial in many data contexts (i.e. to reduce memory usage in large data sets). Herein, I show how one can create list-columns in a data table using `purrr::map()` and the `by` argument in `data.table`. I further highlight the `dplyr::group_nest()` function and show a more efficient approach when using a data table. Results using `bench::mark()` show the speed and efficiency of using `data.table` to work with list-columns. 
+List-columns can also be used to nest students within classrooms, players within teams, and measures within individuals. This allows the user to do certain data manipulations or analyses within each group. This can ensure that accidentally including data from other groups does not occur. Furthermore, nesting can reduce the difficulty to appropriately analyze the data stored in the list-column. Using functions like `lapply()` or `purrr::map*()` makes further analysis of the nested data more intuitive and error-free.
 
-This tutorial relies on several powerful packages, including `data.table`, `dplyr`, `bench`, `tidyr`, `papaja`, `stringr`, `ggplot2`, `ggbeeswarm`, `performance`, and `rvest` [@R-data.table; @R-dplyr; @R-bench; @R-tidyr; @R-papaja; @R-stringr; @R-ggbeeswarm; @R-ggplot2; @R-rvest; @R-performance].
+Because of its efficiency and speed, being able to use `data.table` to work with list-columns would be beneficial in many data contexts (i.e. to reduce memory usage in large data sets). Herein, I show how one can create list-columns in a data table using `purrr::map()` and the `by` argument in `data.table`. I further highlight the `dplyr::group_nest()` function and show a slightly more efficient approach when using a data table. Results using `bench::mark()` show the speed and efficiency of using `data.table` to work with list-columns. 
 
-# Example with NBA Data
-## The Data
+This article relies on several powerful packages, including `data.table`, `dplyr`, `bench`, `tidyr`, `papaja`, `stringr`, `ggplot2`, `ggbeeswarm`, `performance`, `rvest`, and `lobstr` [@R-data.table; @R-dplyr; @R-bench; @R-tidyr; @R-papaja; @R-stringr; @R-ggbeeswarm; @R-ggplot2; @R-rvest; @R-performance; @R-lobstr].
 
-To demonstrate the use of *list-columns* in `data.table`, data from [NBA Stuffer](nbastuffer.com) will be scraped to get information on players from the 2017-2018 and 2018-2019 seasons. First, the HTML data are read in, the tables with player data by year are then extracted using a custom function, indicators are added, and then combined into a single data table for the player data.
+# Example Data
+
+Throughout much of this paper, I will demonstrate the use of *list-columns* in `data.table` using data from [NBA Stuffer](nbastuffer.com) will be scraped to get information on players from the 2017-2018 and 2018-2019 seasons. First, the HTML data are read in, the tables with player data by year are then extracted using a custom function, indicators are added, and then combined into a single data table for the player data.
 
 ```{r, warning = FALSE}
 url_2018 <- "https://www.nbastuffer.com/2017-2018-nba-player-stats/"
@@ -72,8 +75,7 @@ players_2018 <- read_html(url_2018)
 players_2019 <- read_html(url_2019)
 
 extract_fun <- function(html){
-  html_nodes(html, "table") %>% 
-    .[2] %>% 
+  html_nodes(html, "table")[2] %>% 
     html_table(fill = TRUE) %>% 
     .[[1]] 
 }
@@ -85,6 +87,7 @@ player_2018 <-
 player_2019 <- 
   extract_fun(players_2019) %>% 
   mutate(year = 2019)
+
 players <- 
   bind_rows(player_2018, player_2019) %>% 
   clean_names() %>% 
@@ -93,24 +96,24 @@ players <-
   data.table()
 ```
 
-Below is a subset of this data set.
+\noindent Below is a subset of this imported data set, showing only four of the variables and the first six rows.
 
 ```{r, echo = FALSE}
 head(players[, .(full_name, mpg, ppg, apg)])
 ```
 
-## Nesting Players within Teams
+# Nesting with `data.table`
 
 In `dplyr` the `group_nest()` function is valuable when creating list-columns based on a grouping variable. It takes the data by group and puts it all in a list-column. Figure \ref{process} highlights the process of taking a data frame and creating a nested data frame with a list-column. That is, all data from variables `x`, `y`, and `z` relating to each group is split into a distinct data frame and stored within the `data` column.
 
-\begin{figure}[htb]
+\begin{figure}[tb]
   \centering
   \includegraphics[width=\textwidth]{fig_process.png}
-  \caption{Speed comparisons for each nesting approach.}
+  \caption{Diagram of one approach to creating a list-column in a data frame (i.e. creating a nested data frame).}
   \label{process}
 \end{figure}
 
-Overall, this function is efficient and fast but by using `data.table` it can be faster. This will be shown using the following function:
+Overall, this function is efficient and fast but by using `data.table` it can be somewhat faster. This will be shown using the following function:
 
 ```{r}
 group_nest_dt <- function(dt, ..., .key = "data"){
@@ -138,19 +141,36 @@ group_nest(players, team) %>%
 
 ```{r, echo=FALSE}
 players_tbl <- as_tibble(players)
-first = bench::mark(group_nest = group_nest(players_tbl, team))
-second = bench::mark(group_nest_dt = group_nest_dt(players,by = team))
+first <- bench::mark(group_nest = group_nest(players_tbl, team), 
+                     time_unit = "us",
+                      iterations = 100) %>% 
+  mutate(expression = paste(expression))
+second <- bench::mark(group_nest_dt = group_nest_dt(players, team), 
+                      time_unit = "us",
+                      iterations = 100) %>% 
+  mutate(expression = paste(expression))
 ```
 
-Importantly, Figure \ref{speed} presents the timings from `bench::mark()` across the two approaches, showing `group_nest_dt()` is somewhat faster. The memory allocated is very similar, with `group_nest_dt()` allocating `r second$mem_alloc` and `group_nest()` allocating `r first$mem_alloc`.
+Importantly, Figure \ref{speed} presents the timings from `bench::mark()` across the two approaches, showing `group_nest_dt()` is often faster. The memory allocated is very similar, with `group_nest_dt()` allocating `r second$mem_alloc` and `group_nest()` allocating `r first$mem_alloc`.
 
 ```{r, echo=FALSE}
+unnest_vec_dt <- function(dt, cols, id, nam){
+  stopifnot(is.data.table(dt))
+  
+  by <- substitute(id)
+  cols <- substitute(unlist(cols, recursive = FALSE, use.names = FALSE))
+  
+  express <- dt[, eval(cols), by = eval(by)]
+  setnames(express, old = paste0("V", 1:length(nam)), new = nam)
+  express
+}
+
 theme_set(theme_minimal() +
           theme(panel.grid.major.x = element_blank(),
                 legend.position = "none"))
-p <- rbind(first, second) %>% 
-  tidyr::unnest(time) %>% 
-  select(expression, time) %>% 
+p <- rbind(first, second) %>%
+  data.table() %>% 
+  unnest_vec_dt(cols = list(time), id = list(expression), nam = "time") %>% 
   ggplot(aes(x = expression, 
              y = time, 
              color = expression, 
@@ -163,14 +183,14 @@ ggsave(here::here("assets/rstudio_conf_2020/timings_manuscript.png"), plot = p,
        height = 4, width = 4)
 ```
 
-\begin{figure}[htb]
+\begin{figure}[tb]
   \centering
   \includegraphics[width=0.6\textwidth]{timings_manuscript.png}
-  \caption{Speed comparisons for each nesting approach.}
+  \caption{Speed comparisons for each nesting approach. Note the scale of the y-axis is log$_{10}$.}
   \label{speed}
 \end{figure}
 
-This nesting approach can be used with multiple grouping variables too. For example, we can nest by both `team` and `year`, as is done below.
+This nesting approach can be used with multiple grouping variables too. For example, I show how a user could nest by both `team` and `year`, as is done below.
 
 ```{r}
 group_nest_dt(players, team, year) %>% 
@@ -179,7 +199,7 @@ group_nest_dt(players, team, year) %>%
 
 ## Modeling within the Nest
 
-Often, the nested data can provide an intuitive format to run several models to understand key features of the data within the groups. Below, the relationship between points-per-game and assists-per-game for each team and year is modeled and then the $R^2$ of the models are extracted.
+Often, the nested data can provide an intuitive format to run several models to understand key features of the data within the groups. Below, the relationship between points-per-game and assists-per-game for each team and year is modeled and then the $R^2$ of the models are extracted. Since `performance::r2()` provides two versions of $R^2$, I then grab only the first of the two.
 
 ```{r}
 players_nested <- group_nest_dt(players, team, year) %>% 
@@ -189,9 +209,9 @@ players_nested <- group_nest_dt(players, team, year) %>%
 head(players_nested)
 ```
 
-\noindent This produces two list-columns (`ppg_apg` and `r2_list`) and a numeric vector (`r2_ppg_apg`) all organized by team and year. This information is then readily available to plot. For example, we can look at the change in how related points-per-game and assists-per-game are by team and year.
+\noindent This produces two list-columns (`ppg_apg` and `r2_list`) and a numeric vector (`r2_ppg_apg`) all organized by team and year. This information is then readily available to plot. For example, one can look at how related points-per-game and assists-per-game are by team and year--in essence, showing which teams have players who both score and assist. This example is shown in Figure \ref{exfig}.
 
-```{r}
+```{r, echo = FALSE}
 library(ggrepel)
 theme_set(theme_minimal() +
           theme(panel.grid.major.x = element_blank(),
@@ -213,21 +233,166 @@ ggsave(here::here("assets/rstudio_conf_2020/ex_fig.png"), plot = ex_fig,
 ```
 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
   \centering
-  \includegraphics[width=0.6\textwidth]{ex_fig.png}
-  \caption{Speed comparisons for each nesting approach.}
-  \label{speed}
+  \includegraphics[width=0.5\textwidth]{ex_fig.png}
+  \caption{Example analysis performed using nested data to provide information for each team and year.}
+  \label{exfig}
 \end{figure}
+
+# Unnest with `data.table`
+
+After performing the manipulations or analyses within the nest, it can often be good to unnest to finalize analyses. Again, like with `group_nest_dt()`, this `unnest_dt()` function relies solely on the syntax of `data.table`, using the `j` and `by` arguments as shown below.
+
+```{r}
+unnest_dt <- function(dt, col, id){
+  stopifnot(is.data.table(dt))
+  
+  by <- substitute(id)
+  col <- substitute(unlist(col, recursive = FALSE))
+  
+  dt[, eval(col), by = eval(by)]
+}
+```
+
+This function can be used to unnest a data table, like the `players_nested` data table from earlier where the nested column is a data table, data frame, or tibble. Below, the `data` column in the table is unnested by `team` and `year` and then I select just a few of the variables.
+
+```{r}
+unnest_dt(players_nested, 
+          col = data, 
+          id = list(team, year)) %>% 
+  .[, .(team, year, full_name, pos, age, gp, mpg)]
+```
+
+```{r,echo=FALSE}
+players_nested_tbl <- group_nest(players,team)
+group_nested_dt <- group_nest_dt(players,team)
+firstu <- bench::mark(unnest = tidyr::unnest(players_nested_tbl, cols = data), 
+                      time_unit = "us",
+                      iterations = 100) %>% 
+  mutate(expression = paste(expression))
+secondu <- bench::mark(unnest_dt = unnest_dt(group_nested_dt, 
+                                             col = data, 
+                                             id = list(team)), 
+                       time_unit = "us",
+                      iterations = 100) %>% 
+  mutate(expression = paste(expression))
+```
+
+```{r,echo=FALSE}
+theme_set(theme_minimal() +
+          theme(panel.grid.major.x = element_blank(),
+                legend.position = "none"))
+p2 <- 
+  rbind(firstu, secondu) %>%
+  data.table() %>% 
+  unnest_vec_dt(cols = list(time), id = list(expression), nam = "time") %>% 
+  ggplot(aes(x = expression, 
+             y = time, 
+             color = expression, 
+             fill = expression)) +
+    geom_beeswarm(size = 1.5, alpha = .8) +
+    labs(y = expression(paste("Milliseconds (", log[10], " Scale)")),
+         x = "") +
+    scale_color_viridis_d(end = 1, begin = .2)
+ggsave(here::here("assets/rstudio_conf_2020/timings_unnest_manuscript.png"), plot = p2,
+       height = 4, width = 4)
+```
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics[width=0.6\textwidth]{timings_unnest_manuscript.png}
+  \caption{Speed comparisons for each unnesting approach. Note the scale of the y-axis is log$_{10}$.}
+  \label{speed2}
+\end{figure}
+
+Again, this function is quick and efficient. Figure \ref{speed2} presents the timings from `bench::mark()` across the two unnesting approaches, showing the `data.table` approach is often faster. The memory allocated is about half for the `data.table` approach here, with `unnest_dt()` allocating `r secondu$mem_alloc` and `tidyr::unnest()` allocating `r firstu$mem_alloc`.
+
+A slight variation of this function can be used for list-columns with atomic vectors instead of data tables. A function like the following works well.
+
+```{r}
+unnest_vec_dt <- function(dt, cols, id, nam){
+  stopifnot(is.data.table(dt))
+  
+  by <- substitute(id)
+  cols <- substitute(unlist(cols, recursive = FALSE, use.names = FALSE))
+  
+  express <- dt[, eval(cols), by = eval(by)]
+  setnames(express, old = paste0("V", 1:length(nam)), new = nam)
+  express
+}
+```
+
+In `players_nested`, the `r2_list` column is a list of numeric vectors. This can be unnested as shown below, providing the two measures of $R^2$ per team per year.
+
+```{r}
+unnest_vec_dt(players_nested, 
+              cols = list(r2_list), 
+              id = list(team, year), 
+              nam = "r2")
+```
+
+# Memory Usage of List-Columns
+
+Last item to assess herein is the computer memory usage of different formats of data tables with the same data. We can use the following large data sets in wide format, nested wide format, long format, and nested wide format to make brief comparisons.
+
+```{r}
+# Wide
+wide_format <- data.table(id = 1:1e6,
+                          x1 = rnorm(1e6),
+                          x2 = rnorm(1e6),
+                          y1 = rnorm(1e6),
+                          y2 = rnorm(1e6),
+                          group = rbinom(1e6, 1, .5))
+nested_wide_format <- group_nest_dt(wide_format, group)
+
+# Long
+long_format <- melt.data.table(wide_format, 
+                               id.vars = c("id", "group"),
+                               measure.vars = c("x1", "x2", "y1", "y2"))
+nested_long_format <- group_nest_dt(long_format, group)
+```
+
+I use the `lobstr` package to assess the object size of each format of the same data, shown in the output below.
+
+```{r, echo=FALSE}
+data.table("Format" = c("wide_format", 
+                        "nested_wide_format", 
+                        "long_format", 
+                        "nested_long_format"),
+           "Memory (MB)" = 
+             (lobstr::obj_sizes(wide_format, 
+                                nested_wide_format, 
+                                long_format, 
+                                nested_long_format)/1e6) %>% 
+             round(3)
+  )
+```
+
+Not surprising, the memory usage of nested data is lower than for its none nested corresponding data. This is directly related to the reduction in redundancies in the data otherwise there. That is, the nested data has far fewer rows containing the `group` variable. That, alone, in this large data saves memory. For example, the size of a single column of the `group` variable in wide format is `r (lobstr::obj_size(wide_format[, .(group)])/1e6) %>% round(2)` MB; and in long format it is `r (lobstr::obj_size(long_format[, .(group)])/1e6) %>% round(1)` MB By reducing a single variable in this case, we save several megabytes of memory.
 
 
 
 # Discussion
 
-List-columns are a useful approach to organizing 
+List-columns are a useful approach to structuring data into a format that can be safely cleaned, manipulated, and analyzed by groups. It also provides for a more cognitively efficient way for a user to understand their data, allowing large data to be represented more concisely within groups.
+
+The `tidyverse` provides several functions to work with nested data, which are relatively quick and efficient. For most data situations, these functions will do all that a user will need. However, in some situations, `data.table` can perform needed manipulations and analyses that cannot otherwise be done or that would take too long to complete. In these situations, and for users that prefer to use `data.table`, this tutorial can help provide direction in using list-columns.
+
+Furthermore, as expected, the memory usage of nested data is lower than for its none nested corresponding data. This is due to the reduction in the redundancies present in wide and long format. This suggests that it is not only the cognitive benefits to the user that makes this format more efficient.
+
+## Limitations
+
+There are some notable limitations to list-columns in general, and in `data.table` specifically. First, the three custom functions built on `data.table` presented herein are not well-tested and are certainly not expected to work in each case where `dplyr::group_nest()`, `tidyr::unnest()`, and other tidy functions would work. Rather, they were presented to show how a user can leverage the speed and efficiency of `data.table` to create, and work with, list-columns.
+
+Second, it is important to realize that nested data can remove the ability to use vectorization across groups. Depending on the analyses being conducted, this may slow down the computation to the point that nested data actually is a hindrance to performance.
+
+Finally, when using list-columns in tibbles, the print method provides the dimensions of each corresponding nested tibble. This method is helpful in understanding the nested data without any need to extract it. This could be a minor, but valuable, update to the print method in `data.table`.
 
 
+# Conclusions
 
+The use of list-columns in `data.table` is very similar to that in the `tidyverse`. It provides speed and efficiency in both nesting and unnesting the data, and can be used with the `purrr::map*()` and other powerful functions.
 
 
 
