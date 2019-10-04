@@ -53,17 +53,17 @@ year <- lubridate::year(today)
 \vspace{3pt}
 
 \begin{tabular}{l|p{8cm}}
- \textsc{Ph.D. Quantitative Psychology } & \emph{Feb 2018}\\
+ \textsc{\textbf{Ph.D. Quantitative Psychology }} & \emph{Feb 2018}\\
  & \emph{Utah State University}\\
  &\footnotesize{\emph{\href{https://www.researchgate.net/publication/323946090_Marginal_Mediation_Analysis_A_New_Framework_for_Interpretable_Mediated_Effects?channel=doi&linkId=5ab418a60f7e9b4897c79cab&showFulltext=true}{Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects}}}\\
  \multicolumn{2}{c}{} \\
  \multicolumn{2}{c}{} \\
 
- \textsc{B.S. Economics} & \emph{May 2014} \\
+ \textsc{\textbf{B.S. Economics}} & \emph{May 2014} \\
   & \emph{Utah State University}\\
  &\footnotesize{\emph{Cum Laude}}\\
  \multicolumn{2}{c}{} \\
-\textsc{B.S. Psychology} & \emph{May 2014} \\
+\textsc{\textbf{B.S. Psychology}} & \emph{May 2014} \\
  & \emph{Utah State University}\\
 &\footnotesize{\emph{Cum Laude}}
 \end{tabular}
@@ -363,7 +363,7 @@ ggplot(citations, aes(year, cites, color = year)) +
   geom_line() +
   geom_point(size = 2) +
   geom_text(aes(label = cites),
-            nudge_y = 4) +
+            nudge_y = 6) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
        caption = paste("Note: Data for citations in", year,"only until", month)) +
