@@ -1,0 +1,14 @@
+base
+papaja
+data.table
+dplyr
+stringr
+xml2
+rvest
+bench
+ggplot2
+ggbeeswarm
+janitor
+performance
+lobstr
+ggrepel

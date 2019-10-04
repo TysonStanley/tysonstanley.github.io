@@ -23,7 +23,7 @@
 }{}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Working with list-columns in data.table},
+            pdftitle={List-columns in data.table: Nesting and unnesting data tables and vectors},
             pdfauthor={Tyson S. Barrett},
             pdfkeywords={data.table, dplyr, list-columns, nesting},
             pdfborder={0 0 0},
@@ -103,7 +103,7 @@
 \def\footnote{\protect\rmarkdownfootnote}
 
 
-  \title{Working with list-columns in \texttt{data.table}}
+  \title{List-columns in \texttt{data.table}: Nesting and unnesting data tables and vectors}
     \author{Tyson S. Barrett\textsuperscript{1}}
     \date{}
   
@@ -141,7 +141,9 @@
 Correspondence concerning this article should be addressed to Tyson S. Barrett, 2800 Old Main, Logan, UT 84322. E-mail: \href{mailto:tyson.barrett@usu.edu}{\nolinkurl{tyson.barrett@usu.edu}}}
 
 \abstract{
-The use of \emph{list-columns} in data frames and tibbles in the R statistical environment is well documented (e.g.~Bryan, 2018), providing a cognitively efficient way to organize results of complex data (e.g.~several statistical models, groupings of text, data summaries, or even graphics) with corresponding data. For example, one can store student information within classrooms, player information within teams, or even analyses within groups. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data. In turn, this can reduce the difficulty to appropriately analyze the data stored in the list-column. Because of its efficiency and speed, being able to use \texttt{data.table} to work with list-columns would be beneficial in many data contexts (i.e.~to reduce memory usage in large data sets). I show how one can create list-columns in a data table using the \texttt{by} argument in \texttt{data.table} and \texttt{purrr::map()}. This is done using an example data set on professional basketball player information. I compare the behavior of the \texttt{data.table} approach to the \texttt{dplyr::group\_nest()} function. Results using \texttt{bench::mark()} show the speed and efficiency of using \texttt{data.table} to work with list-columns.
+The use of \emph{list-columns} in data frames and tibbles in the R statistical environment is well documented (e.g. Bryan, 2018), providing a cognitively efficient way to organize results of complex data (e.g.~several statistical models, groupings of text, data summaries, or even graphics) with corresponding data. For example, one can store student information within classrooms, player information within teams, or even analyses within groups. This allows the data to be of variable sizes without overly complicating or adding redundancies to the structure of the data. In turn, this can improve the reliability to appropriately analyze the data.
+
+Because of its efficiency and speed, being able to use \texttt{data.table} to work with list-columns would be beneficial in many data contexts (e.g.~to reduce memory usage in large data sets). Herein, I demonstrate how one can create list-columns in a data table using the \texttt{by} argument in \texttt{data.table} and \texttt{purrr::map()}. This is done using an example data set containing information on professional basketball players in the United States. I compare the behavior of the \texttt{data.table} approach to the \texttt{dplyr::group\_nest()} function, one of the several powerful \texttt{tidyverse} nesting functions. Results using \texttt{bench::mark()} show the speed and efficiency of using \texttt{data.table} to work with list-columns.
 
 
 }
@@ -152,20 +154,18 @@ The use of \emph{list-columns} in data frames and tibbles in the R statistical e
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-The use of \emph{list-columns} in data frames and tibbles in the R statistical environment (R Core Team, 2018) provides a cognitively efficient way to organize complex data (e.g.~several statistical models, groupings of text, data summaries, or even graphics) with corresponding data in a concise manner. It has become a common approach to wrangling data in the \texttt{tidyverse}, with functions across \texttt{dplyr} and \texttt{tidyr} providing functionality to work with list-columns (Bryan, 2018; Wickham et al., 2019; Wickham \& Henry, 2019).
+The use of \emph{list-columns} in data frames and tibbles in the R statistical environment (R Core Team, 2018) provides a cognitively efficient way to organize complex data (e.g.~several statistical models, groupings of text, data summaries, or even graphics) with corresponding data in a concise manner. It has become a common approach to wrangling data in the \texttt{tidyverse}, with functions across \texttt{dplyr} and \texttt{tidyr} providing functionality to work with list-columns (Bryan, 2018; Wickham et al., 2019; Wickham \& Henry, 2019). This format is often called \enquote{nested} data, where information is, in essence, nested within a column of data.
 
-This format is often called \enquote{nested} data, where information is, in essence, nested within a column of data. For example, one can store individual words of a verse in a list for each verse, chapter, book, and volume. This allows the text to be of variable sizes without overly complicating or adding redundancies to the structure of the data.
+For example, list-columns can be used to nest data regarding students within classrooms, players within teams, measures within individuals, and text within chapters. This allows the user to do certain data manipulations within each group in a consistent, controlled manner. This can ensure that accidentally including data from other groups does not occur. Furthermore, nesting can reduce the difficulty to appropriately analyze the data stored in the list-column. Using functions like \texttt{lapply()} or \texttt{purrr::map*()} makes further analysis of the nested data more intuitive and error-free.
 
-List-columns can also be used to nest students within classrooms, players within teams, and measures within individuals. This allows the user to do certain data manipulations or analyses within each group. This can ensure that accidentally including data from other groups does not occur. Furthermore, nesting can reduce the difficulty to appropriately analyze the data stored in the list-column. Using functions like \texttt{lapply()} or \texttt{purrr::map*()} makes further analysis of the nested data more intuitive and error-free.
+Because of its efficiency and speed, being able to use \texttt{data.table} to work with list-columns would be beneficial in many data contexts (e.g.~to reduce memory usage in large data sets, increase speed of calculations). Herein, I demonstrate how one can create list-columns in a data table using the \texttt{by} argument in \texttt{data.table} (using a custom function) and the \texttt{purrr::map*()} functions. I further highlight the \texttt{dplyr::group\_nest()} function and show a slightly more efficient approach when using a data table. Using \texttt{bench::mark()}, I assess the speed and efficiency of using \texttt{data.table} to work with list-columns.
 
-Because of its efficiency and speed, being able to use \texttt{data.table} to work with list-columns would be beneficial in many data contexts (i.e.~to reduce memory usage in large data sets). Herein, I show how one can create list-columns in a data table using \texttt{purrr::map()} and the \texttt{by} argument in \texttt{data.table}. I further highlight the \texttt{dplyr::group\_nest()} function and show a slightly more efficient approach when using a data table. Results using \texttt{bench::mark()} show the speed and efficiency of using \texttt{data.table} to work with list-columns.
-
-This article relies on several powerful packages, including \texttt{data.table}, \texttt{dplyr}, \texttt{bench}, \texttt{tidyr}, \texttt{papaja}, \texttt{stringr}, \texttt{ggplot2}, \texttt{ggbeeswarm}, \texttt{performance}, \texttt{rvest}, and \texttt{lobstr} (Aust \& Barth, 2018; Clarke \& Sherrill-Mix, 2017; Dowle \& Srinivasan, 2019; Hester, 2019; Lüdecke, Makowski, \& Waggoner, 2019; Wickham, 2016, 2019c, 2019b, 2019a; Wickham et al., 2019; Wickham \& Henry, 2019).
+This article relies on several powerful R packages, including \texttt{data.table}, \texttt{dplyr}, \texttt{bench}, \texttt{tidyr}, \texttt{papaja}, \texttt{stringr}, \texttt{ggplot2}, \texttt{ggbeeswarm}, \texttt{ggrepel}, \texttt{performance}, \texttt{rvest}, and \texttt{lobstr} (Aust \& Barth, 2018; Clarke \& Sherrill-Mix, 2017; Dowle \& Srinivasan, 2019; Hester, 2019; Lüdecke, Makowski, \& Waggoner, 2019; Slowikowski, 2018; Wickham, 2016, 2019c, 2019b, 2019a; Wickham et al., 2019; Wickham \& Henry, 2019).
 
 \hypertarget{example-data}{%
 \section{Example Data}\label{example-data}}
 
-Throughout much of this paper, I will demonstrate the use of \emph{list-columns} in \texttt{data.table} using data from \href{nbastuffer.com}{NBA Stuffer} will be scraped to get information on players from the 2017-2018 and 2018-2019 seasons. First, the HTML data are read in, the tables with player data by year are then extracted using a custom function, indicators are added, and then combined into a single data table for the player data.
+Throughout much of this paper, I demonstrate the use of \emph{list-columns} in \texttt{data.table} using data from \href{nbastuffer.com}{NBA Stuffer}. These data are downloaded, providing information on players from the 2017-2018 and 2018-2019 seasons. To do so, I first read in the HTML data, then extract the tables with player data by year (using a short custom function), add indicators, and then combine each into a single data table. Each step is shown in the code below.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -175,9 +175,9 @@ Throughout much of this paper, I will demonstrate the use of \emph{list-columns}
 \NormalTok{players_}\DecValTok{2019}\NormalTok{ <-}\StringTok{ }\KeywordTok{read_html}\NormalTok{(url_}\DecValTok{2019}\NormalTok{)}
 
 \NormalTok{extract_fun <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(html)\{}
-  \KeywordTok{html_nodes}\NormalTok{(html, }\StringTok{"table"}\NormalTok{)[}\DecValTok{2}\NormalTok{] }\OperatorTok{%>%}\StringTok{ }
-\StringTok{    }\KeywordTok{html_table}\NormalTok{(}\DataTypeTok{fill =} \OtherTok{TRUE}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{    }\NormalTok{.[[}\DecValTok{1}\NormalTok{]] }
+\NormalTok{  tabs <-}\StringTok{ }\KeywordTok{html_nodes}\NormalTok{(html, }\StringTok{"table"}\NormalTok{)[}\DecValTok{2}\NormalTok{] }\OperatorTok{%>%}\StringTok{ }
+\StringTok{    }\KeywordTok{html_table}\NormalTok{(}\DataTypeTok{fill =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{  tabs[[}\DecValTok{1}\NormalTok{]] }
 \NormalTok{\}}
 
 \NormalTok{player_}\DecValTok{2018}\NormalTok{ <-}\StringTok{ }
@@ -200,28 +200,28 @@ Throughout much of this paper, I will demonstrate the use of \emph{list-columns}
 \noindent Below is a subset of this imported data set, showing only four of the variables and the first six rows.
 
 \begin{verbatim}
-##         full_name  mpg  ppg apg
-## 1:   Aaron Brooks  5.9  2.3 0.6
-## 2:   Aaron Gordon 32.9 17.6 2.3
-## 3: Aaron Harrison 25.9  6.7 1.2
-## 4:  Aaron Jackson 34.5  8.0 1.0
-## 5:    Abdel Nader 10.9  3.0 0.5
-## 6:  Adreian Payne  8.5  4.2 0.0
+##         full_name team year  mpg  ppg apg
+## 1:   Aaron Brooks  Min 2018  5.9  2.3 0.6
+## 2:   Aaron Gordon  Orl 2018 32.9 17.6 2.3
+## 3: Aaron Harrison  Dal 2018 25.9  6.7 1.2
+## 4:  Aaron Jackson  Hou 2018 34.5  8.0 1.0
+## 5:    Abdel Nader  Bos 2018 10.9  3.0 0.5
+## 6:  Adreian Payne  Orl 2018  8.5  4.2 0.0
 \end{verbatim}
 
 \hypertarget{nesting-with-data.table}{%
 \section{\texorpdfstring{Nesting with \texttt{data.table}}{Nesting with data.table}}\label{nesting-with-data.table}}
 
-In \texttt{dplyr} the \texttt{group\_nest()} function is valuable when creating list-columns based on a grouping variable. It takes the data by group and puts it all in a list-column. Figure \ref{process} highlights the process of taking a data frame and creating a nested data frame with a list-column. That is, all data from variables \texttt{x}, \texttt{y}, and \texttt{z} relating to each group is split into a distinct data frame and stored within the \texttt{data} column.
+In \texttt{dplyr}, the \texttt{group\_nest()} function is valuable when creating list-columns based on a grouping variable. It takes the data by group and puts it all in a list-column. Figure \ref{process} highlights the process of taking a data frame and creating a nested data frame with a list-column. That is, all data from variables \texttt{x}, \texttt{y}, and \texttt{z} relating to each group is split into a distinct data frame and stored within the \texttt{data} column.
 
-\begin{figure}[tb]
+\begin{figure}[b]
   \centering
   \includegraphics[width=\textwidth]{fig_process.png}
   \caption{Diagram of one approach to creating a list-column in a data frame (i.e. creating a nested data frame).}
   \label{process}
 \end{figure}
 
-Overall, this function is efficient and fast but by using \texttt{data.table} it can be somewhat faster. This will be shown using the following function:
+Overall, this function is efficient and fast but---by relying on \texttt{data.table}---it can be somewhat faster. This will be shown using the following function, which relies solely on the syntax of \texttt{data.table}, using the \texttt{j} and \texttt{by} arguments as shown below.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -230,19 +230,18 @@ Overall, this function is efficient and fast but by using \texttt{data.table} it
 
 \NormalTok{  by <-}\StringTok{ }\KeywordTok{substitute}\NormalTok{(}\KeywordTok{list}\NormalTok{(...))}
   
-\NormalTok{  express <-}\StringTok{ }\NormalTok{dt[, }\KeywordTok{list}\NormalTok{(}\KeywordTok{list}\NormalTok{(.SD)), by =}\StringTok{ }\KeywordTok{eval}\NormalTok{(by)]}
-  \KeywordTok{setnames}\NormalTok{(express, }\DataTypeTok{old =} \StringTok{"V1"}\NormalTok{, }\DataTypeTok{new =}\NormalTok{ .key)}
-\NormalTok{  express}
+\NormalTok{  dt <-}\StringTok{ }\NormalTok{dt[, }\KeywordTok{list}\NormalTok{(}\KeywordTok{list}\NormalTok{(.SD)), by =}\StringTok{ }\KeywordTok{eval}\NormalTok{(by)]}
+  \KeywordTok{setnames}\NormalTok{(dt, }\DataTypeTok{old =} \StringTok{"V1"}\NormalTok{, }\DataTypeTok{new =}\NormalTok{ .key)}
+\NormalTok{  dt}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
-In essence, this function takes a data table, then creates a list of the data table per group specified in the \texttt{by} argument.
+First thing to note, is that in the data table, we create a list within a list containing the \texttt{.SD} special object. This object is all the data in the data table except for the variables that are in the \texttt{by} argument. The \texttt{by} argument, before being evaluated within the data table, first becomes an unevaluated list of bare variable names and then evaluate it within the \texttt{data.table} syntax. In essence, this function takes a data table, then creates a list of the data table per group specified in the \texttt{by} argument.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{group_nest_dt}\NormalTok{(players, team) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{head}\NormalTok{()}
+\KeywordTok{head}\NormalTok{(}\KeywordTok{group_nest_dt}\NormalTok{(players, team))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -256,12 +255,11 @@ In essence, this function takes a data table, then creates a list of the data ta
 ## 6:  Ind <data.table>
 \end{verbatim}
 
-This is nearly identical to the \texttt{dplyr::group\_nest()} function, in terms of output, but has data tables in the list-column instead of tibbles.
+The syntax and output are nearly identical to the \texttt{dplyr::group\_nest()} function but has data tables in the list-column instead of tibbles.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{group_nest}\NormalTok{(players, team) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{head}\NormalTok{()}
+\KeywordTok{head}\NormalTok{(}\KeywordTok{group_nest}\NormalTok{(players, team))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -277,7 +275,7 @@ This is nearly identical to the \texttt{dplyr::group\_nest()} function, in terms
 ## 6 Cle   <tibble [49 x 30]>
 \end{verbatim}
 
-Importantly, Figure \ref{speed} presents the timings from \texttt{bench::mark()} across the two approaches, showing \texttt{group\_nest\_dt()} is often faster. The memory allocated is very similar, with \texttt{group\_nest\_dt()} allocating 451KB and \texttt{group\_nest()} allocating 335KB.
+Given both perform very similar data manipulations, it is of interest to see if there are differences in memory and speed performance. Figure \ref{speed} presents the timings from \texttt{bench::mark()} across the two approaches, showing \texttt{group\_nest\_dt()} is often faster, although differences for this size of data set are not meaningful. The memory allocated is also very similar, with \texttt{group\_nest\_dt()} allocating 463KB and \texttt{group\_nest()} allocating 335KB.
 
 \begin{figure}[tb]
   \centering
@@ -290,8 +288,7 @@ This nesting approach can be used with multiple grouping variables too. For exam
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{group_nest_dt}\NormalTok{(players, team, year) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{head}\NormalTok{()}
+\KeywordTok{head}\NormalTok{(}\KeywordTok{group_nest_dt}\NormalTok{(players, team, year))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -305,17 +302,17 @@ This nesting approach can be used with multiple grouping variables too. For exam
 ## 6:  Ind 2018 <data.table>
 \end{verbatim}
 
-\hypertarget{modeling-within-the-nest}{%
-\subsection{Modeling within the Nest}\label{modeling-within-the-nest}}
+\hypertarget{analyses-within-the-nested-data}{%
+\subsection{Analyses within the Nested Data}\label{analyses-within-the-nested-data}}
 
-Often, the nested data can provide an intuitive format to run several models to understand key features of the data within the groups. Below, the relationship between points-per-game and assists-per-game for each team and year is modeled and then the \(R^2\) of the models are extracted. Since \texttt{performance::r2()} provides two versions of \(R^2\), I then grab only the first of the two.
+Often, the nested data can provide an intuitive format to run several analyses to understand key features of the data within the groups. Below, the relationship between points-per-game and assists-per-game for each team and year is modeled and then the \(R^2\) of the models are extracted. Since \texttt{performance::r2()} provides two versions of \(R^2\), I then grab only the first of the two types.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{players_nested <-}\StringTok{ }\KeywordTok{group_nest_dt}\NormalTok{(players, team, year) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\NormalTok{.[, ppg_apg    }\OperatorTok{:}\ErrorTok{=}\StringTok{ }\NormalTok{purrr}\OperatorTok{::}\KeywordTok{map}\NormalTok{(data, }\OperatorTok{~}\KeywordTok{lm}\NormalTok{(ppg }\OperatorTok{~}\StringTok{ }\NormalTok{apg, }\DataTypeTok{data =}\NormalTok{ .x))] }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\NormalTok{.[, r2_list    }\OperatorTok{:}\ErrorTok{=}\StringTok{ }\NormalTok{purrr}\OperatorTok{::}\KeywordTok{map}\NormalTok{(ppg_apg, }\OperatorTok{~}\NormalTok{performance}\OperatorTok{::}\KeywordTok{r2}\NormalTok{(.x))] }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\NormalTok{.[, r2_ppg_apg }\OperatorTok{:}\ErrorTok{=}\StringTok{ }\NormalTok{purrr}\OperatorTok{::}\KeywordTok{map_dbl}\NormalTok{(r2_list, }\OperatorTok{~}\NormalTok{.x[[}\DecValTok{1}\NormalTok{]])]}
+\NormalTok{players_nested <-}\StringTok{ }\KeywordTok{group_nest_dt}\NormalTok{(players, team, year)}
+\NormalTok{players_nested[, ppg_apg    }\OperatorTok{:}\ErrorTok{=}\StringTok{ }\NormalTok{purrr}\OperatorTok{::}\KeywordTok{map}\NormalTok{(data, }\OperatorTok{~}\KeywordTok{lm}\NormalTok{(ppg }\OperatorTok{~}\StringTok{ }\NormalTok{apg, }\DataTypeTok{data =}\NormalTok{ .x))]}
+\NormalTok{players_nested[, r2_list    }\OperatorTok{:}\ErrorTok{=}\StringTok{ }\NormalTok{purrr}\OperatorTok{::}\KeywordTok{map}\NormalTok{(ppg_apg, }\OperatorTok{~}\NormalTok{performance}\OperatorTok{::}\KeywordTok{r2}\NormalTok{(.x))]}
+\NormalTok{players_nested[, r2_ppg_apg }\OperatorTok{:}\ErrorTok{=}\StringTok{ }\NormalTok{purrr}\OperatorTok{::}\KeywordTok{map_dbl}\NormalTok{(r2_list, }\OperatorTok{~}\NormalTok{.x[[}\DecValTok{1}\NormalTok{]])]}
 \KeywordTok{head}\NormalTok{(players_nested)}
 \end{Highlighting}
 \end{Shaded}
@@ -330,7 +327,20 @@ Often, the nested data can provide an intuitive format to run several models to 
 ## 6:  Ind 2018 <data.table>    <lm> <r2_generic>  0.6060465
 \end{verbatim}
 
-\noindent This produces two list-columns (\texttt{ppg\_apg} and \texttt{r2\_list}) and a numeric vector (\texttt{r2\_ppg\_apg}) all organized by team and year. This information is then readily available to plot. For example, one can look at how related points-per-game and assists-per-game are by team and year--in essence, showing which teams have players who both score and assist. This example is shown in Figure \ref{exfig}.
+\noindent This produces two list-columns (\texttt{ppg\_apg} and \texttt{r2\_list}) and a numeric vector (\texttt{r2\_ppg\_apg}) all organized by team and year. This information is then readily available to plot. For example, one can look at how related points-per-game and assists-per-game are by team and year---in essence, showing which teams have players who both score and assist. The example plot is shown in Figure \ref{exfig}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{players_nested }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{dcast}\NormalTok{(team }\OperatorTok{~}\StringTok{ }\NormalTok{year, }\DataTypeTok{value.var =} \StringTok{"r2_ppg_apg"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\StringTok{`}\DataTypeTok{2018}\StringTok{`}\NormalTok{, }\StringTok{`}\DataTypeTok{2019}\StringTok{`}\NormalTok{, }\DataTypeTok{group =}\NormalTok{ team)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_text_repel}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{label =}\NormalTok{ team)) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{geom_abline}\NormalTok{(}\DataTypeTok{slope =} \DecValTok{1}\NormalTok{) }\OperatorTok{+}
+\StringTok{    }\KeywordTok{coord_fixed}\NormalTok{(}\DataTypeTok{ylim =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{),}
+                \DataTypeTok{xlim =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
 \begin{figure}[tb]
   \centering
@@ -339,10 +349,10 @@ Often, the nested data can provide an intuitive format to run several models to 
   \label{exfig}
 \end{figure}
 
-\hypertarget{unnest-with-data.table}{%
-\section{\texorpdfstring{Unnest with \texttt{data.table}}{Unnest with data.table}}\label{unnest-with-data.table}}
+\hypertarget{unnesting-with-data.table}{%
+\section{\texorpdfstring{Unnesting with \texttt{data.table}}{Unnesting with data.table}}\label{unnesting-with-data.table}}
 
-After performing the manipulations or analyses within the nest, it can often be good to unnest to finalize analyses. Again, like with \texttt{group\_nest\_dt()}, this \texttt{unnest\_dt()} function relies solely on the syntax of \texttt{data.table}, using the \texttt{j} and \texttt{by} arguments as shown below.
+After performing the manipulations or analyses within the nest, it can often be necessary to unnest to finalize analyses. Again, like with \texttt{group\_nest\_dt()}, the \texttt{unnest\_dt()} function below relies solely on the syntax of \texttt{data.table}, using the \texttt{j} and \texttt{by} arguments as shown below.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -357,14 +367,14 @@ After performing the manipulations or analyses within the nest, it can often be 
 \end{Highlighting}
 \end{Shaded}
 
-This function can be used to unnest a data table, like the \texttt{players\_nested} data table from earlier where the nested column is a data table, data frame, or tibble. Below, the \texttt{data} column in the table is unnested by \texttt{team} and \texttt{year} and then I select just a few of the variables.
+This function can be used to unnest a data table, like the \texttt{players\_nested} data table from earlier, where the nested column can be a data table, data frame, or tibble. Below, the \texttt{data} column in the table is unnested by \texttt{team} and \texttt{year} and then a few of the variables are selected for demonstration purposes.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{unnest_dt}\NormalTok{(players_nested, }
+\NormalTok{players_unnested <-}\StringTok{ }\KeywordTok{unnest_dt}\NormalTok{(players_nested, }
           \DataTypeTok{col =}\NormalTok{ data, }
-          \DataTypeTok{id =} \KeywordTok{list}\NormalTok{(team, year)) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\NormalTok{.[, .(team, year, full_name, pos, age, gp, mpg)]}
+          \DataTypeTok{id =} \KeywordTok{list}\NormalTok{(team, year))}
+\NormalTok{players_unnested[, .(team, year, full_name, pos, age, gp, mpg)]}
 \end{Highlighting}
 \end{Shaded}
 
@@ -390,21 +400,25 @@ This function can be used to unnest a data table, like the \texttt{players\_nest
   \label{speed2}
 \end{figure}
 
-Again, this function is quick and efficient. Figure \ref{speed2} presents the timings from \texttt{bench::mark()} across the two unnesting approaches, showing the \texttt{data.table} approach is often faster. The memory allocated is about half for the \texttt{data.table} approach here, with \texttt{unnest\_dt()} allocating 912KB and \texttt{tidyr::unnest()} allocating 1.83MB.
+Again, this function is quick and efficient. Figure \ref{speed2} presents the timings from \texttt{bench::mark()} across the two unnesting approaches, showing the \texttt{data.table} approach is much faster. The memory allocated is about half for the \texttt{data.table} approach here, with \texttt{unnest\_dt()} allocating 912KB and \texttt{tidyr::unnest()} allocating 1.83MB.
+
+\hypertarget{unnesting-vectors-with-data.table}{%
+\subsection{\texorpdfstring{Unnesting Vectors with \texttt{data.table}}{Unnesting Vectors with data.table}}\label{unnesting-vectors-with-data.table}}
 
 A slight variation of this function can be used for list-columns with atomic vectors instead of data tables. A function like the following works well.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{unnest_vec_dt <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(dt, cols, id, nam)\{}
+\NormalTok{unnest_vec_dt <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(dt, cols, id, name)\{}
   \KeywordTok{stopifnot}\NormalTok{(}\KeywordTok{is.data.table}\NormalTok{(dt))}
   
 \NormalTok{  by <-}\StringTok{ }\KeywordTok{substitute}\NormalTok{(id)}
-\NormalTok{  cols <-}\StringTok{ }\KeywordTok{substitute}\NormalTok{(}\KeywordTok{unlist}\NormalTok{(cols, }\DataTypeTok{recursive =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{use.names =} \OtherTok{FALSE}\NormalTok{))}
+\NormalTok{  cols <-}\StringTok{ }\KeywordTok{substitute}\NormalTok{(}\KeywordTok{unlist}\NormalTok{(cols, }
+                            \DataTypeTok{recursive =} \OtherTok{FALSE}\NormalTok{))}
   
-\NormalTok{  express <-}\StringTok{ }\NormalTok{dt[, }\KeywordTok{eval}\NormalTok{(cols), by =}\StringTok{ }\KeywordTok{eval}\NormalTok{(by)]}
-  \KeywordTok{setnames}\NormalTok{(express, }\DataTypeTok{old =} \KeywordTok{paste0}\NormalTok{(}\StringTok{"V"}\NormalTok{, }\DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(nam)), }\DataTypeTok{new =}\NormalTok{ nam)}
-\NormalTok{  express}
+\NormalTok{  dt <-}\StringTok{ }\NormalTok{dt[, }\KeywordTok{eval}\NormalTok{(cols), by =}\StringTok{ }\KeywordTok{eval}\NormalTok{(by)]}
+  \KeywordTok{setnames}\NormalTok{(dt, }\DataTypeTok{old =} \KeywordTok{paste0}\NormalTok{(}\StringTok{"V"}\NormalTok{, }\DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(name)), }\DataTypeTok{new =}\NormalTok{ name)}
+\NormalTok{  dt}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -416,7 +430,7 @@ In \texttt{players\_nested}, the \texttt{r2\_list} column is a list of numeric v
 \KeywordTok{unnest_vec_dt}\NormalTok{(players_nested, }
               \DataTypeTok{cols =} \KeywordTok{list}\NormalTok{(r2_list), }
               \DataTypeTok{id =} \KeywordTok{list}\NormalTok{(team, year), }
-              \DataTypeTok{nam =} \StringTok{"r2"}\NormalTok{)}
+              \DataTypeTok{name =} \StringTok{"r2"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -438,7 +452,7 @@ In \texttt{players\_nested}, the \texttt{r2\_list} column is a list of numeric v
 \hypertarget{memory-usage-of-list-columns}{%
 \section{Memory Usage of List-Columns}\label{memory-usage-of-list-columns}}
 
-Last item to assess herein is the computer memory usage of different formats of data tables with the same data. We can use the following large data sets in wide format, nested wide format, long format, and nested wide format to make brief comparisons.
+Last item to demonstrate herein is the computer memory usage of different formats of data tables with the same data. We can use the following large data sets in wide format, nested wide format, long format, and nested wide format to make brief comparisons.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -459,17 +473,23 @@ Last item to assess herein is the computer memory usage of different formats of 
 \end{Highlighting}
 \end{Shaded}
 
-I use the \texttt{lobstr} package to assess the object size of each format of the same data, shown in the output below.
+I use the \texttt{lobstr} package to assess the object size of each format of the same data, shown in Table \ref{memtab}. Not surprising, the memory usage of nested data is lower than for its none nested corresponding data. This is directly related to the reduction in redundancies in the data otherwise there. That is, the nested data has far fewer rows containing the \texttt{group} variable. That, alone, in this large data saves memory. For example, the size of a single column of the \texttt{group} variable in wide format is 4 MB; and in long format it is 16 MB By reducing a single variable in this case, we save several megabytes of memory.
 
-\begin{verbatim}
-##                Format Memory (MB)
-## 1:        wide_format      40.002
-## 2: nested_wide_format      36.003
-## 3:        long_format      80.001
-## 4: nested_long_format      64.003
-\end{verbatim}
-
-Not surprising, the memory usage of nested data is lower than for its none nested corresponding data. This is directly related to the reduction in redundancies in the data otherwise there. That is, the nested data has far fewer rows containing the \texttt{group} variable. That, alone, in this large data saves memory. For example, the size of a single column of the \texttt{group} variable in wide format is 4 MB; and in long format it is 16 MB By reducing a single variable in this case, we save several megabytes of memory.
+\begin{table}[ht]
+\centering
+\caption{Memory usage for each format of the same data} 
+\label{memtab}
+\begin{tabular}{lr}
+  \toprule
+Format & Memory (MB) \\ 
+  \midrule
+Wide Format & 40.0 \\ 
+  Nested Wide Format & 36.0 \\ 
+  Long Format & 80.0 \\ 
+  Nested Long Format & 64.0 \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
@@ -522,6 +542,9 @@ Lüdecke, D., Makowski, D., \& Waggoner, P. (2019). \emph{Performance: Assessmen
 
 \leavevmode\hypertarget{ref-R-base}{}%
 R Core Team. (2018). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
+
+\leavevmode\hypertarget{ref-R-ggrepel}{}%
+Slowikowski, K. (2018). \emph{Ggrepel: Automatically position non-overlapping text labels with 'ggplot2'}. Retrieved from \url{https://CRAN.R-project.org/package=ggrepel}
 
 \leavevmode\hypertarget{ref-R-ggplot2}{}%
 Wickham, H. (2016). \emph{Ggplot2: Elegant graphics for data analysis}. Springer-Verlag New York. Retrieved from \url{https://ggplot2.tidyverse.org}
