@@ -554,16 +554,16 @@ Research Design \& Analysis II (EDUC 7610) & & & & X & \\
 \hrule
 \vspace{10pt}
 
-1. **R and RMarkdown: Expert (4 years of daily use)**
+1. **R and RMarkdown: Expert (6 years of daily use)**
     - Database Queries, Creation, and Management
     - Data Analytics
     - Website Creation
     - Program Development and Deployment 
-2. **REDCap: Moderate Experience (1 year of weekly use)**
+2. **REDCap: Moderate Experience (3 year of weekly use)**
     - Database Creation
     - Data Entry and Survey Creation and Deployment
     - Data Management via REDCap API
-3. **SQL: Some Experience (4 years of occasional use)**
+3. **SQL: Some Experience (5 years of occasional use)**
     - Database Queries and Database Management 
     - Data Analytics
 4. **Python: Minor Experience (1 year of occasional use)**
