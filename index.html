@@ -3,16 +3,49 @@ layout: default
 title: Home
 ---
 
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  .column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  .left {
+    width: 25%;
+  }
+  
+  .right {
+    width: 75%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
+
 <div class="header-bar">
       <h1 class="post-title">
         <a href="{{ site.url }}/about">
          About Me
         </a>
       </h1>
-      <img src="{{ site.url }}/assets/images/headshot_small.jpg" align='right' width="16%" height="16%"> 
-      <p margin-right="20px">
-        {{ site.description3}}
-      </p>
+      
+      <div class="row">
+        <div class="column left" style="background-color:#aaa;">
+          <img src="{{ site.url }}/assets/images/headshot_small.jpg" algin='center' width="16%" height="16%"> 
+        </div>
+        <div class="column right" style="background-color:#bbb;">
+          <p>{{ site.description3}}</p>
+        </div>
+      </div>
 </div>
 
 <hr>
