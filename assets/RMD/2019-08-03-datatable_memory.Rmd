@@ -4,50 +4,61 @@ output: md_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
 ```
 
-This post is designed to help me understand how `data.table`s `copy()` function works, along with its *modify-by-reference* behavior (as compared to the modify-by-copy that Hadley references in Advanced R's [memory chapter](http://adv-r.had.co.nz/memory.html)).
+As of late, I have used the `data.table` package to do some of my data wrangling. It has been a fun adventure (the nerd type of fun), and was made more meaningful with the renewed development of the `dtplyr` package by Hadley Wickham and co. I introduce some of the different behavior of `data.table` [here](https://tysonstanley.github.io//jekyll/update/2019/07/12/datatable/).
 
-First, we'll use four packages:
+This post is designed to help me understand more about how `data.table` works in regards to memory and speed. This will assess the *modify-by-reference* behavior as compared to the modify-by-copy that Hadley references in Advanced R's [memory chapter](http://adv-r.had.co.nz/memory.html). 
+
+## Packages
+
+First, we'll use the following packages to further understand R, `data.table`, and `dplyr`.
 
 ```{r}
-library(microbenchmark)
-library(dplyr)
-library(data.table)
-library(pryr)
+library(bench)      # assess speed and memory
+library(data.table) # data.table for all of its stuff
+library(dplyr)      # compare dt to mutate()
+library(pryr)       # pry open how R works
+library(lobstr)     # assess the process of R functions
 ```
 
-The `pryr` package (pronounced Pry R) is a Hadley package that helps us see some of the internal behavior of R. 
+
+## Example Data
 
 We'll use the following data table for this post.
 
 ```{r}
 dt <- data.table(
-  x = rnorm(100000),
-  y = runif(100000)
+  grp = rbinom(1e7, 1, .5) %>% factor,
+  x = rnorm(1e7),
+  y = runif(1e7)
 )
 ```
 
-It is roughly 1.6 MB and has an address of `address(dt)`. We won't be using this address later on because we'll be making copies of this data table, but note that an object has a size and address.
+It is roughly 1.6 MB and has an address of `lobstr::obj_addr(dt)`. We won't be using this address later on because we'll be making copies of this data table, but note that an object has a size and address.
 
 ```{r}
-object_size(dt)
-address(dt)
+pryr::object_size(dt)
+lobstr::obj_addr(dt)
 ```
+
+## Memory Usage
 
 To better understand `data.table`'s behavior, let's do four different ways of adding a variable to a data frame.
 
 1. Use the base R way of adding a variable. 
-2. Use the `mutate()` function.
-3. Use `copy()` to make a deep copy of the data table and then modify by reference.
+2. Use the `dplyr::mutate()` function.
+3. Use `data.table::copy()` to make a deep copy of the data table and then modify by reference.
 4. Use the modify-by-reference inherent with `:=` in `data.table`.
 
 ```{r}
-based   <- expression({dt_based$z <- rnorm(100000)})
-mutated <- expression({dt_mutate <- mutate(dt_mutate, z = rnorm(100000))})
-copied  <- expression({dt_copied <- copy(dt)[, z := rnorm(100000)]})
-modify  <- expression({dt_modify[, z := rnorm(100000)]})
+based   <- expression({dt_based$z <- rnorm(1e7)})
+mutated <- expression({dt_mutate <- mutate(dt_mutate, z = rnorm(1e7))})
+copied  <- expression({dt_copied <- copy(dt)[, z := rnorm(1e7)]})
+modify  <- expression({dt_modify[, z := rnorm(1e7)]})
 ```
 
 Because both `based`, `mutated`, and `modify` will change the original `dt` data table, let's create a copy for each to use and see their corresponding addresses. Note that both change from the original `dt` object since it is fully copied now.
@@ -57,9 +68,9 @@ dt_based <- copy(dt)
 dt_mutate <- copy(dt)
 dt_modify <- copy(dt)
 
-address(dt_based)
-address(dt_mutate)
-address(dt_modify)
+lobstr::obj_addr(dt_based)
+lobstr::obj_addr(dt_mutate)
+lobstr::obj_addr(dt_modify)
 ```
 
 Importantly, `copy()` does something very different than just assigning to another name. `copy()` creates a whole new object while assigning to another name just creates another name pointing to the same object (until one or the other is modified). For example, the following lines do different things. We can see this by looking at their addresses, where `just_pointing_to_dt` is the same location and the same object. The `copied_object` is an entirely different object with a different address. (Hadley covers this in depth in Advanced R.)
@@ -68,37 +79,41 @@ Importantly, `copy()` does something very different than just assigning to anoth
 copied_object <- copy(dt)
 just_pointing_to_dt <- dt
 
-address(dt)
-address(copied_object)
-address(just_pointing_to_dt)
+lobstr::obj_addr(dt)
+lobstr::obj_addr(copied_object)
+lobstr::obj_addr(just_pointing_to_dt)
 ```
 
 First, let's look at the memory change, from before an expression is evaluated to after.
 
 ```{r}
-mem_change(eval(based))
-mem_change(eval(mutated))
-mem_change(eval(copied))
-mem_change(eval(modify))
+mem <- c(mem_change(eval(based)),
+         mem_change(eval(mutated)),
+         mem_change(eval(copied)),
+         mem_change(eval(modify)))
+
+data.table(Approach = c("Base", "Mutate", "Copy", "Modify"),
+           `Memory (MB)` = mem/1e6)
 ```
 
-Not surprisingly, the `:=` approach results in the smallest change. It is only slightly more memory than simply creating a variable with `rnorm(100000)`. The `mutate()` way is slightly more than the base R, which was slightly surprising to me as I had figured they were, ultimately, doing the same thing.
-
-```{r}
-object_size(z <- rnorm(100000))
-```
+Not surprisingly, the `:=` approach results in the smallest change (but by only a little bit). Why are they all so similar? This is because in base and mutate approaches the only thing added is a new vector of data and a pointer saying where that is. But no other changes happen to the data frame.
 
 Did addresses change for any of these objects? Of course the copied one changes as we are explicitly making a deep copy of it. But the others? Yes, all changed except for the `dt_modify`, the one that modified-by-reference.
 
 ```{r}
-address(dt_based)
-address(dt_mutate)
-address(dt_copied)
-address(dt_modify)
+lobstr::obj_addr(dt_based)
+lobstr::obj_addr(dt_mutate)
+lobstr::obj_addr(dt_copied)
+lobstr::obj_addr(dt_modify)
 ```
 
 
 
+Note the package information for these analyses.
+
+```{r}
+sessioninfo::package_info()
+```
 
 
 
