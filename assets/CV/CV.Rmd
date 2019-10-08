@@ -391,27 +391,17 @@ ggplot(citations, aes(year, cites, color = year)) +
 \setlength{\parskip}{6pt}
 \noindent
 
-<!--
-Topic Area: Motor Speech Disorders Across the Lifespan
-Session Number: 9364 Poster Board 630
-Title: Gamified Perceptual Learning of Dysarthric Speech
-Session Format: Poster
-Day: Saturday, November 23, 2019
-Time: 12:30 PM ? 2:00 PM
-Authors: Samantha Budge (PRESENTING AUTHOR: Author who will be presenting), Stephanie Borrie (AUTHOR ONLY: Author, but will NOT be presenting), Tyson Barrett (AUTHOR ONLY: Author, but will NOT be presenting), Sarah Yoho (AUTHOR ONLY: Author, but will NOT be presenting), Rochelle-Noreen Vargas (AUTHOR ONLY: Author, but will NOT be presenting), Kaitlin Lansford (AUTHOR ONLY: Author, but will NOT be presenting)
+<!-- -->
 
-Topic Area: Motor Speech Disorders Across the Lifespan
-Session Number: 9075 Poster Board 341
-Title: Familiarization of Dysarthric Speech: Generalization Between Speakers of Different Sex
-Session Format: Poster
-Day: Saturday, November 23, 2019
-Time: 8:00 AM ? 9:30 AM
-Authors: Megan Hirsch (PRESENTING AUTHOR: Author who will be presenting), Kaitlin Lansford (PRESENTING AUTHOR: Author who will be presenting), Stephanie Borrie (AUTHOR ONLY: Author, but will NOT be presenting), Tyson Barrett (AUTHOR ONLY: Author, but will NOT be presenting)
--->
+\textbf{Barrett, T.S.} (2020, January). Working with list-columns in `data.table`. Talk presented at the RStudio Conference 2020, San Francisco, CA.
+
+Budge, S., Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E., Vargas, R., & Lansford, K. (2019, November). Gamified Perceptual Learning of Dysarthric Speech. Poster presented at the 2019 ASHA Convention, Orlando, FL.
+
+Hirsch, M., Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (2019, November). Familiarization of Dysarthric Speech: Generalization Between Speakers of Different Sex. Poster presented at the 2019 ASHA Convention, Orlando, FL.
 
 Ong, C.W., Lee, E.B., Krafft, J., Terry, C.L., **Barrett, T.S.**, Levin, M.E., & Twohig, M.P. (2019, November). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. In C. W. Ong (Chair), Using acceptance and commitment therapy for different clinical presentations: Evidence-based adaptations. Symposium conducted at the 53rd annual convention of the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
 
-Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, Villodas, M.T., & Domenech Rodríguez, M.M. (2019, November). Machine learning predicts caregiver perceived need for and utilization of adolescent counseling services for youth at-risk for maltreatment. In M. D. Hetzel-Riggin (Chair). Addressing violence, abuse, and trauma throughout the socioecological model. Symposium submitted for presentation at the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
+Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, Villodas, M.T., & Domenech Rodríguez, M.M. (2019, November). Machine learning predicts caregiver perceived need for and utilization of adolescent counseling services for youth at-risk for maltreatment. In M. D. Hetzel-Riggin (Chair). Addressing violence, abuse, and trauma throughout the socioecological model. Symposium conducted at the 53rd annual convention of the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
  
 Vázquez, A.L., **Barrett, T.S.**, Domenech Rodríguez, M.M., Bustos, M., Gutierrez, M., Amador Buenabad, N.G., & Villatoro Velazquez J.A. (2019, March). The influence of perceived parenting on substance initiation among Latinx children. Poster presented at the Society for Research in Child Development, Baltimore, MD.
  
