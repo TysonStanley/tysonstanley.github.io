@@ -18,7 +18,12 @@ This post is designed to help me understand more about how `data.table`
 works in regards to memory and speed. This will assess the
 *modify-by-reference* behavior as compared to the modify-by-copy that
 Hadley references in Advanced R’s [memory
-chapter](http://adv-r.had.co.nz/memory.html).
+chapter](http://adv-r.had.co.nz/memory.html).  
+
+I want to emphasize that this post is not to say one approach is better
+than another. My opinion is **use what works for you**. Ultimately, this 
+is why I am trying to understand the basic behavior of `data.table`,
+`dplyr`, and base R to do a basic data manipulation.
 
 Throughout this post, I use the terms **efficient** and **speed**.
 
