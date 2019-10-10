@@ -1,14 +1,5 @@
----
-layout: post
-title: "Comparing Efficiency and Speed of `data.table`: Adding variables, filtering rows, and summarizing by group"
-categories: jekyll update
-author: Tyson S. Barrett
-comments: true
----
-
-
 As of late, I have used the `data.table` package to do some of my data
-wrangling. It has been a fun adventure (the nerd type of fun). This was
+wrangling. It has been a fun adventure (the nerd type of fun), and was
 made more meaningful with the renewed development of the `dtplyr`
 package by Hadley Wickham and co. I introduce some of the different
 behavior of `data.table`
@@ -49,32 +40,26 @@ Packages
 First, we’ll use the following packages to further understand R,
 `data.table`, and `dplyr`.
 
-{% highlight r %}
-library(bench)      # assess speed and memory
-library(data.table) # data.table for all of its stuff
-library(dplyr)      # compare it to data.table
-library(lobstr)     # assess the process of R functions
-{% endhighlight %}
+    library(bench)      # assess speed and memory
+    library(data.table) # data.table for all of its stuff
+    library(dplyr)      # compare it to data.table
+    library(lobstr)     # assess the process of R functions
 
 And we’ll set a random number seed.
 
-{% highlight r %}
-set.seed(84322)
-{% endhighlight %}
+    set.seed(84322)
 
 Example Data
 ------------
 
 We’ll use the following data table for this post.
 
-{% highlight r %}
-dt <- data.table(
-  grp = sample(c(1,2,3), size = 1e6, replace = TRUE) %>% factor,
-  x = rnorm(1e6),
-  y = runif(1e6)
-)
-dt
-{% endhighlight %}
+    dt <- data.table(
+      grp = sample(c(1,2,3), size = 1e6, replace = TRUE) %>% factor,
+      x = rnorm(1e6),
+      y = runif(1e6)
+    )
+    dt
 
     ##          grp           x          y
     ##       1:   1 -0.38947156 0.54057612
@@ -89,7 +74,7 @@ dt
     ##  999999:   1 -1.78073054 0.51904927
     ## 1000000:   3 -0.56124894 0.29423306
 
-It is roughly 20 MB and has an address of 0x7fc4335f9600. We won’t be
+It is roughly 20 MB and has an address of 0x7fa06de29e00. We won’t be
 using this address later on because we’ll be making copies of this data
 table, but note that an object has a size and an address on your
 computer.
@@ -112,18 +97,16 @@ The following functions perform, in order, 1) adding a variable, 2)
 filtering rows, and 3) summarizing data by group using base
 functionality.
 
-{% highlight r %}
-base_mutate <- function(data){
-  data$z <- rnorm(1e6)
-  data
-}
-base_filter <- function(data){
-  data[data$grp == 1, ]
-}
-base_summarize <- function(data){
-  tapply(data$x, data$grp, mean)
-}
-{% endhighlight %}
+    base_mutate <- function(data){
+      data$z <- rnorm(1e6)
+      data
+    }
+    base_filter <- function(data){
+      data[data$grp == 1, ]
+    }
+    base_summarize <- function(data){
+      tapply(data$x, data$grp, mean)
+    }
 
 ### `dplyr`
 
@@ -131,31 +114,27 @@ Again, the following functions perform, in order, 1) adding a variable,
 2) filtering rows, and 3) summarizing data by group using `dplyr`
 functions.
 
-{% highlight r %}
-dplyr_mutate <- function(data){
-  mutate(data, z = rnorm(1e6))
-}
-dplyr_filter <- function(data){
-  filter(data, grp == 1)
-}
-dplyr_summarize <- function(data){
-  summarize(group_by(data, grp), mean(x))
-}
-{% endhighlight %}
+    dplyr_mutate <- function(data){
+      mutate(data, z = rnorm(1e6))
+    }
+    dplyr_filter <- function(data){
+      filter(data, grp == 1)
+    }
+    dplyr_summarize <- function(data){
+      summarize(group_by(data, grp), mean(x))
+    }
 
 ### `data.table`
 
-{% highlight r %}
-dt_mutate <- function(data){
-  data[, z := rnorm(1e6)]
-}
-dt_filter <- function(data){
-  data[grp == 1]
-}
-dt_summarize <- function(data){
-  data[, mean(x), by = "grp"]
-}
-{% endhighlight %}
+    dt_mutate <- function(data){
+      data[, z := rnorm(1e6)]
+    }
+    dt_filter <- function(data){
+      data[grp == 1]
+    }
+    dt_summarize <- function(data){
+      data[, mean(x), by = "grp"]
+    }
 
 Copies to Benchmark
 -------------------
@@ -163,11 +142,9 @@ Copies to Benchmark
 The data below are copied in order to make the benchmarking more
 comparable.
 
-{% highlight r %}
-df <- copy(dt) %>% as.data.frame()
-tbl <- copy(dt) %>% as_tibble()
-dt <- copy(dt)
-{% endhighlight %}
+    df <- copy(dt) %>% as.data.frame()
+    tbl <- copy(dt) %>% as_tibble()
+    dt <- copy(dt)
 
 Benchmarking
 ------------
@@ -175,28 +152,24 @@ Benchmarking
 The following benchmarking tests each situation for the three
 approaches.
 
-{% highlight r %}
-# Adding a variable
-bench_base_m  <- bench::mark(base_mutate(df), iterations = 25)
-bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 25)
-bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 25)
-# Filtering rows
-bench_base_f  <- bench::mark(base_filter(df), iterations = 25)
-bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 25)
-bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 25)
-# Summarizing by group
-bench_base_s  <- bench::mark(base_summarize(df), iterations = 25)
-bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 25)
-bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 25)
-{% endhighlight %}
+    # Adding a variable
+    bench_base_m  <- bench::mark(base_mutate(df), iterations = 25)
+    bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 25)
+    bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 25)
+    # Filtering rows
+    bench_base_f  <- bench::mark(base_filter(df), iterations = 25)
+    bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 25)
+    bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 25)
+    # Summarizing by group
+    bench_base_s  <- bench::mark(base_summarize(df), iterations = 25)
+    bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 25)
+    bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 25)
 
 Memory Usage (Efficiency)
 -------------------------
 
 We will visualize the memory allocated for each approach, using
 `ggplot2` and `cowplot` packages.
-
-<img src="{{ site.baseurl }}/assets/RMD/2019-10-06-datatable_memory_files/fig1.png" style="display: block; margin: auto;" />
 
 Definitely some things worth noting across the approaches.
 
@@ -210,27 +183,39 @@ Speed
 
 Below, we next look at the speed
 
-<img src="{{ site.baseurl }}/assets/RMD/2019-10-06-datatable_memory_files/fig2.png" style="display: block; margin: auto;" />
+<!--
+#### Aside: Why is `dplyr` so efficient in summarizing?
 
-When it comes to speed, `data.table` is either the quickest or similarly quick to one or both of the others. Notably, though, `dplyr` is usually very close, and often is base R as well for these three situations.
+`dplyr` summarizes data extremely efficiently. For example, we can look at getting means of `x` for each `grp`.
 
 
-Conclusion
-----------
+```r
+profmem::profmem(summarize(group_by(dt_mutate, grp), mean(x))) %>% 
+  data.frame %>% 
+  select(bytes, calls)
+profmem::profmem(dt_modify[, mean(x), by = "grp"]) %>% 
+  data.frame %>% 
+  select(bytes, calls)
+```
 
-These results are preliminary and interesting. I am curious as to how `dplyr` is so efficient when it comes to summarizing data by group. `data.table` is supposed to be quick (and it is) but both base R and `dplyr` aren't exactly slow for these situations. 
+Interestingly, much of the memory usage is due to `gforce()`---`data.table`s way of optimizing common functions (e.g. `mean()`, `median()`). If we force `data.table` to use the `base::mean()` function instead, it actually reduces memory use.
 
-Ultimately, the reasons why `dplyr` was so efficient, and why `data.table` is so good at filtering are things I'd love to learn more about. Be on the look out for future posts discussing this!
 
+```r
+bench::mark(dt_modify[, base::mean(x), by = "grp"], 
+            iterations = 25) %>% 
+  select(median, mem_alloc)
+```
+
+Ultimately, this is something I'd love to learn more about. Be on the look out for future posts discussing this!
+-->
 
 Session Information
 -------------------
 
 Note the package information for these analyses.
 
-{% highlight r %}
-sessioninfo::session_info()
-{% endhighlight %}
+    sessioninfo::session_info()
 
     ## ─ Session info ──────────────────────────────────────────────────────────
     ##  setting  value                       

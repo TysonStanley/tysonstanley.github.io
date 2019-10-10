@@ -210,7 +210,8 @@ p3 <- rbind(bench_base_s,
     scale_fill_viridis_d()
 
 library(cowplot)
-plot_grid(p1, p2, p3)
+plot_mem <- plot_grid(p1, p2, p3)
+ggsave("2019-10-06-datatable_memory_files/fig1.png", plot = plot_mem, height = 6, width = 6)
 ```
 
 Definitely some things worth noting across the approaches.
@@ -271,7 +272,8 @@ p6 <- rbind(bench_base_s,
     scale_y_log10()
 
 library(cowplot)
-plot_grid(p4, p5, p6)
+plot_speed <- plot_grid(p4, p5, p6)
+ggsave("2019-10-06-datatable_memory_files/fig2.png", plot = plot_speed, height = 6, width = 6)
 ```
 
 
