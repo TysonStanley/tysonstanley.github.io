@@ -74,7 +74,7 @@ We’ll use the following data table for this post.
     ##  999999:   1 -1.78073054 0.51904927
     ## 1000000:   3 -0.56124894 0.29423306
 
-It is roughly 20 MB and has an address of 0x7fa06de29e00. We won’t be
+It is roughly 20 MB and has an address of 0x7fcf4fcc0800. We won’t be
 using this address later on because we’ll be making copies of this data
 table, but note that an object has a size and an address on your
 computer.
@@ -153,17 +153,17 @@ The following benchmarking tests each situation for the three
 approaches.
 
     # Adding a variable
-    bench_base_m  <- bench::mark(base_mutate(df), iterations = 25)
-    bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 25)
-    bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 25)
+    bench_base_m  <- bench::mark(base_mutate(df), iterations = 50)
+    bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 50)
+    bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 50)
     # Filtering rows
-    bench_base_f  <- bench::mark(base_filter(df), iterations = 25)
-    bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 25)
-    bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 25)
+    bench_base_f  <- bench::mark(base_filter(df), iterations = 50)
+    bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 50)
+    bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 50)
     # Summarizing by group
-    bench_base_s  <- bench::mark(base_summarize(df), iterations = 25)
-    bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 25)
-    bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 25)
+    bench_base_s  <- bench::mark(base_summarize(df), iterations = 50)
+    bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 50)
+    bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 50)
 
 Memory Usage (Efficiency)
 -------------------------

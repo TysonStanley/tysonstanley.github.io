@@ -177,17 +177,17 @@ approaches.
 
 {% highlight r %}
 # Adding a variable
-bench_base_m  <- bench::mark(base_mutate(df), iterations = 25)
-bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 25)
-bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 25)
+bench_base_m  <- bench::mark(base_mutate(df), iterations = 50)
+bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 50)
+bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 50)
 # Filtering rows
-bench_base_f  <- bench::mark(base_filter(df), iterations = 25)
-bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 25)
-bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 25)
+bench_base_f  <- bench::mark(base_filter(df), iterations = 50)
+bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 50)
+bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 50)
 # Summarizing by group
-bench_base_s  <- bench::mark(base_summarize(df), iterations = 25)
-bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 25)
-bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 25)
+bench_base_s  <- bench::mark(base_summarize(df), iterations = 50)
+bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 50)
+bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 50)
 {% endhighlight %}
 
 Memory Usage (Efficiency)
