@@ -23,7 +23,8 @@ chapter](http://adv-r.had.co.nz/memory.html).
 I want to emphasize that this post is not to say one approach is better
 than another. My opinion is **use what works for you**. Ultimately, this 
 is why I am trying to understand the basic behavior of `data.table`,
-`dplyr`, and base R to do a basic data manipulation.
+`dplyr`, and base R to do basic data manipulation---to understand
+when different tools are going to be more useful to me.
 
 Throughout this post, I use the terms **efficient** and **speed**.
 
