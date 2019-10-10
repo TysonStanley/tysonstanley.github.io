@@ -54,27 +54,27 @@ Example Data
 
 We’ll use the following data table for this post.
 
-    dt <- data.table(
+    d <- data.table(
       grp = sample(c(1,2,3), size = 1e6, replace = TRUE) %>% factor,
       x = rnorm(1e6),
       y = runif(1e6)
     )
-    dt
+    d
 
-    ##          grp           x          y
-    ##       1:   1 -0.38947156 0.54057612
-    ##       2:   2 -1.30538661 0.39913045
-    ##       3:   1 -1.31999432 0.31704868
-    ##       4:   1 -0.50988678 0.99807764
-    ##       5:   3  1.95336283 0.14378685
-    ##      ---                           
-    ##  999996:   1 -0.51576465 0.49866080
-    ##  999997:   1  0.97193922 0.07174214
-    ##  999998:   1 -0.06402822 0.98004497
-    ##  999999:   1 -1.78073054 0.51904927
-    ## 1000000:   3 -0.56124894 0.29423306
+    ##          grp          x         y
+    ##       1:   2  0.2558379 0.2034364
+    ##       2:   2 -0.8886153 0.4684875
+    ##       3:   1  0.4724519 0.6850357
+    ##       4:   3  0.7360537 0.4890217
+    ##       5:   2  0.6855063 0.6964860
+    ##      ---                         
+    ##  999996:   1  2.1008965 0.3624327
+    ##  999997:   1  2.2423628 0.2595716
+    ##  999998:   2  1.5314115 0.1102460
+    ##  999999:   3 -1.6086973 0.2679477
+    ## 1000000:   1  1.2518419 0.6566943
 
-It is roughly 20 MB and has an address of 0x7fd481204000. We won’t be
+It is roughly 20 MB and has an address of 0x7f80f0f91000. We won’t be
 using this address later on because we’ll be making copies of this data
 table, but note that an object has a size and an address on your
 computer.
@@ -133,7 +133,7 @@ functions.
       data[grp == 1]
     }
     dt_summarize <- function(data){
-      data[, mean(x), by = "grp"]
+      data[, mean(x), keyby = grp]
     }
 
 Copies to Benchmark
@@ -142,9 +142,9 @@ Copies to Benchmark
 The data below are copied in order to make the benchmarking more
 comparable.
 
-    df <- copy(dt) %>% as.data.frame()
-    tbl <- copy(dt) %>% as_tibble()
-    dt <- copy(dt)
+    df <- copy(d) %>% as.data.frame()
+    tbl <- copy(d) %>% as_tibble()
+    dt <- copy(d)
 
 Benchmarking
 ------------
@@ -183,6 +183,40 @@ Speed
 
 Below, we next look at the speed
 
+### Update: What if we sort first?
+
+Michael linked the following post by Brodie, reminding me of the drastic
+effects sorting can have on the speed of the data manipulations.
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+see also:<a href="https://t.co/MMENfBEP2g">https://t.co/MMENfBEP2g</a>
+</p>
+— Michael Chirico (@michael\_chirico)
+<a href="https://twitter.com/michael_chirico/status/1182314187457851393?ref_src=twsrc%5Etfw">October
+10, 2019</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+So, let’s sort the data first and see what changes.
+
+    df <- copy(d) %>% as.data.frame() %>% .[order(.$grp), ]
+    tbl <- copy(d) %>% as_tibble() %>% arrange(grp)
+    dt <- copy(d)
+    setkey(dt, grp)
+
+    # Adding a variable
+    bench_base_m  <- bench::mark(base_mutate(df), iterations = 50)
+    bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 50)
+    bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 50)
+    # Filtering rows
+    bench_base_f  <- bench::mark(base_filter(df), iterations = 50)
+    bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 50)
+    bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 50)
+    # Summarizing by group
+    bench_base_s  <- bench::mark(base_summarize(df), iterations = 50)
+    bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 50)
+    bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 50)
+
 <!--
 #### Aside: Why is `dplyr` so efficient in summarizing?
 
@@ -209,7 +243,6 @@ bench::mark(dt_modify[, base::mean(x), by = "grp"],
 
 Ultimately, this is something I'd love to learn more about. Be on the look out for future posts discussing this!
 -->
-
 Session Information
 -------------------
 
@@ -219,7 +252,7 @@ Note the package information for these analyses.
 
     ## ─ Session info ──────────────────────────────────────────────────────────
     ##  setting  value                       
-    ##  version  R version 3.6.1 (2019-07-05)
+    ##  version  R version 3.5.2 (2018-12-20)
     ##  os       macOS Mojave 10.14.6        
     ##  system   x86_64, darwin15.6.0        
     ##  ui       X11                         
@@ -231,52 +264,54 @@ Note the package information for these analyses.
     ## 
     ## ─ Packages ──────────────────────────────────────────────────────────────
     ##  package     * version date       lib source        
-    ##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)
-    ##  backports     1.1.5   2019-10-02 [1] CRAN (R 3.6.0)
-    ##  beeswarm      0.2.3   2016-04-25 [1] CRAN (R 3.6.0)
-    ##  bench       * 1.0.4   2019-09-06 [1] CRAN (R 3.6.0)
-    ##  cli           1.1.0   2019-03-19 [1] CRAN (R 3.6.0)
-    ##  colorspace    1.4-1   2019-03-18 [1] CRAN (R 3.6.0)
-    ##  cowplot     * 1.0.0   2019-07-11 [1] CRAN (R 3.6.0)
-    ##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.6.0)
-    ##  data.table  * 1.12.4  2019-10-03 [1] CRAN (R 3.6.1)
-    ##  digest        0.6.21  2019-09-20 [1] CRAN (R 3.6.0)
-    ##  dplyr       * 0.8.3   2019-07-04 [1] CRAN (R 3.6.0)
-    ##  ellipsis      0.3.0   2019-09-20 [1] CRAN (R 3.6.0)
-    ##  evaluate      0.14    2019-05-28 [1] CRAN (R 3.6.0)
-    ##  ggbeeswarm    0.6.0   2017-08-07 [1] CRAN (R 3.6.0)
-    ##  ggplot2     * 3.2.1   2019-08-10 [1] CRAN (R 3.6.0)
-    ##  glue          1.3.1   2019-03-12 [1] CRAN (R 3.6.0)
-    ##  gtable        0.3.0   2019-03-25 [1] CRAN (R 3.6.0)
-    ##  htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.6.0)
-    ##  knitr         1.25    2019-09-18 [1] CRAN (R 3.6.0)
-    ##  labeling      0.3     2014-08-23 [1] CRAN (R 3.6.0)
-    ##  lazyeval      0.2.2   2019-03-15 [1] CRAN (R 3.6.0)
-    ##  lifecycle     0.1.0   2019-08-01 [1] CRAN (R 3.6.0)
-    ##  lobstr      * 1.1.1   2019-07-02 [1] CRAN (R 3.6.0)
-    ##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)
-    ##  munsell       0.5.0   2018-06-12 [1] CRAN (R 3.6.0)
-    ##  pillar        1.4.2   2019-06-29 [1] CRAN (R 3.6.0)
-    ##  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.6.0)
-    ##  profmem       0.5.0   2018-01-30 [1] CRAN (R 3.6.0)
-    ##  purrr         0.3.2   2019-03-15 [1] CRAN (R 3.6.0)
-    ##  R6            2.4.0   2019-02-14 [1] CRAN (R 3.6.0)
-    ##  Rcpp          1.0.2   2019-07-25 [1] CRAN (R 3.6.0)
-    ##  rlang         0.4.0   2019-06-25 [1] CRAN (R 3.6.0)
-    ##  rmarkdown     1.16    2019-10-01 [1] CRAN (R 3.6.0)
-    ##  scales        1.0.0   2018-08-09 [1] CRAN (R 3.6.0)
-    ##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.6.0)
-    ##  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.6.0)
-    ##  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.6.0)
-    ##  tibble        2.1.3   2019-06-06 [1] CRAN (R 3.6.0)
-    ##  tidyr         1.0.0   2019-09-11 [1] CRAN (R 3.6.0)
-    ##  tidyselect    0.2.5   2018-10-11 [1] CRAN (R 3.6.0)
-    ##  vctrs         0.2.0   2019-07-05 [1] CRAN (R 3.6.0)
-    ##  vipor         0.4.5   2017-03-22 [1] CRAN (R 3.6.0)
-    ##  viridisLite   0.3.0   2018-02-01 [1] CRAN (R 3.6.0)
-    ##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)
-    ##  xfun          0.10    2019-10-01 [1] CRAN (R 3.6.0)
-    ##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.6.0)
-    ##  zeallot       0.1.0   2018-01-28 [1] CRAN (R 3.6.0)
+    ##  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.5.2)
+    ##  backports     1.1.5   2019-10-02 [1] CRAN (R 3.5.2)
+    ##  beeswarm      0.2.3   2016-04-25 [1] CRAN (R 3.5.0)
+    ##  bench       * 1.0.4   2019-09-06 [1] CRAN (R 3.5.2)
+    ##  cli           1.1.0   2019-03-19 [1] CRAN (R 3.5.2)
+    ##  colorspace    1.4-1   2019-03-18 [1] CRAN (R 3.5.2)
+    ##  cowplot     * 1.0.0   2019-07-11 [1] CRAN (R 3.5.2)
+    ##  crayon        1.3.4   2017-09-16 [1] CRAN (R 3.5.0)
+    ##  data.table  * 1.12.2  2019-04-07 [1] CRAN (R 3.5.2)
+    ##  digest        0.6.21  2019-09-20 [1] CRAN (R 3.5.2)
+    ##  dplyr       * 0.8.3   2019-07-04 [1] CRAN (R 3.5.2)
+    ##  ellipsis      0.3.0   2019-09-20 [1] CRAN (R 3.5.2)
+    ##  evaluate      0.14    2019-05-28 [1] CRAN (R 3.5.2)
+    ##  ggbeeswarm    0.6.0   2017-08-07 [1] CRAN (R 3.5.0)
+    ##  ggplot2     * 3.2.1   2019-08-10 [1] CRAN (R 3.5.2)
+    ##  glue          1.3.1   2019-03-12 [1] CRAN (R 3.5.2)
+    ##  gtable        0.3.0   2019-03-25 [1] CRAN (R 3.5.2)
+    ##  here          0.1     2017-05-28 [1] CRAN (R 3.5.0)
+    ##  htmltools     0.4.0   2019-10-04 [1] CRAN (R 3.5.2)
+    ##  knitr         1.25    2019-09-18 [1] CRAN (R 3.5.2)
+    ##  labeling      0.3     2014-08-23 [1] CRAN (R 3.5.0)
+    ##  lazyeval      0.2.2   2019-03-15 [1] CRAN (R 3.5.2)
+    ##  lifecycle     0.1.0   2019-08-01 [1] CRAN (R 3.5.2)
+    ##  lobstr      * 1.1.1   2019-07-02 [1] CRAN (R 3.5.2)
+    ##  magrittr      1.5     2014-11-22 [1] CRAN (R 3.5.0)
+    ##  munsell       0.5.0   2018-06-12 [1] CRAN (R 3.5.0)
+    ##  pillar        1.4.2   2019-06-29 [1] CRAN (R 3.5.2)
+    ##  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.5.2)
+    ##  profmem       0.5.0   2018-01-30 [1] CRAN (R 3.5.0)
+    ##  purrr         0.3.2   2019-03-15 [1] CRAN (R 3.5.2)
+    ##  R6            2.4.0   2019-02-14 [1] CRAN (R 3.5.2)
+    ##  Rcpp          1.0.2   2019-07-25 [1] CRAN (R 3.5.2)
+    ##  rlang         0.4.0   2019-06-25 [1] CRAN (R 3.5.2)
+    ##  rmarkdown     1.16    2019-10-01 [1] CRAN (R 3.5.2)
+    ##  rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.5.0)
+    ##  scales        1.0.0   2018-08-09 [1] CRAN (R 3.5.0)
+    ##  sessioninfo   1.1.1   2018-11-05 [1] CRAN (R 3.5.0)
+    ##  stringi       1.4.3   2019-03-12 [1] CRAN (R 3.5.2)
+    ##  stringr       1.4.0   2019-02-10 [1] CRAN (R 3.5.2)
+    ##  tibble        2.1.3   2019-06-06 [1] CRAN (R 3.5.2)
+    ##  tidyr         1.0.0   2019-09-11 [1] CRAN (R 3.5.2)
+    ##  tidyselect    0.2.5   2018-10-11 [1] CRAN (R 3.5.0)
+    ##  vctrs         0.2.0   2019-07-05 [1] CRAN (R 3.5.2)
+    ##  vipor         0.4.5   2017-03-22 [1] CRAN (R 3.5.0)
+    ##  viridisLite   0.3.0   2018-02-01 [1] CRAN (R 3.5.0)
+    ##  withr         2.1.2   2018-03-15 [1] CRAN (R 3.5.0)
+    ##  xfun          0.10    2019-10-01 [1] CRAN (R 3.5.2)
+    ##  yaml          2.2.0   2018-07-25 [1] CRAN (R 3.5.0)
+    ##  zeallot       0.1.0   2018-01-28 [1] CRAN (R 3.5.0)
     ## 
-    ## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
+    ## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library

@@ -48,6 +48,7 @@ both `dplyr` and `data.table` perform very well.
 
 If you want the specifics, continue on :)
 
+
 Packages
 --------
 
@@ -73,12 +74,12 @@ Example Data
 We’ll use the following data table for this post.
 
 {% highlight r %}
-dt <- data.table(
+d <- data.table(
   grp = sample(c(1,2,3), size = 1e6, replace = TRUE) %>% factor,
   x = rnorm(1e6),
   y = runif(1e6)
 )
-dt
+d
 {% endhighlight %}
 
     ##          grp           x          y
@@ -169,9 +170,9 @@ The data below are copied in order to make the benchmarking more
 comparable.
 
 {% highlight r %}
-df <- copy(dt) %>% as.data.frame()
-tbl <- copy(dt) %>% as_tibble()
-dt <- copy(dt)
+df <- copy(d) %>% as.data.frame()
+tbl <- copy(d) %>% as_tibble()
+dt <- copy(d)
 {% endhighlight %}
 
 Benchmarking
@@ -213,12 +214,49 @@ Definitely some things worth noting across the approaches.
 Speed
 -----
 
-Below, we next look at the speed
+Below, we next look at the speed of each approach. Notably, this is on data 
+that has *not* been sorted in any way prior to the data manipulations.
 
 <img src="{{ site.baseurl }}/assets/RMD/2019-10-06-datatable_memory_files/fig2.png" style="display: block; margin: auto;" />
 
-When it comes to speed, `data.table` is either the quickest or similarly quick to one or both of the others. Notably, though, `dplyr` is usually very close, and often is base R as well for these three situations.
+When it comes to speed, `data.table` is either the quickest or similarly quick to one or both of the others. 
+Notably, though, `dplyr` is usually very close, and often is base R as well for these three situations.
+However, in light of these findings, one should consider the way the output is organized. Base R (using
+`tapply()`) provides a named vector while `data.table` and `dplyr` provide data frames (or extensions).
+This may play a role in the speed results we see here.
 
+### Update: What if we sort first?
+
+Michael linked the following post by Brodie, reminding me of the drastic effects sorting can have on the speed of the data manipulations. 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">see also:<a href="https://t.co/MMENfBEP2g">https://t.co/MMENfBEP2g</a></p>&mdash; Michael Chirico (@michael_chirico) <a href="https://twitter.com/michael_chirico/status/1182314187457851393?ref_src=twsrc%5Etfw">October 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+So, let's sort the data first and see what changes.
+
+{% highlight r %}
+df <- copy(d) %>% as.data.frame() %>% .[order(.$grp), ]
+tbl <- copy(d) %>% as_tibble() %>% arrange(grp)
+dt <- copy(d)
+setkey(dt, grp)
+
+# Adding a variable
+bench_base_m  <- bench::mark(base_mutate(df), iterations = 50)
+bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 50)
+bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 50)
+# Filtering rows
+bench_base_f  <- bench::mark(base_filter(df), iterations = 50)
+bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 50)
+bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 50)
+# Summarizing by group
+bench_base_s  <- bench::mark(base_summarize(df), iterations = 50)
+bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 50)
+bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 50)
+{% endhighlight %}
+
+<img src="{{ site.baseurl }}/assets/RMD/2019-10-06-datatable_memory_files/fig3.png" style="display: block; margin: auto;" />
+
+Both filtering and summarizing are faster for `data.table` 
+without much change for base R or `dplyr` approaches.
 
 Conclusion
 ----------

@@ -57,15 +57,15 @@ set.seed(84322)
 We'll use the following data table for this post.
 
 ```{r}
-dt <- data.table(
+d <- data.table(
   grp = sample(c(1,2,3), size = 1e6, replace = TRUE) %>% factor,
   x = rnorm(1e6),
   y = runif(1e6)
 )
-dt
+d
 ```
 
-It is roughly `r round(obj_size(dt)/1e6, 1)` MB and has an address of `r obj_addr(dt)`. We won't be using this address later on because we'll be making copies of this data table, but note that an object has a size and an address on your computer.
+It is roughly `r round(obj_size(d)/1e6, 1)` MB and has an address of `r obj_addr(d)`. We won't be using this address later on because we'll be making copies of this data table, but note that an object has a size and an address on your computer.
 
 ## Comparisons
 
@@ -120,7 +120,7 @@ dt_filter <- function(data){
   data[grp == 1]
 }
 dt_summarize <- function(data){
-  data[, mean(x), by = "grp"]
+  data[, mean(x), keyby = grp]
 }
 ```
 
@@ -129,9 +129,9 @@ dt_summarize <- function(data){
 The data below are copied in order to make the benchmarking more comparable.
 
 ```{r}
-df <- copy(dt) %>% as.data.frame()
-tbl <- copy(dt) %>% as_tibble()
-dt <- copy(dt)
+df <- copy(d) %>% as.data.frame()
+tbl <- copy(d) %>% as_tibble()
+dt <- copy(d)
 ```
 
 
@@ -211,7 +211,7 @@ p3 <- rbind(bench_base_s,
 
 library(cowplot)
 plot_mem <- plot_grid(p1, p2, p3)
-ggsave("2019-10-06-datatable_memory_files/fig1.png", plot = plot_mem, height = 6, width = 6)
+ggsave(here::here("assets/RMD/2019-10-06-datatable_memory_files/fig1.png"), plot = plot_mem, height = 6, width = 6)
 ```
 
 Definitely some things worth noting across the approaches.
@@ -273,7 +273,87 @@ p6 <- rbind(bench_base_s,
 
 library(cowplot)
 plot_speed <- plot_grid(p4, p5, p6)
-ggsave("2019-10-06-datatable_memory_files/fig2.png", plot = plot_speed, height = 6, width = 6)
+ggsave(here::here("assets/RMD/2019-10-06-datatable_memory_files/fig2.png"), plot = plot_speed, height = 6, width = 6)
+```
+
+
+### Update: What if we sort first?
+
+Michael linked the following post by Brodie, reminding me of the drastic effects sorting can have on the speed of the data manipulations. 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">see also:<a href="https://t.co/MMENfBEP2g">https://t.co/MMENfBEP2g</a></p>&mdash; Michael Chirico (@michael_chirico) <a href="https://twitter.com/michael_chirico/status/1182314187457851393?ref_src=twsrc%5Etfw">October 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+So, let's sort the data first and see what changes.
+
+```{r}
+df <- copy(d) %>% as.data.frame() %>% .[order(.$grp), ]
+tbl <- copy(d) %>% as_tibble() %>% arrange(grp)
+dt <- copy(d)
+setkey(dt, grp)
+
+# Adding a variable
+bench_base_m  <- bench::mark(base_mutate(df), iterations = 50)
+bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 50)
+bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 50)
+# Filtering rows
+bench_base_f  <- bench::mark(base_filter(df), iterations = 50)
+bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 50)
+bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 50)
+# Summarizing by group
+bench_base_s  <- bench::mark(base_summarize(df), iterations = 50)
+bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 50)
+bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 50)
+```
+
+```{r, echo = FALSE, fig.align='center', fig.width=6, fig.height=6}
+p7 <- rbind(bench_base_m,
+            bench_dplyr_m,
+            bench_dt_m) %>% 
+  pull(time) %>% 
+  setNames(c("base R", "dplyr", "data.table")) %>% 
+  bind_rows() %>% 
+  tidyr::gather() %>% 
+  ggplot(aes(key, value, color = key)) +
+    ggbeeswarm::geom_beeswarm() +
+    labs(x = "",
+         y = "Time (sec)",
+         subtitle = "Adding a Variable") +
+    scale_color_viridis_d() +
+    scale_y_log10()
+
+p8 <- rbind(bench_base_f,
+            bench_dplyr_f,
+            bench_dt_f) %>% 
+  pull(time) %>% 
+  setNames(c("base R", "dplyr", "data.table")) %>% 
+  bind_rows() %>% 
+  tidyr::gather() %>% 
+  ggplot(aes(key, value, color = key)) +
+    ggbeeswarm::geom_beeswarm() +
+    labs(x = "",
+         y = "Time (sec)",
+         subtitle = "Filtering Rows") +
+    scale_color_viridis_d() +
+    scale_y_log10()
+
+p9 <- rbind(bench_base_s,
+            bench_dplyr_s,
+            bench_dt_s) %>% 
+  pull(time) %>% 
+  setNames(c("base R", "dplyr", "data.table")) %>% 
+  bind_rows() %>% 
+  tidyr::gather() %>% 
+  ggplot(aes(key, value, color = key)) +
+    ggbeeswarm::geom_beeswarm() +
+    labs(x = "",
+         y = "Time (sec)",
+         subtitle = "Summarizing by Group") +
+    scale_color_viridis_d() +
+    scale_y_log10()
+
+library(cowplot)
+plot_speed <- plot_grid(p7, p8, p9)
+ggsave(here::here("assets/RMD/2019-10-06-datatable_memory_files/fig3.png"), plot = plot_speed, height = 6, width = 6)
 ```
 
 
