@@ -1,8 +1,8 @@
 ---
 title: "Understanding `data.table` a little better"
 output: 
-  html_document: default
   md_document: default
+  html_document: default
 editor_options: 
   chunk_output_type: console
 ---
@@ -17,6 +17,23 @@ As of late, I have used the `data.table` package to do some of my data wrangling
 
 This post is designed to help me understand more about how `data.table` works in regards to memory and speed. This will assess the *modify-by-reference* behavior as compared to the modify-by-copy that Hadley references in Advanced R's [memory chapter](http://adv-r.had.co.nz/memory.html). 
 
+Throughout this post, I use the terms **efficient** and **speed**. 
+
+1. *Efficient*: refers to how much memory is used to perform a function.
+2. *Speed*: refers to how quickly the function runs.
+
+We'll be assessing these two things to understand more about `data.table` and `dplyr` (as well as base R).
+
+## TL;DR
+
+In cases of adding a variable, filtering rows, and summarizing data, both `dplyr` and `data.table` perform very well. 
+
+1. Base R, `dplyr`, and `data.table` perform similarly when adding a single variable to an already copied data set.
+2. `data.table` is very efficient and quick in filtering.
+3. `dplyr` shows great memory efficiency in summarizing, while `data.table` is generally the fastest approach.
+
+If you want the specifics, continue on :)
+
 ## Packages
 
 First, we'll use the following packages to further understand R, `data.table`, and `dplyr`.
@@ -28,6 +45,12 @@ library(dplyr)      # compare it to data.table
 library(lobstr)     # assess the process of R functions
 ```
 
+And we'll set a random number seed.
+
+```{r}
+set.seed(84322)
+```
+
 
 ## Example Data
 
@@ -35,7 +58,7 @@ We'll use the following data table for this post.
 
 ```{r}
 dt <- data.table(
-  grp = rbinom(1e6, 1, .5) %>% factor,
+  grp = sample(c(1,2,3), size = 1e6, replace = TRUE) %>% factor,
   x = rnorm(1e6),
   y = runif(1e6)
 )
@@ -44,243 +67,220 @@ dt
 
 It is roughly `r round(obj_size(dt)/1e6, 1)` MB and has an address of `r obj_addr(dt)`. We won't be using this address later on because we'll be making copies of this data table, but note that an object has a size and an address on your computer.
 
-## Memory Usage
+## Comparisons
 
-The next few sections, I will look at the behavior of `data.table` regarding:
+Below, I will look at the behavior of `data.table` (compared to base R and `dplyr`) regarding:
 
 1. Adding a variable
 2. Filtering rows
 3. Summarizing data
 
-### Adding a variable
+Let's start with the base approaches.
 
-To better understand `data.table`'s behavior regarding adding a variable, let's do four different ways of adding a variable to a data frame.
+### Base R
 
-1. Use the base R way of adding a variable and filtering a variable. 
-2. Use the `dplyr::mutate()` or `dplyr::filter()` function.
-3. Use `data.table::copy()` to make a deep copy of the data table and then modify by reference.
-4. Use the modify-by-reference inherent with `:=` in `data.table` or by using the `i` argument to filter.
-
-Below, I grab each way and make it an R expression to be evaluated later.
+The following functions perform, in order, 1) adding a variable, 2) filtering rows, and 3) summarizing data by group using base functionality.
 
 ```{r}
-based     <- quote({dt_based$z = rnorm(1e6); dt_based})
-mutated   <- quote(dt_mutate <- mutate(dt_mutate, z = rnorm(1e6)))
-copied    <- quote(dt_copied <- copy(dt)[, z := rnorm(1e6)])
-modified  <- quote(dt_modify[, z := rnorm(1e6)])
+base_mutate <- function(data){
+  data$z <- rnorm(1e6)
+  data
+}
+base_filter <- function(data){
+  data[data$grp == 1, ]
+}
+base_summarize <- function(data){
+  tapply(data$x, data$grp, mean)
+}
 ```
 
-Because both `based`, `mutated`, and `modify` will change the original `dt` data table, let's create a copy for each to use and see their corresponding addresses. Note that both change from the original `dt` object since it is fully copied now.
+### `dplyr`
+
+Again, the following functions perform, in order, 1) adding a variable, 2) filtering rows, and 3) summarizing data by group using `dplyr` functions.
 
 ```{r}
-dt_based <- copy(dt) %>% as.data.frame()
-dt_mutate <- copy(dt) %>% as_tibble()
-dt_modify <- copy(dt)
+dplyr_mutate <- function(data){
+  mutate(data, z = rnorm(1e6))
+}
+dplyr_filter <- function(data){
+  filter(data, grp == 1)
+}
+dplyr_summarize <- function(data){
+  summarize(group_by(data, grp), mean(x))
+}
 ```
 
-
-```{r, echo = FALSE}
-data.table(` ` = c("Original", "New Base", "New Mutate", "New Modify"),
-           Address = c(obj_addr(dt), 
-                       obj_addr(dt_based), 
-                       obj_addr(dt_mutate), 
-                       obj_addr(dt_modify)))
-```
-
-> Importantly, `copy()` does something very different than just assigning to another name. `copy()` creates a whole new object while assigning to another name just creates another name pointing to the same object (until one or the other is modified). 
-
-This idea is very important to understanding `data.table`. For example, the following lines do different things. We can see this by looking at their addresses, where `just_pointing_to_dt` is the same location and the same object. The `copied_object` is an entirely different object with a different address. (Hadley covers this in depth in Advanced R.)
+### `data.table`
 
 ```{r}
-copied_object <- copy(dt)
-just_pointing_to_dt <- dt
+dt_mutate <- function(data){
+  data[, z := rnorm(1e6)]
+}
+dt_filter <- function(data){
+  data[grp == 1]
+}
+dt_summarize <- function(data){
+  data[, mean(x), by = "grp"]
+}
 ```
 
+## Copies to Benchmark
+
+The data below are copied in order to make the benchmarking more comparable.
 
 ```{r}
-data.table(` ` = c("dt", "Just Pointing to dt", "Copied Object"),
-           Address = c(obj_addr(dt), 
-                       obj_addr(just_pointing_to_dt),
-                       obj_addr(copied_object)))
+df <- copy(dt) %>% as.data.frame()
+tbl <- copy(dt) %>% as_tibble()
+dt <- copy(dt)
 ```
 
-So this means, at this point, `dt` and `justing_pointing_to_dt` are both pointing to the same object. Normally, when you then go and do something to either one, like adding a variable, R then makes a copy. This means it will now have a different address since it is now a different (copied) object, as shown below.
+
+## Benchmarking
+
+The following benchmarking tests each situation for the three approaches.
 
 ```{r}
-just_pointing_to_dt$new_var <- rnorm(1e6)
-
-data.table(` ` = c("dt", "just_pointing_to_dt"),
-           Address = c(obj_addr(dt), 
-                       obj_addr(just_pointing_to_dt)))
+# Adding a variable
+bench_base_m  <- bench::mark(base_mutate(df), iterations = 25)
+bench_dplyr_m <- bench::mark(dplyr_mutate(tbl), iterations = 25)
+bench_dt_m    <- bench::mark(dt_mutate(dt), iterations = 25)
+# Filtering rows
+bench_base_f  <- bench::mark(base_filter(df), iterations = 25)
+bench_dplyr_f <- bench::mark(dplyr_filter(tbl), iterations = 25)
+bench_dt_f    <- bench::mark(dt_filter(dt), iterations = 25)
+# Summarizing by group
+bench_base_s  <- bench::mark(base_summarize(df), iterations = 25)
+bench_dplyr_s <- bench::mark(dplyr_summarize(tbl), iterations = 25)
+bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 25)
 ```
 
-Interestingly, this makes what I just did slower. Because not only what I telling R to create a new variable, but it was also making a copy of the object. However, this behavior helps us not accidentally adjust `dt` by adjusting `just_pointing_to_dt`. So now we have two separate objects, where we had just started with one before we made any adjustments.
+## Memory Usage (Efficiency)
 
-So first, let's look at the relative speed and memory use of each of the four approaches I mentioned earlier.
+We will visualize the memory allocated for each approach, using `ggplot2` and `cowplot` packages.
 
-```{r}
-bbased <- bench::mark(eval(based), iterations = 10)
-bmutat <- bench::mark(eval(mutated), iterations = 10)
-bcopy  <- bench::mark(eval(copied), iterations = 10)
-bmodif <- bench::mark(eval(modified), iterations = 10)
+```{r, echo = FALSE, fig.align='center', fig.width=6, fig.height=6}
+library(ggplot2)
+theme_set(theme_minimal() +
+          theme(panel.grid.major.x = element_blank(),
+                legend.position = 'none'))
+
+p1 <- rbind(bench_base_m,
+            bench_dplyr_m,
+            bench_dt_m) %>% 
+  mutate(expression = c("base R", "dplyr::mutate", "data.table")) %>% 
+  mutate(mem_alloc = as.numeric(mem_alloc)/1024000) %>% 
+  ggplot(aes(expression, mem_alloc, fill = expression)) +
+    geom_bar(stat = "identity",
+             alpha = .8) +
+    geom_text(aes(label = round(mem_alloc, 2)),
+              nudge_y = 1) +
+    labs(x = "",
+         y = "Memory Used (MB)",
+         subtitle = "Adding a Variable") +
+    scale_fill_viridis_d()
+
+p2 <- rbind(bench_base_f,
+            bench_dplyr_f,
+            bench_dt_f) %>% 
+  mutate(expression = c("base R", "dplyr::mutate", "data.table")) %>% 
+  mutate(mem_alloc = as.numeric(mem_alloc)/1024000) %>% 
+  ggplot(aes(expression, mem_alloc, fill = expression)) +
+    geom_bar(stat = "identity",
+             alpha = .8) +
+    geom_text(aes(label = round(mem_alloc, 2)),
+              nudge_y = 4) +
+    labs(x = "",
+         y = "Memory Used (MB)",
+         subtitle = "Filtering Rows") +
+    scale_fill_viridis_d()
+
+p3 <- rbind(bench_base_s,
+            bench_dplyr_s,
+            bench_dt_s) %>% 
+  mutate(expression = c("base R", "dplyr::mutate", "data.table")) %>% 
+  mutate(mem_alloc = as.numeric(mem_alloc)/1024000) %>% 
+  ggplot(aes(expression, mem_alloc, fill = expression)) +
+    geom_bar(stat = "identity",
+             alpha = .8) +
+    geom_text(aes(label = round(mem_alloc, 2)),
+              nudge_y = 2) +
+    labs(x = "",
+         y = "Memory Used (MB)",
+         subtitle = "Summarizing by Group") +
+    scale_fill_viridis_d()
+
+library(cowplot)
+plot_grid(p1, p2, p3)
 ```
 
-Results from these suggest no real differences in terms of memory and speed for base R, mutate, and modify-in-place. The copy uses more memory because it is making a full copy of the data.
+Definitely some things worth noting across the approaches.
 
-```{r, echo = FALSE}
-rbind(bbased,
-      bmutat,
-      bcopy,
-      bmodif) %>% 
-  select(median, mem_alloc, result)
+1. There are no meaningful differences when adding a variable.
+2. `data.table` is the most efficient when filtering rows.
+3. `dplyr` is far more efficient when summarizing by group while `data.table` was the least efficient.
+
+
+## Speed
+
+Below, we next look at the speed
+
+```{r, echo = FALSE, fig.align='center', fig.width=6, fig.height=6}
+p4 <- rbind(bench_base_m,
+            bench_dplyr_m,
+            bench_dt_m) %>% 
+  pull(time) %>% 
+  setNames(c("base R", "dplyr::mutate", "data.table")) %>% 
+  bind_rows() %>% 
+  tidyr::gather() %>% 
+  ggplot(aes(key, value, color = key)) +
+    ggbeeswarm::geom_beeswarm() +
+    labs(x = "",
+         y = "Time",
+         subtitle = "Adding a Variable") +
+    scale_color_viridis_d() +
+    scale_y_log10()
+
+p5 <- rbind(bench_base_f,
+            bench_dplyr_f,
+            bench_dt_f) %>% 
+  pull(time) %>% 
+  setNames(c("base R", "dplyr::mutate", "data.table")) %>% 
+  bind_rows() %>% 
+  tidyr::gather() %>% 
+  ggplot(aes(key, value, color = key)) +
+    ggbeeswarm::geom_beeswarm() +
+    labs(x = "",
+         y = "Time",
+         subtitle = "Filtering Rows") +
+    scale_color_viridis_d() +
+    scale_y_log10()
+
+p6 <- rbind(bench_base_s,
+            bench_dplyr_s,
+            bench_dt_s) %>% 
+  pull(time) %>% 
+  setNames(c("base R", "dplyr::mutate", "data.table")) %>% 
+  bind_rows() %>% 
+  tidyr::gather() %>% 
+  ggplot(aes(key, value, color = key)) +
+    ggbeeswarm::geom_beeswarm() +
+    labs(x = "",
+         y = "Time",
+         subtitle = "Summarizing by Group") +
+    scale_color_viridis_d() +
+    scale_y_log10()
+
+library(cowplot)
+plot_grid(p4, p5, p6)
 ```
 
 
-
-### Filtering Rows
-
-Next, we show the behavior of the four approaches for filtering rows.
-
-```{r}
-based_filter   <- quote({dt_based[dt_based$grp == 1, ]})
-mutated_filter <- quote(dt_mutate <- filter(dt_mutate, grp == 1))
-copied_filter  <- quote(dt_copied <- copy(dt)[grp == 1])
-modify_filter  <- quote(dt_modify[grp == 1])
-```
-
-Again, we will create copies to make adjustments to.
-
-```{r}
-dt_based <- copy(dt) %>% as.data.frame()
-dt_mutate <- copy(dt) %>% as_tibble()
-dt_modify <- copy(dt)
-```
-
-So what happens when we filter rows using these three approaches? Well, each return the same data but they don't necessarily take up the same memory or take up the same amount of time. Overall, `dplyr::filter()` and `data.table` are both faster and more efficient than the base R approach. And, as before, the copy approach takes up the most memory and speed (not shocking).
-
-```{r}
-bbased_filter <- bench::mark(eval(based_filter), iterations = 10)
-bmutat_filter <- bench::mark(eval(mutated_filter), iterations = 10)
-bcopy_filter  <- bench::mark(eval(copied_filter), iterations = 10)
-bmodif_filter <- bench::mark(eval(modify_filter), iterations = 10)
-```
-
-```{r, echo = FALSE}
-rbind(bbased_filter,
-      bmutat_filter,
-      bcopy_filter,
-      bmodif_filter) %>% 
-  select(median, mem_alloc, result)
-```
-
-
-
-### Summarizing Data
-
-Finally, we show the behavior of the four approaches for summarizing data. First, we will simply take the mean of `x` by `grp` in each.
-
-```{r}
-based_mean   <- quote(tapply(dt_based$x, dt_based$grp, mean))
-mutated_mean <- quote(summarize(group_by(dt_mutate, grp), mean(x)))
-copied_mean  <- quote(dt_copied <- copy(dt)[, mean(x), by = "grp"])
-modify_mean  <- quote(dt_modify[, mean(x), by = "grp"])
-```
-
-Again, we will create copies to make adjustments to.
-
-```{r}
-dt_based <- copy(dt) %>% as.data.frame()
-dt_mutate <- copy(dt) %>% as_tibble()
-dt_modify <- copy(dt)
-```
-
-Overall, `dplyr::group_by() %>% dplyr::summarize()` is very efficient but slightly slower than `data.table`.
-
-```{r}
-bbased_mean <- bench::mark(eval(based_mean), iterations = 10)
-bmutat_mean <- bench::mark(eval(mutated_mean), iterations = 10)
-bcopy_mean  <- bench::mark(eval(copied_mean), iterations = 10)
-bmodif_mean <- bench::mark(eval(modify_mean), iterations = 10)
-```
-
-```{r, echo = FALSE}
-rbind(bbased_mean,
-      bmutat_mean,
-      bcopy_mean,
-      bmodif_mean) %>% 
-  select(median, mem_alloc, result)
-```
-
-What if we order the groups first?
-
-```{r}
-based_mean   <- quote(tapply(dt_based$x, dt_based$grp, mean))
-mutated_mean <- quote(summarize(group_by(dt_mutate, grp), mean(x)))
-copied_mean  <- quote(dt_copied <- copy(dt)[, mean(x), by = "grp"])
-modify_mean  <- quote(dt_modify[, mean(x), by = "grp"])
-```
-
-Again, we will create copies to make adjustments to.
-
-```{r}
-dt_based <- copy(dt) %>% as.data.frame() %>% .[order(.$grp), ]
-dt_mutate <- copy(dt) %>% as_tibble() %>% arrange(grp)
-dt_modify <- copy(dt)[order(grp)]
-```
-
-The `data.table` approach speeds up a bit while the others don't change. Again, though, `dplyr::group_by() %>% dplyr::summarize()` is very efficient compared to the others.
-
-```{r}
-bbased_mean <- bench::mark(eval(based_mean), iterations = 10)
-bmutat_mean <- bench::mark(eval(mutated_mean), iterations = 10)
-bcopy_mean  <- bench::mark(eval(copied_mean), iterations = 10)
-bmodif_mean <- bench::mark(eval(modify_mean), iterations = 10)
-```
-
-```{r, echo = FALSE}
-rbind(bbased_mean,
-      bmutat_mean,
-      bcopy_mean,
-      bmodif_mean) %>% 
-  select(median, mem_alloc, result)
-```
-
-Now let's summarize a group of variables; in this case, summarizing both `x` and `y` using loops. Since it is clear what `copy()` is doing, we won't make the comparison here.
-
-```{r}
-based_loop   <- quote(lapply(dt_based[, c("x", "y")], function(x) tapply(x, dt_based$grp, mean)))
-mutated_loop <- quote(summarize_all(group_by(dt_mutate, grp), mean))
-modify_loop  <- quote(dt_modify[, lapply(.SD, base::mean), by = "grp"])
-```
-
-Again, we will create copies to make adjustments to.
-
-```{r}
-dt_based <- copy(dt) %>% as.data.frame()
-dt_mutate <- copy(dt) %>% as_tibble()
-dt_modify <- copy(dt)
-```
-
-This shows the exact same pattern, with `dplyr::group_by() %>% dplyr::summarize()` being extremely efficient compared to the others while `data.table` is somewhat faster. 
-
-```{r}
-bbased_mean <- bench::mark(eval(based_loop), iterations = 10)
-bmutat_mean <- bench::mark(eval(mutated_loop), iterations = 10)
-bmodif_mean <- bench::mark(eval(modify_loop), iterations = 10)
-```
-
-```{r, echo = FALSE}
-rbind(bbased_mean,
-      bmutat_mean,
-      bmodif_mean) %>% 
-  select(median, mem_alloc, result)
-```
-
+<!--
 #### Aside: Why is `dplyr` so efficient in summarizing?
 
 `dplyr` summarizes data extremely efficiently. For example, we can look at getting means of `x` for each `grp`.
 
-```{r}
+```{r, eval=FALSE}
 profmem::profmem(summarize(group_by(dt_mutate, grp), mean(x))) %>% 
   data.frame %>% 
   select(bytes, calls)
@@ -291,27 +291,22 @@ profmem::profmem(dt_modify[, mean(x), by = "grp"]) %>%
 
 Interestingly, much of the memory usage is due to `gforce()`---`data.table`s way of optimizing common functions (e.g. `mean()`, `median()`). If we force `data.table` to use the `base::mean()` function instead, it actually reduces memory use.
 
-```{r}
-profmem::profmem(dt_modify[, base::mean(x), by = "grp"]) %>% 
-  data.frame %>% 
-  select(bytes, calls)
+```{r, eval = FALSE}
+bench::mark(dt_modify[, base::mean(x), by = "grp"], 
+            iterations = 25) %>% 
+  select(median, mem_alloc)
 ```
 
+Ultimately, this is something I'd love to learn more about. Be on the look out for future posts discussing this!
+-->
 
-## TL;DR
 
-In cases of adding a variable, filtering rows, and summarizing data, both `dplyr` and `data.table` perform very well. 
-
-1. Base R, `dplyr`, and `data.table` perform similarly when adding a single variable to an already copied data set.
-2. `data.table` is very efficient in filtering and both `dplyr` and `data.table` perform similarly in terms of speed.
-3. `dplyr` shows great memory efficiency in summarizing, while `data.table` is generally the fastest approach.
-
-### Package Information
+## Session Information
 
 Note the package information for these analyses.
 
 ```{r}
-sessioninfo::package_info()
+sessioninfo::session_info()
 ```
 
 
