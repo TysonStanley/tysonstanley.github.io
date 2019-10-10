@@ -74,7 +74,7 @@ We’ll use the following data table for this post.
     ##  999999:   1 -1.78073054 0.51904927
     ## 1000000:   3 -0.56124894 0.29423306
 
-It is roughly 20 MB and has an address of 0x7fcf4fcc0800. We won’t be
+It is roughly 20 MB and has an address of 0x7fd481204000. We won’t be
 using this address later on because we’ll be making copies of this data
 table, but note that an object has a size and an address on your
 computer.

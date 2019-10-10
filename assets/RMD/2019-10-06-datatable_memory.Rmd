@@ -167,7 +167,7 @@ theme_set(theme_minimal() +
 p1 <- rbind(bench_base_m,
             bench_dplyr_m,
             bench_dt_m) %>% 
-  mutate(expression = c("base R", "dplyr::mutate", "data.table")) %>% 
+  mutate(expression = c("base R", "dplyr", "data.table")) %>% 
   mutate(mem_alloc = as.numeric(mem_alloc)/1024000) %>% 
   ggplot(aes(expression, mem_alloc, fill = expression)) +
     geom_bar(stat = "identity",
@@ -182,7 +182,7 @@ p1 <- rbind(bench_base_m,
 p2 <- rbind(bench_base_f,
             bench_dplyr_f,
             bench_dt_f) %>% 
-  mutate(expression = c("base R", "dplyr::mutate", "data.table")) %>% 
+  mutate(expression = c("base R", "dplyr", "data.table")) %>% 
   mutate(mem_alloc = as.numeric(mem_alloc)/1024000) %>% 
   ggplot(aes(expression, mem_alloc, fill = expression)) +
     geom_bar(stat = "identity",
@@ -197,7 +197,7 @@ p2 <- rbind(bench_base_f,
 p3 <- rbind(bench_base_s,
             bench_dplyr_s,
             bench_dt_s) %>% 
-  mutate(expression = c("base R", "dplyr::mutate", "data.table")) %>% 
+  mutate(expression = c("base R", "dplyr", "data.table")) %>% 
   mutate(mem_alloc = as.numeric(mem_alloc)/1024000) %>% 
   ggplot(aes(expression, mem_alloc, fill = expression)) +
     geom_bar(stat = "identity",
@@ -230,7 +230,7 @@ p4 <- rbind(bench_base_m,
             bench_dplyr_m,
             bench_dt_m) %>% 
   pull(time) %>% 
-  setNames(c("base R", "dplyr::mutate", "data.table")) %>% 
+  setNames(c("base R", "dplyr", "data.table")) %>% 
   bind_rows() %>% 
   tidyr::gather() %>% 
   ggplot(aes(key, value, color = key)) +
@@ -245,7 +245,7 @@ p5 <- rbind(bench_base_f,
             bench_dplyr_f,
             bench_dt_f) %>% 
   pull(time) %>% 
-  setNames(c("base R", "dplyr::mutate", "data.table")) %>% 
+  setNames(c("base R", "dplyr", "data.table")) %>% 
   bind_rows() %>% 
   tidyr::gather() %>% 
   ggplot(aes(key, value, color = key)) +
@@ -260,7 +260,7 @@ p6 <- rbind(bench_base_s,
             bench_dplyr_s,
             bench_dt_s) %>% 
   pull(time) %>% 
-  setNames(c("base R", "dplyr::mutate", "data.table")) %>% 
+  setNames(c("base R", "dplyr", "data.table")) %>% 
   bind_rows() %>% 
   tidyr::gather() %>% 
   ggplot(aes(key, value, color = key)) +
