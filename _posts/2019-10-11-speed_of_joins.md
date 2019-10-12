@@ -14,13 +14,21 @@ As I've mentioned before:
 
 ## TL;DR
 
-**Ordering** (aka arranging, sorting) is very important in speeding up and increasing efficiency of a data join. This is particularly poignant in `data.table` which provides a very distinct form of ordering. 
+**Ordering** (aka arranging, sorting) is very important in speeding up and increasing efficiency of a data join. This is particularly poignant in `data.table` which provides a very distinct form of ordering. Herein, I benchmark the performance of joining (unordered data) and ordering + joining data for both `data.table` and `dplyr`. The results of the benchmarks show:
 
-[Brodie Gaslam](https://twitter.com/BrodieGaslam?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1182814724838346758&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps%253A%252F%252Ftwitter.com%252FBrodieGaslam%252Fstatus%252F1182814724838346758%26widget%3DTweet) posted about this, mentioning his post in this tweet:
+1. `data.table` joins data extremely quickly, especially when the key is numeric. It joins even faster when we join (including the time it took to order the data). This is close to magic. When the key is character, it is still good but far slower than with a numeric key.
+2. Ordering data can be expensive. `data.table` does a great job of this, and so it reaps the rewards. `dplyr`, although it does benefit from ordered data (not shown in this post but figures are [shown on Twitter](https://twitter.com/healthandstats/status/1182747817749516288)), loses a lot of time ordering the data. So overall, ordering + joining takes more time than simply just joining. This is not the case for `data.table`, where ordering + joining is faster.
+3. Memory usage is roughly the same for `dplyr` and `data.table` overall (except for when we are also ordering the data with `dplyr`).
+
+## Background
+
+I've been interested in understand the inner workings of `dplyr` and `data.table` for some time. This is partly just for my personal benefit and learning but also to see in which situations one may work better than the other. My interest was further advanced by some posts I saw regarding the effect of ordering data before doing data wrangling. 
+
+One of the posts that spurred this interest was by [Brodie Gaslam](https://twitter.com/BrodieGaslam?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1182814724838346758&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps%253A%252F%252Ftwitter.com%252FBrodieGaslam%252Fstatus%252F1182814724838346758%26widget%3DTweet). He mentioned his fantastic post in this tweet:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Might be of interest:<a href="https://t.co/mVRsyMk9aK">https://t.co/mVRsyMk9aK</a></p>&mdash; BrodieG (@BrodieGaslam) <a href="https://twitter.com/BrodieGaslam/status/1182814724838346758?ref_src=twsrc%5Etfw">October 12, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Results presented herein show in what ways ordering can help in joins with `dplyr` and with `data.table`.
+The analyses presented herein attempt to show when ordering can help in joins with `dplyr` and with `data.table`, and when it isn't so beneficial.
 
 ## Packages
 
