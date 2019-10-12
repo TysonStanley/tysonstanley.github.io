@@ -1,0 +1,171 @@
+---
+title: "Untitled"
+author: "Tyson S. Barrett, PhD"
+date: "10/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+First, we'll use the following packages to further understand R, `data.table`, and `dplyr`.
+
+```{r}
+library(bench)      # assess speed and memory
+library(data.table) # data.table for all of its stuff
+library(dplyr)      # compare it to data.table
+library(lobstr)     # assess the process of R functions
+```
+
+And we'll set a random number seed.
+
+```{r}
+set.seed(84322)
+```
+
+
+## Example Data
+
+We'll use the following data table for this post.
+
+```{r}
+d <- data.table(
+  grp = sample(c(1,2), size = 1e6, replace = TRUE) %>% factor,
+  x = rnorm(1e6),
+  y = runif(1e6)
+)
+d
+```
+
+It is roughly `r round(obj_size(d)/1e6, 1)` MB and has an address of `r obj_addr(d)`. We won't be using this address later on because we'll be making copies of this data table, but note that an object has a size and an address on your computer.
+
+## Comparisons
+
+Below, I will look at the behavior of `data.table` (compared to base R and `dplyr`) regarding:
+
+1. Adding a variable
+2. Filtering rows
+3. Summarizing data
+
+Let's start with the base approaches.
+
+### Base R
+
+The following functions perform, in order, 1) adding a variable, 2) filtering rows, and 3) summarizing data by group using base functionality.
+
+```{r}
+base_mutate <- function(data){
+  data$z <- rnorm(1e6)
+  data
+}
+base_filter <- function(data){
+  data[data$grp == 1, ]
+}
+base_summarize <- function(data){
+  tapply(data$x, data$grp, mean)
+}
+```
+
+### `dplyr`
+
+Again, the following functions perform, in order, 1) adding a variable, 2) filtering rows, and 3) summarizing data by group using `dplyr` functions.
+
+```{r}
+dplyr_mutate <- function(data){
+  mutate(data, z = rnorm(1e6))
+}
+dplyr_filter <- function(data){
+  filter(data, grp == 1)
+}
+dplyr_summarize <- function(data){
+  summarize(group_by(data, grp), mean(x))
+}
+```
+
+### `data.table`
+
+```{r}
+dt_mutate <- function(data){
+  data[, z := rnorm(1e6)]
+}
+dt_filter <- function(data){
+  data[grp == 1]
+}
+dt_summarize <- function(data){
+  data[, mean(x), keyby = grp]
+}
+```
+
+## Copies to Benchmark
+
+The data below are copied in order to make the benchmarking more comparable.
+
+```{r}
+df <- copy(d) %>% as.data.frame()
+tbl <- copy(d) %>% as_tibble()
+dt <- copy(d)
+```
+
+
+## Data Summaries by Group
+
+`dplyr` summarizes data extremely efficiently. For example, we can look at getting means of `x` for each `grp`.
+
+```{r}
+profmem::profmem(summarize(group_by(tbl, grp), mean(x))) %>% 
+  data.frame %>% 
+  select(bytes, calls)
+profmem::profmem(dt[, mean(x), by = grp]) %>% 
+  data.frame %>% 
+  select(bytes, calls)
+profmem::profmem(dt[, mean(x), keyby = grp]) %>% 
+  data.frame %>% 
+  select(bytes, calls)
+```
+
+Interestingly, much of the memory usage is due to `gforce()`---`data.table`s way of optimizing common functions (e.g. `mean()`, `median()`). If we force `data.table` to use the `base::mean()` function instead, it actually reduces memory use.
+
+```{r, eval = FALSE}
+bench::mark(dt[, base::mean(x), by = grp], 
+            iterations = 25) %>% 
+  select(median, mem_alloc)
+```
+
+Ultimately, this is something I'd love to learn more about. Be on the look out for future posts discussing this!
+
+```{r}
+# dplyr:         4000104
+# data.table:   24055320
+# simple_group: 33997480
+
+lineprof::lineprof(summarize(group_by(tbl, grp), mean(x))) %>% lineprof::shine()
+
+dplyr_sum <- summarize(group_by(tbl, grp), mean(x))
+dt_sum    <- dt[, mean(x), by = grp]
+
+simple_group <- function(data){
+  data[data$grp == 1, "x"] %>% 
+    mean(na.rm=TRUE)
+}
+
+
+profmem::profmem(simple_group(df))
+
+just1 <- tbl %>% 
+  filter(grp == 1) %>% 
+  select(x)
+
+splitted <- split(tbl[c("x", "y")], tbl$grp)
+
+```
+
+
+
+
+
+
+
+
+
