@@ -3,6 +3,8 @@ title: "Untitled"
 author: "Tyson S. Barrett, PhD"
 date: "10/10/2019"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -120,10 +122,23 @@ profmem::profmem(summarize(group_by(tbl, grp), mean(x))) %>%
 profmem::profmem(dt[, mean(x), by = grp]) %>% 
   data.frame %>% 
   select(bytes, calls)
-profmem::profmem(dt[, mean(x), keyby = grp]) %>% 
+profmem::profmem(dt[, base::mean(x), by = grp]) %>% 
   data.frame %>% 
   select(bytes, calls)
 ```
+
+```{r, eval = FALSE}
+bench::mark(summarize(group_by(tbl, grp), mean(x)), 
+            iterations = 25) %>% 
+  select(median, mem_alloc)
+```
+
+```{r, eval = FALSE}
+bench::mark(dt[, mean(x), by = grp], 
+            iterations = 25) %>% 
+  select(median, mem_alloc)
+```
+
 
 Interestingly, much of the memory usage is due to `gforce()`---`data.table`s way of optimizing common functions (e.g. `mean()`, `median()`). If we force `data.table` to use the `base::mean()` function instead, it actually reduces memory use.
 
@@ -135,31 +150,6 @@ bench::mark(dt[, base::mean(x), by = grp],
 
 Ultimately, this is something I'd love to learn more about. Be on the look out for future posts discussing this!
 
-```{r}
-# dplyr:         4000104
-# data.table:   24055320
-# simple_group: 33997480
-
-lineprof::lineprof(summarize(group_by(tbl, grp), mean(x))) %>% lineprof::shine()
-
-dplyr_sum <- summarize(group_by(tbl, grp), mean(x))
-dt_sum    <- dt[, mean(x), by = grp]
-
-simple_group <- function(data){
-  data[data$grp == 1, "x"] %>% 
-    mean(na.rm=TRUE)
-}
-
-
-profmem::profmem(simple_group(df))
-
-just1 <- tbl %>% 
-  filter(grp == 1) %>% 
-  select(x)
-
-splitted <- split(tbl[c("x", "y")], tbl$grp)
-
-```
 
 
 

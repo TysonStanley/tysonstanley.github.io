@@ -259,6 +259,13 @@ bench_dt_s    <- bench::mark(dt_summarize(dt), iterations = 50)
 Both filtering and summarizing are faster for `data.table` 
 without much change for base R or `dplyr` approaches.
 
+## Update 2: Memory Profiling to understand the behvior of `dplyr` and `data.table` in summarizing by group
+
+The GitHub gist highlights the code and output.
+
+<script src="https://gist.github.com/TysonStanley/f64ed76e4859199e22904f9a0ee849c9.js"></script>
+
+
 Conclusion
 ----------
 
