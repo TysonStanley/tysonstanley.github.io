@@ -25,6 +25,7 @@ And we'll set a random number seed.
 
 ```{r}
 set.seed(84322)
+setDTthreads(1)
 ```
 
 

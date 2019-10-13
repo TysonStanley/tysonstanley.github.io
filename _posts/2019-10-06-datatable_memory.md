@@ -54,7 +54,9 @@ Packages
 --------
 
 First, we’ll use the following packages to further understand R,
-`data.table`, and `dplyr`.
+`data.table`, and `dplyr`. *Notably, `data.table` by default on
+my computer will use 4 threads (a form of parallelization). I use 
+this default throughout the post.*
 
 {% highlight r %}
 library(bench)      # assess speed and memory

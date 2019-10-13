@@ -40,7 +40,15 @@ library(data.table)
 library(bench)
 {% endhighlight %}
 
-And we’ll set a random number seed.
+Note that on my machine, `data.table` by default uses 4 threads. You can see this by using:
+
+{% highlight r %}
+getDTthreads()
+{% endhighlight %}
+  
+    ## 4
+
+And don't forget to set a random number seed so our random number work can be replicated.
 
 {% highlight r %}
 set.seed(84322)

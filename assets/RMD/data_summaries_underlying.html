@@ -387,7 +387,8 @@ library(dplyr)      # compare it to data.table</code></pre>
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(lobstr)     # assess the process of R functions</code></pre>
 <p>And we’ll set a random number seed.</p>
-<pre class="r"><code>set.seed(84322)</code></pre>
+<pre class="r"><code>set.seed(84322)
+setDTthreads(1)</code></pre>
 <div id="example-data" class="section level2">
 <h2>Example Data</h2>
 <p>We’ll use the following data table for this post.</p>
@@ -409,7 +410,7 @@ d</code></pre>
 ##  999998:   2  1.5314115 0.1102460
 ##  999999:   2 -1.6086973 0.2679477
 ## 1000000:   2  1.2518419 0.6566943</code></pre>
-<p>It is roughly 20 MB and has an address of 0x7fe9b068c000. We won’t be using this address later on because we’ll be making copies of this data table, but note that an object has a size and an address on your computer.</p>
+<p>It is roughly 20 MB and has an address of 0x7ffbb55ce800. We won’t be using this address later on because we’ll be making copies of this data table, but note that an object has a size and an address on your computer.</p>
 </div>
 <div id="comparisons" class="section level2">
 <h2>Comparisons</h2>
@@ -1246,289 +1247,147 @@ dt &lt;- copy(d)</code></pre>
 <pre class="r"><code>profmem::profmem(dt[, mean(x), by = grp]) %&gt;% 
   data.frame %&gt;% 
   select(bytes, calls)</code></pre>
-<pre><code>##        bytes
-## 1         NA
-## 2         NA
-## 3         NA
-## 4        992
-## 5       4080
-## 6       4072
-## 7       1072
-## 8        248
-## 9        648
-## 10      1240
-## 11       360
-## 12        NA
-## 13       648
-## 14       304
-## 15       688
-## 16       688
-## 17      1072
-## 18        NA
-## 19       192
-## 20        NA
-## 21       400
-## 22      1160
-## 23      1160
-## 24      1072
-## 25        NA
-## 26       232
-## 27       296
-## 28       624
-## 29       624
-## 30      1072
-## 31       280
-## 32       520
-## 33       520
-## 34      1072
-## 35        NA
-## 36        NA
-## 37      1072
-## 38        NA
-## 39        NA
-## 40       360
-## 41       816
-## 42       816
-## 43      1072
-## 44       248
-## 45        NA
-## 46       280
-## 47        NA
-## 48       520
-## 49      1976
-## 50      1976
-## 51      1072
-## 52       200
-## 53       344
-## 54       192
-## 55       200
-## 56        NA
-## 57      8240
-## 58      8240
-## 59      1056
-## 60      4008
-## 61      4008
-## 62      1072
-## 63       256
-## 64       568
-## 65      1088
-## 66       424
-## 67        NA
-## 68       568
-## 69   4000048
-## 70       360
-## 71       888
-## 72       880
-## 73      1072
-## 74       256
-## 75        NA
-## 76   2003000
-## 77      8248
-## 78   4005944
-## 79      8248
-## 80        NA
-## 81       256
-## 82       256
-## 83      1072
-## 84        NA
-## 85       280
-## 86        NA
-## 87       312
-## 88       720
-## 89       720
-## 90      1072
-## 91       200
-## 92   4000056
-## 93   2000056
-## 94   2000056
-## 95  16000056
-## 96       256
-## 97       480
-## 98       480
-## 99      1072
-## 100      800
-## 101     3456
-## 102     3456
-## 103     1072
-## 104      416
-## 105      776
-## 106      312
-## 107      208
-## 108      416
-## 109     8256
-## 110     8256
-##                                                                                                               calls
-## 1                                                                                                                  
-## 2                                                                                                                  
-## 3                                                                                             [() -&gt; [.data.table()
-## 4                                                                                             [() -&gt; [.data.table()
-## 5                                                                                             [() -&gt; [.data.table()
-## 6                                                                                             [() -&gt; [.data.table()
-## 7                                                                                             [() -&gt; [.data.table()
-## 8                                                                                             [() -&gt; [.data.table()
-## 9                                                                                             [() -&gt; [.data.table()
-## 10                                                                                            [() -&gt; [.data.table()
-## 11                                                                                            [() -&gt; [.data.table()
-## 12                                                                                            [() -&gt; [.data.table()
-## 13                                                                                            [() -&gt; [.data.table()
-## 14                                                                                            [() -&gt; [.data.table()
-## 15                                                                                            [() -&gt; [.data.table()
-## 16                                                                                            [() -&gt; [.data.table()
-## 17                                                                                            [() -&gt; [.data.table()
-## 18                                                                                            [() -&gt; [.data.table()
-## 19                                                                                            [() -&gt; [.data.table()
-## 20                                                                                            [() -&gt; [.data.table()
-## 21                                                                                            [() -&gt; [.data.table()
-## 22                                                                                            [() -&gt; [.data.table()
-## 23                                                                                            [() -&gt; [.data.table()
-## 24                                                                                            [() -&gt; [.data.table()
-## 25                                                                                            [() -&gt; [.data.table()
-## 26                                                                                            [() -&gt; [.data.table()
-## 27                                                                                            [() -&gt; [.data.table()
-## 28                                                                                            [() -&gt; [.data.table()
-## 29                                                                                            [() -&gt; [.data.table()
-## 30                                                                                            [() -&gt; [.data.table()
-## 31                                                                                [() -&gt; [.data.table() -&gt; haskey()
-## 32                                                                                [() -&gt; [.data.table() -&gt; haskey()
-## 33                                                                                [() -&gt; [.data.table() -&gt; haskey()
-## 34                                                                                [() -&gt; [.data.table() -&gt; haskey()
-## 35                                                                                [() -&gt; [.data.table() -&gt; haskey()
-## 36                                                                       [() -&gt; [.data.table() -&gt; haskey() -&gt; key()
-## 37                                                                                [() -&gt; [.data.table() -&gt; %chin%()
-## 38                                                                                            [() -&gt; [.data.table()
-## 39  [() -&gt; [.data.table() -&gt; setdiff() -&gt; as.vector() -&gt; intersect() -&gt; unique() -&gt; unique.default() -&gt; is.factor()
-## 40                                                                                            [() -&gt; [.data.table()
-## 41                                                                                            [() -&gt; [.data.table()
-## 42                                                                                            [() -&gt; [.data.table()
-## 43                                                                                            [() -&gt; [.data.table()
-## 44                                                                                            [() -&gt; [.data.table()
-## 45                                                                                            [() -&gt; [.data.table()
-## 46                                                                               [() -&gt; [.data.table() -&gt; new.env()
-## 47                                                                                            [() -&gt; [.data.table()
-## 48                                                                                            [() -&gt; [.data.table()
-## 49                                                                                            [() -&gt; [.data.table()
-## 50                                                                                            [() -&gt; [.data.table()
-## 51                                                                                            [() -&gt; [.data.table()
-## 52                                                                                            [() -&gt; [.data.table()
-## 53                                                                                            [() -&gt; [.data.table()
-## 54                                                                                            [() -&gt; [.data.table()
-## 55                                                                                            [() -&gt; [.data.table()
-## 56                                            [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol() -&gt; eval()
-## 57                                                      [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
-## 58                                                      [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
-## 59                                                                                            [() -&gt; [.data.table()
-## 60                                                                                            [() -&gt; [.data.table()
-## 61                                                                                            [() -&gt; [.data.table()
-## 62                                                                                            [() -&gt; [.data.table()
-## 63                                                                                            [() -&gt; [.data.table()
-## 64                                                                                            [() -&gt; [.data.table()
-## 65                                                                                            [() -&gt; [.data.table()
-## 66                                                                                            [() -&gt; [.data.table()
-## 67                                                                                            [() -&gt; [.data.table()
-## 68                                                                                            [() -&gt; [.data.table()
-## 69                                                                               [() -&gt; [.data.table() -&gt; forderv()
-## 70                                                                                            [() -&gt; [.data.table()
-## 71                                                                                            [() -&gt; [.data.table()
-## 72                                                                                            [() -&gt; [.data.table()
-## 73                                                                                            [() -&gt; [.data.table()
-## 74                                                                                            [() -&gt; [.data.table()
-## 75                                                                                            [() -&gt; [.data.table()
-## 76                                                                                            [() -&gt; [.data.table()
-## 77                                                                                            [() -&gt; [.data.table()
-## 78                                                                                            [() -&gt; [.data.table()
-## 79                                                                                            [() -&gt; [.data.table()
-## 80                                                              [() -&gt; [.data.table() -&gt; lockBinding() -&gt; as.name()
-## 81                                                                [() -&gt; [.data.table() -&gt; .gforce_ok() -&gt; %chin%()
-## 82                                                                [() -&gt; [.data.table() -&gt; .gforce_ok() -&gt; %chin%()
-## 83                                                                [() -&gt; [.data.table() -&gt; .gforce_ok() -&gt; %chin%()
-## 84                                                                               [() -&gt; [.data.table() -&gt; as.name()
-## 85                                                                               [() -&gt; [.data.table() -&gt; new.env()
-## 86                                                     [() -&gt; [.data.table() -&gt; assign() -&gt; [[() -&gt; [[.data.frame()
-## 87                                                                                            [() -&gt; [.data.table()
-## 88                                                                                            [() -&gt; [.data.table()
-## 89                                                                                            [() -&gt; [.data.table()
-## 90                                                                                            [() -&gt; [.data.table()
-## 91                                                                                            [() -&gt; [.data.table()
-## 92                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 93                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 94                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 95                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 96                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 97                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 98                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 99                                                                                [() -&gt; [.data.table() -&gt; gforce()
-## 100                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 101                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 102                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 103                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 104                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 105                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 106                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 107                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 108                                                      [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
-## 109                                                                          [() -&gt; [.data.table() -&gt; setalloccol()
-## 110                                                                          [() -&gt; [.data.table() -&gt; setalloccol()</code></pre>
-<pre class="r"><code>profmem::profmem(dt[, mean(x), keyby = grp]) %&gt;% 
+<pre><code>##        bytes                                                       calls
+## 1         NA                                                            
+## 2         NA                                                            
+## 3         NA                                       [() -&gt; [.data.table()
+## 4        992                                       [() -&gt; [.data.table()
+## 5       4080                                       [() -&gt; [.data.table()
+## 6       4072                                       [() -&gt; [.data.table()
+## 7       1072                                       [() -&gt; [.data.table()
+## 8        248                                       [() -&gt; [.data.table()
+## 9        648                                       [() -&gt; [.data.table()
+## 10      1240                                       [() -&gt; [.data.table()
+## 11       360                                       [() -&gt; [.data.table()
+## 12        NA                                       [() -&gt; [.data.table()
+## 13       648                                       [() -&gt; [.data.table()
+## 14       304                                       [() -&gt; [.data.table()
+## 15       688                                       [() -&gt; [.data.table()
+## 16       688                                       [() -&gt; [.data.table()
+## 17      1072                                       [() -&gt; [.data.table()
+## 18       192                                       [() -&gt; [.data.table()
+## 19        NA                                       [() -&gt; [.data.table()
+## 20        NA                                       [() -&gt; [.data.table()
+## 21       400                                       [() -&gt; [.data.table()
+## 22      1160                                       [() -&gt; [.data.table()
+## 23      1160                                       [() -&gt; [.data.table()
+## 24      1072                                       [() -&gt; [.data.table()
+## 25       232                                       [() -&gt; [.data.table()
+## 26        NA                                       [() -&gt; [.data.table()
+## 27       296                                       [() -&gt; [.data.table()
+## 28       624                                       [() -&gt; [.data.table()
+## 29       624                                       [() -&gt; [.data.table()
+## 30      1072                                       [() -&gt; [.data.table()
+## 31       280                           [() -&gt; [.data.table() -&gt; haskey()
+## 32       520                           [() -&gt; [.data.table() -&gt; haskey()
+## 33       520                           [() -&gt; [.data.table() -&gt; haskey()
+## 34      1072                           [() -&gt; [.data.table() -&gt; haskey()
+## 35        NA                             [() -&gt; [.data.table() -&gt; eval()
+## 36        NA                           [() -&gt; [.data.table() -&gt; %chin%()
+## 37      1072                           [() -&gt; [.data.table() -&gt; %chin%()
+## 38        NA                                       [() -&gt; [.data.table()
+## 39        NA           [() -&gt; [.data.table() -&gt; setdiff() -&gt; as.vector()
+## 40       360                                       [() -&gt; [.data.table()
+## 41       816                                       [() -&gt; [.data.table()
+## 42       816                                       [() -&gt; [.data.table()
+## 43      1072                                       [() -&gt; [.data.table()
+## 44       248                                       [() -&gt; [.data.table()
+## 45        NA                                       [() -&gt; [.data.table()
+## 46       280                          [() -&gt; [.data.table() -&gt; new.env()
+## 47       520                                       [() -&gt; [.data.table()
+## 48      1976                                       [() -&gt; [.data.table()
+## 49      1976                                       [() -&gt; [.data.table()
+## 50      1072                                       [() -&gt; [.data.table()
+## 51        NA                                       [() -&gt; [.data.table()
+## 52       200                                       [() -&gt; [.data.table()
+## 53       344                                       [() -&gt; [.data.table()
+## 54       192                                       [() -&gt; [.data.table()
+## 55       200                                       [() -&gt; [.data.table()
+## 56        NA [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
+## 57      8240 [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
+## 58      8240 [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
+## 59      1056                                       [() -&gt; [.data.table()
+## 60      4008                                       [() -&gt; [.data.table()
+## 61      4008                                       [() -&gt; [.data.table()
+## 62      1072                                       [() -&gt; [.data.table()
+## 63       256                                       [() -&gt; [.data.table()
+## 64       568                                       [() -&gt; [.data.table()
+## 65      1088                                       [() -&gt; [.data.table()
+## 66       424                                       [() -&gt; [.data.table()
+## 67        NA                                       [() -&gt; [.data.table()
+## 68       568                                       [() -&gt; [.data.table()
+## 69   4000048                          [() -&gt; [.data.table() -&gt; forderv()
+## 70       360                                       [() -&gt; [.data.table()
+## 71       888                                       [() -&gt; [.data.table()
+## 72       880                                       [() -&gt; [.data.table()
+## 73      1072                                       [() -&gt; [.data.table()
+## 74       256                                       [() -&gt; [.data.table()
+## 75        NA                                       [() -&gt; [.data.table()
+## 76   2003000                                       [() -&gt; [.data.table()
+## 77      8248                                       [() -&gt; [.data.table()
+## 78   4005944                                       [() -&gt; [.data.table()
+## 79      8248                                       [() -&gt; [.data.table()
+## 80        NA                                       [() -&gt; [.data.table()
+## 81       256           [() -&gt; [.data.table() -&gt; .gforce_ok() -&gt; %chin%()
+## 82       256           [() -&gt; [.data.table() -&gt; .gforce_ok() -&gt; %chin%()
+## 83      1072           [() -&gt; [.data.table() -&gt; .gforce_ok() -&gt; %chin%()
+## 84        NA                      [() -&gt; [.data.table() -&gt; lockBinding()
+## 85       280                          [() -&gt; [.data.table() -&gt; new.env()
+## 86        NA                                       [() -&gt; [.data.table()
+## 87       312                                       [() -&gt; [.data.table()
+## 88       720                                       [() -&gt; [.data.table()
+## 89       720                                       [() -&gt; [.data.table()
+## 90      1072                                       [() -&gt; [.data.table()
+## 91       200                                       [() -&gt; [.data.table()
+## 92   4000056                           [() -&gt; [.data.table() -&gt; gforce()
+## 93   2000056                           [() -&gt; [.data.table() -&gt; gforce()
+## 94   2000056                           [() -&gt; [.data.table() -&gt; gforce()
+## 95  16000056                           [() -&gt; [.data.table() -&gt; gforce()
+## 96       256                           [() -&gt; [.data.table() -&gt; gforce()
+## 97       480                           [() -&gt; [.data.table() -&gt; gforce()
+## 98       480                           [() -&gt; [.data.table() -&gt; gforce()
+## 99      1072                           [() -&gt; [.data.table() -&gt; gforce()
+## 100      800  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 101     3456  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 102     3456  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 103     1072  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 104      416  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 105      776  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 106      312  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 107      208  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 108      416  [() -&gt; [.data.table() -&gt; lapply() -&gt; FUN() -&gt; [() -&gt; get()
+## 109     8256                      [() -&gt; [.data.table() -&gt; setalloccol()
+## 110     8256                      [() -&gt; [.data.table() -&gt; setalloccol()</code></pre>
+<pre class="r"><code>profmem::profmem(dt[, base::mean(x), by = grp]) %&gt;% 
   data.frame %&gt;% 
   select(bytes, calls)</code></pre>
-<pre><code>##       bytes
-## 1       416
-## 2      1128
-## 3      1128
-## 4      1072
-## 5       296
-## 6       688
-## 7      2608
-## 8      2608
-## 9      1072
-## 10      376
-## 11      696
-## 12      304
-## 13      376
-## 14      280
-## 15     8240
-## 16     8240
-## 17  4000048
-## 18  2003000
-## 19     8248
-## 20  4005944
-## 21     8248
-## 22      280
-## 23  4000056
-## 24  2000056
-## 25  2000056
-## 26 16000056
-## 27     8256
-## 28     8256
-##                                                                calls
-## 1                                              [() -&gt; [.data.table()
-## 2                                              [() -&gt; [.data.table()
-## 3                                              [() -&gt; [.data.table()
-## 4                                              [() -&gt; [.data.table()
-## 5                                              [() -&gt; [.data.table()
-## 6  [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 7  [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 8  [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 9  [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 10 [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 11 [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 12 [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 13 [() -&gt; [.data.table() -&gt; which.first() -&gt; substring() -&gt; paste0()
-## 14                                [() -&gt; [.data.table() -&gt; new.env()
-## 15       [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
-## 16       [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
-## 17                                [() -&gt; [.data.table() -&gt; forderv()
-## 18                                             [() -&gt; [.data.table()
-## 19                                             [() -&gt; [.data.table()
-## 20                                             [() -&gt; [.data.table()
-## 21                                             [() -&gt; [.data.table()
-## 22                                [() -&gt; [.data.table() -&gt; new.env()
-## 23                                 [() -&gt; [.data.table() -&gt; gforce()
-## 24                                 [() -&gt; [.data.table() -&gt; gforce()
-## 25                                 [() -&gt; [.data.table() -&gt; gforce()
-## 26                                 [() -&gt; [.data.table() -&gt; gforce()
-## 27                            [() -&gt; [.data.table() -&gt; setalloccol()
-## 28                            [() -&gt; [.data.table() -&gt; setalloccol()</code></pre>
+<pre><code>##      bytes                                                       calls
+## 1      280                          [() -&gt; [.data.table() -&gt; new.env()
+## 2     8240 [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
+## 3     8240 [() -&gt; [.data.table() -&gt; null.data.table() -&gt; setalloccol()
+## 4  4000048                          [() -&gt; [.data.table() -&gt; forderv()
+## 5  2003000                                       [() -&gt; [.data.table()
+## 6     8248                                       [() -&gt; [.data.table()
+## 7  4005944                                       [() -&gt; [.data.table()
+## 8     8248                                       [() -&gt; [.data.table()
+## 9  2003000                                       [() -&gt; [.data.table()
+## 10    1736               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 11    7456               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 12    7456               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 13    1072               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 14     472               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 15    1112               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 16    2168               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 17     696               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 18    1112               [() -&gt; [.data.table() -&gt; &lt;Anonymous&gt; -&gt; get()
+## 19    8256                      [() -&gt; [.data.table() -&gt; setalloccol()
+## 20    8256                      [() -&gt; [.data.table() -&gt; setalloccol()</code></pre>
+<pre class="r"><code>bench::mark(summarize(group_by(tbl, grp), mean(x)), 
+            iterations = 25) %&gt;% 
+  select(median, mem_alloc)</code></pre>
+<pre class="r"><code>bench::mark(dt[, mean(x), by = grp], 
+            iterations = 25) %&gt;% 
+  select(median, mem_alloc)</code></pre>
 <p>Interestingly, much of the memory usage is due to <code>gforce()</code>—<code>data.table</code>s way of optimizing common functions (e.g. <code>mean()</code>, <code>median()</code>). If we force <code>data.table</code> to use the <code>base::mean()</code> function instead, it actually reduces memory use.</p>
 <pre class="r"><code>bench::mark(dt[, base::mean(x), by = grp], 
             iterations = 25) %&gt;% 
