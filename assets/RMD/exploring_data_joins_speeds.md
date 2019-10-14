@@ -9,12 +9,10 @@ Numeric ID
 `dplyr::full_join()`
 --------------------
 
-    library(tidyverse)
-
-    d1 <- tibble(id = sample(1:1e6),
+    d1 <- tibble(id = sample(1L:1e6L),
                   x = rnorm(1e6),
                   y = runif(1e6))
-    d2 <- tibble(id = sample(1:1e6), 
+    d2 <- tibble(id = sample(1L:1e6L), 
                   a = rnorm(1e6),
                   b = runif(1e6))
 
@@ -25,8 +23,6 @@ Numeric ID
 
 `data.table` joining
 --------------------
-
-    library(data.table)
 
     dt1 <- data.table(id = sample(1:1e6),    # Not ordered
                       x = rnorm(1e6),
@@ -52,7 +48,7 @@ and unordered numeric ID variables.
     # For stat summary 
     med_fun <- function(x){
       return(data.frame(y = median(x)+50, 
-                        label = paste0("         ", round(median(x), 0)),
+                        label = paste0("         ", round(median(x), 0), "ms"),
                         hjust = 0))
     }
 
@@ -88,15 +84,15 @@ and unordered numeric ID variables.
               panel.grid.major.x = element_blank()) +
         scale_color_viridis_d() +
         labs(x = "",
-             y = "Time (ms)",
+             y = "Time",
              title = "Joins with data.table and dplyr",
              subtitle = "Comparing ordered and unordered data",
-             caption = "Joining two 80MB tables [1,000,000 x 3 each]\nwith numeric ID variable") +
+             caption = "Joining two 80MB tables [1,000,000 x 3 each]\nwith integer ID variable") +
         facet_grid(~type, scales = "free", space = "free")
 
 ![](exploring_data_joins_speeds_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
-    ggsave("data_joins_speed.png", width = 7, height = 5)
+    ggsave(here::here("assets/RMD/exploring_data_joins_speeds_files/data_joins_speed.png"), width = 7, height = 5)
 
 And the memory usage for each.
 
@@ -124,12 +120,12 @@ And the memory usage for each.
              y = "Memory (MB)",
              title = "Joins with data.table and dplyr",
              subtitle = "Comparing ordered and unordered data",
-             caption = "Joining two 80MB tables [1,000,000 x 3 each]\nwith numeric ID variable") +
+             caption = "Joining two 80MB tables [1,000,000 x 3 each]\nwith integer ID variable") +
         facet_grid(~type, scales = "free", space = "free")
 
 ![](exploring_data_joins_speeds_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
-    ggsave("data_joins_memory.png", width = 7, height = 5)
+    ggsave(here::here("assets/RMD/exploring_data_joins_speeds_files/data_joins_memory.png"), width = 7, height = 5)
 
 Character ID
 ============
@@ -149,7 +145,12 @@ Character ID
     b0 <- bench::mark(full_join(d1, d2, by = "id"), iterations = 50)
 
     # Ordered
-    b1 <- bench::mark(full_join(arrange(d1, id), arrange(d2, id), by = "id"), iterations = 50)
+    b1 <- bench::mark({
+      d1 = arrange(d1, id)
+      d2 = arrange(d2, id)
+      full_join(d1, d2, by = "id")
+      }, 
+      iterations = 50)
 
 `data.table` joining
 --------------------
@@ -178,8 +179,8 @@ and unordered numeric ID variables.
 
     # For stat summary 
     med_fun <- function(x){
-      return(data.frame(y = median(x)+100, 
-                        label = paste0("          ", round(median(x), 0)),
+      return(data.frame(y = median(x)+500, 
+                        label = paste0("          ", round(median(x), 0), "ms"),
                         hjust = 0))
     }
 
@@ -223,7 +224,7 @@ and unordered numeric ID variables.
 
 ![](exploring_data_joins_speeds_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
-    ggsave("data_joins_speed_char.png", width = 7, height = 5)
+    ggsave(here::here("assets/RMD/exploring_data_joins_speeds_files/data_joins_speed_char.png"), width = 7, height = 5)
 
 And the memory for each
 
@@ -256,4 +257,4 @@ And the memory for each
 
 ![](exploring_data_joins_speeds_files/figure-markdown_strict/unnamed-chunk-13-1.png)
 
-    ggsave("data_joins_memory_char.png", width = 7, height = 5)
+    ggsave(here::here("assets/RMD/exploring_data_joins_speeds_files/data_joins_memory_char.png"), width = 7, height = 5)

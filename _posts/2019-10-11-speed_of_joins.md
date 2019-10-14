@@ -64,10 +64,10 @@ We’ll use the following tibble for the `dplyr` joins where it has a randomly o
 
 {% highlight r %}
 # Not ordered
-d1 <- tibble(id = sample(1:1e6),    
+d1 <- tibble(id = sample(1L:1e6L),    
               x = rnorm(1e6),
               y = runif(1e6))
-d2 <- tibble(id = sample(1:1e6),
+d2 <- tibble(id = sample(1L:1e6L),
               a = rnorm(1e6),
               b = runif(1e6))
 {% endhighlight %}
@@ -87,10 +87,10 @@ b1 <- bench::mark({
 Next, we create the data tables used for the benchmarking with `data.table`.
 
 {% highlight r %}
-dt1 <- data.table(id = sample(1:1e6),
+dt1 <- data.table(id = sample(1L:1e6L),
                   x = rnorm(1e6),
                   y = runif(1e6))
-dt2 <- data.table(id = sample(1:1e6),
+dt2 <- data.table(id = sample(1L:1e6L),
                   a = rnorm(1e6),
                   b = runif(1e6))
 {% endhighlight %}

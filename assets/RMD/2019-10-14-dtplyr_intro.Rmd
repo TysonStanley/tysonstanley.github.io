@@ -1,0 +1,44 @@
+---
+title: "dtplyr intro"
+author: "Tyson S. Barrett"
+date: "10/14/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+So you want to learn `dtplyr`? Well, you are in luck if you have used `dplyr`.
+
+```{r}
+library(data.table)
+library(dtplyr)
+library(dplyr)
+```
+
+
+
+```{r}
+dt <- data.table(
+  x = rnorm(1e6),
+  y = runif(1e6),
+  grp = sample(1L:3L, 1e6, replace = TRUE)
+)
+dt
+```
+
+
+```{r}
+dt <- lazy_dt(dt)
+```
+
+
+
+
+
+
+
+
+
