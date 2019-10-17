@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Doing Fast and Readable 'If Else' in R"
+title: "Fast and Readable 'If Else' in R"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
