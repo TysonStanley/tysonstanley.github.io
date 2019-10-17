@@ -154,17 +154,20 @@ dt %>%
                            x >= .5 ~ "high"))
 {% endhighlight %}
 
-    ##       grp             x             y  z    x_cat
-    ## 1       2  1.5435469203  2.488806e-01  3     high
-    ## 2       1 -0.1213723649  1.142274e+00  7 moderate
-    ## 3       3  1.3620842674  2.579651e-01  6     high
-    ## 4       3  1.3858948398 -2.010243e-01  5     high
-    ## 5       1  0.2215968216  3.800929e-01  3 moderate
-    ## 6       1  0.5176328419 -8.750279e-01  7     high
-    ## 7       3  0.0319035831  1.138525e+00 NA moderate
-    ## 8       2 -0.8433117550 -9.967448e-01  6      low
-    ## 9       3  1.5122106231 -1.052019e+00  1     high
-    ...      ...           ...           ... ..      ...
+    ## # A tibble: 1,000,000 x 5
+    ##    grp         x      y     z x_cat   
+    ##    <fct>   <dbl>  <dbl> <int> <chr>   
+    ##  1 2      1.54    0.249     3 high    
+    ##  2 1     -0.121   1.14      7 moderate
+    ##  3 3      1.36    0.258     6 high    
+    ##  4 3      1.39   -0.201     5 high    
+    ##  5 1      0.222   0.380     3 moderate
+    ##  6 1      0.518  -0.875     7 high    
+    ##  7 3      0.0319  1.14     NA moderate
+    ##  8 2     -0.843  -0.997     6 low     
+    ##  9 3      1.51   -1.05      1 high    
+    ## 10 2      0.110  -0.351     2 moderate
+    ## # … with 999,990 more rows
 
 
 No nested statements needed. Instead it relies on the following syntax:
