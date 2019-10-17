@@ -371,7 +371,191 @@ summary {
 
 
 <p>So you want to learn <code>dtplyr</code>? Well, you are in luck if you have used <code>dplyr</code>.</p>
-<pre class="r"><code>library(dtplyr)</code></pre>
+<pre class="r"><code>library(data.table)
+library(dtplyr)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: 'dplyr'</code></pre>
+<pre><code>## The following objects are masked from 'package:data.table':
+## 
+##     between, first, last</code></pre>
+<pre><code>## The following objects are masked from 'package:stats':
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<p>We will start with the following data table.</p>
+<pre class="r"><code>dt &lt;- data.table(
+  x = rnorm(1e6),
+  y = runif(1e6),
+  grp = sample(1L:3L, 1e6, replace = TRUE)
+)
+dt</code></pre>
+<pre><code>##                   x           y grp
+##       1:  0.3592571 0.972492456   1
+##       2: -0.7754739 0.664721457   3
+##       3: -0.6996232 0.268483296   2
+##       4:  1.3425319 0.067564905   2
+##       5: -0.4291611 0.671132030   1
+##      ---                           
+##  999996: -0.9578632 0.324075893   2
+##  999997:  1.0294101 0.564804682   3
+##  999998: -0.9072387 0.168100982   2
+##  999999: -1.0602955 0.945963837   2
+## 1000000: -0.3129620 0.004439265   1</code></pre>
+<p>In order to use the <code>dplyr</code> verbs on a data table (while using the <code>data.table</code> packages strengths), we need to create a “lazy data table”.</p>
+<pre class="r"><code>ldt &lt;- lazy_dt(dt)</code></pre>
+<p>Then we can simply use the core <code>dplyr</code> verbs. For example, we can do the following.</p>
+<pre class="r"><code>ldt %&gt;% 
+  mutate(z = rnorm(1e6)) %&gt;% 
+  filter(grp == 1) %&gt;% 
+  show_query()</code></pre>
+<pre><code>## copy(`_DT1`)[, `:=`(z = rnorm(1e+06))][grp == 1]</code></pre>
+<p>By ending with <code>show_query()</code> we get to see what the pipeline will call, in this case, <code>copy(`_DT1`)[, `:=`(z = rnorm(1e+06))][grp == 1]</code>. To actually have it perform the call, we can use <code>as.data.table()</code>, <code>as.data.frame()</code>, or <code>as_tibble()</code>.</p>
+<pre class="r"><code>ldt2 &lt;- ldt %&gt;% 
+  mutate(z = rnorm(1e6)) %&gt;% 
+  filter(grp == 1) %&gt;% 
+  as.data.table()
+ldt2</code></pre>
+<pre><code>##                   x           y grp           z
+##      1:  0.35925715 0.972492456   1  2.00026020
+##      2: -0.42916106 0.671132030   1 -0.08523638
+##      3:  0.52945762 0.683226878   1  1.07905944
+##      4:  0.04783764 0.885816810   1  1.36804883
+##      5: -1.50358696 0.889590352   1  0.47087529
+##     ---                                        
+## 333384: -1.12497537 0.058786577   1  0.76504240
+## 333385: -0.09114314 0.421360645   1  0.35110049
+## 333386:  0.18157624 0.370171118   1  0.48666399
+## 333387:  0.59309686 0.423892321   1  0.69279543
+## 333388: -0.31296198 0.004439265   1 -1.63661485</code></pre>
+<p>Without the <code>as.data.table()</code> in this example, we’d get the following warning from <code>dplyr</code>:</p>
+<pre><code>Warning message:
+You are using a dplyr method on a raw data.table, which will call the data frame implementation, and is likely to be inefficient.
+
+To suppress this message, either generate a data.table translation with `lazy_dt()` or convert to a data frame or tibble with `as.data.frame()`/`as_tibble()`.</code></pre>
+<p>This means, to use <code>dtplyr</code>, we really only have two additional steps:</p>
+<ol style="list-style-type: decimal">
+<li><code>lazy_dt()</code></li>
+<li><code>as.data.table()</code></li>
+</ol>
+<p>That is all. Everything else is <code>dplyr</code>.</p>
+<div id="combining-data.table-and-dtplyr" class="section level2">
+<h2>Combining <code>data.table</code> and <code>dtplyr</code></h2>
+<p>The current edition of <code>dtplyr</code> is still very new, and as such, is not going to provide the vast functionality that <code>dplyr</code> has. This means we’ll often need to use <code>data.table</code> syntax directly or use raw <code>dplyr</code>. Let’s say we have two tables, one with demographic information, another with response information for a study we are conducting. These tables could look like the following:</p>
+<pre class="r"><code>dt_1</code></pre>
+<pre><code>##                   x           y grp     id   outcome1   outcome2
+##       1:  0.3592571 0.972492456   1 288447  1.9907476  3.4464886
+##       2: -0.7754739 0.664721457   3 570542  4.4787198  9.5130578
+##       3: -0.6996232 0.268483296   2 405666  2.0478184  4.8868344
+##       4:  1.3425319 0.067564905   2 847115  5.2878490  7.8231675
+##       5: -0.4291611 0.671132030   1 716774 -0.3122558 -0.5975577
+##      ---                                                        
+##  999996: -0.9578632 0.324075893   2 633842  2.3959626  4.4729164
+##  999997:  1.0294101 0.564804682   3 651169  4.2803076  8.7329081
+##  999998: -0.9072387 0.168100982   2 135294  2.1566650  2.1077121
+##  999999: -1.0602955 0.945963837   2 599840  2.2187630  1.1658827
+## 1000000: -0.3129620 0.004439265   1 454685  2.1307141  3.5468652</code></pre>
+<pre class="r"><code>dt_2</code></pre>
+<pre><code>##              id sex location income
+##       1:  59037   2    rural  78455
+##       2: 787353   3    urban  52347
+##       3:  91265   2 suburbia  57493
+##       4: 266694   1    rural  74599
+##       5: 141315   2    rural  75548
+##      ---                           
+##  999996: 685531   3  nowhere  50235
+##  999997: 664593   2    rural  89403
+##  999998: 325741   1    rural  41182
+##  999999: 864091   1  nowhere  75551
+## 1000000: 778256   1  nowhere  55547</code></pre>
+<p>where, in <code>dt_1</code>, <code>x</code> and <code>y</code> are measured variables, <code>grp</code> was assigned, <code>id</code> is unique for each individual, and <code>outcome1</code> and <code>outcome2</code> are outcome variables for time 1 and 2, respectively; in <code>dt_2</code> the <code>id</code> matches the one in <code>dt_1</code>, and <code>sex</code>, <code>location</code>, and <code>income</code> are variables per individual.</p>
+<p>To begin working with this data, we might want to join the two sets, reshape them, clean (if necessary), and then analyze it.</p>
+<div id="step-1.-joining" class="section level3">
+<h3>Step 1. Joining</h3>
+<p>We will do a full join below. But first, we need to create “lazy dt” tables and then don’t forget to call <code>as.data.table()</code>.</p>
+<pre class="r"><code>dt_1 &lt;- lazy_dt(dt_1)
+dt_2 &lt;- lazy_dt(dt_2)
+
+full_dt &lt;- full_join(dt_1, dt_2, by = &quot;id&quot;) %&gt;% 
+  as.data.table()
+full_dt</code></pre>
+<pre><code>##               id            x           y grp   outcome1   outcome2 sex
+##       1:       1  1.592891463 0.552770586   2 3.56032897  5.1066277   3
+##       2:       2 -0.003586492 0.734072565   2 1.88211106  6.4108380   2
+##       3:       3 -0.043085537 0.455461335   1 0.01774645 -0.1706126   3
+##       4:       4 -0.215929271 0.780363158   1 1.26884244  3.1330296   2
+##       5:       5  0.662333228 0.009489971   3 4.81613101  6.4452392   2
+##      ---                                                               
+##  999996:  999996 -0.287980143 0.578793077   1 3.77876771  6.9098602   1
+##  999997:  999997 -1.226569604 0.800000797   2 2.44420871  6.9627365   3
+##  999998:  999998  0.815453247 0.944428263   3 5.96422090 10.3516092   1
+##  999999:  999999 -1.350713950 0.787841057   2 3.13720288  7.8384744   2
+## 1000000: 1000000  0.891163377 0.529749137   2 4.98330067  7.5411981   3
+##          location income
+##       1: suburbia  83498
+##       2:    rural  80773
+##       3:    urban  41490
+##       4:    urban  75944
+##       5:    urban  65604
+##      ---                
+##  999996:    urban  40245
+##  999997: suburbia  43692
+##  999998:    rural  47813
+##  999999: suburbia  85684
+## 1000000:    urban  48813</code></pre>
+<p>The <code>full_join(dt_1, dt_2, by = &quot;id&quot;)</code> makes a call to the <code>merge.data.table()</code> method.</p>
+</div>
+<div id="step-2.-reshaping" class="section level3">
+<h3>Step 2. Reshaping</h3>
+<p>We can then reshape it to be in “tidy” format. We’ll use the <code>melt</code> function in <code>data.table</code> for this, given its efficiency and speed.</p>
+<pre class="r"><code>melted &lt;- melt(full_dt, measure.vars = c(&quot;outcome1&quot;, &quot;outcome2&quot;), id.vars = c(&quot;id&quot;, &quot;sex&quot;, &quot;location&quot;, &quot;income&quot;))</code></pre>
+<p>By ordering by <code>id</code> we can see that each individual has two rows, one for <code>outcome1</code> and another for <code>outcome2</code>.</p>
+<pre class="r"><code>melted[order(id)]</code></pre>
+<pre><code>##               id sex location income variable       value
+##       1:       1   3 suburbia  83498 outcome1  3.56032897
+##       2:       1   3 suburbia  83498 outcome2  5.10662773
+##       3:       2   2    rural  80773 outcome1  1.88211106
+##       4:       2   2    rural  80773 outcome2  6.41083800
+##       5:       3   3    urban  41490 outcome1  0.01774645
+##      ---                                                 
+## 1999996:  999998   1    rural  47813 outcome2 10.35160920
+## 1999997:  999999   2 suburbia  85684 outcome1  3.13720288
+## 1999998:  999999   2 suburbia  85684 outcome2  7.83847439
+## 1999999: 1000000   3    urban  48813 outcome1  4.98330067
+## 2000000: 1000000   3    urban  48813 outcome2  7.54119807</code></pre>
+</div>
+<div id="step-3.-cleaning" class="section level3">
+<h3>Step 3. Cleaning</h3>
+<p>We may also want to put labels on the <code>sex</code> variable. We can do this with:</p>
+<pre class="r"><code>melted_clean &lt;- 
+  melted %&gt;% 
+  lazy_dt() %&gt;% 
+  mutate(sex = factor(sex,
+                      labels = c(&quot;male&quot;, &quot;female&quot;, &quot;non-binary&quot;))) %&gt;% 
+  as.data.table()
+melted_clean</code></pre>
+</div>
+<div id="step-4.-analyzing" class="section level3">
+<h3>Step 4. Analyzing</h3>
+<p>Finally, we can compute descriptives or run models with these data. For example, we can run:</p>
+<pre class="r"><code>melted_clean[, .(mean = mean(value)), by = variable]</code></pre>
+<pre><code>##    variable     mean
+## 1: outcome1 2.998691
+## 2: outcome2 5.498391</code></pre>
+<p>or</p>
+<pre class="r"><code>melted_clean[, .(mean = mean(income)), by = .(location)]</code></pre>
+<pre><code>## Warning in gmean(income): The sum of an integer column for a group was more
+## than type 'integer' can hold so the result has been coerced to 'numeric'
+## automatically for convenience.</code></pre>
+<pre><code>##    location     mean
+## 1: suburbia 65046.52
+## 2:    rural 65006.33
+## 3:    urban 65019.03
+## 4:  nowhere 65012.57</code></pre>
+</div>
+</div>
 
 
 

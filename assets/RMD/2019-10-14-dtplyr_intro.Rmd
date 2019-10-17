@@ -3,6 +3,8 @@ title: "dtplyr intro"
 author: "Tyson S. Barrett"
 date: "10/14/2019"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -18,7 +20,7 @@ library(dtplyr)
 library(dplyr)
 ```
 
-
+We will start with the following data table.
 
 ```{r}
 dt <- data.table(
@@ -29,10 +31,136 @@ dt <- data.table(
 dt
 ```
 
+In order to use the `dplyr` verbs on a data table (while using the `data.table` packages strengths), we need to create a "lazy data table". 
 
 ```{r}
-dt <- lazy_dt(dt)
+ldt <- lazy_dt(dt)
 ```
+
+Then we can simply use the core `dplyr` verbs. For example, we can do the following.
+
+```{r}
+ldt %>% 
+  mutate(z = rnorm(1e6)) %>% 
+  filter(grp == 1) %>% 
+  show_query()
+```
+
+By ending with `show_query()` we get to see what the pipeline will call, in this case, ```copy(`_DT1`)[, `:=`(z = rnorm(1e+06))][grp == 1]```. To actually have it perform the call, we can use `as.data.table()`, `as.data.frame()`, or `as_tibble()`.
+
+```{r}
+ldt2 <- ldt %>% 
+  mutate(z = rnorm(1e6)) %>% 
+  filter(grp == 1) %>% 
+  as.data.table()
+ldt2
+```
+
+Without the `as.data.table()` in this example, we'd get the following warning from `dplyr`:
+
+    Warning message:
+    You are using a dplyr method on a raw data.table, which will call the data frame implementation, and is likely to be inefficient.
+
+    To suppress this message, either generate a data.table translation with `lazy_dt()` or convert to a data frame or tibble with `as.data.frame()`/`as_tibble()`.
+
+This means, to use `dtplyr`, we really only have two additional steps:
+
+1. `lazy_dt()`
+2. `as.data.table()`
+
+That is all. Everything else is `dplyr`.
+
+
+## Combining `data.table` and `dtplyr`
+
+The current edition of `dtplyr` is still very new, and as such, is not going to provide the vast functionality that `dplyr` has. This means we'll often need to use `data.table` syntax directly or use raw `dplyr`. Let's say we have two tables, one with demographic information, another with response information for a study we are conducting. These tables could look like the following:
+
+```{r, echo = FALSE}
+dt_1 <- ldt %>% 
+  mutate(id = sample(1L:1e6L)) %>% 
+  mutate(icc = rnorm(1e6, id/1e6)) %>% 
+  mutate(outcome1 = x + y + grp + icc + rnorm(1e6),
+         outcome2 = outcome1 + grp + icc + rnorm(1e6)) %>% 
+  select(-icc) %>% 
+  as.data.table()
+
+dt_2 <- data.table(
+  id = sample(1L:1e6L),
+  sex = sample(1L:3L, 1e6, replace = TRUE),
+  location = sample(c("urban", "rural", "suburbia", "nowhere"), 1e6, replace = TRUE),
+  income = sample(40000:90000, 1e6, replace = TRUE)
+)
+```
+
+```{r}
+dt_1
+dt_2
+```
+
+where, in `dt_1`, `x` and `y` are measured variables, `grp` was assigned, `id` is unique for each individual, and `outcome1` and `outcome2` are outcome variables for time 1 and 2, respectively; in `dt_2` the `id` matches the one in `dt_1`, and `sex`, `location`, and `income` are variables per individual.
+
+To begin working with this data, we might want to join the two sets, reshape them, clean (if necessary), and then analyze it.
+
+
+### Step 1. Joining
+
+We will do a full join below. But first, we need to create "lazy dt" tables and then don't forget to call `as.data.table()`.
+
+```{r}
+dt_1 <- lazy_dt(dt_1)
+dt_2 <- lazy_dt(dt_2)
+
+full_dt <- full_join(dt_1, dt_2, by = "id") %>% 
+  as.data.table()
+full_dt
+```
+
+The `full_join(dt_1, dt_2, by = "id")` makes a call to the `merge.data.table()` method.
+
+### Step 2. Reshaping
+
+We can then reshape it to be in "tidy" format. We'll use the `melt` function in `data.table` for this, given its efficiency and speed.
+
+```{r}
+melted <- melt(full_dt, measure.vars = c("outcome1", "outcome2"), id.vars = c("id", "sex", "location", "income"))
+```
+
+By ordering by `id` we can see that each individual has two rows, one for `outcome1` and another for `outcome2`.
+
+```{r}
+melted[order(id)]
+```
+
+
+### Step 3. Cleaning
+
+We may also want to put labels on the `sex` variable. We can do this with:
+
+```{r}
+melted_clean <- 
+  melted %>% 
+  lazy_dt() %>% 
+  mutate(sex = factor(sex,
+                      labels = c("male", "female", "non-binary"))) %>% 
+  as.data.table()
+melted_clean
+```
+
+
+### Step 4. Analyzing
+
+Finally, we can compute descriptives or run models with these data. For example, we can run:
+
+```{r}
+melted_clean[, .(mean = mean(value)), by = variable]
+```
+
+or
+
+```{r}
+melted_clean[, .(mean = mean(income)), by = .(location)]
+```
+
 
 
 

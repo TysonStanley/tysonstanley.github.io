@@ -1,0 +1,195 @@
+---
+title: "Untitled"
+author: "Tyson S. Barrett"
+date: "10/16/2019"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+As I've spent time learning about different approaches to working with data, I've seen several subtle, but important, differences in how to do things. This very short post is presenting how one can perform vectorized "if else" functions in `data.table` and how these relate to the grammar of `dplyr`.
+
+Why do this? Well, we are often making or adjusting a variable based on values in another variable. This is often done using `base::ifelse()`, `dplyr::if_else()`, `dplyr::case_when()`, or `data.table::fiflese()`. But it turns out there is another way to do this in `data.table` that is very quick.
+
+For this post, we will use:
+
+```{r}
+# Core
+library(dplyr)
+library(data.table)
+library(bench)
+# Helpers
+library(tidyr)
+library(ggbeeswarm)
+```
+
+We'll also create a ficticious data set with four variables: `grp`, `x`, `y`, and `z`.
+
+```{r}
+dt <- data.table(
+  grp = factor(sample(1L:3L, 1e6, replace = TRUE)),
+  x = rnorm(1e6),
+  y = rnorm(1e6),
+  z = sample(c(1:10, NA), 1e6, replace = TRUE)
+)
+dt
+```
+
+## If Else
+
+Let's say we want to create a new variable that is categorizing our `x` variable. Below we walk through each approach to doing this.
+
+### `base::ifelse()`, `dplyr::if_else()`, and `data.table::fiflese()`
+
+Both `base::ifelse()`,  `dplyr::if_else()`, and `data.table::fiflese()` work the same way, but `if_else()` and `fifelse()` are more careful about variable types and `fiflese()` is super fast. These are used with the following general syntax:
+
+```{r, eval=FALSE}
+if_else(condition, true, false)
+```
+
+where:
+
+1. `condition` is something that can be true or false. For example, we could do `x > median(x)` to test if each individual point of `x` is greater than the median of `x` or not. 
+2. `true` is what is supposed to happen when the condition is true.
+3. `false` is what is supposed to happen when the condition is false.
+
+So with our example data, we can do:
+
+```{r}
+dt %>% 
+  mutate(x_cat = if_else(x > median(x), "high", "low")) %>% 
+  as_tibble()
+```
+
+We could do this with `data.table` like below:
+
+```{r, eval=FALSE}
+dt[, x_cat := fiflese(x > median(x), "high", "low")]
+```
+
+
+### `dplyr::case_when()`
+
+A newer, but fantastic, approach is using `dplyr::case_when()`. This uses a unique syntax, but one that can avoid some issues. When there's more than 2 levels of the new variable (e.g., not just a "high" and "low" but there is also a "moderate" level) then we use what is called *nested ifelse statements*. These can get messy, with many parenthases. For example, with just two three levels, we now need to use two `if_else()` statements, where the second is in the `false` place of the first.
+
+```{r}
+dt %>% 
+  mutate(x_cat = if_else(x < -.5, "low",
+                 if_else(x < .5 , "moderate", "high"))) %>% 
+  as_tibble()
+```
+
+This is where `case_when()` is really awesome. Consider the same thing we just did with `if_else()` but with `case_when()`.
+
+```{r}
+dt %>% 
+  mutate(x_cat = case_when(x < -.5 ~ "low",
+                           x <  .5 ~ "moderate",
+                           x >= .5 ~ "high"))
+```
+
+No nested statements needed. Instead it relies on the following syntax:
+
+```{r, eval = FALSE}
+case_when(condition1 ~ if_condition1_true,
+          condition2 ~ if_condition2_true,
+          condition3 ~ if_condition3_true,
+          condition4 ~ if_condition4_true)
+```
+
+With no real limit to the number of conditions that can be used. Any values that don't meet the conditions (so if someone in the data don't meet conditions 1 - 4, their value for this new variable we are making would be `NA`.
+
+### `data.table`s filter-mutate-keep
+
+This approach is unique to `data.table` and functions very similarly to `case_when()` in terms of syntax. For example,
+
+```{r, eval=FALSE}
+dt[x < -.5, x_cat := "low"]
+dt[x <  .5, x_cat := "moderate"]
+dt[x >= .5, x_cat := "high"]
+```
+
+This filters by the condition and then assigns values to `x_cat` either low, moderate, or high. This results in the same thing as the `case_when()` example.
+
+## Is one preferred?
+
+First, preference depends on a number of things. This can be syntax, performance, team dynamics, etc. As such, I can't tell you what is preferred. I have my opinions (I love `case_when()` and the filter-mutate-keep approaches) but all discussed herein will do the trick. 
+
+But to help you understand the performance of the approaches, consider the following results.
+
+```{r}
+base_dt <- copy(dt) %>% as.data.frame()
+dply_dt <- copy(dt) %>% as_tibble()
+dt_filt <- copy(dt)
+dt_fife <- copy(dt)
+
+base_if <- quote(
+  base_dt$x_cat <- ifelse(base_dt$x < -.5, "low",
+                   ifelse(base_dt$x < .5, "moderate", "high")))
+casewhen <- quote(
+  dt <- mutate(dt, x_cat = case_when(x < -.5 ~ "low",
+                                     x <  .5 ~ "moderate",
+                                     x >= .5 ~ "high")))
+
+dt_fmk <- quote({
+  dt_filt[x < -.5, x_cat := "low"]
+  dt_filt[x <  .5, x_cat := "moderate"]
+  dt_filt[x >= .5, x_cat := "high"]})
+
+dt_fif <- quote(
+  dt_fife[, x_cat := fifelse(x < -.5, "low", 
+                     fifelse(x < .5, "moderate", "high"))])
+
+
+bm <-
+  bench::mark(
+    eval(base_if),
+    eval(casewhen),
+    eval(dt_fmk),
+    eval(dt_fif),
+    check = FALSE,
+    iterations = 50)
+
+bm %>% 
+  pull(time) %>% 
+  setNames(c("base", 
+             "dplyr", 
+             "fmk", 
+             "fif")) %>% 
+  as.data.frame() %>% 
+  gather() %>% 
+  mutate(key = factor(key, 
+                      levels = c("base", 
+                                 "dplyr", 
+                                 "fmk", 
+                                 "fif"),
+                      labels = c("base::ifelse()", 
+                                  "dplyr::case_when", 
+                                  "data.table\nfilter-mutate-keep",
+                                 "data.table::fiflese()"))) %>% 
+  ggplot(aes(key, value, color = key)) +
+    geom_beeswarm() +
+    theme_minimal() +
+    theme(panel.grid.major.x = element_blank(),
+          legend.position = "none") +
+  labs(y = "Time",
+       x = "",
+       title = "Speed comparisons across if else approaches") +
+    scale_colour_viridis_d()
+ggsave(here::here("assets/RMD/2019-10-16-filter_mutate_keep_files/speed.png"),
+       width = 6,
+       height = 5)
+```
+
+
+# Session Info
+
+```{r}
+sessioninfo::session_info()
+```
+
+
+
+
