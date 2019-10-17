@@ -191,13 +191,20 @@ This approach is unique to `data.table` and functions very similarly to
 
 {% highlight r %}
 dt[x < -.5, x_cat := "low"]
-dt[x <  .5, x_cat := "moderate"]
+dt[x >= -.5 & x < .5, x_cat := "moderate"]
 dt[x >= .5, x_cat := "high"]
 {% endhighlight %}
 
 This filters by the condition and then assigns values to `x_cat` either
 low, moderate, or high. This results in the same thing as the
-`case_when()` example.
+`case_when()` example. The only added burden of this approach is that 
+it doesn't move from one condition to the next in the same way `case_when()`.
+That is, `case_when()` will find the rows that fit the first condition, and 
+then will look at the next condition (and ignore the rows that already met the
+first condition). The filter-mutate-keep approach requires that you are very 
+explicit since it won't ignore the rows that met the other conditions.
+Still, in many situations, it doesn't add too much more coding.
+
 
 Is one preferred?
 -----------------

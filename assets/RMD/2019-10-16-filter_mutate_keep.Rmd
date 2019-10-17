@@ -107,7 +107,7 @@ This approach is unique to `data.table` and functions very similarly to `case_wh
 
 ```{r, eval=FALSE}
 dt[x < -.5, x_cat := "low"]
-dt[x <  .5, x_cat := "moderate"]
+dt[x >= -.5 & x < .5, x_cat := "moderate"]
 dt[x >= .5, x_cat := "high"]
 ```
 
