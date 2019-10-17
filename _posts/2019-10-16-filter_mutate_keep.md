@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Doing Fast and Clear 'If Else' in R"
+title: "Doing Fast and Readable 'If Else' in R"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
@@ -11,7 +11,7 @@ data, I’ve seen several subtle, but important, differences in how to do
 things. This very short post is presenting how one can perform
 vectorized “if else” functions in `R`. The idea of "if else" basically is:
 
-> If something meets a condition, do this; else, do something else.
+> If something meets a condition, do this; else, do that.
 
 Why do this? Well, we are often making or adjusting a variable based on
 values in another variable. This is often done using `base::ifelse()`,
