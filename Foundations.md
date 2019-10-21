@@ -72,7 +72,7 @@ This course is an introduction to statistics at a graduate level (generally PhD 
 - [Chapter 10 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.pdf) or [Chapter 10 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.html)
 - [Chapter 19-20 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pdf) or [Chapter 19-20 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u06_Ch19-20_categorical.pptx)
 
-### Homework #4
+### Homework #4 (Optional)
 
 - On Canvas: Answer the questions on canvas for the first part of the homework.
 - Application: Using the following data and questions file, complete the application part of the homework.
