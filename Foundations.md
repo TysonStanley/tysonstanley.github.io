@@ -50,9 +50,9 @@ This course is an introduction to statistics at a graduate level (generally PhD 
 
 - [Chapter 11 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch11_matchedt.pdf) or [Chapter 11 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch11_matchedt.pptx)
 - [Chapter 15 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pdf) or [Chapter 15 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch15_rmANOVA.pptx)
-  - An `R` Example of RM ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch15_rmANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch15_rmANOVA.Rmd)
+    - An `R` Example of RM ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch15_rmANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch15_rmANOVA.Rmd)
 - [Chapter 16 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch16_mixANOVA.pdf) or [Chapter 16 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u05_Ch16_mixANOVA.pptx) 
-  - An `R` Example of Mixed ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.Rmd)
+    - An `R` Example of Mixed ANOVA [HTML](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.html) or [RMD](http://tysonbarrett.com/EDUC-6600/Resources/Example_Ch16_MixedANOVA.Rmd)
 - **Homework #3**
     - On Canvas: Answer the questions on canvas for the first part of the homework.
     - Application: Using the following data and questions file, complete the application part of the homework.
