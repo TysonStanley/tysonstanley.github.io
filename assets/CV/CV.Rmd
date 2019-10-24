@@ -222,11 +222,14 @@ Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G.
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (in revision). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
 
-Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Prevention Science}.
+Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Prevention Science}.
 
-*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., & Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism \emph{Behavior Therapy}.
+*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., \& Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism \emph{Behavior Therapy}.
+
+Crapo, J.S., Bradford, K. \textbf{Barrett, T.S.}, Miller, J.A., \& Higginbotham, B.J. (under review). CRE Outcomes Predicted by Family Life Stage and Traditionality, \emph{Contemporary Family Therapy.}
 
 \textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
+
 
 
 <!-- Prep Ones 
