@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.8.31)  23 OCT 2019 23:54
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.8.31)  24 OCT 2019 01:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -895,12 +895,14 @@ File: osf_materials.png Graphic file (type bmp)
 [4]
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
+File: tidyfast_hex.png Graphic file (type bmp)
+<tidyfast_hex.png>
 File: connectivity_hex.jpg Graphic file (type bmp)
 <connectivity_hex.jpg>
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (0.24669pt too wide) in paragraph at lines 583--586
+Overfull \hbox (0.24669pt too wide) in paragraph at lines 587--590
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). autoscore. URL: github.com/autoscore/autoscore.
  []
@@ -918,15 +920,15 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [5] [6] [7]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 864.
+(hyperref)                than one, level fixed on input line 868.
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1001.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1005.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1001.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1005.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1001.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1001.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1005.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1005.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 292E50C137913DCB5CA9690BC223A735.
@@ -935,10 +937,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 23782 strings out of 494894
- 449942 string characters out of 6175873
+ 23786 strings out of 494894
+ 450019 string characters out of 6175873
  571494 words of memory out of 5000000
- 27474 multiletter control sequences out of 15000+600000
+ 27477 multiletter control sequences out of 15000+600000
  545097 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  46i,9n,68p,799b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
