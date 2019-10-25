@@ -323,19 +323,19 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\leftskip}{1in}
 \noindent
 
-\textbf{Barrett, T.S.} (2019). dissertateUSU. URL: github.com/tysonstanley/dissertateUSU. R package version `r packageVersion("dissertateUSU")`. doi: 10.5281/zenodo.3240640. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
+\textbf{Barrett, T.S.} (2019). `dissertateUSU`. URL: github.com/tysonstanley/dissertateUSU. R package version `r packageVersion("dissertateUSU")`. doi: 10.5281/zenodo.3240640. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
 
-\textbf{Barrett, T.S.} (2019). tidyfast. URL: github.com/tysonstanley/tidyfast. R package version `r packageVersion("tidyfast")`. \img{tidyfast_hex.png}{https://github.com/TysonStanley/tidyfast}
+\textbf{Barrett, T.S.} (2019). `tidyfast`. URL: github.com/tysonstanley/tidyfast. R package version `r packageVersion("tidyfast")`. \img{tidyfast_hex.png}{https://github.com/TysonStanley/tidyfast}
 
-\textbf{Barrett, T.S.} (2019). connectivity. URL: github.com/tysonstanley/connectivity. R package version `r packageVersion("connectivity")`. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
+\textbf{Barrett, T.S.} (2019). `connectivity`. URL: github.com/tysonstanley/connectivity. R package version `r packageVersion("connectivity")`. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
 
-\textbf{Barrett, T.S.} (2019). rjasa. URL: github.com/tysonstanley/rjasa. R package version `r packageVersion("rjasa")`.
+\textbf{Barrett, T.S.} (2019). `rjasa`. URL: github.com/tysonstanley/rjasa. R package version `r packageVersion("rjasa")`.
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). autoscore. URL: github.com/autoscore/autoscore. R package version `r packageVersion("autoscore")`. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). `autoscore`. URL: github.com/autoscore/autoscore. R package version `r packageVersion("autoscore")`. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
 
-\textbf{Barrett, T.S.} (2018). MarginalMediation: Marginal Mediation Analysis. URL: tysonbarrett.com/MarginalMediation. R package version `r packageVersion("MarginalMediation")`. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
+\textbf{Barrett, T.S.} (2018). `MarginalMediation`: Marginal Mediation Analysis. URL: tysonbarrett.com/MarginalMediation. R package version `r packageVersion("MarginalMediation")`. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
 
-\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) furniture: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
+\textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) `furniture`: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
 
 
 \setlength{\parindent}{0in}
