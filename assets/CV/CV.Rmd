@@ -360,7 +360,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \hrule
 \vspace{20pt}
 
-```{r citation_fig, fig.width=8, fig.height=2, echo = FALSE, warning = FALSE, message = FALSE}
+```{r citation_fig, fig.width=8, fig.height=2.3, echo = FALSE, warning = FALSE, message = FALSE}
 month <- months(lubridate::today())
 year <- lubridate::year(lubridate::today())
 
