@@ -37,7 +37,7 @@ Statistical models
 (Intercept)
 </td>
 <td style="padding-right: 12px; border: none;">
--1.21<sup style="vertical-align: 0px;">\*\*\*</sup>
+-1.21<sup style="vertical-align: 0px;">***</sup>
 </td>
 </tr>
 <tr>
@@ -52,7 +52,7 @@ Statistical models
 sexgirl
 </td>
 <td style="padding-right: 12px; border: none;">
-1.24<sup style="vertical-align: 0px;">\*\*\*</sup>
+1.24<sup style="vertical-align: 0px;">***</sup>
 </td>
 </tr>
 <tr>
@@ -67,7 +67,7 @@ sexgirl
 extrav
 </td>
 <td style="padding-right: 12px; border: none;">
-0.80<sup style="vertical-align: 0px;">\*\*\*</sup>
+0.80<sup style="vertical-align: 0px;">***</sup>
 </td>
 </tr>
 <tr>
@@ -82,7 +82,7 @@ extrav
 texp
 </td>
 <td style="padding-right: 12px; border: none;">
-0.23<sup style="vertical-align: 0px;">\*\*\*</sup>
+0.23<sup style="vertical-align: 0px;">***</sup>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ texp
 extrav:texp
 </td>
 <td style="padding-right: 12px; border: none;">
--0.02<sup style="vertical-align: 0px;">\*\*\*</sup>
+-0.02<sup style="vertical-align: 0px;">***</sup>
 </td>
 </tr>
 <tr>
