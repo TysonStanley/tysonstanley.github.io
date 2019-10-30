@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Guest Post: *Interpreting Interactions in Multilevel Models*"
+title: "Guest Post: <i>Interpreting Interactions in Multilevel Models</i>"
 categories: jekyll update
 author: Tyson S. Barrett
 comments: true
