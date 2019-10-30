@@ -6,6 +6,8 @@ author: Tyson S. Barrett
 comments: true
 ---
 
+This is a guest post by Jeremy Haynes, a doctoral student at Utah State University.
+
 ## Contents
 
 -   [Fitting Model and Specifying Simple Intercepts and Simple
@@ -18,7 +20,6 @@ comments: true
 Fitting Model and Specifying Simple Intercepts and Simple Slopes
 ================================================================
 
-“<a href="http://www.w3.org/TR/html4/loose.dtd" class="uri">http://www.w3.org/TR/html4/loose.dtd</a>”&gt;
 <table cellspacing="0" align="center" style="border: none;">
 <caption align="bottom" style="margin-top:0.3em;">
 Statistical models
