@@ -230,12 +230,17 @@ Crapo, J.S., Bradford, K. \textbf{Barrett, T.S.}, Miller, J.A., \& Higginbotham,
 
 \textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
 
+<!--
+Nichola's Paper...
+-->
 
 
 <!-- Prep Ones 
 - In Preparation
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
+
+Stephanie Knollhoffs Communications modality paper
 
 -->
 
