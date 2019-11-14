@@ -51,7 +51,7 @@ became more and more clear. Consider some of those similarities below:
     (e.g. grouped data). Similarly, `data.table` has a more informative
     printing method, is safer (again makes accidental changes of types
     harder), and has informative attributes (e.g. sorted by the key).
-    For example, the printing approaches are shown below:
+    As an example, the printing approaches are shown below:
 
 {% highlight r %}
 library(tidyverse)
@@ -100,11 +100,11 @@ flights_dt
 -   Both rely on non-standard evaluation, making it easier to interact
     with variables without redundancies. For example, in the
     `tidyverse`, interacting with variables happens within functions
-    that don’t require repetitive `df$...` or lots of quotes.
-    `data.table` does this similarly, but within the square brackes
+    that don’t require repetitive `df$..` code or lots of quotes.
+    `data.table` does this similarly, but within the `data.table` square brackes
     (e.g. `dt[var == 1]`). The form of non-standard evaluation does
-    differ somewhat between the two (I’ll discuss this later). For
-    example:
+    differ somewhat between the two (I’ll discuss this later). For now,
+    consider the following examples showing their similar syntax:
 
 {% highlight r %}
 # tidyverse
@@ -121,6 +121,10 @@ flights_dt[dep_delay > 100]
 -   Both use either `C` or `C++` to improve speed. `data.table` uses
     this for nearly all of the functionality, while `tidyverse` uses it
     often but not nearly as much.
+    
+-   Both have ways to interact with their non-standard evaluation 
+    programmatically. They go about it very differently, but both 
+    allow this to happen in various ways (e.g. `{{ }}` operator in `dplyr`).
 
 -   Both have a team of developers that work together in a synergistic
     fashion. These teams come with a range of experiences, expertise,
@@ -171,8 +175,8 @@ discussed next. But here I wanted to highlight some notable differences.
 These are just some of the differences, and in several ways, it helps
 meet the needs of a variety of analysts with varying styles. Instead of
 a weakness in the R world, I see this as a great strength. This strength
-has been extended with the collaboration between `data.table` and
-`tidyverse` teams on making `dtplyr`.
+has been clearly demonstrated even more so with the collaboration 
+between `data.table` and `tidyverse` teams on making `dtplyr`.
 
 Lesson 2: Both the `tidyverse` and `data.table` are doing things to make it harder to mess up your data
 -------------------------------------------------------------------------------------------------------
