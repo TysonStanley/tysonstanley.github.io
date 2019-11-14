@@ -108,10 +108,10 @@ flights_dt
     differ somewhat between the two (I’ll discuss this later). For
     example:
 
-<!-- -->
-
 {% highlight r %}
+# tidyverse
 filter(flights_tbl, dep_delay > 100)
+# data.table
 flights_dt[dep_delay > 100]
 {% endhighlight %}
 
@@ -135,7 +135,7 @@ Some of these differences will be highlighted in these next lessons
 discussed next. But here I wanted to highlight some notable differences.
 
 -   `tidyverse` has recently emphasized type safety (see
-    [`vctrs`](https://vctrs.r-lib.org) as an example). This matches
+    [`vctrs`](https://vctrs.r-lib.org) for example). This matches
     their overall style of being explicit in all behavior. This, at
     times, is at the expense of parsimony.
 
@@ -146,21 +146,23 @@ discussed next. But here I wanted to highlight some notable differences.
     almost always creates opportunities to work with data that most
     other programs could not even begin to work with.
 
--   `tidyverse` works with a whole host of packages (somewhat based on
-    the idea of “conscious decoupling”) all designed for specific
-    purposes. This makes it so these have several dependencies (`dplyr`
-    currently as 11 imports and 25 suggests). `data.table`, on the other
-    hand, is very self-contained with only 1 import (“methods”) and 8
-    suggests. To put this idea in perspective, I believe Jim Hester
-    makes it really clear in this
+-   `tidyverse` works with a whole host of packages (possibly somewhat based on
+    the idea of [“conscious decoupling”](https://www.tidyverse.org/blog/2018/10/devtools-2-0-0/#conscious-uncoupling)) 
+    all designed for specific purposes. This makes it so these have several 
+    dependencies (`dplyr` currently as 11 imports and 25 suggests). 
+    `data.table`, on the other hand, is very self-contained with only 
+    1 import (“methods”, which is always included in R) and 8
+    suggests. This idea is not as simple as just counting dependencies, however.
+    To better understand the situation, I recommend watching Jim Hester's
     [talk](https://resources.rstudio.com/rstudio-conf-2019/it-depends-a-dialog-about-dependencies).
 
 -   Related to dependencies, the `tidyverse` has many (100’s) functions
     that are clear about their functionality. `data.table` has only a
-    few functions (less than 20). Depending on your personal
-    preferences, one may work better than the other for you. Overall,
-    nearly all functionality can be replicated with either (some of this
-    is shown in `tidyfast`, especially with the nesting functionality).
+    few functions total. Depending on your personal
+    preferences, one may work better than the other for you. But keep in mind,
+    and I discuss it more later on, that nearly all functionality in each 
+    can be replicated by the other (some of this is shown in `dtplyr` and 
+    `tidyfast`).
 
 -   `data.table` uses a special operator that assigns by reference (or
     in place). This avoids a copy of the data, but with how R does
