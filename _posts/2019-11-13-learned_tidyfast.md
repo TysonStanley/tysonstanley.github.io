@@ -23,7 +23,7 @@ with these packages.
 TL;DR
 -----
 
-My six lessons learned:
+The six lessons I learned:
 
 1.  `tidyverse` and `data.table` have many similarities even though
     their overall frameworks are different
