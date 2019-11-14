@@ -36,16 +36,18 @@ library(data.table)
 library(nycflights13)
 
 flights2 <- flights[, 1:6]
-as_tibble(flights2)
-as.data.table(flights2)
+flights_tbl <- as_tibble(flights2)
+flights_dt <- as.data.table(flights2)
+
+flights_tbl
+flights_dt
 ```
 
 - Both rely on non-standard evaluation, making it easier to interact with variables without redundancies. For example, in the `tidyverse`, interacting with variables happens within functions that don't require repetitive `df$...` or lots of quotes. `data.table` does this similarly, but within the square brackes (e.g. `dt[var == 1]`). The form of non-standard evaluation does differ somewhat between the two (I'll discuss this later). For example:
 
 ```{r}
-as_tibble(flights2) %>% 
-  mutate(new_var = paste0(month, "/", year))
-as.data.table(flights2)[, new_var := paste0(month, "/", year)][]
+filter(flights_tbl, dep_delay > 100)
+flights_dt[dep_delay > 100]
 ```
 
 - Both have a way of piping/chaining commands. `tidyverse` uses pipes (`%>%`) while `data.table` has built in functionality with their square brackets (`[]`). Notably, pipes can be used with `data.table` but hasn't seemed to be used a lot yet.

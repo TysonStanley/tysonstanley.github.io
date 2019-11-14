@@ -1,11 +1,3 @@
----
-layout: post
-title: "Six Things I Learned While Making `tidyfast`"
-categories: jekyll update
-author: Tyson S. Barrett
-comments: true
----
-
 This post highlights 6 major themes of what I learned while creating the
 [`tidyfast` R package](https://tysonbarrett.com/tidyfast/). This process
 taught me about the `tidyverse`, `data.table`, `R`, and data science in
@@ -15,10 +7,7 @@ Before getting into that though, disclaimer: I am not part of the
 development teams of either the `tidyverse` or `data.table`. Instead, I
 am a big fan of both, and have profound gratitude for what they’ve
 allowed R to become. As such, my lessons are my opinions and don’t
-reflect the opinions of either group. And it should be noted that these
-are things I learned making a package that creates tidy-like functions
-with `data.table`. As such, most of the topics discussed will have to do
-with these packages.
+reflect the opinions of either group.
 
 TL;DR
 -----
@@ -48,24 +37,22 @@ became more and more clear. Consider some of those similarities below:
 -   Both use an extension of data frames. The `tidyverse` has `tibbles`,
     which come with a cleaner and clearer printing method, is safer
     (doesn’t change types as easily), and allows informative attributes
-    (e.g. grouped data). Similarly, `data.table` has a more informative
+    (e.g. grouped data). Similarly, `data.table` has a more informative
     printing method, is safer (again makes accidental changes of types
-    harder), and has informative attributes (e.g. sorted by the key).
+    harder), and has informative attributes (e.g. sorted by the key).
     For example, the printing approaches are shown below:
 
 <!-- -->
 
-{% highlight r %}
-library(tidyverse)
-library(data.table)
-library(nycflights13)
+    library(tidyverse)
+    library(data.table)
+    library(nycflights13)
 
-flights2 <- flights[, 1:6]
-flights_tbl <- as_tibble(flights2)
-flights_dt <- as.data.table(flights2)
+    flights2 <- flights[, 1:6]
+    flights_tbl <- as_tibble(flights2)
+    flights_dt <- as.data.table(flights2)
 
-flights_tbl
-{% endhighlight %}
+    flights_tbl
 
     ## # A tibble: 336,776 x 6
     ##     year month   day dep_time sched_dep_time dep_delay
@@ -82,9 +69,7 @@ flights_tbl
     ## 10  2013     1     1      558            600        -2
     ## # … with 336,766 more rows
 
-{% highlight r %}
-flights_dt
-{% endhighlight %}
+    flights_dt
 
     ##         year month day dep_time sched_dep_time dep_delay
     ##      1: 2013     1   1      517            515         2
@@ -104,16 +89,43 @@ flights_dt
     `tidyverse`, interacting with variables happens within functions
     that don’t require repetitive `df$...` or lots of quotes.
     `data.table` does this similarly, but within the square brackes
-    (e.g. `dt[var == 1]`). The form of non-standard evaluation does
+    (e.g. `dt[var == 1]`). The form of non-standard evaluation does
     differ somewhat between the two (I’ll discuss this later). For
     example:
 
 <!-- -->
 
-{% highlight r %}
-filter(flights_tbl, dep_delay > 100)
-flights_dt[dep_delay > 100]
-{% endhighlight %}
+    filter(flights_tbl, dep_delay > 100)
+
+    ## # A tibble: 13,346 x 6
+    ##     year month   day dep_time sched_dep_time dep_delay
+    ##    <int> <int> <int>    <int>          <int>     <dbl>
+    ##  1  2013     1     1      811            630       101
+    ##  2  2013     1     1      848           1835       853
+    ##  3  2013     1     1      957            733       144
+    ##  4  2013     1     1     1114            900       134
+    ##  5  2013     1     1     1505           1310       115
+    ##  6  2013     1     1     1525           1340       105
+    ##  7  2013     1     1     1540           1338       122
+    ##  8  2013     1     1     1558           1359       119
+    ##  9  2013     1     1     1803           1620       103
+    ## 10  2013     1     1     1815           1325       290
+    ## # … with 13,336 more rows
+
+    flights_dt[dep_delay > 100]
+
+    ##        year month day dep_time sched_dep_time dep_delay
+    ##     1: 2013     1   1      811            630       101
+    ##     2: 2013     1   1      848           1835       853
+    ##     3: 2013     1   1      957            733       144
+    ##     4: 2013     1   1     1114            900       134
+    ##     5: 2013     1   1     1505           1310       115
+    ##    ---                                                 
+    ## 13342: 2013     9  30     1823           1545       158
+    ## 13343: 2013     9  30     1951           1649       182
+    ## 13344: 2013     9  30     2053           1815       158
+    ## 13345: 2013     9  30     2159           1845       194
+    ## 13346: 2013     9  30     2235           2001       154
 
 -   Both have a way of piping/chaining commands. `tidyverse` uses pipes
     (`%>%`) while `data.table` has built in functionality with their
@@ -180,13 +192,11 @@ Lesson 2: Both the `tidyverse` and `data.table` are doing things to make it hard
 In `vctrs`, Hadley and the `tidyverse` team show some crazy examples of
 ways R can really mess up. Consider:
 
-{% highlight r %}
-c(factor("a"), factor("a"))
-{% endhighlight %}
+    c(factor("a"), factor("a"))
 
     ## [1] 1 1
 
-If you are like me, your first reaction was a series of emojis: 🤔 😱 😞 😿
+If you are like me, your first reaction was a series of emojis: 🤔 😱 😿 😞
 🤨. The `tidyverse` team has been working on ways to make sure things
 like this don’t happen, particularly with `vctrs`.
 
@@ -275,7 +285,7 @@ fact, both can happen simultaneously. There are several examples:
 -   Many functions in `dplyr` are both relatively fast (sometimes using
     Rcpp under the hood) and explicit in functionality.
 -   `tidyfast` attempts to do have explicit functionality with other
-    functions (e.g. nesting and unnesting) using `data.table` behind the
+    functions (e.g. nesting and unnesting) using `data.table` behind the
     scenes.
 -   `dtplyr` makes use of this extensively by making many `dplyr`
     functions built on `data.table`.
@@ -321,14 +331,14 @@ those found in the `tidyverse`, it is an option that can be used in
 situations that call for it without changing the overall workflow or
 changing the data grammar that is used.
 
-Miscellaneous Notes
+Miscelaneous Notes
 ------------------
 
 Any general workflow should include *safe-guards*. This is particularly
 necessary when you are using a syntax you are less familiar with. These
 safe-guards can be:
 
--   including simple tests (e.g. `assertthat`) in your scripts that make
+-   including simple tests (e.g. `assertthat`) in your scripts that make
     sure things are working
 -   using data approaches like nesting to keep analyses and cleaning
     within groups
