@@ -6,7 +6,7 @@ author: Tyson S. Barrett
 comments: true
 ---
 
-This post highlights 6 major themes of what I learned while creating the
+This post highlights six major themes of what I learned while creating the
 [`tidyfast` R package](https://tysonbarrett.com/tidyfast/). This process
 taught me about the `tidyverse`, `data.table`, `R`, and data science in
 general.
@@ -31,7 +31,7 @@ My six lessons learned:
     harder to mess up your data
 3.  Data grammar, as explicitly stated in `dplyr`, is important
 4.  Speed and efficiency, as shown by `data.table`, are important
-5.  Both 2 and 3 are not mutually exclusive
+5.  Both 3 and 4 are not mutually exclusive
 6.  Nothing works for every situation, but a general workflow can apply
     to most situations
 
@@ -52,8 +52,6 @@ became more and more clear. Consider some of those similarities below:
     printing method, is safer (again makes accidental changes of types
     harder), and has informative attributes (e.g. sorted by the key).
     For example, the printing approaches are shown below:
-
-<!-- -->
 
 {% highlight r %}
 library(tidyverse)
@@ -233,7 +231,6 @@ syntax, is less important (although arguably relevant in some contexts).
 But the adoption of the grammar is what is important—to be able to
 communicate across modalities and styles.[1]
 
-<!-- idea: develop a data science dictionary -->
 
 Lesson 4: Speed and efficiency are important
 --------------------------------------------
@@ -334,8 +331,8 @@ safe-guards can be:
     sure things are working
 -   using data approaches like nesting to keep analyses and cleaning
     within groups
--   avoiding excess copy-and-pasting and rely more on functions and
-    loops
+-   avoiding excessive copying-and-pasting and, instead, 
+    rely more on functions and loops
 -   read the documentation on any packages you are using
 
 These can help one regardless of workflow preferences.
