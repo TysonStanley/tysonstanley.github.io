@@ -151,8 +151,7 @@ year <- lubridate::year(today)
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in press). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
-Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (in press). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech
-\emph{Journal of Speech, Language, and Hearing Research}.
+Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (2019). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2019_JSLHR-19-00055.
 
 *Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., & Twohig, M.P. (2019). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness, 10}(10), 2095-2109. doi: 10.1007/s12671-019-01165-z.     \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
@@ -403,11 +402,13 @@ ggplot(citations, aes(year, cites, color = year)) +
 
 <!-- -->
 
-\textbf{Barrett, T.S.} (2020, January). Working with list-columns in `data.table`. Talk presented at the RStudio Conference 2020, San Francisco, CA.
+**Barrett, T.S.** (2020, January). Working with list-columns in `data.table`. Talk presented at the RStudio Conference 2020, San Francisco, CA.
 
-Budge, S., Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E., Vargas, R., & Lansford, K. (2019, November). Gamified Perceptual Learning of Dysarthric Speech. Poster presented at the 2019 ASHA Convention, Orlando, FL.
+Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, Villodas, M.T., & Domenech Rodríguez, M.M. (2019, November). Understanding caregiver perceived need for and utilization of adolescent counseling services through machine learning. In M. D. Hetzel-Riggin (Chair). Addressing violence, abuse, and trauma throughout the socioecological model. Symposium accepted for presentation at the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
 
-Hirsch, M., Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (2019, November). Familiarization of Dysarthric Speech: Generalization Between Speakers of Different Sex. Poster presented at the 2019 ASHA Convention, Orlando, FL.
+Budge, S., Borrie, S.A., **Barrett, T.S.**, Yoho, S.E., Vargas, R., & Lansford, K. (2019, November). Gamified Perceptual Learning of Dysarthric Speech. Poster presented at the 2019 ASHA Convention, Orlando, FL.
+
+Hirsch, M., Lansford, K., Borrie, S.A., & **Barrett, T.S.**. (2019, November). Familiarization of Dysarthric Speech: Generalization Between Speakers of Different Sex. Poster presented at the 2019 ASHA Convention, Orlando, FL.
 
 Ong, C.W., Lee, E.B., Krafft, J., Terry, C.L., **Barrett, T.S.**, Levin, M.E., & Twohig, M.P. (2019, November). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. In C. W. Ong (Chair), Using acceptance and commitment therapy for different clinical presentations: Evidence-based adaptations. Symposium conducted at the 53rd annual convention of the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
 
