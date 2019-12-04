@@ -203,7 +203,7 @@ prop_female %>%
   labs(x = "Proportion of Major Female Characters",
        y = "Box Office Revenue",
        caption = "Data from Statista and SWAPI.") +
-  scale_color_viridis_d()
+  scale_color_viridis_d(end = .92)
 ```
 
 Looks like, at least in this very small sample, that more females that are major characters in the movies is somewhat positively related to box office earnings. This is largely driven by *The Force Awakens*. Without that one, it would look like there wasn't really much of a relationship between the two.

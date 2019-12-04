@@ -308,7 +308,7 @@ already be large data in the list-columns.
     films_unnest
 
     ##                       films num_worlds revenue        gender     N
-    ##                      <char>     <char>  <char>        <char> <int>
+    ##                      <char>      <num>   <num>        <char> <int>
     ##  1:              A New Hope         10   775.4          <NA>     3
     ##  2:              A New Hope         10   775.4        female     2
     ##  3:              A New Hope         10   775.4 hermaphrodite     1
@@ -321,10 +321,10 @@ already be large data in the list-columns.
     ## 10:      Return of the Jedi         15   475.1        female     2
     ## 11:      Return of the Jedi         15   475.1 hermaphrodite     1
     ## 12:      Return of the Jedi         15   475.1          male    15
-    ## 13:      The Phantom Menace         23    1027          <NA>     2
-    ## 14:      The Phantom Menace         23    1027        female     4
-    ## 15:      The Phantom Menace         23    1027 hermaphrodite     1
-    ## 16:      The Phantom Menace         23    1027          male    27
+    ## 13:      The Phantom Menace         23  1027.0          <NA>     2
+    ## 14:      The Phantom Menace         23  1027.0        female     4
+    ## 15:      The Phantom Menace         23  1027.0 hermaphrodite     1
+    ## 16:      The Phantom Menace         23  1027.0          male    27
     ## 17:    Attack of the Clones         25   649.4          <NA>     2
     ## 18:    Attack of the Clones         25   649.4        female    14
     ## 19:    Attack of the Clones         25   649.4          male    24
@@ -350,14 +350,14 @@ represented.
     prop_female[]
 
     ##                      films num_worlds revenue gender     N sum_characters prop_female
-    ##                     <char>     <char>  <char> <char> <int>          <int>       <num>
+    ##                     <char>      <num>   <num> <char> <int>          <int>       <num>
     ## 1:              A New Hope         10   775.4 female     2             18   0.1111111
     ## 2:    Attack of the Clones         25   649.4 female    14             40   0.3500000
     ## 3:      Return of the Jedi         15   475.1 female     2             20   0.1000000
     ## 4:     Revenge of the Sith         23   848.8 female     9             34   0.2647059
     ## 5: The Empire Strikes Back         11   538.4 female     1             16   0.0625000
     ## 6:       The Force Awakens          7  2068.2 female     3             11   0.2727273
-    ## 7:      The Phantom Menace         23    1027 female     4             34   0.1176471
+    ## 7:      The Phantom Menace         23  1027.0 female     4             34   0.1176471
 
 With this info, we visualize how these relate.
 
@@ -382,7 +382,7 @@ With this info, we visualize how these relate.
       labs(x = "Proportion of Major Female Characters",
            y = "Box Office Revenue",
            caption = "Data from Statista and SWAPI.") +
-      scale_color_viridis_d()
+      scale_color_viridis_d(end = .92)
 
     ## Warning: You are using a dplyr method on a raw data.table, which will call the data frame implementation, and is likely to be inefficient.
     ## * 
@@ -455,7 +455,7 @@ helpful.
     ##  stringi       1.4.3      2019-03-12 [1] CRAN (R 3.6.0)                        
     ##  stringr       1.4.0      2019-02-10 [1] CRAN (R 3.6.0)                        
     ##  tibble        2.1.3      2019-06-06 [1] CRAN (R 3.6.0)                        
-    ##  tidyfast    * 0.2.0      2019-12-04 [1] Github (tysonstanley/tidyfast@a4b6cc2)
+    ##  tidyfast    * 0.2.0      2019-12-04 [1] Github (tysonstanley/tidyfast@fed2a3a)
     ##  tidyselect    0.2.5      2018-10-11 [1] CRAN (R 3.6.0)                        
     ##  utf8          1.1.4      2018-05-24 [1] CRAN (R 3.6.0)                        
     ##  vctrs         0.2.0      2019-07-05 [1] CRAN (R 3.6.0)                        

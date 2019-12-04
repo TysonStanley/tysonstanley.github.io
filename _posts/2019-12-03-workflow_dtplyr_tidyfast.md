@@ -345,7 +345,7 @@ films_unnest
 {% endhighlight %}
 
     ##                       films num_worlds revenue        gender     N
-    ##                      <char>     <char>  <char>        <char> <int>
+    ##                      <char>      <num>   <num>        <char> <int>
     ##  1:              A New Hope         10   775.4          <NA>     3
     ##  2:              A New Hope         10   775.4        female     2
     ##  3:              A New Hope         10   775.4 hermaphrodite     1
@@ -506,4 +506,4 @@ sessioninfo::session_info()
     ## 
     ## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 
-[^note]: Note that `dt_unnest()` has changed the columns that weren't unnested to `<char>` type. This is a bug and is being fixed.
+[^note]: Note that this post has been updated to show that `dt_unnest()` no longer changes the variable types to characters. This bug has been fixed.
