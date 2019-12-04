@@ -337,7 +337,7 @@ few steps. First, let’s unnest the `prop_genders` variable. We will use
 `dt_unnest()` as it is designed to unnest columns with data tables.
 Notice that the other list-column (`data`) is dropped from this
 operation. This is partly a safety feature to avoid copying what could
-already be large data in the list-columns.*
+already be large data in the list-columns. [^note]
 
 {% highlight r %}
 films_unnest <- dt_unnest(films_nest, prop_genders)
@@ -402,16 +402,24 @@ With this info, we visualize how these relate.
 
 {% highlight r %}
 library(ggplot2)
+# set the theme
+theme_set(
+  theme_minimal() +
+  theme(legend.position = "none",
+        panel.border = element_rect(color = "lightgrey", 
+                                    fill = NA),
+        panel.background = element_rect(fill = "#FBFCFC"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(linetype = "dotted"))
+)
+
+# plot it
 prop_female %>% 
   mutate(revenue = as.numeric(revenue)) %>% 
   ggplot(aes(prop_female, revenue, color = films)) +
   geom_point() +
   ggrepel::geom_text_repel(aes(label = films),
-                           nudge_y = 10) +
-  theme_minimal() +
-  theme(legend.position = "none",
-        panel.border = element_rect(color = "lightgrey", 
-                                    fill = NA)) +
+                           nudge_y = 50) +
   labs(x = "Proportion of Major Female Characters",
        y = "Box Office Revenue",
        caption = "Data from Statista and SWAPI.") +
@@ -498,4 +506,4 @@ sessioninfo::session_info()
     ## 
     ## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
 
-*Note that `dt_unnest()` has changed the columns that weren't unnested to `<char>` type. This is a bug and is being fixed.
+[^note]: Note that `dt_unnest()` has changed the columns that weren't unnested to `<char>` type. This is a bug and is being fixed.

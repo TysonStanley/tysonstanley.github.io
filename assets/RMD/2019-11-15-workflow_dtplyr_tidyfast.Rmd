@@ -183,16 +183,23 @@ With this info, we visualize how these relate.
 
 ```{r, fig.height=4, fig.width=5, dpi=200}
 library(ggplot2)
+# set the theme
+theme_set(
+  theme_minimal() +
+  theme(legend.position = "none",
+        panel.border = element_rect(color = "lightgrey", 
+                                    fill = NA),
+        panel.background = element_rect(fill = "#FBFCFC"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_line(linetype = "dotted"))
+)
+
 prop_female %>% 
   mutate(revenue = as.numeric(revenue)) %>% 
   ggplot(aes(prop_female, revenue, color = films)) +
   geom_point() +
   ggrepel::geom_text_repel(aes(label = films),
-                           nudge_y = 10) +
-  theme_minimal() +
-  theme(legend.position = "none",
-        panel.border = element_rect(color = "lightgrey", 
-                                    fill = NA)) +
+                           nudge_y = 50) +
   labs(x = "Proportion of Major Female Characters",
        y = "Box Office Revenue",
        caption = "Data from Statista and SWAPI.") +
