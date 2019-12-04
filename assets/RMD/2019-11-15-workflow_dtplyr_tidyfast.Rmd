@@ -42,7 +42,7 @@ Herein, it is also shown how `tidyfast` can be used in conjunction with `dtplyr`
 
 The `dtplyr` package actually only has one function: `lazy_dt()`. This creates a speacial type of `data.table` that, in essence, records any `dplyr` call and saves it until we use something like `as.data.table()`---at which time the call is actually evaluated.
 
-Let's use the `flights` data set from the `nycflights13` package.
+Let's use the `starwars` data set from the `dplyr` package.
 
 ```{r, message=FALSE, warning=FALSE}
 library(dtplyr)

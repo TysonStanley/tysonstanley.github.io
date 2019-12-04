@@ -71,7 +71,7 @@ creates a speacial type of `data.table` that, in essence, records any
 `dplyr` call and saves it until we use something like
 `as.data.table()`—at which time the call is actually evaluated.
 
-Let’s use the `flights` data set from the `nycflights13` package.
+Let's use the `starwars` data set from the `dplyr` package.
 
 {% highlight r %}
 library(dtplyr)
