@@ -1,12 +1,3 @@
----
-layout: post
-title: "`dtplyr` and `tidyfast` are teaming up (well, at least in this blog post)"
-categories: jekyll update
-author: Tyson S. Barrett
-comments: true
----
-
-
 With the advent of a more cohesive and complete `dtplyr`, I’ve been
 wanting to write about how it can be used with `tidyfast` to use the
 syntax of the `tidyverse` while relying on the speed and efficiency of
@@ -28,7 +19,7 @@ has cut data processing time from 2.5 hrs to 30 min 🙇🏻 ♂️🙏🏼
 
 This is the first in this series of `dtplyr` and `tidyfast` posts—this
 one regarding nesting and unnesting data table into and from
-list-columns. This post uses `tidyfast` version 0.2.0 and `dtplyr`
+list-columns. This post uses `tidyfast` version 0.1.8 and `dtplyr`
 version 1.0.0.
 
 TL;DR
@@ -41,12 +32,10 @@ several functions (e.g. `as.data.table()`, `as_tibble()`, or
 `as.data.frame()`). The structure of using `dtplyr` can be summarized
 as:
 
-{% highlight r %}
-lazy_dt(data) %>% 
-  <dplyr code> %>% 
-  <dplyr code> %>% 
-  as.data.table()
-{% endhighlight %}
+    lazy_dt(data) %>% 
+      <dplyr code> %>% 
+      <dplyr code> %>% 
+      as.data.table()
 
 where `<dplyr code>` is any of the supported `dplyr` functions. This,
 particularly in larger data sets, has profound speed and, at times,
@@ -73,14 +62,12 @@ creates a speacial type of `data.table` that, in essence, records any
 
 Let’s use the `flights` data set from the `nycflights13` package.
 
-{% highlight r %}
-library(dtplyr)
-library(dplyr)
-library(data.table)
-library(tidyfast)
+    library(dtplyr)
+    library(dplyr)
+    library(data.table)
+    library(tidyfast)
 
-starwars <- dplyr::starwars
-{% endhighlight %}
+    starwars <- dplyr::starwars
 
 These data have 87 rows and 13 columns, a great situation (although many
 more columns and rows can certainly be handled) for some speedy
@@ -90,43 +77,32 @@ Before starting any examples, in `tidyfast` there is a
 `dt_print_options()` function that adjusts the default printing options
 with `data.table`.
 
-{% highlight r %}
-dt_print_options()
-{% endhighlight %}
+    dt_print_options()
 
 For a simple example, we can filter some rows, add a new variable, and
 select columns.
 
-{% highlight r %}
-starwars2 <- starwars %>% 
-  lazy_dt() %>%                                 # create the lazy_dt
-  filter(species == "Human") %>%                # only humans
-  mutate(height_inch = height*0.3937) %>%       # cm to inches
-  select(name, height_inch, homeworld,          # select some vars
-         species)
-{% endhighlight %}
-
+    starwars2 <- starwars %>% 
+      lazy_dt() %>%                                 # create the lazy_dt
+      filter(species == "Human") %>%                # only humans
+      mutate(height_inch = height*0.3937) %>%       # cm to inches
+      select(name, height_inch, homeworld,          # select some vars
+             species)
 
 Since we haven’t called `as.data.table()` or `as_tibble()`, there
 haven’t been any actual evaulated calls yet. We can see what the
 `data.table` call looks like with:
 
-{% highlight r %}
-show_query(starwars2)
-{% endhighlight %}
+    show_query(starwars2)
 
     ## `_DT1`[species == "Human"][, `:=`(height_inch = height * 0.3937)][, 
     ##     .(name, height_inch, homeworld, species)]
 
-
 To have it actually call, let’s save it as a `data.table` and then print
 it (but only a few of the variables).
 
-{% highlight r %}
-starwars2 <- as.data.table(starwars2)
-starwars2[]                           # the [] forces it to print
-{% endhighlight %}   
-  
+    starwars2 <- as.data.table(starwars2)
+    starwars2[]                           # the [] forces it to print
 
     ##                    name height_inch    homeworld species
     ##                  <char>       <num>       <char>  <char>
@@ -188,12 +164,10 @@ To take advantage of this data analytic approach using `data.table`,
 `dtplyr`, and `tidyfast`, the user can use the following general
 workflow:
 
-{% highlight r %}
-nested <- lazy_dt(data, immutable = FALSE) %>% 
-  <dplyr code> %>% 
-  <dplyr code> %>% 
-  dt_nest(...)
-{% endhighlight %}
+    nested <- lazy_dt(data, immutable = FALSE) %>% 
+      <dplyr code> %>% 
+      <dplyr code> %>% 
+      dt_nest(...)
 
 where `...` are groups to nest by. Since `dt_nest()` automatically calls
 `as.data.table()` on anything other than a `data.table` object (in this
@@ -211,9 +185,7 @@ For example, we may want to analyze the `starwars` data by movie. The
 issue here is that the films are already in a list-column, as shown
 below:
 
-{% highlight r %}
-select(starwars, name, species, homeworld, films)
-{% endhighlight %}
+    select(starwars, name, species, homeworld, films)
 
     ## # A tibble: 87 x 4
     ##    name               species homeworld films    
@@ -233,13 +205,12 @@ select(starwars, name, species, homeworld, films)
 So we need to unnest that column and then nest by each film. To do so,
 we are going to use `dt_hoist()` and then `dt_nest()`.
 
-{% highlight r %}
-films_dt <- dt_hoist(starwars,
-                     films)
-films_dt             
-{% endhighlight %}
+    films_dt <- dt_hoist(starwars,
+                         films)
 
     ## The following columns were dropped because they are list-columns (but not being hoisted): films, vehicles, starships
+
+    films_dt
 
     ##                name height  mass hair_color skin_color eye_color birth_year gender homeworld species                   films
     ##              <char>  <int> <num>     <char>     <char>    <char>      <num> <char>    <char>  <char>                  <char>
@@ -255,10 +226,8 @@ films_dt
     ## 172:  Padmé Amidala    165    45      brown      light     brown         46 female     Naboo   Human      The Phantom Menace
     ## 173:  Padmé Amidala    165    45      brown      light     brown         46 female     Naboo   Human     Revenge of the Sith
 
-{% highlight r %}
-films_nest <- dt_nest(films_dt, films)
-films_nest
-{% endhighlight %}
+    films_nest <- dt_nest(films_dt, films)
+    films_nest
 
     ##                      films         data
     ##                     <char>       <list>
@@ -280,14 +249,12 @@ represented in each movie and return a double vector (using `map_dbl()`)
 and get the counts of each gender represented in each movie, returning a
 `data.table`.
 
-{% highlight r %}
-films_nest <- films_nest %>% 
-  lazy_dt() %>% 
-  mutate(num_worlds = purrr::map_dbl(data, ~length(unique(.x$homeworld)))) %>%   
-  mutate(prop_genders = purrr::map(data, ~dt_count(.x, gender))) %>% 
-  as.data.table()
-films_nest[]
-{% endhighlight %}
+    films_nest <- films_nest %>% 
+      lazy_dt() %>% 
+      mutate(num_worlds = purrr::map_dbl(data, ~length(unique(.x$homeworld)))) %>%   
+      mutate(prop_genders = purrr::map(data, ~dt_count(.x, gender))) %>% 
+      as.data.table()
+    films_nest[]
 
     ##                      films         data num_worlds prop_genders
     ##                     <char>       <list>      <num>       <list>
@@ -303,23 +270,21 @@ Turns out we also have how much each movie grossed at the box office
 (according to
 [Statista](https://www.statista.com/statistics/311356/star-wars-production-costs-box-office-revenue/))
 
-{% highlight r %}
-revenue <- 
-  tibble::tribble(
-    ~films,                   ~revenue,
-    "A New Hope",                775.4,
-    "The Empire Strikes Back",   538.4,
-    "Return of the Jedi",        475.1,
-    "The Phantom Menace",       1027.0,
-    "Attack of the Clones",      649.4,
-    "Revenge of the Sith",       848.8,
-    "The Force Awakens",        2068.2
-  ) %>% 
-  as.data.table()
+    revenue <- 
+      tibble::tribble(
+        ~films,                   ~revenue,
+        "A New Hope",                775.4,
+        "The Empire Strikes Back",   538.4,
+        "Return of the Jedi",        475.1,
+        "The Phantom Menace",       1027.0,
+        "Attack of the Clones",      649.4,
+        "Revenge of the Sith",       848.8,
+        "The Force Awakens",        2068.2
+      ) %>% 
+      as.data.table()
 
-films_nest <- films_nest[revenue, on = "films"]
-films_nest
-{% endhighlight %}
+    films_nest <- films_nest[revenue, on = "films"]
+    films_nest
 
     ##                      films         data num_worlds prop_genders revenue
     ##                     <char>       <list>      <num>       <list>   <num>
@@ -337,12 +302,10 @@ few steps. First, let’s unnest the `prop_genders` variable. We will use
 `dt_unnest()` as it is designed to unnest columns with data tables.
 Notice that the other list-column (`data`) is dropped from this
 operation. This is partly a safety feature to avoid copying what could
-already be large data in the list-columns.*
+already be large data in the list-columns.
 
-{% highlight r %}
-films_unnest <- dt_unnest(films_nest, prop_genders)
-films_unnest
-{% endhighlight %}
+    films_unnest <- dt_unnest(films_nest, prop_genders)
+    films_unnest
 
     ##                       films num_worlds revenue        gender     N
     ##                      <char>     <char>  <char>        <char> <int>
@@ -377,16 +340,14 @@ films_unnest
 Using this, we can calculate, per film, the proportion of females
 represented.
 
-{% highlight r %}
-prop_female <- films_unnest %>% 
-  lazy_dt() %>% 
-  group_by(films) %>% 
-  mutate(sum_characters = sum(N)) %>% 
-  filter(gender == "female") %>% 
-  mutate(prop_female = N/sum_characters) %>% 
-  as.data.table()
-prop_female[]
-{% endhighlight %}
+    prop_female <- films_unnest %>% 
+      lazy_dt() %>% 
+      group_by(films) %>% 
+      mutate(sum_characters = sum(N)) %>% 
+      filter(gender == "female") %>% 
+      mutate(prop_female = N/sum_characters) %>% 
+      as.data.table()
+    prop_female[]
 
     ##                      films num_worlds revenue gender     N sum_characters prop_female
     ##                     <char>     <char>  <char> <char> <int>          <int>       <num>
@@ -400,25 +361,28 @@ prop_female[]
 
 With this info, we visualize how these relate.
 
-{% highlight r %}
-library(ggplot2)
-prop_female %>% 
-  mutate(revenue = as.numeric(revenue)) %>% 
-  ggplot(aes(prop_female, revenue, color = films)) +
-  geom_point() +
-  ggrepel::geom_text_repel(aes(label = films),
-                           nudge_y = 10) +
-  theme_minimal() +
-  theme(legend.position = "none",
-        panel.border = element_rect(color = "lightgrey", 
-                                    fill = NA)) +
-  labs(x = "Proportion of Major Female Characters",
-       y = "Box Office Revenue",
-       caption = "Data from Statista and SWAPI.") +
-  scale_color_viridis_d()
-{% endhighlight %}
+    library(ggplot2)
+    prop_female %>% 
+      mutate(revenue = as.numeric(revenue)) %>% 
+      ggplot(aes(prop_female, revenue, color = films)) +
+      geom_point() +
+      ggrepel::geom_text_repel(aes(label = films),
+                               nudge_y = 10) +
+      theme_minimal() +
+      theme(legend.position = "none",
+            panel.border = element_rect(color = "lightgrey", 
+                                        fill = NA)) +
+      labs(x = "Proportion of Major Female Characters",
+           y = "Box Office Revenue",
+           caption = "Data from Statista and SWAPI.") +
+      scale_color_viridis_d()
 
-![]({{ base.url }}/assets/RMD/2019-11-15-workflow_dtplyr_tidyfast_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+    ## Warning: You are using a dplyr method on a raw data.table, which will call the data frame implementation, and is likely to be inefficient.
+    ## * 
+    ## * To suppress this message, either generate a data.table translation with `lazy_dt()` or convert to a data frame or tibble with
+    ## * `as.data.frame()`/`as_tibble()`.
+
+![](2019-11-15-workflow_dtplyr_tidyfast_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
 Looks like, at least in this very small sample, that more females that
 are major characters in the movies is somewhat positively related to box
@@ -433,11 +397,9 @@ This was a brief introduction to `dtplyr` and how it works with some
 `tidyfast` functions. Hopefully the workflow presented herein will be
 helpful.
 
-{% highlight r %}
-sessioninfo::session_info()
-{% endhighlight %}
+    sessioninfo::session_info()
 
-    ## ─ Session info ──────────────────────────────────────────────────────────────────────────────────
+    ## ─ Session info ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     ##  setting  value                       
     ##  version  R version 3.6.1 (2019-07-05)
     ##  os       macOS Catalina 10.15.1      
@@ -449,7 +411,7 @@ sessioninfo::session_info()
     ##  tz       America/Denver              
     ##  date     2019-12-03                  
     ## 
-    ## ─ Packages ──────────────────────────────────────────────────────────────────────────────────────
+    ## ─ Packages ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     ##  package     * version    date       lib source                                
     ##  assertthat    0.2.1      2019-03-21 [1] CRAN (R 3.6.0)                        
     ##  backports     1.1.5      2019-10-02 [1] CRAN (R 3.6.0)                        
@@ -497,5 +459,3 @@ sessioninfo::session_info()
     ##  zeallot       0.1.0      2018-01-28 [1] CRAN (R 3.6.0)                        
     ## 
     ## [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
-
-*Note that `dt_unnest()` has changed the columns that weren't unnested to `<char>` type. This is a bug and is being fixed.

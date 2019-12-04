@@ -181,7 +181,7 @@ prop_female[]
 
 With this info, we visualize how these relate.
 
-```{r, fig.height=5, fig.width=5, dpi=200}
+```{r, fig.height=4, fig.width=5, dpi=200}
 library(ggplot2)
 prop_female %>% 
   mutate(revenue = as.numeric(revenue)) %>% 
