@@ -239,7 +239,7 @@ films_dt <- dt_hoist(starwars,
 films_dt             
 {% endhighlight %}
 
-    ## The following columns were dropped because they are list-columns (but not being hoisted): films, vehicles, starships
+    ## The following columns were dropped because they are list-columns (but not being hoisted): vehicles, starships
 
     ##                name height  mass hair_color skin_color eye_color birth_year gender homeworld species                   films
     ##              <char>  <int> <num>     <char>     <char>    <char>      <num> <char>    <char>  <char>                  <char>
