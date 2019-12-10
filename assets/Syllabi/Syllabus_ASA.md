@@ -15,10 +15,10 @@ permalink: /syllabus/asa
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Wed TBA <br>
+&nbsp; &nbsp; Wed 4:30-7:15pm <br>
 &nbsp; &nbsp; TBA <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; TBA
+&nbsp; &nbsp; Wed 3:00 - 4:15pm
 
 </div>
 
@@ -43,21 +43,21 @@ This course is an applied introduction to statistical methods commonly used in e
 
 ## Course Structure:
 
-This is a lecture and applied skills course. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class lectures is to elaborate on interesting or difficult material presented in the text, conduct skill-building exercises and demonstrations, and to provide a forum for discussion.
+This is a lecture and applied skills course. Before each class, students will be required to read the assigned reading and watch any assigned lectures. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of the class lectures is to elaborate on interesting or difficult material presented in the text, conduct skill-building exercises and demonstrations, and to provide a forum for discussion.
 
 ## Preparation & Attendance:
 
 You should make every attempt to be at every class session. The activities, discussions, and demonstrations are designed to be helpful and insightful. Furthermore, the class lectures and activities will be absolutely essential for you to meet the requirements of some of the assignments in this course. However, as human beings, we sometimes get sick or have extenuating circumstances. If possible, make arrangements to obtain information covered in the course.
 
-You are expected to participate in class activities and discussions. Research demonstrates that the quality of the classroom environment depends on the interaction of the students and the teacher. This class will be highly interactive and discussion- based. I believe if you give the effort to learn the material, you can gain analytic skills that will benefit you throughout your life.
+You are expected to participate in class activities and discussions. Research demonstrates that the quality of the classroom environment depends on the interaction of the students and the teacher. This class will be highly interactive and discussion-based. I believe if you give the effort to learn the material, you can gain analytic skills that will benefit you throughout your life.
 
-Finally, you are expected to read all course material and have become familiar with course assignments. This preparation will make class time valuable and productive; otherwise, class assignments and examinations will be more difficult and time consuming.
+Finally, you are expected to read and watch any assigned course material and have become familiar with course assignments. This preparation will make class time valuable and productive; otherwise, class assignments and examinations will be more difficult and time consuming.
 
 ## Four Components of Your Grade:
 
 **I. Discussions, 30% of grade**
 
-By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time. It is of upmost importance that students read the material *PRIOR* to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering questions and preparing students for assignments. To facilitate this, a discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the readings, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
+By design, in-class lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time. It is of upmost importance that students read and watch the material *PRIOR* to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering questions and preparing students for assignments. To facilitate this, a discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the readings, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
 
 Discussion points will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion point.
 
@@ -69,7 +69,7 @@ An important aspect of this course is discovering how statistics are used in you
 
 **III. Assignments, 30% of grade**
 
-FOUR equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments are based on analyzing data in Jamovi (or SPSS if you prefer). These use data that you have access to (e.g. in your lab) or any other data source that you are interested in. Part of the homework is done on Canvas (based on questions from the book's "Practice Tests" at the end of each chapter) while the other part is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
+FOUR equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments have a conceptual part and an applied part. The applied aspect is based on analyzing data in Jamovi (or SPSS if you prefer). You can use data that you have access to (e.g. in your lab) or any other data source that you are interested in (I also have some data sets that you can use). Part of the homework is done on Canvas while the other part is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
 
 All assignments are REQUIRED: NO scores will be dropped. Students may work together, however each student must turn in his or her own work, not photocopies or identical replicates. Assignments are due by 11:59pm on the due date (see course schedule). Details on what is required to be turned in will be posted on canvas. Late assignments turned in within 24 hours of the due date will receive half the score earned. No points will be awarded thereafter.
 
@@ -77,7 +77,7 @@ All assignments are REQUIRED: NO scores will be dropped. Students may work toget
 
 TWO equally weighted examinations will be given during this course. Examinations will be given OUTSIDE OF CLASS and will generally require less than 60 minutes. In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/).
 
-Examinations will cover material discussed in class AND in the readings. All formulas needed will be provided on examinations (unless noted during examination reviews). Applicable statistical tables will also be provided where necessary. Calculators may be used, but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
+Examinations will cover material discussed in class, in the pre-recorded lectures, AND in the readings. All formulas needed will be provided on examinations (unless noted during examination reviews). Applicable statistical tables will also be provided where necessary. Calculators may be used, but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
 Both of the exams are REQUIRED: NO scores will be dropped. Examinations will consist of multiple choice questions and output interpretations. You may use your notes and homework during examinations.
 
@@ -88,7 +88,7 @@ NOTE: Final is comprehensive but it will focus much more heavily on topics cover
 The standard grade breakdown used by Utah State University will be followed to assign the student a letter grade. The final percentage will be determined by dividing the student’s total points earned by the total number of possible points:
 
 | Grade   |     Percentages         
-|:-------:|:-----------------------:
+|:-------:|:------------------:
 | A       | > 93%
 | A-      | 90 - 92%            
 | B+      | 87 - 89%

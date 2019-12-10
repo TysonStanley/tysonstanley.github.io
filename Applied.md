@@ -12,8 +12,8 @@ This is an introduction to statistics for master's level social scientists. It f
 
 ### Lecture Slides
 
-1. Week 1 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx)
-2. Week 2 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx)
+1. Week 1 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx) - No pre-recorded lecture to watch
+2. Week 2 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx) - [Week 2 Pre-recorded Lecture]()
 3. Week 3 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pptx)
 4. Week 4 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pptx)
 5. Week 5 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pptx)
