@@ -244,6 +244,8 @@ Crapo, J.S., Bradford, K. \textbf{Barrett, T.S.}, Miller, J.A., \& Higginbotham,
 
 \textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
 
+Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.}. (under review). Conversational coordination of articulatory precision is contextually-driven: Evidence from traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
+
 <!--
 Nichola's Paper...
 -->
@@ -290,6 +292,9 @@ Stephanie Knollhoffs Communications modality paper
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 \noindent
+
+<!-- Remove after unnecessary!!! -->
+\newpage
 
 \vspace{10pt}
 \section{PEER-REVIEWED CONFERENCE PROCEEDINGS}
@@ -372,6 +377,9 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
+
+<!-- Remove after unnecessary!!! -->
+\newpage
 
 \vspace{10pt}
 \section{CITATION COUNT HISTORY}
