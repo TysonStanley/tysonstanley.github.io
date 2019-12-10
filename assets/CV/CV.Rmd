@@ -127,7 +127,22 @@ year <- lubridate::year(today)
 
 \normalsize
 
+<!--
+Sarah's grant
+-->
+
 *Hoopes, K. (Principal), Smith, J. (Co-Principal), Sulzer, S. (Co-Principal), Israelsen, C. E. (Co-Principal), Blais, R. (Co-Principal), Bressel, E. (Co-Principal), Mason, J. (Co- Principal), \textbf{Barrett, T.S.} (Co-Principal), "Equine Human Interaction with Veterans", Sponsored by USU Extension Grants Program, Utah State University, (May 1, 2019 - December 31, 2019). $11,640. Current Status: Funded
+
+<!--
+Funder: American Foundation for Suicide Prevention 
+Title: Mental Health Needs in Rural Utah Workers: Suicide Risk, Psychological Flexibility, Opioid Use, and Pain  
+Role: Methodological and Statistics Content Expert and Project Management Team Member
+Descriptive info from budget justification: 2% FTE, $1,521. Methodological and Statistics Content Expert and Project Management Team Member. Dr. Barrett will participate in program oversight, with an emphasis on methodological and statistical procedures implemented throughout the project, as a member of the project management team. 
+Decision Date: They stated they will provide a decision in early May. 
+-->
+
+
+
 
 
 <!-- Published Works -->
@@ -217,7 +232,7 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.}. (in revision). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
 
-*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (under review). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
+*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (in revision). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
 
