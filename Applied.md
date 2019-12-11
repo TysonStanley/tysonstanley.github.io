@@ -12,8 +12,13 @@ This is an introduction to statistics for master's level social scientists. It f
 
 ### Lecture Slides
 
-1. Week 1 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx) - No pre-recorded lecture to watch
-2. Week 2 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx) - [Week 2 Pre-recorded Lecture]()
+| Week    |  Slides   |  Lecture  |  In-Class Material |
+|:-------:|:----------|:----------|:-------------------|
+| Week 1  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx) | No pre-recorded lecture to watch |
+| Week 2  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx) | [Week 2 Pre-recorded Lecture](https://youtube.com) | [Class Data](https://docs.google.com/spreadsheets/d/1JaggNgUtkdzQ9T-FTNDsvf0D6DRM1psMJZvcKuYSaxI/edit?usp=sharing) & [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
+
+<!--
+
 3. Week 3 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/03_EDUC_6050_2018.pptx)
 4. Week 4 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/04_EDUC_6050_2018.pptx)
 5. Week 5 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/05_EDUC_6050_2018.pptx)
@@ -27,3 +32,5 @@ This is an introduction to statistics for master's level social scientists. It f
 12. Week 12 - Chi Square Activity and Review (no slides)
 13. Week 13 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/12_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/12_EDUC_6050_2018.pptx)
 14. Week 14 - Review of Class Material - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/14_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/14_EDUC_6050_2018.pptx)
+
+-->
