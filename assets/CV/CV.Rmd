@@ -398,7 +398,7 @@ ggplot(citations, aes(year, cites, color = year)) +
             nudge_y = 6) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
-       caption = paste("Note: Data for citations in", year,"only until", month)) +
+       caption = paste("Note: Data for citations in", year, "until", month)) +
   theme_classic() +
   scale_color_viridis_c(direction = -1,
                         begin = .1, 

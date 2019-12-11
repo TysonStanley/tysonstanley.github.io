@@ -16,7 +16,7 @@ permalink: /syllabus/asa
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
 &nbsp; &nbsp; Wed 4:30-7:15pm <br>
-&nbsp; &nbsp; TBA <br>
+&nbsp; &nbsp; Health Phys Ed & Recreation 114 <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; Wed 3:00 - 4:15pm
 
@@ -59,29 +59,29 @@ Finally, you are expected to read and watch any assigned course material and hav
 
 By design, in-class lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time. It is of upmost importance that students read and watch the material *PRIOR* to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering questions and preparing students for assignments. To facilitate this, a discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the readings, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
 
-Discussion points will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion point.
+Discussion posts will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion post.
 
 These can be printed out and used as notes for the lectures and the exams.
 
-**II. Research Portfolio, 15% of grade**
+**II. Research Portfolio, 20% of grade**
 
-An important aspect of this course is discovering how statistics are used in your field. For each of the four units, you will need to find one research article in your field that uses one of the techniques we covered in that unit. For example, in Unit 1 we cover t-tests and could, therefore, need to find an article that used at least one t-test. The assignment will include turning in the article with 3 - 5 bullet points about their methods (anything interesting, new, or weird that you saw).
+An important aspect of this course is discovering how statistics are used in your field. You will need to find one research article in your field that uses one of the techniques covered in the class. For example, for the first one due we cover hypothesis tests so you could find an article that used at least one hypothesis test. This is due periodically (at the same time as the exams, see below). The assignment will include turning in the article with 3 - 5 bullet points about their methods (anything interesting, new, or weird that you saw). We will occassionally discuss these in class.
 
-**III. Assignments, 30% of grade**
+**III. Final Project, 20% of grade**
 
-FOUR equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These assignments have a conceptual part and an applied part. The applied aspect is based on analyzing data in Jamovi (or SPSS if you prefer). You can use data that you have access to (e.g. in your lab) or any other data source that you are interested in (I also have some data sets that you can use). Part of the homework is done on Canvas while the other part is done in Jamovi and turned in via Canvas. Both are due the same day at the same time. 
+Each class we will do an application of the material presented in the pre-recorded lecture using real-world (or fake-world) data. The final project is the combination of all of these in-class applications into a single document (Word, Google Docs, etc.) with the Jamovi output, interpretation of the output, and other notes you take. This will be due at the end of the course. This, of course, requires that you attend class and follow along on your own computer or take detailed notes so that you can replicate it later. The structure of the final project will have sections based on the Week of the class (e.g., Week 1, Week 2) followed by the output, interpretation, and other notes.
 
-All assignments are REQUIRED: NO scores will be dropped. Students may work together, however each student must turn in his or her own work, not photocopies or identical replicates. Assignments are due by 11:59pm on the due date (see course schedule). Details on what is required to be turned in will be posted on canvas. Late assignments turned in within 24 hours of the due date will receive half the score earned. No points will be awarded thereafter.
+The purpose of this assignment is to provide you with a complete document with information that you can use to guide you in any future work with statistics and Jamovi.
 
-**IV. Examinations, 25% of grade**
+**IV. Examinations, 30% of grade**
 
-TWO equally weighted examinations will be given during this course. Examinations will be given OUTSIDE OF CLASS and will generally require less than 60 minutes. In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/).
+Four equally weighted examinations will be given during this course. Examinations will be given OUTSIDE OF CLASS and will generally require less than 60 minutes. In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/).
 
 Examinations will cover material discussed in class, in the pre-recorded lectures, AND in the readings. All formulas needed will be provided on examinations (unless noted during examination reviews). Applicable statistical tables will also be provided where necessary. Calculators may be used, but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
-Both of the exams are REQUIRED: NO scores will be dropped. Examinations will consist of multiple choice questions and output interpretations. You may use your notes and homework during examinations.
+ALL EXAMS ARE REQUIRED: NO scores will be dropped. Examinations will consist of multiple choice questions and output interpretations. You may use your notes and homework during examinations.
 
-NOTE: Final is comprehensive but it will focus much more heavily on topics covered after the mid-term.
+NOTE: Each example is not technically comprehensive but will definitely rely on information from previous exams.
 
 ## Grading Criteria:
 
