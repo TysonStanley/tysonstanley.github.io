@@ -15,7 +15,7 @@ This is an introduction to statistics for master's level social scientists. It f
 | Week    |  Slides   |  Pre-recorded Lecture  |  In-Class Material |
 |:-------:|:----------|:-----------------------|:-------------------|
 | Week 1  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/01_EDUC_6050_2018.pptx) |    |
-| Week 2  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx) | [Week 2 Pre-recorded Lecture](https://youtube.com) | [Class Data](https://docs.google.com/spreadsheets/d/1JaggNgUtkdzQ9T-FTNDsvf0D6DRM1psMJZvcKuYSaxI/edit?usp=sharing) & [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
+| Week 2  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/02_EDUC_6050_2018.pptx) | [Week 2 Pre-recorded Lecture](https://www.youtube.com/watch?v=sF4Ywtvv_W0) | [Class Data](https://docs.google.com/spreadsheets/d/1JaggNgUtkdzQ9T-FTNDsvf0D6DRM1psMJZvcKuYSaxI/edit?usp=sharing) & [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
 
 <!--
 
