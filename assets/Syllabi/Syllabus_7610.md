@@ -6,7 +6,7 @@ permalink: /syllabus/educ7610
 
 # Regression Analysis
 #### EDUC 7610
-#### Summer 2019
+#### Spring 2020
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -16,10 +16,10 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Monday and Wednesday 12:00 pm - 2:45 pm <br>
-&nbsp; &nbsp; SCCE 310 <br>
+&nbsp; &nbsp; Tuesday and Thursday 4:30 pm - 5:45 pm <br>
+&nbsp; &nbsp; Health Phys Ed & Recreation 114A <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; Monday and Wednesday 11:00 am - 11:45 am (and by appointment)
+&nbsp; &nbsp; Tuesday and Thursday 3:00 am - 4:15 am (or by appointment)
 <br>
 <!--
 <strong>Teaching Assistant: TBA</strong> <br>
@@ -63,7 +63,7 @@ The nature of this course requires regular class attendance and participation. T
 
 **I.  Discussions, 25% of grade**
 
-By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time (this is not an introductory course).  It is of upmost importance that students read the material PRIOR to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering higher level questions and preparing students for assignments, but more importantly for conducting your own research. To facilitate this, a chapter discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the chapter, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
+By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time (this is not an introductory course). It is of upmost importance that students read the material *prior* to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering higher level questions and preparing students for assignments, but more importantly for conducting your own research. To facilitate this, a chapter discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the chapter, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
 
 We will cover all 18 chapters in this course. You will need to provide discussion points for all the chapters except for chapter 1. Each student must compose his or her own. Discussion points must NOT be a copy of the lecture notes. Discussion points will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion point.
 
@@ -75,14 +75,14 @@ All assignments are required: no scores will be dropped.  Assignments are due by
 
 **IV. Final Project, 20% of grade**
 
-The Final Project will consist of using at least one major method from 3 of the 4 units in a short article format. There is some flexibility to what the Final Project will look like and I recommend that you use it to help with theses, dissertations, or research articles. More information on this assignment is found at [tysonbarrett.com/teaching](https://tysonbarrett.com/teaching/).
+The Final Project will consist of using at least one major method from 3 of the 4 units in a short article format. There is some flexibility to what the Final Project will look like and I recommend that you use it to help with theses, dissertations, or research articles. More information on this assignment is found at [tysonbarrett.com/teaching/regression](https://tysonbarrett.com/teaching/regression).
 
 
 **IV. Examinations, 30% of grade**
 
-Three equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in class and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
+Four equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in class and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
-Your lowest score on the exams will be dropped. Because of this, no exams will be made up unless the University requires that you be given an exception. In the event of an emergency the student must contact the instructor immediately and BEFORE the examination. Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
+Given the flexibility of the exams, no exams will be made up unless the University requires that you be given an exception. In the event of an emergency the student must contact the instructor immediately and BEFORE the examination. Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
 
 *NOTE: No exam is comprehensive, however all prior material can be used on every exam.*
 
@@ -169,7 +169,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_summer.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring.png)
 
 
 
