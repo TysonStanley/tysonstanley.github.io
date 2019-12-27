@@ -164,6 +164,8 @@ Decision Date: They stated they will provide a decision in early May.
 
 \normalsize
 
+*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in press). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
+
 Borrie, S.A., \textbf{Barrett, T.S.}, Liss, J., & Berisha, V. (2019). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. doi: 10.1044/2019_JSLHR-19-00194.  \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
 Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (2019). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2019_JSLHR-19-00055.
@@ -232,13 +234,11 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.}. (in revision). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
 
-*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in revision). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
-
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (in revision). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
 
 Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Prevention Science}.
 
-*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., \& Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism \emph{Behavior Therapy}.
+*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., \& Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism. \emph{Behavior Therapy}.
 
 Crapo, J.S., Bradford, K. \textbf{Barrett, T.S.}, Miller, J.A., \& Higginbotham, B.J. (under review). CRE Outcomes Predicted by Family Life Stage and Traditionality, \emph{Contemporary Family Therapy.}
 
@@ -480,7 +480,7 @@ Holland, D., **Barrett, T.S.** (2013). Impulsivity in young entrepreneurs. Round
 
 RStudio Conference sponsored by RStudio. Training on advanced features of R and RStudio, including training on data wrangling, reproducible analyses, and database access. January 2019.
 
-
+RStudio Conference sponsored by RStudio. Special training on using the Shiny developer interface for creating interactive, responsive websites using R. January 2020.
 
 <!-- Teaching Interests -->
 \setlength{\parindent}{0in}
@@ -525,12 +525,14 @@ RStudio Conference sponsored by RStudio. Training on advanced features of R and 
 - **Research Design \& Analysis II** (EDUC 7610)
     - Graduate-level linear regression course for PhD students
 
-- **R for the Health, Behavioral, Educational, and Social Sciences I and II**
+- **R for the Health, Behavioral, Educational, and Social Sciences I and II** (EDUC 6560)
     - Created, Developed, and Taught
     - Graduate Level
 
 - **Research Methods** (PSY 3500)
     - Undergraduate-level psychological research methods
+        - Online
+        - In-person
 
 
 \subsubsection{\hspace{10pt} \emph{MOST RECENT TEACHING EVALUATIONS (Summer/Fall 2018)}}

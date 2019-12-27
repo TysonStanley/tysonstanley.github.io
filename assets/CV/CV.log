@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  21 DEC 2019 01:06
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  27 DEC 2019 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,11 +860,11 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
+[2]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
-[2]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
@@ -922,15 +922,15 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [6] [7]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 880.
+(hyperref)                than one, level fixed on input line 892.
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1017.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1029.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1017.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1029.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1017.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1017.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1029.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1029.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 292E50C137913DCB5CA9690BC223A735.
