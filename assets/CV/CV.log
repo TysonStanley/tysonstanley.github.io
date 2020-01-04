@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  27 DEC 2019 16:27
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2019.11.8)  4 JAN 2020 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,7 +902,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 597--601
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 601--605
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -922,18 +922,18 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [6] [7]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 892.
+(hyperref)                than one, level fixed on input line 896.
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1029.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1033.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1029.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1033.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1029.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1029.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1033.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1033.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
-(rerunfilecheck)             Checksum: 292E50C137913DCB5CA9690BC223A735.
+(rerunfilecheck)             Checksum: 4E48BF7891704304E628768563BB7D7D.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -941,7 +941,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  23786 strings out of 494894
  450019 string characters out of 6175873
- 570494 words of memory out of 5000000
+ 570485 words of memory out of 5000000
  27477 multiletter control sequences out of 15000+600000
  545097 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

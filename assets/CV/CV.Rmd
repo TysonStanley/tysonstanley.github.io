@@ -102,12 +102,14 @@ year <- lubridate::year(today)
 \indent \hspace*{.1in} \small\textbf{WOC Research Assistant}, Veteran Affairs SLC \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
 
-<!-- Education -->
+<!-- Affiliations -->
 \vspace{1pt}
-\section{OTHER PROFESSIONAL APPOINTMENTS}
+\section{PROFESSIONAL AFFILIATIONS}
 \hrule
 
 \indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
+
+\indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Contributor \hfill 2019-Present
 
 \indent \hspace*{.1in} \small\textbf{\href{https://f1000.com/prime/thefaculty/member/1070302}{F1000Prime Faculty Member}} in Quantitative Psychology  \hfill 2019-Present
 
