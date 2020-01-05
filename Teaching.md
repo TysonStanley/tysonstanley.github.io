@@ -47,7 +47,7 @@ Click on the logo of the class to access the course materials. All course materi
 
 <!--
   Research Methods
--->
+
 
 <br><br><br><br><br><br>
 
@@ -55,3 +55,4 @@ Click on the logo of the class to access the course materials. All course materi
 
 <a href="{{ site.baseurl }}/teaching/psychmethods"><img src="{{ site.baseurl }}/assets/images/ResearchMethods_logo.png" alt="rm_logo" width="45%" align="left"></a>
 
+-->
