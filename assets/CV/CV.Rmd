@@ -248,7 +248,7 @@ Crapo, J.S., Bradford, K. \textbf{Barrett, T.S.}, Miller, J.A., \& Higginbotham,
 
 Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.}. (under review). Conversational coordination of articulatory precision is contextually-driven: Evidence from traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
 
-Vázquez, A. L., Garcia, B. H., Navarro, C., Barrett, T. S., Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
+Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
 
 <!--
 Nichola's Paper...
