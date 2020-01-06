@@ -14,15 +14,7 @@ My most recent class material can be found below:
 
 [Intro Syllabus]({{ site.baseurl }} /syllabus/introR)
 
-1. [Intro to R](https://tysonstanley.github.io/Graduate_R_Courses/intro/01_IntroSlides.pdf)
-2. [Intro to Tidyverse](https://tysonstanley.github.io/Graduate_R_Courses/intro/02_Tidyverse.pdf)
-3. [Exploring Data](https://tysonstanley.github.io/Graduate_R_Courses/intro/03_UnderstandData.pdf)
-4. [Basic Stats](https://tysonstanley.github.io/Graduate_R_Courses/intro/04_BasicAnalyses.pdf)
-5. [Generalized Linear Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/05_GeneralizedLinearModels.pdf)
-6. [Multilevel Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/06_MultilevelModels.pdf)
-7. [Other Models](https://tysonstanley.github.io/Graduate_R_Courses/intro/07_OtherModels.pdf)
-8. [Functions, Functions, Functions](https://tysonstanley.github.io/Graduate_R_Courses/intro/08_Functions.pdf)
-9. [More on Visualizations](https://tysonstanley.github.io/Graduate_R_Courses/intro/09_AdvancedPlotting.pdf)
+Slides will be added soon...
 
 ### Intermediate
 
