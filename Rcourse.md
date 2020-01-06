@@ -14,7 +14,8 @@ My most recent class material can be found below:
 
 [Intro Syllabus]({{ site.baseurl }} /syllabus/introR)
 
-Slides will be added soon...
+1. [Week 1](https://tysonstanley.github.io/introR/01_Intro.html)
+
 
 ### Intermediate
 
