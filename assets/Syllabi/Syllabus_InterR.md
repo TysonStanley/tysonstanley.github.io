@@ -5,17 +5,22 @@ permalink: /syllabus/interR
 ---
 
 # R for the Health, Behavioral, Educational, and Social Scientists 2
-#### CEPS 5700—LT2
+#### CEPS 5700—LT2 & EDUC 6560-LT3
 
-**Instructor:** <br>
+<div style="background-color: #FEF9E7; padding: 20px;">
+
+<strong>Instructor:</strong> <br>
 &nbsp; &nbsp; Tyson S. Barrett, PhD <br>
 &nbsp; &nbsp; tyson.barrett@usu.edu <br>
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
-**Class:** <br>
-&nbsp; &nbsp; Thursday 12:00 – 1:00 pm <br>
-**Office Hours:** <br>
+<strong>Class:</strong> <br>
+&nbsp; &nbsp; Thursday 12pm-1pm <br>
+&nbsp; &nbsp; SCCE 310 <br>
+<strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; By appointment
+
+</div>
 
 
 **Optional Resources:** 
@@ -43,11 +48,24 @@ There is only one graded assignment---a final project. This project will be deve
 **Students with Disabilities:** <br> 
 Reasonable accommodation will be provided for all persons with disabilities in order to ensure equal participation within the program. If a student has a disability that will likely require some accommodation by the instructor, the student must contact the instructor and document the disability through the Disability Resource Center (797-2444), preferably during the first week of the course. Any request for special consideration relating to attendance, pedagogy, taking of examinations, etc., must be discussed with and approved by the instructor. 
 
+**Children in class:**
+
+1. All breastfeeding children are welcome as often as necessary.
+2. All non-nursing babies and children are welcome whenever alternate arrangements cannot be made. As a parent of three young children, I understand that babysitters fall through, partners have conflicting schedules, children get sick, and other issues arise.
+3. In cases where children come to class, I invite parents/caregivers to sit close to the door so as to more easily excuse yourself to attend to your child's needs. As such, it is great if those seats are left available for any parents.
+4. All students are expected to join with me in creating a welcoming environment that is respectful of your classmates' situations.
+
+**Inclusivity:**
+
+Professional courtesy and sensitivity are especially important with respect to individuals and topics dealing with differences of race, culture, religion, politics, sexual orientation, gender, gender variance, and nationalities. It is expected that all students will make all efforts to keep the classroom an inclusive environment. 
+
+*Note: I will gladly honor your request to address you by an alternate name or gender pronoun. Please advise me early in the semester so that I may make appropriate changes to my records.*
+
 **Important Dates:** <br>
 
-- Feb 28 – First Day of Classes
--	April 25 – Final Day of Class
--	May 2 – Final Project Due
+- Feb 27 – First Day of Classes
+-	April 24 – Final Day of Class
+-	May 1 – Final Project Due
 
 **Tentative Schedule:**
 

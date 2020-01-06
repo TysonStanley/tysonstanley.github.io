@@ -47,7 +47,7 @@ This is a lecture and applied skills course. Before each class, students will be
 
 ## Preparation & Attendance:
 
-You should make every attempt to be at every class session. The activities, discussions, and demonstrations are designed to be helpful and insightful. Furthermore, the class lectures and activities will be absolutely essential for you to meet the requirements of some of the assignments in this course. However, as human beings, we sometimes get sick or have extenuating circumstances. If possible, make arrangements to obtain information covered in the course.
+You should make every attempt to be at every class session. The activities, discussions, and demonstrations are designed to help you apply the material so that you can use it later on. Furthermore, the class activities will be  essential for you to meet the requirements of some of the assignments in this course. However, as human beings, we occassionally get sick or have extenuating circumstances. If possible, make arrangements to obtain information covered in the course.
 
 You are expected to participate in class activities and discussions. Research demonstrates that the quality of the classroom environment depends on the interaction of the students and the teacher. This class will be highly interactive and discussion-based. I believe if you give the effort to learn the material, you can gain analytic skills that will benefit you throughout your life.
 
@@ -126,6 +126,19 @@ Jamovi can be downloaded from [https://www.jamovi.org/](https://www.jamovi.org/)
 **Changes in Assignments and Schedule:**
 
 The instructor reserves the right to make changes to this syllabus at any time. Changes will be announced in class and posted on Canvas.
+
+**Children in class:**
+
+1. All breastfeeding children are welcome as often as necessary.
+2. All non-nursing babies and children are welcome whenever alternate arrangements cannot be made. As a parent of three young children, I understand that babysitters fall through, partners have conflicting schedules, children get sick, and other issues arise.
+3. In cases where children come to class, I invite parents/caregivers to sit close to the door so as to more easily excuse yourself to attend to your child's needs. As such, it is great if those seats are left available for any parents.
+4. All students are expected to join with me in creating a welcoming environment that is respectful of your classmates' situations.
+
+**Inclusivity:**
+
+Professional courtesy and sensitivity are especially important with respect to individuals and topics dealing with differences of race, culture, religion, politics, sexual orientation, gender, gender variance, and nationalities. It is expected that all students will make all efforts to keep the classroom an inclusive environment. 
+
+*Note: I will gladly honor your request to address you by an alternate name or gender pronoun. Please advise me early in the semester so that I may make appropriate changes to my records.*
 
 **Students Needing Assistance with the English Language:**
 

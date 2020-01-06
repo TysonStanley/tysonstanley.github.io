@@ -128,6 +128,19 @@ Notably, there are many sources for learning more about R online, including seve
 
 The instructor reserves the right to make changes to this syllabus at any time. Changes will be announced in class and posted on Canvas.
 
+**Children in class:**
+
+1. All breastfeeding children are welcome as often as necessary.
+2. All non-nursing babies and children are welcome whenever alternate arrangements cannot be made. As a parent of three young children, I understand that babysitters fall through, partners have conflicting schedules, children get sick, and other issues arise.
+3. In cases where children come to class, I invite parents/caregivers to sit close to the door so as to more easily excuse yourself to attend to your child's needs. As such, it is great if those seats are left available for any parents.
+4. All students are expected to join with me in creating a welcoming environment that is respectful of your classmates' situations.
+
+**Inclusivity:**
+
+Professional courtesy and sensitivity are especially important with respect to individuals and topics dealing with differences of race, culture, religion, politics, sexual orientation, gender, gender variance, and nationalities. It is expected that all students will make all efforts to keep the classroom an inclusive environment. 
+
+*Note: I will gladly honor your request to address you by an alternate name or gender pronoun. Please advise me early in the semester so that I may make appropriate changes to my records.*
+
 **Students Needing Assistance with the English Language:**
 
 Several assignments in this course require English composition. If you feel you need assistance, please visit the USU Writing Center. They have tutors available to help: http://writingcenter.usu.edu.
