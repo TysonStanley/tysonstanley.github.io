@@ -181,7 +181,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_ASA.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_ASA_updated.png)
 
 
 
