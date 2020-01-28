@@ -166,9 +166,11 @@ Decision Date: They stated they will provide a decision in early May.
 
 \normalsize
 
+*Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (in press). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
+
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in press). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}.
 
-*Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.}. (2020, online). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
+*Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.} (2020, online). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Liss, J., & Berisha, V. (2019). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. doi: 10.1044/2019_JSLHR-19-00194.  \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
@@ -236,8 +238,6 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
-*Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (in revision). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
-
 Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Prevention Science}.
 
 *Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., \& Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism. \emph{Behavior Therapy}.
@@ -296,9 +296,6 @@ Stephanie Knollhoffs Communications modality paper
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 \noindent
-
-<!-- Remove after unnecessary!!! -->
-\newpage
 
 \vspace{10pt}
 \section{PEER-REVIEWED CONFERENCE PROCEEDINGS}
