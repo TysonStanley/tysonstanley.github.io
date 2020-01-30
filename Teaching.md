@@ -4,21 +4,19 @@ title: Teaching
 permalink: /teaching/
 ---
 
-# Workshops/Presentations
+# `rstudio::conf(2020)` Talk
+
+**List-columns in `data.table`**: [PDF]({{ site.baseurl }}/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf) or [PPTX]({{ site.baseurl }}/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pptx)
+
+# Workshops
 
 1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
 2. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
 3. [Intro to the DSDU](https://tysonstanley.github.io/Workshops/2018COMMDE_Retreat.pdf)
 4. [Intro to Connectivity](https://tysonstanley.github.io/Workshops/connectivity_intro.pdf)
-
-# Academic Talks
-
-1. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
-2. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
-
-# UseR Group (Logan)
-
-1. Customizing RStudio and `ggplot2` [PPTX](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
+5. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
+6. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
+7. Customizing RStudio and `ggplot2` [PPTX](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
 
 # Courses
 
