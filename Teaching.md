@@ -10,13 +10,14 @@ permalink: /teaching/
 
 # Workshops
 
-1. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
-2. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
-3. [Intro to the DSDU](https://tysonstanley.github.io/Workshops/2018COMMDE_Retreat.pdf)
-4. [Intro to Connectivity](https://tysonstanley.github.io/Workshops/connectivity_intro.pdf)
-5. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
-6. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
-7. Customizing RStudio and `ggplot2` [PPTX](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
+1. [Datapalooza 2020](https://tysonstanley.github.io/Workshops/Barrett_Datapalooza_2020.pdf)
+2. [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
+3. [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
+4. [Intro to the DSDU](https://tysonstanley.github.io/Workshops/2018COMMDE_Retreat.pdf)
+5. [Intro to Connectivity](https://tysonstanley.github.io/Workshops/connectivity_intro.pdf)
+6. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
+7. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
+8. Customizing RStudio and `ggplot2` [PPTX](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
 
 # Courses
 
