@@ -6,7 +6,7 @@ permalink: /teaching/
 
 # `rstudio::conf(2020)`
 
-- [**List-columns in `data.table`**]({{ site.baseurl }}/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf)
+- [![]({{ site.baseurl }}/assets/images/Barrett_rstudioconf.png)]({{ site.baseurl }}/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf)
 
 # Workshops
 
