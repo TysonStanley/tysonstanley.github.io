@@ -8,7 +8,7 @@ permalink: /teaching/
 
 <a href="{{ site.baseurl }}/assets/images/Barrett_rstudioconf.png">
   <img src="{{ site.baseurl }}/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf" height="50%" width="50%">
-<a>
+</a>
 
 
 # Workshops
