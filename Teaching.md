@@ -6,8 +6,8 @@ permalink: /teaching/
 
 # `rstudio::conf(2020)`
 
-<a href="https://tysonbarrett.com/assets/images/Barrett_rstudioconf.png">
-  <img src="https://tysonbarrett.com/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf" height="50%" width="50%">
+<a href="https://tysonbarrett.com/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf">
+  <img src="https://tysonbarrett.com/assets/images/Barrett_rstudioconf.png" width="50%">
 </a>
 
 
