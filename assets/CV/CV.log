@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2019.4.11)  6 FEB 2020 15:21
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2019.4.11)  9 MAR 2020 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1058,9 +1058,9 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
+[2]
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
-[2]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
@@ -1106,7 +1106,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 588--592
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 593--597
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -1126,15 +1126,15 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [6] [7]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 883.
+(hyperref)                than one, level fixed on input line 888.
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1019.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1024.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1019.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1024.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1019.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1019.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1024.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1024.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 3776A969F77258DBEDA7AD1F14BF471F.
@@ -1145,7 +1145,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  26846 strings out of 492933
  492701 string characters out of 6133145
- 713122 words of memory out of 5000000
+ 714122 words of memory out of 5000000
  30646 multiletter control sequences out of 15000+600000
  535874 words of font info for 63 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
