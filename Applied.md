@@ -22,7 +22,7 @@ This is an introduction to statistics for master's level social scientists. It f
 | Week 6  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/06_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/06_EDUC_6050_2018.pptx) | [Week 6 Pre-recorded Lecture](https://www.youtube.com/watch?v=2lyu-dqwzNs) | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
 | Week 7  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pptx) | [Week 7 Pre-recorded Lecture](https://www.youtube.com/watch?v=UOZD_NH8Gqg) | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
 | Week 8  |  | Review Week | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
-| Week 9  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/09_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/09_EDUC_6050_2018.pptx) | [Week 9 Pre-recorded Lecture (Not available yet)]() | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
+| Week 9  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/09_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/09_EDUC_6050_2018.pptx) | [Week 9 Pre-recorded Lecture](https://www.youtube.com/watch?v=BuY7HgTDbDs) | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
 
 <!--
 
