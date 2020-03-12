@@ -16,14 +16,14 @@ A subset of the [General Social Survey]({{ slidesurl }}/EDUC-7610/GSS_Data/Data/
 
 ### Class Materials
 
-| Chapter                |  Slides   |  Pre-recorded Lecture  |  In-Class Material |
-|:----------------------:|:----------|:-----------------------|:-------------------|
+| Chapter                |  Slides and Materials   |  Recorded Lecture      |  Examples         |
+|:----------------------:|:------------------------|:-----------------------|:-------------------|
 | Intro to the class     | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/00_EDUC7610_Intro.pptx)          & [PDF]({{ slidesurl }}/EDUC-7610/Slides/00_EDUC7610_Intro.pdf)        | |  |    
 | Intro to R and RStudio | [HTML]({{ slidesurl }}/EDUC-7610/Slides/00_EDUC7610_IntroR.html)         & [RMD]({{ slidesurl }}/EDUC-7610/Slides/00_EDUC7610_IntroR.Rmd)       | |  |
 | Chapter 1              | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/01_EDUC7610_stat_control.pptx)   & [PDF]({{ slidesurl }}/EDUC-7610/Slides/01_EDUC7610_stat_control.pdf) | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/01_EDUC7610_stat_control_example.html) |
-| *Readings*             | [Tidy Data]({{ slidesurl }}/EDUC-7610/Readings/Hadley_TidyData_2014.pdf) & [Data Guidelines]({{ slidesurl }}/EDUC-7610/Readings/Broman_DataSpreadsheets_2017.pdf) | |
+|                        | [Tidy Data]({{ slidesurl }}/EDUC-7610/Readings/Hadley_TidyData_2014.pdf) & [Data Guidelines]({{ slidesurl }}/EDUC-7610/Readings/Broman_DataSpreadsheets_2017.pdf) | |
 | Chapter 2              | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/02_EDUC7610_simple_reg.pptx)     & [PDF]({{ slidesurl }}/EDUC-7610/Slides/02_EDUC7610_simple_reg.pdf)   | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/02_EDUC7610_simple_reg_example.html) |
-| *Readings*             | [Plot Your Data]({{ slidesurl }}/EDUC-7610/Readings/SameStats-DifferentGraphs.pdf) | |
+|                        | [Plot Your Data]({{ slidesurl }}/EDUC-7610/Readings/SameStats-DifferentGraphs.pdf) | |
 | Chapter 3              | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pptx)   & [PDF]({{ slidesurl }}/EDUC-7610/Slides/03_EDUC7610_multiple_reg.pdf) | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/03_EDUC7610_multiple_reg_example) |
 | Chapter 4              | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/04_EDUC7610_inference.pptx)      & [PDF]({{ slidesurl }}/EDUC-7610/Slides/04_EDUC7610_inference.pdf)    | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/04_EDUC7610_inference_example) |
 | Chapter 5              | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/05_EDUC7610_extending.pptx)      & [PDF]({{ slidesurl }}/EDUC-7610/Slides/05_EDUC7610_extending.pdf)    | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/05_EDUC7610_extending_example) & [Review Material 1]({{ slidesurl }}/EDUC-7610/Slides/20_Review_Interpretation.pdf) & [Review Material 2]({{ slidesurl }}/EDUC-7610/Slides/20_Review_Slope_Correlation.pptx) and [PDF]({{ slidesurl }}/EDUC-7610/Slides/20_Review_Slope_Correlation.pdf) |
@@ -33,10 +33,10 @@ A subset of the [General Social Survey]({{ slidesurl }}/EDUC-7610/GSS_Data/Data/
 | Chapter 9 and 10       | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/09_EDUC7610_multicat.pptx)       & [PDF]({{ slidesurl }}/EDUC-7610/Slides/09_EDUC7610_multicat.pdf)     | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/09_EDUC7610_multicat_example) |
 | Chapter 11             | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/11_EDUC7610_multipletest.pptx)   & [PDF]({{ slidesurl }}/EDUC-7610/Slides/11_EDUC7610_multipletest.pdf) | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/11_EDUC7610_multipletest_example) |
 | Chapter 12             | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/12_EDUC7610_nonlinear.pptx)      & [PDF]({{ slidesurl }}/EDUC-7610/Slides/12_EDUC7610_nonlinear.pdf)    | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/12_EDUC7610_nonlinear_example) |
-| Chapter 13 and 14      | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions.pptx)   & [PDF]({{ slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions.pdf) | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions_example) & [Review Material]({{ slidesurl }}/EDUC-7610/Slides/20_Review_Interactions.pdf) |
+| Chapter 13 and 14      | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions.pptx)   & [PDF]({{ slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions.pdf) | [Recorded Lecture]() | [Examples]({{ slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions_example) & [Review Material]({{ slidesurl }}/EDUC-7610/Slides/20_Review_Interactions.pdf) |
 | Chapters 16 and 17     | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx)    & [PDF]({{ slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)  | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) |
-| *Readings*             | [Measurement Error and Reproducibility](http://science.sciencemag.org/content/sci/355/6325/584.full.pdf) & [Measurement Error in Practice](http://www.quantpsy.org/pubs/cole_preacher_2014.pdf) | | [Bootstrapping & Monte Carlo Examples]({{ slidesurl }}/EDUC-7610/Slides/20_EDUC7610_bootstrap.html) |
-| *More Readings*        | Missing Data - see Little, R. J., & Rubin, D. B. (2014). Statistical analysis with missing data (Vol. 333). John Wiley & Sons. & [Missing Data Overview](http://journals.sagepub.com/doi/pdf/10.1177/1094428114548590) | | |
+|                        | [Measurement/Reproducibility](http://science.sciencemag.org/content/sci/355/6325/584.full.pdf) & [Measurement Error](http://www.quantpsy.org/pubs/cole_preacher_2014.pdf) | | [Resampling Examples]({{ slidesurl }}/EDUC-7610/Slides/20_EDUC7610_bootstrap.html) |
+|                        | Missing Data - see Little, R. J., & Rubin, D. B. (2014). Statistical analysis with missing data (Vol. 333). John Wiley & Sons. & [Missing Data Overview](http://journals.sagepub.com/doi/pdf/10.1177/1094428114548590) | | |
 | Chapter 18             | [PPTX]({{ slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pptx)            & [PDF]({{ slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pdf) | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm_example) |
 | Chapter 15             | [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)  | | [Examples]({{ slidesurl }}/EDUC-7610/Slides/15_EDUC7610_mediation_example) |
 
