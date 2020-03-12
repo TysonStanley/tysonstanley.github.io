@@ -37,7 +37,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Chapters 16 and 17     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx)    & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)  | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) |
 |                        | [Measurement/Reproducibility](http://science.sciencemag.org/content/sci/355/6325/584.full.pdf) & [Measurement Error](http://www.quantpsy.org/pubs/cole_preacher_2014.pdf) & Missing Data - see Little, R. J., & Rubin, D. B. (2014). Statistical analysis with missing data (Vol. 333). John Wiley & Sons. & [Missing Data Overview](http://journals.sagepub.com/doi/pdf/10.1177/1094428114548590) | | [Resampling Examples]({{ site.slidesurl }}/EDUC-7610/Slides/20_EDUC7610_bootstrap.html) |
 | Chapter 18             | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pptx)            & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pdf) | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm_example) |
-| Chapter 15             | [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)  | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/15_EDUC7610_mediation_example) |
+| Chapter 15             | [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)       | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/15_EDUC7610_mediation_example) |
 
 ### Homework Assignments
 
