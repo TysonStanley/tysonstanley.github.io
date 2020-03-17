@@ -23,9 +23,10 @@ This is an introduction to statistics for master's level social scientists. It f
 | Week 7  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/07_EDUC_6050_2018.pptx) | [Week 7 Pre-recorded Lecture](https://www.youtube.com/watch?v=UOZD_NH8Gqg) | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
 | Week 8  |  | Review Week | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
 | Week 9  | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/09_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/09_EDUC_6050_2018.pptx) | [Week 9 Pre-recorded Lecture](https://www.youtube.com/watch?v=BuY7HgTDbDs) | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) |
+| Week 10 | [PDF](http://tysonbarrett.com/EDUC-6050/Slides/10_EDUC_6050_2018.pdf) & [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/10_EDUC_6050_2018.pptx) | [Week 10 Part 1](https://www.youtube.com/watch?v=FcTWNjZGDj8) & [Week 10 Part 2](https://www.youtube.com/watch?v=sn00pKYNw0I) | [Office/Parks Data Set]({{ base.url }}/assets/Data/OfficeParks.csv) & [Poverty Data Set](http://tysonbarrett.com/EDUC-6050/Data/poverty.omv) |
+
 
 <!--
-10. Week 10 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/10_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/10_EDUC_6050_2018.pptx)
 11. Week 11 - [PDF](http://tysonbarrett.com/EDUC-6050/Slides/11_EDUC_6050_2018.pdf) and [PPTX](http://tysonbarrett.com/EDUC-6050/Slides/11_EDUC_6050_2018.pptx)
   - Example data for class about poverty: [OMV](http://tysonbarrett.com/EDUC-6050/Data/poverty.omv)
 12. Week 12 - Chi Square Activity and Review (no slides)
