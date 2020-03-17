@@ -182,7 +182,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring_special.png)
 
 
 

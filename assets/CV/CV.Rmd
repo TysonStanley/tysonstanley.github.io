@@ -130,7 +130,15 @@ year <- lubridate::year(today)
 \normalsize
 
 <!--
-Sarah's grant
+1R21DC018641-01 ($430,000)	Sarah Leopold (PI)	04/01/2020-03/31/2023
+NIH/NIDCD		
+Application of Ideal Binary Masking to Disordered Speech
+The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.
+
+1R21DC018867-01 ($420,000)	Stephanie Borrie & Kaitlin Lansford (Co-PIs)	07/01/2020-06/30/2022
+NIH/NIDCD		
+Perceptual training for improved intelligibility of dysarthric speech
+The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.
 -->
 
 *Hoopes, K. (Principal), Smith, J. (Co-Principal), Sulzer, S. (Co-Principal), Israelsen, C. E. (Co-Principal), Blais, R. (Co-Principal), Bressel, E. (Co-Principal), Mason, J. (Co- Principal), \textbf{Barrett, T.S.} (Co-Principal), "Equine Human Interaction with Veterans", Sponsored by USU Extension Grants Program, Utah State University, (May 1, 2019 - December 31, 2019). $11,640. Current Status: Funded
