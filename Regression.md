@@ -16,6 +16,9 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 ### Class Materials
 
+
+#### Unit 1
+
 | Chapter                |  Slides and Materials   |  Recorded Lecture      |  Examples          |
 |:----------------------:|:------------------------|:-----------------------|:-------------------|
 | Intro to the class     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/00_EDUC7610_Intro.pptx)          & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/00_EDUC7610_Intro.pdf)        | [Recorded Lecture]() |  |    
@@ -28,14 +31,29 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Chapter 4              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/04_EDUC7610_inference.pptx)      & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/04_EDUC7610_inference.pdf)    | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/04_EDUC7610_inference_example) |
 | Chapter 5              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/05_EDUC7610_extending.pptx)      & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/05_EDUC7610_extending.pdf)    | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/05_EDUC7610_extending_example) & [Review 1]({{ site.slidesurl }}/EDUC-7610/Slides/20_Review_Interpretation.pdf) & [Review 2]({{ site.slidesurl }}/EDUC-7610/Slides/20_Review_Slope_Correlation.pptx) & [Review 3]({{ site.slidesurl }}/EDUC-7610/Slides/20_Review_Slope_Correlation.pdf) |
 | Chapter 6              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/06_EDUC7610_control.pptx)        & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/06_EDUC7610_control.pdf)      | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/06_EDUC7610_control_example) |
+
+#### Unit 2
+
+| Chapter                |  Slides and Materials   |  Recorded Lecture      |  Examples          |
+|:----------------------:|:------------------------|:-----------------------|:-------------------|
 | Chapter 7              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/07_EDUC7610_prediction.pptx)     & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/07_EDUC7610_prediction.pdf)   | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/07_EDUC7610_prediction_example) |
 | Chapter 8              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/08_EDUC7610_importance.pptx)     & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/08_EDUC7610_importance.pdf)   | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/08_EDUC7610_importance_example) |
 | Chapter 9 and 10       | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/09_EDUC7610_multicat.pptx)       & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/09_EDUC7610_multicat.pdf)     | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/09_EDUC7610_multicat_example) |
 | Chapter 11             | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/11_EDUC7610_multipletest.pptx)   & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/11_EDUC7610_multipletest.pdf) | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/11_EDUC7610_multipletest_example) |
+
+#### Unit 3
+
+| Chapter                |  Slides and Materials   |  Recorded Lecture      |  Examples          |
+|:----------------------:|:------------------------|:-----------------------|:-------------------|
 | Chapter 12             | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/12_EDUC7610_nonlinear.pptx)      & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/12_EDUC7610_nonlinear.pdf)    | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/12_EDUC7610_nonlinear_example) |
 | Chapters 13 and 14     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions.pptx)   & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions.pdf) | [Recorded Lecture](https://www.youtube.com/watch?v=ZyMdJM6LxRg) | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/13_EDUC7610_interactions_example) & [Review Material]({{ site.slidesurl }}/EDUC-7610/Slides/20_Review_Interactions.pdf) |
-| Chapters 16 and 17     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx)    & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)  | [Recorded Lecture](https://www.youtube.com/watch?v=9YQDPuqlOoQ) | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) |
+| Chapters 16 and 17     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pptx)    & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions.pdf)  | [Recorded Lecture](https://www.youtube.com/watch?v=9YQDPuqlOoQ)  & [Causation and Linear Models](https://www.youtube.com/watch?v=Uea8V32rw9Y) | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/16_EDUC7610_assumptions_example.html) |
 |                        | [Measurement/Reproducibility](http://science.sciencemag.org/content/sci/355/6325/584.full.pdf) & [Measurement Error](http://www.quantpsy.org/pubs/cole_preacher_2014.pdf) & Missing Data - see Little, R. J., & Rubin, D. B. (2014). Statistical analysis with missing data (Vol. 333). John Wiley & Sons. & [Missing Data Overview](http://journals.sagepub.com/doi/pdf/10.1177/1094428114548590) | | [Resampling Examples]({{ site.slidesurl }}/EDUC-7610/Slides/20_EDUC7610_bootstrap.html) |
+
+#### Unit 4
+
+| Chapter                |  Slides and Materials   |  Recorded Lecture      |  Examples          |
+|:----------------------:|:------------------------|:-----------------------|:-------------------|
 | Chapter 18             | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pptx)            & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pdf) | [Recorded Lecture](https://www.youtube.com/watch?v=p7tp6Geaxl0) & [What Are The Odds?](https://www.youtube.com/watch?v=AOx_1AqXC44) | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm_example) |
 | Chapter 15             | [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)       | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/15_EDUC7610_mediation_example) |
 
