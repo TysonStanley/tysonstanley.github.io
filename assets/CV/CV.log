@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.20)  20 MAR 2020 18:23
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.20)  10 APR 2020 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,11 +923,11 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
+[4]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
-[4]
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
 File: tidyfast_hex.png Graphic file (type bmp)
@@ -976,7 +976,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  18498 strings out of 481790
  331304 string characters out of 5935962
- 764432 words of memory out of 5000000
+ 763432 words of memory out of 5000000
  35230 multiletter control sequences out of 15000+600000
  535939 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

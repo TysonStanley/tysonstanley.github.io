@@ -111,8 +111,9 @@ year <- lubridate::year(today)
 
 \indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Contributor \hfill 2019-Present
 
+<!--
 \indent \hspace*{.1in} \small\textbf{\href{https://f1000.com/prime/thefaculty/member/1070302}{F1000Prime Faculty Member}} in Quantitative Psychology  \hfill 2019-Present
-
+-->
 
 <!-- Grants -->
 \vspace{10pt}
@@ -173,6 +174,8 @@ Decision Date: They stated they will provide a decision in early May.
 \noindent
 
 \normalsize
+
+*Downs, J., Mohr, K.A.J., \& \textbf{Barrett, T.S.} (in press). Determining the Academic and Affective Outcomes of Dyad Reading Among Third Graders. \emph{Journal of Educational Research}.
 
 Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research}.
 
