@@ -55,7 +55,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Chapter                |  Slides and Materials   |  Recorded Lecture      |  Examples          |
 |:----------------------:|:------------------------|:-----------------------|:-------------------|
 | Chapter 18             | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pptx)            & [PDF]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm.pdf) & [Logistic Regression Workshop](https://tysonstanley.github.io/Workshops/Logistic_Workshop.html) | [Recorded Lecture](https://www.youtube.com/watch?v=p7tp6Geaxl0) & [What Are The Odds?](https://www.youtube.com/watch?v=AOx_1AqXC44) | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/18_EDUC7610_glm_example) |
-| Chapter 15             | [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)       | [Recorded Lecture]() | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/15_EDUC7610_mediation_example) |
+| Chapter 15             | [HTML](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)       | [Recorded Lecture](https://www.youtube.com/watch?v=WGPPqJaa1Ho) | [Examples]({{ site.slidesurl }}/EDUC-7610/Slides/15_EDUC7610_mediation_example) |
 
 ### Homework Assignments
 
