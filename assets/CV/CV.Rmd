@@ -48,9 +48,9 @@ year <- lubridate::year(today)
 <!-- Education -->
 \vspace{0pt}
 \section{EDUCATION}
-\vspace{-1pt}
+\vspace{-5pt}
 \hrule
-\vspace{3pt}
+\vspace{2pt}
 
 \begin{tabular}{l|p{8cm}}
  \textsc{\textbf{Ph.D. Quantitative Psychology }} & \emph{Feb 2018}\\
@@ -71,8 +71,9 @@ year <- lubridate::year(today)
 <!-- Research Areas -->
 \vspace{1pt}
 \section{RESEARCH AREAS}
-\vspace{-1pt}
+\vspace{-5pt}
 \hrule
+\vspace{2pt}
 
 \indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, Accessible Methodology Using R Programming
 
@@ -83,11 +84,9 @@ year <- lubridate::year(today)
 <!-- Research Experience -->
 \vspace{1pt}
 \section{RESEARCH APPOINTMENTS}
-\vspace{-1pt}
+\vspace{-5pt}
 \hrule
-\vspace{-8pt}
-
-\singlespacing
+\vspace{2pt}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-Present
 \newline \hspace*{.6in} \emph{Principle Investigator of the Social Data Lab}
@@ -105,7 +104,9 @@ year <- lubridate::year(today)
 <!-- Affiliations -->
 \vspace{1pt}
 \section{PROFESSIONAL AFFILIATIONS}
+\vspace{-5pt}
 \hrule
+\vspace{2pt}
 
 \indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
 
@@ -119,8 +120,9 @@ year <- lubridate::year(today)
 \vspace{10pt}
 \noindent
 \section{FUNDING}
+\vspace{-5pt}
 \hrule
-\vspace{-1pt}
+\vspace{-2pt}
 \footnotesize \hspace{4pt} * Denotes that I was the methodologist or data scientist on the proposal
 
 \setlength{\parindent}{-.5in}
@@ -263,6 +265,14 @@ Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & 
 
 Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
 
+Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Journal of Latinx Psychology}.
+
+Knollhoff, S. & \textbf{Barrett, T.S.} (under review). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}.
+
+Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (in revision). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of the Acoustical Society of American Express Letters}.
+
+
+
 <!--
 Nichola's Paper...
 -->
@@ -272,8 +282,6 @@ Nichola's Paper...
 - In Preparation
 
 \textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
-
-Stephanie Knollhoffs Communications modality paper
 
 -->
 
@@ -392,8 +400,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 
-<!-- Remove after unnecessary!!! -->
-\newpage
 
 \vspace{10pt}
 \section{CITATION COUNT HISTORY}
