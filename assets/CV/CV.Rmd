@@ -279,6 +279,8 @@ Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenab
 
 Buntrock, M., Gurries, M. \textbf{Barrett, T.S.}, Barker, B. (under review). The effect of talker familiarity on sentence recognition accuracy in complex noise. \emph{Language and Speech}. \img{osf_data.png}{https://osf.io/d4zar/}\img{osf_materials.png}{https://osf.io/d4zar/}
 
+Vázquez, A.L., Chou, T., Navarro Flores, C.M., \textbf{Barrett, T.S.}, Villodas, M.T., & Domenech Rodríguez, M.M. (under review). Understanding caregiver perceived need for and utilization of adolescent counseling services through machine learning. \emph{Child Maltreatment}.
+
 
 <!--
 Nichola's Paper...
