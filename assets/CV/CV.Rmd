@@ -132,8 +132,6 @@ year <- lubridate::year(today)
 \normalsize
 
 <!--
-
-
 1R21DC018867-01 ($420,000)	Stephanie Borrie & Kaitlin Lansford (Co-PIs)	07/01/2020-06/30/2022
 NIH/NIDCD		
 Perceptual training for improved intelligibility of dysarthric speech
@@ -187,9 +185,9 @@ Decision Date: They stated they will provide a decision in early May.
 
 Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research}.
 
-*Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (in press). Classroom Listening Experiences of Students who are DHH using LIFE-R. \emph{Language, Speech, and Hearing Services in Schools}.
-
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in press). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}. \img{osf_data.png}{https://osf.io/796d4/}\img{osf_materials.png}{https://osf.io/796d4/} 
+
+*Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (2020, online). Classroom Listening Experiences of Students who are Deaf or Hard of Hearing using the Listening Inventory for Education-Revised (LIFE-R). \emph{Language, Speech, and Hearing Services in Schools}.
 
 *Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.} (2020, online). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
 
@@ -275,7 +273,7 @@ Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & 
 
 Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
 
-Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Journal of Latinx Psychology}.
+Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Perceived parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Family Process}.
 
 Buntrock, M., Gurries, M. \textbf{Barrett, T.S.}, Barker, B. (under review). The effect of talker familiarity on sentence recognition accuracy in complex noise. \emph{Language and Speech}. \img{osf_data.png}{https://osf.io/d4zar/}\img{osf_materials.png}{https://osf.io/d4zar/}
 
@@ -453,6 +451,8 @@ ggplot(citations, aes(year, cites, color = year)) +
 \noindent
 
 <!-- -->
+
+Hancock, A.S., Orellana, C., Alphonsa, S., \textbf{Barrett, T.S.}, Logan, K., Gillam, S.L., & Gillam, R.B. (2020, May). An fNIRS Investigation During Stuttered and Fluent Speech. Poster presentation at Cognitive Neuroscience Society, Boston, Massachusetts.
 
 **Barrett, T.S.** (2020, January). Working with list-columns in `data.table`. Talk presented at the RStudio Conference 2020, San Francisco, CA.
 
