@@ -132,10 +132,11 @@ year <- lubridate::year(today)
 \normalsize
 
 <!--
-1R21DC018867-01 ($420,000)	Stephanie Borrie & Kaitlin Lansford (Co-PIs)	07/01/2020-06/30/2022
-NIH/NIDCD		
-Perceptual training for improved intelligibility of dysarthric speech
-The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.
+\emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
+
+\indent \hspace{.25in} Borrie, S.A. (Co-PI), Lansford, K. (Co-PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
+
+\indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
 -->
 
 \emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -	March 31, 2023 
@@ -181,6 +182,10 @@ Decision Date: They stated they will provide a decision in early May.
 
 \normalsize
 
+*Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (in press). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy}.
+
+Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (in press). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
+
 *Downs, J., Mohr, K.A.J., \& \textbf{Barrett, T.S.} (in press). Determining the Academic and Affective Outcomes of Dyad Reading Among Third Graders. \emph{Journal of Educational Research}.
 
 Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research}.
@@ -193,7 +198,7 @@ Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). W
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Liss, J., & Berisha, V. (2019). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. doi: 10.1044/2019_JSLHR-19-00194.  \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
-Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.}. (2019). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2019_JSLHR-19-00055.
+Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.} (2019). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2019_JSLHR-19-00055.
 
 *Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., & Twohig, M.P. (2019). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness, 10}(10), 2095-2109. doi: 10.1007/s12671-019-01165-z.     \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
@@ -261,15 +266,11 @@ Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech R
 
 *Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., \& Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism. \emph{Behavior Therapy}.
 
-Crapo, J.S., Bradford, K. \textbf{Barrett, T.S.}, Miller, J.A., \& Higginbotham, B.J. (under review). CRE Outcomes Predicted by Family Life Stage and Traditionality, \emph{Contemporary Family Therapy.}
-
 \textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
 
-Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.}. (under review). Conversational coordination of articulatory precision is contextually-driven: Evidence from traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
-
+<!--
 Knollhoff, S. & \textbf{Barrett, T.S.} (under review). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
-
-Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (under review). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of the Acoustical Society of American Express Letters}.
+-->
 
 Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
 
