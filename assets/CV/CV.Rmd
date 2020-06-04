@@ -131,19 +131,21 @@ year <- lubridate::year(today)
 
 \normalsize
 
-<!--
 \emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
 
-\indent \hspace{.25in} Borrie, S.A. (Co-PI), Lansford, K. (Co-PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
+\indent \hspace{.25in} Borrie, S.A. (PI), Lansford, K. (PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
 
 \indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
--->
+
+\vspace{8pt}
 
 \emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -	March 31, 2023 
 
-\indent \hspace{.25in} Leopold, S. (PI), Borrie, S.A. (Co-PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
+\indent \hspace{.25in} Leopold, S. (PI), Borrie, S.A. (Co-I), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
 
 \indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
+
+\vspace{8pt}
 
 \emph{Equine Human Interaction with Veterans} \hfill May 1, 2019 - December 31, 2019
 
@@ -186,8 +188,6 @@ Decision Date: They stated they will provide a decision in early May.
 
 Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (in press). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
 
-*Downs, J., Mohr, K.A.J., \& \textbf{Barrett, T.S.} (in press). Determining the Academic and Affective Outcomes of Dyad Reading Among Third Graders. \emph{Journal of Educational Research}.
-
 Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research}.
 
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in press). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}. \img{osf_data.png}{https://osf.io/796d4/}\img{osf_materials.png}{https://osf.io/796d4/} 
@@ -195,6 +195,8 @@ Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). W
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (2020, online). Classroom Listening Experiences of Students who are Deaf or Hard of Hearing using the Listening Inventory for Education-Revised (LIFE-R). \emph{Language, Speech, and Hearing Services in Schools}.
 
 *Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.} (2020, online). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
+
+*Downs, J., Mohr, K.A.J., \& \textbf{Barrett, T.S.} (2020). Determining the Academic and Affective Outcomes of Dyad Reading Among Third Graders. \emph{Journal of Educational Research, 113}(2), 120-132. doi: 10.1080/00220671.2020.1755615.
 
 Borrie, S.A., \textbf{Barrett, T.S.}, Liss, J., & Berisha, V. (2019). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. doi: 10.1044/2019_JSLHR-19-00194.  \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
 
