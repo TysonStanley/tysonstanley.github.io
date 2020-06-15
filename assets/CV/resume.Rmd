@@ -1,0 +1,115 @@
+---
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    includes: 
+      in_header: preamble.tex
+geometry: margin=2.2cm
+---
+
+```{r scholar_info, echo = FALSE, warning = FALSE, message = FALSE}
+library(scholar)
+library(tidyverse)
+
+your.id <- "UWdXXEoAAAAJ" # This is your google scholar ID
+profile <- get_profile(your.id)
+pubs <- get_publications(your.id, cstart = 0, pagesize = 100, flush = FALSE)
+citations <- get_citation_history(your.id)
+
+## Custom Code to make bib file from scholar ID
+# url("https://scholar.googleusercontent.com/citations?view_op=export_citations&user=UWdXXEoAAAAJ&citsig=AMD79ooAAAAAXJvG8fCoULONM8SZwt9CLrw1g3CGG9nm&hl=en") %>% 
+#   readLines() %>% 
+#   paste("\n") %>% 
+#   cat(file = "pubs.bib")
+
+today <- lubridate::today()
+month <- months(today)
+day <- lubridate::day(today)
+year <- lubridate::year(today)
+```
+
+\pagestyle{empty}
+
+<!-- Name -->
+\hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: `r month` `r day`, `r year`
+\normalsize
+\vspace{8pt}
+
+<!-- General Info -->
+\begin{tabular}{rl}
+    \textsc{Email:}            & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
+    \textsc{Website:}          & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
+    \textsc{Curriculum Vitae:} & \href{https://tysonbarrett.com/assets/CV/CV.pdf}{tysonbarrett.com/assets/CV/CV.pdf} \\
+    \textsc{Citations:}        & `r profile$total_cites` \\
+\end{tabular}
+
+<!-- Education -->
+\vspace{0pt}
+\section{EDUCATION}
+\vspace{-1pt}
+\hrule
+\vspace{3pt}
+
+\begin{tabular}{l|p{8cm}}
+ \textsc{\textbf{Ph.D. Quantitative Psychology }} & \emph{Feb 2018}\\
+ & \emph{Utah State University}\\
+ \multicolumn{2}{c}{} \\
+ \textsc{\textbf{B.S. Economics}} & \emph{May 2014} \\
+  & \emph{Utah State University}\\
+ \multicolumn{2}{c}{} \\
+\textsc{\textbf{B.S. Psychology}} & \emph{May 2014} \\
+ & \emph{Utah State University}\\
+\end{tabular}
+
+
+<!-- Research Experience -->
+\vspace{1pt}
+\section{EXPERIENCE}
+\vspace{-1pt}
+\hrule
+\vspace{-8pt}
+
+\singlespacing
+
+\indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-Present
+\newline \hspace*{.6in} \emph{Principle Investigator of the Social Data Lab}
+\newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
+
+\indent \hspace*{.1in} \small\textbf{Research Assistant}, Prevention Science Lab, Utah State University \hfill 2016-2018
+\newline \hspace*{.6in} \emph{Advisor: Ginger Lockhart, PhD}
+
+\indent \hspace*{.1in} \small\textbf{Statistical and Data Science Consultant}, Utah State University \hfill 2016-2018
+\newline \hspace*{.6in} \emph{Supervisors: Sarah Schwartz, PhD and Jamison Fargo, PhD}
+
+\indent \hspace*{.1in} \small\textbf{Research Assistant}, National Center for Hearing Assessment and Management \hfill 2014-2016
+\newline \hspace*{.6in} \emph{Advisor: Karl White, PhD}
+
+<!-- Peer Review Publications -->
+\vspace{1pt}
+\section{RESEARCH \& TEACHING}
+\vspace{-1pt}
+\hrule
+\vspace{-8pt}
+
+\singlespacing
+
+I have 26 peer-reviewed publications and presented 21 studies at academic conferences across disability, health, and educational disciplines. See my [CV](https://tysonbarrett.com/assets/CV/CV.pdf) for a detailed record. In my current position, most of my time is spent as a methodologist and data scientist on applied projects, generally charged with data cleaning, reshaping, joining, analyzing, and communicating.
+
+I also have taught several statistical and data science courses to PhD-level graduate students, covering topics that included data wrangling from various sources, joining tables, and pivoting data. Again, see my [CV](https://tysonbarrett.com/assets/CV/CV.pdf) for a detailed record of teaching appointments. Also, see my website for various posts demonstrating several of these data manipulations.
+
+
+<!-- Open Source Development -->
+\vspace{1pt}
+\section{SELECTED OPEN SOURCE PROJECTS}
+\vspace{-1pt}
+\hrule
+\vspace{-8pt}
+
+\singlespacing
+
+- `dissertateUSU`. URL: github.com/tysonstanley/dissertateUSU. R package version `r packageVersion("dissertateUSU")`. doi: 10.5281/zenodo.3240640. \img{dissertateUSU_hex.jpg}{https://github.com/TysonStanley/dissertateUSU}
+- `tidyfast`. URL: github.com/tysonstanley/tidyfast. R package version `r packageVersion("tidyfast")`. \img{tidyfast_hex.png}{https://github.com/TysonStanley/tidyfast}
+- `autoscore`. URL: github.com/autoscore/autoscore. R package version `r packageVersion("autoscore")`. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore} Also, see online app [autoscore.usu.edu](autoscore.usu.edu)
+- `MarginalMediation`: Marginal Mediation Analysis. URL: tysonbarrett.com/MarginalMediation. R package version `r packageVersion("MarginalMediation")`. \img{mma_hex.jpg}{https://github.com/TysonStanley/MarginalMediation}
+- `furniture`: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
+
