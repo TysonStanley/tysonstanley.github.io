@@ -119,7 +119,7 @@ year <- lubridate::year(today)
 <!-- Grants -->
 \vspace{10pt}
 \noindent
-\section{FUNDING}
+\section{EXTERNAL FUNDING}
 \vspace{-5pt}
 \hrule
 \vspace{-2pt}
@@ -145,23 +145,29 @@ year <- lubridate::year(today)
 
 \indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
-\vspace{8pt}
+
+\vspace{2pt}
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+\section{INTERNAL FUNDING}
+\vspace{-5pt}
+\hrule
+\vspace{-2pt}
+
+\setlength{\parindent}{-.3in}
+\setlength{\leftskip}{.8in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\normalsize
 
 \emph{Equine Human Interaction with Veterans} \hfill May 1, 2019 - December 31, 2019
 
 \indent \hspace{.25in} Hoopes, K. (PI), Smith, J. (Co-PI), Sulzer, S. (Co-PI), Israelsen, C. E. (Co-PI), Blais, R. (Co-Principal), Bressel, E. (Co-PI), Mason, J. (Co- PI), \textbf{Barrett, T.S. (Co-PI)}. Sponsored by USU Extension Grants Program, Utah State University. Current Status: Ended. $11,640.
 
 \indent \hspace{.25in} \emph{Funds used to pilot the equine-human interaction program at Utah State University.}
-
-<!--
-Funder: American Foundation for Suicide Prevention 
-Title: Mental Health Needs in Rural Utah Workers: Suicide Risk, Psychological Flexibility, Opioid Use, and Pain  
-Role: Methodological and Statistics Content Expert and Project Management Team Member
-Descriptive info from budget justification: 2% FTE, $1,521. Methodological and Statistics Content Expert and Project Management Team Member. Dr. Barrett will participate in program oversight, with an emphasis on methodological and statistical procedures implemented throughout the project, as a member of the project management team. 
-Decision Date: They stated they will provide a decision in early May. 
--->
-
-
 
 
 
@@ -276,7 +282,7 @@ Knollhoff, S. & \textbf{Barrett, T.S.} (under review). Listener Impressions of A
 
 Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
 
-Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Perceived parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Family Process}.
+Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Perceived parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Substance Use \& Misuse}.
 
 Buntrock, M., Gurries, M. \textbf{Barrett, T.S.}, Barker, B. (under review). The effect of talker familiarity on sentence recognition accuracy in complex noise. \emph{Language and Speech}. \img{osf_data.png}{https://osf.io/d4zar/}\img{osf_materials.png}{https://osf.io/d4zar/}
 
