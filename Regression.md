@@ -19,7 +19,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 ### Unit 1
 
-[In-Class Material RMD]()
+[In-Class Material RMD]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/InClass/InClass1.Rmd)
 
 | Lecture                    |  Slides and Materials   |  Recorded Lecture      |
 |:---------------------------|:-----------------------:|:-----------------------|
@@ -32,7 +32,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 ### Unit 2
 
-[In-Class Material RMD]()
+[In-Class Material RMD]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/InClass/InClass2.Rmd)
 
 | Lecture                    |  Slides and Materials   |  Recorded Lecture      |
 |:---------------------------|:-----------------------:|:-----------------------|
@@ -44,7 +44,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 ### Unit 3
 
-[In-Class Material RMD]()
+[In-Class Material RMD]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/InClass/InClass3.Rmd)
 
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
@@ -55,7 +55,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 ### Unit 4
 
-[In-Class Material RMD]()
+[In-Class Material RMD]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/InClass/InClass4.Rmd)
 
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
