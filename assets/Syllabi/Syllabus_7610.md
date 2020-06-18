@@ -6,7 +6,7 @@ permalink: /syllabus/educ7610
 
 # Regression Analysis
 #### EDUC 7610
-#### Spring 2020
+#### Summer 2020 - under construction!!
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -31,13 +31,15 @@ permalink: /syllabus/educ7610
 
 ## Materials:
 
--	Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
 - Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
 - R and RStudio software (both are free; downloading and installing are discussed in class)
 - [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) for Exams
+- Optional: Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
 - Optional: Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
 
+<!--
 *Note: it is advantageous to bring a laptop to class, but not required.*
+-->
 
 ## Course Purpose:
 
@@ -53,11 +55,11 @@ These prerequisites are mandated by the College of Education & Human Services to
 
 ## Course Structure:
 
-This is a lecture and applied skills course. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class lectures is to elaborate on interesting or difficult material presented in the text, conduct skill-building exercises and demonstrations, and to provide a forum for discussion.
+This is a hybrid course; we will use both online recorded lectures and in-class activities. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class activities is to elaborate on interesting or difficult material presented in the recorded lectures, conduct skill-building exercises and demonstrations, and to provide a forum for discussion. *For this semester, we will meet via Zoom.*
 
 ## Preparation & Attendance:
 
-The nature of this course requires regular class attendance and participation. The student is therefore expected to read assigned chapters and any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 15-week period, requiring an average of approximately 9 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class lectures as some material covered in class will not be covered in the text. All information covered in the text and lectures can be used for examination questions. 
+The nature of this course requires regular class attendance and participation. The student is therefore expected to watch the recorded lecture and read any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 7-week period, requiring an average of approximately 18 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class activities as some material covered in class will not be covered anywhere else. All information covered in lectures and in-class activities can be used for examination questions. 
 
 ## Four Components of Your Grade:
 
