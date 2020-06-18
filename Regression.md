@@ -22,7 +22,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 [In-Class Material RMD]()
 
 | Lecture                    |  Slides and Materials   |  Recorded Lecture      |
-|:--------------------------:|:------------------------|:-----------------------|
+|:---------------------------|:-----------------------:|:-----------------------|
 | L0: Intro to the class     | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L0_EDUC7610_Intro.pptx)                  |  |    
 | L1: Intro to R and RStudio | [HTML]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L1_EDUC7610_IntroR.html)                 | [Intro to R](https://youtu.be/hjyQ_KOV0Bc) | 
 | L2: Causation              | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L2_EDUC7610_causation.pptx)              | [Causation](https://youtu.be/YHNbzAg9va0) | 
@@ -35,7 +35,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 [In-Class Material RMD]()
 
 | Lecture                    |  Slides and Materials   |  Recorded Lecture      |
-|:--------------------------:|:------------------------|:-----------------------|
+|:---------------------------|:-----------------------:|:-----------------------|
 | L6: Statistical Inference  | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L6_EDUC7610_inference.pptx)    | [Inference Part 1](https://youtu.be/HcTA13vHzAM) & [Inference Part 2](https://youtu.be/0r6pFXuNYXA) |    
 | L7: Model Diagnostics      | [HTML]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L7_EDUC7610_diagnostics.pptx)  | [Diagnostics Part 1](https://youtu.be/Iz4LpBlMRmA) & [Diagnostics Part 2](https://youtu.be/G3lQKCJ01DM) |
 | L8: Missing Data & Such    | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L8_EDUC7610_causation.pptx)    | [Missing Data](https://youtu.be/w41wU-yK3Pk) | 
@@ -47,7 +47,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 [In-Class Material RMD]()
 
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
-|:----------------------------:|:------------------------|:-----------------------|
+|:-----------------------------|:-----------------------:|:-----------------------|
 | L10: Effect Sizes            | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L10_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() |    
 | L11: Linear Interactions     | [HTML]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L11_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L12: Nonlinear Relationships | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L12_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
@@ -58,7 +58,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 [In-Class Material RMD]()
 
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
-|:----------------------------:|:------------------------|:-----------------------|
+|:-----------------------------|:-----------------------:|:-----------------------|
 | L14: Logistic Regression     | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L14_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() |    
 | L15: Other GLMs              | [HTML]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L15_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L16: Mediation Analysis      | [PPTX]({{ site.slidesurl }}/EDUC-7610-flip/Slides/L16_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
