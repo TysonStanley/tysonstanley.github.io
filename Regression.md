@@ -12,7 +12,7 @@ This class is all about applying regression analysis and linear models, includin
 A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/Data/GSS_reduced_example.csv) data set, a [data set used in Quas et al. about high risk youth]({{ site.slidesurl }}/EDUC-7610/HighRisk_Data/HighRisk.csv) data set, and a [data set regarding poverty, violence, and teen birth rates per state]({{ site.slidesurl }}/EDUC-7610/Poverty_Data/poverty.xlsx) will be used in the examples. We will also pull from [FiveThirtyEight's open data on GitHub](https://github.com/fivethirtyeight/data) occassionally throughout the class (many of these data sets can be used for your class project as well if they have both continuous and categorical predictors). Finally, [a small (ficticious) data set about *The Office (US)* and *Parks and Recreation* television shows]({{ base.url }}/assets/Data/OfficeParks.csv) is also available.
 
 
-[## Syllabus]({{ site.baseurl }}/syllabus/educ7610)
+## [Syllabus]({{ site.baseurl }}/syllabus/educ7610)
 
 ## Class Materials
 
