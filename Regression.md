@@ -37,7 +37,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Lecture                    |  Slides and Materials   |  Recorded Lecture      |
 |:---------------------------|:-----------------------:|:-----------------------|
 | L6: Statistical Inference  | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 2/L6_EDUC7610_inference.pptx)    | [Inference Part 1](https://youtu.be/HcTA13vHzAM) & [Inference Part 2](https://youtu.be/0r6pFXuNYXA) |    
-| L7: Model Diagnostics      | [HTML]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 2/L7_EDUC7610_diagnostics.pptx)  | [Diagnostics Part 1](https://youtu.be/Iz4LpBlMRmA) & [Diagnostics Part 2](https://youtu.be/G3lQKCJ01DM) |
+| L7: Model Diagnostics      | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 2/L7_EDUC7610_diagnostics.pptx)  | [Diagnostics Part 1](https://youtu.be/Iz4LpBlMRmA) & [Diagnostics Part 2](https://youtu.be/G3lQKCJ01DM) |
 | L8: Missing Data & Such    | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 2/L8_EDUC7610_causation.pptx)    | [Missing Data](https://youtu.be/w41wU-yK3Pk) | 
 | L9: Threats to Validity    | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 2/L9_EDUC7610_validity.pptx)     | [Threats to Validity](https://youtu.be/8jiHyigvfg4) | 
 
