@@ -49,7 +49,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
 | L10: Effect Sizes            | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L10_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() |    
-| L11: Linear Interactions     | [HTML]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L11_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
+| L11: Linear Interactions     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L11_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L12: Nonlinear Relationships | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L12_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L13: Intro to GLMs           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L13_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 
@@ -60,7 +60,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
 | L14: Logistic Regression     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L14_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() |    
-| L15: Other GLMs              | [HTML]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L15_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
+| L15: Other GLMs              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L15_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L16: Mediation Analysis      | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L16_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 
