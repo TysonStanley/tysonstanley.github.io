@@ -16,8 +16,8 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Tuesday and Thursday 4:30 pm - 5:45 pm <br>
-&nbsp; &nbsp; Health Phys Ed & Recreation 114A <br>
+&nbsp; &nbsp; Monday and Wednesday 12:00 pm - 2:45 pm <br>
+&nbsp; &nbsp; Zoom Link (Posted on Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; By appointment (via Zoom)
 <br>
