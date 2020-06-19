@@ -6,7 +6,7 @@ permalink: /syllabus/educ7610
 
 # Regression Analysis
 #### EDUC 7610
-#### Summer 2020 - under construction!!
+#### Summer 2020
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -19,23 +19,21 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; Tuesday and Thursday 4:30 pm - 5:45 pm <br>
 &nbsp; &nbsp; Health Phys Ed & Recreation 114A <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; Tuesday and Thursday 3:00 am - 4:15 am (or by appointment)
+&nbsp; &nbsp; By appointment (via Zoom)
 <br>
-<!--
-<strong>Teaching Assistant: TBA</strong> <br>
-&nbsp; &nbsp; Email: TBA<br>
-&nbsp; &nbsp; Office Hours: By appointment
--->
+<strong>Assistant Instructor: Carly Fox, MS</strong> <br>
+&nbsp; &nbsp; Email: carlybeth.fox@aggiemail.usu.edu<br>
+&nbsp; &nbsp; Office Hours: By appointment (via Zoom)
 </div>
 
 
 ## Materials:
 
-- Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
-- R and RStudio software (both are free; downloading and installing are discussed in class)
-- [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) for Exams
-- Optional: Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
-- Optional: Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
+- Canvas ([canvas.usu.edu](https://canvas.usu.edu)): Please check Canvas frequently for course updates, assignments, & grades.
+- [R](https://www.r-project.org) and [RStudio](https://rstudio.com) software: Both are free and downloading and installing are discussed in class
+- [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei): for Exams
+- *Optional:* Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
+- *Optional:* Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
 
 <!--
 *Note: it is advantageous to bring a laptop to class, but not required.*
@@ -43,11 +41,11 @@ permalink: /syllabus/educ7610
 
 ## Course Purpose:
 
-Research Design & Analysis II is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. This course will mostly focus on the general linear model, the building block of nearly all analyses discussed in EDUC/PSY 6600.
+*Regression Analysis* is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. This course will mostly focus on the general linear model, the building block of nearly all analyses discussed in EDUC/PSY 6600.
 
 ## Two Prerequisites:
 
-1.	Completion of EDUC/PSY 6570 ‘Introduction to Educational & Psychological Research’ (or approved equivalent)
+1.	Completion of EDUC/PSY 6570 (or approved equivalent)
 2.	Completion of EDUC/PSY 6600
 
 These prerequisites are mandated by the College of Education & Human Services to ensure that each student has the necessary background knowledge to be successful in this course. Both EDUC/PSY 6570 and EDUC/PSY 6600 must be completed with a passing grade prior to enrolling in EDUC/PSY 7610, precluding concurrent enrollment.
@@ -55,7 +53,7 @@ These prerequisites are mandated by the College of Education & Human Services to
 
 ## Course Structure:
 
-This is a hybrid course; we will use both online recorded lectures and in-class activities. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class activities is to elaborate on interesting or difficult material presented in the recorded lectures, conduct skill-building exercises and demonstrations, and to provide a forum for discussion. *For this semester, we will meet via Zoom.*
+This is a hybrid course; we will use both online recorded lectures and in-class activities. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class activities is to elaborate on interesting or difficult material presented in the recorded lectures, conduct skill-building exercises and demonstrations, and to provide a forum for discussion. *For this semester, all in-class activities will be done via Zoom.*
 
 ## Preparation & Attendance:
 
@@ -71,9 +69,11 @@ We will cover all 18 chapters in this course. You will need to provide discussio
 
 **II. Assignments, 25% of grade**
 
-Three equally weighted unit assignments will form the basis for learning the practice of statistics at the level required by this course. The units are outlined on the course schedule. Details regarding what is required for each assignment will be available at [tysonbarrett.com/teaching](https://tysonbarrett.com/teaching/) and will be discussed in class. Assignments require the manipulation or analysis of data and professional communication of results. Each of the assignments will require analysis in R and RStudio and subsequent interpretation of the output. Additional reading of provided articles may be required, too. Instead of focusing on factual understanding (this will be tested on the examinations—see below), the assignments will provide students the opportunity to apply the material and communicate the results in a manner that will aid them in their research. Students may (and are encouraged to) work together; however, each student must turn in his or her own work, not photocopies or identical replicates.
+Three equally weighted unit assignments will form the basis for learning the practice of statistics at the level required by this course. The units are outlined on the course schedule. Details regarding what is required for each assignment will be available at [tysonbarrett.com/teaching/regression](https://tysonbarrett.com/teaching/regression). The in-class activities will directly address all questions in the assignments. That is, the in-class activities will be built around answering each question in each assignment as a class. This means you are required to come and participate in order to get the answers correct.
 
-All assignments are required: no scores will be dropped.  Assignments are due by 11:59pm on the due date (see course schedule). All of the examples in the lectures will be directly applicable to the assignments so it is prudent to bring the current assignment to each lecture. Further, time at the beginning of each lecture will be given for questions regarding the assignments. 
+Assignments require the manipulation and analysis of data, as well as professional communication of results. Each of the assignments will require analysis in R and RStudio and subsequent interpretation of the output. Additional reading of provided articles may be required, too. Instead of focusing on factual understanding (this will be tested on the examinations--see below), the assignments will provide students the opportunity to apply the material and communicate the results in a manner that will aid them in their research. Each student must turn in his or her own work, not photocopies or identical replicates.
+
+All assignments are required: no scores will be dropped.  Assignments are due by 11:59pm on the due date (see course schedule). 
 
 **IV. Final Project, 20% of grade**
 
@@ -84,7 +84,7 @@ The Final Project will consist of using at least one major method from 3 of the 
 
 Four equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in class and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
-Given the flexibility of the exams, no exams will be made up unless the University requires that you be given an exception. In the event of an emergency the student must contact the instructor immediately and BEFORE the examination. Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
+One of the four exams may be dropped (your lowest score, by default). Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
 
 *NOTE: No exam is comprehensive, however all prior material can be used on every exam.*
 
@@ -175,7 +175,7 @@ Reasonable accommodation will be provided for all persons with disabilities in o
 
 Students are required to complete all courses for which they are registered by the end of the semester. In some cases, a student may be unable to complete all of the coursework because of extenuating circumstances, but not due to poor performance or to retain financial aid. In such cases an ‘I’ will be submitted as the grade for the semester. The term 'extenuating' circumstances includes:
 
-- incapacitating illness which prevents a student from attending classes for aminimum period of twoweeks,
+- incapacitating illness which prevents a student from attending classes for aminimum period of two weeks,
 - a death in the immediate family,
 - financial responsibilities requiring a student to alter a work schedule to secure employment,
 - change in work schedule as required by an employer, or
@@ -184,7 +184,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring_special.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_summer.png)
 
 
 
