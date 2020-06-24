@@ -27,7 +27,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | L1: Intro to R and RStudio | [HTML]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 1/L1_EDUC7610_IntroR.html)                 | [Intro to R](https://youtu.be/hjyQ_KOV0Bc) | 
 | L2: Causation              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 1/L2_EDUC7610_causation.pptx)              | [Causation](https://youtu.be/YHNbzAg9va0) | 
 | L3: Simple Regression      | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 1/L3_EDUC7610_simple_reg.pptx)             | [Simple Regression](https://youtu.be/LRmSPXuPKic) | 
-| L4: Multiple Regression    | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 1/L4_EDUC7610_simple_reg.pptx)             | [Multiple Regression](https://youtu.be/cFfGhKsVPHg) | 
+| L4: Multiple Regression    | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 1/L4_EDUC7610_multiple_reg.pptx)           | [Multiple Regression](https://youtu.be/cFfGhKsVPHg) | 
 | L5: Categorical Predictors | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 1/L5_EDUC7610_CategoricalPredictors.pptx)  | [Categorical Predictors](https://youtu.be/YCdKs61ClV4) | 
 
 ### Unit 2
