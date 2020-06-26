@@ -48,8 +48,8 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
-| L10: Effect Sizes            | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L10_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() |    
-| L11: Linear Interactions     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L11_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
+| L10: Effect Sizes            | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L10_EDUC7610_EffectSize.pptx)    | [Effect Size](https://youtu.be/GfhG4dW_dSA) |    
+| L11: Linear Interactions     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L11_EDUC7610_interactions.pptx)  | [Interactions Part 1](https://youtu.be/GuXy1ppBwHE) & [Interactions Part 2](https://youtu.be/X-TDipzads4) | 
 | L12: Nonlinear Relationships | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L12_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 | L13: Intro to GLMs           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L13_EDUC7610_xxxx.pptx)  | [Recorded Lecture]() | 
 
