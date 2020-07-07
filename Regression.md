@@ -51,7 +51,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | L10: Effect Sizes            | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L10_EDUC7610_EffectSize.pptx)    | [Effect Size](https://youtu.be/GfhG4dW_dSA) |    
 | L11: Linear Interactions     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L11_EDUC7610_interactions.pptx)  | [Interactions Part 1](https://youtu.be/GuXy1ppBwHE) & [Interactions Part 2](https://youtu.be/X-TDipzads4) | 
 | L12: Nonlinear Relationships | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L12_EDUC7610_nonlinear.pptx)     | [Nonlinear](https://youtu.be/99kmluKmk5k) | 
-| L13: Intro to GLMs           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L13_EDUC7610_glm.pptx)           | [Recorded Lecture]() | 
+| L13: Intro to GLMs           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 3/L13_EDUC7610_glm.pptx)           | [Intro to GLMs](https://youtu.be/X-XVa7Z-uNo) | 
 
 ### Unit 4
 
@@ -59,7 +59,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
-| L14: Logistic Regression     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L14_EDUC7610_logistic.pptx)  | [Recorded Lecture]() |    
+| L14: Logistic Regression     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L14_EDUC7610_logistic.pptx)  | [Logistic Regression](https://youtu.be/OgUlrSIVCbk) |    
 | L15: Other GLMs              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L15_EDUC7610_otherglm.pptx)  | [Recorded Lecture]() | 
 | L16: Mediation Analysis      | [HTML](https://tysonbarrett.com/Workshops/MediationAnalysis.html#1)                      | [Mediation Analysis](https://youtu.be/WGPPqJaa1Ho) | 
 | L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_misc.pptx)  | [Recorded Lecture]() | 
