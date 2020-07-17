@@ -425,6 +425,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 
+\newpage
 
 \vspace{10pt}
 \section{CITATION COUNT HISTORY}
