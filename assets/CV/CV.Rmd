@@ -145,7 +145,10 @@ year <- lubridate::year(today)
 
 \indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
-\emph{Video- and App-Based Naturalistic Language Instruction (VALI) for Spanish-Speaking Caregivers to Support Bilingual Language Development in Children With or At Risk for Language Delays} \hfill July 1, 2020 -	June 30, 20234
+\vspace{8pt}
+
+\emph{Video- and App-Based Naturalistic Language Instruction} \hfill July 1, 2020 -	June 30, 2024 \newline
+\emph{(VALI) for Spanish-Speaking Caregivers to Support \newline Bilingual Language Development in Children \newline With or At Risk for Language Delays} 
 
 \indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T.S. (Contractor)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
 
