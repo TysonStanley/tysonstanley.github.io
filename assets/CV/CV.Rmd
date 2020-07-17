@@ -145,6 +145,12 @@ year <- lubridate::year(today)
 
 \indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
+\emph{Video- and App-Based Naturalistic Language Instruction (VALI) for Spanish-Speaking Caregivers to Support Bilingual Language Development in Children With or At Risk for Language Delays} \hfill July 1, 2020 -	June 30, 20234
+
+\indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T.S. (Contractor)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
+
+\indent \hspace{.25in} \emph{The purpose of the research plan is to adapt an existing app, Háblame Bebé, that provides information to Spanish-speaking families about the importance of frequent and responsive verbal interactions with children in the home language but does not provide information on how to embed NLIS within everyday activities and routines to support DLLs with language delay.}
+
 
 \vspace{2pt}
 \setlength{\parindent}{0in}
