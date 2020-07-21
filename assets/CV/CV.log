@@ -1,24 +1,24 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.23)  17 JUL 2020 12:48
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.7.19)  21 JUL 2020 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CV.tex
 (./CV.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-18> (/Users/tysonbarrett/Library/TinyTeX/texmf-di
+L3 programming layer <2020-07-17> (/Users/tysonbarrett/Library/TinyTeX/texmf-di
 st/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count163
-\c@section=\count164
-\c@subsection=\count165
-\c@subsubsection=\count166
-\c@paragraph=\count167
-\c@subparagraph=\count168
-\c@figure=\count169
-\c@table=\count170
+\c@part=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
@@ -85,13 +85,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count171
+\inf@bad=\count172
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count172
-\leftroot@=\count173
+\uproot@=\count173
+\leftroot@=\count174
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count174
-\DOTSCASE@=\count175
+\classnum@=\count175
+\DOTSCASE@=\count176
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -100,15 +100,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen137
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count176
-\c@MaxMatrixCols=\count177
+\macc@depth=\count177
+\c@MaxMatrixCols=\count178
 \dotsspace@=\muskip16
-\c@parentequation=\count178
-\dspbrk@lvl=\count179
+\c@parentequation=\count179
+\dspbrk@lvl=\count180
 \tag@help=\toks17
-\row@=\count180
-\column@=\count181
-\maxfields@=\count182
+\row@=\count181
+\column@=\count182
+\maxfields@=\count183
 \andhelp@=\toks18
 \eqnshift@=\dimen138
 \alignsep@=\dimen139
@@ -133,15 +133,15 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-
 math.sty (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/exp
 l3.sty
-Package: expl3 2020-06-18 L3 programming layer (loader) 
+Package: expl3 2020-07-17 L3 programming layer (loader) 
 
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-x
 dvipdfmx.def
-File: l3backend-xdvipdfmx.def 2020-06-18 L3 backend support: xdvipdfmx
-\g__graphics_track_int=\count183
+File: l3backend-xdvipdfmx.def 2020-06-29 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count184
 \l__pdf_internal_box=\box47
-\g__pdf_backend_object_int=\count184
-\g__pdf_backend_annotation_int=\count185
+\g__pdf_backend_object_int=\count185
+\g__pdf_backend_annotation_int=\count186
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -156,10 +156,10 @@ Package: xparse 2020-05-15 L3 Experimental document command parser
 
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xpa
 rse-generic.tex
-\l__xparse_current_arg_int=\count186
-\g__xparse_grabber_int=\count187
-\l__xparse_m_args_int=\count188
-\l__xparse_v_nesting_int=\count189
+\l__xparse_current_arg_int=\count187
+\g__xparse_grabber_int=\count188
+\l__xparse_m_args_int=\count189
+\l__xparse_v_nesting_int=\count190
 ))
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l
 3keys2e.sty
@@ -172,17 +172,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 ex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count190
-\l__fontspec_language_int=\count191
-\l__fontspec_strnum_int=\count192
-\l__fontspec_tmp_int=\count193
-\l__fontspec_tmpa_int=\count194
-\l__fontspec_tmpb_int=\count195
-\l__fontspec_tmpc_int=\count196
-\l__fontspec_em_int=\count197
-\l__fontspec_emdef_int=\count198
-\l__fontspec_strong_int=\count199
-\l__fontspec_strongdef_int=\count266
+\l__fontspec_script_int=\count191
+\l__fontspec_language_int=\count192
+\l__fontspec_strnum_int=\count193
+\l__fontspec_tmp_int=\count194
+\l__fontspec_tmpa_int=\count195
+\l__fontspec_tmpb_int=\count196
+\l__fontspec_tmpc_int=\count197
+\l__fontspec_em_int=\count198
+\l__fontspec_emdef_int=\count199
+\l__fontspec_strong_int=\count266
+\l__fontspec_strongdef_int=\count267
 \l__fontspec_tmpa_dim=\dimen144
 \l__fontspec_tmpb_dim=\dimen145
 \l__fontspec_tmpc_dim=\dimen146
@@ -196,9 +196,9 @@ Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count267
-\g__um_fonts_used_int=\count268
-\l__um_primecount_int=\count269
+\g__um_fam_int=\count268
+\g__um_fonts_used_int=\count269
+\l__um_primecount_int=\count270
 \g__um_primekern_muskip=\muskip17
 
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-
@@ -217,11 +217,11 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
 \MT@toks=\toks22
-\MT@count=\count270
+\MT@count=\count271
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen147
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count271
+\MT@listname@count=\count272
 
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype-x
 etex.def
@@ -249,8 +249,8 @@ Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count272
+Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count273
 )) (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -276,9 +276,9 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-(/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/pdftexcmds/pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO
+(/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcm
+ds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr
@@ -306,8 +306,8 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen148
-\Hy@linkcounter=\count273
-\Hy@pagecounter=\count274
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 )
@@ -318,7 +318,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count275
+\Hy@SavedSpaceFactor=\count276
 Package hyperref Info: Option `unicode' set `true' on input line 4338.
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
@@ -330,7 +330,7 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count276
+\c@Hy@tempcnt=\count277
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -345,7 +345,7 @@ lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count277
+\Fld@menulength=\count278
 \Field@Width=\dimen150
 \Fld@charsize=\dimen151
 Package hyperref Info: Hyper figures OFF on input line 6347.
@@ -362,9 +362,9 @@ LaTeX Info: Redefining \pageref on input line 6421.
 ty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count278
-\c@Item=\count279
-\c@Hfootnote=\count280
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -376,10 +376,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box48
-\c@Hy@AnnotLevel=\count281
-\HyField@AnnotCount=\count282
-\Fld@listcount=\count283
-\c@bookmark@seq@number=\count284
+\c@Hy@AnnotLevel=\count282
+\HyField@AnnotCount=\count283
+\Fld@listcount=\count284
+\c@bookmark@seq@number=\count285
 
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunf
 ilecheck.sty
@@ -403,9 +403,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count285
-\Gm@cntv=\count286
-\c@Gm@tempcnt=\count287
+\Gm@cnth=\count286
+\Gm@cntv=\count287
+\c@Gm@tempcnt=\count288
 \Gm@bindingoffset=\dimen152
 \Gm@wd@mp=\dimen153
 \Gm@odd@mp=\dimen154
@@ -469,8 +469,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip76
 \cftfigindent=\skip77
 \cftfignumwidth=\skip78
-\c@lofdepth=\count288
-\c@lotdepth=\count289
+\c@lofdepth=\count289
+\c@lotdepth=\count290
 \cftbeforelottitleskip=\skip79
 \cftafterlottitleskip=\skip80
 \cftbeforetabskip=\skip81
@@ -793,7 +793,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count290
+\c@section@level=\count291
 )
 LaTeX Info: Redefining \ref on input line 96.
 LaTeX Info: Redefining \pageref on input line 96.
@@ -879,12 +879,7 @@ LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 
 [1
 
-]
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-[2]
+] [2]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
@@ -897,10 +892,10 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
+File: osf_materials.png Graphic file (type bmp)
+<osf_materials.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
 File: osf_data.png Graphic file (type bmp)
@@ -908,6 +903,10 @@ File: osf_data.png Graphic file (type bmp)
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
 [3]
+File: osf_data.png Graphic file (type bmp)
+<osf_data.png>
+File: osf_materials.png Graphic file (type bmp)
+<osf_materials.png>
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
@@ -949,7 +948,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 666--670
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 671--675
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -969,15 +968,15 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [7] [8]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 966.
+(hyperref)                than one, level fixed on input line 971.
 
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1102.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1107.
 [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1102.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1107.
 (./CV.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1102.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1102.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1107.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: C3C3EF555859E68D8035744AE9191380;4200.
@@ -986,11 +985,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18510 strings out of 481244
- 331981 string characters out of 5922350
- 766105 words of memory out of 5000000
- 35776 multiletter control sequences out of 15000+600000
- 535939 words of font info for 64 fonts, out of 8000000 for 9000
+ 18510 strings out of 481679
+ 331984 string characters out of 5931223
+ 769099 words of memory out of 5000000
+ 35341 multiletter control sequences out of 15000+600000
+ 538689 words of font info for 69 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,9n,118p,801b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 

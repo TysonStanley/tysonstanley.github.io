@@ -199,6 +199,8 @@ year <- lubridate::year(today)
 
 \normalsize
 
+*Darcy-Mahoney, A., White, R.D.,Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (in press). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology}.
+
 *Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (in press). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy}.
 
 Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (in press). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
