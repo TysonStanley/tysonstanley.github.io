@@ -60,7 +60,7 @@ A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/
 | Lecture                      |  Slides and Materials   |  Recorded Lecture      |
 |:-----------------------------|:-----------------------:|:-----------------------|
 | L14: Logistic Regression     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L14_EDUC7610_logistic.pptx)  | [Logistic Regression](https://youtu.be/OgUlrSIVCbk) |    
-| L15: Other GLMs              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L15_EDUC7610_otherglm.pptx)  | [Recorded Lecture]() | 
+| L15: Other GLMs              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L15_EDUC7610_otherglm.pptx)  | [Other GLMs](https://youtu.be/1FUgGYPXmFE) | 
 | L16: Mediation Analysis      | [HTML](https://tysonbarrett.com/Workshops/MediationAnalysis.html#1)                      | [Mediation Analysis](https://youtu.be/WGPPqJaa1Ho) | 
 | L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_misc.pptx)  | [Recorded Lecture]() | 
 
