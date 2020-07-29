@@ -9,7 +9,16 @@ permalink: /teaching/regression
 
 This class is all about applying regression analysis and linear models, including generalized linear models, mediation and moderation, with a little bit of machine learning techniques thrown in. The book we'll use throughout the class, and that drives the structure of the lecture slides, is [Regression Analysis and Linear Models](https://www.guilford.com/books/Regression-Analysis-and-Linear-Models/Darlington-Hayes/9781462521135/reviews) by Richard Darlington and Andrew Hayes. This course uses [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) for all data analyses. 
 
-A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/Data/GSS_reduced_example.csv) data set, a [data set used in Quas et al. about high risk youth]({{ site.slidesurl }}/EDUC-7610/HighRisk_Data/HighRisk.csv) data set, and a [data set regarding poverty, violence, and teen birth rates per state]({{ site.slidesurl }}/EDUC-7610/Poverty_Data/poverty.xlsx) will be used in the examples. We will also pull from [FiveThirtyEight's open data on GitHub](https://github.com/fivethirtyeight/data) occassionally throughout the class (many of these data sets can be used for your class project as well if they have both continuous and categorical predictors). Finally, [a small (ficticious) data set about *The Office (US)* and *Parks and Recreation* television shows]({{ base.url }}/assets/Data/OfficeParks.csv) is also available.
+We will use several different data sets during the course:
+
+- A subset of the [General Social Survey]({{ site.slidesurl }}/EDUC-7610/GSS_Data/Data/GSS_reduced_example.csv)
+- A [data set used in Quas et al. about high risk youth]({{ site.slidesurl }}/EDUC-7610/HighRisk_Data/HighRisk.csv) data set
+- A [data set regarding poverty, violence, and teen birth rates per state]({{ site.slidesurl }}/EDUC-7610/Poverty_Data/poverty.xlsx)
+- A [small (ficticious) data set about *The Office (US)* and *Parks and Recreation* television shows]({{ base.url }}/assets/Data/OfficeParks.csv) 
+- A [data set about the passengers of the titanic]({{ base.url }}/assets/Data/Titanic.csv)
+- A [fictious data set about the "Married At First Sight" TV show]({{ base.url }}/assets/Data/mafs.csv)
+
+We may also pull from [FiveThirtyEight's open data on GitHub](https://github.com/fivethirtyeight/data) occassionally throughout the class (many of these data sets can be used for your class project as well if they have both continuous and categorical predictors). 
 
 
 ## [Syllabus]({{ site.baseurl }}/syllabus/educ7610)
