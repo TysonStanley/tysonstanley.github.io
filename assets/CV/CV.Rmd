@@ -38,7 +38,6 @@ year <- lubridate::year(today)
     \textsc{Address:}     & 2800 Old Main Hill, Logan, UT 84322 \\
     \textsc{Email:}       & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
     \textsc{Website:}     & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
-    \textsc{Phone:}       & 435-797-0120 \\
     \textsc{ORCID:}       & \href{https://orcid.org/0000-0002-2137-1391}{0000-0002-2137-1391} \\
     \textsc{OSF:}         & \href{osf.io/gkjbx}{osf.io/gkjbx} \\
     \textsc{Citations:}   & `r profile$total_cites` \\
@@ -71,7 +70,7 @@ year <- lubridate::year(today)
 <!-- Research Areas -->
 \vspace{1pt}
 \section{RESEARCH AREAS}
-<!--\vspace{-5pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -84,7 +83,7 @@ year <- lubridate::year(today)
 <!-- Research Experience -->
 \vspace{1pt}
 \section{RESEARCH APPOINTMENTS}
-<!--\vspace{-5pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -104,7 +103,7 @@ year <- lubridate::year(today)
 <!-- Affiliations -->
 \vspace{1pt}
 \section{PROFESSIONAL AFFILIATIONS}
-<!--\vspace{-5pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -120,7 +119,7 @@ year <- lubridate::year(today)
 \vspace{10pt}
 \noindent
 \section{EXTERNAL FUNDING}
-<!--\vspace{-5pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{-2pt}
 
@@ -130,6 +129,14 @@ year <- lubridate::year(today)
 \noindent
 
 \normalsize
+
+\emph{Opioid-Impacted Family Support Program} \hfill September 1, 2020 - August 30, 2024
+
+\indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T.S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
+
+\indent \hspace{.25in} \emph{This project enhances Utah's peer workforce by addressing the clinical priorities of: 1) incorporating family-focused curriculum enhancements and 2) emphasizing and funding hands-on learning in mentored inter-professional field placements. It will increase training by more than 50\%, with basic and advanced (family-focused) certification and work experience. The evaluation of the program will be ongoing throughout the program's implementation.}
+
+\vspace{8pt}
 
 \emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
 
@@ -150,7 +157,7 @@ year <- lubridate::year(today)
 \emph{Video- and App-Based Naturalistic Language Instruction} \hfill July 1, 2020 -	June 30, 2024 \newline
 \emph{(VALI) for Spanish-Speaking Caregivers to Support \newline Bilingual Language Development in Children \newline With or At Risk for Language Delays} 
 
-\indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T.S. (Contractor)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
+\indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T.S. (Consultant)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
 
 \indent \hspace{.25in} \emph{The purpose of the research plan is to adapt an existing app, Háblame Bebé, that provides information to Spanish-speaking families about the importance of frequent and responsive verbal interactions with children in the home language but does not provide information on how to embed NLIS within everyday activities and routines to support DLLs with language delay.}
 
@@ -206,11 +213,11 @@ year <- lubridate::year(today)
 
 *Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (in press). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy}.
 
-Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (in press). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}.
-
 Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (in press). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research}.
 
 *Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (in press). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools}. \img{osf_data.png}{https://osf.io/796d4/}\img{osf_materials.png}{https://osf.io/796d4/} 
+
+Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (2020). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2020_JSLHR-20-00104.
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (2020, online). Classroom Listening Experiences of Students who are Deaf or Hard of Hearing using the Listening Inventory for Education-Revised (LIFE-R). \emph{Language, Speech, and Hearing Services in Schools}.
 
@@ -294,13 +301,13 @@ Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech R
 Knollhoff, S. & \textbf{Barrett, T.S.} (under review). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
 -->
 
-Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Addictive Behaviors}.
+Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Journal of Adolescent Health}.
 
 Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Perceived parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Substance Use \& Misuse}.
 
 Buntrock, M., Gurries, M. \textbf{Barrett, T.S.}, Barker, B. (under review). The effect of talker familiarity on sentence recognition accuracy in complex noise. \emph{Language and Speech}. \img{osf_data.png}{https://osf.io/d4zar/}\img{osf_materials.png}{https://osf.io/d4zar/}
 
-Vázquez, A.L., Chou, T., Navarro Flores, C.M., \textbf{Barrett, T.S.}, Villodas, M.T., & Domenech Rodríguez, M.M. (under review). Understanding caregiver perceived need for and utilization of adolescent counseling services through machine learning. \emph{Child Maltreatment}.
+Vázquez, A.L., Chou, T., Navarro Flores, C.M., \textbf{Barrett, T.S.}, Villodas, M.T., & Domenech Rodríguez, M.M. (under review). Understanding caregiver perceived need for and utilization of adolescent counseling services through machine learning. \emph{PLOS ONE}.
 
 
 <!--
@@ -430,7 +437,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
 
-\newpage
 
 \vspace{10pt}
 \section{CITATION COUNT HISTORY}
