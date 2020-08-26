@@ -30,9 +30,10 @@ permalink: /syllabus/educ6600
 - Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
 - R and RStudio software (both are free; downloading and installing are discussed in class)
 - [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) for Exams
-- Optional: Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
 
+<!--
 *Note: it is advantageous to bring a laptop to class, but not required.*
+-->
 
 ## Course Purpose:
 
