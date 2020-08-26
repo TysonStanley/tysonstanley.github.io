@@ -36,14 +36,13 @@ permalink: /syllabus/educ6600
 
 ## Course Purpose:
 
-Research Design & Analysis I is designed to provide the student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. 
+Statistical Foundations is designed to provide each student with a practical, applied approach to the application of fundamental behavioral and educational research design and statistical principles. Students will learn how to differentiate and appropriately select the best statistical methods for use in various research designs and analytical problems. 
 
 ## Prerequisite or Co-requisite:
 
-1.	Completion or concurrent enrollment of EDUC/PSY 6570 ‘Introduction to Educational & Psychological Research’ (or approved equivalent)
+1. Completion or concurrent enrollment of EDUC/PSY 6570 ‘Introduction to Educational & Psychological Research’ (or approved equivalent)
 
 This prerequisite/co-requisite is mandated by the College of Education & Human Services to ensure that each student has the necessary background knowledge to be successful in this course. To sign up for both concurrently, send an email to Tressa Haderlie (<tressa.haderlie@usu.edu>) with the following information: 1) Student name, 2) A#, 3) Course to take at the same time as EDUC 6570 (eg, EDUC 6600, PSY 6600), 4) Semester/term wishing to take EDUC 6570 and 6600 concurrently (eg, Summer, Fall, Spring).
-
 
 
 ## Course Structure:
