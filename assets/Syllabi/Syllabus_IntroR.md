@@ -4,8 +4,7 @@ title: Syllabus - Introductory R
 permalink: /syllabus/introR
 ---
 
-# R for the Health, Behavioral, Educational, and Social Scientists 1
-#### CEPS 5700—LT1 & EDUC 6560-LT2
+# Introduction to R for the Health, Behavioral, Educational, and Social Scientists 1
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -15,8 +14,8 @@ permalink: /syllabus/introR
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Thursday 12pm-1pm <br>
-&nbsp; &nbsp; SCCE 310 <br>
+&nbsp; &nbsp; Tuesdays 1:30pm-2:20pm <br>
+&nbsp; &nbsp; EDUC 272 <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; By appointment
 
@@ -40,7 +39,7 @@ The class will be hands-on, with most of class going through the R code together
 3. More Advanced Data Manipulation and Plotting
 
 **Grading:** <br>
-This is a pass/fail course. A student will be given a passing grade if they attend 5 of the 7 class times and turn in a final project. If passed, it will appear on your transcript as a completed continuing education workshop.
+This is a pass/fail course. A student will be given a passing grade if they attend 5 of the 7 class times and turn in a final project. The grade will appear on your transcript as a continuing education workshop.
 
 **Assignments:** <br>
 There is only one graded assignment---a final project. This project will be developed throughout the class. It requires a written report with aspects from each main topics of the class (e.g., working with data, plotting, modeling). This will be discussed more throughout the class.
@@ -63,9 +62,9 @@ Professional courtesy and sensitivity are especially important with respect to i
 
 **Important Dates:** <br>
 
-- Jan 9 – First Day of Classes
--	Feb 20 – Final Day of Class
--	Feb 27 – Final Project Due
+- Sep 1 – First Day of Classes
+-	Oct 13 – Final Day of Class
+-	Oct 20 – Final Project Due
 
 **Tentative Schedule:**
 
