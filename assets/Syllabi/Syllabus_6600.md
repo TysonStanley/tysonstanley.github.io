@@ -16,13 +16,9 @@ permalink: /syllabus/educ6600
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
 &nbsp; &nbsp; 3:30 pm - 4:45 pm Mondays and Wednesdays <br>
-&nbsp; &nbsp; HPER 110 <br>
+&nbsp; &nbsp; Zoom (Link in Canvas) <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; 2:00 pm - 3:15 pm Mondays and Wednesdays
-<br>
-<strong>Teaching Assistant: TBA</strong> <br>
-&nbsp; &nbsp; Email: TBA<br>
-&nbsp; &nbsp; Office Hours: By appointment
+&nbsp; &nbsp; 2:30 pm - 3:15 pm Mondays and Wednesdays
 
 </div>
 
@@ -30,7 +26,7 @@ permalink: /syllabus/educ6600
 ## Materials:
 
 - Cohen, B. H. (2008). *Explaining Psychological Statistics (4th Ed.).* New York: Wiley. (electronic copy accessible through the USU library for free)
-- eBook: Cohen Companion in R (free online at www.sarahschwartzstats.com )
+- eBook: Cohen Companion in R (free online at www.sarahschwartzstats.com)
 - Canvas ([canvas.usu.edu](https://canvas.usu.edu)) Please check Canvas frequently for course updates, assignments, & grades.
 - R and RStudio software (both are free; downloading and installing are discussed in class)
 - [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) for Exams
@@ -52,36 +48,31 @@ This prerequisite/co-requisite is mandated by the College of Education & Human S
 
 ## Course Structure:
 
-This is a lecture and applied skills course. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class lectures is to elaborate on interesting or difficult material presented in the text, conduct skill-building exercises and demonstrations, and to provide a forum for discussion.
+This course is built up of recorded lectures and in-class discussion. This structure allows us to discuss all the topics we need to and it gives you opportunities to practice what you learn. Students will be expected to demonstrate their learning via classroom participation, assignments, and examinations. The purpose of class lectures is to elaborate on interesting or difficult material presented in the text, conduct skill-building exercises and demonstrations, and to provide a forum for discussion.
 
 ## Preparation & Attendance:
 
-The nature of this course requires regular class attendance and participation. The student is therefore expected to read assigned chapters and any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 15-week period, requiring an average of approximately 9 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class lectures as some material covered in class will not be covered in the text. All information covered in the text and lectures can be used for examination questions. 
+The nature of this course requires regular, consistent interaction with course material. The student is, therefore, expected to watch the recorded lecture and read assigned chapters BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 15-week period, requiring an average of approximately 9 hours of time outside of class each week devoted to watching, reading, and homework for students who are adequately prepared for this course. Students should not miss class lectures as some material covered in class will not be covered in the text. All information covered in the text and lectures can be used for examination questions. 
 
-## Four Components of Your Grade:
+## Three Components of Your Grade:
 
-**I.  Discussions, 25% of grade**
+**I. Discussions, 30% of grade**
 
-By design, lectures are to enhance your understanding and experience with statistical concepts, rather than present them the first time (this is not an introductory course).  It is of utmost importance that students read the material PRIOR to the designated lecture, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering higher level questions and preparing students for assignments, but more importantly for conducting your own research. To facilitate this, a chapter discussion point of the assigned readings is due on the day the material is covered in class before the lecture time begins. This discussion point is to be posted on canvas and should include a summary of ideas from the chapter, questions that you have regarding the material, or ways in which you can use the material in your research. Further, each student must respond to at least one other student’s point.
+By design, you will have multiple avenues to obtain information regarding the topics we cover. We use recorded lectures, chapters in the book, and other occassional resources to provide you with the information you need to understand the concepts and applications. It is of utmost importance that students read and watch the material PRIOR to the designated in-class discussion, as well as read through the associated homework assignment. This ensures class time may be more valuably spent on answering higher level questions and using class time to discuss homework assignments. 
 
-We will cover chapters 1-16 (although not always in order) and 19-20 in this course. You will need to provide discussion points for all of these chapters except for chapter 1. Each student must compose his or her own. Discussion points must NOT be a copy of the lecture notes. Discussion points will be turned in electronically by 4:00 pm on the due date (see course schedule) via CANVAS, but preferably much earlier so as to allow fellow students to comment on or answer your discussion point.
+To facilitate this, *nineteen* chapter discussion points are due on the day the material is covered in class before the in-class discussion begins, but preferably you will respond earlier as to allow fellow students to comment on or answer your discussion point. This discussion point is to be posted on Canvas and helps guide my preparation for our in-class discussion. As such, this is your opportunity to ask questions, answer your colleagues questions, and to voice your opinion on things that need further discussion. We will cover chapters 1-16 and 19-20 in this course. You will need to provide discussion points for all of these chapters except for chapter 1. Each student must compose his or her own. Discussion points should NOT be a copy of the lecture notes. *The lowest TWO scores will be dropped.*
 
-**II. Assignments, 25% of grade**
+**II. Assignments, 35% of grade**
 
-Three equally weighted unit assignments will form the basis for learning the practice of statistics at the level required by this course. The units are outlined on the course schedule. Details regarding what is required for each assignment will be available at [tysonbarrett.com/teaching](https://tysonbarrett.com/teaching/) and will be discussed in class. Assignments require the manipulation or analysis of data and professional communication of results. Each of the assignments will require analysis in R and RStudio and subsequent interpretation of the output. Additional reading of provided articles may be required, too. Instead of focusing on factual understanding (this will be tested on the examinations—see below), the assignments will provide students the opportunity to apply the material and communicate the results in a manner that will aid them in their research. Students may (and are encouraged to) work together; however, each student must turn in his or her own work, not photocopies or identical replicates.
+*Nineteen* equally weighted assignments form the basis for learning the practice of statistics at the level required by this course. These require the manipulation or analysis of data and communication of results (complete sentences, APA format). Most, if not all, will also require analysis using software. Additional reading of provided articles will also be required. These will be reviewed together in class as time allows, though each student will submit their own work within Canvas. *Your lowest TWO scores will be dropped.*
 
-All assignments are required: no scores will be dropped.  Assignments are due by 11:59pm on the due date (see course schedule). All of the examples in the lectures will be directly applicable to the assignments so it is prudent to bring the current assignment to each lecture. Further, time at the beginning of each lecture will be given for questions regarding the assignments. 
+Students may work together, however each student must turn in his or her own work, not duplicates or identical replicates. Assignments are due by 11:59pm on the due date. Details on what is required to be turned in will be posted on canvas. Late assignments turned in within 24 hours of the due date will receive half the score earned. No points will be awarded thereafter.
 
-**IV. Final Project, 20% of grade**
+**III. Examinations, 35% of grade**
 
-The Final Project will consist of using at least one major method from 3 of the 4 units in a short article format. There is some flexibility to what the Final Project will look like and I recommend that you use it to help with theses, dissertations, or research articles. More information on this assignment is found at [tysonbarrett.com/teaching](https://tysonbarrett.com/teaching/).
+*Six* equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in the recorded lectures, in the in class discussions, and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
 
-
-**IV. Examinations, 30% of grade**
-
-Four equally weighted examinations will be given during this course (see schedule). In order to avoid you needing to take the exam at the Testing Center, they will be given via Canvas using a tool known as Proctorio. Proctorio will record you taking your exam and will highlight any instances it believes you could be cheating. The benefit to using this approach is that you can take the exam any day during the week (Monday to Friday), whenever you feel is best. To use Proctorio, you will need to install the [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei) (only need to install once) and then take each exam in the [Chrome browser](https://www.google.com/chrome/). Examinations will generally require approximately 30-45 minutes. Examinations will cover material discussed in class and in the readings. All formulas needed will be provided on examinations (rarely will be needed, if at all). Calculators may be used (but unlikely to be needed), but not any electronic device that may transmit/receive, such as cell phones, iPods, tables, etc.
-
-Your lowest score on the exams will be dropped. Because of this, no exams will be made up unless the University requires that you be given an exception. In the event of an emergency the student must contact the instructor immediately and BEFORE the examination. Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
+In the event of an emergency the student must contact the instructor immediately and BEFORE the examination. Examinations will focus on the factual understanding of the methods and approaches discussed in class through multiple-choice questions and some short essay questions. Students may use the printed discussion points, homework, and other notes during examinations.
 
 *NOTE: No exam is comprehensive, however all prior material can be used on every exam.*
 
@@ -127,11 +118,11 @@ Notably, there are many sources for learning more about R online, including seve
 
 The instructor reserves the right to make changes to this syllabus at any time. Changes will be announced in class and posted on Canvas.
 
-**Children in class:**
+**Children in "class" (that is, over Zoom):**
 
 1. All breastfeeding children are welcome as often as necessary.
 2. All non-nursing babies and children are welcome whenever alternate arrangements cannot be made. As a parent of three young children, I understand that babysitters fall through, partners have conflicting schedules, children get sick, and other issues arise.
-3. In cases where children come to class, I invite parents/caregivers to sit close to the door so as to more easily excuse yourself to attend to your child's needs. As such, it is great if those seats are left available for any parents.
+3. In cases where children "come" to class, I invite parents/caregivers to keep the distractions to a minimum, and if necessary, turn off the video feed for moments that are hectic.
 4. All students are expected to join with me in creating a welcoming environment that is respectful of your classmates' situations.
 
 **Inclusivity:**

@@ -70,7 +70,7 @@ year <- lubridate::year(today)
 <!-- Research Areas -->
 \vspace{1pt}
 \section{RESEARCH AREAS}
-\vspace{-5pt}
+<!--\vspace{-5pt}-->
 \hrule
 \vspace{2pt}
 
@@ -83,7 +83,7 @@ year <- lubridate::year(today)
 <!-- Research Experience -->
 \vspace{1pt}
 \section{RESEARCH APPOINTMENTS}
-\vspace{-5pt}
+<!--\vspace{-5pt}-->
 \hrule
 \vspace{2pt}
 
@@ -103,7 +103,7 @@ year <- lubridate::year(today)
 <!-- Affiliations -->
 \vspace{1pt}
 \section{PROFESSIONAL AFFILIATIONS}
-\vspace{-5pt}
+<!--\vspace{-5pt}-->
 \hrule
 \vspace{2pt}
 
@@ -119,7 +119,7 @@ year <- lubridate::year(today)
 \vspace{10pt}
 \noindent
 \section{EXTERNAL FUNDING}
-\vspace{-5pt}
+<!--\vspace{-5pt}-->
 \hrule
 \vspace{-2pt}
 
