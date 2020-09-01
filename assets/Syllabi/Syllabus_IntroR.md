@@ -62,9 +62,9 @@ Professional courtesy and sensitivity are especially important with respect to i
 
 **Important Dates:** <br>
 
-- Sep 1 – First Day of Classes
--	Oct 13 – Final Day of Class
--	Oct 20 – Final Project Due
+- Sep 8 – First Day of Classes
+-	Oct 20 – Final Day of Class
+-	Oct 27 – Final Project Due
 
 **Tentative Schedule:**
 
