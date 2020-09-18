@@ -206,6 +206,8 @@ year <- lubridate::year(today)
 
 \normalsize
 
+*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R., Levin, M.E., \& Twohig, M.P. (in press). A preliminary investigation of the effect of acceptance and commitment therapy on neural activation in clinical perfectionism. \emph{Journal of Contextual Behavioral Science}.  
+
 *Darcy-Mahoney, A., White, R.D.,Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (in press). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology}.
 
 \vspace{-4pt}
@@ -293,15 +295,13 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 
 Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Journal of Youth and Adolescence}.
 
-*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R.B., Levin, M.E., \& Twohig, M.P. (under review). Effect of Acceptance and Commitment Therapy on Neurological Functioning in Clinical Perfectionism. \emph{Behavior Therapy}.
-
 \textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
 
 <!--
 Knollhoff, S. & \textbf{Barrett, T.S.} (under review). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
 -->
 
-Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Journal of Adolescent Health}.
+Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Psi Chi Journal of Psychological Research}.
 
 Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Perceived parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Substance Use \& Misuse}.
 
@@ -448,16 +448,15 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 month <- months(lubridate::today())
 year <- lubridate::year(lubridate::today())
 
-ggplot(citations, aes(year, cites, color = year)) +
-  geom_line() +
-  geom_point(size = 2) +
+ggplot(citations, aes(year, cites, fill = year)) +
+  geom_col(color = "black") +
   geom_text(aes(label = cites),
-            nudge_y = 6) +
+            nudge_y = 10) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
        caption = paste("Note: Data for citations in", year, "until", month)) +
   theme_classic() +
-  scale_color_viridis_c(direction = -1,
+  scale_fill_viridis_c(direction = -1,
                         begin = .1, 
                         end = .9) +
   theme(legend.position = "none",
