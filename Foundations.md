@@ -24,7 +24,7 @@ This course is an introduction to statistics at a graduate level (generally PhD 
 - [Chapter 4 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.pdf) or [Chapter 4 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u01_Ch4_Zscores.html)
 - [Chapter 5 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch5_HypoTest.pdf) or [Chapter 5 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch5_HypoTest.html)
 - [Chapter 6 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch6_CI_tDist.pdf) or [Chapter 6 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch6_CI_tDist.html)
-- [Chapter 7 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pdf) or [Chapter 7 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pptx)
+- [Chapter 7 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch7_ttest.pptx)
 - [Chapter 8 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pdf) or [Chapter 8 (PowerPoint)](http://tysonbarrett.com/EDUC-6600/Slides/u02_Ch8_power.pptx)
 - [Chapter 9 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch9_Cor.pdf) or [Chapter 9 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch9_Cor.html)
 - [Chapter 10 (PDF)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.pdf) or [Chapter 10 (HTML)](http://tysonbarrett.com/EDUC-6600/Slides/u03_Ch10_LinReg.html)
