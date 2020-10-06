@@ -111,14 +111,11 @@ year <- lubridate::year(today)
 
 \indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Contributor \hfill 2019-Present
 
-<!--
-\indent \hspace*{.1in} \small\textbf{\href{https://f1000.com/prime/thefaculty/member/1070302}{F1000Prime Faculty Member}} in Quantitative Psychology  \hfill 2019-Present
--->
 
 <!-- Grants -->
 \vspace{10pt}
 \noindent
-\section{EXTERNAL FUNDING}
+\section{EXTERNAL FUNDING \normalsize (Ongoing)}
 <!--\vspace{-5pt}-->
 \hrule
 \vspace{-2pt}
@@ -130,27 +127,11 @@ year <- lubridate::year(today)
 
 \normalsize
 
-\emph{Opioid-Impacted Family Support Program} \hfill September 1, 2020 - August 30, 2024
+\emph{Necessecary Education and eXperiential Training} \hfill September 1, 2020 - August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
 
 \indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T.S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
 
 \indent \hspace{.25in} \emph{This project enhances Utah's peer workforce by addressing the clinical priorities of: 1) incorporating family-focused curriculum enhancements and 2) emphasizing and funding hands-on learning in mentored inter-professional field placements. It will increase training by more than 50\%, with basic and advanced (family-focused) certification and work experience. The evaluation of the program will be ongoing throughout the program's implementation.}
-
-\vspace{8pt}
-
-\emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
-
-\indent \hspace{.25in} Borrie, S.A. (PI), Lansford, K. (PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
-
-\indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
-
-\vspace{8pt}
-
-\emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -	March 31, 2023 
-
-\indent \hspace{.25in} Leopold, S. (PI), Borrie, S.A. (Co-I), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
-
-\indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
 \vspace{8pt}
 
@@ -161,29 +142,33 @@ year <- lubridate::year(today)
 
 \indent \hspace{.25in} \emph{The purpose of the research plan is to adapt an existing app, Háblame Bebé, that provides information to Spanish-speaking families about the importance of frequent and responsive verbal interactions with children in the home language but does not provide information on how to embed NLIS within everyday activities and routines to support DLLs with language delay.}
 
+\vspace{8pt}
 
-\vspace{2pt}
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-\section{INTERNAL FUNDING}
-\vspace{-5pt}
-\hrule
-\vspace{-2pt}
+\emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -	March 31, 2023 
 
-\setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.8in}
-\setlength{\parskip}{5pt}
-\noindent
+\indent \hspace{.25in} Leopold, S. (PI), Borrie, S.A. (Co-I), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
 
-\normalsize
+\indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
-\emph{Equine Human Interaction with Veterans} \hfill May 1, 2019 - December 31, 2019
 
-\indent \hspace{.25in} Hoopes, K. (PI), Smith, J. (Co-PI), Sulzer, S. (Co-PI), Israelsen, C. E. (Co-PI), Blais, R. (Co-Principal), Bressel, E. (Co-PI), Mason, J. (Co- PI), \textbf{Barrett, T.S. (Co-PI)}. Sponsored by USU Extension Grants Program, Utah State University. Current Status: Ended. $11,640.
+\vspace{8pt}
 
-\indent \hspace{.25in} \emph{Funds used to pilot the equine-human interaction program at Utah State University.}
+\emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
+
+\indent \hspace{.25in} Borrie, S.A. (PI), Lansford, K. (PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
+
+\indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
+
+
+\vspace{8pt}
+
+\emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2020 - Aug 31, 2021 \newline
+\emph{Psychological distress in the context of \newline COVID-19} 
+
+\indent \hspace{.25in} Aller, T.B. (PI), \textbf{Barrett, T.S. (Co-I)}, McClain Verdoes, M. (Co-I), \& Levin, M. (Co-I). Sponsored by National Research Consortium on Mental Health in Intellectual and Developmental Disabilities. Current Status: Funded. $10,000.
+
+\indent \hspace{.25in} \emph{The aims of the study are to explore how psychological flexibility influences psychological distress in adults with ASD and to establish the dimensionality, internal consistency, test-retest reliability, and the concurrent and convergent validity of the Acceptance and Action Questionnaire II (AAQ-II) and of the Brief Experiential Avoidance Questionnaire (BEAQ) in adults with ASD.}
+
 
 
 
@@ -373,6 +358,27 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 
 \vspace{-4pt}
 \forceindent $-$ ArXiv Pre-Print: [1804.08663](http://arxiv.org/abs/1804.08663)
+
+
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+
+<!-- WestEd Publications -->
+\vspace{20pt}
+\section{POLICY REPORTS}
+\vspace{-5pt}
+\hrule
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\normalsize
+
+Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Caparas, R. (2020). \emph{California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California}. WestEd. https://www.wested.org/resources/ca-special-education-funding-system/
 
 
 \setlength{\parindent}{0in}
