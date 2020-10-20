@@ -17,6 +17,8 @@ My most recent class material can be found below:
 1. [Week 1](https://tysonstanley.github.io/introR/01_Intro.html)
 2. [Week 2](https://tysonstanley.github.io/introR/02_Tidyverse.html)
 3. Week 3 is finishing up Week 2 material and trying out the methods.
+4. Week 4 is review of Week 2 and intro to Week 3 material.
+5. [Week 5](https://tysonstanley.github.io/introR/03_UnderstandData.html)
 
 
 ### Intermediate
