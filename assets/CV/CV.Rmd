@@ -76,7 +76,7 @@ year <- lubridate::year(today)
 
 \indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, Accessible Methodology Using R Programming
 
-\indent \hspace*{.1in} \textsc{Secondary:} Applied Methodology in Communication Disorders, Model Interpretability
+\indent \hspace*{.1in} \textsc{Secondary:} Applied Methodology in the Disability and Education Sciences
 
 \normalsize
 
@@ -191,24 +191,28 @@ year <- lubridate::year(today)
 
 \normalsize
 
-*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R., Levin, M.E., \& Twohig, M.P. (in press). A preliminary investigation of the effect of acceptance and commitment therapy on neural activation in clinical perfectionism. \emph{Journal of Contextual Behavioral Science}.  
+Knollhoff, S., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
+
+Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}.
 
 *Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (in press). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy}.
 
-Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (2020). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research, 63}(6), 1700-1711. doi: 10.1044/2020_JSLHR-19-00380
+*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R., Levin, M.E., \& Twohig, M.P. (2020). A preliminary investigation of the effect of acceptance and commitment therapy on neural activation in clinical perfectionism. \emph{Journal of Contextual Behavioral Science, 18}, 152-161. doi: 10.1016/j.jcbs.2020.09.007.
 
-*Darcy-Mahoney, A., White, R.D.,Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (2020). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology, 40}, 36-46. doi: 10.1038/s41372-020-0753-7
+Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (2020). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research, 63}(6), 1700-1711. doi: 10.1044/2020_JSLHR-19-00380.
+
+*Darcy-Mahoney, A., White, R.D.,Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (2020). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology, 40}, 36-46. doi: 10.1038/s41372-020-0753-7.
 
 \vspace{-4pt}
 \forceindent $-$ [medRxiv Pre-Print](https://www.medrxiv.org/content/10.1101/2020.07.22.20158949v1)
 
-*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (2020). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools, 51}(3), 706-719. doi: 10.1044/2019_LSHSS-19-00066 \img{osf_data.png}{https://osf.io/796d4/}\img{osf_materials.png}{https://osf.io/796d4/} 
+*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (2020). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools, 51}(3), 706-719. doi: 10.1044/2019_LSHSS-19-00066. \img{osf_data.png}{https://osf.io/796d4/}\img{osf_materials.png}{https://osf.io/796d4/} 
 
 Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (2020). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research, 63}(8), 2567-2577. doi: 10.1044/2020_JSLHR-20-00104.
 
 *Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (2020). Classroom Listening Experiences of Students who are Deaf or Hard of Hearing using the Listening Inventory for Education-Revised (LIFE-R). \emph{Language, Speech, and Hearing Services in Schools, 51}(3), 720-733. doi: 10.1044/2020_LSHSS-19-00087.
 
-*Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.} (2020, online). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science}.
+*Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.} (2020). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science, 21}(2), 171-181. doi: 10.1007/s11121-020-01089-4.
 
 *Downs, J., Mohr, K.A.J., \& \textbf{Barrett, T.S.} (2020). Determining the Academic and Affective Outcomes of Dyad Reading Among Third Graders. \emph{Journal of Educational Research, 113}(2), 120-132. doi: 10.1080/00220671.2020.1755615.
 
@@ -278,13 +282,7 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \setlength{\parskip}{6pt}
 \noindent
 
-Vázquez, A.L., Garcia, B.H., Navarro, C., \textbf{Barrett, T.S.}, \& Domenech Rodríguez, M.M. (under review). Predictors of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Journal of Youth and Adolescence}.
-
 \textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
-
-<!--
-Knollhoff, S. & \textbf{Barrett, T.S.} (under review). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
--->
 
 Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Psi Chi Journal of Psychological Research}.
 
