@@ -93,7 +93,7 @@ year <- lubridate::year(today)
 
 \singlespacing
 
-I have 26 peer-reviewed publications and presented 21 studies at academic conferences across disability, health, and educational disciplines. See my [CV](https://tysonbarrett.com/assets/CV/CV.pdf) for a detailed record. In my current position, most of my time is spent as a methodologist and data scientist on applied projects, generally charged with data cleaning, reshaping, joining, analyzing, and communicating.
+I have over 30 peer-reviewed publications and presented more than 20 studies at academic conferences across disability, health, and educational disciplines. See my [CV](https://tysonbarrett.com/assets/CV/CV.pdf) for a detailed record. In my current position, most of my time is spent as a methodologist and data scientist on applied projects, generally charged with data cleaning, reshaping, joining, analyzing, and communicating.
 
 I also have taught several statistical and data science courses to PhD-level graduate students, covering topics that included data wrangling from various sources, joining tables, and pivoting data. Again, see my [CV](https://tysonbarrett.com/assets/CV/CV.pdf) for a detailed record of teaching appointments. Also, see my website for various posts demonstrating several of these data manipulations.
 
