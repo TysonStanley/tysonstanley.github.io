@@ -195,7 +195,7 @@ Knollhoff, S., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Listener Impress
 
 Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}.
 
-*Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (in press). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy}.
+*Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (2020). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy, 42}, 422-435. doi: 10.1007/s10591-020-09541-x
 
 *Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R., Levin, M.E., \& Twohig, M.P. (2020). A preliminary investigation of the effect of acceptance and commitment therapy on neural activation in clinical perfectionism. \emph{Journal of Contextual Behavioral Science, 18}, 152-161. doi: 10.1016/j.jcbs.2020.09.007.
 
@@ -283,8 +283,6 @@ Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Re
 \noindent
 
 Barney, J., \textbf{Barrett, T.S.}, Lensgrav-Benson, T., Quakenbush, B., Twohig, M. (under review). Confirmatory Factor Analysis and Measurement Invariance of the Cognitive Fusion Questionnaire-Body Image in a Clinical Eating Disorder Sample. \emph{European Eating Disorders Review}.
-
-\textbf{Barrett, T.S.} (under review). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{R Journal}. \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
 
 Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Psi Chi Journal of Psychological Research}.
 
