@@ -191,6 +191,9 @@ year <- lubridate::year(today)
 
 \normalsize
 
+Lubold, N., Willi, M.M., Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in press). Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease.
+\emph{Journal of Speech, Language, and Hearing Research}.
+
 Knollhoff, S., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
 
 Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}.
@@ -201,7 +204,7 @@ Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). G
 
 Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (2020). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research, 63}(6), 1700-1711. doi: 10.1044/2020_JSLHR-19-00380.
 
-*Darcy-Mahoney, A., White, R.D.,Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (2020). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology, 40}, 36-46. doi: 10.1038/s41372-020-0753-7.
+*Darcy-Mahoney, A., White, R.D., Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (2020). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology, 40}, 36-46. doi: 10.1038/s41372-020-0753-7.
 
 \vspace{-4pt}
 \forceindent $-$ [medRxiv Pre-Print](https://www.medrxiv.org/content/10.1101/2020.07.22.20158949v1)
@@ -299,7 +302,7 @@ Sulzer, S., Prevedel, S., \textbf{Barrett, T.S.}, Voss, M.W., Manning, C., Madde
 Emery, C., Morgan, R., \& \textbf{Barrett, T.S.} (under review). The Effects of Joint Training on Career and Technical Education and Special Education Professionals. \emph{Career Development and Transition for Exceptional Individuals}.
 
 <!--
-Nichola's Paper...
+
 -->
 
 
