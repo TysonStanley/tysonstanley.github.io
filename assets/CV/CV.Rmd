@@ -127,7 +127,7 @@ year <- lubridate::year(today)
 
 \normalsize
 
-\emph{Necessecary Education and eXperiential Training} \hfill September 1, 2020 - August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
+\emph{Necessary Education and eXperiential Training} \hfill September 1, 2020 - August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
 
 \indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T.S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
 
