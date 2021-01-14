@@ -5,7 +5,6 @@ permalink: /syllabus/interR
 ---
 
 # R for the Health, Behavioral, Educational, and Social Scientists 2
-#### CEPS 5700—LT2 & EDUC 6560-LT3
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -16,9 +15,9 @@ permalink: /syllabus/interR
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
 &nbsp; &nbsp; Thursday 12pm-1pm <br>
-&nbsp; &nbsp; SCCE 310 <br>
+&nbsp; &nbsp; Via Zoom (Link in Canvas) <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; By appointment
+&nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
 
 </div>
 
@@ -63,9 +62,9 @@ Professional courtesy and sensitivity are especially important with respect to i
 
 **Important Dates:** <br>
 
-- Feb 27 – First Day of Classes
--	April 24 – Final Day of Class
--	May 1 – Final Project Due
+- Mar 9 – First Day of Classes
+-	April 20 – Final Day of Class
+-	April 27 – Final Project Due
 
 **Tentative Schedule:**
 
@@ -73,12 +72,13 @@ Chapters are based on *R for Health, Behavioral, and Social Scientists* unless o
 
 | &nbsp;  |     Topic               | Chapter        | Packet
 |---------|:------------------------|:--------------:|:-------:
-| Week 1  | Functions               | 8; 19 (R4DS)   | 5
+| Week 1  | Review Intro Material   | &nbsp;         | &nbsp;
 | Week 2  | Functions               | 8; 19 (R4DS)   | 5
-| Week 3  | Loops                   | 8; 21 (R4DS)   | 6
+| Week 3  | Functions               | 8; 19 (R4DS)   | 5
 | Week 4  | Loops                   | 8; 21 (R4DS)   | 6
-| Week 5  | Review and Catch Up     | &nbsp;         | &nbsp;
-| Week 6  | Miscellaneous Topics    | &nbsp;         | &nbsp;
+| Week 5  | Loops                   | 8; 21 (R4DS)   | 6
+| Week 6  | Review and Catch Up     | &nbsp;         | &nbsp;
 | Week 7  | Miscellaneous Topics    | &nbsp;         | &nbsp;
+
 
 

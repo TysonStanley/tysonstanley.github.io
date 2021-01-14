@@ -17,7 +17,7 @@ permalink: /syllabus/introR
 &nbsp; &nbsp; Tuesdays 12:00 - 12:55pm <br>
 &nbsp; &nbsp; Via Zoom (link in Canvas) <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; By appointment
+&nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
 
 </div>
 
@@ -77,8 +77,8 @@ Chapters are based on *R for Health, Behavioral, and Social Scientists* unless o
 | Week 3  | More Tidyverse          | 2; 5 (MD); 5 (R4DS)       | 2
 | Week 4  | Tables and Visuals      | 3; 3 (MD); 3 (R4DS)       | 3
 | Week 5  | Review and Catch Up     | 1-3                       | &nbsp;
-| Week 6  | Statistics in R         | 4-5                       | 4
-| Week 7  | More Statistics in R    | 6-7                       | 4
+| Week 6  | Statistics in R         | 4-7                       | 4
+| Week 7  | Intro to RMarkdown      | [Chapter 2 of Rmarkdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/basics.html) | &nbsp;
 
 
 
