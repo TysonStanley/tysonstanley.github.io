@@ -14,11 +14,16 @@ My most recent class material can be found below:
 
 [Intro Syllabus]({{ site.baseurl }} /syllabus/introR)
 
-1. [Week 1](https://tysonstanley.github.io/introR/01_Intro.html)
-2. [Week 2](https://tysonstanley.github.io/introR/02_Tidyverse.html)
-3. Review Week 2
-4. Review Week 2 and intro to Week 3 material.
-5. [Week 3](https://tysonstanley.github.io/introR/03_UnderstandData.html)
+| &nbsp;  |     Topic               | Chapter                   | Packet  | Slides
+|---------|:------------------------|:-------------------------:|:-------:|:-------------------------------------------------------------------:
+| Week 1  | Intro and Import Data   | 1                         | 1       | [Link](https://tysonstanley.github.io/introR/01_Intro.html)
+| Week 2  | Tidyverse               | 2; 5 (MD); 5 (R4DS)       | 2       | [Link](https://tysonstanley.github.io/introR/02_Tidyverse.html)
+| Week 3  | More Tidyverse          | 2; 5 (MD); 5 (R4DS)       | 2       |
+| Week 4  | Tables and Visuals      | 3; 3 (MD); 3 (R4DS)       | 3       | [Link](https://tysonstanley.github.io/introR/03_UnderstandData.html)
+| Week 5  | Review and Catch Up     | 1-3                       | &nbsp;  |
+| Week 6  | Statistics in R         | 4-5                       | 4       |
+| Week 7  | More Statistics in R    | 6-7                       | 4       |
+
 
 
 ### Intermediate
