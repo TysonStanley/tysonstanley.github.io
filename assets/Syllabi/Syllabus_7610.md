@@ -16,10 +16,10 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Monday and Wednesday 12:00 pm - 2:45 pm <br>
+&nbsp; &nbsp; Tues and Thurs 4:30 pm - 5:45 pm <br>
 &nbsp; &nbsp; Zoom Link (Posted on Canvas) <br>
 <strong>Office Hours:</strong> <br>
-&nbsp; &nbsp; By appointment (via Zoom)
+&nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
 <br>
 <strong>Assistant Instructor: Carly Fox, MS</strong> <br>
 &nbsp; &nbsp; Email: carlybeth.fox@aggiemail.usu.edu<br>
@@ -112,7 +112,7 @@ Many of you will learn to appreciate, and may even develop a deep interest in, s
 
 However, I understand that many of you are concerned about any math required in the course. Although statistics is a branch of mathematics, in this applied course we keep the level of mathematics to a minimum – arithmetic and high school algebra. So, please do not let a fear of mathematics prevent you from excelling in this course. Some of you may also fear work on the computer. The practice of modern statistics relies almost exclusively on computer software. I believe that learning a statistical computing language or syntax is key to the learning of statistics. However, you should expect some frustration as you begin to use the statistical software in this course, but as you gain experience you will come to appreciate the power of statistical software as a tool for discovery. So, be patient with yourself and the material, and keep finding answers to your questions.
 
-A final word of warning: Beware of technology misbehaving near deadlines. All summaries and assignments are to be turned in before the strict deadlines. Additionally, most assignments require some use of R or other software to complete them. It is never reliable to count on technology to come through in time crunches. 
+A final word of warning: Beware of technology misbehaving near deadlines. All summaries and assignments are to be turned in before the strict deadlines. Additionally, most assignments require some use of R or other software to complete them. It is unwise to count on technology to come through in time crunches. 
 
 
 ## R and RStudio:
@@ -121,7 +121,7 @@ In this course, we will use R and RStudio for the computation of all statistical
 
 Notably, there are many sources for learning more about R online, including several free books (e.g., tysonbarrett.com/Rstats). The reason this software was chosen for this class is because of its ability to reproducibly and succinctly run any analyses that you will be needing throughout your research and/or analytic career.
 
-*Note: An introductory R course is being offered concurrent to this course, Thursdays at noon.*
+*Note: An introductory R course is being offered concurrent to this course, Tuesdays at noon.*
 
 
 ## Selected Policies & Procedures:
@@ -184,7 +184,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_summer.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring_flipped_nobreak.png)
 
 
 
