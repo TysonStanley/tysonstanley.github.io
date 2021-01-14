@@ -78,7 +78,7 @@ Chapters are based on *R for Health, Behavioral, and Social Scientists* unless o
 | Week 4  | Tables and Visuals      | 3; 3 (MD); 3 (R4DS)       | 3
 | Week 5  | Review and Catch Up     | 1-3                       | &nbsp;
 | Week 6  | Statistics in R         | 4-7                       | 4
-| Week 7  | Intro to RMarkdown      | [Chapter 2 of Rmarkdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/basics.html) | &nbsp;
+| Week 7  | Intro to RMarkdown      | [Chapter 2 of Rmarkdown Book](https://bookdown.org/yihui/rmarkdown/basics.html) | &nbsp;
 
 
 
