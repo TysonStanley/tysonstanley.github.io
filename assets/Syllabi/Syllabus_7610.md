@@ -6,7 +6,7 @@ permalink: /syllabus/educ7610
 
 # Regression Analysis
 #### EDUC 7610
-#### Summer 2020
+#### Spring 2021
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
