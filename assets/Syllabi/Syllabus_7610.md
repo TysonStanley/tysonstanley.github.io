@@ -57,7 +57,7 @@ This is a hybrid course; we will use both online recorded lectures and in-class 
 
 ## Preparation & Attendance:
 
-The nature of this course requires regular class attendance and participation. The student is therefore expected to watch the recorded lecture and read any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 7-week period, requiring an average of approximately 18 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class activities as some material covered in class will not be covered anywhere else. All information covered in lectures and in-class activities can be used for examination questions. 
+The nature of this course requires regular class attendance and participation. The student is therefore expected to watch the recorded lecture and read any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 14-week period, requiring an average of approximately 9 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class activities as some material covered in class will not be covered anywhere else. All information covered in lectures and in-class activities can be used for examination questions. 
 
 ## Four Components of Your Grade:
 
