@@ -191,12 +191,13 @@ year <- lubridate::year(today)
 
 \normalsize
 
-Lubold, N., Willi, M.M., Borrie, S.A., \textbf{Barrett, T.S.}, Berisha, V. (in press). Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease.
-\emph{Journal of Speech, Language, and Hearing Research}.
+Borrie, S.A., Lansford, K.L., & \textbf{Barrett, T.S.} (in press). A Clinical Advantage: Experience informs recognition and adaptation to a novel talker with dysarthria. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://osf.io/prf95}\img{osf_materials.png}{https://osf.io/prf95}
 
-Knollhoff, S., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
+Lubold, N., Willi, M.M., Borrie, S.A., \textbf{Barrett, T.S.}, & Berisha, V. (in press). Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease. \emph{Journal of Speech, Language, and Hearing Research}.
 
-Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, Borrie, S.A. (in press). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}.
+Knollhoff, S., \textbf{Barrett, T.S.}, & Borrie, S.A. (in press). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
+
+Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, & Borrie, S.A. (in press). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}.
 
 *Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (2020). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy, 42}, 422-435. doi: 10.1007/s10591-020-09541-x
 
