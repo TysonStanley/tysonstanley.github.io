@@ -191,15 +191,17 @@ year <- lubridate::year(today)
 
 \normalsize
 
+Muñoz, K., San Miguel, G., \textbf{Barrett, T.S.}, Kasin, C., Baughman, K., Reynolds, B., Ritter, C., Larsen, M., Whicker, J.J., & Twohig, M.P. (in press). eHealth Parent Education for Hearing Aid Management: A Pilot Randomized Control Trial. \emph{International Journal of Audiology.} \img{osf_data.png}{https://osf.io/y5698/}\img{osf_materials.png}{https://osf.io/y5698/}
+
 Borrie, S.A., Lansford, K.L., & \textbf{Barrett, T.S.} (in press). A Clinical Advantage: Experience informs recognition and adaptation to a novel talker with dysarthria. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://osf.io/prf95}\img{osf_materials.png}{https://osf.io/prf95}
 
 Lubold, N., Willi, M.M., Borrie, S.A., \textbf{Barrett, T.S.}, & Berisha, V. (in press). Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease. \emph{Journal of Speech, Language, and Hearing Research}.
 
-Knollhoff, S., \textbf{Barrett, T.S.}, & Borrie, S.A. (in press). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
+Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, & Borrie, S.A. (2021). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2020_JSLHR-20-00313.
 
-Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, & Borrie, S.A. (in press). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}.
+Knollhoff, S., Borrie, S.A., \textbf{Barrett, T.S.}, & Searl, J.P. (2021). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. doi: 10.1080/17549507.2020.1849400 \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
 
-*Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (2020). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy, 42}, 422-435. doi: 10.1007/s10591-020-09541-x
+*Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (2020). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy, 42}, 422-435. doi: 10.1007/s10591-020-09541-x.
 
 *Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R., Levin, M.E., \& Twohig, M.P. (2020). A preliminary investigation of the effect of acceptance and commitment therapy on neural activation in clinical perfectionism. \emph{Journal of Contextual Behavioral Science, 18}, 152-161. doi: 10.1016/j.jcbs.2020.09.007.
 
