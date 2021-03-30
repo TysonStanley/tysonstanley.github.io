@@ -191,11 +191,11 @@ year <- lubridate::year(today)
 
 \normalsize
 
-Muñoz, K., San Miguel, G., \textbf{Barrett, T.S.}, Kasin, C., Baughman, K., Reynolds, B., Ritter, C., Larsen, M., Whicker, J.J., & Twohig, M.P. (in press). eHealth Parent Education for Hearing Aid Management: A Pilot Randomized Control Trial. \emph{International Journal of Audiology.} \img{osf_data.png}{https://osf.io/y5698/}\img{osf_materials.png}{https://osf.io/y5698/}
-
 Borrie, S.A., Lansford, K.L., & \textbf{Barrett, T.S.} (in press). A Clinical Advantage: Experience informs recognition and adaptation to a novel talker with dysarthria. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://osf.io/prf95}\img{osf_materials.png}{https://osf.io/prf95}
 
 Lubold, N., Willi, M.M., Borrie, S.A., \textbf{Barrett, T.S.}, & Berisha, V. (in press). Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease. \emph{Journal of Speech, Language, and Hearing Research}.
+
+Muñoz, K., San Miguel, G., \textbf{Barrett, T.S.}, Kasin, C., Baughman, K., Reynolds, B., Ritter, C., Larsen, M., Whicker, J.J., & Twohig, M.P. (2021). eHealth Parent Education for Hearing Aid Management: A Pilot Randomized Control Trial. \emph{International Journal of Audiology.} doi: 10.1080/14992027.2021.1886354. \img{osf_data.png}{https://osf.io/y5698/}\img{osf_materials.png}{https://osf.io/y5698/}
 
 Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, & Borrie, S.A. (2021). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2020_JSLHR-20-00313.
 
@@ -316,7 +316,28 @@ Emery, C., Morgan, R., \& \textbf{Barrett, T.S.} (under review). The Effects of 
 
 -->
 
-<!-- Published Works in Conference Proceedings -->
+<!-- WestEd Publications -->
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+
+\vspace{20pt}
+\section{POLICY REPORTS}
+\vspace{-5pt}
+\hrule
+
+\setlength{\parindent}{-.5in}
+\setlength{\leftskip}{1in}
+\setlength{\parskip}{5pt}
+\noindent
+
+\normalsize
+
+Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Caparas, R. (2020). \emph{California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California}. WestEd. https://www.wested.org/resources/ca-special-education-funding-system/
+
+
+<!-- Pre-Prints -->
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
@@ -374,26 +395,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\parskip}{0pt}
 \noindent
 
-<!-- WestEd Publications -->
-\vspace{20pt}
-\section{POLICY REPORTS}
-\vspace{-5pt}
-\hrule
-
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
-\setlength{\parskip}{5pt}
-\noindent
-
-\normalsize
-
-Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Caparas, R. (2020). \emph{California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California}. WestEd. https://www.wested.org/resources/ca-special-education-funding-system/
-
-
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
 
 <!-- Other Publications -->
 \vspace{20pt}
@@ -448,10 +449,11 @@ Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Capara
 \textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
 
 
+\newpage
+
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
 \setlength{\parskip}{0pt}
-
 
 \vspace{10pt}
 \section{CITATION COUNT HISTORY}

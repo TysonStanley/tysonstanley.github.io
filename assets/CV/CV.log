@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.1.14)  22 FEB 2021 14:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.1.14)  30 MAR 2021 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -882,7 +882,7 @@ File: osf_materials.png Graphic file (type bmp)
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
 
-Underfull \hbox (badness 1033) in paragraph at lines 552--557
+Underfull \hbox (badness 1033) in paragraph at lines 553--558
  \TU/lmr/m/n/10 Confirmatory Factor Analysis and Measurement Invariance of the 
 Cognitive Fusion
  []
@@ -918,7 +918,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 750--754
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 751--755
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -932,19 +932,20 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
+[7]
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[7] [8] [9]
+[8] [9]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1064.
+(hyperref)                than one, level fixed on input line 1067.
 
 [10] [11] (./CV.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
-(rerunfilecheck)             Checksum: F687C41ABE55C177001914FA540D2606;4249.
+(rerunfilecheck)             Checksum: 1890355D5BABFED7B3A1C05C1FF37570;4249.
  ) 
 Here is how much of TeX's memory you used:
  17741 strings out of 479250
@@ -953,6 +954,6 @@ Here is how much of TeX's memory you used:
  37019 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,9n,122p,516b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,9n,122p,516b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on CV.pdf (11 pages).
