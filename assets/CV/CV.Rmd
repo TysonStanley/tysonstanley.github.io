@@ -74,9 +74,9 @@ year <- lubridate::year(today)
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textsc{Primary:} Methodology in Complex Human Data, Accessible Methodology Using R Programming
+\indent \hspace*{.1in} \small\textsc{Primary:} Accessible Methodology Using R Programming, Applied Methodology in the Disability Disciplines
 
-\indent \hspace*{.1in} \textsc{Secondary:} Applied Methodology in the Disability and Education Sciences
+\indent \hspace*{.1in} \textsc{Secondary:} Geographic Information Systems and Large-Scale Human Data
 
 \normalsize
 
@@ -102,7 +102,7 @@ year <- lubridate::year(today)
 
 <!-- Affiliations -->
 \vspace{1pt}
-\section{PROFESSIONAL AFFILIATIONS}
+\section{PROFESSIONAL SERVICE}
 <!--\vspace{-5pt}-->
 \hrule
 \vspace{2pt}
@@ -110,6 +110,10 @@ year <- lubridate::year(today)
 \indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
 
 \indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Contributor \hfill 2019-Present
+
+\indent \hspace*{.1in} \small\textbf{\href{https://www.apa.org/pubs/journals/met}{Psychological Methods}} Voluntary Reviewer \hfill 2018-Present
+
+\indent \hspace*{.1in} \small\textbf{\href{https://www.apa.org/pubs/journals/met}{Journal of Speech, Language, and Hearing Research}} Voluntary Reviewer \hfill 2018-Present
 
 
 <!-- Grants -->
@@ -148,7 +152,7 @@ year <- lubridate::year(today)
 
 \indent \hspace{.25in} Leopold, S. (PI), Borrie, S.A. (Co-I), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
 
-\indent \hspace{.25in} \emph{The major goal of this project is to utilizes an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
+\indent \hspace{.25in} \emph{The major goal of this project is to utilize an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
 
 \vspace{8pt}
@@ -190,6 +194,8 @@ year <- lubridate::year(today)
 \noindent
 
 \normalsize
+
+*Tannahill, H.S., Fargo, J.D., \textbf{Barrett, T.S.}, & Blais, R.K. (in press). Gender as a moderator of the association of military sexual trauma and posttraumatic stress symptoms. \emph{Journal of Clinical Psychology}.
 
 Borrie, S.A., Lansford, K.L., & \textbf{Barrett, T.S.} (in press). A Clinical Advantage: Experience informs recognition and adaptation to a novel talker with dysarthria. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://osf.io/prf95}\img{osf_materials.png}{https://osf.io/prf95}
 
@@ -561,6 +567,27 @@ RStudio Conference sponsored by RStudio. Training on advanced features of R and 
 
 RStudio Conference sponsored by RStudio. Special training on using the Shiny developer interface for creating interactive, responsive websites using R. January 2020.
 
+American Educational Research Association Annual Meeting (Virtual). Training on quantitative methodologies (including psychometrics and econometrics) for studying educational policy and practice. April 2021.
+
+
+<!-- Awards -->
+\setlength{\parindent}{0in}
+\setlength{\leftskip}{0in}
+\setlength{\parskip}{0pt}
+\noindent
+\vspace{10pt}
+\section{AWARDS}
+\vspace{-5pt}
+\hrule
+\vspace{10pt}
+
+- Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
+- Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
+- Outstanding Poster Award (Annual Meeting of EHDI)
+- Dean’s Scholarship (full tuition for two years)
+- Best Poster Presentation (Psi-Chi Undergraduate Conference)
+
+
 <!-- Teaching Interests -->
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
@@ -614,7 +641,7 @@ RStudio Conference sponsored by RStudio. Special training on using the Shiny dev
         - In-person
 
 
-\subsubsection{\hspace{10pt} \emph{MOST RECENT TEACHING EVALUATIONS (Summer/Fall 2018)}}
+\subsubsection{\hspace{10pt} \emph{MOST RECENT TEACHING EVALUATIONS (Fall 2020)}}
 
 \begin{center}
 \begin{tabular}{|l|c|c|c|c|c|}
@@ -625,30 +652,12 @@ Course & Lower & Lower & Similar & Higher & Higher \\
 Research Methods (PSY 3500)                & & & & X & \\
 Applied Statistical Analysis (EDUC 6050)   & & & & X & \\
 R Course I \& II (Continuing Ed Credit)    & & & & X & \\
-Research Design \& Analysis I (EDUC 6600)  & & & & & X \\
-Research Design \& Analysis II (EDUC 7610) & & & & X & \\
+Statistical Foundations (EDUC 6600)        & & & & X & \\
+Regression Analysis (EDUC 7610)            & & & & X & \\
 \hline
 \end{tabular}
 \end{center}
 
-<!-- Methodological Training -->
-\vspace{20pt}
-\section{METHODOLOGICAL TRAINING}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
-
-- Regression, Generalized Linear Models
-- Mixed Effects, Generalized Linear Models
-- Machine Learning
-    - CART
-    - Random Forest
-    - Regularized Regression
-    - Boosting/Bagging
-    - Cross-Validation
-- Social Network Analysis
-- Data Visualization
-    - Static and Dynamic Visuals
 
 <!-- Software and Programming Experience -->
 \vspace{20pt}
@@ -657,16 +666,16 @@ Research Design \& Analysis II (EDUC 7610) & & & & X & \\
 \hrule
 \vspace{10pt}
 
-1. **R and RMarkdown: Expert (6 years of daily use)**
+1. **R and RMarkdown: Expert (9 years of daily use)**
     - Database Queries, Creation, and Management
     - Data Analytics
     - Website Creation
     - Program Development and Deployment 
-2. **REDCap: Moderate Experience (3 year of weekly use)**
+2. **REDCap: Moderate Experience (4 year of weekly use)**
     - Database Creation
     - Data Entry and Survey Creation and Deployment
     - Data Management via REDCap API
-3. **SQL: Some Experience (5 years of occasional use)**
+3. **SQL: Some Experience (7 years of occasional use)**
     - Database Queries and Database Management 
     - Data Analytics
 4. **Python: Minor Experience (1 year of occasional use)**
@@ -674,17 +683,5 @@ Research Design \& Analysis II (EDUC 7610) & & & & X & \\
     - MTurk customization
     
     
-<!-- Awards -->
-\vspace{10pt}
-\section{AWARDS}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
-
-- Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
-- Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
-- Outstanding Poster Award (Annual Meeting of EHDI)
-- Dean’s Scholarship (full tuition for two years)
-- Best Poster Presentation (Psi-Chi Undergraduate Conference)
 
 
