@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.1.14)  13 APR 2021 10:29
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.1.14)  20 APR 2021 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -851,6 +851,10 @@ File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
+File: osf_data.png Graphic file (type bmp)
+<osf_data.png>
+File: osf_materials.png Graphic file (type bmp)
+<osf_materials.png>
 [3]
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
@@ -881,17 +885,12 @@ File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
 File: osf_materials.png Graphic file (type bmp)
 <osf_materials.png>
-
-Underfull \hbox (badness 1033) in paragraph at lines 566--571
+[5]
+Underfull \hbox (badness 1033) in paragraph at lines 571--576
  \TU/lmr/m/n/10 Confirmatory Factor Analysis and Measurement Invariance of the 
 Cognitive Fusion
  []
 
-[5]
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
 File: osf_data.png Graphic file (type bmp)
 <osf_data.png>
 File: osf_materials.png Graphic file (type bmp)
@@ -950,7 +949,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  17741 strings out of 479250
  317150 string characters out of 5875482
- 798926 words of memory out of 5000000
+ 797926 words of memory out of 5000000
  37019 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

@@ -71,7 +71,7 @@ We may also pull from [FiveThirtyEight's open data on GitHub](https://github.com
 | L14: Logistic Regression     | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L14_EDUC7610_logistic.pptx)  | [Logistic Regression](https://youtu.be/OgUlrSIVCbk) |    
 | L15: Other GLMs              | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L15_EDUC7610_otherglm.pptx)  | [Other GLMs](https://youtu.be/1FUgGYPXmFE) | 
 | L16: Mediation Analysis      | [HTML](https://tysonbarrett.com/Workshops/MediationAnalysis.html#1)                      | [Mediation Analysis](https://youtu.be/WGPPqJaa1Ho) | 
-| L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_misc.pptx)  | [Recorded Lecture]() | 
+| L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_misc_updatedclean.pptx)  |  | 
 
 
 ### Final Project
