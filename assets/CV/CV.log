@@ -1,29 +1,29 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.1.14)  20 APR 2021 16:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.27)  27 APR 2021 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CV.tex
 (./CV.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-01-09> xparse <2020-03-03> (/Users/tbarret/Library/T
-inyTeX/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2021-02-18> (/Users/tbarret/Library/TinyTeX/texmf-dist/te
+x/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count173
-\c@section=\count174
-\c@subsection=\count175
-\c@subsubsection=\count176
-\c@paragraph=\count177
-\c@subparagraph=\count178
-\c@figure=\count179
-\c@table=\count180
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
-Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
@@ -82,13 +82,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count181
+\inf@bad=\count183
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count182
-\leftroot@=\count183
+\uproot@=\count184
+\leftroot@=\count185
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count184
-\DOTSCASE@=\count185
+\classnum@=\count186
+\DOTSCASE@=\count187
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -97,15 +97,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count186
-\c@MaxMatrixCols=\count187
+\macc@depth=\count188
+\c@MaxMatrixCols=\count189
 \dotsspace@=\muskip16
-\c@parentequation=\count188
-\dspbrk@lvl=\count189
+\c@parentequation=\count190
+\dspbrk@lvl=\count191
 \tag@help=\toks17
-\row@=\count190
-\column@=\count191
-\maxfields@=\count192
+\row@=\count192
+\column@=\count193
+\maxfields@=\count194
 \andhelp@=\toks18
 \eqnshift@=\dimen142
 \alignsep@=\dimen143
@@ -137,19 +137,20 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 )
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.
 sty (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-01-09 L3 programming layer (loader) 
+Package: expl3 2021-02-18 L3 programming layer (loader) 
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.
 def
-File: l3backend-xetex.def 2021-01-09 L3 backend support: XeTeX
+File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count193
-\l__kernel_color_stack_int=\count194
-\g__graphics_track_int=\count195
+\c__kernel_sys_dvipdfmx_version_int=\count195
+\l__color_backend_stack_int=\count196
+\g__color_backend_stack_int=\count197
+\g__graphics_track_int=\count198
 \l__pdf_internal_box=\box49
-\g__pdf_backend_object_int=\count196
-\g__pdf_backend_annotation_int=\count197
-\g__pdf_backend_link_int=\count198
+\g__pdf_backend_object_int=\count199
+\g__pdf_backend_annotation_int=\count266
+\g__pdf_backend_link_int=\count267
 ))
 Package: unicode-math 2020/01/31 v0.8q Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -160,13 +161,13 @@ TeX
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.s
 ty
-Package: xparse 2020-10-27 L3 Experimental document command parser
-
+(/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse-2
+020-10-01.sty
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse-g
-eneric.tex))
+eneric.tex)))
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys
 2e.sty
-Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 
@@ -174,17 +175,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 y
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count199
-\l__fontspec_language_int=\count266
-\l__fontspec_strnum_int=\count267
-\l__fontspec_tmp_int=\count268
-\l__fontspec_tmpa_int=\count269
-\l__fontspec_tmpb_int=\count270
-\l__fontspec_tmpc_int=\count271
-\l__fontspec_em_int=\count272
-\l__fontspec_emdef_int=\count273
-\l__fontspec_strong_int=\count274
-\l__fontspec_strongdef_int=\count275
+\l__fontspec_script_int=\count268
+\l__fontspec_language_int=\count269
+\l__fontspec_strnum_int=\count270
+\l__fontspec_tmp_int=\count271
+\l__fontspec_tmpa_int=\count272
+\l__fontspec_tmpb_int=\count273
+\l__fontspec_tmpc_int=\count274
+\l__fontspec_em_int=\count275
+\l__fontspec_emdef_int=\count276
+\l__fontspec_strong_int=\count277
+\l__fontspec_strongdef_int=\count278
 \l__fontspec_tmpa_dim=\dimen148
 \l__fontspec_tmpb_dim=\dimen149
 \l__fontspec_tmpc_dim=\dimen150
@@ -197,36 +198,36 @@ Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
-\g__um_fam_int=\count276
-\g__um_fonts_used_int=\count277
-\l__um_primecount_int=\count278
+\g__um_fam_int=\count279
+\g__um_fonts_used_int=\count280
+\l__um_primecount_int=\count281
 \g__um_primekern_muskip=\muskip17
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math-
 table.tex))) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/microtype/mic
 rotype.sty
-Package: microtype 2020/12/07 v2.8 Micro-typographical refinements (RS)
+Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
 \MT@toks=\toks22
-\MT@count=\count279
-LaTeX Info: Redefining \textls on input line 788.
+\MT@count=\count282
+LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen151
-LaTeX Info: Redefining \textmicrotypecontext on input line 1358.
-\MT@listname@count=\count280
+LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
+\MT@listname@count=\count283
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype-xetex.
 def
-File: microtype-xetex.def 2020/12/07 v2.8 Definitions specific to xetex (RS)
+File: microtype-xetex.def 2021/03/14 v2.8c Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 254.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2020/12/07 v2.8 microtype main configuration file (RS)
+File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 )) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/parskip/parskip.sty
-Package: parskip 2020-06-15 v2.0f non-zero parskip adjustments
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -236,9 +237,9 @@ y
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count281
+\etb@tempcnta=\count284
 )) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.st
 y
@@ -267,33 +268,38 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen152
-\Hy@linkcounter=\count282
-\Hy@pagecounter=\count283
+\Hy@linkcounter=\count285
+\Hy@pagecounter=\count286
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+)
+(/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-langpatc
+hes.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
+nguages
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count284
-Package hyperref Info: Option `unicode' set `true' on input line 4338.
+\Hy@SavedSpaceFactor=\count287
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Hyper figures OFF on input line 4464.
-Package hyperref Info: Link nesting OFF on input line 4469.
-Package hyperref Info: Hyper index ON on input line 4472.
-Package hyperref Info: Plain pages OFF on input line 4479.
-Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count285
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count288
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5076.
+LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen153
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -303,39 +309,39 @@ y
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count286
+\Fld@menulength=\count289
 \Field@Width=\dimen154
 \Fld@charsize=\dimen155
-Package hyperref Info: Hyper figures OFF on input line 6347.
-Package hyperref Info: Link nesting OFF on input line 6352.
-Package hyperref Info: Hyper index ON on input line 6355.
-Package hyperref Info: backreferencing OFF on input line 6362.
-Package hyperref Info: Link coloring OFF on input line 6367.
-Package hyperref Info: Link coloring with OCG OFF on input line 6372.
-Package hyperref Info: PDF/A mode OFF on input line 6377.
-LaTeX Info: Redefining \ref on input line 6417.
-LaTeX Info: Redefining \pageref on input line 6421.
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count287
-\c@Item=\count288
-\c@Hfootnote=\count289
+\Hy@abspage=\count290
+\c@Item=\count291
+\c@Hfootnote=\count292
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2020-05-15 v7.00e Hyperref driver for XeTeX
+File: hxetex.def 2021-02-27 v7.00k Hyperref driver for XeTeX
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box50
-\c@Hy@AnnotLevel=\count290
-\HyField@AnnotCount=\count291
-\Fld@listcount=\count292
-\c@bookmark@seq@number=\count293
+\c@Hy@AnnotLevel=\count293
+\HyField@AnnotCount=\count294
+\Fld@listcount=\count295
+\c@bookmark@seq@number=\count296
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilech
 eck.sty
@@ -360,9 +366,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count294
-\Gm@cntv=\count295
-\c@Gm@tempcnt=\count296
+\Gm@cnth=\count297
+\Gm@cntv=\count298
+\c@Gm@tempcnt=\count299
 \Gm@bindingoffset=\dimen156
 \Gm@wd@mp=\dimen157
 \Gm@odd@mp=\dimen158
@@ -384,7 +390,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 105.
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2020/08/26 v5.0i Graphics/color driver for xetex
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen164
 \Gin@req@width=\dimen165
@@ -424,8 +430,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip76
 \cftfigindent=\skip77
 \cftfignumwidth=\skip78
-\c@lofdepth=\count297
-\c@lotdepth=\count298
+\c@lofdepth=\count300
+\c@lotdepth=\count301
 \cftbeforelottitleskip=\skip79
 \cftafterlottitleskip=\skip80
 \cftbeforetabskip=\skip81
@@ -435,43 +441,97 @@ Package tocloft Info: The document has section divisions on input line 51.
 Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
  out. on input line 1156.
 
+) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+(/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen166
+\ar@mcellbox=\box51
+\extrarowheight=\dimen167
+\NC@list=\toks24
+\extratabsurround=\skip84
+\backup@length=\skip85
+\ar@cellbox=\box52
+) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+(/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 147.
+)
+\everycr=\toks25
+\minrowclearance=\skip86
+) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+(/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip87
+\LTright=\skip88
+\LTpre=\skip89
+\LTpost=\skip90
+\LTchunksize=\count302
+\LTcapwidth=\dimen168
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@cols=\count303
+\LT@rows=\count304
+\c@LT@tables=\count305
+\c@LT@chunks=\count306
+\LT@p@ftn=\toks26
 ) (./CV.aux)
 \openout1 = `CV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 100.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 100.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 100.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 100.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 100.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 100.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 104.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 100.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 104.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -500,7 +560,7 @@ pt=math;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 100.
+(Font)              scaled to size 10.0pt on input line 104.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -540,18 +600,18 @@ pt=math;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 100.
+(Font)              scaled to size 10.0pt on input line 104.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 100.
+(Font)              `operators' in the math version `normal' on input line 104.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 100.
+ line 104.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 100.
+(Font)              `operators' in the math version `bold' on input line 104.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 100.
+t line 104.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -639,15 +699,15 @@ t=math;language=dflt;mapping=tex-text;"
 (fontspec)             \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 100.
+(Font)              `symbols' in the math version `normal' on input line 104.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 100.
+t line 104.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 100.
+(Font)              `symbols' in the math version `bold' on input line 104.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 100.
+t line 104.
 
 Package fontspec Info: latinmodern-math scale = 0.9999964596882403.
 
@@ -718,17 +778,17 @@ pt=math;language=dflt;mapping=tex-text;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-00.
+04.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 100.
+t line 104.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 100
+(Font)              `largesymbols' in the math version `bold' on input line 104
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 100.
-LaTeX Info: Redefining \microtypecontext on input line 100.
+t line 104.
+LaTeX Info: Redefining \microtypecontext on input line 104.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -737,12 +797,12 @@ Package microtype Info: No adjustment of kerning.
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-LatinModernRo
 man.cfg
-File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
 ern Roman (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 100.
+Package hyperref Info: Link coloring OFF on input line 104.
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
@@ -750,11 +810,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count299
+\c@section@level=\count307
 )
-LaTeX Info: Redefining \ref on input line 100.
-LaTeX Info: Redefining \pageref on input line 100.
-LaTeX Info: Redefining \nameref on input line 100.
+LaTeX Info: Redefining \ref on input line 104.
+LaTeX Info: Redefining \pageref on input line 104.
+LaTeX Info: Redefining \nameref on input line 104.
 (./CV.out) (./CV.out)
 \@outlinefile=\write3
 \openout3 = `CV.out'.
@@ -794,34 +854,34 @@ LaTeX Info: Redefining \nameref on input line 100.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 107.
+(Font)              scaled to size 7.0pt on input line 111.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 107.
+(Font)              scaled to size 5.0pt on input line 111.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-07.
+11.
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 107.
+(Font)              scaled to size 10.00092pt on input line 111.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 107.
+(Font)              scaled to size 7.00064pt on input line 111.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 107.
+(Font)              scaled to size 5.00046pt on input line 111.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 107.
+(Font)              scaled to size 9.99893pt on input line 111.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 107.
+(Font)              scaled to size 6.99925pt on input line 111.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 107.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 107
+(Font)              scaled to size 4.99947pt on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 111
 .
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 107
+LaTeX Font Info:    Trying to load font information for U+msb on input line 111
 .
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -830,84 +890,91 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
-(Font)              using `TU/lmr/bx/n' instead on input line 124.
+(Font)              using `TU/lmr/bx/n' instead on input line 128.
 
 [1
 
 ] [2]
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-[3]
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-[4]
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-[5]
-Underfull \hbox (badness 1033) in paragraph at lines 571--576
- \TU/lmr/m/n/10 Confirmatory Factor Analysis and Measurement Invariance of the 
-Cognitive Fusion
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+
+Overfull \hbox (5.60538pt too wide) in alignment at lines 298--319
+ [] [] 
  []
 
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-[6]
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+
+Overfull \hbox (5.60538pt too wide) in alignment at lines 319--339
+ [] [] 
+ []
+
+[3]
+Overfull \hbox (5.60538pt too wide) in alignment at lines 339--342
+ [] [] 
+ []
+
+[4] [5]
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
 File: tidyfast_hex.png Graphic file (type bmp)
@@ -917,7 +984,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 764--768
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 486--490
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -927,32 +994,28 @@ File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
-File: osf_data.png Graphic file (type bmp)
-<osf_data.png>
-File: osf_materials.png Graphic file (type bmp)
-<osf_materials.png>
-[7]
+[6]
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[8] [9] [10]
+[7] [8] [9]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1111.
+(hyperref)                than one, level fixed on input line 804.
 
-[11] (./CV.aux)
+[10] (./CV.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `CV.out' has not changed.
-(rerunfilecheck)             Checksum: 2192430EA72A83160BAC12A94D4E82ED;4025.
+(rerunfilecheck)             Checksum: 0B0ADB29CD71DC8BDC418AFA68059129;3413.
  ) 
 Here is how much of TeX's memory you used:
- 17741 strings out of 479250
- 317150 string characters out of 5875482
- 797926 words of memory out of 5000000
- 37019 multiletter control sequences out of 15000+600000
+ 17960 strings out of 478918
+ 321561 string characters out of 5865691
+ 830748 words of memory out of 5000000
+ 37533 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,9n,122p,516b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,10n,122p,542b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on CV.pdf (11 pages).
+Output written on CV.pdf (10 pages).

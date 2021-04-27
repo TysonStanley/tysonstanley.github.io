@@ -125,7 +125,7 @@ year <- lubridate::year(today)
 \vspace{-2pt}
 
 \setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.8in}
+\setlength{\leftskip}{.5in}
 \setlength{\parskip}{5pt}
 \noindent
 
@@ -174,8 +174,6 @@ year <- lubridate::year(today)
 \indent \hspace{.25in} \emph{The aims of the study are to explore how psychological flexibility influences psychological distress in adults with ASD and to establish the dimensionality, internal consistency, test-retest reliability, and the concurrent and convergent validity of the Acceptance and Action Questionnaire II (AAQ-II) and of the Brief Experiential Avoidance Questionnaire (BEAQ) in adults with ASD.}
 
 
-
-
 <!-- Published Works -->
 \vspace{10pt}
 \setlength{\parindent}{0in}
@@ -186,141 +184,61 @@ year <- lubridate::year(today)
 \vspace{-5pt}
 \hrule
 \vspace{3pt}
-\footnotesize \hspace{4pt} * Denotes that I was the methodologist or data scientist on the project
-
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
-\setlength{\parskip}{5pt}
-\noindent
 
 \normalsize
 
-Buntrock, M.S., Barker, B.A., Gurries, M.M., & \textbf{Barrett, T.S.} (in press). The effect of talker familiarity on sentence recognition accuracy in complex noise. \emph{Experimental Psychology}. \img{osf_data.png}{https://osf.io/d4zar/}\img{osf_materials.png}{https://osf.io/d4zar/}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+library(stringr)
+library(dplyr)
+pubs = rio::import("pubs.xlsx", sheet = "Journals")
+pubs_list = function(data){
+  data = data %>% 
+    mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>% 
+    group_by(year) %>% 
+    mutate(header = if_else(row_number() == 1, as.character(year), " ")) %>% 
+    mutate(
+      authors = str_replace(authors, "Barrett, T.S.", "\\\\textbf{Barrett, T.S.}"),
+      authors = str_replace(authors, "&", "\\\\&"),
+      journal = paste0("\\emph{", journal, "}"),
+      journal = if_else(volume == "", journal, paste0(journal, ", ")),
+      year = paste0("(", year, ")."),
+      journal_volume = if_else(volume == "", journal, paste0(journal, "\\emph{", volume, "}")),
+      journal_volume_issue = if_else(issue != "", paste0(journal_volume, "(", issue, ")"), journal_volume),
+      journal_volume_issue_pages = if_else(pages != "", 
+                                           paste0(journal_volume_issue, ", ", pages, "."), 
+                                           paste0(journal_volume_issue, "."))
+    ) %>% 
+    mutate(doi = str_replace(doi, "_", "\\_")) %>% 
+    ungroup()
+  
+  cat("\\begin{longtable}{r!{\\color{lightdivider}\\vrule}p{14.6cm}}", "\n")
+  rows = nrow(data)
+  for (i in 1:nrow(data)){
+      with(
+        data %>% filter(row_number() == i),
+          cat(
+            header, " & \\hangindent=3em ",
+            authors,
+            tolower(year),
+            title,
+            journal_volume_issue_pages,
+            opensci,
+            if_else(i == rows, "\\vspace{5pt} \n", "\\vspace{5pt} \\\\ \n"),
+            sep = " "
+          )
+      )
+  }
+  cat("\\end{longtable}")
+}
+```
 
-*Tannahill, H.S., Fargo, J.D., \textbf{Barrett, T.S.}, & Blais, R.K. (in press). Gender as a moderator of the association of military sexual trauma and posttraumatic stress symptoms. \emph{Journal of Clinical Psychology}.
-
-Borrie, S.A., Lansford, K.L., & \textbf{Barrett, T.S.} (in press). A Clinical Advantage: Experience informs recognition and adaptation to a novel talker with dysarthria. \emph{Journal of Speech, Language, and Hearing Research}. \img{osf_data.png}{https://osf.io/prf95}\img{osf_materials.png}{https://osf.io/prf95}
-
-Lubold, N., Willi, M.M., Borrie, S.A., \textbf{Barrett, T.S.}, & Berisha, V. (in press). Healthy communication partners modify their speech when conversing with individuals with Parkinson’s disease. \emph{Journal of Speech, Language, and Hearing Research}.
-
-Muñoz, K., San Miguel, G., \textbf{Barrett, T.S.}, Kasin, C., Baughman, K., Reynolds, B., Ritter, C., Larsen, M., Whicker, J.J., & Twohig, M.P. (2021). eHealth Parent Education for Hearing Aid Management: A Pilot Randomized Control Trial. \emph{International Journal of Audiology.} doi: 10.1080/14992027.2021.1886354. \img{osf_data.png}{https://osf.io/y5698/}\img{osf_materials.png}{https://osf.io/y5698/}
-
-Hirsch, M.E., Lansford, K.L., \textbf{Barrett, T.S.}, & Borrie, S.A. (2021). Generalized Learning of Dysarthric Speech between Male and Female Talkers. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2020_JSLHR-20-00313.
-
-Knollhoff, S., Borrie, S.A., \textbf{Barrett, T.S.}, & Searl, J.P. (2021). Listener Impressions of Alaryngeal Communication Modalities. \emph{International Journal of Speech-Language Pathology}. doi: 10.1080/17549507.2020.1849400 \img{osf_data.png}{https://osf.io/qgkm2/}\img{osf_materials.png}{https://osf.io/qgkm2/}
-
-*Crapo, J.S., \textbf{Barrett, T.S.}, Bradford, K., Miller, J.A., & Higginbotham, B.J. (2020). Couple relationship education outcomes predicted by family life stage and traditionality. \emph{Contemporary Family Therapy, 42}, 422-435. doi: 10.1007/s10591-020-09541-x.
-
-*Ong, C.W., Hancock, A.S., \textbf{Barrett, T.S.}, Lee, E.B., Wan, N., Gillam, R., Levin, M.E., \& Twohig, M.P. (2020). A preliminary investigation of the effect of acceptance and commitment therapy on neural activation in clinical perfectionism. \emph{Journal of Contextual Behavioral Science, 18}, 152-161. doi: 10.1016/j.jcbs.2020.09.007.
-
-Lansford, K., Borrie, S.A., \textbf{Barrett, T.S.}, & Flechaus, C. (2020). When additional training isn’t enough: Further evidence that unpredictable speech inhibits adaptation. \emph{Journal of Speech, Language, and Hearing Research, 63}(6), 1700-1711. doi: 10.1044/2020_JSLHR-19-00380.
-
-*Darcy-Mahoney, A., White, R.D., Velasquez, A., \textbf{Barrett, T.S.}, Clark R.H., & Ahmad, K.A. (2020). Impact of Restrictions on Parental Presence in Neonatal Intensive Care Units Related to COVID-19. \emph{Journal of Perinatology, 40}, 36-46. doi: 10.1038/s41372-020-0753-7.
-
-\vspace{-4pt}
-\forceindent $-$ [medRxiv Pre-Print](https://www.medrxiv.org/content/10.1101/2020.07.22.20158949v1)
-
-*Larson, A.L., \textbf{Barrett, T.S.} \& McConnell, S.R. (2020). Exploring Early Childhood Language Environments: A Comparison of Language Use and Exposure in the Home and Childcare Settings. \emph{Language, Speech, and Hearing Services in Schools, 51}(3), 706-719. doi: 10.1044/2019_LSHSS-19-00066. \img{osf_data.png}{https://osf.io/796d4/}\img{osf_materials.png}{https://osf.io/796d4/} 
-
-Borrie, S.A., Wynn, C.J., Berisha, V., Lubold, N., Willi, M.M., Coelho, C.A., & \textbf{Barrett, T.S.} (2020). Conversational coordination of articulation responds to context: A clinical test case with traumatic brain injury. \emph{Journal of Speech, Language, and Hearing Research, 63}(8), 2567-2577. doi: 10.1044/2020_JSLHR-20-00104.
-
-*Nelson, L.H., Anderson, K., Whicker, J., \textbf{Barrett, T.S.}, Muñoz, K. \& White, K. (2020). Classroom Listening Experiences of Students who are Deaf or Hard of Hearing using the Listening Inventory for Education-Revised (LIFE-R). \emph{Language, Speech, and Hearing Services in Schools, 51}(3), 720-733. doi: 10.1044/2020_LSHSS-19-00087.
-
-*Vázquez, A.L., Domenech Rodríguez, M.M., Schwartz, S.E., Amador Buenabad, N.G., Bustos, M., Gutierrez, M., Villatoro Velázquez, J.A., \& \textbf{Barrett, T.S.} (2020). Innovative Identification of Substance Use Predictors: Machine Learning in National Sample of Mexican Children. \emph{Prevention Science, 21}(2), 171-181. doi: 10.1007/s11121-020-01089-4.
-
-*Downs, J., Mohr, K.A.J., \& \textbf{Barrett, T.S.} (2020). Determining the Academic and Affective Outcomes of Dyad Reading Among Third Graders. \emph{Journal of Educational Research, 113}(2), 120-132. doi: 10.1080/00220671.2020.1755615.
-
-Borrie, S.A., \textbf{Barrett, T.S.}, Liss, J., & Berisha, V. (2019). Characterizing conversational entrainment in dysarthria using a multidimensional, clinically meaningful approach. \emph{Journal of Acoustical Society of America}. doi: 10.1044/2019_JSLHR-19-00194.  \img{osf_data.png}{https://osf.io/ktg5q/}\img{osf_materials.png}{https://osf.io/ktg5q/}
-
-Lansford, K., Borrie, S.A., & \textbf{Barrett, T.S.} (2019). Regularity matters: Unpredictable speech degradation inhibits adaptation to dysarthric speech. \emph{Journal of Speech, Language, and Hearing Research}. doi: 10.1044/2019_JSLHR-19-00055.
-
-*Smith, B.M., Ong, C.W., \textbf{Barrett, T.S.}, Bluett, E.J., Slocum, T.A., & Twohig, M.P. (2019). Longitudinal effects of a 2-year meditation and Buddhism program on well-being, quality of life, and valued living. \emph{Mindfulness, 10}(10), 2095-2109. doi: 10.1007/s12671-019-01165-z.     \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
-
-*Ong, C.W., Barney, J.L., \textbf{Barrett, T.S.}, Lee, E.B., Levin, M.E., & Twohig, M.P. (2019). The role of psychological inflexibility and self-compassion in acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Contextual Behavioral Science, 13}. doi: 10.1016/j.jcbs.2019.06.005.
-
-*Ong, C.W., Lee, E. B., Krafft, J., Terry, C.L., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (2019). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. \emph{Journal of Obsessive-Compulsive and Related Disorders, 22}. doi: 10.1016/j.jocrd.2019.100444. 
-
-\textbf{Barrett, T.S.} \& Lockhart, G. (2019). Efficient Exploration of Many Variables and Interactions Using Regularized Regression. \emph{Prevention Science, 20}(4), 575-584. doi: 10.1007/s11121-018-0963-9. \img{osf_data.png}{https://osf.io/kat82/}\img{osf_materials.png}{https://osf.io/kat82/} 
-
-*Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (2019). Chronic health conditions and adolescent friendships: Perspectives for social network analysis. \emph{International Journal of Adolescent Medicine and Health}. doi: 10.1515/ijamh-2018-0293.
-
-Borrie, S.A., \textbf{Barrett, T.S.}, Yoho, S.E. (2019). Autoscore: An open-source automated tool for scoring listener perception of speech. \emph{Journal of Acoustical Society of America, 145}(1), 392-399. \img{osf_materials.png}{https://github.com/autoscore/autoscore} 
-
-Yoho, S.E., Borrie, S.A., \textbf{Barrett, T.S.}, \& Whittaker, D.B. (2019). Are there sex effects for speech intelligibility in American English? Examining the influence of talker, listener, and methodology. \emph{Attention, Perception, and Psychophysics, 81}(2), 558-570.
-
-Borrie, S.A., \textbf{Barrett, T.S.}, Willi, M., \& Berisha, V. (2019). Syncing up for a good conversation: A clinically-meaningful methodology for capturing conversational entrainment in the speech domain. \emph{Journal of Speech, Language, and Hearing Research}, 1-14. \img{osf_data.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}\img{osf_materials.png}{https://www.openicpsr.org/openicpsr/project/102720/version/V1/view}
-
-\textbf{Barrett, T.S.}, Wylie, A., Vogel, B., Sanghavi, K., Raspa, M., Aveni, K.P., Tullis, K., Caggana, M, White, K.R., \& Bodurtha, J. (2018). Where Do We Go From Here? The Need for Genetic Referrals in Patients who are Deaf or Hard of Hearing: Findings from a Regional Survey. \emph{Journal of Early Hearing Detection and Intervention, 3}(1), 36-53. \img{osf_data.png}{https://osf.io/8thwf}\img{osf_materials.png}{https://osf.io/8thwf}
-
-*Yoho, S.E., Healy, E. W., Youngdahl, C., \textbf{Barrett, T.S.}, & Apoux, F. (2018). Speech-material and talker effects in speech band importance. \emph{Journal of the Acoustical Society of America, 143}(3). doi: 10.1121/1.5026787.
-
-Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2018). Understanding dysrhythmic speech: When rhythm doesn't matter and learning doesn't happen. \emph{Journal of the Acoustical Society of American Express Letters, 143}(5). doi: 10.1121/1.5037620.
-
-\textbf{Barrett, T.S.} \& Brignone, E. (2017). Furniture for Quantitative Scientists. \emph{R Journal, 9}(2), 142-146. \img{osf_data.png}{https://cran.r-project.org/web/packages/furniture/index.html}\img{osf_materials.png}{https://cran.r-project.org/web/packages/furniture/index.html}
-
-Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2017). Generalized Adaptation to Dysarthric Speech. \emph{Journal of Speech, Language, and Hearing Research, 60}, 3110-3117. doi: 10.1044/2017_JSLHR-S-17-0127.
-
-\textbf{Barrett, T.S.} \& White, K.R. (2017). Trends in Hearing Loss Among Adolescents. \emph{Pediatrics, 140}(6), e20170619. doi: 10.1542/peds.2017-0619. \img{osf_materials.png}{https://osf.io/w5t2f/}
-
-Fargo, J.D., Brignone, E., Metraux, S., Peterson, R., Carter, M.E., \textbf{Barrett, T.}, Palmer, M., Redd, A., Samore, M.H., \& Gundlapalli, A.V. (2017). Homelessness Following Disability-Related Discharges from Active Duty Military Service in Afghanistan and Iraq. \emph{Disability and Health Journal, 10}, 592-599. doi: 10.1016/j.dhjo.2017.03.003.
-
-*Brown, L.T., Mohr, K.A.J., Wilcox, B.R., \& \textbf{Barrett, T.S.} (2017). The effects of dyad reading and text difficulty on third-graders’ reading achievement. \emph{Journal of Educational Research.} doi: 10.1080/00220671.2017.1310711
-
-Brignone, E., Gundlapalli, A.V., Blais, R.K., Kimerling, R., \textbf{Barrett, T.S.}, Nelson, R.E., Carter, M.E., Samore, M.A., \& Fargo, J.D. (2017). Increased Health Care Utilization and Costs among Veterans with a Positive Screen for Military Sexual Trauma. \emph{Medical Care, 55}, S70-S77. doi: 10.1097/MLR.0000000000000767
-
-*Long, E., \textbf{Barrett, T.S.}, \& Lockhart, G. (2017). Network-behavior dynamics of adolescent friendships, alcohol use, and physical activity. \emph{Health Psychology, 36}(6), 577-586. doi: 10.1037/hea0000483
-
-Borrie, S.A., Lansford, K.L., \& \textbf{Barrett, T.S.} (2017). Rhythm perception and its role in perception and learning of dysrhythmic speech. \emph{Journal of Speech, Language, and Hearing Research, 60}(3), 1-10. doi: 10.1044/2016_JSLHR-S-16-0094
-
-Behl, D., White, K., \textbf{Barrett, T.}, Blaiser, K., Callow-Heusser, C., \& Croshaw, T. (2017). A Multisite Study Evaluating the Benefits of Early Intervention via Telepractice. \emph{Infant and Young Children, 30}(2), 147-161.
-
-\textbf{Barrett, T.S.} \& White, K. R. (2016). Prevalence and Trends of Childhood Hearing Loss Based on Federally-funded National Surveys: 1994–2013. \emph{Journal of Early Hearing Detection and Intervention, 1}(2), 8-16.
-
-Doutré, S. M., \textbf{Barrett, T.S.}, Greenlee, J. \& White, K. R. (2016). Losing Ground: Awareness of Congenital Cytomegalovirus in the United States. \emph{Journal of Early Hearing Detection and Intervention, 1}(2), 39-48.
-
-*Muñoz, K., Rusk, S.E.P., Nelson, L., Preston, E., White, K.R., \textbf{Barrett, T.S.} \& Twohig, M.P. (2016). Pediatric Hearing Aid Management: Parent Reported Needs for Learning Support. \emph{Ear and Hearing Journal. 37}(6), 703-709.
-
-Borgogna, N., Lockhart, G., Grenard, J, \textbf{Barrett, T.}, Shiffman, S. \& Reynolds, K. (2015). Ecological Momentary Assessment of Urban Adolescents’ Technology Use and Cravings for Unhealthy Snacks and Drinks: Differences by Ethnicity and Sex. \emph{Journal of the Academy of Nutrition and Dietetics, 115}(5), 759-766.
-
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-\vspace{5pt}
-\subsection{Under Review/In Revision}
-\vspace{-5pt}
-\hrule
-
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
-\setlength{\parskip}{6pt}
-\noindent
-
-Barney, J., \textbf{Barrett, T.S.}, Lensgrav-Benson, T., Quakenbush, B., Twohig, M. (under review). Confirmatory Factor Analysis and Measurement Invariance of the Cognitive Fusion Questionnaire-Body Image in a Clinical Eating Disorder Sample. \emph{European Eating Disorders Review}.
-
-Vázquez, A. L., Garcia, B. H., Navarro, C., \textbf{Barrett, T.S.}, Domenech Rodríguez, M. M. (under review). An ecological examination of adolescent e-cigarette use: A machine learning approach to understanding a health epidemic. \emph{Psi Chi Journal of Psychological Research}.
-
-Vázquez, A.L., Domenech Rodríguez, M.M., \textbf{Barrett, T.S.}, Amador Buenabad, N.G., Gutiérrez López, M. de L., Bustos Gamiño, M.N., & Villatoro Velázquez, J.A. (under review). Perceived parent characteristics and practices classify lifetime substance use among Mexican children. \emph{Substance Use \& Misuse}.
-
-Vázquez, A.L., Chou, T., Navarro Flores, C.M., \textbf{Barrett, T.S.}, Villodas, M.T., & Domenech Rodríguez, M.M. (under review). Understanding caregiver perceived need for and utilization of adolescent counseling services through machine learning. \emph{PLOS ONE}.
-
-Smith, B.M., Barney, J.L., Ong, C.W., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (under review). Physiological, behavioral, and self-report outcomes of acceptance and regulation approaches to exposures for intrusive thoughts. \emph{BRAT}.
-
-Sulzer, S., Prevedel, S., \textbf{Barrett, T.S.}, Voss, M.W., Manning, C., Madden, E.F. (under review). Professional Education to Reduce Provider Stigma toward Harm Reduction and Pharmacotherapy. \emph{Drugs: Education, Prevention \& Policy}.
-
-Emery, C., Morgan, R., \& \textbf{Barrett, T.S.} (under review). The Effects of Joint Training on Career and Technical Education and Special Education Professionals. \emph{Career Development and Transition for Exceptional Individuals}.
-
-<!--
-
--->
+```{r, echo=FALSE, results='asis'}
+pubs_list(pubs)
+```
 
 
-<!-- Prep Ones 
-- In Preparation
+\newpage
 
-\textbf{Barrett, T.S.} \& Cruz, R. (in preparation). Average Marginal Effects for Interpretable Regression Estimates. \emph{Multivariate Behavioral Research}.
-
--->
 
 <!-- WestEd Publications -->
 \setlength{\parindent}{0in}
@@ -328,13 +246,13 @@ Emery, C., Morgan, R., \& \textbf{Barrett, T.S.} (under review). The Effects of 
 \setlength{\parskip}{0pt}
 \noindent
 
-\vspace{20pt}
+
 \section{POLICY REPORTS}
 \vspace{-5pt}
 \hrule
 
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
+\setlength{\parindent}{-.3in}
+\setlength{\leftskip}{.5in}
 \setlength{\parskip}{5pt}
 \noindent
 
@@ -356,18 +274,18 @@ Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Capara
 \vspace{3pt}
 \footnotesize \hspace{4pt} Pre-prints not otherwise published in a peer-reviewed journal \normalsize
 
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
+\setlength{\parindent}{-.3in}
+\setlength{\leftskip}{.5in}
 \setlength{\parskip}{5pt}
 \noindent
 
-\textbf{Barrett, T.S.} (2019, Oct 3). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/u8ekc \img{osf_data.png}{https://osf.io/smcg8/}\img{osf_materials.png}{https://osf.io/smcg8/}
+\textbf{Barrett, T.S.} (2019, Oct 3). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/u8ekc \img{osfdata.png}{https://osf.io/smcg8/}\img{osfmaterials.png}{https://osf.io/smcg8/}
 
-\textbf{Barrett, T.S.} (2019, August 15). Six Reasons to Consider Using R in Psychological Research. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/8mb6d \img{osf_data.png}{https://osf.io/436d7/}\img{osf_materials.png}{https://osf.io/436d7/}
+\textbf{Barrett, T.S.} (2019, August 15). Six Reasons to Consider Using R in Psychological Research. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/8mb6d \img{osfdata.png}{https://osf.io/436d7/}\img{osfmaterials.png}{https://osf.io/436d7/}
 
-\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (2019, June 18). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/fgm8t \img{osf_data.png}{https://osf.io/753kc/}\img{osf_materials.png}{https://osf.io/753kc/}
+\textbf{Barrett, T.S.}, Cruz, R.A., \& Lockhart, G. (2019, June 18). Marginal Mediation Analysis: A Practical Statistical Framework for Interpretable Mediated Effects. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/fgm8t \img{osfdata.png}{https://osf.io/753kc/}\img{osfmaterials.png}{https://osf.io/753kc/}
 
-\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/d8au4 \img{osf_data.png}{https://osf.io/htqvr/}\img{osf_materials.png}{https://osf.io/htqvr/}
+\textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/d8au4 \img{osfdata.png}{https://osf.io/htqvr/}\img{osfmaterials.png}{https://osf.io/htqvr/}
 
 
 <!-- Published Works in Conference Proceedings -->
@@ -381,8 +299,8 @@ Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Capara
 \vspace{-5pt}
 \hrule
 
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
+\setlength{\parindent}{-.3in}
+\setlength{\leftskip}{.5in}
 \setlength{\parskip}{5pt}
 \noindent
 
@@ -412,17 +330,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \setlength{\leftskip}{.25in}
 \setlength{\parskip}{0pt}
 \noindent
-\subsection{Books}
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
-\noindent
-
-\textbf{Barrett, T.S.} (in development). *R for Researchers: An Introduction.* Online access: tysonbarrett.com/Rstats/.
-
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{.25in}
-\setlength{\parskip}{0pt}
-\noindent
 \subsection{R Packages}
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
@@ -442,20 +349,6 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 
 \textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) `furniture`: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
 
-
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{.25in}
-\setlength{\parskip}{0pt}
-\noindent
-\subsection{Dissertation}
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
-\noindent
-
-\textbf{Barrett, T.S.} (2018). Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects. Doctoral dissertation. \img{osf_data.png}{https://osf.io/64awp/}\img{osf_materials.png}{https://osf.io/64awp/}
-
-
-\newpage
 
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}
@@ -497,8 +390,8 @@ ggplot(citations, aes(year, cites, fill = year)) +
 \section{SELECTED PRESENTATIONS}
 \vspace{-5pt}
 \hrule
-\setlength{\parindent}{-.5in}
-\setlength{\leftskip}{1in}
+\setlength{\parindent}{-.3in}
+\setlength{\leftskip}{.5in}
 \setlength{\parskip}{6pt}
 \noindent
 
@@ -601,19 +494,14 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
 
 \subsection{\textsc{Primary Interest: Quantitative Methods}}
 
-- Undergraduate and Graduate Statistics (ANOVA and Regression [OLS, GLM])
+- Undergraduate and Graduate Applied Statistics
 - Multilevel Modeling (Hierarchical Linear Modeling, GEE, Mixed Effects)
-- Mediation Analysis (Marginal Mediation, Moderated Mediation)
 - Reproducible Research (Research Methods, Open Science Framework)
 - R for the Social Sciences (Undergraduate and Graduate Level)
-- Exploratory Data Analysis
-- Structural Equation Modeling (Psychometrics and Measurement Models, Mixture Modeling)
 - Research Methods (Undergraduate and Graduate Level)
-
-\subsection{\textsc{Secondary Interest: Public Health}}
-
-- Research in Public Health
-- Disabilities (Hearing Loss, Developmental Disabilities)
+- Causality and Econometrics (Undergraduate and Graduate Level)
+- Structural Equation Modeling (Psychometrics and Measurement Models, Mixture Modeling)
+- Mediation Analysis (Marginal Mediation, Moderated Mediation)
 
 
 <!-- Teaching Experience -->
