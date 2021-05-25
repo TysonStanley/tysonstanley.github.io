@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.27)  30 APR 2021 10:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.5.25)  25 MAY 2021 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CV.tex
 (./CV.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (/Users/tbarret/Library/TinyTeX/texmf-dist/te
+L3 programming layer <2021-05-11> (/Users/tbarret/Library/TinyTeX/texmf-dist/te
 x/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
@@ -137,11 +137,11 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 )
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.
 sty (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
+Package: expl3 2021-05-11 L3 programming layer (loader) 
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.
 def
-File: l3backend-xetex.def 2021-03-18 L3 backend support: XeTeX
+File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
 (|extractbb --version)
 \c__kernel_sys_dvipdfmx_version_int=\count195
 \l__color_backend_stack_int=\count196
@@ -167,7 +167,7 @@ ty
 eneric.tex)))
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys
 2e.sty
-Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-05-07 LaTeX2e option processing using LaTeX3 keys
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 
@@ -919,15 +919,15 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
-File: osfdata.png Graphic file (type bmp)
-<osfdata.png>
-File: osfmaterials.png Graphic file (type bmp)
-<osfmaterials.png>
 
 Overfull \hbox (5.60538pt too wide) in alignment at lines 298--319
  [] [] 
  []
 
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
@@ -954,7 +954,7 @@ Overfull \hbox (5.60538pt too wide) in alignment at lines 319--339
  []
 
 [3]
-Overfull \hbox (5.60538pt too wide) in alignment at lines 339--342
+Overfull \hbox (5.60538pt too wide) in alignment at lines 339--343
  [] [] 
  []
 
@@ -981,10 +981,11 @@ File: tidyfast_hex.png Graphic file (type bmp)
 <tidyfast_hex.png>
 File: connectivity_hex.jpg Graphic file (type bmp)
 <connectivity_hex.jpg>
+[6]
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 486--490
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 485--489
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -994,13 +995,12 @@ File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
-[6]
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
 [7] [8] [9]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 804.
+(hyperref)                than one, level fixed on input line 803.
 
 [10] (./CV.aux)
 
@@ -1010,12 +1010,12 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 0B0ADB29CD71DC8BDC418AFA68059129;3413.
  ) 
 Here is how much of TeX's memory you used:
- 17960 strings out of 478918
- 321561 string characters out of 5865691
- 830748 words of memory out of 5000000
- 37533 multiletter control sequences out of 15000+600000
+ 18073 strings out of 478764
+ 324277 string characters out of 5863247
+ 833286 words of memory out of 5000000
+ 37804 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 98i,10n,122p,542b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,10n,121p,542b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on CV.pdf (10 pages).

@@ -237,8 +237,6 @@ pubs_list(pubs)
 ```
 
 
-\newpage
-
 
 <!-- WestEd Publications -->
 \setlength{\parindent}{0in}
