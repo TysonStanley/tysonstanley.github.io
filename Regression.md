@@ -74,9 +74,5 @@ We may also pull from [FiveThirtyEight's open data on GitHub](https://github.com
 | L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_misc_updatedclean.pptx)  |  | 
 
 
-### Final Project
-
-- [Instructions]({{ site.slidesurl }}/EDUC-7610/Homework/Final)
-- Example Final Project [PDF]({{ site.slidesurl }}/EDUC-7610/Homework/Example Final Project.pdf) & [Word]({{ site.slidesurl }}/EDUC-7610/Homework/Example Final Project.docx) 
 
 

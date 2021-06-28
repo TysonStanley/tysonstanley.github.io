@@ -395,6 +395,8 @@ ggplot(citations, aes(year, cites, fill = year)) +
 
 <!-- -->
 
+Smith, B.M., \textbf{Barrett, T.S.}, & Twohig, M.P. (2021, June). Processes of change during exposure for intrusive thoughts. In L. Capel (Chair), Investigating acceptance and commitment therapy interventions and processes in obsessive-compulsive and related disorders. Paper presented at the annual meeting of the Association of Contextual Behavioral Science, online.
+
 Smith, B.M., Barney, J.L., Ong, C.W., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (2020, November). Outcomes and mechanisms of change in acceptance and regulation approaches to exposures for intrusive thoughts. In S. P. Buinewics & J. Buchholz (Chairs), Understanding the therapeutic process of exposure therapy to optimize treatment. Paper presented at the annual meeting of the Association for Behavioral and Cognitive Therapies, online.
 
 Smith, B. M., Barney, J.L., Ong, C.W., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (2020, July). Physiological, behavioral, and self-report outcomes of acceptance and regulation approaches to exposures for intrusive thoughts. In S. Mpoulkoura (Chair), Third-wave approaches to anxiety disorders treatment: Outcomes and processes of change. Paper presented at the annual meeting of the Association for Contextual Behavioral Science, online.
