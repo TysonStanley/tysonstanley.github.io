@@ -6,7 +6,7 @@ permalink: /syllabus/educ7610
 
 # Regression Analysis
 #### EDUC 7610
-#### Spring 2021
+#### Summer 2021
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -16,14 +16,10 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Tues and Thurs 4:30 pm - 5:45 pm <br>
+&nbsp; &nbsp; Mon and Wed 12:00 pm - 2:45 pm <br>
 &nbsp; &nbsp; Zoom Link (Posted on Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
-<br>
-<strong>Assistant Instructor: Carly Fox, MS</strong> <br>
-&nbsp; &nbsp; Email: carlybeth.fox@aggiemail.usu.edu<br>
-&nbsp; &nbsp; Office Hours: By appointment (via Zoom)
 </div>
 
 
@@ -34,10 +30,6 @@ permalink: /syllabus/educ7610
 - [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei): for Exams
 - *Optional:* Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
 - *Optional:* Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
-
-<!--
-*Note: it is advantageous to bring a laptop to class, but not required.*
--->
 
 ## Course Purpose:
 
@@ -57,7 +49,7 @@ This is a hybrid course; we will use both online recorded lectures and in-class 
 
 ## Preparation & Attendance:
 
-The nature of this course requires regular class attendance and participation. The student is therefore expected to watch the recorded lecture and read any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Please note that this is a 3-credit course in a 14-week period, requiring an average of approximately 9 HOURS of time outside of class EVERY WEEK devoted to reading and homework for students who are adequately prepared for this course. Students should not miss class activities as some material covered in class will not be covered anywhere else. All information covered in lectures and in-class activities can be used for examination questions. 
+The nature of this course requires regular class attendance and participation. The student is therefore expected to watch the recorded lecture and read any assigned readings BEFORE each class session in order to be prepared for classroom activities and discussion (see ‘Discussions’ below). Students should not miss class activities as some material covered in class will not be covered anywhere else. All information covered in lectures and in-class activities can be used for examination questions. 
 
 ## Four Components of Your Grade:
 
@@ -69,15 +61,13 @@ We will cover all 18 chapters in this course. You will need to provide discussio
 
 **II. Assignments, 25% of grade**
 
-Three equally weighted unit assignments will form the basis for learning the practice of statistics at the level required by this course. The units are outlined on the course schedule. Details regarding what is required for each assignment will be available at [tysonbarrett.com/teaching/regression](https://tysonbarrett.com/teaching/regression). The in-class activities will directly address all questions in the assignments. That is, the in-class activities will be built around answering each question in each assignment as a class. This means you are required to come and participate in order to get the answers correct.
-
-Assignments require the manipulation and analysis of data, as well as professional communication of results. Each of the assignments will require analysis in R and RStudio and subsequent interpretation of the output. Additional reading of provided articles may be required, too. Instead of focusing on factual understanding (this will be tested on the examinations--see below), the assignments will provide students the opportunity to apply the material and communicate the results in a manner that will aid them in their research. Each student must turn in his or her own work, not photocopies or identical replicates.
+Three equally weighted unit assignments will form the basis for learning the practice of statistics at the level required by this course. The assignment is the application of unit material to the data you selected to use for your Final Project (discussed next). These assignments are flexible and provide you an opportunity to practice using the material for work that interests you and gives you a safe place to get things wrong (article reviewers are rarely all that kind...). Assignments require the manipulation and analysis of data, as well as professional communication of results. As such, these assignments are stepping stones leading to your full final project.
 
 All assignments are required: no scores will be dropped.  Assignments are due by 11:59pm on the due date (see course schedule). 
 
 **IV. Final Project, 20% of grade**
 
-The Final Project will consist of using at least one major method from 3 of the 4 units in a short article format. There is some flexibility to what the Final Project will look like and I recommend that you use it to help with theses, dissertations, or research articles. More information on this assignment is found at [tysonbarrett.com/teaching/regression](https://tysonbarrett.com/teaching/regression).
+The Final Project will consist of using material from the class to write up a short article format. There is some flexibility to what the Final Project will look like and I recommend that you use it to help with theses, dissertations, or research articles. More information on this assignment will be discussed early on in the class. The project is due at the end of the semester.
 
 
 **IV. Examinations, 30% of grade**
@@ -184,7 +174,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring_flipped_nobreak.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_summer_flipped.png)
 
 
 
