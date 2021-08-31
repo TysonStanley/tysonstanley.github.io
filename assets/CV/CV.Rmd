@@ -208,7 +208,7 @@ pubs_list = function(data){
                                            paste0(journal_volume_issue, ", ", pages, "."), 
                                            paste0(journal_volume_issue, "."))
     ) %>% 
-    mutate(doi = str_replace(doi, "_", "\\_")) %>% 
+    mutate(doi = str_replace(doi, "\\_", "\\\\_")) %>% 
     ungroup()
   
   cat("\\begin{longtable}{r!{\\color{lightdivider}\\vrule}p{14.6cm}}", "\n")
@@ -222,7 +222,8 @@ pubs_list = function(data){
             tolower(year),
             title,
             journal_volume_issue_pages,
-            opensci,
+            doi,
+            if_else(is.na(opensci), "", opensci),
             if_else(i == rows, "\\vspace{5pt} \n", "\\vspace{5pt} \\\\ \n"),
             sep = " "
           )
@@ -257,6 +258,8 @@ pubs_list(pubs)
 \normalsize
 
 Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Caparas, R. (2020). \emph{California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California}. WestEd. https://www.wested.org/resources/ca-special-education-funding-system/
+
+Doutre, S.M., Willis, J., \textbf{Barrett, T.}, Ripma, T., Caparas, R., & Krausen, K. (2021). \emph{California State Special Education Funding System Study, Part 2: Findings, Implications, and Considerations for Improving Special Education Funding in California}. WestEd. https://www.wested.org/ca-special-education-funding-system-study/
 
 
 <!-- Pre-Prints -->

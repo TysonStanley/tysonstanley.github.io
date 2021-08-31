@@ -14,7 +14,7 @@ permalink: /syllabus/introR
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Tuesdays 12:00 - 12:55pm <br>
+&nbsp; &nbsp; Tuesdays 3:30 - 4:20pm <br>
 &nbsp; &nbsp; Via Zoom (link in Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
