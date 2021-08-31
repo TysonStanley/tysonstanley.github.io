@@ -14,6 +14,9 @@ My most recent class material can be found below:
 
 [Intro Syllabus]({{ site.baseurl }} /syllabus/introR)
 
+[Link to Encyclopedia](https://cehs-research.github.io/eBooks/org.html)
+
+
 | &nbsp;  |     Topic               | Chapter                   | Packet  | Slides
 |---------|:------------------------|:-------------------------:|:-------:|:-------------------------------------------------------------------:
 | Week 1  | Intro and Import Data   | 1                         | 1       | [Link](https://tysonstanley.github.io/introR/01_Intro.html)
