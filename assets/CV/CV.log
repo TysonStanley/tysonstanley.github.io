@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.8)  20 SEP 2021 10:53
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.8)  22 SEP 2021 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,13 +865,13 @@ LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 [1
 
 ] [2]
-Underfull \hbox (badness 1163) in paragraph at lines 299--300
+Underfull \hbox (badness 1163) in paragraph at lines 301--302
 []|\TU/lmr/m/n/10 Vázquez, A.L., Navarro Flores, C.M., Alvarez, M.C., Gonzalez 
 Vera, J. M., \TU/lmr/bx/sc/10 Barrett,
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 302--303
+Underfull \hbox (badness 1107) in paragraph at lines 304--305
 []|\TU/lmr/m/n/10 Sulzer, S., Prevedel, S., \TU/lmr/bx/sc/10 Barrett, T.S.\TU/l
 mr/m/n/10 , Voss, M.W., Manning, C. & Madden, E.F.
  []
@@ -925,15 +925,11 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 297--345
+Overfull \hbox (5.60538pt too wide) in alignment at lines 297--347
  [] [] 
  []
 
 [3] [4] [5]
-File: osfdata.png Graphic file (type bmp)
-<osfdata.png>
-File: osfmaterials.png Graphic file (type bmp)
-<osfmaterials.png>
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
@@ -947,6 +943,10 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
 File: tidyfast_hex.png Graphic file (type bmp)
@@ -956,7 +956,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 493--497
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 495--499
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -971,7 +971,7 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [7] [8] [9]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 818.
+(hyperref)                than one, level fixed on input line 820.
 
 [10] [11] (./CV.aux)
 
@@ -983,7 +983,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18024 strings out of 478451
  322470 string characters out of 5857788
- 864798 words of memory out of 5000000
+ 867896 words of memory out of 5000000
  38090 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
