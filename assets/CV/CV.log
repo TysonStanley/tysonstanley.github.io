@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.8)  22 SEP 2021 21:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  30 SEP 2021 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CV.tex
 (./CV.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-06-18> (/Users/tbarret/Library/TinyTeX/texmf-dist/te
+L3 programming layer <2021-08-27> (/Users/tbarret/Library/TinyTeX/texmf-dist/te
 x/latex/base/article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
@@ -127,11 +127,11 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-math.
 sty (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-06-18 L3 programming layer (loader) 
+Package: expl3 2021-08-27 L3 programming layer (loader) 
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.
 def
-File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
+File: l3backend-xetex.def 2021-08-04 L3 backend support: XeTeX
 (|extractbb --version)
 \c__kernel_sys_dvipdfmx_version_int=\count198
 \l__color_backend_stack_int=\count199
@@ -151,11 +151,11 @@ TeX
 
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.s
 ty
-Package: xparse 2021-06-18 L3 Experimental document command parser
+Package: xparse 2021-08-27 L3 Experimental document command parser
 )
 (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys
 2e.sty
-Package: l3keys2e 2021-06-18 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2021-08-27 LaTeX2e option processing using LaTeX3 keys
 ) (/Users/tbarret/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 
@@ -865,13 +865,13 @@ LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 [1
 
 ] [2]
-Underfull \hbox (badness 1163) in paragraph at lines 301--302
+Underfull \hbox (badness 1163) in paragraph at lines 302--303
 []|\TU/lmr/m/n/10 Vázquez, A.L., Navarro Flores, C.M., Alvarez, M.C., Gonzalez 
 Vera, J. M., \TU/lmr/bx/sc/10 Barrett,
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 304--305
+Underfull \hbox (badness 1107) in paragraph at lines 305--306
 []|\TU/lmr/m/n/10 Sulzer, S., Prevedel, S., \TU/lmr/bx/sc/10 Barrett, T.S.\TU/l
 mr/m/n/10 , Voss, M.W., Manning, C. & Madden, E.F.
  []
@@ -925,11 +925,11 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 297--347
+Overfull \hbox (5.60538pt too wide) in alignment at lines 297--348
  [] [] 
  []
 
-[3] [4] [5]
+[3] [4] [5] [6]
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
@@ -938,7 +938,6 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
-[6]
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
@@ -956,7 +955,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 495--499
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 496--500
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -971,7 +970,7 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [7] [8] [9]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 820.
+(hyperref)                than one, level fixed on input line 821.
 
 [10] [11] (./CV.aux)
 
@@ -981,10 +980,10 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: 0B0ADB29CD71DC8BDC418AFA68059129;3413.
  ) 
 Here is how much of TeX's memory you used:
- 18024 strings out of 478451
- 322470 string characters out of 5857788
- 867896 words of memory out of 5000000
- 38090 multiletter control sequences out of 15000+600000
+ 18026 strings out of 478492
+ 322500 string characters out of 5861099
+ 865338 words of memory out of 5000000
+ 38051 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,10n,120p,543b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
