@@ -56,7 +56,6 @@ year <- lubridate::year(today)
  & \emph{Utah State University}\\
  &\footnotesize{\emph{\href{https://www.researchgate.net/publication/323946090_Marginal_Mediation_Analysis_A_New_Framework_for_Interpretable_Mediated_Effects?channel=doi&linkId=5ab418a60f7e9b4897c79cab&showFulltext=true}{Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects}}}\\
  \multicolumn{2}{c}{} \\
- \multicolumn{2}{c}{} \\
 
  \textsc{\textbf{B.S. Economics}} & \emph{May 2014} \\
   & \emph{Utah State University}\\
@@ -88,8 +87,9 @@ year <- lubridate::year(today)
 \vspace{2pt}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-Present
-\newline \hspace*{.6in} \emph{Principle Investigator of the Social Data Lab}
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
+\newline \hspace*{.6in} \emph{Administrator of SONA Systems}
+\newline \hspace*{.6in} \emph{Administrator of REDCap}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant}, Prevention Science Lab, Utah State University \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisor: Ginger Lockhart, PhD}
@@ -350,6 +350,8 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 
 \textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) `furniture`: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
 
+
+\newpage
 
 \setlength{\parindent}{0in}
 \setlength{\leftskip}{0in}

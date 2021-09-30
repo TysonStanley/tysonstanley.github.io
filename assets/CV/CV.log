@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  30 SEP 2021 12:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  30 SEP 2021 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,13 +865,13 @@ LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 [1
 
 ] [2]
-Underfull \hbox (badness 1163) in paragraph at lines 302--303
+Underfull \hbox (badness 1163) in paragraph at lines 301--302
 []|\TU/lmr/m/n/10 Vázquez, A.L., Navarro Flores, C.M., Alvarez, M.C., Gonzalez 
 Vera, J. M., \TU/lmr/bx/sc/10 Barrett,
  []
 
 
-Underfull \hbox (badness 1107) in paragraph at lines 305--306
+Underfull \hbox (badness 1107) in paragraph at lines 304--305
 []|\TU/lmr/m/n/10 Sulzer, S., Prevedel, S., \TU/lmr/bx/sc/10 Barrett, T.S.\TU/l
 mr/m/n/10 , Voss, M.W., Manning, C. & Madden, E.F.
  []
@@ -925,7 +925,7 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 297--348
+Overfull \hbox (5.60538pt too wide) in alignment at lines 296--347
  [] [] 
  []
 
@@ -955,7 +955,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 496--500
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 495--499
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -965,14 +965,15 @@ File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
+[7]
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[7] [8] [9]
+[8] [9] [10]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 821.
+(hyperref)                than one, level fixed on input line 822.
 
-[10] [11] (./CV.aux)
+[11] (./CV.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -986,6 +987,6 @@ Here is how much of TeX's memory you used:
  38051 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,10n,120p,543b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,10n,120p,543b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on CV.pdf (11 pages).
