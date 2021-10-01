@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  30 SEP 2021 13:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  1 OCT 2021 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -865,7 +865,7 @@ LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 [1
 
 ] [2]
-Underfull \hbox (badness 1163) in paragraph at lines 301--302
+Underfull \hbox (badness 1163) in paragraph at lines 300--301
 []|\TU/lmr/m/n/10 Vázquez, A.L., Navarro Flores, C.M., Alvarez, M.C., Gonzalez 
 Vera, J. M., \TU/lmr/bx/sc/10 Barrett,
  []
@@ -983,7 +983,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18026 strings out of 478492
  322500 string characters out of 5861099
- 865338 words of memory out of 5000000
+ 866338 words of memory out of 5000000
  38051 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
