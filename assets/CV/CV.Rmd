@@ -4,6 +4,10 @@ output:
     latex_engine: xelatex
     includes: 
       in_header: preamble.tex
+editor_options: 
+  chunk_output_type: console
+params:
+  cite_fig: true
 ---
 
 ```{r scholar_info, echo = FALSE, warning = FALSE, message = FALSE}
@@ -31,7 +35,7 @@ year <- lubridate::year(today)
 <!-- Name -->
 \hspace{.08in}\huge\textsc{Tyson S. Barrett, PhD} \hfill \footnotesize Updated: `r month` `r day`, `r year`
 \normalsize
-\vspace{8pt}
+\vspace{6pt}
 
 <!-- General Info -->
 \begin{tabular}{rl}
@@ -45,9 +49,9 @@ year <- lubridate::year(today)
 \end{tabular}
 
 <!-- Education -->
-\vspace{0pt}
+\vspace{-2pt}
 \section{EDUCATION}
-<!--\vspace{-5pt}-->
+\vspace{-6pt}
 \hrule
 \vspace{2pt}
 
@@ -67,22 +71,22 @@ year <- lubridate::year(today)
 \end{tabular}
 
 <!-- Research Areas -->
-\vspace{1pt}
+\vspace{-5pt}
 \section{RESEARCH AREAS}
-<!--\vspace{-5pt}-->
+\vspace{-6pt}
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textsc{Primary:} Accessible Methodology Using R Programming, Applied Methodology in the Disability Disciplines
+\indent \hspace*{.1in} \small\textsc{Primary:} Applied Methodology in the Disability Disciplines, Communication Disorders
 
-\indent \hspace*{.1in} \textsc{Secondary:} Geographic Information Systems and Large-Scale Human Data
+\indent \hspace*{.1in} \textsc{Secondary:} Mental Health and Health Behaviors, Accessible Methodology Using R Programming
 
 \normalsize
 
 <!-- Research Experience -->
-\vspace{1pt}
+\vspace{-5pt}
 \section{RESEARCH APPOINTMENTS}
-<!--\vspace{-5pt}-->
+\vspace{-6pt}
 \hrule
 \vspace{2pt}
 
@@ -101,9 +105,9 @@ year <- lubridate::year(today)
 \newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
 
 <!-- Affiliations -->
-\vspace{1pt}
+\vspace{-5pt}
 \section{PROFESSIONAL SERVICE}
-<!--\vspace{-5pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -120,7 +124,7 @@ year <- lubridate::year(today)
 \vspace{10pt}
 \noindent
 \section{EXTERNAL FUNDING \normalsize (Ongoing)}
-<!--\vspace{-5pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{-2pt}
 
@@ -133,16 +137,25 @@ year <- lubridate::year(today)
 
 \emph{Necessary Education and eXperiential Training} \hfill September 1, 2020 - August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
 
-\indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T.S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
+\indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T. S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
 
 \indent \hspace{.25in} \emph{This project enhances Utah's peer workforce by addressing the clinical priorities of: 1) incorporating family-focused curriculum enhancements and 2) emphasizing and funding hands-on learning in mentored inter-professional field placements. It will increase training by more than 50\%, with basic and advanced (family-focused) certification and work experience. The evaluation of the program will be ongoing throughout the program's implementation.}
+
+\vspace{8pt}
+
+\emph{Bridging Harm Reduction and Wellness for Tribal} \hfill Sept 1, 2020 -	Aug 31, 2023 \newline
+\emph{and Rural Areas of the Intermountain West} 
+
+\indent \hspace{.25in} Sulzer, S. (PI), Prevedel, S., Chapoose, M., Madden, E., \textbf{Barrett, T. S. (Co-I)}, Keady, T., Peatross, J., DasGupta, D., Fullenkamp, N., & Zaman, K. Sponsored by SAMHSA, H79TI083267. Current Status: Funded. $1,099,997.
+
+\indent \hspace{.25in} \emph{This project is designed to provide opioid addiction treatment services for tribal and rural areas. The evaluation of the project is ongoing throughout the administration of the services.}
 
 \vspace{8pt}
 
 \emph{Video- and App-Based Naturalistic Language Instruction} \hfill July 1, 2020 -	June 30, 2024 \newline
 \emph{(VALI) for Spanish-Speaking Caregivers to Support \newline Bilingual Language Development in Children \newline With or At Risk for Language Delays} 
 
-\indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T.S. (Consultant)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
+\indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T. S. (Consultant)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
 
 \indent \hspace{.25in} \emph{The purpose of the research plan is to adapt an existing app, Háblame Bebé, that provides information to Spanish-speaking families about the importance of frequent and responsive verbal interactions with children in the home language but does not provide information on how to embed NLIS within everyday activities and routines to support DLLs with language delay.}
 
@@ -150,7 +163,7 @@ year <- lubridate::year(today)
 
 \emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -	March 31, 2023 
 
-\indent \hspace{.25in} Leopold, S. (PI), Borrie, S.A. (Co-I), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
+\indent \hspace{.25in} Leopold, S. (PI), Borrie, S. A. (Co-I), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
 
 \indent \hspace{.25in} \emph{The major goal of this project is to utilize an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
 
@@ -159,17 +172,17 @@ year <- lubridate::year(today)
 
 \emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
 
-\indent \hspace{.25in} Borrie, S.A. (PI), Lansford, K. (PI), & \textbf{Barrett, T.S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
+\indent \hspace{.25in} Borrie, S. A. (PI), Lansford, K. (PI), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
 
 \indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
 
 
 \vspace{8pt}
 
-\emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2020 - Aug 31, 2021 \newline
+\emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2021 - Aug 31, 2022 \newline
 \emph{Psychological distress in the context of \newline COVID-19} 
 
-\indent \hspace{.25in} Aller, T.B. (PI), \textbf{Barrett, T.S. (Co-I)}, McClain Verdoes, M. (Co-I), \& Levin, M. (Co-I). Sponsored by National Research Consortium on Mental Health in Intellectual and Developmental Disabilities. Current Status: Funded. $10,000.
+\indent \hspace{.25in} Aller, T. B. (PI), \textbf{Barrett, T. S. (Co-I)}, McClain Verdoes, M. (Co-I), \& Levin, M. (Co-I). Sponsored by National Research Consortium on Mental Health in Intellectual and Developmental Disabilities. Current Status: Funded. $10,000.
 
 \indent \hspace{.25in} \emph{The aims of the study are to explore how psychological flexibility influences psychological distress in adults with ASD and to establish the dimensionality, internal consistency, test-retest reliability, and the concurrent and convergent validity of the Acceptance and Action Questionnaire II (AAQ-II) and of the Brief Experiential Avoidance Questionnaire (BEAQ) in adults with ASD.}
 
@@ -183,21 +196,22 @@ year <- lubridate::year(today)
 \section{PEER-REVIEWED PUBLISHED WORKS}
 \vspace{-5pt}
 \hrule
-\vspace{3pt}
+\vspace{1pt}
 
 \normalsize
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 library(stringr)
 library(dplyr)
-pubs = rio::import("pubs.xlsx", sheet = "Journals")
+library(here)
+pubs = rio::import(here("assets/CV", "pubs.xlsx"), sheet = "Journals")
 pubs_list = function(data){
   data = data %>% 
     mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>% 
     group_by(year) %>% 
     mutate(header = if_else(row_number() == 1, as.character(year), " ")) %>% 
     mutate(
-      authors = str_replace(authors, "Barrett, T.S.", "\\\\textbf{Barrett, T.S.}"),
+      authors = str_replace(authors, "Barrett, T. S.", "\\\\textbf{Barrett, T. S.}"),
       authors = str_replace(authors, "&", "\\\\&"),
       journal = paste0("\\emph{", journal, "}"),
       journal = if_else(volume == "", journal, paste0(journal, ", ")),
@@ -208,7 +222,9 @@ pubs_list = function(data){
                                            paste0(journal_volume_issue, ", ", pages, "."), 
                                            paste0(journal_volume_issue, "."))
     ) %>% 
-    mutate(doi = str_replace(doi, "\\_", "\\\\_")) %>% 
+    mutate(doi = str_replace(doi, "\\_", "\\\\_"),
+           doi = str_replace(doi, "doi\\:", "https://doi.org/"),
+           doi = paste0("\\url{", doi, "}")) %>% 
     ungroup()
   
   cat("\\begin{longtable}{r!{\\color{lightdivider}\\vrule}p{14.6cm}}", "\n")
@@ -237,6 +253,23 @@ pubs_list = function(data){
 pubs_list(pubs)
 ```
 
+```{r, echo=FALSE, eval=FALSE}
+# Count of collaborators
+pubs %>% 
+  filter(year %in% c("2018", "2019", "2020", "2021", "In Press")) %>% 
+  pull(authors) %>% 
+  str_split(",") %>% 
+  unlist() %>% 
+  str_remove("\\&") %>% 
+  .[!str_detect(., "\\.$")] %>% 
+  str_remove("T\\. S\\. ") %>% 
+  str_remove("C\\. ") %>% 
+  str_remove("K\\. ") %>% 
+  str_trim() %>% 
+  str_remove("M\\. N\\.") %>% 
+  .[!str_detect(., "^M$")] %>% 
+  unique()
+```
 
 
 <!-- WestEd Publications -->
@@ -351,26 +384,26 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \textbf{Barrett, T.S.}, Brignone., E. \& Laxman, D. (2018) `furniture`: Furniture for Quantitative Researchers. URL: tysonbarrett.com/furniture. R package version `r packageVersion("furniture")`. \img{furniture_hex.jpg}{https://github.com/TysonStanley/furniture}
 
 
-\newpage
+```{r citation_fig, eval=params$cite_fig, results='asis', fig.width=8, fig.height=2.3, echo=FALSE, warning=FALSE, message=FALSE}
+cat("
+\\setlength{\\parindent}{0in}
+\\setlength{\\leftskip}{0in}
+\\setlength{\\parskip}{0pt}
 
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
+\\vspace{10pt}
+\\section{CITATION COUNT HISTORY}
+\\vspace{-5pt}
+\\hrule
+\\vspace{20pt}
+")
 
-\vspace{10pt}
-\section{CITATION COUNT HISTORY}
-\vspace{-5pt}
-\hrule
-\vspace{20pt}
-
-```{r citation_fig, fig.width=8, fig.height=2.3, echo = FALSE, warning = FALSE, message = FALSE}
 month <- months(lubridate::today())
 year <- lubridate::year(lubridate::today())
 
 ggplot(citations, aes(year, cites, fill = year)) +
   geom_col(color = "black") +
   geom_text(aes(label = cites),
-            nudge_y = 10) +
+            nudge_y = 20) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
        caption = paste("Note: Data for citations in", year, "until", month)) +
@@ -380,6 +413,7 @@ ggplot(citations, aes(year, cites, fill = year)) +
                         end = .9) +
   theme(legend.position = "none",
         axis.line = element_line(color = "black", size = .4))
+ggsave(here::here("assets/CV/citation_count.png"), width = 7, height = 4)
 ```
 
 
@@ -479,11 +513,10 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
 \hrule
 \vspace{10pt}
 
-- Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
-- Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
-- Outstanding Poster Award (Annual Meeting of EHDI)
-- Dean’s Scholarship (full tuition for two years)
-- Best Poster Presentation (Psi-Chi Undergraduate Conference)
+- 2017: Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
+- 2016: Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
+- 2016: Outstanding Poster Award (Annual Meeting of EHDI)
+- 2014: Best Poster Presentation (Psi-Chi Undergraduate Conference)
 
 
 <!-- Teaching Interests -->
@@ -525,6 +558,7 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
     - Graduate-level linear regression course for PhD students
 
 - **R for the Health, Behavioral, Educational, and Social Sciences I and II** (EDUC 6560)
+    - Workshop
     - Created, Developed, and Taught
     - Graduate Level
 
@@ -534,23 +568,24 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
         - In-person
 
 
-\subsubsection{\hspace{10pt} \emph{MOST RECENT TEACHING EVALUATIONS (Fall 2020)}}
+\subsubsection{\hspace{10pt} \emph{AVERAGE TEACHING EVALUATIONS}}
 
-\begin{center}
-\begin{tabular}{|l|c|c|c|c|c|}
-\hline
-       & Much  &       &         &        & Much   \\
-Course & Lower & Lower & Similar & Higher & Higher \\
-\hline
-Research Methods (PSY 3500)                & & & & X & \\
-Applied Statistical Analysis (EDUC 6050)   & & & & X & \\
-R Course I \& II (Continuing Ed Credit)    & & & & X & \\
-Statistical Foundations (EDUC 6600)        & & & & X & \\
-Regression Analysis (EDUC 7610)            & & & & X & \\
-\hline
-\end{tabular}
-\end{center}
+\renewcommand{\arraystretch}{1.2}
+```{r, results='asis', echo=FALSE, message=FALSE, warning=FALSE}
+options(xtable.comment = FALSE)
+tab_teaching = tibble::tribble(
+                       ~`IDEA Area`,   ~`EDUC 6050`, ~`EDUC 6600`, ~`EDUC 7610`,     ~`PSY 3010`, ~`PSY 3500`,
+  "Progress on Relevant Objectives",        4.6,          4.2,          4.8,   "In Progress",         4.1,
+                "Excellent Teacher",        4.8,          4.6,          4.9,   "In Progress",         4.4,
+                 "Excellent Course",        4.5,          4.2,          4.9,   "In Progress",         4.2,
+              "Summative Questions",          5,          4.4,          4.9,   "In Progress",         4.4
+  )
+tab_teaching = xtable::xtable(tab_teaching, align = "l|l|c|c|c|c|c|", digits = 1)
+print(tab_teaching, include.rownames = FALSE, floating = FALSE)
+```
+*Note: IDEA evaluation scores range from 1 to 5, with higher scores denoting higher agreement.*
 
+\renewcommand{\arraystretch}{1}
 
 <!-- Software and Programming Experience -->
 \vspace{20pt}
