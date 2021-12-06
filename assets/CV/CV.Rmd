@@ -51,7 +51,7 @@ year <- lubridate::year(today)
 <!-- Education -->
 \vspace{-2pt}
 \section{EDUCATION}
-\vspace{-6pt}
+<!--\vspace{-6pt}-->
 \hrule
 \vspace{2pt}
 
@@ -73,7 +73,7 @@ year <- lubridate::year(today)
 <!-- Research Areas -->
 \vspace{-5pt}
 \section{RESEARCH AREAS}
-\vspace{-6pt}
+<!--\vspace{-6pt}-->
 \hrule
 \vspace{2pt}
 
@@ -86,7 +86,7 @@ year <- lubridate::year(today)
 <!-- Research Experience -->
 \vspace{-5pt}
 \section{RESEARCH APPOINTMENTS}
-\vspace{-6pt}
+<!--\vspace{-6pt}-->
 \hrule
 \vspace{2pt}
 
@@ -107,7 +107,7 @@ year <- lubridate::year(today)
 <!-- Affiliations -->
 \vspace{-5pt}
 \section{PROFESSIONAL SERVICE}
-\vspace{-5pt}
+<!--\vspace{-6pt}-->
 \hrule
 \vspace{2pt}
 
@@ -124,7 +124,7 @@ year <- lubridate::year(today)
 \vspace{10pt}
 \noindent
 \section{EXTERNAL FUNDING \normalsize (Ongoing)}
-\vspace{-5pt}
+<!--\vspace{-6pt}-->
 \hrule
 \vspace{-2pt}
 
@@ -289,6 +289,8 @@ pubs %>%
 \noindent
 
 \normalsize
+
+Doutre, S.M., Ripma, T., \textbf{Barrett, T.}, Williams Valentine, T., Caparas, R. and Willis, J. (2021). \emph{California special education governance and accountability study.} WestEd. https://www.cde.ca.gov/sp/se/ac/segalegreport.asp
 
 Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Caparas, R. (2020). \emph{California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California}. WestEd. https://www.wested.org/resources/ca-special-education-funding-system/
 
