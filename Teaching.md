@@ -20,7 +20,7 @@ permalink: /teaching/
 5. [Intro to Connectivity](https://tysonstanley.github.io/Workshops/connectivity_intro.pdf)
 6. [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
 7. [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
-8. Customizing RStudio and `ggplot2` [PPTX](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](http://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
+8. Customizing RStudio and `ggplot2` [PPTX](https://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) and [PDF](https://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)
 
 # Courses
 
