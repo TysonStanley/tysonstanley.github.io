@@ -6,7 +6,7 @@ permalink: /syllabus/educ7610
 
 # Regression Analysis
 #### EDUC 7610
-#### Summer 2021
+#### Spring 2022
 
 <div style="background-color: #FEF9E7; padding: 20px;">
 
@@ -16,7 +16,7 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Mon and Wed 12:00 pm - 2:45 pm <br>
+&nbsp; &nbsp; Tuesday and Thursday 4:30 pm - 5:45 pm <br>
 &nbsp; &nbsp; Zoom Link (Posted on Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
@@ -174,7 +174,7 @@ Students are required to complete all courses for which they are registered by t
 
 ## Tentative Schedule:
 
-![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_summer_flipped.png)
+![]( {{ site.baseurl }}/assets/Syllabi/Schedule_7610_spring_flipped.png)
 
 
 

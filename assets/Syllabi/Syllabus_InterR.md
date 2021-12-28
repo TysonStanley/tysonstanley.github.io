@@ -14,7 +14,7 @@ permalink: /syllabus/interR
 &nbsp; &nbsp; 435-797-0120 <br>
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
-&nbsp; &nbsp; Thursday 12pm-1pm <br>
+&nbsp; &nbsp; Tuesdays 1:30 - 2:20pm <br>
 &nbsp; &nbsp; Via Zoom (Link in Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
@@ -62,9 +62,9 @@ Professional courtesy and sensitivity are especially important with respect to i
 
 **Important Dates:** <br>
 
-- Mar 9 – First Day of Classes
--	April 20 – Final Day of Class
--	April 27 – Final Project Due
+- March 1 – First Day of Classes
+-	April 12 – Final Day of Class
+-	April 19 – Final Project Due
 
 **Tentative Schedule:**
 
