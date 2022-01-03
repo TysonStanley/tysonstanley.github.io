@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  16 DEC 2021 13:36
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  3 JAN 2022 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,6 +944,14 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 File: osfdata.png Graphic file (type bmp)
@@ -961,7 +969,7 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 311--364
+Overfull \hbox (5.60538pt too wide) in alignment at lines 311--365
  [] [] 
  []
 
@@ -982,9 +990,9 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
+[7]
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
-[7]
 File: tidyfast_hex.png Graphic file (type bmp)
 <tidyfast_hex.png>
 File: connectivity_hex.jpg Graphic file (type bmp)
@@ -992,7 +1000,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 517--521
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 518--522
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -1007,9 +1015,9 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [8] [9] [10]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 842.
+(hyperref)                than one, level fixed on input line 843.
 
-[11] (./CV.aux)
+[11] [12] (./CV.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1019,10 +1027,10 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18732 strings out of 478256
  347727 string characters out of 5854709
- 909693 words of memory out of 5000000
+ 912839 words of memory out of 5000000
  38993 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,10n,121p,999b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on CV.pdf (11 pages).
+Output written on CV.pdf (12 pages).
