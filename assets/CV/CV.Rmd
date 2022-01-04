@@ -290,6 +290,8 @@ pubs %>%
 
 \normalsize
 
+Doutre, S. M., \textbf{Barrett, T.}, & Rice, J. (2021). \emph{California’s Special Education Local Plan Areas: Funding patterns, inclusion rates, and student outcomes (REL 2021–134).} Washington, DC: U.S. Department of Education, Institute of Education Sciences, National Center for Education Evaluation and Regional Assistance, Regional Educational Laboratory West. Retrieved from http://ies.ed.gov/ncee/edlabs.
+
 Doutre, S.M., Ripma, T., \textbf{Barrett, T.}, Williams Valentine, T., Caparas, R. and Willis, J. (2021). \emph{California special education governance and accountability study.} WestEd. https://www.cde.ca.gov/sp/se/ac/segalegreport.asp
 
 Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Caparas, R. (2020). \emph{California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California}. WestEd. https://www.wested.org/resources/ca-special-education-funding-system/
@@ -503,6 +505,7 @@ RStudio Conference sponsored by RStudio. Special training on using the Shiny dev
 
 American Educational Research Association Annual Meeting (Virtual). Training on quantitative methodologies (including psychometrics and econometrics) for studying educational policy and practice. April 2021.
 
+\newpage
 
 <!-- Awards -->
 \setlength{\parindent}{0in}
