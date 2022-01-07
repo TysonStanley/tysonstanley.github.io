@@ -15,7 +15,7 @@ permalink: /syllabus/introR
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
 &nbsp; &nbsp; Tuesdays 1:30 - 2:20pm <br>
-&nbsp; &nbsp; In EDUC 272 and via Zoom (link in Canvas) <br>
+&nbsp; &nbsp; In Distance Education 202 and via Zoom (link in Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
 

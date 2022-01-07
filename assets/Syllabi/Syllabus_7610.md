@@ -17,7 +17,7 @@ permalink: /syllabus/educ7610
 &nbsp; &nbsp; EDUC 456 <br>
 <strong>Class:</strong> <br>
 &nbsp; &nbsp; Tuesday and Thursday 4:30 pm - 5:45 pm <br>
-&nbsp; &nbsp; Zoom Link (Posted on Canvas) <br>
+&nbsp; &nbsp; HPER 114a and (when needed) Zoom Link (Posted on Canvas) <br>
 <strong>Office Hours:</strong> <br>
 &nbsp; &nbsp; <a href="https://cehsam.usu.edu/ramonline/BookAppt?C=C&T=P&P=181">By appointment</a> (via Zoom)
 </div>
