@@ -29,6 +29,7 @@ permalink: /syllabus/educ7610
 - [R](https://www.r-project.org) and [RStudio](https://rstudio.com) software: Both are free and downloading and installing are discussed in class
 - [Proctorio Chrome Extension](https://chrome.google.com/webstore/detail/proctorio/fpmapakogndmenjcfoajifaaonnkpkei): for Exams
 - *Optional:* Darlington, R.B. & Hayes, A.F. (2017). *Regression Analysis and Linear Models: Concepts, Applications, and Implementation.* New York: The Guilford Press. 
+- *Optional:* Gelman, Hill, & Vehtari. (2021). *Regression and Other Stories.* Cambridge University Press.
 - *Optional:* Scientific or statistical calculator (may be a graphic calculator, but NOT a cell phone, iPod, tablet,etc.)
 
 ## Course Purpose:
