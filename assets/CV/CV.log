@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  29 JAN 2022 18:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  2 FEB 2022 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,7 +973,7 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 311--366
+Overfull \hbox (5.60538pt too wide) in alignment at lines 311--367
  [] [] 
  []
 
@@ -1004,7 +1004,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 526--530
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 527--531
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -1019,7 +1019,7 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [8] [9] [10]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 853.
+(hyperref)                than one, level fixed on input line 854.
 
 [11] [12] (./CV.aux)
 
@@ -1031,7 +1031,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18732 strings out of 478256
  347727 string characters out of 5854709
- 916516 words of memory out of 5000000
+ 918656 words of memory out of 5000000
  38993 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
