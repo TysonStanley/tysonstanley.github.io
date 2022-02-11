@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  2 FEB 2022 11:59
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  10 FEB 2022 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -986,15 +986,15 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
-File: osfdata.png Graphic file (type bmp)
-<osfdata.png>
-File: osfmaterials.png Graphic file (type bmp)
-<osfmaterials.png>
-File: osfdata.png Graphic file (type bmp)
-<osfdata.png>
-File: osfmaterials.png Graphic file (type bmp)
-<osfmaterials.png>
 [7]
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: dissertateUSU_hex.jpg Graphic file (type bmp)
 <dissertateUSU_hex.jpg>
 File: tidyfast_hex.png Graphic file (type bmp)
@@ -1016,12 +1016,12 @@ File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[8] [9] [10]
+[8] [9] [10] [11]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 854.
 
-[11] [12] (./CV.aux)
+[12] [13] (./CV.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1031,10 +1031,10 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18732 strings out of 478256
  347727 string characters out of 5854709
- 918656 words of memory out of 5000000
+ 919742 words of memory out of 5000000
  38993 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,10n,121p,999b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on CV.pdf (12 pages).
+Output written on CV.pdf (13 pages).
