@@ -439,6 +439,8 @@ ggsave(here::here("assets/CV/citation_count.png"), width = 7, height = 4)
 
 <!-- -->
 
+Meier, C., Gast, J., \textbf{Barrett, T.S.}, Ferguson, M., Culianos, D., & Ward, L. (March, 2022). Youth sexual behaviors in Utah: Findings from the 2021 Utah College Sexual Behavior Survey. Utah Public Health Association, Virtual Conference.
+
 Smith, B.M., \textbf{Barrett, T.S.}, & Twohig, M.P. (2021, June). Processes of change during exposure for intrusive thoughts. In L. Capel (Chair), Investigating acceptance and commitment therapy interventions and processes in obsessive-compulsive and related disorders. Paper presented at the annual meeting of the Association of Contextual Behavioral Science, online.
 
 Smith, B.M., Barney, J.L., Ong, C.W., \textbf{Barrett, T.S.}, Levin, M.E., & Twohig, M.P. (2020, November). Outcomes and mechanisms of change in acceptance and regulation approaches to exposures for intrusive thoughts. In S. P. Buinewics & J. Buchholz (Chairs), Understanding the therapeutic process of exposure therapy to optimize treatment. Paper presented at the annual meeting of the Association for Behavioral and Cognitive Therapies, online.
@@ -506,7 +508,6 @@ RStudio Conference sponsored by RStudio. Special training on using the Shiny dev
 
 American Educational Research Association Annual Meeting (Virtual). Training on quantitative methodologies (including psychometrics and econometrics) for studying educational policy and practice. April 2021.
 
-\newpage
 
 <!-- Awards -->
 \setlength{\parindent}{0in}

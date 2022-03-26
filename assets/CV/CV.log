@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  10 FEB 2022 14:59
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  26 MAR 2022 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -120,13 +120,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-(/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+) (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
-)) (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.s
-ty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/unicode-math/unicode-
 math.sty (/Users/tysonbarrett/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/exp
@@ -956,6 +951,14 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
+File: osfdata.png Graphic file (type bmp)
+<osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 File: osfdata.png Graphic file (type bmp)
@@ -973,11 +976,11 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 311--367
+Overfull \hbox (5.60538pt too wide) in alignment at lines 311--369
  [] [] 
  []
 
-[3] [4] [5] [6]
+[3] [4] [5] [6] [7]
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
@@ -986,7 +989,6 @@ File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
-[7]
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
 File: osfmaterials.png Graphic file (type bmp)
@@ -1004,7 +1006,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 527--531
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 529--533
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -1019,9 +1021,9 @@ File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 [8] [9] [10] [11]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 854.
+(hyperref)                than one, level fixed on input line 859.
 
-[12] [13] (./CV.aux)
+[12] (./CV.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1029,12 +1031,12 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 (rerunfilecheck)             Checksum: AC615530770627A586CEA22A1ED6FB11;3323.
  ) 
 Here is how much of TeX's memory you used:
- 18732 strings out of 478256
- 347727 string characters out of 5854709
- 919742 words of memory out of 5000000
- 38993 multiletter control sequences out of 15000+600000
+ 18691 strings out of 478256
+ 346386 string characters out of 5854709
+ 925932 words of memory out of 5000000
+ 38957 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,10n,121p,999b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on CV.pdf (13 pages).
+Output written on CV.pdf (12 pages).
