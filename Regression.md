@@ -73,6 +73,8 @@ We may also pull from [FiveThirtyEight's open data on GitHub](https://github.com
 | L16: Mediation Analysis      | [HTML](https://tysonbarrett.com/Workshops/MediationAnalysis.html#1)                      | [Mediation Analysis](https://youtu.be/WGPPqJaa1Ho) | 
 | L17: Miscellaneous           | [PPTX]({{ site.slidesurl }}/EDUC-7610/Slides-Flipped/Unit 4/L17_EDUC7610_misc_updatedclean.pptx)  |  | 
 
+### Final Project
 
+[Here's]({{ site.slidesurl }}/assets/Course Materials/EDUC7610/Example Final Project.pdf) an example of a final project from a few years ago. This follows the template well but doesn't necessarily have all the stuff in it (e.g., they could have included a DAG, a plot of the data other than the diagnostics), but this shows understanding of the material so it receive a high grade.
 
 
