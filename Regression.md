@@ -75,6 +75,6 @@ We may also pull from [FiveThirtyEight's open data on GitHub](https://github.com
 
 ### Final Project
 
-[Here's]({{ site.slidesurl }}/assets/Course Materials/EDUC7610/Example Final Project.pdf) an example of a final project from a few years ago. This follows the template well but doesn't necessarily have all the stuff in it (e.g., they could have included a DAG, a plot of the data other than the diagnostics), but this shows understanding of the material so it receive a high grade.
+[Here's]({{ site.url }}/assets/Course Materials/EDUC7610/Example Final Project.pdf) an example of a final project from a few years ago. This follows the template well but doesn't necessarily have all the stuff in it (e.g., they could have included a DAG, a plot of the data other than the diagnostics), but this shows understanding of the material so it receive a high grade.
 
 
