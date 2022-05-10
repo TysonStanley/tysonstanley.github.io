@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  13 APR 2022 21:13
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.12.2)  9 MAY 2022 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -976,7 +976,7 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 311--369
+Overfull \hbox (5.60538pt too wide) in alignment at lines 311--372
  [] [] 
  []
 
@@ -1003,10 +1003,11 @@ File: tidyfast_hex.png Graphic file (type bmp)
 <tidyfast_hex.png>
 File: connectivity_hex.jpg Graphic file (type bmp)
 <connectivity_hex.jpg>
+[8]
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 529--533
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 532--536
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -1016,13 +1017,12 @@ File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
-[8]
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
 [9] [10] [11]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 859.
+(hyperref)                than one, level fixed on input line 862.
 
 [12] (./CV.aux)
 
@@ -1034,7 +1034,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18691 strings out of 478256
  346386 string characters out of 5854709
- 928020 words of memory out of 5000000
+ 931440 words of memory out of 5000000
  38957 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
