@@ -29,6 +29,28 @@ today <- lubridate::today()
 month <- months(today)
 day <- lubridate::day(today)
 year <- lubridate::year(today)
+
+header_fun = function(title, shift_line = FALSE){
+  lineshift = if (shift_line) "\\vspace{-6pt}" else ""
+  glue::glue(
+      "\\vspace{10pt}",
+      "\\setlength{\\parindent}{0in}",
+      "\\setlength{\\leftskip}{0in}",
+      "\\setlength{\\parskip}{0pt}",
+      "\\noindent",
+      "\\section{[title]}",
+      lineshift,
+      "\\hrule",
+      "\\vspace{-2pt}",
+      "\\setlength{\\parindent}{-.3in}",
+      "\\setlength{\\leftskip}{.5in}",
+      "\\setlength{\\parskip}{5pt}",
+      "\\noindent",
+      .open = "[",
+      .close = "]",
+      .sep = "\n"
+  ) %>% cat()
+}
 ```
 
 
@@ -70,17 +92,6 @@ year <- lubridate::year(today)
 &\footnotesize{\emph{Cum Laude}}
 \end{tabular}
 
-<!-- Research Areas -->
-\vspace{-5pt}
-\section{RESEARCH AREAS}
-<!--\vspace{-6pt}-->
-\hrule
-\vspace{2pt}
-
-\indent \hspace*{.1in} \small\textsc{Primary:} Applied Methodology in the Disability Disciplines, Communication Disorders
-
-\indent \hspace*{.1in} \textsc{Secondary:} Mental Health and Health Behaviors, Accessible Methodology Using R Programming
-
 \normalsize
 
 <!-- Research Experience -->
@@ -90,7 +101,13 @@ year <- lubridate::year(today)
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-Present
+\indent \hspace*{.1in} \small\textbf{Manager Research Analytics and Enablement}, Highmark Health \hfill 2022-Present
+\newline \hspace*{.6in} \emph{Lead of Statistical and Methodological Consultant Team}
+\newline \hspace*{.6in} \emph{Blended Care Data Research and Analytics}
+
+\indent \hspace*{.1in} \small\textbf{Adjunct Professor}, Department of Psychology, Utah State University \hfill 2022-Present
+
+\indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-2022
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
 \newline \hspace*{.6in} \emph{Administrator of SONA Systems}
 \newline \hspace*{.6in} \emph{Administrator of REDCap}
@@ -103,6 +120,18 @@ year <- lubridate::year(today)
 
 \indent \hspace*{.1in} \small\textbf{WOC Research Assistant}, Veteran Affairs SLC \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
+
+<!-- Research Areas -->
+\vspace{-5pt}
+\section{RESEARCH AREAS}
+<!--\vspace{-6pt}-->
+\hrule
+\vspace{2pt}
+
+\indent \hspace*{.1in} \small\textsc{Primary:} Applied Methodology in the Health and Disability Disciplines
+
+\indent \hspace*{.1in} \textsc{Secondary:} Accessible Methodology Using R Programming
+
 
 <!-- Affiliations -->
 \vspace{-5pt}
@@ -121,17 +150,9 @@ year <- lubridate::year(today)
 
 
 <!-- Grants -->
-\vspace{10pt}
-\noindent
-\section{EXTERNAL FUNDING \normalsize (Ongoing)}
-<!--\vspace{-6pt}-->
-\hrule
-\vspace{-2pt}
-
-\setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.5in}
-\setlength{\parskip}{5pt}
-\noindent
+```{r, echo = FALSE, results='asis'}
+header_fun("EXTERNAL FUNDING \\normalsize (Ongoing)", shift_line = TRUE)
+```
 
 \normalsize
 
@@ -177,7 +198,10 @@ year <- lubridate::year(today)
 \indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
 
 
-\vspace{8pt}
+
+```{r, echo = FALSE, results='asis'}
+header_fun("EXTERNAL FUNDING \\normalsize (Completed)", shift_line = TRUE)
+```
 
 \emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2021 - Aug 31, 2022 \newline
 \emph{Psychological distress in the context of \newline COVID-19} 
@@ -187,16 +211,14 @@ year <- lubridate::year(today)
 \indent \hspace{.25in} \emph{The aims of the study are to explore how psychological flexibility influences psychological distress in adults with ASD and to establish the dimensionality, internal consistency, test-retest reliability, and the concurrent and convergent validity of the Acceptance and Action Questionnaire II (AAQ-II) and of the Brief Experiential Avoidance Questionnaire (BEAQ) in adults with ASD.}
 
 
+
+
+
+
 <!-- Published Works -->
-\vspace{10pt}
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-\section{PEER-REVIEWED JOURNAL ARTICLES}
-\vspace{-5pt}
-\hrule
-\vspace{1pt}
+```{r, echo = FALSE, results='asis'}
+header_fun("PEER-REVIEWED JOURNAL ARTICLES", shift_line = TRUE)
+```
 
 \normalsize
 
@@ -273,20 +295,9 @@ pubs %>%
 
 
 <!-- WestEd Publications -->
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-
-
-\section{POLICY REPORTS}
-\vspace{-5pt}
-\hrule
-
-\setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.5in}
-\setlength{\parskip}{5pt}
-\noindent
+```{r, echo = FALSE, results='asis'}
+header_fun("POLICY REPORTS", shift_line = TRUE)
+```
 
 \normalsize
 
@@ -301,22 +312,9 @@ Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Capara
 
 
 <!-- Pre-Prints -->
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-
-\vspace{10pt}
-\section{PUBLISHED PRE-PRINTS}
-\vspace{-5pt}
-\hrule
-\vspace{3pt}
-\footnotesize \hspace{4pt} Pre-prints not otherwise published in a peer-reviewed journal \normalsize
-
-\setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.5in}
-\setlength{\parskip}{5pt}
-\noindent
+```{r, echo = FALSE, results='asis'}
+header_fun("PUBLISHED PRE-PRINTS", shift_line = TRUE)
+```
 
 \textbf{Barrett, T.S.} (2019, Oct 3). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/u8ekc \img{osfdata.png}{https://osf.io/smcg8/}\img{osfmaterials.png}{https://osf.io/smcg8/}
 
@@ -328,20 +326,9 @@ Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Capara
 
 
 <!-- Published Works in Conference Proceedings -->
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-
-\vspace{10pt}
-\section{PEER-REVIEWED CONFERENCE PROCEEDINGS}
-\vspace{-5pt}
-\hrule
-
-\setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.5in}
-\setlength{\parskip}{5pt}
-\noindent
+```{r, echo = FALSE, results='asis'}
+header_fun("PEER-REVIEWED CONFERENCE PROCEEDINGS", shift_line = TRUE)
+```
 
 \normalsize
 
@@ -353,22 +340,12 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 \forceindent $-$ ArXiv Pre-Print: [1804.08663](http://arxiv.org/abs/1804.08663)
 
 
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-
 
 <!-- Other Publications -->
-\vspace{20pt}
-\section{OTHER PUBLISHED WORKS}
-\vspace{-5pt}
-\hrule
+```{r, echo = FALSE, results='asis'}
+header_fun("OTHER PUBLISHED WORKS", shift_line = TRUE)
+```
 
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{.25in}
-\setlength{\parskip}{0pt}
-\noindent
 \subsection{R Packages}
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
@@ -425,17 +402,10 @@ ggsave(here::here("assets/CV/citation_count.png"), width = 7, height = 4)
 
 
 <!-- Selected Presentations -->
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-\section{SELECTED PRESENTATIONS}
-\vspace{-5pt}
-\hrule
-\setlength{\parindent}{-.3in}
-\setlength{\leftskip}{.5in}
-\setlength{\parskip}{6pt}
-\noindent
+```{r, echo = FALSE, results='asis'}
+header_fun("SELECTED PRESENTATIONS", shift_line = TRUE)
+```
+
 
 <!-- -->
 
@@ -510,15 +480,9 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
 
 
 <!-- Awards -->
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-\vspace{10pt}
-\section{AWARDS}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
+```{r, echo = FALSE, results='asis'}
+header_fun("AWARDS", shift_line = TRUE)
+```
 
 - 2017: Abstract of Distinction (Annual Meeting of the Society of Prevention Research)
 - 2016: Distinguished Poster Award (Annual Meeting of the Society of Prevention Research)
@@ -527,15 +491,9 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
 
 
 <!-- Teaching Interests -->
-\setlength{\parindent}{0in}
-\setlength{\leftskip}{0in}
-\setlength{\parskip}{0pt}
-\noindent
-\vspace{10pt}
-\section{TEACHING INTERESTS}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
+```{r, echo = FALSE, results='asis'}
+header_fun("TEACHING INTERESTS", shift_line = TRUE)
+```
 
 \subsection{\textsc{Primary Interest: Quantitative Methods}}
 
@@ -550,10 +508,9 @@ American Educational Research Association Annual Meeting (Virtual). Training on 
 
 
 <!-- Teaching Experience -->
-\section{TEACHING EXPERIENCE}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
+```{r, echo = FALSE, results='asis'}
+header_fun("TEACHING EXPERIENCE", shift_line = TRUE)
+```
 
 - **Applied Statistical Analysis** (EDUC 6050)
     - Graduate-level applied statistics course for non-research degrees
@@ -594,28 +551,6 @@ print(tab_teaching, include.rownames = FALSE, floating = FALSE)
 
 \renewcommand{\arraystretch}{1}
 
-<!-- Software and Programming Experience -->
-\vspace{20pt}
-\section{SOFTWARE AND PROGRAMMING EXPERIENCE}
-\vspace{-5pt}
-\hrule
-\vspace{10pt}
-
-1. **R and RMarkdown: Expert (9 years of daily use)**
-    - Database Queries, Creation, and Management
-    - Data Analytics
-    - Website Creation
-    - Program Development and Deployment 
-2. **REDCap: Moderate Experience (4 year of weekly use)**
-    - Database Creation
-    - Data Entry and Survey Creation and Deployment
-    - Data Management via REDCap API
-3. **SQL: Some Experience (7 years of occasional use)**
-    - Database Queries and Database Management 
-    - Data Analytics
-4. **Python: Minor Experience (1 year of occasional use)**
-    - Data Analytics
-    - MTurk customization
     
     
 
