@@ -102,8 +102,8 @@ header_fun = function(title, shift_line = FALSE){
 \vspace{2pt}
 
 \indent \hspace*{.1in} \small\textbf{Manager Research Analytics and Enablement}, Highmark Health \hfill 2022-Present
-\newline \hspace*{.6in} \emph{Lead of Statistical and Methodological Consultant Team}
-\newline \hspace*{.6in} \emph{Blended Care Data Research and Analytics}
+\newline \hspace*{.6in} \emph{Lead of Statistical and Methodological Team}
+\newline \hspace*{.6in} \emph{Care Analytics in Entreprise Data and Analytics}
 
 \indent \hspace*{.1in} \small\textbf{Adjunct Professor}, Department of Psychology, Utah State University \hfill 2022-Present
 
@@ -301,6 +301,8 @@ header_fun("POLICY REPORTS", shift_line = TRUE)
 
 \normalsize
 
+Meier, C., Gast, J., \textbf{Barrett, T.}, Ferguson, M., Culianos, D., & Ward, L. (2022). \emph{Utah college sexual behavior survey: Initial findings report. Extension Research. Paper 20.} Utah State University. https://digitalcommons.usu.edu/extension_research/20
+
 Doutre, S. M., \textbf{Barrett, T.}, & Rice, J. (2021). \emph{California’s Special Education Local Plan Areas: Funding patterns, inclusion rates, and student outcomes (REL 2021–134).} Washington, DC: U.S. Department of Education, Institute of Education Sciences, National Center for Education Evaluation and Regional Assistance, Regional Educational Laboratory West. Retrieved from http://ies.ed.gov/ncee/edlabs.
 
 Doutre, S.M., Ripma, T., \textbf{Barrett, T.}, Williams Valentine, T., Caparas, R. and Willis, J. (2021). \emph{California special education governance and accountability study.} WestEd. https://www.cde.ca.gov/sp/se/ac/segalegreport.asp
@@ -408,6 +410,12 @@ header_fun("SELECTED PRESENTATIONS", shift_line = TRUE)
 
 
 <!-- -->
+
+Gast, J., Ferguson, M., Meier, C., \textbf{Barrett, T.S.}, Ward, L. & Culianos, D. (November, 2022). Youth Sexual Behaviors in Utah: A Retrospective Study of Behaviors and Sex Education in Middle School and High School. American Public Health Association, Boston, MA.
+ 
+Meier, C., Gast, J., \textbf{Barrett, T.S.}, Ferguson, M., Culianos. D., & Ward, L. (November, 2022). We Need More Sex Education! The Results of a Retrospective Sexual Behavior Survey Among Utahns and Differences by Rurality and Sexuality. American Public Health Association, Boston, MA.
+ 
+Culianos, D., \textbf{Barrett, T.S.}, Meier, C., Gast, J., Ward, L., & Ferguson, M. (November, 2022). The Reliability and Validity of Sex-Inclusive and Retrospective Sex Measures. American Public Health Association, Boston, MA.
 
 Meier, C., Gast, J., \textbf{Barrett, T.S.}, Ferguson, M., Culianos, D., & Ward, L. (March, 2022). Youth sexual behaviors in Utah: Findings from the 2021 Utah College Sexual Behavior Survey. Utah Public Health Association, Virtual Conference.
 
