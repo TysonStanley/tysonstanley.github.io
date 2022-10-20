@@ -105,7 +105,7 @@ header_fun = function(title, shift_line = FALSE){
 \newline \hspace*{.6in} \emph{Lead of Statistical and Methodological Team}
 \newline \hspace*{.6in} \emph{Care Analytics in Entreprise Data and Analytics}
 
-\indent \hspace*{.1in} \small\textbf{Adjunct Professor}, Department of Psychology, Utah State University \hfill 2022-Present
+\indent \hspace*{.1in} \small\textbf{Research Scientist}, Department of Communication Disorders, Utah State University \hfill 2022-Present
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-2022
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
