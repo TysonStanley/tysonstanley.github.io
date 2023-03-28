@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  10 JAN 2023 21:28
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  28 MAR 2023 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -931,11 +931,6 @@ File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
-
-Overfull \hbox (5.60538pt too wide) in alignment at lines 343--412
- [] [] 
- []
-
 [3] [4] [5] [6] [7] [8]
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
@@ -994,7 +989,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18003 strings out of 478492
  321887 string characters out of 5861099
- 941243 words of memory out of 5000000
+ 942283 words of memory out of 5000000
  38033 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
