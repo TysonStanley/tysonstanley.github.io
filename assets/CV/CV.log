@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  28 MAR 2023 16:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  9 APR 2023 01:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -931,6 +931,11 @@ File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
+
+Overfull \hbox (5.60538pt too wide) in alignment at lines 343--413
+ [] [] 
+ []
+
 [3] [4] [5] [6] [7] [8]
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
@@ -957,7 +962,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 575--579
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 576--580
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -965,17 +970,18 @@ core.
 
 File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
+[9]
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[9] [10] [11] [12]
+[10] [11] [12]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 946.
+(hyperref)                than one, level fixed on input line 947.
 
 
-Overfull \hbox (32.38994pt too wide) in paragraph at lines 949--959
+Overfull \hbox (32.38994pt too wide) in paragraph at lines 950--960
  [] 
  []
 
@@ -989,7 +995,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18003 strings out of 478492
  321887 string characters out of 5861099
- 942283 words of memory out of 5000000
+ 944471 words of memory out of 5000000
  38033 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
