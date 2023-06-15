@@ -149,6 +149,8 @@ header_fun = function(title, shift_line = FALSE){
 \indent \hspace*{.1in} \small\textbf{\href{https://www.apa.org/pubs/journals/met}{Journal of Speech, Language, and Hearing Research}} Voluntary Reviewer \hfill 2018-Present
 
 
+
+
 <!-- Grants -->
 ```{r, echo = FALSE, results='asis'}
 header_fun("EXTERNAL FUNDING \\normalsize (Ongoing)", shift_line = TRUE)
@@ -156,46 +158,40 @@ header_fun("EXTERNAL FUNDING \\normalsize (Ongoing)", shift_line = TRUE)
 
 \normalsize
 
-\emph{Necessary Education and eXperiential Training} \hfill September 1, 2020 - August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
+\emph{A causal framework of communicative participation in people with} \hfill July 1, 2023 -- June 30, 2028 \newline \emph{Parkinson's disease}
+
+\indent \hspace{.25in} Borrie, S. A. (PI), \textbf{Barrett, T. S. (Co-I)}, Visar, B. (Co-I), & Liss, J. (Co-I). Sponsored by NIH/NIDCD	R01DC020713-01A1. Current Status: Funded. $2,329,452.
+
+\vspace{8pt}
+
+\emph{Speaker and listener strategies to improve intelligibility in} \hfill July 1, 2023 -- December 31, 2024 \newline \emph{Parkinson's disease}
+
+\indent \hspace{.25in} Lansford, K. L. (PI), Borrie, S. A. (Co-I), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by the Parkinson's Foundation (Impact Award). Current Status: Funded. $150,000.
+
+\vspace{8pt}
+
+\emph{Necessary Education and eXperiential Training} \hfill Sept 1, 2020 -- August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
 
 \indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T. S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
 
-\indent \hspace{.25in} \emph{This project enhances Utah's peer workforce by addressing the clinical priorities of: 1) incorporating family-focused curriculum enhancements and 2) emphasizing and funding hands-on learning in mentored inter-professional field placements. It will increase training by more than 50\%, with basic and advanced (family-focused) certification and work experience. The evaluation of the program will be ongoing throughout the program's implementation.}
-
 \vspace{8pt}
 
-\emph{Bridging Harm Reduction and Wellness for Tribal} \hfill Sept 1, 2020 -	Aug 31, 2023 \newline
-\emph{and Rural Areas of the Intermountain West} 
-
-\indent \hspace{.25in} Sulzer, S. (PI), Prevedel, S., Chapoose, M., Madden, E., \textbf{Barrett, T. S. (Co-I)}, Keady, T., Peatross, J., DasGupta, D., Fullenkamp, N., & Zaman, K. Sponsored by SAMHSA, H79TI083267. Current Status: Funded. $1,099,997.
-
-\indent \hspace{.25in} \emph{This project is designed to provide opioid addiction treatment services for tribal and rural areas. The evaluation of the project is ongoing throughout the administration of the services.}
-
-\vspace{8pt}
-
-\emph{Video- and App-Based Naturalistic Language Instruction} \hfill July 1, 2020 -	June 30, 2024 \newline
+\emph{Video- and App-Based Naturalistic Language Instruction} \hfill July 1, 2020 --	June 30, 2024 \newline
 \emph{(VALI) for Spanish-Speaking Caregivers to Support \newline Bilingual Language Development in Children \newline With or At Risk for Language Delays} 
 
 \indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T. S. (Consultant)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
 
-\indent \hspace{.25in} \emph{The purpose of the research plan is to adapt an existing app, Háblame Bebé, that provides information to Spanish-speaking families about the importance of frequent and responsive verbal interactions with children in the home language but does not provide information on how to embed NLIS within everyday activities and routines to support DLLs with language delay.}
-
 \vspace{8pt}
 
-\emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -	March 31, 2023 
+\emph{Bridging Harm Reduction and Wellness for Tribal and Rural} \hfill Sept 1, 2020 --	Aug 31, 2023 \newline
+\emph{Areas of the Intermountain West} 
 
-\indent \hspace{.25in} Leopold, S. (PI), Borrie, S. A. (Co-I), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Funded. $430,000.
-
-\indent \hspace{.25in} \emph{The major goal of this project is to utilize an established signal processing technique to investigate its potential application to overcome speech-in-noise difficulties for listeners understanding dysarthric speech.}
+\indent \hspace{.25in} Sulzer, S. (PI), Prevedel, S., Chapoose, M., Madden, E., \textbf{Barrett, T. S. (Co-I)}, Keady, T., Peatross, J., DasGupta, D., Fullenkamp, N., & Zaman, K. Sponsored by SAMHSA, H79TI083267. Current Status: Funded. $1,099,997.
 
 
-\vspace{8pt}
 
-\emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 - June 30, 2022
 
-\indent \hspace{.25in} Borrie, S. A. (PI), Lansford, K. (PI), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Funded. $420,000.
 
-\indent \hspace{.25in} \emph{The major goal of this project is the systematic analysis and identification of speaker and listener parameters, and their interactions, that allow perceptual training paradigms to be optimized for intelligibility outcomes in dysarthria rehabilitation.}
 
 
 
@@ -203,12 +199,22 @@ header_fun("EXTERNAL FUNDING \\normalsize (Ongoing)", shift_line = TRUE)
 header_fun("EXTERNAL FUNDING \\normalsize (Completed)", shift_line = TRUE)
 ```
 
-\emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2021 - Aug 31, 2022 \newline
+\emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -- March 31, 2023 
+
+\indent \hspace{.25in} Leopold, S. (PI), Borrie, S. A. (Co-I), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Completed. $430,000.
+
+\vspace{8pt}
+
+\emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 -- June 30, 2022
+
+\indent \hspace{.25in} Borrie, S. A. (PI), Lansford, K. (PI), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Completed. $420,000.
+
+\vspace{8pt}
+
+\emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2021 -- Aug 31, 2022 \newline
 \emph{Psychological distress in the context of \newline COVID-19} 
 
-\indent \hspace{.25in} Aller, T. B. (PI), \textbf{Barrett, T. S. (Co-I)}, McClain Verdoes, M. (Co-I), \& Levin, M. (Co-I). Sponsored by National Research Consortium on Mental Health in Intellectual and Developmental Disabilities. Current Status: Funded. $10,000.
-
-\indent \hspace{.25in} \emph{The aims of the study are to explore how psychological flexibility influences psychological distress in adults with ASD and to establish the dimensionality, internal consistency, test-retest reliability, and the concurrent and convergent validity of the Acceptance and Action Questionnaire II (AAQ-II) and of the Brief Experiential Avoidance Questionnaire (BEAQ) in adults with ASD.}
+\indent \hspace{.25in} Aller, T. B. (PI), \textbf{Barrett, T. S. (Co-I)}, McClain Verdoes, M. (Co-I), \& Levin, M. (Co-I). Sponsored by National Research Consortium on Mental Health in Intellectual and Developmental Disabilities. Current Status: Completed. $10,000.
 
 
 
@@ -396,7 +402,7 @@ ggplot(citations, aes(year, cites, fill = year)) +
                         begin = .1, 
                         end = .9) +
   theme(legend.position = "none",
-        axis.line = element_line(color = "black", size = .4))
+        axis.line = element_line(color = "black", linewidth = .4))
 ggsave(here::here("assets/CV/citation_count.png"), width = 7, height = 4)
 ```
 

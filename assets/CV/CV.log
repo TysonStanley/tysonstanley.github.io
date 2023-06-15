@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  9 APR 2023 01:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.30)  14 JUN 2023 22:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,10 +861,15 @@ LaTeX Font Warning: Font shape `TU/lmr/bx/sc' undefined
 [1
 
 ] [2]
-File: osfmaterials.png Graphic file (type bmp)
-<osfmaterials.png>
+Underfull \hbox (badness 1048) in paragraph at lines 347--348
+[]|\TU/lmr/m/n/10 Vázquez, A. L., Domenech Rodríguez, M. M., Navarro Flores, C.
+ M.,  Abreu, R. L.,
+ []
+
 File: osfdata.png Graphic file (type bmp)
 <osfdata.png>
+File: osfmaterials.png Graphic file (type bmp)
+<osfmaterials.png>
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 File: osfdata.png Graphic file (type bmp)
@@ -932,7 +937,7 @@ File: osfmaterials.png Graphic file (type bmp)
 File: osfmaterials.png Graphic file (type bmp)
 <osfmaterials.png>
 
-Overfull \hbox (5.60538pt too wide) in alignment at lines 343--413
+Overfull \hbox (5.60538pt too wide) in alignment at lines 345--417
  [] [] 
  []
 
@@ -962,7 +967,7 @@ File: connectivity_hex.jpg Graphic file (type bmp)
 File: autoscore_hex.jpg Graphic file (type bmp)
 <autoscore_hex.jpg>
 
-Overfull \hbox (6.30669pt too wide) in paragraph at lines 576--580
+Overfull \hbox (6.30669pt too wide) in paragraph at lines 580--584
  []\TU/lmr/bx/sc/10 Barrett, T.S.\TU/lmr/m/n/10 , Borrie, S.A., & Yoho, S.E. (2
 019). \TU/lmtt/m/n/10 autoscore\TU/lmr/m/n/10 . URL: github.com/autoscore/autos
 core.
@@ -970,18 +975,17 @@ core.
 
 File: mma_hex.jpg Graphic file (type bmp)
 <mma_hex.jpg>
-[9]
 File: furniture_hex.jpg Graphic file (type bmp)
 <furniture_hex.jpg>
 File: CV_files/figure-latex/citation_fig-1.pdf Graphic file (type pdf)
 <use CV_files/figure-latex/citation_fig-1.pdf>
-[10] [11] [12]
+[9] [10] [11] [12]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 947.
+(hyperref)                than one, level fixed on input line 951.
 
 
-Overfull \hbox (32.38994pt too wide) in paragraph at lines 950--960
+Overfull \hbox (32.38994pt too wide) in paragraph at lines 954--964
  [] 
  []
 
@@ -995,7 +999,7 @@ Package rerunfilecheck Info: File `CV.out' has not changed.
 Here is how much of TeX's memory you used:
  18003 strings out of 478492
  321887 string characters out of 5861099
- 944471 words of memory out of 5000000
+ 945429 words of memory out of 5000000
  38033 multiletter control sequences out of 15000+600000
  407031 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
