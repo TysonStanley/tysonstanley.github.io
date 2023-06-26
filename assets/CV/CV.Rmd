@@ -156,37 +156,64 @@ header_fun = function(title, shift_line = FALSE){
 header_fun("EXTERNAL FUNDING \\normalsize (Ongoing)", shift_line = TRUE)
 ```
 
-\normalsize
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+library(stringr)
+library(dplyr)
+library(here)
+funds = rio::import(here("assets/CV", "pubs.xlsx"), sheet = "Grants")
+funds_list = function(d, cond){
+  d = d %>% 
+    filter(status == !!cond) %>% 
+    arrange(desc(end)) %>% 
+    mutate(
+      start = format(start, "%B %m, %Y"),
+      end = format(end, "%B %m, %Y"),
+      amount = scales::dollar(amount)
+    ) %>% 
+    mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>% 
+    mutate(status = paste0("Current status: ", status, "")) %>% 
+    mutate(
+      title = paste0("\\emph{", title, "}."),
+      authors = str_replace(authors, 
+                            "Barrett, T. S. \\(Co\\-I\\)", "\\\\textbf{Barrett, T. S. \\(Co\\-I\\)}"),
+      authors = str_replace(authors, 
+                            "Barrett, T. S. \\(Consultant\\)", "\\\\textbf{Barrett, T. S. \\(Consultant\\)}"),
+      authors = str_replace(authors, "&", "\\\\&"),
+      authors = paste0(authors, "."),
+      funder = paste0(funder, ". "),
+      year = paste0("(", year, ").")
+    ) %>% 
+    mutate(funder_number = paste0(funder, if_else(number != "", paste0(number, "."), ""))) %>% 
+    mutate(start_to_end = paste0(start, " -- ", end, "."),
+           amount = paste0("\\textcolor{money}{\\", amount, "}."))
+  
+  cat("\\begin{longtable}{p{1.7cm}!{\\color{lightdivider}\\vrule}p{14.1cm}}", "\n")
+  rows = nrow(d)
+  for (i in 1:nrow(d)){
+      with(
+        d %>% filter(row_number() == i),
+          cat(
+            type, " & \\hangindent=3em ",
+            authors,
+            tolower(year),
+            title,
+            funder_number,
+            start_to_end,
+            amount,
+            if_else(i == rows, "\\vspace{-1pt} \n", "\\vspace{8pt} \\\\ \n"),
+            sep = " "
+          )
+      )
+  }
+  cat("\\end{longtable}")
+}
+```
 
-\emph{A causal framework of communicative participation in people with} \hfill July 1, 2023 -- June 30, 2028 \newline \emph{Parkinson's disease}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+funds_list(funds, "Funded")
+```
 
-\indent \hspace{.25in} Borrie, S. A. (PI), \textbf{Barrett, T. S. (Co-I)}, Visar, B. (Co-I), & Liss, J. (Co-I). Sponsored by NIH/NIDCD	R01DC020713-01A1. Current Status: Funded. $2,329,452.
 
-\vspace{8pt}
-
-\emph{Speaker and listener strategies to improve intelligibility in} \hfill July 1, 2023 -- December 31, 2024 \newline \emph{Parkinson's disease}
-
-\indent \hspace{.25in} Lansford, K. L. (PI), Borrie, S. A. (Co-I), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by the Parkinson's Foundation (Impact Award). Current Status: Funded. $150,000.
-
-\vspace{8pt}
-
-\emph{Necessary Education and eXperiential Training} \hfill Sept 1, 2020 -- August 30, 2024 \newline \emph{for Upcoming Para-professionals (NEXT-UP)}
-
-\indent \hspace{.25in} Voss, M. (PI) & \textbf{Barrett, T. S. (Co-I)}. Sponsored by HRSA, 1 T26HP39463-01-00. Current Status: Funded. $2,296,000.
-
-\vspace{8pt}
-
-\emph{Video- and App-Based Naturalistic Language Instruction} \hfill July 1, 2020 --	June 30, 2024 \newline
-\emph{(VALI) for Spanish-Speaking Caregivers to Support \newline Bilingual Language Development in Children \newline With or At Risk for Language Delays} 
-
-\indent \hspace{.25in} Larson, A. (PI), Snyder, P. (Mentor) Domenech Rodriguez, M. (Mentor), & \textbf{Barrett, T. S. (Consultant)}. Sponsored by IES/NCSER, R324B200009. Current Status: Funded. $499,927.
-
-\vspace{8pt}
-
-\emph{Bridging Harm Reduction and Wellness for Tribal and Rural} \hfill Sept 1, 2020 --	Aug 31, 2023 \newline
-\emph{Areas of the Intermountain West} 
-
-\indent \hspace{.25in} Sulzer, S. (PI), Prevedel, S., Chapoose, M., Madden, E., \textbf{Barrett, T. S. (Co-I)}, Keady, T., Peatross, J., DasGupta, D., Fullenkamp, N., & Zaman, K. Sponsored by SAMHSA, H79TI083267. Current Status: Funded. $1,099,997.
 
 
 
@@ -199,22 +226,10 @@ header_fun("EXTERNAL FUNDING \\normalsize (Ongoing)", shift_line = TRUE)
 header_fun("EXTERNAL FUNDING \\normalsize (Completed)", shift_line = TRUE)
 ```
 
-\emph{Application of Ideal Binary Masking to Disordered Speech} \hfill April 1, 2020 -- March 31, 2023 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+funds_list(funds, "Completed")
+```
 
-\indent \hspace{.25in} Leopold, S. (PI), Borrie, S. A. (Co-I), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD, 1R21DC018641-01. Current Status: Completed. $430,000.
-
-\vspace{8pt}
-
-\emph{Perceptual training for improved intelligibility of dysarthric speech} \hfill July 1, 2020 -- June 30, 2022
-
-\indent \hspace{.25in} Borrie, S. A. (PI), Lansford, K. (PI), & \textbf{Barrett, T. S. (Co-I)}. Sponsored by NIH/NIDCD	1R21DC018867-01. Current Status: Completed. $420,000.
-
-\vspace{8pt}
-
-\emph{Psychological flexibility in adults with ASD:} \hfill Sept 1, 2021 -- Aug 31, 2022 \newline
-\emph{Psychological distress in the context of \newline COVID-19} 
-
-\indent \hspace{.25in} Aller, T. B. (PI), \textbf{Barrett, T. S. (Co-I)}, McClain Verdoes, M. (Co-I), \& Levin, M. (Co-I). Sponsored by National Research Consortium on Mental Health in Intellectual and Developmental Disabilities. Current Status: Completed. $10,000.
 
 
 
@@ -493,7 +508,7 @@ RStudio Conference sponsored by RStudio. Special training on using the Shiny dev
 American Educational Research Association Annual Meeting (Virtual). Training on quantitative methodologies (including psychometrics and econometrics) for studying educational policy and practice. April 2021.
 
 
-<!-- Awards -->
+<!--
 ```{r, echo = FALSE, results='asis'}
 header_fun("AWARDS", shift_line = TRUE)
 ```
@@ -504,7 +519,6 @@ header_fun("AWARDS", shift_line = TRUE)
 - 2014: Best Poster Presentation (Psi-Chi Undergraduate Conference)
 
 
-<!-- Teaching Interests -->
 ```{r, echo = FALSE, results='asis'}
 header_fun("TEACHING INTERESTS", shift_line = TRUE)
 ```
@@ -521,7 +535,6 @@ header_fun("TEACHING INTERESTS", shift_line = TRUE)
 - Mediation Analysis (Marginal Mediation, Moderated Mediation)
 
 
-<!-- Teaching Experience -->
 ```{r, echo = FALSE, results='asis'}
 header_fun("TEACHING EXPERIENCE", shift_line = TRUE)
 ```
@@ -565,7 +578,7 @@ print(tab_teaching, include.rownames = FALSE, floating = FALSE)
 
 \renewcommand{\arraystretch}{1}
 
-    
+-->    
     
 
 
