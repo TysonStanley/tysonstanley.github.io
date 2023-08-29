@@ -378,8 +378,6 @@ header_fun("OTHER PUBLISHED WORKS", shift_line = TRUE)
 
 \textbf{Barrett, T.S.} (2019). `tidyfast`. URL: github.com/tysonstanley/tidyfast. R package version `r packageVersion("tidyfast")`. \img{tidyfast_hex.png}{https://github.com/TysonStanley/tidyfast}
 
-\textbf{Barrett, T.S.} (2019). `connectivity`. URL: github.com/tysonstanley/connectivity. R package version `r packageVersion("connectivity")`. \img{connectivity_hex.jpg}{https://github.com/TysonStanley/connectivity}
-
 \textbf{Barrett, T.S.} (2019). `rjasa`. URL: github.com/tysonstanley/rjasa. R package version `r packageVersion("rjasa")`.
 
 \textbf{Barrett, T.S.}, Borrie, S.A., & Yoho, S.E. (2019). `autoscore`. URL: github.com/autoscore/autoscore. R package version `r packageVersion("autoscore")`. \img{autoscore_hex.jpg}{https://github.com/autoscore/autoscore}
