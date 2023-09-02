@@ -430,6 +430,8 @@ header_fun("SELECTED PRESENTATIONS", shift_line = TRUE)
 
 <!-- -->
 
+Harper, S.A., Brown, C.B., Poulsen, S.L., \textbf{Barrett, T.S.}, Dakin. J.C. (September 2023). Inter-step variation of stairways and observations of fall-related events. 2023 UAB Center of Exercise Medicine Symposium on Exercise and Aging. Invited Flash Talk.
+
 Gast, J., Ferguson, M., Meier, C., \textbf{Barrett, T.S.}, Ward, L. & Culianos, D. (November, 2022). Youth Sexual Behaviors in Utah: A Retrospective Study of Behaviors and Sex Education in Middle School and High School. American Public Health Association, Boston, MA.
  
 Meier, C., Gast, J., \textbf{Barrett, T.S.}, Ferguson, M., Culianos. D., & Ward, L. (November, 2022). We Need More Sex Education! The Results of a Retrospective Sexual Behavior Survey Among Utahns and Differences by Rurality and Sexuality. American Public Health Association, Boston, MA.
