@@ -73,7 +73,7 @@ header_fun = function(title, shift_line = FALSE){
 <!-- Education -->
 \vspace{-2pt}
 \section{EDUCATION}
-<!--\vspace{-6pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -97,7 +97,7 @@ header_fun = function(title, shift_line = FALSE){
 <!-- Research Experience -->
 \vspace{-5pt}
 \section{RESEARCH APPOINTMENTS}
-<!--\vspace{-6pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -124,7 +124,7 @@ header_fun = function(title, shift_line = FALSE){
 <!-- Research Areas -->
 \vspace{-5pt}
 \section{RESEARCH AREAS}
-<!--\vspace{-6pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
@@ -136,7 +136,7 @@ header_fun = function(title, shift_line = FALSE){
 <!-- Affiliations -->
 \vspace{-5pt}
 \section{PROFESSIONAL SERVICE}
-<!--\vspace{-6pt}-->
+\vspace{-5pt}
 \hrule
 \vspace{2pt}
 
