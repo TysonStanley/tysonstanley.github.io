@@ -61,7 +61,6 @@ header_fun = function(title, shift_line = FALSE){
 
 <!-- General Info -->
 \begin{tabular}{rl}
-    \textsc{Address:}     & 2800 Old Main Hill, Logan, UT 84322 \\
     \textsc{Email:}       & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
     \textsc{Website:}     & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
     \textsc{ORCID:}       & \href{https://orcid.org/0000-0002-2137-1391}{0000-0002-2137-1391} \\
