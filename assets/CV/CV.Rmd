@@ -139,9 +139,9 @@ header_fun = function(title, shift_line = FALSE){
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
+\indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Maintainer \hfill 2023-Present
 
-\indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Contributor \hfill 2019-Present
+\indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
 
 \indent \hspace*{.1in} \small\textbf{\href{https://www.apa.org/pubs/journals/met}{Psychological Methods}} Voluntary Reviewer \hfill 2018-Present
 
