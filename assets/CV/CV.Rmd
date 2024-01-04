@@ -405,7 +405,7 @@ year <- lubridate::year(lubridate::today())
 ggplot(citations, aes(year, cites, fill = year)) +
   geom_col(color = "black") +
   geom_text(aes(label = cites),
-            nudge_y = 20) +
+            nudge_y = 40) +
   labs(x = "Year", 
        y = "Citation Count\n(by Year)",
        caption = paste("Note: Data for citations in", year, "until", month)) +
@@ -413,6 +413,7 @@ ggplot(citations, aes(year, cites, fill = year)) +
   scale_fill_viridis_c(direction = -1,
                         begin = .1, 
                         end = .9) +
+  scale_x_continuous(breaks = c(2016, 2018, 2020, 2022, 2024, 2026, 2028)) +
   theme(legend.position = "none",
         axis.line = element_line(color = "black", linewidth = .4))
 ggsave(here::here("assets/CV/citation_count.png"), width = 7, height = 4)
