@@ -368,7 +368,7 @@ Willi, M., Borrie, S.A., \textbf{Barrett, T.S.}, Tu, M. & Berisha, V. (2018). A 
 header_fun("OTHER PUBLISHED WORKS", shift_line = TRUE)
 ```
 
-\subsection{R Packages}
+\subsection{R Packages Created}
 \setlength{\parindent}{-.5in}
 \setlength{\leftskip}{1in}
 \noindent

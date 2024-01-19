@@ -1,0 +1,44 @@
+---
+title: "Efficient tools for your tidy workflow"
+subtitle: "Using `data.table` and `arrow` to wrangle large in-memory data"
+author: "Tyson S. Barrett, PhD"
+date: today
+format: 
+  revealjs:
+    self-contained: true
+    theme: dark
+---
+
+
+# Agenda
+
+1. What is a "tidy" workflow?
+2. How can `data.table` help?
+3. What about `arrow`?
+4. Put it all together
+
+# Tidy Workflow
+
+## Tidying Data
+
+Insert workflow diagram
+
+
+
+
+# `data.table`
+
+## `dt[i, j, by]`
+
+
+
+# `arrow`
+
+
+
+# Put it all together
+
+
+
+
+
