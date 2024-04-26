@@ -1,0 +1,38 @@
+---
+title: "`data.table` for Finance"
+subtitle: "New developments for the concise, fast, and efficient package"
+author: "Tyson S. Barrett, PhD"
+date: "May 2024"
+format:
+  revealjs: 
+    theme: dark
+editor: source
+execute: 
+  warning: false
+  message: false
+---
+
+## Agenda
+
+1. Brief intro to `data.table` and its syntax
+2. New developments!
+    - New "management"
+    - New features
+    - New ways to engage
+
+
+## Who Am I?
+
+* Current "maintainer" of `data.table` (more on this at the end!)
+* `data.table` user since 2016, contributor since 2019
+* Author/maintainer of 6 other packages (3 on CRAN)
+* Currently manage a team of researchers at Highmark Health (lots of big data wrangling and cleaning)
+* 
+
+
+## Brief Intro
+
+
+
+
+
