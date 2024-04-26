@@ -101,8 +101,8 @@ header_fun = function(title, shift_line = FALSE){
 \vspace{2pt}
 
 \indent \hspace*{.1in} \small\textbf{Manager Research Analytics and Enablement}, Highmark Health \hfill 2022-Present
-\newline \hspace*{.6in} \emph{Lead of Statistical and Methodological Team}
-\newline \hspace*{.6in} \emph{Care Analytics in Entreprise Data and Analytics}
+\newline \hspace*{.6in} \emph{Manager, Research Analytics and Enablement}
+\newline \hspace*{.6in} \emph{Advanced Analytics in Enterprise Data and Analytics}
 
 \indent \hspace*{.1in} \small\textbf{Research Scientist}, Department of Communication Disorders, Utah State University \hfill 2022-Present
 
