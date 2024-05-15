@@ -11,7 +11,7 @@ description:      'Any fool can know. The point is to understand. - Einstein'
 url:              https://tysonstanley.github.io
 baseurl:          ''
 description2:     'This site is a compilation of: (1) my #rstats blog, (2) my research and teaching portfolio, and (3) information about my data science consulting company -- Barrett Evaluation, LLC. See the sidebar for more information.'
-description3:     'I am an <a href="https://twitter.com/hashtag/rstats">#rstats</a> and <a href="https://osf.io">open science</a> enthusiast. I currently work at <a href="http://www.usu.edu">Utah State University</a> as a Research Assistant Professor. I serve as a methodologist on several research teams, and develop accessible data tools. This site contains my blog and other open resources for learning data analysis.'
+description3:     'I am an <a href="https://twitter.com/hashtag/rstats">#rstats</a> and <a href="https://osf.io">open science</a> enthusiast. I currently work at <a href="http://www.usu.edu">Highmark Health</a>, managing a team of researchers. Outside of my day job, I serve as a methodologist on several research teams, and develop accessible data tools. This site contains my blog and other open resources for learning data analysis.'
 slidesurl:        "https://cehs-research.github.io"
 
 author:
