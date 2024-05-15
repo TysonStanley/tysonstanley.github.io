@@ -7,7 +7,12 @@ banner_image: sample-banner-image-2.jpg
 
 ![Cliff]({{ site.baseurl }}/assets/images/IMG_0442.jpg)
 
-I am currently a Research Assistant Professor at Utah State University, working as a methodologist/data scientist on projects relating to communication disorders and health. I am enthusiastic about the `R` Programming Environment and seek to develop user-friendly tools that simplify the use, the interpretation, or the application of current and novel data analytic methods. 
+I currently manage a team of researchers at Highmark Health, an integrated health system, working as a methodologist/data scientist on projects relating to the quintuple aim of healthcare: 1) improving patient experience, 2) improving population health, 3) reducing costs, 4) improving care team well-being, and 5) increasing health equity.
+
+
+I also work on projects relating to communication disorders and health, teaming up with the talented Stephanie Borrie, PhD tackling many issues in the field.
+
+I am enthusiastic about the `R` Programming Environment and seek to develop user-friendly tools that simplify the use, the interpretation, or the application of current and novel data analytic methods. 
 
 Regarding my blog, I'll post on this site with R tutorials regarding data analytics and visualizations and to introduce great functions and features that can make working with data a bit more pleasant, including about packages and functions that I have written.
 
