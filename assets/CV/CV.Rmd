@@ -213,14 +213,6 @@ funds_list(funds, "Funded")
 ```
 
 
-
-
-
-
-
-
-
-
 ```{r, echo = FALSE, results='asis'}
 header_fun("EXTERNAL FUNDING \\normalsize (Completed)", shift_line = TRUE)
 ```
@@ -233,7 +225,7 @@ funds_list(funds, "Completed")
 
 
 
-
+\newpage
 
 <!-- Published Works -->
 ```{r, echo = FALSE, results='asis'}
