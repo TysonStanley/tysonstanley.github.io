@@ -4,6 +4,12 @@ title: Teaching
 permalink: /teaching/
 ---
 
+
+# useR! 2024
+
+* [PDF](https://tysonstanley.github.io/assets/useR_2024/Barrett_useR_2024.pdf)
+* [PPTX](https://tysonstanley.github.io/assets/useR_2024/Barrett_useR_2024.pptx)
+
 # `rstudio::conf(2020)`
 
 <a href="https://tysonbarrett.com/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf">
