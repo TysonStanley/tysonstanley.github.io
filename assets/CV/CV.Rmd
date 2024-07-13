@@ -329,6 +329,7 @@ Willis, J., Doutre, S.M., Krausen, K., \textbf{Barrett, T.}, Ripma, T., & Capara
 ```{r, echo = FALSE, results='asis'}
 header_fun("PUBLISHED PRE-PRINTS", shift_line = TRUE)
 ```
+*Not otherwise published in peer-reviewed journals.*
 
 \textbf{Barrett, T.S.} (2019, Oct 3). List-columns in `data.table`: Nesting and unnesting data tables and vectors. \emph{PsyArXiv}. https://doi.org/10.31234/osf.io/u8ekc \img{osfdata.png}{https://osf.io/smcg8/}\img{osfmaterials.png}{https://osf.io/smcg8/}
 
@@ -421,6 +422,8 @@ header_fun("SELECTED PRESENTATIONS", shift_line = TRUE)
 
 
 <!-- -->
+
+\textbf{Barrett, T.S.} (July 2024). The Past, Present, and Future of data.table. useR! 2024, Salzburg, Austria.
 
 Harper, S.A., Brown, C.B., Poulsen, S.L., \textbf{Barrett, T.S.}, Dakin. J.C. (September 2023). Inter-step variation of stairways and observations of fall-related events. 2023 UAB Center of Exercise Medicine Symposium on Exercise and Aging. Invited Flash Talk.
 
