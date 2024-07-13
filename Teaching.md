@@ -5,10 +5,10 @@ permalink: /teaching/
 ---
 
 
-# useR! 2024 in Salzburg, Austria
+# `useR! 2024` in Salzburg, Austria
 
-* [PDF](https://tysonstanley.github.io/assets/useR_2024/Barrett_useR_2024.pdf)
-* [PPTX](https://tysonstanley.github.io/assets/useR_2024/Barrett_useR_2024.pptx)
+* [PDF](https://tysonbarrett.com/assets/useR_2024/Barrett_useR_2024.pdf)
+* [PPTX](https://tysonbarrett.com/assets/useR_2024/Barrett_useR_2024.pptx)
 
 # `rstudio::conf(2020)`
 
