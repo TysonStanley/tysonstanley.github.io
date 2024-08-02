@@ -10,6 +10,10 @@ permalink: /teaching/
 * [PDF](https://tysonbarrett.com/assets/useR_2024/Barrett_userR_2024.pdf)
 * [PPTX](https://tysonbarrett.com/assets/useR_2024/Barrett_userR_2024.pptx)
 
+# `rfinance 2024` in Chicago
+
+* [PDF](https://tysonbarrett.com/assets/r_finance_2024/Barrett_rfinance_nointro_2024.pdf)
+
 # `rstudio::conf(2020)`
 
 <a href="https://tysonbarrett.com/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf">
