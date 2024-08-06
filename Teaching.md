@@ -8,6 +8,7 @@ permalink: /teaching/
 # JSM 2024
 
 * [PDF](https://tysonbarrett.com/assets/JSM_2024/Barrett_JSM2024.pdf)
+* [PPTX](https://tysonbarrett.com/assets/JSM_2024/Barrett_JSM2024.pptx)
 
 # `useR! 2024` in Salzburg, Austria
 
