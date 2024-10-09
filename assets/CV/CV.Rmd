@@ -95,21 +95,22 @@ header_fun = function(title, shift_line = FALSE){
 
 <!-- Research Experience -->
 \vspace{-5pt}
-\section{RESEARCH APPOINTMENTS}
+\section{PROFESSIONAL APPOINTMENTS}
 \vspace{-5pt}
 \hrule
 \vspace{2pt}
 
 \indent \hspace*{.1in} \small\textbf{Manager Research Analytics and Enablement}, Highmark Health \hfill 2022-Present
-\newline \hspace*{.6in} \emph{Manager, Research Analytics and Enablement}
 \newline \hspace*{.6in} \emph{Advanced Analytics in Enterprise Data and Analytics}
+\newline \hspace*{.6in} \emph{Manage a team of six researchers collaborating with physicians leveraging Highmark data assets}
 
 \indent \hspace*{.1in} \small\textbf{Research Scientist}, Department of Communication Disorders, Utah State University \hfill 2022-Present
+\newline \hspace*{.6in} \emph{Co-investigator on NIH-funded projects}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-2022
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
-\newline \hspace*{.6in} \emph{Administrator of SONA Systems}
-\newline \hspace*{.6in} \emph{Administrator of REDCap}
+\newline \hspace*{.6in} \emph{Administrator of SONA Systems and REDCap}
+\newline \hspace*{.6in} \emph{Taught graduate level statistics courses and R programming courses}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant}, Prevention Science Lab, Utah State University \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Advisor: Ginger Lockhart, PhD}
@@ -117,19 +118,20 @@ header_fun = function(title, shift_line = FALSE){
 \indent \hspace*{.1in} \small\textbf{Statistical and Data Science Consultant}, Utah State University \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Supervisors: Sarah Schwartz, PhD and Jamison Fargo, PhD}
 
-\indent \hspace*{.1in} \small\textbf{WOC Research Assistant}, Veteran Affairs SLC \hfill 2016-2018
-\newline \hspace*{.6in} \emph{Advisors: Vanessa Stevens, PhD and Richard Nelson, PhD}
+\indent \hspace*{.1in} \small\textbf{Finance Intern}, General Electric \hfill 2014
+\newline \hspace*{.6in} \emph{Data support and analytics}
 
-<!-- Research Areas -->
+
+<!-- Interests -->
 \vspace{-5pt}
-\section{RESEARCH AREAS}
+\section{INTERESTS}
 \vspace{-5pt}
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textsc{Primary:} Applied Methodology in the Health and Disability Disciplines
+\indent \hspace*{.1in} \small\textsc{Research:} Development and testing of open source tools for individuals with disabilities
 
-\indent \hspace*{.1in} \textsc{Secondary:} Accessible Methodology Using R Programming
+\indent \hspace*{.1in} \textsc{Teaching:} Web applications, Software Development, R programming, C programming
 
 
 <!-- Affiliations -->
@@ -139,11 +141,9 @@ header_fun = function(title, shift_line = FALSE){
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{Rdatatable }} Maintainer \hfill 2023-Present
+\indent \hspace*{.1in} \small\textbf{\href{https://github.com/Rdatatable/data.table}{data.table}} Maintainer \hfill 2023-Present
 
 \indent \hspace*{.1in} \small\textbf{\href{https://osf.io/gkjbx}{Center for Open Science }} Ambassador \hfill 2019-Present
-
-\indent \hspace*{.1in} \small\textbf{\href{https://www.apa.org/pubs/journals/met}{Psychological Methods}} Voluntary Reviewer \hfill 2018-Present
 
 \indent \hspace*{.1in} \small\textbf{\href{https://www.apa.org/pubs/journals/met}{Journal of Speech, Language, and Hearing Research}} Voluntary Reviewer \hfill 2018-Present
 
@@ -225,7 +225,7 @@ funds_list(funds, "Completed")
 
 
 
-\newpage
+
 
 <!-- Published Works -->
 ```{r, echo = FALSE, results='asis'}
