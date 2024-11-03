@@ -1,6 +1,6 @@
 ---
 title: "Efficient tools for your tidy workflow"
-subtitle: "Using `data.table` and `arrow` to wrangle large in-memory data"
+subtitle: "A case for incorporating `data.table` into your workflow"
 author: "Tyson S. Barrett, PhD"
 date: today
 format: 
@@ -10,12 +10,9 @@ format:
 ---
 
 
-# Agenda
+# DataFrames: A Brief History
 
-1. What is a "tidy" workflow?
-2. How can `data.table` help?
-3. What about `arrow`?
-4. Put it all together
+
 
 # Tidy Workflow
 
@@ -32,7 +29,7 @@ Insert workflow diagram
 
 
 
-# `arrow`
+## 
 
 
 
