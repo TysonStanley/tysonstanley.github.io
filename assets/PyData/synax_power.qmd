@@ -1,0 +1,464 @@
+---
+title: "The Power of Syntax"
+subtitle: "Comparing `polars`, `data.table`, and `dplyr`/`pandas`"
+author: "Tyson S. Barrett, PhD"
+date: today
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    progress: true
+    self-contained: true
+revealjs-plugins:
+  - codewindow
+editor: source
+execute: 
+  echo: true
+---
+
+#  {background-image="./arrival_symbol.png"}
+
+<!--
+"Arrival" (2016) brilliantly explores the Sapir-Whorf hypothesis - the idea that the language we speak influences how we think and perceive reality - through its story of first contact. When linguist Dr. Louise Banks (Amy Adams) is tasked with communicating with aliens who've landed on Earth, she discovers their written language uses circular logograms that express concepts nonlinearly. 
+
+The film takes the strong version of the Sapir-Whorf hypothesis to its science fiction extreme: as Louise learns the heptapods' language, she begins experiencing time non-linearly, just as they do. Their language doesn't distinguish between past, present and future, and gradually Louise's perception shifts to match this worldview. She starts experiencing what appear to be memories of the future, suggesting that the aliens' circular writing system has fundamentally altered her consciousness and perception of time.
+
+This connection between language and cognition becomes central to both the plot and the film's emotional core. Through Louise's journey, the film asks profound questions about how language shapes thought, whether linear time is simply a product of human linguistic constraints, and if learning a truly alien language could restructure our basic understanding of reality.
+
+The film grounds these linguistic concepts in a deeply personal story while maintaining the scientific intrigue of first contact, making complex ideas about linguistic relativity accessible through its narrative. Would you like me to elaborate on how the film portrays specific aspects of the Sapir-Whorf hypothesis?
+-->
+
+## Sapir-Whorf Hypothesis
+
+("linguistic relativity")
+
+<br>
+
+### Proposes that the language a person speaks influences how they think, perceive, and experience the world
+
+-   Color Perception
+-   Spatial Orientation
+-   Time and Grammatical Structures
+-   Gender and Cognition
+
+
+<!--
+Languages vary in how they categorize colors. For example, some languages have fewer basic color terms than English. Research has shown that speakers of languages with fewer color terms may perceive or categorize colors differently.
+
+Some languages (e.g., Guugu Yimithirr in Australia) use absolute directions (north, south) rather than relative terms (left, right). Speakers of these languages demonstrate heightened spatial awareness and orientation skills.
+
+Languages vary in how they treat time. For instance, Mandarin speakers often describe time using a vertical axis, whereas English speakers use a horizontal one. This difference can influence how speakers think about temporal relationships.
+
+In languages with grammatical gender, objects often carry gendered connotations. For example, German speakers describe the word “bridge” (feminine in German) with terms like “beautiful” or “elegant,” while Spanish speakers (where the word is masculine) use words like “strong” or “sturdy” (Boroditsky, 2003).
+-->
+
+
+##  {background-image="./color_spectrum.jpg"}
+
+# How does the language and syntax we code in affect our perceptions, plans, and thinking?
+
+## Who am I?
+
+<br>
+
+- Manage a team of statisticians, informaticists, and health analysts at Highmark Health
+
+- R user and developer for 10+ years
+
+- Current maintainer of the `data.table` R package
+
+- PhD in Quantitative Psychology
+
+
+## Brief History Lesson
+
+![](history_df.png)
+
+
+<!--
+data frames gave us an initial shared framework for data across coding languages
+knowing how it has evolved from its beginnings can help us see where we are going
+similar to how shakespearean language differs from modern english, we can expect coding to evolve too
+"sigma ohio gyatt"
+
+To understand how this applies to data analytics, let's look at three powerful packages that use data frames
+-->
+
+
+## The Packages {.scrollable}
+
+```{r}
+#| echo: false
+# reticulate::install_miniconda(here::here("assets", "PyData", "mini"))
+reticulate::use_miniconda(here::here("assets", "PyData", "mini"))
+# reticulate::py_install("polars")
+```
+
+### `polars`
+
+::: {.codewindow}
+```{python}
+# pip install polars
+import polars as pl
+```
+:::
+
+### `data.table`
+
+::: {.codewindow}
+```{r}
+# install.packages("data.table")
+library(data.table)
+```
+:::
+
+### `dplyr` (`pandas`)
+
+::: {.codewindow}
+```{r}
+# install.packages("dplyr")
+library(dplyr)
+```
+:::
+
+
+## Not Just Speed
+
+### <https://duckdblabs.github.io/db-benchmark/>
+
+![](speed_comps.png)
+
+Note, fair benchmarking is [difficult](https://hannes.muehleisen.org/publications/DBTEST2018-performance-testing.pdf)
+
+<!-- 50GB of data -->
+
+
+## Comparing Syntax
+
+<br>
+
+
+:::{.r-fit-text}
+Comparing based on five related but distinct criteria:
+
+* Verbosity and Readability
+* Operation Chaining
+* Column References
+* Grouping Syntax
+* Speed of Writing
+:::
+
+
+## Verbosity and Readability {.scrollable}
+
+<br>
+
+`dplyr` and `polars` built on some [shared verbs/synonyms](https://blog.tidy-intelligence.com/posts/dplyr-vs-polars/)
+
+| Action              | `polars`           | `dplyr`                      |
+|---------------------|--------------------|------------------------------|
+| Filter rows         | `filter()`         | `filter()`                   |
+| Select columns      | `select()`         | `select()`                   |
+| Manipulate columns  | `with_columns()`   | `mutate()`                   |
+| Sort/arrange rows   | `sort()`           | `arrange()`                  |
+| Rename columns      | `rename()`         | `rename()`                   |
+| Summarize by groups | `group_by().agg()` | `group_by() %>% summarise()` |
+
+
+## Verbosity and Readability {auto-animate=true auto-animate-easing="ease-in-out"}
+
+<br>
+
+`data.table` in contrast has an implicit syntax
+
+::: {.r-fit-text}
+`dt[i, j, by]`
+:::
+
+## Verbosity and Readability {auto-animate=true auto-animate-easing="ease-in-out"}
+
+`dt[i, j, by]`
+
+<br>
+
+Produces very concise syntax where position of syntax within `[]` and other symbols communicate intention
+
+::: {.codewindow}
+```{r}
+#| eval: false
+dt[var == 1]             # filter
+dt[, .(var, var2)]       # select
+dt[, new := var + var2]  # mutate/with_columns
+```
+:::
+
+
+## Verbosity and Readability
+
+How does this affect our use of the syntax?
+
+<br>
+
+* Data exploration
+* Learning Curve
+* Collaboration
+* Production code
+
+
+## Operation Chaining
+<br>
+
+All three packages offer operation chaining
+
+Unlike the others, `polars` can directly optimize your call behind the scenes (similar to other database engines)
+
+::: {.codewindow .python}
+```{python}
+#| results: 'hide'
+pl1 = pl.DataFrame({"foo": ["a", "b", "c"], "bar": [0, 1, 2]}).lazy()
+pl2 = (
+  pl1.with_columns(pl.col("foo").str.to_uppercase())
+  .filter(pl.col("bar") > 0)
+)
+pl2.explain()
+```
+:::
+
+```
+WITH_COLUMNS:
+  [col("foo").str.uppercase()]
+  DF ["foo", "bar"]; PROJECT */2 COLUMNS; SELECTION: [(col("bar")) > (0)]
+```
+
+## Operation Chaining
+<br>
+
+All three packages offer operation chaining
+
+Unlike the others, `polars` can directly optimize your call behind the scenes (similar to other database engines)
+
+::: {.codewindow .python}
+```{python}
+#| eval: false
+pl2.collect()
+```
+:::
+
+```{python}
+#| echo: false
+pl2.collect()
+```
+
+
+
+## Column References  {.scrollable}
+
+* `polars`: Requires pl.col() for complex operations
+* `data.table`: Direct column names within []
+* `dplyr`: Direct column names
+
+::: {.codewindow .python}
+```{python}
+import numpy as np
+pl3 = pl.DataFrame({
+    'x': range(1, 6),
+    'y': ['a', 'a', 'a', 'b', 'b'],
+    'z': np.random.rand(5)
+})
+```
+:::
+
+```{python}
+#| echo: false
+print(pl3)
+```
+
+
+## Column References  {.scrollable}
+
+* `polars`: Requires pl.col() for complex operations
+* `data.table`: Direct column names within []
+* `dplyr`: Direct column names
+
+::: {.codewindow .python}
+```{python}
+import numpy as np
+pl3 = pl.DataFrame({
+    'x': range(1, 6),
+    'y': ['a', 'a', 'a', 'b', 'b'],
+    'z': np.random.rand(5)
+})
+```
+:::
+
+::: {.panel-tabset}
+
+### `polars`
+
+::: {.codewindow .python}
+```{python}
+#| eval: false
+pl3.select(pl.col("x", "y"))
+```
+:::
+
+```{python}
+#| echo: false
+pl3.select(pl.col("x", "y"))
+```
+
+### `data.table`
+
+```{r}
+#| echo: false
+dt3 = data.table(x = 1:5, y = c("a", "a", "a", "b", "b"), z = runif(5))
+```
+
+::: {.codewindow .r}
+```{r}
+#| eval: false
+dt3[, .(x, y)]
+```
+:::
+
+```{r}
+#| echo: false
+dt3[, .(x, y)]
+```
+
+### `dplyr`
+
+```{r}
+#| echo: false
+df3 = tibble(x = 1:5, y = c("a", "a", "a", "b", "b"), z = runif(5))
+```
+
+::: {.codewindow .r}
+```{r}
+#| eval: false
+df3 %>% select(x, y)
+```
+:::
+
+```{r}
+#| echo: false
+df3 %>% select(x, y)
+```
+
+:::
+
+
+## Grouping Syntax
+
+Again, all three packages make this possible
+
+::: {.panel-tabset}
+
+### `polars`
+
+::: {.codewindow .python}
+```{python}
+#| eval: false
+pl3.group_by('y').agg(pl.sum('x'))  
+```
+:::
+
+```{python}
+#| echo: false
+pl3.group_by('y').agg(pl.sum('x'))  
+```
+
+### `data.table`
+
+::: {.codewindow .r}
+```{r}
+#| eval: false
+dt3[, sum(x), by = y]
+```
+:::
+
+```{r}
+#| echo: false
+dt3[, sum(x), by = y]
+```
+
+### `dplyr`
+
+::: {.codewindow .r}
+```{r}
+#| eval: false
+df3 %>% 
+  group_by(y) %>%            # grouping
+  summarise(sum_x = sum(x))
+```
+:::
+
+```{r}
+#| echo: false
+df3 %>% 
+  group_by(y) %>%            # grouping
+  summarise(sum_x = sum(x))
+```
+
+:::
+
+## Grouping Syntax
+
+<br>
+
+A few nuances:
+
+* `summarise()` will message if multiple rows per group are found
+* restrained in `polars` to use their functions whereas `data.table` and `dplyr` can use most functions in `R`
+
+
+
+## Speed of Writing
+
+<br>
+
+* `polars` prioritizes "a well-structured, typed API that is both expressive and easy to use."
+* `dplyr` prioritizes code legibility using expressive verbs
+* `data.table` prioritizes concise, symbol-based code
+
+Of course, familiarity with the syntax is most important but assuming familiarity, `data.table` offers very high speed of writing while code snippets can be very useful for `polars` and `dplyr`
+
+
+
+#  {background-image="./arrival_symbol.png"}
+
+::: {.codewindow}
+```{python}
+import polars as pl
+```
+:::
+
+::: {.codewindow}
+```{r}
+library(data.table)
+```
+:::
+
+::: {.codewindow}
+```{r}
+library(dplyr)
+```
+:::
+
+
+
+## Closing Thoughts
+
+-   `polars` and `arrow` along with some other modern developments are likely the future
+-   `polars` is written in `Rust`, making it transferable to other languages (e.g. `R` now has a `polars` package)
+-   `data.table` is still highly used and will be for what looks like a long time (used in thousands of `R` packages and has a very stable API lifecycle)
+-   `dplyr` (and the `tidyverse`) helped structure the grammar and have focused on backends to make it possible for optimization and speed without developing a whole new framework
+
+<!--
+
+* `arrow` for larger-than-memory datasets, including on remote cloud storage like AWS S3, using the Apache Arrow C++ engine, Acero.
+* `dtplyr` for large, in-memory datasets. Translates your dplyr code to high performance data.table code.
+* `dbplyr` for data stored in a relational database. Translates your dplyr code to SQL.
+* `duckplyr` for using duckdb on large, in-memory datasets with zero extra copies. Translates your dplyr code to high performance duckdb queries with an automatic R fallback when translation isn’t possible.
+* `duckdb` for large datasets that are still small enough to fit on your computer.
+* `sparklyr` for very large datasets stored in Apache Spark.
+-->
