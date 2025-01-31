@@ -6,8 +6,8 @@ permalink: /teaching/
 
 # PyData 2025
 
-* [HTML](https://tysonbarrett.com/assets/PyData/syntax_power.html)
-* [QMD](https://tysonbarrett.com/assets/PyData/syntax_power.qmd)
+* [HTML](https://tysonbarrett.com/assets/PyData/synax_power.html)
+* [QMD](https://tysonbarrett.com/assets/PyData/synax_power.qmd)
 
 # JSM 2024
 
