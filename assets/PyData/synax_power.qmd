@@ -58,16 +58,37 @@ In languages with grammatical gender, objects often carry gendered connotations.
 
 ## Who am I?
 
+
+:::: {.columns}
+
+::: {.column width="45%"}
+![](HHlogo.png)
+:::
+::: {.column width="40%"}
+![](usu.png)
+:::
+::::
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+![](rdatatable.png)
+:::
+::: {.column width="10%"}
 <br>
+:::
 
-- Manage a team of statisticians, informaticists, and health analysts at Highmark Health
+::: {.column width="40%"}
+![](Rlogo.png)
+:::
+::::
 
-- R user and developer for 10+ years
 
-- Current maintainer of the `data.table` R package
 
+<!--
 - PhD in Quantitative Psychology
-
+-->
 
 ## Brief History Lesson
 
@@ -171,10 +192,12 @@ Comparing based on five related but distinct criteria:
 `data.table` in contrast has an implicit syntax
 
 ::: {.r-fit-text}
-`dt[i, j, by]`
+```
+dt[i, j, by]
+```
 :::
 
-## Verbosity and Readability {auto-animate=true auto-animate-easing="ease-in-out"}
+## Verbosity and Readability
 
 `dt[i, j, by]`
 
