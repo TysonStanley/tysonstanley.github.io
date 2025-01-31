@@ -4,6 +4,9 @@ title: Teaching
 permalink: /teaching/
 ---
 
+# PyData 2025
+
+* [HTML](https://tysonbarrett.com/assets/PyData/syntax_power.html)
 
 # JSM 2024
 
