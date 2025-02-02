@@ -506,14 +506,17 @@ library(dplyr)
 
 
 
-## Closing Thoughts
+## Closing Thoughts {.scrollable}
 
--   `polars` and `arrow` along with some other modern developments are likely the future
--   `polars` is written in `Rust`, making it transferable to other languages (e.g. `R` now has a `polars` package)
--   `data.table` is still highly used and will be for what looks like a long time (used in thousands of `R` packages and has a very stable API lifecycle)
--   `dplyr` (and the `tidyverse`) helped structure the grammar and have focused on backends to make it possible for optimization and speed without developing a whole new framework
+-   The way `polars` (and similar projects like `arrow` ) work are likely the future
+    -   `polars` is written in `Rust` making it transferable to other languages (e.g. `R` now has a `polars` package)
+-   `data.table` is highly used and will be for what looks like a long time 
+    -   used in thousands of `R` packages and production code
+-   `dplyr` (and the `tidyverse`) helped structure the grammar 
+    -   has amazing backends to make it possible for optimization and speed without developing a whole new framework
 
 <!--
+Other shoutouts: 
 
 * `arrow` for larger-than-memory datasets, including on remote cloud storage like AWS S3, using the Apache Arrow C++ engine, Acero.
 * `dtplyr` for large, in-memory datasets. Translates your dplyr code to high performance data.table code.
