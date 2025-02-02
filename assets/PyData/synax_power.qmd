@@ -24,7 +24,7 @@ The film takes the strong version of the Sapir-Whorf hypothesis to its science f
 
 This connection between language and cognition becomes central to both the plot and the film's emotional core. Through Louise's journey, the film asks profound questions about how language shapes thought, whether linear time is simply a product of human linguistic constraints, and if learning a truly alien language could restructure our basic understanding of reality.
 
-The film grounds these linguistic concepts in a deeply personal story while maintaining the scientific intrigue of first contact, making complex ideas about linguistic relativity accessible through its narrative. Would you like me to elaborate on how the film portrays specific aspects of the Sapir-Whorf hypothesis?
+The film grounds these linguistic concepts in a deeply personal story while maintaining the scientific intrigue of first contact, making complex ideas about linguistic relativity accessible through its narrative.
 -->
 
 ## Sapir-Whorf Hypothesis
@@ -231,6 +231,43 @@ How does this affect our use of the syntax?
 <br>
 
 All three packages offer operation chaining
+
+::: {.panel-tabset}
+
+### `polars`
+
+::: {.codewindow .python}
+```{python}
+#| eval: false
+pl3.select(pl.col("x", "y")).filter(pl.col("x") > 1)
+```
+:::
+
+### `data.table`
+
+
+::: {.codewindow .r}
+```{r}
+#| eval: false
+dt3[, .(x, y)][x > 1]
+```
+:::
+
+### `dplyr`
+
+::: {.codewindow .r}
+```{r}
+#| eval: false
+df3 |>
+  select(x, y) |>
+  filter(x > 1)
+```
+:::
+
+:::
+
+
+## Operation Chaining
 
 Unlike the others, `polars` can directly optimize your call behind the scenes (similar to other database engines)
 
