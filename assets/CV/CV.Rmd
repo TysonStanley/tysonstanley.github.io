@@ -63,6 +63,7 @@ header_fun = function(title, shift_line = FALSE){
 \begin{tabular}{rl}
     \textsc{Email:}       & \href{mailto:tyson.barrett@usu.edu}{tyson.barrett@usu.edu} \\
     \textsc{Website:}     & \href{http://tysonbarrett.com}{tysonbarrett.com} \\
+    \textsc{LinkedIn:}    & \href{https://www.linkedin.com/in/tyson-s-barrett-phd/}{Tyson S. Barrett Profile} \\
     \textsc{ORCID:}       & \href{https://orcid.org/0000-0002-2137-1391}{0000-0002-2137-1391} \\
     \textsc{OSF:}         & \href{osf.io/gkjbx}{osf.io/gkjbx} \\
     \textsc{Citations:}   & `r profile$total_cites` \\
@@ -103,9 +104,10 @@ header_fun = function(title, shift_line = FALSE){
 \indent \hspace*{.1in} \small\textbf{Manager Research Analytics and Enablement}, Highmark Health \hfill 2022-Present
 \newline \hspace*{.6in} \emph{Advanced Analytics in Enterprise Data and Analytics}
 \newline \hspace*{.6in} \emph{Manage a team of six researchers collaborating with physicians leveraging Highmark data assets}
+\newline \hspace*{.6in} \emph{Core capabilities include linking and analyzing healthcare claims, electronic health records, and public data}
 
 \indent \hspace*{.1in} \small\textbf{Research Scientist}, Department of Communication Disorders, Utah State University \hfill 2022-Present
-\newline \hspace*{.6in} \emph{Co-investigator on NIH-funded projects}
+\newline \hspace*{.6in} \emph{Co-investigator on NIH-funded projects in the Human Interaction Lab}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-2022
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
