@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Thinking Stats
-permalink: /thinkingstats/
+title: Barrett Evaluation, LLC
+permalink: /barretteval/
 ---
 
-![]({{ site.baseurl }}/assets/images/thinkingstats_logo.jpg)
-
-*Thinking Stats* is my consulting company dealing with data management/cleaning, data analytics and statistical modeling. It is currently headquartered in Utah.
+Because I am active in consulting, I've established **Barrett Evaluation, LCC**. 
+We work with individuals, non-profit, and for profit companies from around the world, 
+helping with data management/cleaning, data analytics and statistical modeling. 
+It is currently headquartered in Logan, Utah.
 
 I have consulted on projects in education, communication sciences, economics, psychology, and biology. The table below highlights the ways I can (and often have) contributed to a project.
 
@@ -14,7 +15,7 @@ I have consulted on projects in education, communication sciences, economics, ps
  <thead>
   <tr>
    <th style="text-align:left;"> Project Type </th>
-   <th style="text-align:left;"> Output Produced by<br>Thinking Stats </th>
+   <th style="text-align:left;"> Output Produced by<br>Barrett Evaluation </th>
   </tr>
  </thead>
 <tbody>
@@ -34,7 +35,7 @@ I have consulted on projects in education, communication sciences, economics, ps
 
 Contact me for a *free intake appointment*. To contact me,
 
-- Email me at <t.barrett@aggiemail.usu.edu>, or 
+- Email me at <t.barrett88@gmail.com>, or 
 - Fill out the form below. 
 
 I try to respond to either within 48 hours.
