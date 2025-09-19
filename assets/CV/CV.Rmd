@@ -14,9 +14,10 @@ params:
 library(scholar)
 library(tidyverse)
 
+httr::set_config(httr::user_agent("Mozilla/5.0 (compatible; R scholar package)"))
 your.id <- "UWdXXEoAAAAJ" # This is your google scholar ID
 profile <- get_profile(your.id)
-pubs <- get_publications(your.id, cstart = 0, pagesize = 100, flush = FALSE)
+pubs <- get_publications(your.id, cstart = 0, pagesize = 100, flush = TRUE)
 citations <- get_citation_history(your.id)
 
 ## Custom Code to make bib file from scholar ID
@@ -233,6 +234,8 @@ funds_list(funds, "Completed")
 ```{r, echo = FALSE, results='asis'}
 header_fun("PEER-REVIEWED JOURNAL ARTICLES", shift_line = TRUE)
 ```
+
+\* \emph{Signifies Two First Authors}
 
 \normalsize
 

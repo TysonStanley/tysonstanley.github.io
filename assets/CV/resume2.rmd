@@ -1,0 +1,207 @@
+---
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    includes: 
+      in_header: preamble.tex
+geometry: margin=1.8cm
+header-includes:
+  - \usepackage{fontspec}
+  - \usepackage{titlesec}
+  - \usepackage{xcolor}
+  - \usepackage{enumitem}
+  - \usepackage{fontawesome5}
+  - \usepackage{tabularx}
+  - \usepackage{hyperref}
+  - \usepackage[absolute]{textpos}
+  - \definecolor{mainblue}{RGB}{42, 95, 140}
+  - \definecolor{darkgray}{RGB}{80, 80, 80}
+  - \definecolor{accent}{RGB}{25, 113, 194}
+  - \setmainfont{Arial}
+  - \newfontfamily\headingfont{Arial Bold}
+  - \titleformat{\section}{\headingfont\Large\color{mainblue}}{}{0em}{\MakeUppercase}[\vspace{-1.2em}\rule{\textwidth}{1.5pt}\vspace{0.2em}]
+  - \hypersetup{colorlinks=true, linkcolor=accent, urlcolor=accent}
+---
+
+```{r scholar_info, echo = FALSE, warning = FALSE, message = FALSE}
+library(scholar)
+library(tidyverse)
+
+your.id <- "UWdXXEoAAAAJ" # This is your google scholar ID
+profile <- get_profile(your.id)
+pubs <- get_publications(your.id, cstart = 0, pagesize = 100, flush = FALSE)
+citations <- get_citation_history(your.id)
+
+today <- lubridate::today()
+month <- months(today)
+day <- lubridate::day(today)
+year <- lubridate::year(today)
+```
+
+\pagestyle{empty}
+
+\color{mainblue}\huge\textbf{TYSON S. BARRETT, PhD}
+\hfill
+\color{darkgray}\footnotesize Updated: `r month` `r day`, `r year`
+
+\vspace{0.5em}
+\small\faEnvelope \hspace{3pt} \href{mailto:tyson.barrett@usu.edu}{\small tyson.barrett@usu.edu} \hspace{3pt} \small\textbullet \hspace{3pt}
+\small\faLinkedin \hspace{3pt} \href{https://www.linkedin.com/in/tyson-s-barrett-phd/}{\small LinkedIn} \hspace{3pt} \small\textbullet \hspace{3pt}
+\small\faGlobe \hspace{3pt} \href{http://tysonbarrett.com}{\small tysonbarrett.com} 
+
+\vspace{0.7em}
+
+\section{PROFILE}
+\vspace{-2em}
+
+\color{darkgray}
+Data science leader with 10+ years of experience in analytics, statistical modeling, and team management. Expertise in developing analytic tools, implementing data-driven strategies, and optimizing resource allocation. Proven track record leading cross-functional and interdisciplinary teams across analytics, finance, product management, and research to enhance operational efficiency. Have supported the transition to open source tools to save on data analytics and processing costs.
+
+
+\section{EDUCATION}
+\vspace{-2em}
+
+\setlist[itemize]{leftmargin=1.5em, nosep, label=$\bullet$}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{Ph.D. Quantitative Psychology}, Utah State University & \textit{Feb 2018} \\
+\multicolumn{2}{@{}l}{\small \hspace{6pt} Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects} \\[1ex]
+\textbf{B.S. Economics}, Utah State University, \textit{Cum Laude} & \textit{May 2014} \\[1ex]
+\textbf{B.S. Psychology}, Utah State University, \textit{Cum Laude} & \textit{May 2014} \\
+\end{tabularx}
+
+\section{PROFESSIONAL EXPERIENCE}
+\vspace{-2em}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{Manager, Advanced Analytics} & \textit{2022-Present} \\
+\textit{Highmark Health, Enterprise Analytics} & \\
+\end{tabularx}
+\vspace{-0.8em}
+
+\begin{itemize}
+\item Manage a team of six analysts and statisticians collaborating with physicians leveraging data assets
+\item Develop and implement statistical and econometric models producing cost reductions of \$4+ million per year
+\item Supported the application and award receipt of \$10+ million in grants and contracts for research
+\item Create dashboards and analytic tools for tracking key performance metrics for early action on healthcare trends
+\item Establish workflows for data processing and analysis across departments
+\item Analyze healthcare claims and EHR data to identify opportunities to reduce costs and improve outcomes
+\item Collaborate with Finance to refine cost models
+\end{itemize}
+
+\vspace{.5em}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{Research Scientist} & \textit{2022-Present} \\
+\textit{Utah State University, Department of Communication Disorders} & \\
+\end{tabularx}
+\vspace{-0.8em}
+\begin{itemize}
+\item Co-investigator on NIH-funded projects in the Human Interaction Lab, supporting \$5+ million in grant funding
+\item Develop statistical models to analyze complex healthcare data
+\item Collaborate with cross-functional teams on research strategy
+\end{itemize}
+
+\vspace{.5em}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{Research Assistant Professor} & \textit{2018-2022} \\
+\textit{Utah State University, Department of Psychology} & \\
+\end{tabularx}
+\vspace{-0.8em}
+\begin{itemize}
+\item Managing Director of the Data Science \& Discovery Unit
+\item Administrator of data management systems (SONA, REDCap)
+\item Developed analytic tools and dashboards for research metrics
+\item Led cross-functional teams in implementing data-driven strategies
+\end{itemize}
+
+\vspace{.5em}
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{Statistical and Data Science Consultant} & \textit{2016-2018} \\
+\textit{Utah State University} & \\
+\end{tabularx}
+\vspace{-0.8em}
+\begin{itemize}
+\item Provided statistical analysis and data science consulting across disciplines
+\item Created visualization tools for tracking key metrics
+\end{itemize}
+
+
+\newpage
+
+\section{TECHNICAL SKILLS}
+\vspace{-2em}
+
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Programming Languages:} & R, Python, JavaScript, C \\
+\textbf{Data Analysis Tools:} & Statistical modeling, Machine learning, Predictive analytics \\
+\textbf{Database Systems:} & SQL (Oracle, Teradata), REDCap, MongoDB, DuckDB, Arrow \\
+\textbf{Visualization Tools:} & R Shiny, ggplot2, Tableau \\
+\textbf{Resource Analytics:} & Cost modeling, Pricing optimization, Operational efficiency analysis \\
+\textbf{Statistical Methods:} & Regression analysis, Mediation analysis, Multilevel modeling \\
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+
+
+\section{RELEVANT PROJECTS \& ACHIEVEMENTS}
+\vspace{-2em}
+
+\begin{tabularx}{\textwidth}{@{}X @{}}
+\textbf{Data \& Cost Analysis Projects}
+\end{tabularx}
+
+\vspace{-0.8em}
+\begin{itemize}
+\item Created cost models for healthcare delivery analyzing claims data
+\item Developed analytic tools to assess financial impact of healthcare interventions
+\item Implemented cost strategies based on predictive models of resource utilization
+\item Analyzed cost data for special education programs, resulting in policy recommendations
+\item Led workflow optimization projects resulting in 15\% improvement in team efficiency
+\item Collaborated with finance teams on revenue optimization initiatives
+\item Highly rated manager and mentor (via Glint Surveys)
+\end{itemize}
+
+\vspace{0.2em}
+
+\begin{tabularx}{\textwidth}{@{}X @{}}
+\textbf{Data Tool Development}
+\end{tabularx}
+\vspace{-2em}
+\begin{itemize}
+\item \textbf{data.table Maintainer} (2023-Present): Core contributor to one of R's most powerful data packages used by thousands of data scientists worldwide
+\item \textbf{tidyfast} (2019): Created R package for efficient data manipulation
+\item \textbf{furniture} (2018): Developed R package for data summary and analysis
+\item \textbf{MarginalMediation} (2018): Built statistical package for advanced mediation analysis
+\item \textbf{autoscore} (2019): Created automated scoring system with web application
+\end{itemize}
+
+
+\section{GRANT LEADERSHIP EXPERIENCE}
+\vspace{-2em}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+\textbf{NSF POSE Phase II Consultant} & \textit{2023-2025}\\
+\textit{"Expanding the data.table ecosystem for efficient big data manipulation in R"} & \\
+\multicolumn{2}{@{}l}{\$731,000 funding} \\[1ex]
+
+\textbf{NIH R01 Co-Investigator} (Multiple grants) & \textit{2022-Present}\\
+\multicolumn{2}{@{}l}{Leading data analytics components on grants totaling over \$5M} \\
+\multicolumn{2}{@{}l}{Developing resource allocation models and cost-benefit analyses} \\[1ex]
+
+\textbf{Research Analytics Leadership} & \\
+\multicolumn{2}{@{}l}{Experience managing research analytics under grant funding totaling over \$9M} \\
+\multicolumn{2}{@{}l}{Implementing budgeting and resource optimization strategies} \\
+\end{tabularx}
+
+
+\section{SELECTED PUBLICATIONS \& PRESENTATIONS}
+\vspace{-2em}
+\textbf{75+ peer-reviewed publications} in data science, healthcare analytics, health sciences, and methodology
+
+\begin{itemize}
+\item \textbf{Barrett, T.S.} (July 2024). The Past, Present, and Future of data.table. useR! 2024, Salzburg, Austria.
+\item \textbf{Barrett, T.S.} (2020, January). Working with list-columns in data.table. RStudio Conference 2020, San Francisco, CA.
+\item \textbf{Popkov, A. A., Barrett, T. S.}, et al. (2025). Association Between Depression Symptom Severity and Total Cost of Care: Findings from a Large, 2-year, Claims-Based, Retrospective Population Health Study. Journal of Affective Disorders.
+\item \textbf{Rung, J. M., Barrett, T. S.}, et al. (2024). Prevalence and Cost of Routine Preoperative Care for Low-Risk Cataract Surgery a Decade After Choosing Wisely. Ophthalmology.
+\end{itemize}
