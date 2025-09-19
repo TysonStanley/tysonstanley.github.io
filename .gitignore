@@ -1,8 +1,8 @@
-\.Rproj
-\.DS_Store
+.Rproj
+.DS_Store
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 mini
-Barrett_rstudio_conf
+rstudioconf
