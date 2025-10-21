@@ -1,0 +1,574 @@
+---
+title: "Difference-in-Differences"
+subtitle: "From Classical Foundations to Modern Methods"
+author: "Tyson S. Barrett, PhD"
+format:
+  revealjs:
+    theme: [default]
+    incremental: false
+    slide-number: true
+    chalkboard: false
+    preview-links: auto
+    code-fold: true
+    code-tools: true
+    code-line-numbers: false
+    fig-width: 10
+    fig-height: 6
+    scrollable: true
+    self-contained: true
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false
+---
+
+```{r setup, include=FALSE}
+# Load required packages
+library(tidyverse)
+library(fixest)
+library(knitr)
+library(kableExtra)
+
+# Set theme for plots
+theme_set(theme_minimal(base_size = 14))
+
+# Set seed for reproducibility
+set.seed(2025)
+```
+
+## Today's Overview {.smaller}
+
+::: {.columns}
+::: {.column width="33%"}
+### Part 1: Foundations {.fragment}
+
+- Potential outcomes framework
+- Parallel trends assumption
+- Classical 2×2 DiD design
+:::
+
+::: {.column width="33%"}
+### Part 2: When DiD Fails {.fragment}
+
+- Common pitfalls
+- TWFE with staggered adoption
+- Treatment effect heterogeneity
+:::
+
+::: {.column width="33%"}
+### Part 3: Solutions {.fragment}
+
+- Heterogeneity-robust methods
+- Modern approaches (CS, SA, BJS)
+:::
+:::
+
+
+# Part 1: Foundations {background-color="#2C5F8D"}
+
+## What is Difference-in-Differences?
+
+::: {.callout-note icon=false}
+## Core Idea
+Compare **changes over time** between treated and control groups
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Treatment Group**
+
+- Experiences the intervention
+- Δ = After - Before
+:::
+
+::: {.column width="50%"}
+**Control Group**
+
+- Does not experience intervention
+- Δ = After - Before
+:::
+:::
+
+::: {.fragment .callout-tip icon=false}
+## Treatment Effect
+**(Treated After - Treated Before) − (Control After - Control Before)**
+
+The "difference-in-differences" removes time-invariant confounding
+:::
+
+## Potential Outcomes Framework
+
+::: {.callout-warning icon=false}
+## The Fundamental Problem
+We can only observe **one** potential outcome for each unit
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+### $Y^1_{it}$
+Outcome if unit $i$ is **treated** at time $t$
+:::
+
+::: {.column width="50%"}
+### $Y^0_{it}$
+Outcome if unit $i$ is **NOT treated** at time $t$
+:::
+:::
+
+::: {.fragment}
+### Individual Treatment Effect
+
+$$\tau_{it} = Y^1_{it} - Y^0_{it}$$
+
+**The Problem:** We never observe both $Y^1_{it}$ and $Y^0_{it}$ for the same unit at the same time
+
+**DiD's Solution:** Use control group trends to estimate the missing counterfactual
+:::
+
+## The Parallel Trends Assumption
+
+::: {.callout-important icon=false}
+## Core Identifying Assumption
+**Parallel Trends:** In the absence of treatment, the treatment and control groups would have followed parallel outcome trajectories
+:::
+
+$$E[Y^0_{i2} - Y^0_{i1} \mid D=1] = E[Y^0_{i2} - Y^0_{i1} \mid D=0]$$
+
+::: {.columns}
+::: {.column width="50%"}
+### ✓ What It Allows
+
+- Different baseline levels
+- Time-invariant differences
+- Common time shocks
+:::
+
+::: {.column width="50%"}
+### ✗ What It Rules Out
+
+- Differential time trends
+- Group-specific shocks
+- Pre-existing trend differences
+:::
+:::
+
+::: {.fragment .callout-note}
+This assumption is **untestable** but can be made more plausible through design and diagnostics
+:::
+
+## Example 1: Classic 2×2 DiD Design
+
+**Scenario:** State implements minimum wage increase in 2010
+
+```{r classic-did-data}
+# Generate classic 2x2 DiD data
+set.seed(123)
+data_2x2 <- expand.grid(state = 1:10, year = 2009:2010)
+
+data_2x2 <- data_2x2 %>%
+  mutate(
+    treat_state = ifelse(state <= 5, 1, 0),
+    post = ifelse(year == 2010, 1, 0),
+    treated = treat_state * post,
+    # True effect = 5
+    outcome = 50 + 10*treat_state + 2*post + 5*treated + rnorm(n(), 0, 2)
+  )
+
+# Summary statistics
+data_2x2 %>%
+  group_by(treat_state, post) %>%
+  summarise(mean_outcome = mean(outcome), .groups = "drop") %>%
+  pivot_wider(names_from = post, values_from = mean_outcome, 
+              names_prefix = "period_") %>%
+  mutate(delta = period_1 - period_0) %>%
+  kable(digits = 2, col.names = c("Group", "Pre", "Post", "Δ"))
+```
+
+## Example 1: Estimation
+
+```{r classic-did-estimate}
+# Estimate DiD with TWFE
+did_model <- feols(
+  outcome ~ treated | state + year, 
+  data = data_2x2, cluster = ~state
+)
+
+# Display results
+etable(did_model, dict = c(treated = "Treatment Effect"))
+```
+
+::: {.callout-tip}
+**DiD Estimate:** `r round(coef(did_model)[1], 2)` (true effect = 5)
+:::
+
+## Example 1: Visualization
+
+```{r classic-did-viz, fig.width=10, fig.height=5}
+#| code-fold: true
+data_2x2 %>%
+  group_by(treat_state, year) %>%
+  summarise(mean_outcome = mean(outcome), .groups = "drop") %>%
+  ggplot(aes(x = year, y = mean_outcome, 
+             color = factor(treat_state, labels = c("Control", "Treated")),
+             group = treat_state)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 3) +
+  geom_vline(xintercept = 2009.5, linetype = "dashed", alpha = 0.5) +
+  annotate("text", x = 2009.5, y = max(data_2x2$outcome), 
+           label = "Treatment", vjust = -0.5, hjust = -0.1) +
+  labs(title = "Classic 2×2 DiD: Parallel Trends",
+       x = "Year", y = "Outcome", color = "Group") +
+  scale_x_continuous(breaks = c(2009, 2010), labels = c(2009, 2010)) +
+  scale_color_manual(values = c("Control" = "#E69F00", "Treated" = "#56B4E9")) +
+  theme(legend.position = "bottom")
+```
+
+## Two-Way Fixed Effects (TWFE) Regression
+
+::: {.fragment .callout-important}
+## Why TWFE Works in 2×2 Designs
+
+- Only one treatment timing (everyone treated at once or never)
+- Single before/after comparison
+- Treatment effect homogeneity not required
+- Clean identification of average treatment effect
+:::
+
+# Part 2: When DiD Fails {background-color="#8B0000"}
+
+## Common Pitfalls and How to Avoid Them {.smaller}
+
+::: {.columns}
+::: {.column width="50%"}
+### ❌ What NOT to Do
+
+- Using TWFE with staggered adoption
+- Ignoring treatment effect heterogeneity
+- Not checking pre-trends
+- Wrong standard errors
+- Including post-treatment as controls
+- Testing multiple specs, reporting one
+:::
+
+::: {.column width="50%"}
+### ✓ Best Practices
+
+- Use heterogeneity-robust methods
+- Always visualize pre-trends
+- Report multiple aggregations
+- Cluster SEs correctly
+- Conduct sensitivity analysis
+- Pre-register when possible
+:::
+:::
+
+::: {.fragment .callout-warning}
+### Warning Signs Your DiD May Be Invalid
+
+- Pre-treatment effects are significant and large
+- Effects change dramatically with specification changes
+- Bacon decomposition shows heavy negative weights
+- TWFE and robust methods give very different answers
+:::
+
+## The Problem: TWFE with Staggered Adoption
+
+::: {.callout-warning icon=false}
+## When units are treated at different times, TWFE can give **severely biased** estimates
+:::
+
+When treatment effects vary across groups or over time, TWFE weights can be **negative**, causing severe bias
+
+
+::: {.columns}
+::: {.column width="50%"}
+### Homogeneous Effects
+
+Effect is same for everyone
+
+- TWFE works fine
+- Negative weights don't matter
+- Get correct average effect
+:::
+
+::: {.column width="50%"}
+### Heterogeneous Effects {.fragment}
+
+Effects differ by group/time
+
+- TWFE can be severely biased
+- Negative weights cause problems
+- **Can even reverse signs!**
+:::
+:::
+
+::: {.fragment .callout-note}
+### Common Sources of Heterogeneity
+
+- Effects grow/fade over time
+- Different effect sizes by region
+- Treatment intensity varies
+- Anticipation effects differ
+:::
+
+# Part 3: Modern Solutions {background-color="#2C8B5C"}
+
+## Heterogeneity-Robust Methods {.smaller}
+
+::: {.callout-tip icon=false}
+## Three leading approaches that handle staggered adoption correctly
+:::
+
+### 1. Callaway & Sant'Anna (2021) {.fragment}
+- Estimates group-time ATT(g,t) using clean 2×2 comparisons
+- **Pros:** Most flexible, doubly robust, multiple aggregations
+- **Cons:** Can be less efficient
+- **R Package:** `did`
+
+### 2. Sun & Abraham (2021) {.fragment}
+- Interaction-weighted estimator with cohort-specific indicators
+- **Pros:** Easy to implement, works well for event studies
+- **R Package:** `fixest::sunab()`
+
+### 3. Borusyak, Jaravel & Spiess (2024) {.fragment}
+- Imputation-based approach on not-yet-treated observations
+- **Pros:** Most efficient under strong assumptions
+- **R Package:** `did2s`
+
+::: {.callout-note}
+### When to Use Which Method?
+
+- **Default choice:** Callaway-Sant'Anna (most robust)
+- **Event studies:** Sun-Abraham (easy in `fixest`)
+- **Maximum efficiency:** Borusyak-Jaravel-Spiess (strong assumptions)
+:::
+
+## Example 3: Callaway-Sant'Anna Implementation {.smaller}
+
+```{r cs-install, eval=FALSE}
+# Install if needed
+install.packages("did")
+```
+
+```{r cs-estimate}
+library(did)
+
+set.seed(456)
+data_staggered <- expand.grid(state = 1:50, year = 2010:2020)
+
+data_staggered <- data_staggered %>%
+  mutate(
+    treat_year = case_when(
+      state <= 20 ~ 2015,
+      state <= 35 ~ 2018,
+      TRUE ~ NA_real_
+    ),
+    time_to_treat = ifelse(!is.na(treat_year), year - treat_year, -1000)
+  )
+
+# True dynamic effects (growing over time)
+data_staggered <- data_staggered %>%
+  mutate(
+    true_effect = case_when(
+      time_to_treat < 0 ~ 0,
+      time_to_treat == 0 ~ 3,
+      time_to_treat == 1 ~ 8,
+      time_to_treat == 2 ~ 12,
+      time_to_treat >= 3 ~ 15,
+      TRUE ~ 0
+    ),
+    outcome = 50 + 2*(year - 2010) + true_effect + rnorm(n(), 0, 5)
+  )
+
+# Prepare data for CS method
+data_cs <- data_staggered %>%
+  filter(!is.na(treat_year) | state > 35) %>%
+  mutate(treat_year = ifelse(is.na(treat_year), 0, treat_year))
+
+# Estimate group-time effects
+cs_results <- att_gt(
+  yname = "outcome",
+  tname = "year",
+  idname = "state",
+  gname = "treat_year",
+  data = data_cs,
+  control_group = "notyettreated",
+  est_method = "dr"
+)
+```
+
+## Example 3: CS Results - Overall ATT
+
+```{r cs-overall}
+# Overall ATT (simple average)
+agg_simple <- aggte(cs_results, type = "simple")
+summary(agg_simple)
+```
+
+::: {.callout-tip}
+The overall ATT averages effects across all treated groups and time periods
+:::
+
+## Example 3: CS Results - Dynamic Effects
+
+```{r cs-dynamic}
+# Dynamic effects (event study)
+agg_dynamic <- aggte(cs_results, type = "dynamic")
+summary(agg_dynamic)
+```
+
+## Example 3: CS Event Study Visualization
+
+```{r cs-event-plot, fig.width=10, fig.height=6}
+#| code-fold: true
+# Plot event study
+ggdid(agg_dynamic, 
+      xlab = "Time to Treatment",
+      ylab = "ATT",
+      title = "Callaway-Sant'Anna Event Study (Correct!)") +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  theme_minimal(base_size = 14)
+```
+
+::: {.callout-tip .smaller}
+Now we see the true dynamic pattern: effects start at ~3 and grow to ~15!
+:::
+
+
+## Data Structure and Requirements
+
+::: {.callout-note icon=false}
+## Required Data Format: Panel Data
+:::
+
+### Required Variables
+
+- **Unit ID:** Unique identifier for each unit (state, firm, individual)
+- **Time variable:** Period indicator (year, quarter, month)
+- **Outcome:** The dependent variable of interest
+- **Treatment timing:** When each unit first receives treatment (NA for never-treated)
+
+### Key Considerations
+
+- **Treatment is absorbing:** Once treated, units stay treated (no switching off)
+- **Never-treated units:** Coded with NA or 0 for `treat_year`
+- **Pre-treatment periods:** Need sufficient periods before first treatment
+- **Covariates:** Optional but can improve precision
+
+## Diagnostic Testing: Pre-Trends
+
+::: {.callout-warning icon=false}
+## Parallel Trends Cannot Be Proven, But Can Be Made More Plausible
+:::
+
+### 1. Visual Inspection {.fragment}
+Plot outcome trends for treated vs control groups before treatment
+
+### 2. Formal Pre-Trend Tests {.fragment}
+Test if pre-treatment effects are jointly zero
+
+⚠️ **Warning:** These tests often have **low power**
+
+### 3. Placebo Tests {.fragment}
+- Use fake treatment dates in pre-period
+- Test on untreated units only
+- Should find no effect if parallel trends holds
+
+## Diagnostic Testing: Sensitivity Analysis
+
+```{r sensitivity-example, eval=FALSE}
+# Sensitivity analysis with HonestDiD
+# install.packages("HonestDiD")
+library(HonestDiD)
+
+# Create sensitivity analysis
+# How large would trend violations need to be to overturn conclusions?
+robust_ci <- createSensitivityResults(
+  betahat = coef_vector,
+  sigma = vcov_matrix,
+  M = 0.5  # Bound on trend violations
+)
+```
+
+::: {.callout-tip}
+Instead of treating parallel trends as a binary assumption, ask:
+
+**"How large would trend violations need to be to overturn my conclusions?"**
+:::
+
+## Standard Errors and Inference {.smaller}
+
+::: {.callout-important icon=false}
+## Standard errors are critical! Incorrect SEs can lead to invalid inference
+:::
+
+### Clustering Rules of Thumb
+
+- **Default:** Cluster at the unit level (state, firm, individual)
+- **Why?** Treatment typically assigned at unit level, creating within-unit correlation
+- **Two-way clustering:** If treatment correlates across both units and time
+
+```{r se-example, eval=FALSE}
+# With fixest
+library(fixest)
+model <- feols(outcome ~ treatment | unit + time,
+               data = data,
+               cluster = ~ unit)  # Cluster at unit level
+
+# With did package (automatic clustering)
+cs_results <- att_gt(...)
+
+# Bootstrap standard errors (alternative)
+cs_boot <- att_gt(..., boot = TRUE, nboot = 1000)
+```
+
+
+# Key Takeaways {background-color="#2C5F8D"}
+
+## The DiD Revolution Changed Everything
+
+::: {.incremental}
+1. **Traditional TWFE is often WRONG**
+   - With staggered adoption and heterogeneous effects, TWFE can be severely biased
+
+2. **Use heterogeneity-robust methods**
+   - Callaway-Sant'Anna, Sun-Abraham, or Borusyak-Jaravel-Spiess are now best practice
+
+3. **Parallel trends is CRITICAL**
+   - Check pre-trends visually, conduct sensitivity analysis, be transparent
+
+4. **Report heterogeneity**
+   - Show dynamic effects, by-group effects, not just one number
+
+5. **Standard errors matter**
+   - Cluster at the treatment assignment level
+:::
+
+## {background-color="#2C8B5C"}
+
+::: {.r-fit-text}
+**Default choice:**
+
+Use Callaway-Sant'Anna
+
+with the `did` package
+:::
+
+## Additional Resources {.smaller}
+
+### Key Papers
+- **Goodman-Bacon (2021)** - "Difference-in-differences with variation in treatment timing"
+- **Callaway & Sant'Anna (2021)** - "Difference-in-Differences with multiple time periods"
+- **Sun & Abraham (2021)** - "Estimating dynamic treatment effects in event studies"
+- **Roth et al. (2023)** - "What's trending in difference-in-differences"
+
+### Books & Online Resources
+- **The Effect** (Huntington-Klein) - Free online textbook
+- **Causal Inference: The Mixtape** (Cunningham) - Free online
+- **LOST** (Library of Statistical Techniques) - Code examples
+
+### Software Documentation
+- `did` package: [bcallaway11.github.io/did/](https://bcallaway11.github.io/did/)
+- `fixest`: [lrberge.github.io/fixest/](https://lrberge.github.io/fixest/)
+
