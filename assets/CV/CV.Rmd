@@ -13,6 +13,7 @@ params:
 ```{r scholar_info, echo = FALSE, warning = FALSE, message = FALSE}
 library(scholar)
 library(tidyverse)
+library(tinytex)
 
 httr::set_config(httr::user_agent("Mozilla/5.0 (compatible; R scholar package)"))
 your.id <- "UWdXXEoAAAAJ" # This is your google scholar ID
