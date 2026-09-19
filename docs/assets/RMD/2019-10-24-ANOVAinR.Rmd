@@ -1,0 +1,71 @@
+---
+title: "Untitled"
+author: "Tyson S. Barrett, PhD"
+date: "10/23/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+
+# ANOVA and Friends in `R`
+
+`R`, in general, makes most modeling procedures more straightforward, in my opinion. However, when it comes to ANOVA, it can be very confusing for students and researchers. To aleviate this, the `afex` package is designed to make many things easier. This post is designed to help you understand how to run ANOVAs in `R` using `afex`.
+
+To start, let's load a few packages that will come in handy, including `afex`. Note that you will likely get messages from these packages. It is alright to ignore them.
+
+```{r}
+library(afex)
+library(emmeans)
+library(tidyverse)
+library(furniture)
+```
+
+And we'll start with a data set from the `educ6600` package that can be installed with `remotes::install_github("tysonstanley/educ6600")` (you may need to install `remotes` first the normal way). This data set, called "data_wait", is then transformed to a long format (it was originally a wide format), with the grouping variable being `caller_type` and `wait_time` being the outcome. We then add an ID variable.
+
+```{r}
+data_wait_long <- educ6600::data_wait %>% 
+  gather("caller_type", "wait_time") %>% 
+  mutate(id = 1:n())
+data_wait_long
+```
+
+
+## One-Way ANOVA
+
+Below is a one way anova, that we assign to the name of `oneway`.
+
+```{r}
+oneway <- aov_4(wait_time ~ caller_type + (1 | id), data = data_wait_long)
+```
+
+This `oneway` object has several things inside:
+
+```{r}
+names(oneway)
+```
+
+By default, if we just print it out, we get a simple summary of the ANOVA results. This includes the F-statistic, the global effect size (`ges`), and the p-value.
+
+```{r}
+oneway
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

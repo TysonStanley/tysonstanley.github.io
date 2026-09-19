@@ -1,0 +1,249 @@
+---
+output: md_document
+---
+
+    ---
+    layout: post
+    title: "Using the `afex` R package for ANOVA (factorial and repeated measures)"
+    categories: jekyll update
+    author: Tyson S. Barrett
+    comments: true
+    ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We recently switched our graduate statistics courses to `R` from SPSS (yay!). It has gone fairly well. However, once we get into ANOVA-type methods, particularly the repeated measures flavor of ANOVA, `R` isn't as seamless as almost every other statistical approach. As such, my colleague [Sarah Schwartz](sarahschwartzstats.com) found the [`afex`](https://github.com/singmann/afex) package that looks like it can be helpful in simplifying the code and increasing the amount of useful information obtained.
+
+This post is for walking through the use of `afex`, includig `aov_car()`, `aov_ez()`, and `aov_4()`. To show them off, I'll use the following ficticious data set:
+
+```{r}
+set.seed(42)
+z <- data.frame(a1 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)),
+                b  = rep(c("A", "B", "C"), each = 100),
+                c  = factor(rbinom(300, 1, .5)),
+                ID = 1:300,
+                a2 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)),
+                a3 = c(rnorm(100,2), rnorm(100,1),rnorm(100,0)))
+```
+
+and we will load:
+
+```{r, message = FALSE, warning = FALSE}
+library(lsmeans)
+library(afex)
+library(tidyverse)
+```
+
+
+## One-Way ANOVA
+#### `afex::aov_car()`
+
+The main function in `afex` is `aov_car()`. Both of the functions described in the later sections are just wrappers of this one but allow different syntax. To use `aov_car()`, we are essentially using aov with a few adjustments.
+```{r}
+aov1 <- z %>%
+  aov_car(a1 ~ b + Error(ID),
+          data = .)
+aov1
+```
+Notably, we use the `Error(ID)` even in one-way ANOVA. This complication can actually simplify things, as changing to a repeated-measures or mixed effects model is not difficult. Essentially all it is doing is telling the function the grouping variable.
+
+We can check assumptions fairly quickly with the `plot()` function and pulling out the `aov` object from `aov1`.
+
+```{r}
+plot(aov1$aov)
+```
+
+
+From here, we can obtain the least squares means and plot them with `ggplot2` showing the mean and the confidence interval. It is important to not pull the `lsmeans()` function from the `lsmeans` package because it actually is functionality that `afex` provides. As such, using `lsmeans::lsmeans()` will through an error.
+```{r}
+aov1 %>%
+  lsmeans(specs = "b") %>%
+  data.frame %>%
+  ggplot(aes(b, lsmean)) +
+    geom_point() +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
+```
+
+We can also look at some PostHoc type analyses using the `lsmeans()` object.
+
+```{r}
+aov1 %>%
+  lsmeans(specs = "b") %>%
+  pairs() %>%
+  update(by=NULL, adjust = "tukey")
+```
+We can also use "holm", "bonf", and "scheffe" in place of "tukey". In this case, it doesn't matter much because they have very small p-values.
+
+
+#### `afex::aov_ez()`
+
+This function is notable in its explicit syntax; however, my preferences are for `aov_4()` for most situations because it uses the syntax of `lme4::lmer()`.
+
+```{r}
+z %>%
+  aov_ez(id = "ID",
+         dv = "a1",
+         between = "b",
+         data = .)
+```
+
+The same checks and tests as shown before are possible here.
+
+
+#### `afex::aov_4()`
+
+```{r}
+z %>%
+  aov_4(a1 ~ b + (1|ID),
+        data = .)
+```
+
+Again, the same checks and tests can be done with this one as well.
+
+
+## Factorial ANOVA
+
+Two or more factors can be included as well. These are very similar to their One-Way ANOVA counterparts.
+
+```{r}
+aov2 <- z %>%
+  aov_car(a1 ~ b * c + Error(ID),
+          data = .)
+
+aov2.1 <- z %>%
+  select(a1, b, c, ID) %>%
+  aov_ez(id = "ID",
+         dv = "a1",
+         between = c("b", "c"),
+         data = .)
+
+aov2 <- z %>%
+  aov_4(a1 ~ b * c + (1|ID),
+        data = .)
+aov2
+```
+You can remove the interaction in the following ways:
+```{r}
+aov2.1 <- z %>%
+  aov_car(a1 ~ b + c + Error(ID),
+          data = .)
+
+## Not sure how to remove it from `aov_ez()`
+
+aov2.1 <- z %>%
+  aov_4(a1 ~ b + c + (1|ID),
+        data = .)
+aov2.1
+```
+
+
+
+We can check some assumptions using the `plot()` function.
+
+```{r}
+aov2$aov %>%
+  plot()
+```
+
+
+From here, we can obtain the least squares means and plot them with `ggplot2` showing the mean and the confidence interval by our other factor.
+```{r}
+aov2 %>%
+  lsmeans(specs = c("b", "c")) %>%
+  data.frame %>%
+  ggplot(aes(b, lsmean, group = c, color = c)) +
+    geom_point(position = position_dodge(width = .3)) +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                  position = position_dodge(width = .3),
+                  width = .2)
+```
+
+
+### Repeated Measures ANOVA
+
+Repeated measures is now much like the other types of ANOVA. The major difference is that we need to change the format of the data.
+
+```{r}
+z_long <- z %>%
+  tidyr::gather("meas", "value", a1, a2, a3)
+```
+
+```{r, echo=FALSE}
+as.tibble(z_long)
+```
+
+```{r}
+aov_rm <- z_long %>%
+  aov_car(value ~ 1 + Error(ID/meas),
+          data = .)
+aov_rm
+```
+This, however, is when the `aov_4()` is easier for me to understand overall. It uses code that makes more sense to me so I'll show it here (I won't be showing how to use `aov_ez()` for repeated measures).
+
+```{r}
+aov_rm <- z_long %>%
+  aov_4(value ~ 1 + (meas|ID),
+        data = .)
+aov_rm
+```
+
+Checking assumptions with the repeated measures ANOVA is notably harder, in general and in `R`. Here, we are waiting for some development to happen so we can do the following (note the use of `lm` instead of `aov`).
+```{r, eval=FALSE}
+aov_rm$lm %>%
+  plot()
+```
+
+    Error: 'plot.mlm' is not implemented yet
+
+We can obtain the least squares means and plot them with `ggplot2` showing the mean and the confidence interval.
+```{r}
+aov_rm %>%
+  lsmeans(specs = "meas") %>%
+  data.frame %>%
+  ggplot(aes(meas, lsmean)) +
+    geom_point() +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL))
+```
+
+
+## Mixed Models
+
+Similarly to the repeated measures ANOVA, I'm going to focus on `aov_4()`.
+
+```{r}
+mixed_mod <- z_long %>%
+  aov_4(value ~ b + c + (meas|ID),
+        data = .)
+mixed_mod
+```
+
+We have the same issue of checking assumptions here as the repeated measures ANOVA
+```{r, eval=FALSE}
+mixed_mod$lm %>%
+  plot()
+```
+      
+      Error: 'plot.mlm' is not implemented yet
+
+Finally, we can check out the least-squares means across groups and time.
+
+```{r}
+mixed_mod %>%
+  lsmeans(specs = c("meas", "b", "c")) %>%
+  data.frame %>%
+  ggplot(aes(meas, lsmean, group = b, color = b)) +
+    geom_point() +
+    geom_line() +
+    geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                  width = .2) +
+    facet_grid(~c)
+```
+
+
+
+There you have it! I believe `afex` is a valuable contribution to `R`, particularly in dealing with factorial and repeated-measures ANOVA.
+
+
+

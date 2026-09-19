@@ -1,0 +1,132 @@
+---
+title: "Functions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Basics of a function
+
+```{r}
+doit <- function(){
+  
+  
+  
+}
+```
+
+# Create two2 function
+
+```{r}
+two2 <- function(){
+  2+2
+}
+two2()
+```
+
+
+# Create add2 function
+
+```{r}
+add2 <- function(num){
+  num+2
+}
+add2(1)
+add2(10)
+add2("thing")
+add2(2*2)
+```
+
+# Creating our own function that takes a number and produces a sentence with it
+
+```{r}
+sentence_num <- function(num){
+  paste("The number you gave me was:", num)
+}
+sentence_num(10)
+```
+
+```{r}
+add_together <- function(num1, num2){
+  num1 + num2
+}
+add_together(10, 8)
+```
+
+```{r}
+library(tidyverse)
+df <- tibble(x = rnorm(100),
+             y = x + rnorm(100),
+             grp = rbinom(100, 1, .5))
+
+ggplot(df, aes(x, y, group = factor(grp), color = factor(grp))) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_classic() 
+
+ggplot(df, aes(x, y, group = actor(grp), color = factor(grp))) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_classic() 
+
+ggplot(df, aes(x, y, group = factor(grp), color = factor(y))) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_classic() 
+
+ggplot(df, aes(x, y, group = factor(grp), color = factor(grp))) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  theme_classic() 
+
+
+scatterplot <- function(df){
+  ggplot(df, aes(x, y, group = factor(grp), color = factor(grp))) +
+    geom_point() +
+    geom_smooth(method = "lm", se=FALSE) +
+    theme_classic() 
+}
+
+scatterplot(df)
+scatterplot(df)
+scatterplot(df)
+scatterplot(df)
+```
+
+# Functions with tidyverse
+
+```{r}
+mutate()
+filter()
+select()
+```
+
+
+# Table 1 function in furniture
+
+```{r}
+furniture::washer()
+```
+
+```{r}
+purrr
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+---
+title: "What is going on??"
+author: "Tyson S. Barrett"
+date: "12/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Some lessons from the weird stuff that can happen in R.
+
+## Factors are actually integers with attributes
+
+Consider the example (as shown on the [`vctrs` package README]()):
+
+```{r}
+c(factor("a"), factor("b"))
+```
+
+How would that ever be a possible answer? Is it a bug? Well, the behavior is actually somewhat expected, even if it is not what the user likely wants (and even though there probably should be a warning message with it).
+
+It is predictable, because both `factor("a")` and `factor("b")` are integers with some extra information (called attributes) that tell it what the level means.
+
+```{r}
+str(factor("a"))
+attributes(factor("a"))
+```
+
+
+```{r}
+
+```
+
+
+
+
+
+
+
+

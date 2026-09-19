@@ -1,0 +1,181 @@
+---
+title: "NBA Player Stats"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = FALSE,
+                      message = FALSE)
+```
+
+## Wrangle That NBA Data
+
+We will use the `rvest` package to download the data from [NBA Stuffer](nbastuffer.com), and `dplyr`, `data.table`, and `janitor` for data wrangling.
+```{r}
+library(rvest)
+library(dplyr)
+library(data.table)
+library(janitor)
+```
+
+```{r}
+players_2018 <- read_html("https://www.nbastuffer.com/2017-2018-nba-player-stats/")
+players_2019 <- read_html("https://www.nbastuffer.com/2018-2019-nba-player-stats/")
+team_2019 <- read_html("https://www.nbastuffer.com/2018-2019-nba-team-stats/")
+team_2018 <- read_html("https://www.nbastuffer.com/2017-2018-nba-team-stats/")
+```
+
+Functions to help us extract the tables
+```{r}
+extract_fun <- function(html){
+  html_nodes(html, "table") %>% 
+    .[2] %>% 
+    html_table(fill = TRUE) %>% 
+    .[[1]] 
+}
+```
+
+
+```{r}
+player_2018 <- 
+  extract_fun(players_2018) %>% 
+  mutate(year = 2018,
+         AGE = as.numeric(AGE))
+player_2019 <- 
+  extract_fun(players_2019) %>% 
+  mutate(year = 2019)
+players <- 
+  bind_rows(player_2018, player_2019) %>% 
+  clean_names() %>% 
+  data.table()
+
+team_2018 <- 
+  extract_fun(team_2018) %>% 
+  mutate(year = 2018)
+team_2019 <- 
+  extract_fun(team_2019) %>% 
+  mutate(year = 2019)
+team <- 
+  bind_rows(team_2018, team_2019) %>% 
+  clean_names() %>% 
+  data.table()
+```
+
+## Improvement 2018 to 2019 Seasons
+
+### PPG
+
+The first metric we will look at is points per game.
+
+```{r}
+library(ggplot2)
+library(ggrepel)
+```
+
+```{r}
+theme_set(theme_minimal() +
+          theme(legend.position = "none"))
+```
+
+
+```{r}
+ppg <-
+  players %>% 
+  dcast(full_name ~ year, 
+        value.var = "ppg_points_points_per_game", 
+        fill = NA, 
+        fun=mean) %>% 
+  mutate(diff = `2019` - `2018`,
+         extreme = case_when((diff > quantile(diff, .94, na.rm = TRUE) & `2019` > 12) |
+                              (diff < quantile(diff, .02, na.rm = TRUE)) ~ 1,
+                             TRUE ~ 0))
+ggplot(ppg, aes(`2018`, `2019`, group = full_name)) +
+  geom_abline(slope = 1) +
+  geom_line(alpha = .5) +
+  geom_point(point = 21,
+             aes(alpha = extreme)) +
+  geom_text_repel(data = filter(ppg, extreme == 1),
+                  aes(label = full_name)) +
+  labs(x = "2017-2018 Season", y = "2018-2019 Season")
+```
+
+### Assists Per Game
+
+```{r}
+apg <-
+  players %>% 
+  dcast(full_name ~ year, 
+        value.var = "apg_assists_assists_per_game", 
+        fill = NA, 
+        fun=mean) %>% 
+  mutate(diff = `2019` - `2018`,
+         extreme = case_when((diff > quantile(diff, .94, na.rm = TRUE) & `2019` > 4) |
+                              (diff < quantile(diff, .02, na.rm = TRUE)) ~ 1,
+                             TRUE ~ 0))
+ggplot(apg, aes(`2018`, `2019`, group = full_name)) +
+  geom_abline(slope = 1) +
+  geom_line(alpha = .5) +
+  geom_point(point = 21,
+             aes(alpha = extreme)) +
+  geom_text_repel(data = filter(apg, extreme == 1),
+                  aes(label = full_name)) +
+  labs(x = "2017-2018 Season", y = "2018-2019 Season")
+```
+
+## Organizing Players by Team
+
+Here, we will use the `data.table` package with the following custom function to create list columns (nested data).
+
+
+```{r, eval=FALSE}
+group_nest_dt <- function(dt, by = id, .key = "data"){
+  stopifnot(is.data.table(dt))
+
+  by <- substitute(list(by))
+  
+  express <- dt[, list(list(.SD)), by = eval(by)]
+  setnames(express, old = "V1", new = .key)
+  express
+}
+
+players[, .(team, full_name, mpg)] %>% 
+  group_nest_dt(team) %>% 
+  .$data
+
+group_nest(players, team)
+
+## Find a way to make it a data.frame at the beginning so we aren't creating a list then a data.frame
+
+nested_dt <-
+  nest.data.table(players, 
+                  full_name, mpg, ppg_points_points_per_game, 
+                  rpg_rebounds_rebounds_per_game, apg_assists_assists_per_game, 
+                  bpg_blocks_blocks_per_game,
+                  by = team)
+nested_dt
+
+## remotes::install_github("hadley/lineprof")
+lineprof::lineprof(nest.data.table(players, 
+                                    full_name, mpg, ppg_points_points_per_game, 
+                                    rpg_rebounds_rebounds_per_game, apg_assists_assists_per_game, 
+                                    bpg_blocks_blocks_per_game,
+                                    by = team)) %>% 
+  lineprof::shine()
+
+test_set <- players %>% 
+  data.frame() %>% 
+  select(full_name, mpg, ppg_points_points_per_game, 
+            rpg_rebounds_rebounds_per_game, apg_assists_assists_per_game, 
+            bpg_blocks_blocks_per_game, team)
+
+first = bench::mark(group_nest(players, team))
+second = bench::mark(nest.data.table(players,by = team))
+
+```
+
+
+
+

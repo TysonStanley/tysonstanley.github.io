@@ -1,0 +1,135 @@
+---
+title: "Statistics in R"
+subtitle: "Intro to R"
+author: "Tyson S. Barrett, PhD"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::downcute:
+    self_contained: true
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=TRUE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               eval=FALSE)
+opts_knit$set(width=75)
+```
+
+# General Syntax
+
+Three pieces are generally necessary in most statistics in R:
+
+1. The function
+
+2. The formula
+
+3. The data
+
+Here's an example:
+
+```{r}
+lm(outcome ~ predictor, data = df)
+```
+
+The `lm()` function tells R what statistical approach we want to use (in this case, linear regression). The `outcome ~ predictor` is the formula. You know you see a formula any time you see a tilde (`~`). The last piece tells R what data you'd like to use for the statistics.
+
+# T-tests, ANOVA, Correlation, Chi-square
+
+## T-test
+
+```{r}
+t.test(outcome ~ group, data = df)
+```
+
+## ANOVA
+
+```{r}
+aov(outcome ~ group, data = df)
+```
+
+## Correlation
+
+```{r}
+cor.test(~ var1 + var2, data = df)
+```
+
+## Chi-Square
+
+This one is a little different than the others.
+
+```{r}
+library(magrittr)
+# note the special pipe with a dollar sign
+df %$%
+  table(var1, var2) %>% 
+  chisq.test()
+```
+
+
+# Regression (Linear Models)
+
+The following model has `var1`, `var2`, and `var3`, `var4`, and their interaction. In general, to see the full model output you need to use summary.
+
+```{r}
+fit <- lm(outcome ~ var1 + var2 + var3*var4, data = df)
+summary(fit)
+```
+
+
+# Generalized Linear Models (GLMs)
+
+Similar model but using generalized linear models. In this case, this is a logistic regression.
+
+```{r}
+fit2 <- glm(outcome ~ var1 + var2 + var3*var4, data = df, family = binomial(link = "logit"))
+summary(fit2)
+```
+
+
+# Multilevel Models (MLMs)
+
+To use multilevel models, the best package is `lme4`.
+
+```{r}
+library(lme4)
+
+fit3 <- lmer(outcome ~ var1 + var2 + (1|id), data = df)
+summary(fit3)
+```
+
+The `(1|id)` is the random effects part (in this case a random intercept by `id`).
+
+
+# Structural Equation Modeling (SEM)
+
+There are several SEM packages but the most useful one that can do most SEM models is [`lavaan`](https://lavaan.ugent.be).
+
+```{r}
+library(lavaan)
+
+mod <- "
+latent ~= item1 + item2 + item3
+latent ~ predictor1 + predictor2
+"
+
+fit4 <- sem(mod, data = df)
+summary(fit4)
+```
+
+
+# Others
+
+R can perform machine learning (it has a ton of package for this), latent class analyses and other mixture models, survival analysis, other less common GLMs, among many others. Please reach out to me if you want to discuss any of these.
+
+
