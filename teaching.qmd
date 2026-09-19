@@ -1,0 +1,78 @@
+---
+title: "Teaching"
+subtitle: "Course materials, workshops, and talks."
+---
+
+I previously taught applied statistics and data analytics at the graduate and PhD level. All course material below is shared under the GNU General Public License (GPL-3) — use it, adapt it, teach from it.
+
+As I teach new courses that can be shared, I'll include those here.
+
+## Courses
+
+::: {.card-grid}
+::: {.tile}
+### Statistical Foundations
+PhD-level. The foundations sequence: probability, estimation, inference, t-tests, ANOVA, and others.
+
+[Course materials →](teaching/foundations.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Regression Analysis
+PhD-level. Regression, including OLS, generalized linear models, diagnostics, interactions, splines, and more.
+
+[Course materials →](teaching/regression.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Applied Statistical Analysis
+Graduate-level applied course, taught with both R and Jamovi so the statistics are not gated behind the syntax.
+
+[Course materials →](teaching/applied.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Intro and Intermediate R
+Graduate-level R sequence — from first script to a reproducible analysis pipeline.
+
+[Course materials →](teaching/rcourse.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Research Methods in Psychology
+Undergraduate. The whole research process, from question formulation to communicating results.
+
+[Course materials →](teaching/psychmethods.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Supporting resources
+Jamovi tutorials, REDCap guides, and *R for Researchers*.
+
+[Jamovi](teaching/jamovi.qmd){.tile-link} ·
+[REDCap](teaching/redcap.qmd){.tile-link} ·
+[R for Researchers](teaching/r4research.qmd){.tile-link}
+:::
+:::
+
+## Invited talks
+
+| Year | Venue | Materials |
+|---|---|---|
+| 2026 | Posit::Conf(2026) | [PDF](/assets/posit26/posit2026.pdf) |
+| 2025 | PyData | [HTML](/assets/PyData/synax_power.html) · <a href="https://tysonbarrett.com/assets/PyData/synax_power.qmd">QMD</a> |
+| 2024 | Joint Statistical Meetings (JSM) | [PDF](/assets/JSM_2024/Barrett_JSM2024.pdf) · [PPTX](/assets/JSM_2024/Barrett_JSM2024.pptx) |
+| 2024 | useR! — Salzburg, Austria | [PDF](/assets/useR_2024/Barrett_userR_2024.pdf) · [PPTX](/assets/useR_2024/Barrett_userR_2024.pptx) |
+| 2024 | R/Finance — Chicago | [PDF](/assets/r_finance_2024/Barrett_rfinance_nointro_2024.pdf) |
+| 2020 | rstudio::conf | [PDF](/assets/rstudio_conf_2020/Barrett_rstudioconf_2020.pdf) |
+
+## Workshops
+
+- [Datapalooza 2020](https://tysonstanley.github.io/Workshops/Barrett_Datapalooza_2020.pdf)
+- [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
+- [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
+- [Intro to the DSDU](https://tysonstanley.github.io/Workshops/2018COMMDE_Retreat.pdf)
+- [Intro to Connectivity](https://tysonstanley.github.io/Workshops/connectivity_intro.pdf)
+- [Health Data Science](https://tysonstanley.github.io/healthdatascience/index.html)
+- [Data Joins](https://tysonstanley.github.io/data_joins_demonstration/Presentation.html)
+- Customizing RStudio and `ggplot2` — [PPTX](https://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pptx) · [PDF](https://tysonbarrett.com/useRs/Rusers_5-2018_Logan.pdf)

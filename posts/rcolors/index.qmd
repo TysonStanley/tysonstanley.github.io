@@ -1,0 +1,8 @@
+---
+title: "Colors in R"
+description: "This is a fantastic guide to the colors available in R. I'm not sure who made it but it appears to be very comprehensive. Just click on R Colors for the PDF."
+date: 2017-01-21
+author: Tyson S. Barrett
+categories: [visualization]
+---
+This is a fantastic guide to the colors available in R. I'm not sure who made it but it appears to be very comprehensive. Just click on [R Colors](/assets/images/Rcolor.pdf) for the PDF.

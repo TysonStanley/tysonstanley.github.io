@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+
+$ink:        #e6e8eb !default;
+$ink-muted:  #9aa4b0 !default;
+$accent:     #5fb3c4 !default;
+$accent-soft:#16272c !default;
+$rule:       #2a2f36 !default;
+$paper:      #101317 !default;
+$paper-alt:  #171b20 !default;
+
+$body-color: $ink !default;
+$body-bg: $paper !default;
+$primary: $accent !default;
+$link-color: $accent !default;
+$link-hover-color: lighten($accent, 8%) !default;
+$border-color: $rule !default;
+
+$code-bg: $paper-alt !default;
+$code-color: #f08c9b !default;
+$navbar-bg: $paper !default;
+$navbar-fg: $ink !default;
+$footer-bg: $paper-alt !default;
+
+/*-- scss:rules --*/
+
+.tile { background: $paper-alt; }
+.quarto-post .listing-title a { color: $ink; &:hover { color: $accent; } }
+table th { border-bottom-color: $ink-muted; }
+div.sourceCode { background-color: $paper-alt; }
+img { filter: none; }

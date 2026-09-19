@@ -82,7 +82,7 @@ header_fun = function(title, shift_line = FALSE){
 \begin{tabular}{l|p{8cm}}
  \textsc{\textbf{Ph.D. Quantitative Psychology }} & \emph{Feb 2018}\\
  & \emph{Utah State University}\\
- &\footnotesize{\emph{\href{https://www.researchgate.net/publication/323946090_Marginal_Mediation_Analysis_A_New_Framework_for_Interpretable_Mediated_Effects?channel=doi&linkId=5ab418a60f7e9b4897c79cab&showFulltext=true}{Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects}}}\\
+ &\footnotesize{\emph{Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects}}\\
  \multicolumn{2}{c}{} \\
 
  \textsc{\textbf{B.S. Economics}} & \emph{May 2014} \\
@@ -103,21 +103,24 @@ header_fun = function(title, shift_line = FALSE){
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textbf{Manager Research Analytics and Enablement}, Highmark Health \hfill 2022-Present
+\indent \hspace*{.1in} \small\textbf{Professional Practice Associate Professor}, Utah State University \hfill 2026-Present
+\newline \hspace*{.6in} \emph{Department of Data Analytics and Information Systems in the Jon M. Huntsman School of Business}
+\newline \hspace*{.6in} \emph{Teach data analytics with an emphasis on healthcare analytics}
+\newline \hspace*{.6in} \emph{Project Mentor in the \href{https://huntsman.usu.edu/asc/}{Analytics Solutions Center}}
+
+
+\indent \hspace*{.1in} \small\textbf{Manager Advanced Analytics}, Highmark Health \hfill 2022-2026
 \newline \hspace*{.6in} \emph{Advanced Analytics in Enterprise Data and Analytics}
 \newline \hspace*{.6in} \emph{Manage a team of six researchers collaborating with physicians leveraging Highmark data assets}
 \newline \hspace*{.6in} \emph{Core capabilities include linking and analyzing healthcare claims, electronic health records, and public data}
 
-\indent \hspace*{.1in} \small\textbf{Research Scientist}, Department of Communication Disorders, Utah State University \hfill 2022-Present
+\indent \hspace*{.1in} \small\textbf{Research Scientist}, Department of Communication Disorders, Utah State University \hfill 2022-2026
 \newline \hspace*{.6in} \emph{Co-investigator on NIH-funded projects in the Human Interaction Lab}
 
 \indent \hspace*{.1in} \small\textbf{Research Assistant Professor}, Department of Psychology, Utah State University \hfill 2018-2022
 \newline \hspace*{.6in} \emph{Managing Director of the Data Science \& Discovery Unit}
 \newline \hspace*{.6in} \emph{Administrator of SONA Systems and REDCap}
 \newline \hspace*{.6in} \emph{Taught graduate level statistics courses and R programming courses}
-
-\indent \hspace*{.1in} \small\textbf{Research Assistant}, Prevention Science Lab, Utah State University \hfill 2016-2018
-\newline \hspace*{.6in} \emph{Advisor: Ginger Lockhart, PhD}
 
 \indent \hspace*{.1in} \small\textbf{Statistical and Data Science Consultant}, Utah State University \hfill 2016-2018
 \newline \hspace*{.6in} \emph{Supervisors: Sarah Schwartz, PhD and Jamison Fargo, PhD}
@@ -133,9 +136,9 @@ header_fun = function(title, shift_line = FALSE){
 \hrule
 \vspace{2pt}
 
-\indent \hspace*{.1in} \small\textsc{Research:} Development and testing of open source tools for individuals with disabilities
+\indent \hspace*{.1in} \small\textsc{Research:} Development and testing of open source tools for healthcare analytics
 
-\indent \hspace*{.1in} \textsc{Teaching:} Web applications, Software Development, R programming, C programming
+\indent \hspace*{.1in} \textsc{Teaching:} Healthcare analytics, health services research, R and Python programming
 
 
 <!-- Affiliations -->

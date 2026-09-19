@@ -1,0 +1,241 @@
+/*-- scss:defaults --*/
+
+// ── Type ──────────────────────────────────────────────────────────────
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$font-family-monospace: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace !default;
+
+$font-size-root: 17px !default;
+$line-height-base: 1.65 !default;
+$headings-font-family: $font-family-serif !default;
+$headings-font-weight: 600 !default;
+$headings-line-height: 1.2 !default;
+
+// ── Color ─────────────────────────────────────────────────────────────
+$ink:        #14161a !default;   // body text
+$ink-muted:  #5b6470 !default;   // secondary text
+$accent:     #0f4c5c !default;   // deep teal — links, headings accents
+$accent-soft:#e3eef0 !default;   // tinted fills
+$rule:       #e4e7eb !default;   // hairlines
+$paper:      #ffffff !default;
+$paper-alt:  #f8f9fa !default;
+
+$body-color: $ink !default;
+$body-bg: $paper !default;
+$primary: $accent !default;
+$link-color: $accent !default;
+$link-hover-color: darken($accent, 10%) !default;
+$border-color: $rule !default;
+
+$code-bg: $paper-alt !default;
+$code-color: #a4243b !default;
+$navbar-bg: $paper !default;
+$navbar-fg: $ink !default;
+$footer-bg: $paper-alt !default;
+
+$toc-color: $ink-muted !default;
+$toc-font-size: 0.85rem !default;
+
+/*-- scss:rules --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+// ── Navbar: quiet, hairline-separated ─────────────────────────────────
+.navbar {
+  border-bottom: 1px solid $rule;
+  box-shadow: none;
+  padding-block: 0.35rem;
+}
+.navbar-title {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 1.05rem;
+}
+.navbar .nav-link {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: $ink-muted !important;
+  transition: color 0.15s ease;
+  &:hover, &.active { color: $accent !important; }
+}
+
+// ── Headings ──────────────────────────────────────────────────────────
+h1, .h1 { letter-spacing: -0.02em; font-size: 2.1rem; }
+h2, .h2 {
+  letter-spacing: -0.015em;
+  font-size: 1.5rem;
+  margin-top: 2.25rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid $rule;
+}
+h3, .h3 { font-size: 1.2rem; margin-top: 1.75rem; }
+h4, .h4 { font-size: 1.02rem; font-weight: 600; color: $ink-muted; text-transform: none; }
+
+#title-block-header .quarto-title-banner { display: none; }
+.quarto-title .title { margin-bottom: 0.25rem; }
+.quarto-title-meta { color: $ink-muted; font-size: 0.875rem; }
+
+// ── Links ─────────────────────────────────────────────────────────────
+a { text-decoration: none; text-underline-offset: 2px; }
+p a, li a {
+  text-decoration: underline;
+  text-decoration-color: rgba($accent, 0.3);
+  text-decoration-thickness: 1px;
+  &:hover { text-decoration-color: $accent; }
+}
+
+// ── Code ──────────────────────────────────────────────────────────────
+pre, code { font-size: 0.86em; }
+div.sourceCode {
+  border: 1px solid $rule;
+  border-radius: 6px;
+  background-color: $paper-alt;
+}
+pre.sourceCode { padding: 0.85rem 1rem; }
+code:not(.sourceCode) {
+  background: $accent-soft;
+  color: darken($accent, 8%);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+.cell-output pre {
+  border-left: 3px solid $rule;
+  background: transparent;
+  color: $ink-muted;
+  padding-left: 0.9rem;
+}
+
+
+// Console output blocks (migrated posts label these ```output)
+pre.output, pre > code.output, pre.output > code,
+div.sourceCode.output, pre[class*="output"] {
+  background: transparent !important;
+  border: none;
+  border-left: 3px solid $rule;
+  border-radius: 0;
+  padding-left: 0.9rem;
+  color: $ink-muted;
+}
+pre.output > code, pre > code.output { color: $ink-muted; }
+
+// ── Blog listing: cards, quiet ────────────────────────────────────────
+.quarto-listing { margin-top: 1.5rem; }
+.quarto-post {
+  padding: 1.4rem 0;
+  border-bottom: 1px solid $rule;
+  gap: 1.5rem;
+}
+.quarto-post .listing-title {
+  font-family: $font-family-serif;
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  a { text-decoration: none; color: $ink; &:hover { color: $accent; } }
+}
+.quarto-post .listing-description {
+  color: $ink-muted;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+.quarto-post .listing-date, .listing-date {
+  color: $ink-muted;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.listing-categories { gap: 0.4rem; }
+.listing-categories .listing-category {
+  border: 1px solid $rule;
+  border-radius: 999px;
+  padding: 0.12rem 0.6rem;
+  font-size: 0.72rem;
+  text-transform: none;
+  color: $ink-muted;
+  opacity: 1;
+  &:hover { border-color: $accent; color: $accent; }
+}
+
+// ── About / landing (trestles) ────────────────────────────────────────
+.quarto-about-trestles .about-entity {
+  .about-image { border-radius: 10px; }
+  .about-links { flex-direction: row; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .about-link {
+    border: 1px solid $rule;
+    border-radius: 6px;
+    padding: 0.35rem 0.75rem;
+    color: $ink-muted;
+    font-size: 0.85rem;
+    &:hover { border-color: $accent; color: $accent; background: $accent-soft; }
+  }
+}
+.quarto-about-trestles .about-contents { padding-left: 2rem; }
+
+// ── Reusable card grid (courses, software, research) ──────────────────
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.tile {
+  border: 1px solid $rule;
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  background: $paper;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+  &:hover { border-color: rgba($accent, 0.5); transform: translateY(-2px); }
+  h3, h4 { margin-top: 0; font-family: $font-family-serif; font-size: 1.05rem; }
+  p { color: $ink-muted; font-size: 0.9rem; margin-bottom: 0.4rem; }
+  a.tile-link { font-size: 0.85rem; font-weight: 500; }
+}
+
+// ── Lead paragraph ────────────────────────────────────────────────────
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: $ink-muted;
+  font-weight: 400;
+}
+
+// ── TOC ───────────────────────────────────────────────────────────────
+#TOC, .sidebar.margin-sidebar {
+  .nav-link { font-size: 0.82rem; padding-block: 0.22rem; border-left: 2px solid transparent; }
+  .nav-link.active { border-left-color: $accent; color: $accent; font-weight: 500; }
+}
+
+// ── Tables ────────────────────────────────────────────────────────────
+table, .table {
+  font-size: 0.9rem;
+  th { border-bottom: 1.5px solid $ink; font-weight: 600; text-align: left; }
+  td, th { padding: 0.5rem 0.7rem; }
+}
+
+// ── Blockquote ────────────────────────────────────────────────────────
+blockquote {
+  border-left: 3px solid $accent-soft;
+  padding-left: 1.1rem;
+  color: $ink-muted;
+  font-style: normal;
+}
+
+// ── Footer ────────────────────────────────────────────────────────────
+.nav-footer {
+  border-top: 1px solid $rule;
+  font-size: 0.85rem;
+  color: $ink-muted;
+  a { color: $ink-muted; &:hover { color: $accent; } }
+}
+
+img { max-width: 100%; height: auto; border-radius: 4px; }
+
+// ── Mobile ────────────────────────────────────────────────────────────
+@media (max-width: 767px) {
+  :root { font-size: 16px; }
+  h1, .h1 { font-size: 1.7rem; }
+  .quarto-about-trestles .about-contents { padding-left: 0; }
+  .quarto-post { flex-direction: column; gap: 0.5rem; }
+}

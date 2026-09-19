@@ -1,0 +1,97 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "index.qmd"
+    - "blog.qmd"
+    - "research.qmd"
+    - "software.qmd"
+    - "teaching.qmd"
+    - "consulting.qmd"
+    - "posts/**/*.qmd"
+    - "teaching/**/*.qmd"
+    # assets/ holds ~40 .qmd/.Rmd source files (CV, talks, old post sources).
+    # They ship as downloads; they must never be rendered as pages.
+    - "!assets/**"
+  resources:
+    - "assets/**"
+    - "!assets/PyData/mini/**"
+    - "!assets/**/__pycache__/**"
+    - "!assets/**/*.pyc"
+    - "!assets/**/.ipynb_checkpoints/**"
+    - "!assets/**/.Rhistory"
+    - "!assets/**/.RData"
+    - "!assets/**/.Rproj.user/**"
+    - "!assets/**/.DS_Store"
+    - "!assets/**/*_cache/**"
+
+website:
+  title: "Tyson S. Barrett"
+  description: "Data science, statistics, and #rstats #pydata"
+  site-url: https://tysonbarrett.com
+  favicon: /assets/images/favicon.png
+  open-graph: true
+  twitter-card: true
+
+  navbar:
+    title: "Tyson S. Barrett"
+    pinned: false
+    left:
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Software"
+        href: software.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Consulting"
+        href: consulting.qmd
+    right:
+      - text: "CV"
+        href: /assets/CV/CV.pdf
+      - icon: github
+        href: https://github.com/TysonStanley
+        aria-label: GitHub
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=Ac_0Q8gAAAAJ
+        aria-label: Google Scholar
+      - icon: rss
+        href: blog.xml
+        aria-label: RSS
+
+  page-footer:
+    border: true
+    left: |
+      &copy; 2026 Tyson S. Barrett &middot; Built with [Quarto](https://quarto.org)
+    right:
+      - icon: github
+        href: https://github.com/TysonStanley
+      - icon: envelope
+        href: mailto:tyson.barrett@usu.edu
+      - icon: rss
+        href: blog.xml
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+      dark: [cosmo, styles.scss, dark.scss]
+    css: []
+    toc: true
+    toc-depth: 3
+    anchor-sections: true
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    link-external-newwindow: true
+    smooth-scroll: true
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 250px
+
+execute:
+  freeze: auto
+  warning: false
+  message: false

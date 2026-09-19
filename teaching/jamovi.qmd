@@ -1,0 +1,13 @@
+---
+title: "Jamovi Tutorials"
+subtitle: "Tutorial series for Jamovi."
+---
+
+I am creating a series of Jamovi tutorials for my Applied Statistical Analysis graduate course. The following are links that you can follow to the tutorials.
+
+1. [Intro to Jamovi](https://tysonbarrett.com//jekyll/update/2018/03/28/jamovi/)
+2. [Correlations and Regressions](https://tysonbarrett.com//jekyll/update/2018/03/28/jamovi_correlation_regression/)
+3. [Logistic Regression](https://tysonbarrett.com//jekyll/update/2018/03/29/jamovi_logistic/)
+4. [Chi Square: Goodness of Fit and Test of Independence](https://tysonbarrett.com//jekyll/update/2018/03/30/jamovi_chi/)
+
+More to come...

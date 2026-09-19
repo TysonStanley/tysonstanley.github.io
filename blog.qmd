@@ -1,0 +1,18 @@
+---
+title: "Blog"
+subtitle: "Ramblings of an applied statistician"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: cloud
+  sort-ui: [date, title]
+  filter-ui: true
+  fields: [date, title, description, categories]
+  feed:
+    items: 20
+    type: partial
+page-layout: full
+title-block-banner: false
+toc: false
+---

@@ -1,0 +1,79 @@
+---
+title: "Leaflet of Violent Crime Rates by State"
+description: "The map below is an example of using the `leaflet` `R` package to demonstrate statistics about a location (in this example, by state). There are a few great tutorials on `leaflet` and creating something useful and beautiful is fairly…"
+date: 2017-02-23
+author: Tyson S. Barrett
+categories: [data wrangling, visualization, packages]
+---
+The map below is an example of using the `leaflet` `R` package to demonstrate statistics about a location (in this example, by state). There are a few great tutorials on `leaflet` and creating something useful and beautiful is fairly simple. I've adapted the code from [https://rstudio.github.io/leaflet/choropleths.html](https://rstudio.github.io/leaflet/choropleths.html) for the mapping. The `R` code to create it is below the figure.
+
+For this map, the **violent crime rate** per 100,000 individuals by state in 2015 is highlighted. Several aspects are nice: we combined our data with the mapping features of *MapBox*, we can see the statistics by having the mouse over the map, and it looks aesthetically nice.
+
+<iframe src="//rstudio-pubs-static.s3.amazonaws.com/253525_f1581dcd3a3f40dcacae8ea196b1b2ff.html" style="border: none; width: 700px; height: 500px"></iframe>
+
+
+```r
+
+library(leaflet)
+library(sp)
+library(tidyverse)
+
+## The geo data for the states
+## from http://eric.clst.org/Stuff/USGeoJSON
+states <- geojsonio::geojson_read("us-states.geojson", what = "sp")
+
+## Crime statistics from the FBI
+## https://ucr.fbi.gov/crime-in-the-u.s/2015/crime-in-the-u.s.-2015/tables/table-5
+crimes <- read.csv("FBI_crime.csv") %>%
+  filter(Area == "State Total") %>%
+  filter(type == "Rate per 100,000 inhabitants") %>%
+  mutate(State = toupper(State)) %>%
+  select(State, violent, murder) %>%
+  mutate(State = gsub("[0-9]", "", State)) %>%
+  data.frame
+
+## Combine crime stats with the geo data
+states2 = states
+states2@data = states@data %>%
+  mutate(State = toupper(NAME)) %>%
+  left_join(crimes, by = "State") %>%
+  data.frame
+
+## The map
+bins <- c(seq(100,800,100))
+pal <- colorBin("YlOrRd", domain = states2$violent, bins = bins)
+
+labels <- sprintf(
+  "<strong>%s</strong><br/>%g violent crimes per\n100,000 individuals",
+  states2$State, states2$violent
+) %>% lapply(htmltools::HTML)
+
+leaflet(states2) %>%
+  setView(-96, 37.8, 4) %>%
+  addProviderTiles(provider = "MapBox", options = providerTileOptions(
+    id = "mapbox.light",
+    accessToken = 'Your Own Token')) %>%
+  addPolygons(
+    fillColor = ~pal(violent),
+    weight = 2,
+    opacity = 1,
+    color = "white",
+    dashArray = "3",
+    fillOpacity = 0.7,
+    highlight = highlightOptions(
+      weight = 5,
+      color = "#666",
+      dashArray = "",
+      fillOpacity = 0.7,
+      bringToFront = TRUE),
+    label = labels,
+    labelOptions = labelOptions(
+      style = list("font-weight" = "normal", padding = "3px 8px"),
+      textsize = "15px",
+      direction = "auto")) %>%
+  addLegend(pal = pal, 
+            values = ~violent, 
+            opacity = 0.7, 
+            title = "Violent Crimes per 100,000",
+            position = "bottomright")
+```

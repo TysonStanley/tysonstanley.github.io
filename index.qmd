@@ -1,0 +1,69 @@
+---
+title: "Tyson S. Barrett"
+subtitle: "Data Science · Statistics · Healthcare Analytics"
+pagetitle: "Tyson S. Barrett"
+image: /assets/images/Tyson_headshot_2026.jpeg
+toc: false
+about:
+  template: trestles
+  image-shape: rounded
+  image-width: 14em
+  links:
+    - text: GitHub
+      icon: github
+      href: https://github.com/TysonStanley
+    - text: Scholar
+      icon: mortarboard-fill
+      href: https://scholar.google.com/citations?user=Ac_0Q8gAAAAJ
+    - text: ORCID
+      icon: person-badge
+      href: https://orcid.org/0000-0002-2137-1391
+    - text: CV
+      icon: file-earmark-text
+      href: /assets/CV/CV.pdf
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/tyson-s-barrett-phd/
+    - text: BlueSky
+      icon: bluesky
+      href: https://bsky.app/profile/healthandstats.bsky.social
+    - text: Email
+      icon: envelope
+      href: mailto:t.barrett88@gmail.com
+---
+
+I am a Professional Practice Associate Professor of Data Analytics and Information Systems in the [Jon M. Huntsman School of Business](https://huntsman.usu.edu) at Utah State University. I focus on supporting students to become expert data scientists and analysts that are problem solvers and innovators using modern data analytic and statistical methods. As part of my role, I mentor students in the Analytics Solutions Center (ASC), where we give students real-world, hands-on experience solving the data and analytic needs of real companies, organizations, and academic partners.
+
+Before returning to USU I led a team of researchers at Highmark Health, an integrated health system, working as a methodologist on population health, cost, and health equity. I hold a PhD in quantitative psychology.
+
+I am the CRAN maintainer of [`data.table`](https://rdatatable.gitlab.io/data.table/), one of the most-depended-on packages in the R ecosystem. I also serve as a methodologist on several NIDCD-funded research teams in speech and hearing sciences, and I keep a [consulting practice](consulting.qmd) alongside my academic work.
+
+::: {.card-grid}
+::: {.tile}
+### Research
+Statistical modeling, causal inference, health analytics, and econometrics, plus method development in communication disorders.
+
+[Publications & projects →](research.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Teaching
+Undergraduate and graduate coursework in regression, machine learning, and applied statistics.
+
+[Courses & talks →](teaching.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Software
+`data.table`, `furniture`, `tidyfast`, `biosketchr`, `dissertateUSU` — tools built to make analysis faster and more legible.
+
+[R packages →](software.qmd){.tile-link}
+:::
+
+::: {.tile}
+### Blog
+Tutorials and notes on `#rstats`, `data.table` performance, regression, and reproducible workflows.
+
+[Read posts →](blog.qmd){.tile-link}
+:::
+:::

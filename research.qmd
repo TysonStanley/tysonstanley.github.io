@@ -1,0 +1,21 @@
+---
+title: "Research"
+subtitle: "Applied statistics, causal inference, and health data science."
+---
+
+My research spans several disciplines as an applied statistician and methodologist, with a focus in  health services and in speech, language, and hearing sciences. I believe that statistics and analytics are best when teamed up with expertise in other fields. Because of this, you'll find all my work is collaborative, with experts in their fields, applying modern approaches to answer important questions.
+
+## Where to find the work
+
+| | |
+|---|---|
+| **Google Scholar** | [Full publication list and citations](https://scholar.google.com/citations?user=Ac_0Q8gAAAAJ) |
+| **ORCID** | [0000-0002-2137-1391](https://orcid.org/0000-0002-2137-1391) |
+| **ResearchGate** | [Profile](https://www.researchgate.net/profile/Tyson_Barrett) |
+| **CV** | [PDF](/assets/CV/CV.pdf) |
+
+## Collaboration
+
+If a project needs a methodologist, or if you want to talk through a design
+before data collection starts, [email me](mailto:t.barrett88@gmail.com). The
+earlier in a study that conversation happens, the more it is worth.

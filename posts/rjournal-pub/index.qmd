@@ -1,0 +1,10 @@
+---
+title: "Recent Accepted Paper in the R Journal"
+description: "Recently, our paper *Furniture for Quantitative Scientists* was posted in the R Journal. This paper discusses the use of descriptive statistics in exploring data through the `furniture` package. See the R Journal for the manuscript."
+date: 2017-08-02
+author: Tyson S. Barrett
+categories: [furniture, packages]
+---
+Recently, our paper *Furniture for Quantitative Scientists* was posted in the R Journal. This paper discusses the use of descriptive statistics in exploring data through the `furniture` package. See the [R Journal](https://journal.r-project.org/archive/2017/RJ-2017-037/RJ-2017-037.pdf) for the manuscript.
+
+Feel free to comment about it by commenting on the [furniture github page](https://github.com/TysonStanley/furniture) or by emailing me at <t.barrett@aggiemail.usu.edu>.

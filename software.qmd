@@ -1,0 +1,46 @@
+---
+title: "Software"
+subtitle: "R packages and related tools. Venturing into Python too."
+---
+
+I write software when a method is good but the friction of using it is too high. I believe in human-in-the-loop development, even as LLMs get more advanced, the human thinker and problem-solver is essential for useful and meaningful tools and outputs.
+
+::: {.card-grid}
+::: {.tile}
+### data.table
+High-performance data manipulation for R: fast aggregation, joins, and in-memory updates on datasets that otherwise cannot be analyzed quickly or at all. I currently serve as the CRAN maintainer, supporting a talented group of devs.
+
+[Documentation](https://rdatatable.gitlab.io/data.table/){.tile-link} ·
+[GitHub](https://github.com/Rdatatable/data.table){.tile-link}
+:::
+
+::: {.tile}
+### furniture
+Publication-ready descriptive tables — `table1()` and friends. This was my first venture into open-source development, learned a lot and still use this package regularly.
+
+[Documentation](https://tysonbarrett.com/furniture){.tile-link} ·
+[CRAN](https://cran.r-project.org/package=furniture){.tile-link}
+:::
+
+::: {.tile}
+### tidyfast
+Fast `tidyverse`-style verbs implemented directly on `data.table`, including nesting, unnesting, and reshaping at `data.table` speed with familiar syntax.
+
+[Documentation](https://tysonbarrett.com/tidyfast/){.tile-link} ·
+[CRAN](https://cran.r-project.org/package=tidyfast){.tile-link}
+:::
+
+::: {.tile}
+### dissertateUSU
+An R Markdown template that meets Utah State University's dissertation formatting requirements, so the writing can stay in plain text.
+
+[GitHub](https://github.com/TysonStanley/dissertateUSU){.tile-link}
+:::
+
+::: {.tile}
+### Everything else
+Smaller packages, workshop repositories, and works in progress.
+
+[GitHub profile](https://github.com/TysonStanley){.tile-link}
+:::
+:::

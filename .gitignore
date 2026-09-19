@@ -7,3 +7,11 @@
 mini
 rstudioconf
 .positai
+
+# Quarto
+/_freeze/site_libs/
+/.quarto/
+*_cache/
+/_site/
+/site_libs/
+**/*.quarto_ipynb

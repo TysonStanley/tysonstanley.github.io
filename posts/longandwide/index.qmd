@@ -1,0 +1,10 @@
+---
+title: "Reshaping Data with Long() and Wide()"
+description: "As part of the newest CRAN version of `furniture`, I included two new functions that allow simple reshaping of data frames. It is simply a wrapper of `reshape()` but has some added benefits. Check out the cheatsheet below."
+date: 2017-07-24
+author: Tyson S. Barrett
+categories: [furniture, data wrangling, packages]
+---
+As part of the newest CRAN version of `furniture`, I included two new functions that allow simple reshaping of data frames. It is simply a wrapper of `reshape()` but has some added benefits. Check out the cheatsheet below.
+
+[![Reshaping](/assets/images/LongWide_Handout.jpg)](/assets/images/LongWide_Handout.pdf)

@@ -1,0 +1,21 @@
+---
+title: "Consulting"
+subtitle: "Barrett Evaluation, LLC — Logan, Utah"
+---
+
+I run **Barrett Evaluation, LLC**, working with individuals, non-profits, and companies on data management, analytics, and statistical modeling. Projects have spanned education, communication sciences, economics, psychology, and biology.
+
+## What a project looks like
+
+| Project type | What you receive |
+|---|---|
+| **Research** — scientific or business improvement | Technical reports, published papers, data management and cleaning, documented R code, a replicable workflow |
+| **Production** — part of a larger system | Production-level code, technical documentation, data cleaning pipelines |
+
+Most engagements start in one of three places: a dataset that needs to be made trustworthy before anything else can happen, an analysis that needs a methodologist's review before submission, or a one-off model that needs to become something a team can run every month.
+
+## Get in touch
+
+Contact me for a **free intake conversation** — email [t.barrett88@gmail.com](mailto:t.barrett88@gmail.com). I try to respond within 48 hours.
+
+Useful things to include: what question you are trying to answer, what data already exists, and when you need it by.
