@@ -14,7 +14,7 @@ about:
       href: https://github.com/TysonStanley
     - text: Scholar
       icon: mortarboard-fill
-      href: https://scholar.google.com/citations?user=Ac_0Q8gAAAAJ
+      href: https://scholar.google.com/citations?user=UWdXXEoAAAAJ&hl=en
     - text: ORCID
       icon: person-badge
       href: https://orcid.org/0000-0002-2137-1391
