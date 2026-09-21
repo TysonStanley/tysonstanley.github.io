@@ -1,0 +1,300 @@
+---
+title: "Git, GitHub, and Positron: A Setup Guide"
+subtitle: "Authentication first, signing only if you need it"
+author: "Tyson S. Barrett"
+date: today
+format:
+  typst:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    section-numbering: "1.1"
+    papersize: us-letter
+    margin:
+      x: 1.25in
+      y: 1in
+    fontsize: 11pt
+---
+
+# Two Different Jobs
+
+Git uses cryptographic keys for two jobs that are easy to confuse. Almost every
+confusing error message comes from mixing them up.
+
+**Authentication** proves to GitHub that you are allowed to push. It happens at
+the network boundary, once per push. *Everyone needs this.*
+
+**Signing** stamps each commit so others can verify who wrote it. It happens on
+your own machine, at commit time, and the stamp is permanent. *Most people never
+need this.*
+
+Sections 2 and 3 cover authentication and are all that is required for this
+course. Sections 4 and 5 cover signing and are optional.
+
+::: {.callout-note}
+Both jobs use **public-key cryptography**: a *private key* that stays on your
+machine and a *public key* you hand out freely. Anything the private key signs,
+the public key can verify — and the math does not run backwards, so the public
+key reveals nothing about the private one.
+:::
+
+{{< pagebreak >}}
+
+# Start Here: HTTPS (No Keys Required)
+
+This is the recommended setup. It works identically on macOS, Windows, and
+Linux, requires no key generation, and has the fewest ways to fail.
+
+## Tell Git who you are
+
+The email **must match** an email registered on your GitHub account, or your
+commits will not be linked to your profile.
+
+```r
+install.packages(c("usethis", "gitcreds"))
+
+usethis::use_git_config(
+  user.name  = "Your Name",
+  user.email = "you@usu.edu"
+)
+```
+
+## Create a Personal Access Token
+
+A Personal Access Token (PAT) is a long password that GitHub generates for you.
+This command opens GitHub in your browser with the correct permissions already
+checked.
+
+```r
+usethis::create_github_token()
+```
+
+Before clicking **Generate token**, set the expiration to **90 days** or longer.
+The default is 30 days, which will expire in the middle of the semester.
+
+Copy the token immediately. GitHub will never show it to you again.
+
+## Store the token
+
+```r
+gitcreds::gitcreds_set()
+```
+
+Paste the token when prompted. It is saved in the macOS Keychain or Windows
+Credential Manager, so you only do this once.
+
+## Confirm everything works
+
+```r
+usethis::git_sitrep()
+```
+
+This prints a full report on your Git and GitHub configuration. If something is
+wrong, the output will say what. **Run this first whenever you are stuck, and
+show the output when you ask for help.**
+
+::: {.callout-important}
+## Turn signing off before you start
+
+If you have used GitHub Desktop before, or copied a config from a blog post,
+commit signing may already be enabled — and it will fail inside Positron in
+confusing ways. Run this once, even if you think you do not need it:
+
+```bash
+git config --global commit.gpgsign false
+```
+:::
+
+{{< pagebreak >}}
+
+# Optional: SSH for Authentication
+
+SSH keys are an alternative to a PAT. They never expire, but they add a key
+generation step and can be blocked on networks that close port 22. Use HTTPS
+unless you have a reason not to.
+
+## Generate a key
+
+```bash
+ssh-keygen -t ed25519 -C "you@usu.edu"
+```
+
+Press Enter to accept the default location (`~/.ssh/id_ed25519`). A passphrase is
+optional but recommended.
+
+## Add the public key to GitHub
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+Copy the output. On GitHub, go to **Settings → SSH and GPG keys → New SSH key**,
+choose key type **Authentication key**, and paste.
+
+## Test it
+
+```bash
+ssh -T git@github.com
+```
+
+Success looks like: `Hi username! You've successfully authenticated...`
+
+# Optional: SSH for Signing
+
+If you want signed commits, **use SSH rather than GPG**. It produces the same
+"Verified" badge on GitHub with far fewer moving parts — no background agent, no
+passphrase dialogs, no expiration dates.
+
+```bash
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+git config --global commit.gpgsign true
+```
+
+Then add the **same public key to GitHub a second time**, this time with key type
+**Signing key**. GitHub treats authentication and signing as separate
+registrations even for identical keys.
+
+Verify:
+
+```bash
+git commit --allow-empty -m "signing test"
+git log --show-signature -1
+```
+
+{{< pagebreak >}}
+
+# Optional: GPG for Signing
+
+GPG is the older, more capable, and considerably more fragile option. Use it only
+if a project you contribute to requires OpenPGP signatures specifically.
+
+## Install and generate
+
+```bash
+brew install gnupg          # macOS
+gpg --full-generate-key     # choose ECC (Curve25519), or RSA 4096
+```
+
+## Find your key ID
+
+```bash
+gpg --list-secret-keys --keyid-format=long
+```
+
+Look for the line beginning `sec`. The key ID is the part after the slash:
+
+```
+sec   ed25519/A507164A8478CED8 2026-09-19 [SC]
+                ^^^^^^^^^^^^^^^^
+```
+
+Check two things in this output. The key must not be marked `[expired]` or
+`[revoked]`, and it must carry the `S` capability — a key marked only `[E]` can
+encrypt but cannot sign.
+
+## Configure Git
+
+```bash
+git config --global user.signingkey A507164A8478CED8
+git config --global commit.gpgsign true
+git config --global --unset gpg.format   # clear any leftover SSH setting
+```
+
+## Add the public key to GitHub
+
+```bash
+gpg --armor --export A507164A8478CED8
+```
+
+Copy the entire block, including the `-----BEGIN-----` and `-----END-----` lines.
+On GitHub: **Settings → SSH and GPG keys → New GPG key**.
+
+## Required on macOS: a graphical passphrase prompt
+
+GPG's default passphrase prompt needs a terminal to draw in. Positron does not
+provide one, so signing fails there even when it works in the shell. Install a
+GUI prompt instead:
+
+```bash
+brew install pinentry-mac
+echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
+```
+
+Also add this line to `~/.zshrc`, which fixes the same error in the terminal:
+
+```bash
+export GPG_TTY=$(tty)
+```
+
+Test from a terminal before returning to Positron:
+
+```bash
+echo test | gpg --clearsign
+```
+
+If a passphrase dialog appears and a signed block is printed, you are set.
+Restart Positron so it picks up the new agent.
+
+{{< pagebreak >}}
+
+# Why Positron Specifically Causes Trouble
+
+Two failure modes are specific to running Git inside a graphical IDE. Both
+produce errors that look like Git problems but are not.
+
+**The IDE does not see your shell PATH.** Positron launched from the Dock or
+Start Menu never reads `~/.zshrc`, so tools installed by Homebrew can be
+invisible to it. A command that works perfectly in the terminal fails inside the
+IDE. The fix is to give Git an absolute path:
+
+```bash
+git config --global gpg.program /opt/homebrew/bin/gpg
+```
+
+**The IDE has no terminal for prompts.** Anything that needs to ask you a
+question interactively — a GPG passphrase, most commonly — has nowhere to draw
+it. This is what `pinentry-mac` solves.
+
+Both are reasons to prefer HTTPS authentication and no signing while you are
+learning Git.
+
+# Troubleshooting
+
+| Error message | Cause | Fix |
+|---------------------|-------------------|-----------------------------|
+| `cannot run gpg: No such file or directory` | Positron cannot see `gpg` on its PATH | Set `gpg.program` to the absolute path, or turn signing off |
+| `gpg: skipped "...": No secret key` | No private key matches your `user.email` | Set `user.signingkey` explicitly, or check for an expired key |
+| `Couldn't load public key <fingerprint>` | `gpg.format` is `ssh` but `user.signingkey` is a GPG key ID | Pick one format; in SSH mode the value must be a path to a `.pub` file |
+| `signing failed: Inappropriate ioctl for device` | Passphrase prompt has no terminal | Install `pinentry-mac`; set `GPG_TTY` in `~/.zshrc` |
+| `Authentication failed` on push | PAT expired or was never stored | Re-run `usethis::create_github_token()` then `gitcreds::gitcreds_set()` |
+| `Permission denied (publickey)` | SSH key not registered with GitHub | Add `~/.ssh/id_ed25519.pub` under **Authentication key** |
+
+: Common Git errors and what they actually mean {tbl-colwidths="[34,26,40]"}
+
+# Starting Over
+
+If your configuration has become tangled, inspect all of it at once:
+
+```bash
+git config --global --list
+```
+
+To clear the signing-related settings and return to a clean state:
+
+```bash
+git config --global --unset commit.gpgsign
+git config --global --unset gpg.format
+git config --global --unset gpg.program
+git config --global --unset user.signingkey
+```
+
+Your authentication setup is separate and is not affected by these commands.
+
+# Further Reading
+
+*Happy Git and GitHub for the useR* by Jenny Bryan is the standard reference for
+this material in the R ecosystem, and it is free online at
+<https://happygitwithr.com>. Chapters 9 through 11 cover authentication in more
+detail than this handout.
