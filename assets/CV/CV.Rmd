@@ -432,6 +432,8 @@ header_fun("SELECTED PRESENTATIONS", shift_line = TRUE)
 
 <!-- -->
 
+\textbf{Barrett, T.S.} (September 2026). Teach Once, Use Often: Building AI Skills for Data Analysis \emph{Posit Conference}.
+
 \textbf{Barrett, T.S.} (July 2024). The Past, Present, and Future of data.table. useR! 2024, Salzburg, Austria.
 
 Harper, S.A., Brown, C.B., Poulsen, S.L., \textbf{Barrett, T.S.}, Dakin. J.C. (September 2023). Inter-step variation of stairways and observations of fall-related events. 2023 UAB Center of Exercise Medicine Symposium on Exercise and Aging. Invited Flash Talk.
