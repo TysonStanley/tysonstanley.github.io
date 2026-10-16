@@ -376,8 +376,12 @@ paid = net.groupby("member_id")["paid_amt"].sum()
 mem = members.assign(
     paid=members["member_id"].map(paid).fillna(0))
 
-pmpm = (mem.groupby("plan_type")
-           [["paid", "member_months"]].sum())
+pmpm = (
+    mem
+    .groupby("plan_type")
+    [["paid", "member_months"]]
+    .sum()
+)
 pmpm["pmpm"] = pmpm["paid"] / pmpm["member_months"]
 pmpm["pmpm"].round(0)
 ```
@@ -386,11 +390,13 @@ pmpm["pmpm"].round(0)
 :::{.column width="48%"}
 ```{python}
 #| echo: false
-(ggplot(pmpm.reset_index(), aes("reorder(plan_type, pmpm)", "pmpm"))
- + geom_col(fill=ACCENT, width=0.6)
- + geom_text(aes(label="pmpm.map('${:,.0f}'.format)"), va="bottom", nudge_y=5, color=DARK)
- + labs(x="", y="Paid PMPM ($)")
- + theme(figure_size=(5, 4.4)))
+(
+    ggplot(pmpm.reset_index(), aes("reorder(plan_type, pmpm)", "pmpm"))
+    + geom_col(fill=ACCENT, width=0.6)
+    + geom_text(aes(label="pmpm.map('${:,.0f}'.format)"), va="bottom", nudge_y=5, color=DARK)
+    + labs(x="", y="Paid PMPM ($)")
+    + theme(figure_size=(5, 4.4))
+)
 ```
 
 :::
@@ -402,9 +408,13 @@ Why divide by member-months? Not everyone is enrolled all year.
 
 ```{python}
 #| echo: false
-spend = (net.groupby("member_id")["paid_amt"].sum()
-            .reindex(members["member_id"], fill_value=0)
-            .sort_values(ascending=False).reset_index())
+spend = (
+    net
+    .groupby("member_id")["paid_amt"]
+    .sum()
+    .reindex(members["member_id"], fill_value=0)
+    .sort_values(ascending=False).reset_index()
+)
 spend["pct_members"] = np.arange(1, len(spend) + 1) / len(spend) * 100
 spend["pct_spend"] = spend["paid_amt"].cumsum() / spend["paid_amt"].sum() * 100
 top5 = spend.loc[spend["pct_members"] <= 5, "pct_spend"].max()
@@ -415,12 +425,14 @@ The top **5%** of members account for **`{python} f"{top5:.0f}%"`** of spend; th
 
 ```{python}
 #| echo: false
-(ggplot(spend, aes("pct_members", "pct_spend"))
- + geom_area(fill=BLUE, alpha=0.6) + geom_line(color=DARK, size=1)
- + geom_abline(linetype="dashed", color="grey")
- + annotate("point", x=5, y=top5, color=RED, size=4)
- + annotate("text", x=8, y=top5 - 6, label=f"Top 5% → {top5:.0f}% of $", ha="left", color=RED)
- + labs(x="% of members (highest cost first)", y="Cumulative % of spend"))
+(
+    ggplot(spend, aes("pct_members", "pct_spend"))
+    + geom_area(fill=BLUE, alpha=0.6) + geom_line(color=DARK, size=1)
+    + geom_abline(linetype="dashed", color="grey")
+    + annotate("point", x=5, y=top5, color=RED, size=4)
+    + annotate("text", x=8, y=top5 - 6, label=f"Top 5% → {top5:.0f}% of $", ha="left", color=RED)
+    + labs(x="% of members (highest cost first)", y="Cumulative % of spend")
+)
 ```
 
 This is why care management programs target "high utilizers."
@@ -430,8 +442,12 @@ This is why care management programs target "high utilizers."
 ::::{.columns}
 :::{.column width="50%"}
 ```{python}
-by_pos = (net.groupby("place_of_service")
-             ["paid_amt"].agg(["sum", "size"]))
+by_pos = (
+    net
+    .groupby("place_of_service")
+    ["paid_amt"]
+    .agg(["sum", "size"])
+)
 by_pos["share_of_$"] = by_pos["sum"] / by_pos["sum"].sum()
 by_pos["share_of_claims"] = by_pos["size"] / by_pos["size"].sum()
 by_pos[["share_of_claims", "share_of_$"]].round(2)
@@ -441,16 +457,21 @@ by_pos[["share_of_claims", "share_of_$"]].round(2)
 :::{.column width="50%"}
 ```{python}
 #| echo: false
-long = (by_pos[["share_of_claims", "share_of_$"]].reset_index()
-        .melt("place_of_service", var_name="measure", value_name="share"))
+long = (
+    by_pos[["share_of_claims", "share_of_$"]]
+    .reset_index()
+    .melt("place_of_service", var_name="measure", value_name="share")
+)
 long["measure"] = long["measure"].map({"share_of_claims": "% of claims", "share_of_$": "% of dollars"})
-(ggplot(long, aes("reorder(place_of_service, share)", "share", fill="measure"))
- + geom_col(position="dodge", width=0.7)
- + coord_flip()
- + scale_fill_manual(values={"% of claims": BLUE, "% of dollars": DARK})
- + scale_y_continuous(labels=lambda l: [f"{x:.0%}" for x in l])
- + labs(x="", y="", fill="")
- + theme(figure_size=(5.2, 4.4), legend_position="bottom"))
+(
+    ggplot(long, aes("reorder(place_of_service, share)", "share", fill="measure"))
+    + geom_col(position="dodge", width=0.7)
+    + coord_flip()
+    + scale_fill_manual(values={"% of claims": BLUE, "% of dollars": DARK})
+    + scale_y_continuous(labels=lambda l: [f"{x:.0%}" for x in l])
+    + labs(x="", y="", fill="")
+    + theme(figure_size=(5.2, 4.4), legend_position="bottom")
+)
 ```
 
 :::
@@ -470,12 +491,19 @@ Inpatient: few claims, big dollars. Pharmacy: most claims, dollars driven by a f
 ```{python}
 ed = net[net["place_of_service"].str.startswith("23")]
 print(ed["dx1"].value_counts().head(3))
+```
+
+:::
+
+::: {.fragment}
+```{python}
 rx = net[net["claim_type"] == "pharmacy"]
 print(rx.groupby("procedure_or_drug")["paid_amt"].sum().div(rx["paid_amt"].sum()).round(2).sort_values().tail(3))
 print("Members filling a GLP-1:", rx.loc[rx["procedure_or_drug"] == "GLP-1 RA", "member_id"].nunique())
 ```
 
 :::
+
 
 # Electronic Health Records {background-color="#02577B"}
 
@@ -486,6 +514,10 @@ EHRs use a **medical record number (MRN)**, not a member ID. We need a crosswalk
 ```{python}
 ehr_m = ehr.merge(xwalk, on="mrn", how="left")
 cov = members["member_id"].isin(ehr_m["member_id"]).mean()
+```
+
+```{python}
+#| echo: false
 print(f"{cov:.0%} of members have any EHR data")
 ```
 
@@ -496,11 +528,13 @@ The rest got care **outside** this health system: the EHR only sees in-network c
 ```{python}
 #| echo: false
 ehr_m["flag"] = np.where(ehr_m["bmi"].between(12, 70), "plausible", "implausible")
-p1 = (ggplot(ehr_m.dropna(subset=["bmi"]), aes("bmi", fill="flag"))
- + geom_histogram(bins=80, color="white")
- + scale_x_log10()
- + scale_fill_manual(values={"plausible": ACCENT, "implausible": RED})
- + labs(x="BMI (log scale)", y="Encounters", fill=""))
+p1 = (
+    ggplot(ehr_m.dropna(subset=["bmi"]), aes("bmi", fill="flag"))
+    + geom_histogram(bins=80, color="white")
+    + scale_x_log10()
+    + scale_fill_manual(values={"plausible": ACCENT, "implausible": RED})
+    + labs(x="BMI (log scale)", y="Encounters", fill="")
+)
 p1
 ```
 
@@ -514,8 +548,7 @@ ehr_m.loc[~ehr_m["bmi"].between(12, 70), "bmi"] = np.nan   # set impossible valu
 :::{.column width="55%"}
 ```{python}
 dx  = set(net.loc[net["dx1"] == "E11.9", "member_id"])
-rx  = set(net.loc[net["procedure_or_drug"] == "metformin",
-                  "member_id"])
+rx  = set(net.loc[net["procedure_or_drug"] == "metformin", "member_id"])
 lab = set(ehr_m.loc[ehr_m["a1c"] >= 6.5, "member_id"])
 
 def found_by(m):
@@ -524,8 +557,7 @@ def found_by(m):
     return " + ".join(hits) or "none"
 
 linked = ehr_m["member_id"].dropna().unique()
-combo = (pd.Series([found_by(m) for m in linked])
-           .value_counts().drop("none"))
+combo = (pd.Series([found_by(m) for m in linked]).value_counts().drop("none"))
 ```
 
 :::
@@ -561,7 +593,10 @@ phq = ehr_m.groupby("member_id")["phq9"].max().dropna()
 sev = pd.cut(phq, [-1, 4, 9, 14, 19, 27], labels=["none", "mild", "moderate", "mod-severe", "severe"])
 dep_dx = set(net.loc[net["dx1"].str.match(r"F3[23]", na=False), "member_id"])
 high = phq[phq >= 10].index
+```
 
+```{python}
+#| echo: false
 print(sev.value_counts().sort_index().to_dict())
 print(f"PHQ-9 ≥ 10 without a dx: {(~high.isin(dep_dx)).sum()} of {len(high)}")
 ```
@@ -643,16 +678,22 @@ Ask every vendor: *how* did you match, *how* is this score built, and *who* is m
 ::::{.columns}
 :::{.column width="52%"}
 ```{python}
-dat = (mem.merge(ed_n, on="member_id", how="left")
-          .fillna({"ed_visits": 0})
-          .merge(census, on="zip")
-          .merge(vendor, on="member_id")
-          .query("match_confidence >= 0.7"))
-dat["fi_q"] = pd.qcut(dat["food_insecurity_index"], 4,
-                      labels=["Q1 low", "Q2", "Q3", "Q4 high"])
+dat = (
+    mem
+    .merge(ed_n, on="member_id", how="left")
+    .fillna({"ed_visits": 0})
+    .merge(census, on="zip")
+    .merge(vendor, on="member_id")
+    .query("match_confidence >= 0.7")
+)
+dat["fi_q"] = pd.qcut(dat["food_insecurity_index"], 4, labels=["Q1 low", "Q2", "Q3", "Q4 high"])
 
-q = (dat.groupby("fi_q", observed=True)
-        [["ed_visits", "member_months"]].sum())
+q = (
+    dat
+    .groupby("fi_q", observed=True)
+    [["ed_visits", "member_months"]]
+    .sum()
+)
 q["per_1000"] = 12_000 * q["ed_visits"] / q["member_months"]
 q["per_1000"].round(0)
 ```
@@ -661,10 +702,12 @@ q["per_1000"].round(0)
 :::{.column width="48%"}
 ```{python}
 #| echo: false
-(ggplot(q.reset_index(), aes("fi_q", "per_1000"))
- + geom_col(fill=[BLUE, BLUE, ACCENT, DARK])
- + labs(x="Food insecurity index (quartile)", y="ED visits per 1,000 member-years")
- + theme(figure_size=(5, 4.4)))
+(
+    ggplot(q.reset_index(), aes("fi_q", "per_1000"))
+    + geom_col(fill=[BLUE, BLUE, ACCENT, DARK])
+    + labs(x="Food insecurity index (quartile)", y="ED visits per 1,000 member-years")
+    + theme(figure_size=(5, 4.4))
+)
 ```
 
 :::
@@ -678,9 +721,9 @@ ED visits are counts with unequal exposure, so use Poisson with an **offset** fo
 dat["diabetes_dx"] = dat["member_id"].isin(dx).astype(int)
 fit = smf.glm(
     "ed_visits ~ food_insecurity_index + svi + age + diabetes_dx + C(plan_type)",
-    data=dat,
-    family=sm.families.Poisson(),
-    offset=np.log(dat["member_months"])
+    data = dat,
+    family = sm.families.Poisson(),
+    offset = np.log(dat["member_months"])
 ).fit()
 ```
 
