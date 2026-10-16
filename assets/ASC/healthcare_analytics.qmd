@@ -210,7 +210,7 @@ bls["hl"] = np.where(bls["role"] == "All occupations", "avg", "role")
 :::
 ::::
 
-Same idea as our diabetes Dx/Rx/Lab exercise, at scale.
+You'll try a mini version of this with diabetes in the hands-on section.
 
 ## Palliative Care: Payor-Provider Partnership
 
@@ -286,7 +286,7 @@ long["study"] = pd.Categorical(long["study"], pubs["study"][::-1])
 | **Grain** | One row per service line | One row per encounter / lab / vital | One row per ZIP, tract, county | One row per person (if matched) |
 | **Owner** | Payers (Highmark, Medicaid) | Providers (Epic, Cerner) | Government | Data companies |
 | **Strength** | Complete *billed* picture across all providers, with **cost** | Clinical detail: labs, vitals, PHQ-9 | Free, broad context | Fills social gaps |
-| **What in the H*ck?!** | No results, codes ≠ truth, reversals | Only *in-network* care, messy entry | Area ≠ person (ecological) | Match rates, black-box methods |
+| **What in the H\*ck?!** | No results, codes ≠ truth, reversals | Only *in-network* care, messy entry | Area ≠ person (ecological) | Match rates, black-box methods |
 
 ## How They Link {.big-mermaid}
 
@@ -472,6 +472,7 @@ ed = net[net["place_of_service"].str.startswith("23")]
 print(ed["dx1"].value_counts().head(3))
 rx = net[net["claim_type"] == "pharmacy"]
 print(rx.groupby("procedure_or_drug")["paid_amt"].sum().div(rx["paid_amt"].sum()).round(2).sort_values().tail(3))
+print("Members filling a GLP-1:", rx.loc[rx["procedure_or_drug"] == "GLP-1 RA", "member_id"].nunique())
 ```
 
 :::
@@ -545,7 +546,7 @@ c["fill"] = np.where(c["source"] == "Dx + Rx + Lab", "all", "partial")
 :::
 ::::
 
-Any single source **misses people**. Combining claims with EHR labs gives a fuller picture. (We did this for depression at Highmark; see Part 4.)
+Any single source **misses people**. Combining claims with EHR labs gives a fuller picture (the same idea as the Highmark depression framework).
 
 ## Your Turn: EHR {.smaller background-color="#F7F8F9"}
 
@@ -736,6 +737,7 @@ np.exp(fit2.params).round(2)
 
 ## Sources {.smaller}
 
+- Nundy S, Cooper LA, Mate KS. The Quintuple Aim for health care improvement: a new imperative to advance health equity. *JAMA*. 2022;327(6):521–522. [PMID 35061006](https://pubmed.ncbi.nlm.nih.gov/35061006/)
 - U.S. Bureau of Labor Statistics, *Occupational Outlook Handbook*: [Data Scientists](https://www.bls.gov/ooh/math/data-scientists.htm), [Medical & Health Services Managers](https://www.bls.gov/ooh/management/medical-and-health-services-managers.htm), [Health Information Technologists](https://www.bls.gov/ooh/healthcare/health-information-technologists-and-medical-registrars.htm), [Operations Research Analysts](https://www.bls.gov/ooh/math/operations-research-analysts.htm), [Mathematicians & Statisticians](https://www.bls.gov/ooh/math/mathematicians-and-statisticians.htm)
 - Barrett TS, et al. Obesity treatment with bariatric surgery vs GLP-1 receptor agonists. *JAMA Surg*. 2025;160(11):1232–1239. [PMID 40960852](https://pubmed.ncbi.nlm.nih.gov/40960852/)
 - Popkov AA, Barrett TS, et al. Depression symptom severity and total cost of care. *J Affect Disord*. 2025;368:41–47. [PMID 39271070](https://pubmed.ncbi.nlm.nih.gov/39271070/)
