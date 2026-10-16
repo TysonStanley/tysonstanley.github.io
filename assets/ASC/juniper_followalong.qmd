@@ -1,0 +1,259 @@
+---
+title: "Juniper Health Plan: Follow-Along"
+subtitle: "ASC Workshop"
+date: "October 26, 2026"
+author: "Your name here"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-tools: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+jupyter: python3
+---
+
+::: {.callout-note}
+## How to use this file
+Run each cell from top to bottom (in Positron, VS Code, or `quarto preview`).
+Cells marked **🧩 Your Turn** are yours to fill in. Every value in `data/` is **fictitious**.
+:::
+
+# 0. Setup
+
+```{python}
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from plotnine import *
+
+theme_set(theme_minimal(base_size=12) + theme(figure_size=(7, 4)))
+```
+
+```{python}
+claims  = pd.read_csv("data/claims.csv", parse_dates=["service_date"])
+members = pd.read_csv("data/members.csv", parse_dates=["enroll_start", "enroll_end"])
+ehr     = pd.read_csv("data/ehr_encounters.csv", parse_dates=["encounter_date"])
+xwalk   = pd.read_csv("data/mrn_crosswalk.csv")
+census  = pd.read_csv("data/census_zip.csv", dtype={"zip": str})
+vendor  = pd.read_csv("data/vendor_sdoh.csv")
+
+members["zip"] = members["zip"].astype(str)
+members["age"] = 2025 - members["birth_year"]
+```
+
+Take a quick look at each table. What is **one row** in each?
+
+```{python}
+claims.head()
+```
+
+```{python}
+members.head()
+```
+
+# 1. Claims
+
+## Net out reversals
+
+Some claims were reversed (negative dollars). Sum each claim before doing anything else.
+
+```{python}
+claims["claim_status"].value_counts()
+```
+
+```{python}
+net = (
+    claims
+    .groupby(["claim_id", "member_id", "service_date", "claim_type", "place_of_service", "dx1", "procedure_or_drug"], dropna=False)
+    [["allowed_amt", "paid_amt"]]
+    .sum()
+    .reset_index()
+)
+net = net[net["paid_amt"] > 0]
+len(claims), len(net)
+```
+
+## PMPM by plan type
+
+```{python}
+paid = net.groupby("member_id")["paid_amt"].sum()
+mem = members.assign(paid=members["member_id"].map(paid).fillna(0))
+
+pmpm = mem.groupby("plan_type")[["paid", "member_months"]].sum()
+pmpm["pmpm"] = pmpm["paid"] / pmpm["member_months"]
+pmpm.round(0)
+```
+
+## How concentrated is spending?
+
+```{python}
+spend = mem.sort_values("paid", ascending=False)["paid"]
+top5 = spend.head(int(len(spend) * 0.05)).sum() / spend.sum()
+print(f"Top 5% of members = {top5:.0%} of spend")
+```
+
+## ED visits
+
+We'll reuse `ed` (all ED claims) for the rest of the workshop.
+
+```{python}
+ed = net[net["place_of_service"].str.startswith("23")]
+rx = net[net["claim_type"] == "pharmacy"]
+ed.shape, rx.shape
+```
+
+## 🧩 Your Turn: Claims
+
+1. Which **diagnosis codes** (`dx1`) show up most in ED visits?
+2. What share of pharmacy dollars goes to **GLP-1 RA**? How many members fill one?
+
+::: {.callout-tip collapse="true"}
+## Hints
+- `ed["dx1"].value_counts()`
+- Group `rx` by `procedure_or_drug`, sum `paid_amt`, and divide by the total.
+- `.nunique()` counts unique members.
+:::
+
+```{python}
+# 1. Top ED diagnosis codes
+
+
+# 2. GLP-1 share of pharmacy $ and number of members
+
+```
+
+# 2. Electronic Health Records
+
+## Link EHR to members
+
+```{python}
+ehr_m = ehr.merge(xwalk, on="mrn", how="left")
+print(f"{members['member_id'].isin(ehr_m['member_id']).mean():.0%} of members have EHR data")
+```
+
+## Clean impossible BMIs
+
+```{python}
+(
+    ggplot(ehr_m.dropna(subset=["bmi"]), aes("bmi"))
+    + geom_histogram(bins=80) + scale_x_log10()
+)
+```
+
+```{python}
+ehr_m.loc[~ehr_m["bmi"].between(12, 70), "bmi"] = np.nan
+```
+
+## Who has diabetes? Three sources
+
+```{python}
+dx  = set(net.loc[net["dx1"] == "E11.9", "member_id"])                    # diagnosis (claims)
+rxd = set(net.loc[net["procedure_or_drug"] == "metformin", "member_id"])  # drug (claims)
+lab = set(ehr_m.loc[ehr_m["a1c"] >= 6.5, "member_id"])                    # lab (EHR)
+
+# Among EHR-linked members: which sources flag them?
+src = pd.DataFrame({"member_id": ehr_m["member_id"].unique()})
+src["Dx"], src["Rx"], src["Lab"] = [src["member_id"].isin(s) for s in (dx, rxd, lab)]
+src.query("Dx or Rx or Lab").value_counts(["Dx", "Rx", "Lab"])
+```
+
+## 🧩 Your Turn: EHR
+
+Use each member's **highest PHQ-9** to assign depression severity (0–4 none/minimal, 5–9 mild, 10–14 moderate, 15–19 mod-severe, 20+ severe). How many with PHQ-9 ≥ 10 have **no** depression diagnosis (`F32*` or `F33*`) in claims?
+
+::: {.callout-tip collapse="true"}
+## Hints
+- `ehr_m.groupby("member_id")["phq9"].max()`
+- `pd.cut(x, bins=[-1, 4, 9, 14, 19, 27], labels=[...])`
+- `net["dx1"].str.match(r"F3[23]", na=False)` finds depression codes.
+:::
+
+```{python}
+# Highest PHQ-9 per member
+
+
+# Severity categories
+
+
+# PHQ-9 >= 10 with no depression diagnosis
+
+```
+
+# 3. Public / Census Data
+
+```{python}
+census.head()
+```
+
+```{python}
+ed_n = ed.groupby("member_id").size().rename("ed_visits")
+by_zip = (
+    mem
+    .merge(ed_n, on="member_id", how="left")
+    .fillna({"ed_visits": 0})
+    .groupby("zip")[["ed_visits", "member_months"]]
+    .sum()
+    .merge(census, on="zip")
+)
+by_zip["ed_per_1000"] = 12_000 * by_zip["ed_visits"] / by_zip["member_months"]
+
+(
+    ggplot(by_zip, aes("svi", "ed_per_1000"))
+    + geom_smooth(method="lm") + geom_point(size=3)
+    + geom_text(aes(label="county"), nudge_y=12, size=8)
+    + labs(x="Social Vulnerability Index", y="ED visits per 1,000 member-years")
+)
+```
+
+**Note to self:** what does the ecological fallacy warn us about here?
+
+# 4. Vendor Data
+
+```{python}
+v = members[["member_id"]].merge(vendor, on="member_id", how="left")
+print(f"Matched: {v['match_confidence'].notna().mean():.0%}  |  "
+      f"High-confidence (>= 0.7): {(v['match_confidence'] >= 0.7).mean():.0%}")
+```
+
+```{python}
+dat = (mem.merge(ed_n, on="member_id", how="left").fillna({"ed_visits": 0})
+          .merge(census, on="zip")
+          .merge(vendor, on="member_id")
+          .query("match_confidence >= 0.7"))
+dat["diabetes_dx"] = dat["member_id"].isin(dx).astype(int)
+
+fit = smf.glm("ed_visits ~ food_insecurity_index + svi + age + diabetes_dx + C(plan_type)",
+              data=dat, family=sm.families.Poisson(),
+              offset=np.log(dat["member_months"])).fit()
+np.exp(fit.params).round(3)    # incidence rate ratios (IRRs)
+```
+
+## 🧩 Your Turn: Vendor + Model
+
+1. Add `housing_instability` and `transportation_barrier` to the model. Do they matter after food insecurity?
+2. Refit using **all** matched members (drop the confidence filter). Does the food-insecurity IRR change?
+
+::: {.callout-tip collapse="true"}
+## Hints
+- Copy the `smf.glm(...)` call and add terms with `+`.
+- `fit.conf_int()` gives confidence intervals; exponentiate them too.
+- For #2, rebuild `dat` without the `.query(...)` line.
+:::
+
+```{python}
+# 1. Add housing & transportation
+
+
+# 2. No confidence filter
+
+```
+
+# Going Further
+
+- Which **ZIP** has the highest PMPM? Does it line up with SVI?
+- Are high-cost members (top 5%) more likely to have a **diabetes** diagnosis?
+- Rerun the depression exercise using **only claims**. How many people would you miss?
