@@ -1,0 +1,173 @@
+/*-- scss:defaults --*/
+$primary-color: #2c3e50;
+$accent-color: #02577B;
+$text-color: #2c3e50;
+$background-color: #ffffff;
+$code-background: #f8f9fa;
+$code-text-color: #1a1a1a;
+$theme-darkblue: #01364C;
+$theme-blue: #99D9DD;
+$theme-white: #F7F8F9;
+$theme-yellow: #F4BA02;
+
+// Override default syntax highlighting colors
+$code-block-bg: $theme-white;
+$code-block-font-size: 0.8em;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+$body-bg: #ffffff;
+$body-color: $theme-darkblue;
+$link-color: $theme-yellow;
+$presentation-heading-color: lighten($theme-darkblue, 15%);
+$font-family-sans-serif: 'Manrope', sans-serif;
+$presentation-heading-font: 'IBM Plex Serif', serif;
+$code-color: $accent-color;
+
+/*-- scss:rules --*/
+
+// ---------------------------------------------------------------------
+// Title slide — photo background
+// Set per-deck via `title-slide-attributes` in the YAML. All title text
+// goes white with a soft shadow so it holds up over the bright areas of
+// the image.
+// ---------------------------------------------------------------------
+.reveal {
+  #title-slide,
+  .title-slide {
+    .title {
+      color: #ffffff;
+      font-weight: 700;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, .75);
+    }
+    .subtitle,
+    .quarto-title-author,
+    .quarto-title-authors,
+    .author, .date, .institute, p, a {
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .8);
+    }
+    // The darkening scrim is NOT here — see the .titlebg rule below.
+    // Anything painted on the section itself is anchored to the text box
+    // (reveal shrink-wraps sections), and anything positioned `fixed`
+    // escapes onto neighboring slides.
+  }
+
+  // Footer logo (set per-deck via `logo:` in the YAML)
+  .slide-logo {
+    height: 46px !important;
+    max-height: 46px !important;
+    bottom: 10px !important;
+    right: 16px !important;
+  }
+
+  // -------------------------------------------------------------------
+  // Figure cap
+  // Slides are laid out in a 1280x900 coordinate space. Capping figures
+  // at 600px leaves ~300px for the heading and surrounding text, so an
+  // oversized plot scales down instead of pushing the slide past one
+  // page. Without this, reveal's print-pdf export gives an overflowing
+  // slide a double-height page, which reads as content spilling onto a
+  // second slide in the PDF.
+  // -------------------------------------------------------------------
+  .slides section img,
+  .slides section .cell-output-display img,
+  .slides section figure img {
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  // Long output blocks shouldn't push a slide over either.
+  .slides section pre code {
+    max-height: 560px;
+  }
+}
+
+// ---------------------------------------------------------------------
+// Dark-slide chrome
+// The footer text and the logo render OUTSIDE the <section>, as siblings
+// of .slides, so they can't be selected from a slide. Reveal copies a
+// slide's `data-state` onto an ancestor, so slides marked
+// data-state="dark" (the title slide) flip the chrome here. These rules
+// live outside the .reveal block on purpose — the state class may land on
+// <html>, <body>, or .reveal depending on version.
+// ---------------------------------------------------------------------
+// Only in the interactive deck: there, `data-state` tracks the current slide,
+// so the chrome flips back on the next slide. In print-pdf reveal leaves the
+// FIRST slide's state on <body> for the whole document, which would invert the
+// logo and turn the footer white on every page — invisible on white slides.
+html:not(.print-pdf) .dark {
+  .slide-logo { filter: brightness(0) invert(1); }
+  .footer, .footer *, .slide-number, .slide-number a {
+    color: rgba(255, 255, 255, .85) !important;
+  }
+}
+
+// ---------------------------------------------------------------------
+// Title-slide scrim
+// Darkens the photo so white type stays legible. It rides on reveal's own
+// .slide-background layer, which is exactly stage-sized — unlike a section
+// background (anchored to the text box) or a fixed pseudo-element (which
+// bleeds onto neighbouring slides).
+//
+// Anchored to the background IMAGE, not to a state class. Reveal leaves the
+// title slide's `data-state` on <body> for the whole document and marks
+// several slides `.present` when exporting to PDF, so a `.titlebg
+// .slide-background.present` selector matched 7 slides and painted this
+// gradient across content slides. Matching the image URL hits exactly one
+// slide, in both the interactive deck and the PDF.
+// ---------------------------------------------------------------------
+.slide-background-content[style*="nasa_US_background"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center,
+              rgba(1, 54, 76, .72) 0%,
+              rgba(1, 54, 76, .48) 45%,
+              rgba(1, 54, 76, 0) 75%);
+}
+
+// NOTE: don't force content-slide backgrounds white here. Reveal's slide
+// backgrounds are transparent over the white body already, and 11 divider
+// slides across these decks set background-color="#01364C" deliberately —
+// a blanket rule would flatten those.
+
+// ---------------------------------------------------------------------
+// List markers — keep them inside the list's own box
+// Reveal indents lists with `margin-left: 1em` and leaves padding at 0,
+// so the bullet/number is painted OUTSIDE the <ol>/<ul> border box.
+// WebKit (Safari) clips that overflow in several situations reveal puts
+// lists in — scaled slides, .scrollable sections — and the numbers simply
+// disappear. Moving the same 1em from margin to padding puts the markers
+// inside the box. Text position is unchanged (verified pixel-identical in
+// both Chromium and WebKit).
+// ---------------------------------------------------------------------
+.reveal .slides ol,
+.reveal .slides ul,
+.reveal .slides ol ol,
+.reveal .slides ol ul,
+.reveal .slides ul ul,
+.reveal .slides ul ol {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+// Workshop deck: let mermaid diagrams use the slide width
+.reveal .big-mermaid .cell-output-display svg,
+.reveal .big-mermaid pre.mermaid svg,
+.reveal .big-mermaid div.mermaid svg {
+  width: 100% !important;
+  max-width: 1150px !important;
+  height: auto !important;
+}
+
+// Wrap long code lines instead of clipping them (esp. inside .columns)
+.reveal pre code,
+.reveal div.sourceCode pre code {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+}
