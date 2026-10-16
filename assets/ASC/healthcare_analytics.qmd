@@ -16,7 +16,7 @@ format:
     fig-align: center
     width: 1280
     height: 950
-    footer: "ASC Workshop · Healthcare Analytics"
+    footer: "bit.ly/47Ywd36 (Slides) & bit.ly/4zxfdg3 (Follow Along Code)"
     logo: images/UStatelogo_transparent.png
     self-contained: true
     title-slide-attributes:
