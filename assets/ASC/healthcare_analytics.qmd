@@ -16,7 +16,7 @@ format:
     fig-align: center
     width: 1280
     height: 950
-    footer: "bit.ly/47Ywd36 (Slides) & bit.ly/4zxfdg3 (Follow Along Code)"
+    footer: "bit.ly/47Ywd36 (Slides) <br> bit.ly/4zxfdg3 (Follow Along Code)"
     logo: images/UStatelogo_transparent.png
     self-contained: true
     title-slide-attributes:
@@ -91,7 +91,11 @@ bls["hl"] = np.where(bls["role"] == "All occupations", "avg", "role")
 )
 ```
 
-~**25,000** data scientist openings per year, and **insurance carriers** are among the top employers of data scientists (10%).
+**Insurance carriers** are among the top employers of data scientists (10%).
+
+:::{.callout-note}
+These are projections and are most certainly impacted by AI and other market changes.
+:::
 
 ## Where the Jobs Are
 
@@ -126,35 +130,35 @@ bls["hl"] = np.where(bls["role"] == "All occupations", "avg", "role")
 
 ## What Postings Ask For {.smaller}
 
-*Composites of typical 2026 postings, not a specific employer.*
+*From seven real postings (accessed Oct 16, 2026).*
 
 ::::{.columns}
 :::{.column width="33%"}
-**Healthcare Data Analyst**<br>*Health system*
+**Provider Data Analyst**<br>*Intermountain Health (2 postings)*
 
-- Build dashboards on quality & throughput
-- Pull from **Epic Clarity/Caboodle**
-- Track readmissions, LOS, no-shows
-- **SQL**, Tableau / Power BI
-- BS + 1–3 yrs
+- **SQL**, database design; **Python and/or R**
+- **Epic Clarity** / Cerner data
+- Dashboards for clinical leaders
+- Present findings to clinical & business teams
+- BS + 2 yrs · $39–68/hr
 :::
 :::{.column width="33%"}
-**Claims / Payer Analyst**<br>*Insurer*
+**Payer / Claims Analyst**<br>*Optum · USM (HEDIS)*
 
-- PMPM, utilization, trend reporting
-- **ICD-10, CPT, NDC**, HEDIS, risk scores
-- Program ROI for care management
-- **SQL**, Python/R, Excel
-- BS + 2–4 yrs
+- Cost, utilization & reimbursement trends in **claims**
+- **HEDIS** measures, care gaps, audits
+- **SQL**, SAS, Tableau / Power BI, Excel
+- Medicare, Commercial, Medicaid payment models
+- BS + 3 yrs · $92k–164k (Optum)
 :::
 :::{.column width="33%"}
-**Health Data Scientist**<br>*Payer, provider, or vendor*
+**Health Data Scientist**<br>*Cohere Health · Dandelion Health · GDIT*
 
-- Predictive models (risk, readmission) using ML and AI
-- **Causal inference**: matching, DiD
-- Partner with clinicians & executives
-- **Python/R**, SQL, cloud
-- MS preferred
+- **Causal inference** with claims, EHR & SDOH data
+- ML / AI on Medicare & Medicaid **claims**
+- **ICD, CPT, NDC** codes
+- **Python, R, SQL**, Spark
+- MS+ (or BS + 5 yrs) · $98k–155k
 :::
 ::::
 
@@ -163,6 +167,8 @@ bls["hl"] = np.where(bls["role"] == "All occupations", "avg", "role")
 ::: {.fragment}
 **Common thread:** SQL + a language + healthcare data fluency + **explaining results to non-analysts.**
 :::
+
+<small>Postings: Intermountain Health, *Data Analyst, Statistical Senior* and *Data Analyst-Technical-Staff*; Optum, *Senior Healthcare Analytics Consultant*; USM, *HEDIS Data Analyst (SQL)*; Cohere Health, *Senior Data Scientist*; Dandelion Health, *Research Consultant, Data Scientist*; GDIT, *Sr. Healthcare Data Scientist (Medicare/Medicaid)*. Links in Sources.</small>
 
 
 # What Did I Do in Healthcare Analytics? {background-color="#01364C"}
@@ -778,10 +784,14 @@ np.exp(fit2.params).round(2)
 **Keep playing:** all data is in `data/` and `data/make_data.py` regenerates it.
 :::
 
-## Sources {.smaller}
+## Sources: Background & Careers {.smaller}
 
 - Nundy S, Cooper LA, Mate KS. The Quintuple Aim for health care improvement: a new imperative to advance health equity. *JAMA*. 2022;327(6):521–522. [PMID 35061006](https://pubmed.ncbi.nlm.nih.gov/35061006/)
+- Job postings (accessed Oct 16, 2026): [Intermountain Health, Data Analyst, Statistical Senior](https://jobs.alooba.com/us/job/intermountain-health-data-analyst-statistical-senior-836248/) · [Intermountain Health, Data Analyst-Technical-Staff](https://builtin.com/job/data-analyst-technical-staff/3484345) · [Optum, Senior Healthcare Analytics Consultant](https://careers.unitedhealthgroup.com/job/richardson/sr-healthcare-consultant-physician-medicare-and-analytics-remote/34088/101934064752) · [USM, HEDIS Data Analyst (SQL)](https://talents.vaia.com/companies/usm/hedis-data-analyst-sql-144611449/) · [Cohere Health, Senior Data Scientist](https://job-boards.greenhouse.io/coherehealth/jobs/7520590003) · [Dandelion Health, Research Consultant, Data Scientist](https://jobs.primary.vc/companies/dandelion-health-inc/jobs/94195881-research-consultant-data-scientist) · [GDIT, Sr. Healthcare Data Scientist (Medicare/Medicaid)](https://www.gdit.com/careers/job/079df090a/sr-healthcare-data-scientist-medicaremedicaid/)
 - U.S. Bureau of Labor Statistics, *Occupational Outlook Handbook*: [Data Scientists](https://www.bls.gov/ooh/math/data-scientists.htm), [Medical & Health Services Managers](https://www.bls.gov/ooh/management/medical-and-health-services-managers.htm), [Health Information Technologists](https://www.bls.gov/ooh/healthcare/health-information-technologists-and-medical-registrars.htm), [Operations Research Analysts](https://www.bls.gov/ooh/math/operations-research-analysts.htm), [Mathematicians & Statisticians](https://www.bls.gov/ooh/math/mathematicians-and-statisticians.htm)
+
+## Sources: Highmark Work {.smaller}
+
 - Barrett TS, et al. Obesity treatment with bariatric surgery vs GLP-1 receptor agonists. *JAMA Surg*. 2025;160(11):1232–1239. [PMID 40960852](https://pubmed.ncbi.nlm.nih.gov/40960852/)
 - Popkov AA, Barrett TS, et al. Depression symptom severity and total cost of care. *J Affect Disord*. 2025;368:41–47. [PMID 39271070](https://pubmed.ncbi.nlm.nih.gov/39271070/)
 - Popkov AA, Barrett TS, et al. Claims-based depression identification and stratification. *J Behav Health Serv Res*. 2026;53(2):237–253. [PMID 40962946](https://pubmed.ncbi.nlm.nih.gov/40962946/)
