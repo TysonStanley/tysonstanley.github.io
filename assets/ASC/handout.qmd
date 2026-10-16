@@ -1,0 +1,152 @@
+---
+format:
+  typst:
+    papersize: us-letter
+    margin:
+      x: 0.55in
+      y: 0.5in
+    fontsize: 9pt
+    mainfont: "Manrope"
+# quarto render ./assets/ASC/handout.qmd
+# Line-art icons live in images/coloring/ (regenerate with images/coloring/make_icons.py)
+---
+
+```{=typst}
+// ---- palette & helpers (match the slide deck) -------------------------------
+#let dark   = rgb("#01364C")
+#let accent = rgb("#02577B")
+#let blue   = rgb("#99D9DD")
+#let yellow = rgb("#F4BA02")
+#let serif  = ("IBM Plex Serif", "Georgia", "DejaVu Serif")
+#let sans   = ("Manrope", "Inter", "Helvetica Neue", "Arial")
+#set text(font: sans, fill: dark, size: 9pt)
+#set par(leading: 0.5em, justify: false)
+
+#let group(t) = block(above: 7pt, below: 3pt,
+  text(font: serif, weight: "bold", size: 10.5pt, fill: accent)[#t])
+#let term(t, d) = block(above: 0pt, below: 3.2pt, breakable: false)[
+  #text(weight: "bold")[#t] #h(2pt) #text(fill: luma(70))[#d]]
+#let lines(n, gap: 17pt) = for i in range(n) {
+  v(gap - 0.6pt); line(length: 100%, stroke: 0.4pt + luma(170))
+}
+#let notebox(title, n, gap: 17pt) = block(width: 100%, inset: (x: 8pt, top: 6pt, bottom: 8pt),
+  radius: 4pt, stroke: 0.7pt + blue, breakable: false)[
+  #text(font: serif, weight: "bold", size: 10pt, fill: accent)[#title]
+  #lines(n, gap: gap)]
+
+// ---- header -----------------------------------------------------------------
+#block(width: 100%, fill: dark, inset: (x: 12pt, y: 9pt), radius: 4pt)[
+  #grid(columns: (1fr, auto), align: (left + horizon, right + horizon),
+    [#text(font: serif, size: 17pt, weight: "bold", fill: white)[Healthcare Analytics]
+     #h(7pt) #text(size: 9.5pt, fill: blue)[ASC Workshop · Handout]])
+]
+
+#v(2pt)
+#text(size: 8.5pt, style: "italic", fill: luma(90))[
+  Healthcare analytics uses the huge amount of data in healthcare to help achieve the *Quintuple Aim*.
+  Circle the terms you hear today; star the ones you want to learn more about.]
+
+// ---- vocabulary ---------------------------------------------------------------
+#columns(2, gutter: 16pt)[
+
+#group[The Big Picture]
+#term[Quintuple Aim][Five goals for health care: patient experience, population health, lower costs, care team well-being, and health equity.]
+#term[Payer / Payor][The organization that pays for care (an insurer, Medicare, Medicaid).]
+#term[Provider][Whoever delivers care: a doctor, clinic, or hospital.]
+#term[Payor-provider (integrated system)][One organization that both insures and delivers care (Highmark + AHN, Intermountain + Select Health).]
+#term[Value-based care][Paying providers for good outcomes instead of for each service.]
+
+#group[Data Sources]
+#term[Claims][Bills a provider sends to a payer: who, what, when, where, and how much.]
+#term[EHR / EMR][Electronic Health (Medical) Record: the clinical chart with labs, vitals, notes.]
+#term[ACS][American Community Survey: the Census Bureau's yearly survey of neighborhoods.]
+#term[SVI][Social Vulnerability Index (CDC): 0–1 score of how vulnerable an area is.]
+#term[SDOH][Social Determinants of Health: food, housing, transportation, income, etc.]
+#term[Vendor data][Data bought from a company (e.g., household-level SDOH or consumer data).]
+
+#group[IDs & Linking]
+#term[Member ID][The insurer's ID for a person.]
+#term[MRN][Medical Record Number: the health system's ID for a patient.]
+#term[Crosswalk][A table that maps one ID to another (MRN ↔ member ID).]
+#term[Match rate][Share of people a vendor could link to its data.]
+#term[Grain][What one row represents (a claim line, an encounter, a ZIP).]
+
+#group[Codes]
+#term[ICD-10][International Classification of Diseases: diagnosis codes (E11.9 = type 2 diabetes).]
+#term[CPT / HCPCS][Procedure codes: what was done (99213 = office visit).]
+#term[NDC][National Drug Code: identifies a specific drug.]
+#term[POS][Place of Service code (11 office, 23 ED, 21 inpatient, 02 telehealth).]
+#term[DRG][Diagnosis-Related Group: how hospital stays are grouped and paid.]
+
+#colbreak()
+
+#group[Money & Utilization]
+#term[Allowed / Paid amount][What the plan agreed the service is worth / what it actually paid.]
+#term[Reversal][A canceled claim, recorded as negative dollars; net these out first.]
+#term[Member-months][Number of months each person was enrolled, added up.]
+#term[PMPM][Per Member Per Month: total cost ÷ member-months.]
+#term[TCC][Total Cost of Care: all medical + pharmacy spending for a person.]
+#term[ED / IP / LOS][Emergency department · inpatient stay · length of stay.]
+#term[Readmission][Returning to the hospital soon (often within 30 days) after discharge.]
+
+#group[Plans & Quality]
+#term[Commercial][Insurance through an employer or bought privately.]
+#term[MA][Medicare Advantage: private plans for people 65+ (or with disabilities).]
+#term[Medicaid][Public insurance for people with low income.]
+#term[HEDIS / Stars][Standard quality measures used to rate health plans.]
+#term[Risk adjustment][Accounting for how sick members are when comparing cost or quality.]
+
+#group[Clinical Measures]
+#term[BMI][Body Mass Index: weight (kg) ÷ height (m)².]
+#term[A1c][Average blood sugar over \~3 months; ≥ 6.5% suggests diabetes.]
+#term[PHQ-9][9-question depression screener, scored 0–27.]
+#term[GLP-1 RA][A class of diabetes/weight-loss drugs (e.g., semaglutide).]
+
+#group[Methods]
+#term[Ecological fallacy][Assuming what's true of an area is true of each person in it.]
+#term[Poisson regression][A model for counts (like ED visits); use an *offset* for exposure time.]
+#term[IRR][Incidence Rate Ratio: how many times higher the rate is (1 = no difference).]
+#term[Propensity score][Probability of getting a treatment; used to compare similar groups.]
+#term[DiD][Difference-in-Differences: compares change over time vs a comparison group.]
+]
+
+// ---- notes (front, bottom) ------------------------------------------------------
+#v(1fr)
+#grid(columns: (1fr, 1fr), gutter: 10pt,
+  notebox("Claims & EHR", 5), notebox("Census & Vendor", 5))
+
+#pagebreak()
+
+// ================================ BACK ==========================================
+#align(center)[
+  #text(font: serif, size: 16pt, weight: "bold", fill: dark)[Color the Quintuple Aim]
+  #v(-4pt)
+  #text(size: 8.5pt, fill: luma(90))[Pick one color per aim, then circle the aim you would most like to work on.]
+]
+#v(2pt)
+#align(center, image("images/coloring/quintuple_aim_coloring.svg", height: 4.7in))
+#v(2pt)
+
+#text(font: serif, weight: "bold", size: 10.5pt, fill: accent)[The Four Data Sources]
+#h(6pt) #text(size: 8.5pt, fill: luma(90))[Color each icon, then write one question that source could answer.]
+#v(2pt)
+#let src(title, sub, icon) = block(width: 100%, stroke: 0.6pt + blue, radius: 4pt, inset: (x: 7pt, y: 6pt))[
+  #align(center)[
+    #text(font: serif, weight: "bold", size: 10.5pt, fill: dark)[#title] \
+    #text(size: 7.5pt, fill: luma(90))[#sub]
+    #v(2pt)
+    #image("images/coloring/" + icon + ".svg", height: 0.85in)]
+  #v(10pt) #line(length: 100%, stroke: 0.4pt + luma(170))
+  #v(10pt) #line(length: 100%, stroke: 0.4pt + luma(170))]
+#grid(columns: (1fr,) * 4, gutter: 8pt,
+  src("Claims", "bills sent to the insurer", "receipt"),
+  src("EHR", "the patient's clinical chart", "clipboard"),
+  src("Census / Public", "neighborhoods & communities", "homes"),
+  src("Vendor", "purchased data on people", "database"))
+
+#v(1fr)
+#grid(columns: (1fr, 1fr, 1fr), gutter: 10pt,
+  notebox("One thing I learned", 4),
+  notebox("A question I still have", 4),
+  notebox("A job I'd want", 4))
+```
