@@ -1,10 +1,10 @@
 ---
-output: 
+output:
   pdf_document:
     latex_engine: xelatex
-    includes: 
+    includes:
       in_header: preamble.tex
-editor_options: 
+editor_options:
   chunk_output_type: console
 params:
   cite_fig: true
@@ -22,9 +22,9 @@ pubs <- get_publications(your.id, cstart = 0, pagesize = 100, flush = TRUE)
 citations <- get_citation_history(your.id)
 
 ## Custom Code to make bib file from scholar ID
-# url("https://scholar.googleusercontent.com/citations?view_op=export_citations&user=UWdXXEoAAAAJ&citsig=AMD79ooAAAAAXJvG8fCoULONM8SZwt9CLrw1g3CGG9nm&hl=en") %>% 
-#   readLines() %>% 
-#   paste("\n") %>% 
+# url("https://scholar.googleusercontent.com/citations?view_op=export_citations&user=UWdXXEoAAAAJ&citsig=AMD79ooAAAAAXJvG8fCoULONM8SZwt9CLrw1g3CGG9nm&hl=en") %>%
+#   readLines() %>%
+#   paste("\n") %>%
 #   cat(file = "pubs.bib")
 
 today <- lubridate::today()
@@ -168,31 +168,31 @@ library(dplyr)
 library(here)
 funds = rio::import(here("assets/CV", "pubs.xlsx"), sheet = "Grants")
 funds_list = function(d, cond){
-  d = d %>% 
-    filter(status == !!cond) %>% 
-    arrange(desc(end)) %>% 
+  d = d %>%
+    filter(status == !!cond) %>%
+    arrange(desc(end)) %>%
     mutate(
       start = format(start, "%B %m, %Y"),
       end = format(end, "%B %m, %Y"),
       amount = scales::dollar(amount)
-    ) %>% 
-    mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>% 
-    mutate(status = paste0("Current status: ", status, "")) %>% 
+    ) %>%
+    mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>%
+    mutate(status = paste0("Current status: ", status, "")) %>%
     mutate(
       title = paste0("\\emph{", title, "}."),
-      authors = str_replace(authors, 
+      authors = str_replace(authors,
                             "Barrett, T. S. \\(Co\\-I\\)", "\\\\textbf{Barrett, T. S. \\(Co\\-I\\)}"),
-      authors = str_replace(authors, 
+      authors = str_replace(authors,
                             "Barrett, T. S. \\(Consultant\\)", "\\\\textbf{Barrett, T. S. \\(Consultant\\)}"),
       authors = str_replace(authors, "&", "\\\\&"),
       authors = paste0(authors, "."),
       funder = paste0(funder, ". "),
       year = paste0("(", year, ").")
-    ) %>% 
-    mutate(funder_number = paste0(funder, if_else(number != "", paste0(number, "."), ""))) %>% 
+    ) %>%
+    mutate(funder_number = paste0(funder, if_else(number != "", paste0(number, "."), ""))) %>%
     mutate(start_to_end = paste0(start, " -- ", end, "."),
            amount = paste0("\\textcolor{money}{\\", amount, "}."))
-  
+
   cat("\\begin{longtable}{p{1.7cm}!{\\color{lightdivider}\\vrule}p{14.1cm}}", "\n")
   rows = nrow(d)
   for (i in 1:nrow(d)){
@@ -249,10 +249,10 @@ library(dplyr)
 library(here)
 pubs = rio::import(here("assets/CV", "pubs.xlsx"), sheet = "Journals")
 pubs_list = function(data){
-  data = data %>% 
-    mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>% 
-    group_by(year) %>% 
-    mutate(header = if_else(row_number() == 1, as.character(year), " ")) %>% 
+  data = data %>%
+    mutate(across(everything(), ~furniture::washer(.x, is.na, value = ""))) %>%
+    group_by(year) %>%
+    mutate(header = if_else(row_number() == 1, as.character(year), " ")) %>%
     mutate(
       authors = str_replace(authors, "Barrett, T. S.", "\\\\textbf{Barrett, T. S.}"),
       authors = str_replace(authors, "&", "\\\\&"),
@@ -261,15 +261,15 @@ pubs_list = function(data){
       year = paste0("(", year, ")."),
       journal_volume = if_else(volume == "", journal, paste0(journal, "\\emph{", volume, "}")),
       journal_volume_issue = if_else(issue != "", paste0(journal_volume, "(", issue, ")"), journal_volume),
-      journal_volume_issue_pages = if_else(pages != "", 
-                                           paste0(journal_volume_issue, ", ", pages, "."), 
+      journal_volume_issue_pages = if_else(pages != "",
+                                           paste0(journal_volume_issue, ", ", pages, "."),
                                            paste0(journal_volume_issue, "."))
-    ) %>% 
+    ) %>%
     mutate(doi = str_replace(doi, "\\_", "\\\\_"),
            doi = str_replace(doi, "doi\\:", "https://doi.org/"),
-           doi = paste0("\\url{", doi, "}")) %>% 
+           doi = paste0("\\url{", doi, "}")) %>%
     ungroup()
-  
+
   cat("\\begin{longtable}{r!{\\color{lightdivider}\\vrule}p{14.6cm}}", "\n")
   rows = nrow(data)
   for (i in 1:nrow(data)){
@@ -298,19 +298,19 @@ pubs_list(pubs)
 
 ```{r, echo=FALSE, eval=FALSE}
 # Count of collaborators
-pubs %>% 
-  filter(year %in% c("2018", "2019", "2020", "2021", "In Press")) %>% 
-  pull(authors) %>% 
-  str_split(",") %>% 
-  unlist() %>% 
-  str_remove("\\&") %>% 
-  .[!str_detect(., "\\.$")] %>% 
-  str_remove("T\\. S\\. ") %>% 
-  str_remove("C\\. ") %>% 
-  str_remove("K\\. ") %>% 
-  str_trim() %>% 
-  str_remove("M\\. N\\.") %>% 
-  .[!str_detect(., "^M$")] %>% 
+pubs %>%
+  filter(year %in% c("2018", "2019", "2020", "2021", "In Press")) %>%
+  pull(authors) %>%
+  str_split(",") %>%
+  unlist() %>%
+  str_remove("\\&") %>%
+  .[!str_detect(., "\\.$")] %>%
+  str_remove("T\\. S\\. ") %>%
+  str_remove("C\\. ") %>%
+  str_remove("K\\. ") %>%
+  str_trim() %>%
+  str_remove("M\\. N\\.") %>%
+  .[!str_detect(., "^M$")] %>%
   unique()
 ```
 
@@ -408,12 +408,12 @@ ggplot(citations, aes(year, cites, fill = year)) +
   geom_col(color = "black") +
   geom_text(aes(label = cites),
             nudge_y = 40) +
-  labs(x = "Year", 
+  labs(x = "Year",
        y = "Citation Count\n(by Year)",
        caption = paste("Note: Data for citations in", year, "until", month)) +
   theme_classic() +
   scale_fill_viridis_c(direction = -1,
-                        begin = .1, 
+                        begin = .1,
                         end = .9) +
   scale_x_continuous(breaks = c(2016, 2018, 2020, 2022, 2024, 2026, 2028)) +
   theme(legend.position = "none",
@@ -439,9 +439,9 @@ header_fun("SELECTED PRESENTATIONS", shift_line = TRUE)
 Harper, S.A., Brown, C.B., Poulsen, S.L., \textbf{Barrett, T.S.}, Dakin. J.C. (September 2023). Inter-step variation of stairways and observations of fall-related events. 2023 UAB Center of Exercise Medicine Symposium on Exercise and Aging. Invited Flash Talk.
 
 Gast, J., Ferguson, M., Meier, C., \textbf{Barrett, T.S.}, Ward, L. & Culianos, D. (November, 2022). Youth Sexual Behaviors in Utah: A Retrospective Study of Behaviors and Sex Education in Middle School and High School. American Public Health Association, Boston, MA.
- 
+
 Meier, C., Gast, J., \textbf{Barrett, T.S.}, Ferguson, M., Culianos. D., & Ward, L. (November, 2022). We Need More Sex Education! The Results of a Retrospective Sexual Behavior Survey Among Utahns and Differences by Rurality and Sexuality. American Public Health Association, Boston, MA.
- 
+
 Culianos, D., \textbf{Barrett, T.S.}, Meier, C., Gast, J., Ward, L., & Ferguson, M. (November, 2022). The Reliability and Validity of Sex-Inclusive and Retrospective Sex Measures. American Public Health Association, Boston, MA.
 
 Meier, C., Gast, J., \textbf{Barrett, T.S.}, Ferguson, M., Culianos, D., & Ward, L. (March, 2022). Youth sexual behaviors in Utah: Findings from the 2021 Utah College Sexual Behavior Survey. Utah Public Health Association, Virtual Conference.
@@ -463,9 +463,9 @@ Budge, S., Borrie, S.A., **Barrett, T.S.**, Yoho, S.E., Vargas, R., & Lansford, 
 Hirsch, M., Lansford, K., Borrie, S.A., & **Barrett, T.S.**. (2019, November). Familiarization of Dysarthric Speech: Generalization Between Speakers of Different Sex. Poster presented at the 2019 ASHA Convention, Orlando, FL.
 
 Ong, C.W., Lee, E.B., Krafft, J., Terry, C.L., **Barrett, T.S.**, Levin, M.E., & Twohig, M.P. (2019, November). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. In C. W. Ong (Chair), Using acceptance and commitment therapy for different clinical presentations: Evidence-based adaptations. Symposium conducted at the 53rd annual convention of the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
- 
+
 Vázquez, A.L., **Barrett, T.S.**, Domenech Rodríguez, M.M., Bustos, M., Gutierrez, M., Amador Buenabad, N.G., & Villatoro Velazquez, J.A. (2019, March). The influence of perceived parenting on substance initiation among Latinx children. Poster presented at the Society for Research in Child Development, Baltimore, MD.
- 
+
 Vázquez, A.L., Chou, T., Navarro, C., **Barrett, T.S.**, & Domenech Rodríguez, M.M. (2019, March). Examining caregiver perceived need for and utilization of adolescent counseling services through machine learning. Poster presented at the Society for Research in Child Development, Baltimore, MD.
 
 Vázquez, A. L., Domenech Rodríguez, M. M., **Barrett, T.S.**, Amador Buenabad, N., & Villatoro Velazquez, J. A. (2018, September) Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair). Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación. Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
@@ -584,7 +584,4 @@ print(tab_teaching, include.rownames = FALSE, floating = FALSE)
 
 \renewcommand{\arraystretch}{1}
 
--->    
-    
-
-
+-->

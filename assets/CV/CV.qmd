@@ -1,0 +1,452 @@
+---
+title: "Tyson S. Barrett, PhD — CV"
+format:
+  typst:
+    keep-typ: false   # set true to keep the generated CV.typ for debugging
+    template-partials:
+      - _typst/typst-template.typ
+      - _typst/typst-show.typ
+execute:
+  echo: false
+  warning: false
+  message: false
+params:
+  fetch_scholar: true   # set false to render offline from _scholar-cache.json
+  cite_fig: true
+# quarto render "./assets/CV/CV.qmd"
+---
+
+```{r setup}
+library(readxl)
+library(dplyr)
+library(stringr)
+library(jsonlite)
+
+xl <- "pubs.xlsx"
+```
+
+```{r typst-helpers}
+# ---- Small helpers for writing Typst from R --------------------------------
+
+# Escape text so Typst prints it literally (no accidental *bold*, _italic_,
+# #code, @refs, $math$, or // comments).
+esc <- function(x) str_replace_all(x, "([\\\\#*_`$@<>\\[\\]~/])", "\\\\\\1")
+
+# Quote a value as a Typst string literal, e.g. for URLs and file names.
+typst_str <- function(x) paste0('"', str_replace_all(x, '(["\\\\])', "\\\\\\1"), '"')
+
+# Character column cleanup: NA -> "", strip LaTeX "\&" left over from the
+# old CV, collapse repeated spaces, and drop stray spaces before commas.
+clean <- function(x) {
+  x <- as.character(x)
+  x[is.na(x)] <- ""
+  x <- str_replace_all(x, fixed("\\&"), "&")
+  x <- str_squish(x)
+  str_replace_all(x, "\\s+,", ",")
+}
+
+# APA 7: DOIs are shown as https://doi.org/ URLs with no trailing period
+apa_doi <- function(x) {
+  x <- str_replace(x, "^(doi:\\s*|https?://(dx\\.)?doi\\.org/)", "https://doi.org/")
+  str_remove(x, "\\.$")
+}
+
+# Add a period unless the text already ends in . ? or !
+end_punct <- function(x) if_else(str_detect(x, "[.?!]$"), x, paste0(x, "."))
+
+# OSF badges: "\img{osfdata.png}{https://osf.io/x}..." -> linked Typst icons
+osf_badges <- function(s) {
+  m <- str_match_all(s, "\\\\img\\{([^}]*)\\}\\{([^}]*)\\}")[[1]]
+  if (nrow(m) == 0) return("")
+  paste0(" ", paste0("#icon(", typst_str(m[, 2]), ", ", typst_str(m[, 3]), ")",
+                     collapse = "#h(1pt)"))
+}
+
+# Emit a "label | entry" list. `labels` and `entries` are Typst markup strings.
+labelled_list <- function(labels, entries, width, label_size = "10pt",
+                          label_align = "right") {
+  rows <- sprintf("  ([%s], [%s]),", labels, entries)
+  knitr::raw_block(
+    paste(c(sprintf("#labelled-list(%s, label-size: %s, label-align: %s, (",
+                    width, label_size, label_align),
+            rows, "))"),
+          collapse = "\n"),
+    type = "typst"
+  )
+}
+```
+
+```{r grants}
+# ---- External funding -------------------------------------------------------
+# Edit the wording/order of each grant entry here.
+funds <- read_excel(xl, sheet = "Grants")
+
+grants_list <- function(d, cond) {
+  d <- d |>
+    filter(status == cond) |>
+    arrange(desc(end)) |>
+    mutate(
+      authors = esc(str_remove(clean(authors), "\\.$")),
+      title   = esc(clean(title)),
+      funder  = esc(clean(funder)),
+      number  = if_else(clean(number) == "", "", paste0(" ", esc(clean(number)), ".")),
+      dates   = paste0(format(start, "%B %Y"), " -- ", format(end, "%B %Y")),
+      amount  = paste0("#money[\\", scales::dollar(amount), "]"),
+      entry   = paste0(authors, ". (", year, "). _", title, "_. ", funder, ".",
+                       number, " ", dates, ". ", amount, ".")
+    )
+  labelled_list(esc(clean(d$type)), d$entry, width = "1.9cm",
+                label_size = "9pt", label_align = "left")
+}
+```
+
+```{r journals}
+# ---- Peer-reviewed journal articles ----------------------------------------
+# Edit the citation format here. Your name is bolded by the Typst template.
+pubs <- read_excel(xl, sheet = "Journals", col_types = "text") |>
+  mutate(across(everything(), clean))
+
+pubs_list <- function(d) {
+  d <- d |>
+    mutate(
+      # year label only on the first article of each year
+      label  = if_else(year != lag(year, default = ""), year, ""),
+      source = paste0("_", esc(journal), "_"),
+      source = if_else(volume != "", paste0(source, ", _", esc(volume), "_"), source),
+      source = if_else(issue  != "", paste0(source, "(", esc(issue), ")"), source),
+      source = if_else(pages  != "", paste0(source, ", ", esc(pages)), source),
+      doi    = apa_doi(doi),
+      doi    = if_else(doi != "", paste0(" #link(", typst_str(doi), ")"), ""),
+      badges = vapply(opensci, osf_badges, character(1)),
+      entry  = paste0(esc(authors), " (", tolower(year), "). ",
+                      esc(end_punct(title)), " ", source, ".", doi, badges)
+    )
+  labelled_list(d$label, d$entry, width = "1.65cm")
+}
+```
+
+```{r scholar}
+# ---- Google Scholar ---------------------------------------------------------
+# Refresh when possible; otherwise fall back to the last good pull.
+scholar_cache <- "_scholar-cache.json"
+scholar_info <- tryCatch({
+  if (!isTRUE(params$fetch_scholar)) stop("offline render")
+  library(scholar)
+  httr::set_config(httr::user_agent("Mozilla/5.0 (compatible; R scholar package)"))
+  id <- "UWdXXEoAAAAJ"
+  prof <- get_profile(id)
+  out <- list(
+    citations = prof$total_cites,
+    h_index   = prof$h_index,
+    fetched   = as.character(Sys.Date()),
+    history   = get_citation_history(id)
+  )
+  write_json(out, scholar_cache, auto_unbox = TRUE, pretty = TRUE)
+  out
+}, error = function(e) read_json(scholar_cache, simplifyVector = TRUE))
+
+# Installed package version and release year, with last-known values as a
+# fallback (used in the Software section)
+pkg_info <- function(pkg) {
+  last_known <- list(
+    data.table        = c("1.18.6.1", "2026"),
+    furniture         = c("1.11.0", "2026"),
+    tidyfast          = c("0.4.0", "2024"),
+    MarginalMediation = c("0.7.3", "2026"),
+    autoscore         = c("0.5.0", "2019"),
+    dissertateUSU     = c("0.3.1", "2019"),
+    rjasa             = c("0.1.1", "2019")
+  )
+  known <- last_known[[pkg]]
+  tryCatch({
+    d <- packageDescription(pkg)
+    if (!is.list(d)) stop("not installed")
+    # an older installed copy shouldn't roll the CV back
+    if (package_version(d$Version) <= package_version(known[1])) stop("older")
+    date <- c(d[["Date/Publication"]], d[["Date"]], d[["Packaged"]])[1]
+    c(d$Version, substr(date, 1, 4))
+  }, error = function(e) known)
+}
+pkg_version <- function(pkg) pkg_info(pkg)[1]
+pkg_year    <- function(pkg) pkg_info(pkg)[2]
+```
+
+```{=typst}
+#cv-header(
+  name: "Tyson S. Barrett, PhD",
+  contacts: (
+    ("Email",    "mailto:tyson.barrett@usu.edu", "tyson.barrett@usu.edu"),
+    ("Website",  "https://tysonbarrett.com", "tysonbarrett.com"),
+    ("LinkedIn", "https://www.linkedin.com/in/tyson-s-barrett-phd/", "Tyson S. Barrett Profile"),
+    ("ORCID",    "https://orcid.org/0000-0002-2137-1391", "0000-0002-2137-1391"),
+    ("OSF",      "https://osf.io/gkjbx", "osf.io/gkjbx"),
+  ),
+  scholar: (citations: `r scholar_info$citations`, h_index: `r scholar_info$h_index`),
+)
+```
+
+# EDUCATION
+
+```{=typst}
+#edu("Ph.D. Quantitative Psychology", "Feb 2018", "Utah State University",
+  note: "Dissertation: Marginal Mediation Analysis: A New Framework for Interpretable Mediated Effects")
+#edu("B.S. Economics", "May 2014", "Utah State University", note: "Cum Laude")
+#edu("B.S. Psychology", "May 2014", "Utah State University", note: "Cum Laude")
+```
+
+# PROFESSIONAL APPOINTMENTS
+
+```{=typst}
+#job("Professional Practice Associate Professor", "Utah State University", "2026–Present", details: (
+  [Department of Data Analytics and Information Systems in the Jon M. Huntsman School of Business],
+  [Teach data analytics with an emphasis on healthcare analytics],
+  [Project Mentor in the #link("https://huntsman.usu.edu/asc/")[Analytics Solutions Center]],
+))
+#job("Manager Advanced Analytics", "Highmark Health", "2022–2026", details: (
+  [Advanced Analytics in Enterprise Data and Analytics],
+  [Managed a team of six researchers collaborating with physicians leveraging Highmark data assets],
+  [Core capabilities include linking and analyzing healthcare claims, electronic health records, and public data],
+))
+#job("Research Scientist", "Department of Communication Disorders, Utah State University", "2022–2026", details: (
+  [Co-investigator on NIH-funded projects in the Human Interaction Lab],
+))
+#job("Research Assistant Professor", "Department of Psychology, Utah State University", "2018–2022", details: (
+  [Managing Director of the Data Science & Discovery Unit],
+  [Administrator of SONA Systems and REDCap],
+  [Taught graduate level statistics courses and R programming courses],
+))
+#job("Statistical and Data Science Consultant", "Utah State University", "2016–2018", details: (
+  [Supervisors: Sarah Schwartz, PhD and Jamison Fargo, PhD],
+))
+#job("Finance Intern", "General Electric", "2014", details: (
+  [Data support and analytics],
+))
+```
+
+# INTERESTS
+
+```{=typst}
+#interest("Research")[Development and testing of open source tools for healthcare analytics]
+#interest("Teaching")[Healthcare analytics, health services research, R and Python programming]
+```
+
+# PROFESSIONAL SERVICE
+
+```{=typst}
+#service("data.table", "https://github.com/Rdatatable/data.table", "Maintainer", "2023–Present")
+#service("Center for Open Science", "https://osf.io/gkjbx", "Ambassador", "2019–Present")
+#service("Journal of Speech, Language, and Hearing Research", "https://pubs.asha.org/journal/jslhr", "Voluntary Reviewer", "2018–Present")
+```
+
+# TEACHING
+
+## Utah State University, Huntsman School of Business (2026–Present)
+
+```{=typst}
+#course("DATA 3300", "Introduction to Modern Data Analytics", level: "Undergraduate; online and in person")
+#course("DATA 5600", "Introduction to Regression and Machine Learning for Analytics", level: "Undergraduate and Graduate")
+#course("Project Mentor", "Analytics Solutions Center",
+  note: [Supervise student teams on applied analytics projects for external partners])
+```
+
+`#v(12pt)`{=typst}
+
+## Utah State University, Psychology and Education (2018–2022)
+
+```{=typst}
+#course("EDUC 6050", "Applied Statistical Analysis", level: "Graduate")
+#course("EDUC 6600", "Research Design & Analysis I", level: "PhD")
+#course("EDUC 7610", "Research Design & Analysis II (Linear Regression)", level: "PhD")
+#course("EDUC 6560", "R for the Health, Behavioral, Educational, and Social Sciences I & II", level: "Graduate workshop; created and developed")
+#course("PSY 3500", "Research Methods", level: "Undergraduate; online and in person")
+```
+
+<!--
+# AWARDS AND HONORS
+
+```{=typst}
+#award("Distinguished Poster Award", "Society for Prevention Research Annual Meeting", "2017")
+#award("Abstract of Distinction", "Society for Prevention Research Annual Meeting", "2017")
+#award("Outstanding Poster Award", "Early Hearing Detection and Intervention Conference", "2017")
+#award("Best Undergraduate Poster Presentation Award", "Psi Chi Undergraduate Research Conference", "2014")
+```
+-->
+
+
+# EXTERNAL FUNDING `#text(size: 10pt)[(Ongoing)]`{=typst}
+
+```{r}
+grants_list(funds, "Funded")
+```
+
+# EXTERNAL FUNDING `#text(size: 10pt)[(Completed)]`{=typst}
+
+```{r}
+grants_list(funds, "Completed")
+```
+
+<!--
+```{=typst}
+#pagebreak(weak: true)
+```
+-->
+
+# PEER-REVIEWED JOURNAL ARTICLES
+
+`#par(hanging-indent: 0pt, text(size: 9pt)[\* _Signifies two first authors_])`{=typst}
+
+```{r}
+pubs_list(pubs)
+```
+
+# POLICY REPORTS
+
+Meier, C., Gast, J., Barrett, T., Ferguson, M., Culianos, D., & Ward, L. (2022). *Utah college sexual behavior survey: Initial findings report. Extension Research. Paper 20.* Utah State University. <https://digitalcommons.usu.edu/extension_research/20>
+
+Doutre, S. M., Barrett, T., & Rice, J. (2021). *California's Special Education Local Plan Areas: Funding patterns, inclusion rates, and student outcomes (REL 2021–134).* Washington, DC: U.S. Department of Education, Institute of Education Sciences, National Center for Education Evaluation and Regional Assistance, Regional Educational Laboratory West. <http://ies.ed.gov/ncee/edlabs>
+
+Doutre, S. M., Ripma, T., Barrett, T., Williams Valentine, T., Caparas, R., & Willis, J. (2021). *California special education governance and accountability study.* WestEd. <https://www.cde.ca.gov/sp/se/ac/segalegreport.asp>
+
+Doutre, S. M., Willis, J., Barrett, T., Ripma, T., Caparas, R., & Krausen, K. (2021). *California State Special Education Funding System Study, Part 2: Findings, Implications, and Considerations for Improving Special Education Funding in California.* WestEd. <https://www.wested.org/ca-special-education-funding-system-study/>
+
+Willis, J., Doutre, S. M., Krausen, K., Barrett, T., Ripma, T., & Caparas, R. (2020). *California Special Education Funding System Study: A Descriptive Analysis of Special Education Funding in California.* WestEd. <https://www.wested.org/resources/ca-special-education-funding-system/>
+
+# PUBLISHED PRE-PRINTS
+
+`#par(hanging-indent: 0pt, text(size: 9pt, emph[Not otherwise published in peer-reviewed journals.]))`{=typst}
+
+Barrett, T. S. (2019, Oct 3). List-columns in `data.table`: Nesting and unnesting data tables and vectors. *PsyArXiv*. <https://doi.org/10.31234/osf.io/u8ekc> `#osf("https://osf.io/smcg8/")`{=typst}
+
+Barrett, T. S. (2019, August 15). Six reasons to consider using R in psychological research. *PsyArXiv*. <https://doi.org/10.31234/osf.io/8mb6d> `#osf("https://osf.io/436d7/")`{=typst}
+
+Barrett, T. S., Cruz, R. A., & Lockhart, G. (2019, June 18). Marginal mediation analysis: A practical statistical framework for interpretable mediated effects. *PsyArXiv*. <https://doi.org/10.31234/osf.io/fgm8t> `#osf("https://osf.io/753kc/")`{=typst}
+
+Barrett, T. S., Borrie, S. A., & Yoho, S. E. (2019, June 14). Automating with Autoscore: Introducing an R package for automating the scoring of orthographic transcripts. *PsyArXiv*. <https://doi.org/10.31234/osf.io/d8au4> `#osf("https://osf.io/htqvr/")`{=typst}
+
+# PEER-REVIEWED CONFERENCE PROCEEDINGS
+
+Lubold, N., Borrie, S. A., Barrett, T. S., Willi, M., & Berisha, V. (2019). Do conversational partners entrain on articulatory precision? *Proceedings of INTERSPEECH 2019.* Paper number 1786, 1–5. (three reviewers, 50% acceptance rate). <https://doi.org/10.21437/Interspeech.2019-1786>
+
+Willi, M., Borrie, S. A., Barrett, T. S., Tu, M., & Berisha, V. (2018). A discriminative acoustic-prosodic approach for measuring local entrainment. *Proceedings of INTERSPEECH 2018.* Paper number 1419, 1–5. (four reviewers, 50% acceptance rate). ArXiv pre-print: [1804.08663](http://arxiv.org/abs/1804.08663)
+
+# SOFTWARE
+
+## Maintained
+
+Barrett, T. S., Dowle, M., Srinivasan, A., Gorecki, J., Chirico, M., Hocking, T., Schwendinger, B., & Krylov, I. (`r pkg_year("data.table")`). *data.table: Extension of 'data.frame'* (Version `r pkg_version("data.table")`) [R package]. <https://CRAN.R-project.org/package=data.table> `#icon("rdatatable.png", "https://rdatatable.gitlab.io/data.table/")`{=typst} \
+*CRAN maintainer since 2023; supported by the NSF POSE Phase II data.table ecosystem project.*
+
+Barrett, T. S., Brignone, E., & Laxman, D. J. (`r pkg_year("furniture")`). *furniture: Furniture for quantitative scientists* (Version `r pkg_version("furniture")`) [R package]. <https://CRAN.R-project.org/package=furniture> `#icon("furniture_hex.jpg", "https://tysonbarrett.com/furniture")`{=typst}
+
+Barrett, T. S. (`r pkg_year("tidyfast")`). *tidyfast: Fast tidying of data* (Version `r pkg_version("tidyfast")`) [R package]. <https://CRAN.R-project.org/package=tidyfast> `#icon("tidyfast_hex.png", "https://tysonbarrett.com/tidyfast/")`{=typst}
+
+Barrett, T. S. (`r pkg_year("MarginalMediation")`). *MarginalMediation: Marginal mediation* (Version `r pkg_version("MarginalMediation")`) [R package]. <https://CRAN.R-project.org/package=MarginalMediation> `#icon("mma_hex.jpg", "https://github.com/TysonStanley/MarginalMediation")`{=typst}
+
+## Created
+
+Barrett, T. S., Borrie, S. A., & Yoho, S. E. (`r pkg_year("autoscore")`). *autoscore* (Version `r pkg_version("autoscore")`) [R package]. <https://github.com/autoscore/autoscore> `#icon("autoscore_hex.jpg", "https://github.com/autoscore/autoscore")`{=typst}
+
+Barrett, T. S. (`r pkg_year("dissertateUSU")`). *dissertateUSU* (Version `r pkg_version("dissertateUSU")`) [R package]. <https://doi.org/10.5281/zenodo.3240640> `#icon("dissertateUSU_hex.jpg", "https://github.com/TysonStanley/dissertateUSU")`{=typst}
+
+Barrett, T. S. (`r pkg_year("rjasa")`). *rjasa* (Version `r pkg_version("rjasa")`) [R package]. <https://github.com/tysonstanley/rjasa>
+
+```{r citation-history, eval = params$cite_fig, results = "asis", fig.width = 8, fig.height = 2.3, out.width = "100%"}
+cat("\n# CITATION COUNT HISTORY\n\n")
+
+library(ggplot2)
+citations <- as.data.frame(scholar_info$history)
+month <- months(Sys.Date())
+year  <- format(Sys.Date(), "%Y")
+
+ggplot(citations, aes(year, cites, fill = year)) +
+  geom_col(color = "black") +
+  geom_text(aes(label = cites),
+            nudge_y = 40) +
+  labs(x = "Year",
+       y = "Citation Count\n(by Year)",
+       caption = paste("Note: Data for citations in", year, "until", month)) +
+  theme_classic() +
+  scale_fill_viridis_c(direction = -1,
+                       begin = .1,
+                       end = .9) +
+  scale_x_continuous(breaks = c(2016, 2018, 2020, 2022, 2024, 2026, 2028)) +
+  theme(legend.position = "none",
+        axis.line = element_line(color = "black", linewidth = .4))
+ggsave("citation_count.png", width = 7, height = 4)
+```
+
+# SELECTED PRESENTATIONS
+
+Barrett, T. S. (September 2026). Teach once, use often: Building AI skills for data analysis. *Posit Conference*.
+
+Barrett, T. S. (August 2024). Efficient tools for your tidy workflow: A case for incorporating `data.table` into your workflow. Joint Statistical Meetings (JSM), Portland, OR.
+
+Barrett, T. S. (July 2024). The past, present, and future of data.table. useR! 2024, Salzburg, Austria.
+
+Barrett, T. S. (May 2024). `data.table` for finance: New developments for the concise, fast, and efficient package. R/Finance 2024, Chicago, IL.
+
+Harper, S. A., Brown, C. B., Poulsen, S. L., Barrett, T. S., & Dakin, J. C. (September 2023). Inter-step variation of stairways and observations of fall-related events. 2023 UAB Center of Exercise Medicine Symposium on Exercise and Aging. Invited Flash Talk.
+
+Gast, J., Ferguson, M., Meier, C., Barrett, T. S., Ward, L., & Culianos, D. (November 2022). Youth sexual behaviors in Utah: A retrospective study of behaviors and sex education in middle school and high school. American Public Health Association, Boston, MA.
+
+Meier, C., Gast, J., Barrett, T. S., Ferguson, M., Culianos, D., & Ward, L. (November 2022). We need more sex education! The results of a retrospective sexual behavior survey among Utahns and differences by rurality and sexuality. American Public Health Association, Boston, MA.
+
+Culianos, D., Barrett, T. S., Meier, C., Gast, J., Ward, L., & Ferguson, M. (November 2022). The reliability and validity of sex-inclusive and retrospective sex measures. American Public Health Association, Boston, MA.
+
+Meier, C., Gast, J., Barrett, T. S., Ferguson, M., Culianos, D., & Ward, L. (March 2022). Youth sexual behaviors in Utah: Findings from the 2021 Utah College Sexual Behavior Survey. Utah Public Health Association, Virtual Conference.
+
+Smith, B. M., Barrett, T. S., & Twohig, M. P. (2021, June). Processes of change during exposure for intrusive thoughts. In L. Capel (Chair), *Investigating acceptance and commitment therapy interventions and processes in obsessive-compulsive and related disorders.* Paper presented at the annual meeting of the Association of Contextual Behavioral Science, online.
+
+Smith, B. M., Barney, J. L., Ong, C. W., Barrett, T. S., Levin, M. E., & Twohig, M. P. (2020, November). Outcomes and mechanisms of change in acceptance and regulation approaches to exposures for intrusive thoughts. In S. P. Buinewics & J. Buchholz (Chairs), *Understanding the therapeutic process of exposure therapy to optimize treatment.* Paper presented at the annual meeting of the Association for Behavioral and Cognitive Therapies, online.
+
+Smith, B. M., Barney, J. L., Ong, C. W., Barrett, T. S., Levin, M. E., & Twohig, M. P. (2020, July). Physiological, behavioral, and self-report outcomes of acceptance and regulation approaches to exposures for intrusive thoughts. In S. Mpoulkoura (Chair), *Third-wave approaches to anxiety disorders treatment: Outcomes and processes of change.* Paper presented at the annual meeting of the Association for Contextual Behavioral Science, online.
+
+Hancock, A. S., Orellana, C., Alphonsa, S., Barrett, T. S., Logan, K., Gillam, S. L., & Gillam, R. B. (2020, May). An fNIRS investigation during stuttered and fluent speech. Poster presentation at Cognitive Neuroscience Society, Boston, Massachusetts.
+
+Barrett, T. S. (2020, January). Working with list-columns in `data.table`. Talk presented at the RStudio Conference 2020, San Francisco, CA.
+
+Vázquez, A. L., Chou, T., Navarro, C., Barrett, T. S., Villodas, M. T., & Domenech Rodríguez, M. M. (2019, November). Understanding caregiver perceived need for and utilization of adolescent counseling services through machine learning. In M. D. Hetzel-Riggin (Chair), *Addressing violence, abuse, and trauma throughout the socioecological model.* Symposium accepted for presentation at the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
+
+Budge, S., Borrie, S. A., Barrett, T. S., Yoho, S. E., Vargas, R., & Lansford, K. (2019, November). Gamified perceptual learning of dysarthric speech. Poster presented at the 2019 ASHA Convention, Orlando, FL.
+
+Hirsch, M., Lansford, K., Borrie, S. A., & Barrett, T. S. (2019, November). Familiarization of dysarthric speech: Generalization between speakers of different sex. Poster presented at the 2019 ASHA Convention, Orlando, FL.
+
+Ong, C. W., Lee, E. B., Krafft, J., Terry, C. L., Barrett, T. S., Levin, M. E., & Twohig, M. P. (2019, November). A randomized controlled trial of acceptance and commitment therapy for clinical perfectionism. In C. W. Ong (Chair), *Using acceptance and commitment therapy for different clinical presentations: Evidence-based adaptations.* Symposium conducted at the 53rd annual convention of the Association for Behavioral and Cognitive Therapies, Atlanta, GA.
+
+Vázquez, A. L., Barrett, T. S., Domenech Rodríguez, M. M., Bustos, M., Gutierrez, M., Amador Buenabad, N. G., & Villatoro Velazquez, J. A. (2019, March). The influence of perceived parenting on substance initiation among Latinx children. Poster presented at the Society for Research in Child Development, Baltimore, MD.
+
+Vázquez, A. L., Chou, T., Navarro, C., Barrett, T. S., & Domenech Rodríguez, M. M. (2019, March). Examining caregiver perceived need for and utilization of adolescent counseling services through machine learning. Poster presented at the Society for Research in Child Development, Baltimore, MD.
+
+Vázquez, A. L., Domenech Rodríguez, M. M., Barrett, T. S., Amador Buenabad, N., & Villatoro Velazquez, J. A. (2018, September). Factores de crianza que tienen alto impacto sobre el consumo de drogas por parte niños. In M. M. Domenech Rodríguez (Chair), *Crianza positiva y consumo de drogas: hallazgos, modelos y retos para la implementación.* Symposium presented at the 2o Congreso Mundial de Prevención de Adicciones en Niños y Adolescentes, Tijuana, BCS, MX.
+
+Barrett, T. S., & Lockhart, G. (2017). Enhancing the exploration and communication of big data in prevention science. Poster presented at the Annual Meeting of the Society of Prevention Research, Washington, DC. *Received "Distinguished Poster Award" and "Abstract of Distinction."*
+
+Barrett, T. S., & Lockhart, G. (2017). Exploring the predictors of marijuana use among adolescents with asthma. Oral presentation at the Utah State University Research Symposium, Logan, UT.
+
+Sanghavi, K., White, K., Barrett, T. S., Wylie, A., Raspa, M., Cashman, D., Vogel, B., Caggana, M., & Bodurtha, J. (2017). Poster presented at the Early Hearing Detection and Intervention Conference, Atlanta, GA. *Received "Outstanding Poster Award."*
+
+Brignone, E., Gundlapalli, A. V., Barrett, T. S., Blais, R. K., Nelson, R. E., Carter, M. E., Kimerling, R., Samore, M. H., & Fargo, J. D. (2016). Cost of care among male and female veterans with a positive screen for military sexual trauma. Poster presented at the 2016 Annual Meeting of the International Conference of Psychology, Yokohama, Japan.
+
+Barrett, T. S., Munoz, K., & White, K. (2016). How well do parents report hearing loss in their children? Poster presented at the Early Hearing Detection and Intervention Conference, San Diego, CA.
+
+Barrett, T. S., Munoz, K., & White, K. (2016). Accounting for temporary loss in national studies on hearing loss. Poster presented at the Early Hearing Detection and Intervention Conference, San Diego, CA.
+
+Barrett, T. S., Munoz, K., & White, K. (2016). An evaluation of early intervention delivered via video conferencing. Poster presented at the Early Hearing Detection and Intervention Conference, San Diego, CA.
+
+Stevens, V., Barrett, T. S., & Nelson, R. (2016). Distribution and daily cost of care in a pediatric hospital. Oral presentation to the Pediatric Guidance Council of Intermountain Healthcare, Salt Lake City, UT.
+
+Barrett, T. S., Munoz, K., & White, K. (2015). Refinements to estimating prevalence of hearing loss in children. Poster presented at the Utah State University Research Symposium, Logan, UT.
+
+Barrett, T. S., Prante, M., Peterson, R., Fargo, J. D., & Pyle, N. (2014). Predictors of employability among homeless youth. Poster presented at the Psi-Chi Undergraduate Research Conference at Idaho State University, Pocatello, ID. *Best Undergraduate Poster Presentation Award.*
+
+Barrett, T. S., & Holland, D. (2014). Nascent entrepreneurship, impulsivity, and self-efficacy. Poster presented at the Research on Capitol Hill, Salt Lake City, UT.
+
+Holland, D., & Barrett, T. S. (2013). Impulsivity in young entrepreneurs. Round table discussion at the Babson Business Conference, Paris, France.
+
+# PROFESSIONAL DEVELOPMENT
+
+American Educational Research Association Annual Meeting (Virtual). Training on quantitative methodologies (including psychometrics and econometrics) for studying educational policy and practice. April 2021.
+
+RStudio Conference sponsored by RStudio. Special training on using the Shiny developer interface for creating interactive, responsive websites using R. January 2020.
+
+RStudio Conference sponsored by RStudio. Training on advanced features of R and RStudio, including training on data wrangling, reproducible analyses, and database access. January 2019.

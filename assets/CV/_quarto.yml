@@ -1,0 +1,5 @@
+# Makes assets/CV its own small Quarto project so `quarto render CV-typst.qmd`
+# writes the PDF here instead of into the website's _site/ folder and
+# doesn't pick up the site's HTML format settings.
+project:
+  type: default
