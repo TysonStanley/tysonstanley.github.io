@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lost Cards</title>
+<style>
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --ink:#1f2328; --muted:#5f6670; --line:#dcd8cf;
+  --obs:#2f6f9f; --lost:#c2410c; --good:#2e7d4f; --adj:#7a4fb0;
+  --cardback:#3d4c5d; --soft:#fbeadf;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14171b; --panel:#1d2127; --ink:#e7e9ec; --muted:#9aa3ad; --line:#333a43;
+    --obs:#6fb0e0; --lost:#f08a4b; --good:#5cc38a; --adj:#b593e6;
+    --cardback:#4a5b6e; --soft:#3a2a20;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14171b; --panel:#1d2127; --ink:#e7e9ec; --muted:#9aa3ad; --line:#333a43;
+  --obs:#6fb0e0; --lost:#f08a4b; --good:#5cc38a; --adj:#b593e6;
+  --cardback:#4a5b6e; --soft:#3a2a20;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:24px 16px 48px}
+h1{margin:0 0 4px;font-size:1.8rem}
+h2{font-size:1.1rem;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 18px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.steps{margin:0;padding-left:1.2em}
+.steps li{margin:2px 0}
+.question{font-style:italic;color:var(--muted)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);
+  border-radius:8px;padding:8px 14px}
+button:hover{border-color:var(--obs)}
+button.primary{background:var(--obs);color:#fff;border-color:var(--obs)}
+button.reveal{background:var(--lost);color:#fff;border-color:var(--lost)}
+button.chosen{outline:3px solid var(--obs);outline-offset:1px}
+select{font:inherit;padding:6px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+details summary{cursor:pointer;color:var(--muted)}
+.board{text-align:center;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  border-bottom:4px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.row{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center;margin-bottom:10px}
+.rowlabel{font-weight:600;color:var(--muted);font-size:.9rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:6px}
+.card{position:relative;height:70px;border:1px solid var(--line);border-radius:6px;background:var(--panel);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .2s}
+.card .cid{position:absolute;top:2px;left:5px;font-size:.65rem;color:var(--muted)}
+.card .h{font-size:1.3rem;font-weight:700;color:var(--obs);line-height:1}
+.card .u{font-size:.65rem;color:var(--muted)}
+.card.back{background:repeating-linear-gradient(45deg,var(--cardback) 0 6px,transparent 6px 12px),var(--cardback);
+  border-color:var(--cardback);opacity:.85}
+.card.back .cid{color:#fff}
+.card.back .q{color:#fff;font-size:1.4rem;font-weight:700;background:var(--cardback);padding:0 8px;border-radius:4px}
+.card.lostcard{border:2px dashed var(--lost);background:var(--soft)}
+.card.lostcard .h{color:var(--lost)}
+.card.lostcard .u{color:var(--lost);font-weight:600}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:720px){.grid2{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+.stat{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0}
+.stat:last-child{border-bottom:none}
+.stat b{font-variant-numeric:tabular-nums}
+.bar{display:grid;grid-template-columns:70px 1fr 90px;gap:8px;align-items:center;margin:8px 0;font-size:.9rem}
+.track{height:16px;background:var(--line);border-radius:4px;overflow:hidden}
+.fill{height:100%;background:var(--cardback);transition:width .3s}
+.note{font-size:.85rem;color:var(--muted)}
+svg text{fill:var(--ink);font-family:inherit}
+.guesses{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.feedback{min-height:1.5em;font-weight:600}
+.right{color:var(--good)} .wrong{color:var(--lost)}
+#reveal[hidden]{display:none}
+.rule-tag{display:inline-block;background:var(--soft);color:var(--lost);font-weight:700;padding:2px 10px;border-radius:999px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:middle}
+</style>
+</head>
+<body>
+<main>
+  <h1>The Lost Cards</h1>
+  <p class="sub">A missing-data mystery: 30 students turned in survey cards, and some got lost. Why?</p>
+
+  <section class="panel">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>Every student answered one question on a card: <span class="question">"How many hours did you study for this class last week?"</span></li>
+      <li>Some cards went missing according to a <b>hidden rule</b>. Face-down cards are lost; we know where the student sat, but not their answer.</li>
+      <li>Use the clues below to guess the rule, then reveal the truth.</li>
+    </ol>
+    <div class="toolbar" style="margin-top:12px">
+      <button class="primary" id="newBtn">New class</button>
+      <details>
+        <summary>Instructor controls</summary>
+        <label style="display:block;margin-top:6px">Hidden rule for next class:
+          <select id="ruleSel">
+            <option value="mystery">Mystery (random)</option>
+            <option value="mcar">Completely random (MCAR)</option>
+            <option value="mar">Depends on seat (MAR)</option>
+            <option value="mnar">Depends on study hours (MNAR)</option>
+          </select>
+        </label>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="board">Front of the room</div>
+    <div id="classroom"></div>
+  </section>
+
+  <div class="grid2">
+    <section class="panel">
+      <h2>What we can see</h2>
+      <div id="stats"></div>
+    </section>
+    <section class="panel">
+      <h2>Clue: cards lost by seat</h2>
+      <div id="bars"></div>
+      <p class="note">We know every student's seat, even when their card is lost.</p>
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>Study hours on the cards we have</h2>
+    <div class="legend">
+      <span><span class="sw" style="background:var(--obs)"></span>Returned card</span>
+      <span id="lgLost" hidden><span class="sw" style="border:2px solid var(--lost)"></span>Lost card (revealed)</span>
+    </div>
+    <svg id="dots" viewBox="0 0 640 210" width="100%" role="img" aria-label="Dot plot of study hours"></svg>
+  </section>
+
+  <section class="panel">
+    <h2>Your guess: why did the cards go missing?</h2>
+    <div class="guesses">
+      <button data-g="mcar">Completely at random</button>
+      <button data-g="mar">Because of where students sat</button>
+      <button data-g="mnar">Because of how much they studied</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <button class="reveal" id="revealBtn">Reveal the rule</button>
+  </section>
+
+  <section class="panel" id="reveal" hidden>
+    <h2>The hidden rule: <span class="rule-tag" id="ruleName"></span></h2>
+    <div class="grid2">
+      <div>
+        <svg id="dag" viewBox="0 0 500 220" width="100%" role="img" aria-label="Diagram of what caused the missing cards"></svg>
+        <p class="note">Dashed arrows are possible causes of a lost card. The solid one is what actually happened.</p>
+      </div>
+      <div>
+        <p id="explain"></p>
+        <div id="truthStats"></div>
+      </div>
+    </div>
+    <hr style="border:none;border-top:1px solid var(--line);margin:16px 0">
+    <h2>Was this class a fluke?</h2>
+    <p class="note">Run the same rule on 500 new classes and see how far off the estimates are on average.</p>
+    <button id="simBtn">Simulate 500 classes</button>
+    <div id="simOut"></div>
+  </section>
+
+  <section class="panel">
+    <details>
+      <summary><b>Discussion questions</b></summary>
+      <ol>
+        <li>Before the reveal: is the observed average probably too high, too low, or about right? What makes you think so?</li>
+        <li>What does the "lost by seat" chart tell you? What can it <i>never</i> tell you?</li>
+        <li>Averaging within each row and then combining fixes the estimate for one rule but not another. Which one, and why?</li>
+        <li>Think of a real dataset with missing values. Which of the three stories fits it best?</li>
+      </ol>
+    </details>
+  </section>
+</main>
+
+<script>
+const ROWS = ["Front", "Middle", "Back"];
+const ROW_MEANS = { Front: 11, Middle: 8, Back: 5 };
+const PER_ROW = 10;
+const RULES = {
+  mcar: {
+    name: "Completely at random (MCAR)",
+    explain: "A gust of wind scattered the stack, and which cards were lost had nothing to do with seat or study hours. The returned cards are a fair (just smaller) sample, so the observed average is about right. The seat chart should look roughly flat."
+  },
+  mar: {
+    name: "Depends on seat (MAR)",
+    explain: "Back-row cards were collected last and the stack got dropped, so they were far more likely to be lost. Missingness depends on <b>seat</b>, which we observed. Back-row students study less, so the observed average is too high. But we can see the problem in the seat chart and fix it: average within each row, then combine the rows."
+  },
+  mnar: {
+    name: "Depends on study hours (MNAR)",
+    explain: "Students who barely studied were embarrassed and 'forgot' to turn in their cards. Missingness depends on the <b>very answer that's missing</b>. The observed average is too high, and adjusting for seat only helps a little, because seat is just a rough stand-in for hours. Notice the seat chart may still show more back-row losses, since seat and hours are related. Seeing missingness tied to an observed variable does not rule out MNAR, and nothing in the returned cards can prove MNAR is happening."
+  }
+};
+
+const state = { students: [], rule: "mcar", revealed: false, guess: null };
+
+function rnorm() {
+  let u = 0, v = 0;
+  while (!u) u = Math.random();
+  while (!v) v = Math.random();
+  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+}
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+const mean = a => a.reduce((s, x) => s + x, 0) / a.length;
+const fmt = x => (Number.isFinite(x) ? x.toFixed(1) : "–");
+const signed = x => (x >= 0 ? "+" : "") + x.toFixed(1);
+
+function makeClass() {
+  const s = [];
+  let id = 1;
+  for (const r of ROWS) {
+    for (let i = 0; i < PER_ROW; i++) {
+      const h = Math.max(0, Math.min(20, Math.round(ROW_MEANS[r] + 2.5 * rnorm())));
+      s.push({ id: id++, row: r, hours: h, lost: false });
+    }
+  }
+  return s;
+}
+
+function loseCards(s, rule) {
+  s.forEach(x => (x.lost = false));
+  if (rule === "mcar") {
+    shuffle([...s.keys()]).slice(0, 10).forEach(i => (s[i].lost = true));
+  } else if (rule === "mar") {
+    const p = { Front: 0.1, Middle: 0.3, Back: 0.6 };
+    s.forEach(x => (x.lost = Math.random() < p[x.row]));
+  } else {
+    // shuffle first so ties in hours are broken randomly (sort is stable)
+    const order = shuffle([...s.keys()]).sort((a, b) => s[a].hours - s[b].hours);
+    order.forEach((i, k) => {
+      const p = k < 10 ? 0.7 : k < 20 ? 0.25 : 0.05;
+      s[i].lost = Math.random() < p;
+    });
+  }
+  if (s.every(x => x.lost)) s[0].lost = false;
+  return s;
+}
+
+function observedMean(s) { return mean(s.filter(x => !x.lost).map(x => x.hours)); }
+function trueMean(s) { return mean(s.map(x => x.hours)); }
+function adjustedMean(s) {
+  // average of the observed row means (rows are equal size)
+  const rowMeans = ROWS.map(r => s.filter(x => x.row === r && !x.lost).map(x => x.hours))
+    .filter(a => a.length).map(mean);
+  return mean(rowMeans);
+}
+
+function newClass() {
+  const choice = document.getElementById("ruleSel").value;
+  state.rule = choice === "mystery" ? ["mcar", "mar", "mnar"][Math.floor(Math.random() * 3)] : choice;
+  state.students = loseCards(makeClass(), state.rule);
+  state.revealed = false;
+  state.guess = null;
+  document.getElementById("simOut").innerHTML = "";
+  render();
+}
+
+function renderClassroom() {
+  const el = document.getElementById("classroom");
+  el.innerHTML = "";
+  for (const r of ROWS) {
+    const row = document.createElement("div");
+    row.className = "row";
+    row.innerHTML = `<div class="rowlabel">${r} row</div>`;
+    const grid = document.createElement("div");
+    grid.className = "cards";
+    state.students.filter(s => s.row === r).forEach(s => {
+      const c = document.createElement("div");
+      if (s.lost && !state.revealed) {
+        c.className = "card back";
+        c.innerHTML = `<span class="cid">#${s.id}</span><span class="q">?</span>`;
+        c.title = "Card lost";
+      } else if (s.lost) {
+        c.className = "card lostcard";
+        c.innerHTML = `<span class="cid">#${s.id}</span><span class="h">${s.hours}</span><span class="u">lost</span>`;
+      } else {
+        c.className = "card";
+        c.innerHTML = `<span class="cid">#${s.id}</span><span class="h">${s.hours}</span><span class="u">hrs</span>`;
+      }
+      grid.appendChild(c);
+    });
+    row.appendChild(grid);
+    el.appendChild(row);
+  }
+}
+
+function renderStats() {
+  const s = state.students;
+  const nObs = s.filter(x => !x.lost).length;
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><span>Cards returned</span><b>${nObs} of ${s.length}</b></div>
+    <div class="stat"><span>Average study hours (returned cards)</span><b style="color:var(--obs)">${fmt(observedMean(s))} hrs</b></div>
+    <div class="stat"><span>True class average</span><b>${state.revealed ? fmt(trueMean(s)) + " hrs" : "???"}</b></div>`;
+}
+
+function renderBars() {
+  document.getElementById("bars").innerHTML = ROWS.map(r => {
+    const inRow = state.students.filter(x => x.row === r);
+    const lost = inRow.filter(x => x.lost).length;
+    return `<div class="bar"><span>${r}</span>
+      <div class="track"><div class="fill" style="width:${(100 * lost) / inRow.length}%"></div></div>
+      <span>${lost} of ${inRow.length} lost</span></div>`;
+  }).join("");
+}
+
+function renderDots() {
+  const svg = document.getElementById("dots");
+  const X = h => 30 + (h / 20) * 580;
+  const base = 160, step = 12, r = 5;
+  const stacks = {};
+  let out = "";
+  const shown = state.students.filter(x => !x.lost || state.revealed)
+    .sort((a, b) => a.lost - b.lost);
+  for (const st of shown) {
+    const k = (stacks[st.hours] = (stacks[st.hours] || 0) + 1) - 1;
+    const cx = X(st.hours), cy = base - k * step;
+    out += st.lost
+      ? `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--lost)" stroke-width="2"/>`
+      : `<circle cx="${cx}" cy="${cy}" r="${r}" fill="var(--obs)"/>`;
+  }
+  out += `<line x1="20" x2="620" y1="${base + 9}" y2="${base + 9}" stroke="var(--line)" stroke-width="2"/>`;
+  for (let h = 0; h <= 20; h += 2) {
+    out += `<text x="${X(h)}" y="${base + 26}" text-anchor="middle" font-size="12">${h}</text>`;
+  }
+  out += `<text x="320" y="${base + 44}" text-anchor="middle" font-size="12" style="fill:var(--muted)">hours studied last week</text>`;
+  const om = observedMean(state.students);
+  out += `<line x1="${X(om)}" x2="${X(om)}" y1="14" y2="${base + 9}" stroke="var(--obs)" stroke-width="2" stroke-dasharray="5 4"/>
+          <text x="${X(om) + 5}" y="16" font-size="12" style="fill:var(--obs)">observed avg ${fmt(om)}</text>`;
+  if (state.revealed) {
+    const tm = trueMean(state.students);
+    out += `<line x1="${X(tm)}" x2="${X(tm)}" y1="30" y2="${base + 9}" stroke="var(--lost)" stroke-width="2"/>
+            <text x="${X(tm) - 5}" y="32" font-size="12" text-anchor="end" style="fill:var(--lost)">true avg ${fmt(tm)}</text>`;
+  }
+  svg.innerHTML = out;
+  document.getElementById("lgLost").hidden = !state.revealed;
+}
+
+function renderGuess() {
+  document.querySelectorAll("[data-g]").forEach(b => b.classList.toggle("chosen", b.dataset.g === state.guess));
+  const fb = document.getElementById("feedback");
+  if (!state.guess) { fb.textContent = ""; fb.className = "feedback"; return; }
+  if (!state.revealed) { fb.textContent = "Guess locked in. Reveal when you're ready."; fb.className = "feedback"; return; }
+  const ok = state.guess === state.rule;
+  fb.textContent = ok ? "You got it!" : "Not this time. See what really happened below.";
+  fb.className = "feedback " + (ok ? "right" : "wrong");
+}
+
+function renderDag() {
+  const nodes = {
+    seat:   { x: 110, y: 45,  label: "Seat row" },
+    hours:  { x: 390, y: 45,  label: "Study hours" },
+    chance: { x: 85,  y: 180, label: "Pure chance" },
+    lost:   { x: 330, y: 180, label: "Card lost?" }
+  };
+  const hw = 65, hh = 20;
+  function edge(a, b, active, muted) {
+    const A = nodes[a], B = nodes[b];
+    const dx = B.x - A.x, dy = B.y - A.y;
+    const t = Math.min(hw / Math.abs(dx || 1e-9), hh / Math.abs(dy || 1e-9));
+    const len = Math.hypot(dx, dy), gap = 4 / len;
+    const x1 = A.x + dx * (t + gap), y1 = A.y + dy * (t + gap);
+    const x2 = B.x - dx * (t + gap), y2 = B.y - dy * (t + gap);
+    const col = active ? "var(--lost)" : "var(--muted)";
+    const marker = active ? "url(#arrA)" : "url(#arrM)";
+    const dash = active || muted ? "" : 'stroke-dasharray="6 5" opacity="0.5"';
+    return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${col}" stroke-width="${active ? 3.5 : 2}" ${dash} marker-end="${marker}"/>`;
+  }
+  const causeOf = { mcar: "chance", mar: "seat", mnar: "hours" }[state.rule];
+  let out = `<defs>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--lost)"/></marker>
+    <marker id="arrM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker>
+  </defs>`;
+  out += edge("seat", "hours", false, true);
+  for (const c of ["chance", "seat", "hours"]) out += edge(c, "lost", c === causeOf, false);
+  for (const [k, n] of Object.entries(nodes)) {
+    const hl = k === causeOf || k === "lost";
+    out += `<rect x="${n.x - hw}" y="${n.y - hh}" width="${hw * 2}" height="${hh * 2}" rx="8"
+              style="fill:var(--panel);stroke:${hl ? "var(--lost)" : "var(--line)"}" stroke-width="2"/>
+            <text x="${n.x}" y="${n.y + 5}" text-anchor="middle" font-size="14" font-weight="${hl ? 700 : 400}">${n.label}</text>`;
+  }
+  document.getElementById("dag").innerHTML = out;
+}
+
+function renderReveal() {
+  const sec = document.getElementById("reveal");
+  sec.hidden = !state.revealed;
+  if (!state.revealed) return;
+  const s = state.students;
+  document.getElementById("ruleName").textContent = RULES[state.rule].name;
+  document.getElementById("explain").innerHTML = RULES[state.rule].explain;
+  const tm = trueMean(s), om = observedMean(s), am = adjustedMean(s);
+  document.getElementById("truthStats").innerHTML = `
+    <div class="stat"><span>True class average</span><b>${fmt(tm)} hrs</b></div>
+    <div class="stat"><span>Average of returned cards</span><b style="color:var(--obs)">${fmt(om)} hrs (${signed(om - tm)})</b></div>
+    <div class="stat"><span>Seat-adjusted average<br><span class="note">average each row, then combine</span></span><b style="color:var(--adj)">${fmt(am)} hrs (${signed(am - tm)})</b></div>`;
+  renderDag();
+}
+
+function simulate() {
+  const naive = [], adj = [];
+  for (let k = 0; k < 500; k++) {
+    const c = loseCards(makeClass(), state.rule);
+    const t = trueMean(c);
+    naive.push(observedMean(c) - t);
+    adj.push(adjustedMean(c) - t);
+  }
+  const lo = -4, hi = 4, w = 0.4, nb = Math.round((hi - lo) / w);
+  const bin = arr => {
+    const b = new Array(nb).fill(0);
+    arr.forEach(v => { const i = Math.floor((Math.max(lo, Math.min(hi - 1e-9, v)) - lo) / w); b[i]++; });
+    return b;
+  };
+  const bn = bin(naive), ba = bin(adj);
+  const maxC = Math.max(...bn, ...ba);
+  const X = v => 30 + ((v - lo) / (hi - lo)) * 580, H = 130, base = 150;
+  let svg = `<svg viewBox="0 0 640 200" width="100%" role="img" aria-label="Histogram of estimate errors across 500 classes">`;
+  bn.forEach((c, i) => {
+    const h = (c / maxC) * H;
+    svg += `<rect x="${X(lo + i * w) + 1}" y="${base - h}" width="${X(w) - X(0) - 2}" height="${h}" style="fill:var(--obs)" opacity="0.55"/>`;
+  });
+  ba.forEach((c, i) => {
+    const h = (c / maxC) * H;
+    svg += `<rect x="${X(lo + i * w) + 1}" y="${base - h}" width="${X(w) - X(0) - 2}" height="${h}" fill="none" style="stroke:var(--adj)" stroke-width="2"/>`;
+  });
+  svg += `<line x1="${X(0)}" x2="${X(0)}" y1="10" y2="${base}" style="stroke:var(--ink)" stroke-width="2"/>
+          <text x="${X(0)}" y="8" text-anchor="middle" font-size="11">no error</text>
+          <line x1="20" x2="620" y1="${base}" y2="${base}" style="stroke:var(--line)" stroke-width="2"/>`;
+  for (let v = -4; v <= 4; v += 1) svg += `<text x="${X(v)}" y="${base + 18}" text-anchor="middle" font-size="12">${v > 0 ? "+" + v : v}</text>`;
+  svg += `<text x="320" y="${base + 38}" text-anchor="middle" font-size="12" style="fill:var(--muted)">estimate minus true average (hours)</text></svg>`;
+  document.getElementById("simOut").innerHTML = `
+    <div class="legend" style="margin-top:10px">
+      <span><span class="sw" style="background:var(--obs)"></span>Returned-card average: off by ${signed(mean(naive))} hrs on average</span>
+      <span><span class="sw" style="border:2px solid var(--adj)"></span>Seat-adjusted average: off by ${signed(mean(adj))} hrs on average</span>
+    </div>${svg}`;
+}
+
+function render() {
+  renderClassroom(); renderStats(); renderBars(); renderDots(); renderGuess(); renderReveal();
+}
+
+document.getElementById("newBtn").onclick = newClass;
+document.getElementById("revealBtn").onclick = () => { state.revealed = true; render(); };
+document.getElementById("simBtn").onclick = simulate;
+document.querySelectorAll("[data-g]").forEach(b => b.onclick = () => { state.guess = b.dataset.g; renderGuess(); });
+
+// Optional: preset the rule with ?rule=mcar|mar|mnar in the URL
+const preset = new URLSearchParams(location.search).get("rule");
+if (preset && RULES[preset]) document.getElementById("ruleSel").value = preset;
+newClass();
+</script>
+</body>
+</html>
