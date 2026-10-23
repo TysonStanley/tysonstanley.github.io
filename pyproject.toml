@@ -1,0 +1,25 @@
+[project]
+name = "tysonstanley-github-io"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Tyson Barrett", email = "t.barrett88@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "ipython>=9.17.1",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+    "plotnine>=0.15.8",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.4",
+]
+
+[project.scripts]
+tysonstanley-github-io = "tysonstanley_github_io:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
