@@ -348,8 +348,12 @@ pd.Series({k: len(v) for k, v in dict(claims=claims, members=members, ehr=ehr,
 ## What a Claim Looks Like {.smaller}
 
 ```{python}
-claims.sample(6, random_state=3)[["member_id", "service_date", "place_of_service",
-                                  "dx1", "procedure_or_drug", "paid_amt"]].reset_index(drop=True)
+(
+    claims
+    .sample(6, random_state=3)
+    [["member_id", "service_date", "place_of_service", "dx1", "procedure_or_drug", "paid_amt"]]
+    .reset_index(drop=True)
+)
 ```
 
 - `dx1` = ICD-10 diagnosis · `procedure_or_drug` = CPT code or drug class
@@ -364,9 +368,14 @@ claims["claim_status"].value_counts()
 ```
 
 ```{python}
-net = (claims.groupby(["claim_id", "member_id", "service_date", "claim_type",
-                       "place_of_service", "dx1", "procedure_or_drug"], dropna=False)
-             [["allowed_amt", "paid_amt"]].sum().reset_index())
+net = (
+    claims
+    .groupby(["claim_id", "member_id", "service_date", "claim_type",
+              "place_of_service", "dx1", "procedure_or_drug"], dropna=False)
+    [["allowed_amt", "paid_amt"]]
+    .sum()
+    .reset_index()
+)
 net = net[net["paid_amt"] > 0]          # fully reversed claims drop out
 len(claims), len(net)
 ```
@@ -388,7 +397,7 @@ pmpm = (
     [["paid", "member_months"]]
     .sum()
 )
-pmpm["pmpm"] = pmpm["paid"] / pmpm["member_months"]
+pmpm["pmpm"] = pmpm["paid"]/pmpm["member_months"]
 pmpm["pmpm"].round(0)
 ```
 
@@ -445,8 +454,6 @@ This is why care management programs target "high utilizers."
 
 ## Where Does the Money Go? {.smaller}
 
-::::{.columns}
-:::{.column width="50%"}
 ```{python}
 by_pos = (
     net
@@ -456,6 +463,12 @@ by_pos = (
 )
 by_pos["share_of_$"] = by_pos["sum"] / by_pos["sum"].sum()
 by_pos["share_of_claims"] = by_pos["size"] / by_pos["size"].sum()
+```
+
+::::{.columns}
+:::{.column width="50%"}
+```{python}
+#| echo: false
 by_pos[["share_of_claims", "share_of_$"]].round(2)
 ```
 
@@ -563,7 +576,11 @@ def found_by(m):
     return " + ".join(hits) or "none"
 
 linked = ehr_m["member_id"].dropna().unique()
-combo = (pd.Series([found_by(m) for m in linked]).value_counts().drop("none"))
+combo = (
+    pd.Series([found_by(m) for m in linked])
+    .value_counts()
+    .drop("none")
+)
 ```
 
 :::
