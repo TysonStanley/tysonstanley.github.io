@@ -15,3 +15,6 @@ Barrett_rstudioconf_2020.pptx
 /_site/
 /site_libs/
 **/*.quarto_ipynb
+
+# Python
+.venv
