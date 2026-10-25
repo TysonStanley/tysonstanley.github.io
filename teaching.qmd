@@ -68,6 +68,14 @@ Jamovi tutorials, REDCap guides, and *R for Researchers*.
 
 ## Workshops
 
+### ASC
+
+- [Healthcare Analytics (ASC Workshop)](/assets/ASC/healthcare_analytics_ASC26.html) 
+    - [QMD File](/assets/ASC/healthcare_analytics_ASC26.qmd)
+    - [QMD Template](/assets/ASC/junipter_followalong_ASC26.qmd)
+
+### Other Workshops
+
 - [Datapalooza 2020](https://tysonstanley.github.io/Workshops/Barrett_Datapalooza_2020.pdf)
 - [Mediation Analysis](https://tysonstanley.github.io/Workshops/MediationAnalysis.html)
 - [Secure Data Collection](https://tysonstanley.github.io/Workshops/2018WebConference.pdf)
