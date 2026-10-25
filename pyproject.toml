@@ -1,7 +1,7 @@
 [project]
 name = "tysonstanley-github-io"
 version = "0.1.0"
-description = "Add your description here"
+description = "The is my personal website and blog. This file is for any of the projects that use python. If in the future we need individual pyproject files, we will make those then."
 readme = "README.md"
 authors = [
     { name = "Tyson Barrett", email = "t.barrett88@gmail.com" }
