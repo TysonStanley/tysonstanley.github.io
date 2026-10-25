@@ -1,5 +1,5 @@
 ---
-title: "Healthcare Analytics"
+title: "Data That Saves Lives (and Dollars): An Introduction to Healthcare Analytics"
 subtitle: "ASC Workshop"
 date: "October 26, 2026"
 author: "Tyson Barrett, PhD"
@@ -30,7 +30,7 @@ execute:
 # Render from this folder:  quarto render healthcare_analytics.qmd
 # Python needs: pandas numpy statsmodels plotnine matplotlib
 # All data in data/ is fictitious; regenerate with  python data/make_data.py
-# quarto render ./assets/ASC/healthcare_analytics.qmd
+# quarto render ./assets/ASC/healthcare_analytics_ASC26.qmd
 jupyter: python3
 ---
 

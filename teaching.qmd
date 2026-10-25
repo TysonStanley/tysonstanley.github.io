@@ -71,8 +71,8 @@ Jamovi tutorials, REDCap guides, and *R for Researchers*.
 ### ASC
 
 - [Healthcare Analytics (ASC Workshop)](/assets/ASC/healthcare_analytics_ASC26.html) 
-    - [QMD File](/assets/ASC/healthcare_analytics_ASC26.qmd)
-    - [QMD Template](/assets/ASC/junipter_followalong_ASC26.qmd)
+    - [QMD File for the Slides](/assets/ASC/healthcare_analytics_ASC26.qmd)
+    - [QMD Template for the Examples](/assets/ASC/junipter_followalong_ASC26.qmd)
 
 ### Other Workshops
 
