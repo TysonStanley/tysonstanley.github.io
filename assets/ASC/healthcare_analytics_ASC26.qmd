@@ -30,7 +30,7 @@ execute:
 # Render from this folder:  quarto render healthcare_analytics.qmd
 # Python needs: pandas numpy statsmodels plotnine matplotlib
 # All data in data/ is fictitious; regenerate with  python data/make_data.py
-# quarto render ./assets/ASC/healthcare_analytics_ASC26.qmd
+# QUARTO_PYTHON=.venv/bin/python uv run quarto render ./assets/ASC/healthcare_analytics_ASC26.qmd
 jupyter: python3
 ---
 
@@ -359,7 +359,7 @@ pd.Series({k: len(v) for k, v in dict(claims=claims, members=members, ehr=ehr,
 - `dx1` = ICD-10 diagnosis · `procedure_or_drug` = CPT code or drug class
 - `place_of_service` tells you *where*: office, ED (23), inpatient (21), telehealth (02)
 
-## What in the H*ck?! Reversals {.smaller}
+## What in the H\*ck?! Reversals {.smaller}
 
 Claims get reversed and resubmitted. Sum dollars **by claim** before anything else.
 

@@ -4199,7 +4199,7 @@ Tyson Barrett, PhD
 </section>
 <section id="the-field-is-growing" class="slide level2">
 <h2>The Field Is Growing</h2>
-<div id="8bfb5211" class="cell" data-execution_count="2">
+<div id="35cef967" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 <figure>
@@ -4354,7 +4354,7 @@ Medicaid, state health departments, CDC
 </section>
 <section id="palliative-care-payor-provider-partnership" class="slide level2">
 <h2>Palliative Care: Payor-Provider Partnership</h2>
-<div id="6c64712a" class="cell" data-execution_count="3">
+<div id="a434d3a9" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 <figure>
@@ -4416,7 +4416,7 @@ Medicaid, state health departments, CDC
 <section id="the-data" class="slide level2">
 <h2>The Data</h2>
 <p>Highmark is a <strong>payor-provider</strong> system: an insurer (Highmark) <em>and</em> a health network (Allegheny Health Network). Similar to Intermountain Health.</p>
-<div id="1892095e" class="cell" data-execution_count="4">
+<div id="38d702f5" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 <figure>
@@ -4522,7 +4522,7 @@ Medicaid, state health departments, CDC
 <section id="meet-the-data" class="slide level2 smaller">
 <h2>Meet the Data</h2>
 <p><em>Juniper Health Plan</em> is <strong>fictitious</strong> — 3,000 Utah members in 2025.</p>
-<div id="f05f7089" class="cell" data-execution_count="5">
+<div id="67ca6710" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href aria-hidden="true" tabindex="-1"></a>claims  <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/claims.csv&quot;</span>, parse_dates<span class="op">=</span>[<span class="st">&quot;service_date&quot;</span>])</span>
 <span id="cb1-2"><a href aria-hidden="true" tabindex="-1"></a>members <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/members.csv&quot;</span>, parse_dates<span class="op">=</span>[<span class="st">&quot;enroll_start&quot;</span>, <span class="st">&quot;enroll_end&quot;</span>])</span>
 <span id="cb1-3"><a href aria-hidden="true" tabindex="-1"></a>ehr     <span class="op">=</span> pd.read_csv(<span class="st">&quot;data/ehr_encounters.csv&quot;</span>, parse_dates<span class="op">=</span>[<span class="st">&quot;encounter_date&quot;</span>])</span>
@@ -4532,7 +4532,7 @@ Medicaid, state health departments, CDC
 <span id="cb1-7"><a href aria-hidden="true" tabindex="-1"></a>members[<span class="st">&quot;zip&quot;</span>] <span class="op">=</span> members[<span class="st">&quot;zip&quot;</span>].astype(<span class="bu">str</span>)</span>
 <span id="cb1-8"><a href aria-hidden="true" tabindex="-1"></a>members[<span class="st">&quot;age&quot;</span>] <span class="op">=</span> <span class="dv">2025</span> <span class="op">-</span> members[<span class="st">&quot;birth_year&quot;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="bc4e03cb" class="cell" data-execution_count="6">
+<div id="2abef008" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>claims     27948
 members     3000
@@ -4551,7 +4551,7 @@ Name: rows, dtype: int64</code></pre>
 </section>
 <section id="what-a-claim-looks-like" class="slide level2 smaller">
 <h2>What a Claim Looks Like</h2>
-<div id="b00ba945" class="cell" data-execution_count="7">
+<div id="bbc1433a" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href aria-hidden="true" tabindex="-1"></a>(</span>
 <span id="cb3-2"><a href aria-hidden="true" tabindex="-1"></a>    claims</span>
 <span id="cb3-3"><a href aria-hidden="true" tabindex="-1"></a>    .sample(<span class="dv">6</span>, random_state<span class="op">=</span><span class="dv">3</span>)</span>
@@ -4650,10 +4650,10 @@ text-align: right;
 <li><code>place_of_service</code> tells you <em>where</em>: office, ED (23), inpatient (21), telehealth (02)</li>
 </ul>
 </section>
-<section id="what-in-the-hck-reversals-.smaller" class="slide level2">
-<h2>What in the H*ck?! Reversals {.smaller}</h2>
+<section id="what-in-the-hck-reversals" class="slide level2 smaller">
+<h2>What in the H*ck?! Reversals</h2>
 <p>Claims get reversed and resubmitted. Sum dollars <strong>by claim</strong> before anything else.</p>
-<div id="ceff3df4" class="cell" data-execution_count="8">
+<div id="06b4bf63" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href aria-hidden="true" tabindex="-1"></a>claims[<span class="st">&quot;claim_status&quot;</span>].value_counts()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>claim_status
@@ -4662,7 +4662,7 @@ reversed      413
 Name: count, dtype: int64</code></pre>
 </div>
 </div>
-<div id="72378cac" class="cell" data-execution_count="9">
+<div id="d1538175" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href aria-hidden="true" tabindex="-1"></a>net <span class="op">=</span> (</span>
 <span id="cb6-2"><a href aria-hidden="true" tabindex="-1"></a>    claims</span>
 <span id="cb6-3"><a href aria-hidden="true" tabindex="-1"></a>    .groupby([<span class="st">&quot;claim_id&quot;</span>, <span class="st">&quot;member_id&quot;</span>, <span class="st">&quot;service_date&quot;</span>, <span class="st">&quot;claim_type&quot;</span>,</span>
@@ -4683,7 +4683,7 @@ Name: count, dtype: int64</code></pre>
 <p><strong>P</strong>er <strong>M</strong>ember <strong>P</strong>er <strong>M</strong>onth = total paid ÷ member-months</p>
 <div class="columns">
 <div class="column" style="width:52%;">
-<div id="11121861" class="cell" data-execution_count="10">
+<div id="10ce53dd" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href aria-hidden="true" tabindex="-1"></a>paid <span class="op">=</span> net.groupby(<span class="st">&quot;member_id&quot;</span>)[<span class="st">&quot;paid_amt&quot;</span>].<span class="bu">sum</span>()</span>
 <span id="cb8-2"><a href aria-hidden="true" tabindex="-1"></a>mem <span class="op">=</span> members.assign(</span>
 <span id="cb8-3"><a href aria-hidden="true" tabindex="-1"></a>    paid<span class="op">=</span>members[<span class="st">&quot;member_id&quot;</span>].<span class="bu">map</span>(paid).fillna(<span class="dv">0</span>))</span>
@@ -4705,7 +4705,7 @@ Name: pmpm, dtype: float64</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
-<div id="b82997f4" class="cell" data-execution_count="11">
+<div id="8d152d27" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 <figure>
@@ -4720,7 +4720,7 @@ Name: pmpm, dtype: float64</code></pre>
 <section id="cost-is-concentrated" class="slide level2">
 <h2>Cost Is Concentrated</h2>
 <p>The top <strong>5%</strong> of members account for <strong>43%</strong> of spend; the top 20% for <strong>76%</strong>.</p>
-<div id="71525d36" class="cell" data-execution_count="13">
+<div id="ecbf2736" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 <figure>
@@ -4733,7 +4733,7 @@ Name: pmpm, dtype: float64</code></pre>
 </section>
 <section id="where-does-the-money-go" class="slide level2 smaller">
 <h2>Where Does the Money Go?</h2>
-<div id="dbc02c3a" class="cell" data-execution_count="14">
+<div id="dd98fb7e" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href aria-hidden="true" tabindex="-1"></a>by_pos <span class="op">=</span> (</span>
 <span id="cb10-2"><a href aria-hidden="true" tabindex="-1"></a>    net</span>
 <span id="cb10-3"><a href aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&quot;place_of_service&quot;</span>)</span>
@@ -4745,7 +4745,7 @@ Name: pmpm, dtype: float64</code></pre>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="4f49bfaa" class="cell" data-execution_count="15">
+<div id="cfe1a146" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 <style scoped>
@@ -4806,7 +4806,7 @@ text-align: right;
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="3fe2afab" class="cell" data-execution_count="16">
+<div id="c56d8df3" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 <figure>
@@ -4837,7 +4837,7 @@ text-align: right;
 </div>
 </div>
 <div class="fragment">
-<div id="dd8c5b89" class="cell" data-execution_count="17">
+<div id="6bdded04" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href aria-hidden="true" tabindex="-1"></a>ed <span class="op">=</span> net[net[<span class="st">&quot;place_of_service&quot;</span>].<span class="bu">str</span>.startswith(<span class="st">&quot;23&quot;</span>)]</span>
 <span id="cb11-2"><a href aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ed[<span class="st">&quot;dx1&quot;</span>].value_counts().head(<span class="dv">3</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -4850,7 +4850,7 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="e694023d" class="cell" data-execution_count="18">
+<div id="d21a59c3" class="cell" data-execution_count="18">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href aria-hidden="true" tabindex="-1"></a>rx <span class="op">=</span> net[net[<span class="st">&quot;claim_type&quot;</span>] <span class="op">==</span> <span class="st">&quot;pharmacy&quot;</span>]</span>
 <span id="cb13-2"><a href aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rx.groupby(<span class="st">&quot;procedure_or_drug&quot;</span>)[<span class="st">&quot;paid_amt&quot;</span>].<span class="bu">sum</span>().div(rx[<span class="st">&quot;paid_amt&quot;</span>].<span class="bu">sum</span>()).<span class="bu">round</span>(<span class="dv">2</span>).sort_values().tail(<span class="dv">3</span>))</span>
 <span id="cb13-3"><a href aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Members filling a GLP-1:&quot;</span>, rx.loc[rx[<span class="st">&quot;procedure_or_drug&quot;</span>] <span class="op">==</span> <span class="st">&quot;GLP-1 RA&quot;</span>, <span class="st">&quot;member_id&quot;</span>].nunique())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -4873,11 +4873,11 @@ Members filling a GLP-1: 191</code></pre>
 <section id="linking-ehr-to-claims" class="slide level2">
 <h2>Linking EHR to Claims</h2>
 <p>EHRs use a <strong>medical record number (MRN)</strong>, not a member ID. We need a crosswalk.</p>
-<div id="ffa46c66" class="cell" data-execution_count="19">
+<div id="22eed49c" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href aria-hidden="true" tabindex="-1"></a>ehr_m <span class="op">=</span> ehr.merge(xwalk, on<span class="op">=</span><span class="st">&quot;mrn&quot;</span>, how<span class="op">=</span><span class="st">&quot;left&quot;</span>)</span>
 <span id="cb15-2"><a href aria-hidden="true" tabindex="-1"></a>cov <span class="op">=</span> members[<span class="st">&quot;member_id&quot;</span>].isin(ehr_m[<span class="st">&quot;member_id&quot;</span>]).mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="b1d4580f" class="cell" data-execution_count="20">
+<div id="f78bf6f9" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-stdout">
 <pre><code>62% of members have any EHR data</code></pre>
 </div>
@@ -4886,7 +4886,7 @@ Members filling a GLP-1: 191</code></pre>
 </section>
 <section id="what-in-the-hck-data-entry-errors" class="slide level2">
 <h2>What in the H*ck?! Data Entry Errors</h2>
-<div id="5fcffb6d" class="cell" data-execution_count="21">
+<div id="efdaad3f" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-display" data-execution_count="21">
 <div>
 <figure>
@@ -4895,7 +4895,7 @@ Members filling a GLP-1: 191</code></pre>
 </div>
 </div>
 </div>
-<div id="bb7dd792" class="cell" data-execution_count="22">
+<div id="a1599d45" class="cell" data-execution_count="22">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href aria-hidden="true" tabindex="-1"></a>ehr_m.loc[<span class="op">~</span>ehr_m[<span class="st">&quot;bmi&quot;</span>].between(<span class="dv">12</span>, <span class="dv">70</span>), <span class="st">&quot;bmi&quot;</span>] <span class="op">=</span> np.nan   <span class="co"># set impossible values to missing</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -4903,7 +4903,7 @@ Members filling a GLP-1: 191</code></pre>
 <h2>Who Has Diabetes? Depends Who You Ask</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div id="7c22fbe6" class="cell" data-execution_count="23">
+<div id="8149af94" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href aria-hidden="true" tabindex="-1"></a>dx  <span class="op">=</span> <span class="bu">set</span>(net.loc[net[<span class="st">&quot;dx1&quot;</span>] <span class="op">==</span> <span class="st">&quot;E11.9&quot;</span>, <span class="st">&quot;member_id&quot;</span>])</span>
 <span id="cb18-2"><a href aria-hidden="true" tabindex="-1"></a>rx  <span class="op">=</span> <span class="bu">set</span>(net.loc[net[<span class="st">&quot;procedure_or_drug&quot;</span>] <span class="op">==</span> <span class="st">&quot;metformin&quot;</span>, <span class="st">&quot;member_id&quot;</span>])</span>
 <span id="cb18-3"><a href aria-hidden="true" tabindex="-1"></a>lab <span class="op">=</span> <span class="bu">set</span>(ehr_m.loc[ehr_m[<span class="st">&quot;a1c&quot;</span>] <span class="op">&gt;=</span> <span class="fl">6.5</span>, <span class="st">&quot;member_id&quot;</span>])</span>
@@ -4921,7 +4921,7 @@ Members filling a GLP-1: 191</code></pre>
 <span id="cb18-15"><a href aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:45%;">
-<div id="2b21e42d" class="cell" data-execution_count="24">
+<div id="ee6a1738" class="cell" data-execution_count="24">
 <div class="cell-output cell-output-display" data-execution_count="24">
 <div>
 <figure>
@@ -4949,13 +4949,13 @@ Members filling a GLP-1: 191</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="bdef734d" class="cell" data-execution_count="25">
+<div id="d082253b" class="cell" data-execution_count="25">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href aria-hidden="true" tabindex="-1"></a>phq <span class="op">=</span> ehr_m.groupby(<span class="st">&quot;member_id&quot;</span>)[<span class="st">&quot;phq9&quot;</span>].<span class="bu">max</span>().dropna()</span>
 <span id="cb19-2"><a href aria-hidden="true" tabindex="-1"></a>sev <span class="op">=</span> pd.cut(phq, [<span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>, <span class="dv">14</span>, <span class="dv">19</span>, <span class="dv">27</span>], labels<span class="op">=</span>[<span class="st">&quot;none&quot;</span>, <span class="st">&quot;mild&quot;</span>, <span class="st">&quot;moderate&quot;</span>, <span class="st">&quot;mod-severe&quot;</span>, <span class="st">&quot;severe&quot;</span>])</span>
 <span id="cb19-3"><a href aria-hidden="true" tabindex="-1"></a>dep_dx <span class="op">=</span> <span class="bu">set</span>(net.loc[net[<span class="st">&quot;dx1&quot;</span>].<span class="bu">str</span>.match(<span class="vs">r&quot;F3</span><span class="pp">[23]</span><span class="vs">&quot;</span>, na<span class="op">=</span><span class="va">False</span>), <span class="st">&quot;member_id&quot;</span>])</span>
 <span id="cb19-4"><a href aria-hidden="true" tabindex="-1"></a>high <span class="op">=</span> phq[phq <span class="op">&gt;=</span> <span class="dv">10</span>].index</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="98022630" class="cell" data-execution_count="26">
+<div id="e0dbe8f9" class="cell" data-execution_count="26">
 <div class="cell-output cell-output-stdout">
 <pre><code>{&#39;none&#39;: 706, &#39;mild&#39;: 290, &#39;moderate&#39;: 83, &#39;mod-severe&#39;: 31, &#39;severe&#39;: 20}
 PHQ-9 ≥ 10 without a dx: 46 of 134</code></pre>
@@ -4971,7 +4971,7 @@ PHQ-9 ≥ 10 without a dx: 46 of 134</code></pre>
 <section id="adding-neighborhood-context" class="slide level2 smaller">
 <h2>Adding Neighborhood Context</h2>
 <p>The <strong>Social Vulnerability Index (SVI)</strong> ranks areas 0–1 on poverty, housing, transportation, etc.</p>
-<div id="1203df91" class="cell" data-execution_count="27">
+<div id="afd446c8" class="cell" data-execution_count="27">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href aria-hidden="true" tabindex="-1"></a>census.head(<span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 <div>
@@ -5041,7 +5041,7 @@ text-align: right;
 </div>
 </div>
 </div>
-<div id="63618fb1" class="cell" data-execution_count="28">
+<div id="03d87959" class="cell" data-execution_count="28">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href aria-hidden="true" tabindex="-1"></a>ed_n <span class="op">=</span> ed.groupby(<span class="st">&quot;member_id&quot;</span>).size().rename(<span class="st">&quot;ed_visits&quot;</span>)</span>
 <span id="cb22-2"><a href aria-hidden="true" tabindex="-1"></a>by_zip <span class="op">=</span> (mem.merge(ed_n, on<span class="op">=</span><span class="st">&quot;member_id&quot;</span>, how<span class="op">=</span><span class="st">&quot;left&quot;</span>).fillna({<span class="st">&quot;ed_visits&quot;</span>: <span class="dv">0</span>})</span>
 <span id="cb22-3"><a href aria-hidden="true" tabindex="-1"></a>             .groupby(<span class="st">&quot;zip&quot;</span>)[[<span class="st">&quot;ed_visits&quot;</span>, <span class="st">&quot;member_months&quot;</span>]].<span class="bu">sum</span>()</span>
@@ -5051,7 +5051,7 @@ text-align: right;
 </section>
 <section id="ed-visits-rise-with-vulnerability" class="slide level2">
 <h2>ED Visits Rise with Vulnerability</h2>
-<div id="7d450570" class="cell" data-execution_count="29">
+<div id="0ec9b152" class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display" data-execution_count="29">
 <div>
 <figure>
@@ -5073,7 +5073,7 @@ text-align: right;
 <p>Vendors link consumer records to members and sell <strong>person-level</strong> social risk.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="57bb6804" class="cell" data-execution_count="30">
+<div id="27b9abc7" class="cell" data-execution_count="30">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> members[[<span class="st">&quot;member_id&quot;</span>]].merge(</span>
 <span id="cb23-2"><a href aria-hidden="true" tabindex="-1"></a>    vendor, on<span class="op">=</span><span class="st">&quot;member_id&quot;</span>, how<span class="op">=</span><span class="st">&quot;left&quot;</span>)</span>
 <span id="cb23-3"><a href aria-hidden="true" tabindex="-1"></a>conf <span class="op">=</span> v[<span class="st">&quot;match_confidence&quot;</span>]</span>
@@ -5085,7 +5085,7 @@ High-confidence:  67%</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="63e668bf" class="cell" data-execution_count="31">
+<div id="3d264d6d" class="cell" data-execution_count="31">
 <div class="cell-output cell-output-display" data-execution_count="31">
 <div>
 <figure>
@@ -5101,7 +5101,7 @@ High-confidence:  67%</code></pre>
 <h2>Food Insecurity and the ED</h2>
 <div class="columns">
 <div class="column" style="width:52%;">
-<div id="624e28c7" class="cell" data-execution_count="32">
+<div id="086dd149" class="cell" data-execution_count="32">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href aria-hidden="true" tabindex="-1"></a>dat <span class="op">=</span> (</span>
 <span id="cb25-2"><a href aria-hidden="true" tabindex="-1"></a>    mem</span>
 <span id="cb25-3"><a href aria-hidden="true" tabindex="-1"></a>    .merge(ed_n, on<span class="op">=</span><span class="st">&quot;member_id&quot;</span>, how<span class="op">=</span><span class="st">&quot;left&quot;</span>)</span>
@@ -5130,7 +5130,7 @@ Name: per_1000, dtype: float64</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
-<div id="e4a2ff0d" class="cell" data-execution_count="33">
+<div id="b8a62e52" class="cell" data-execution_count="33">
 <div class="cell-output cell-output-display" data-execution_count="33">
 <div>
 <figure>
@@ -5144,7 +5144,7 @@ Name: per_1000, dtype: float64</code></pre>
 <section id="putting-it-all-together-a-poisson-model" class="slide level2 smaller">
 <h2>Putting It All Together: A Poisson Model</h2>
 <p>ED visits are counts with unequal exposure, so use Poisson with an <strong>offset</strong> for member-months.</p>
-<div id="74c958e0" class="cell" data-execution_count="34">
+<div id="cdaf9a0c" class="cell" data-execution_count="34">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href aria-hidden="true" tabindex="-1"></a>dat[<span class="st">&quot;diabetes_dx&quot;</span>] <span class="op">=</span> dat[<span class="st">&quot;member_id&quot;</span>].isin(dx).astype(<span class="bu">int</span>)</span>
 <span id="cb27-2"><a href aria-hidden="true" tabindex="-1"></a>fit <span class="op">=</span> smf.glm(</span>
 <span id="cb27-3"><a href aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ed_visits ~ food_insecurity_index + svi + age + diabetes_dx + C(plan_type)&quot;</span>,</span>
@@ -5153,7 +5153,7 @@ Name: per_1000, dtype: float64</code></pre>
 <span id="cb27-6"><a href aria-hidden="true" tabindex="-1"></a>    offset <span class="op">=</span> np.log(dat[<span class="st">&quot;member_months&quot;</span>])</span>
 <span id="cb27-7"><a href aria-hidden="true" tabindex="-1"></a>).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="8a499565" class="cell" data-execution_count="35">
+<div id="3dae7c66" class="cell" data-execution_count="35">
 <div class="cell-output cell-output-display" data-execution_count="35">
 <div>
 <figure>
@@ -5182,7 +5182,7 @@ Name: per_1000, dtype: float64</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="a0ff1faf" class="cell" data-execution_count="36">
+<div id="87ec4af9" class="cell" data-execution_count="36">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href aria-hidden="true" tabindex="-1"></a>fit2 <span class="op">=</span> smf.glm(<span class="st">&quot;ed_visits ~ food_insecurity_index + housing_instability + transportation_barrier&quot;</span></span>
 <span id="cb28-2"><a href aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot; + svi + age + diabetes_dx + C(plan_type)&quot;</span>, data<span class="op">=</span>dat,</span>
 <span id="cb28-3"><a href aria-hidden="true" tabindex="-1"></a>               family<span class="op">=</span>sm.families.Poisson(), offset<span class="op">=</span>np.log(dat[<span class="st">&quot;member_months&quot;</span>])).fit()</span>
