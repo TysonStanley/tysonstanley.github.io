@@ -1,0 +1,384 @@
+---
+title: "The present and future of `data.table`"
+subtitle: "Where the project is today and where it's headed"
+author: "Tyson S. Barrett"
+date: today
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    preview-links: auto
+    incremental: false
+    code-line-numbers: false
+    footer: "github.com/Rdatatable/data.table · numfocus.org/project/data-table"
+    chalkboard: false
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+# quarto render assets/data.table/datatable-present-future.qmd
+---
+
+```{r}
+#| label: setup
+library(data.table)
+library(ggplot2)
+
+# Fallback values (pulled 2026-11-13). Live chunks below overwrite these
+# when the network/packages are available at render time.
+stats = list(
+  version_cran   = "1.18.6",
+  version_dev    = "1.18.99",
+  authors_all    = 193L,
+  authors_12mo   = 30L,
+  new_12mo       = 15L,
+  commits_12mo   = 252L,
+  downloads_mo   = NA_real_,
+  revdeps        = NA_integer_,
+  stars          = NA_integer_,
+  open_issues    = NA_integer_,
+  open_prs       = NA_integer_
+)
+
+fmt = function(x) if (is.na(x)) "—" else format(x, big.mark = ",")
+```
+
+```{r}
+#| label: live-stats
+# CRAN downloads (last 30 days) — needs {cranlogs}
+try({
+  dl = cranlogs::cran_downloads("data.table", when = "last-month")
+  stats$downloads_mo = sum(dl$count)
+}, silent = TRUE)
+
+# Direct reverse dependencies on CRAN
+try({
+  db = tools::CRAN_package_db()
+  rd = tools::package_dependencies("data.table", db = db, reverse = TRUE,
+                                   which = c("Depends", "Imports", "LinkingTo"))
+  stats$revdeps = length(rd[[1]])
+}, silent = TRUE)
+
+# GitHub stars / open issues / open PRs — needs {gh} and a GITHUB_PAT
+try({
+  repo = gh::gh("/repos/Rdatatable/data.table")
+  stats$stars = repo$stargazers_count
+  stats$open_prs = gh::gh("/search/issues",
+    q = "repo:Rdatatable/data.table type:pr state:open")$total_count
+  stats$open_issues = gh::gh("/search/issues",
+    q = "repo:Rdatatable/data.table type:issue state:open")$total_count
+}, silent = TRUE)
+```
+
+## Today's focus {.center}
+
+::: {.fragment}
+The history talk covered **how we got here**.
+:::
+
+::: {.fragment}
+This talk is about **where we're going**, and what it takes to get there.
+:::
+
+::: notes
+Pick up where the history talk ends, around 2023 and the NSF POSE grant. Four threads for this talk: the project's health today, the new institutional home (NumFOCUS), funding, and how we handle AI-generated contributions.
+:::
+
+# Where we are {background-color="#1f3b57"}
+
+## By the numbers
+
+:::: {.columns}
+::: {.column width="50%"}
+### Usage
+- **`r fmt(stats$downloads_mo)`** CRAN downloads in the last month
+- **`r fmt(stats$revdeps)`** CRAN packages depend on it directly
+- **`r fmt(stats$stars)`** GitHub stars
+- **Zero** dependencies beyond base R
+:::
+
+::: {.column width="50%"}
+### Development
+- **`r stats$version_cran`** on CRAN · **`r stats$version_dev`** in development
+- **`r stats$authors_all`** people have committed code over the project's lifetime
+- **`r stats$authors_12mo`** committed in the last 12 months (**`r stats$new_12mo`** were first-timers)
+- **`r stats$commits_12mo`** commits in the last 12 months
+:::
+::::
+
+::: notes
+Numbers refresh at render time. If cranlogs or gh aren't available the slide shows a dash, so render with network access. The git numbers came from a clone on 2026-11-13; see the refresh chunk at the end.
+:::
+
+## Contributors per year
+
+```{r}
+#| label: fig-contributors
+#| fig-width: 10
+#| fig-height: 4.8
+contrib = data.table(
+  year    = 2015:2026,
+  authors = c(20, 16, 20, 26, 38, 17, 32, 11, 14, 47, 42, 26),
+  commits = c(407, 645, 484, 387, 546, 190, 318, 51, 152, 617, 565, 186)
+)
+contrib[, period := fifelse(year >= 2024, "NSF POSE grant & after", "Before")]
+contrib[year == 2026, label := "2026\n(YTD)"]
+contrib[is.na(label), label := as.character(year)]
+
+ggplot(contrib, aes(factor(year), authors, fill = period)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = authors), vjust = -0.4, size = 4.5) +
+  scale_x_discrete(labels = contrib$label) +
+  scale_fill_manual(values = c("Before" = "grey70",
+                               "NSF POSE grant & after" = "#1f77b4")) +
+  labs(x = NULL, y = "Unique commit authors", fill = NULL) +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "top", panel.grid.major.x = element_blank())
+```
+
+::: notes
+The 2022 low point (11 authors, 51 commits) is when the project leaned almost entirely on one maintainer. With the governance rewrite and the NSF POSE grant, contributors went from about 14 to 47 in a single year, and we have held most of that since the grant ended.
+:::
+
+## Issues & pull requests
+
+:::: {.columns}
+::: {.column width="50%"}
+- **`r fmt(stats$open_issues)`** open issues
+- **`r fmt(stats$open_prs)`** open pull requests
+:::
+::: {.column width="50%"}
+- Triage through labels, CODEOWNERS reviewers, and consensus-based merging
+- Performance regression testing on every PR with **atime** CI
+:::
+::::
+
+::: callout-note
+## Before the governance change
+More than half of new contributions often went **weeks** without a comment, label, or assignee.
+:::
+
+::: notes
+Source for the "before" claim: Governance Matters: Lessons from Restructuring the data.table OSS Project (arXiv 2601.13466). TODO: add a closed-vs-opened per year chart if there's time.
+:::
+
+## Who builds data.table now
+
+Governance defines roles that anyone can grow into:
+
+| Role | How you get there |
+|------|-------------------|
+| **Contributor** | Open an issue or PR |
+| **Reviewer** | After significant PRs to a file → listed in CODEOWNERS |
+| **Committer** | Consistent careful reviews → consensus of Committers |
+| **CRAN Maintainer** | PR to DESCRIPTION + CRAN handoff |
+| **Community Engagement Coordinator** | Runs The Raft blog, Seal of Approval, events |
+
+::: notes
+The main point is that the project no longer depends on one person, and the path to becoming a committer is written down.
+:::
+
+# A new home: NumFOCUS {background-color="#1f3b57"}
+
+## data.table joined NumFOCUS (2025)
+
+- Became a **NumFOCUS Sponsored Project** in July 2025
+- **First R-only package** to do so (alongside pandas, scikit-learn, Julia, …)
+- Timed to the **end of the NSF POSE grant** (Aug 2025)
+
+::: {.fragment}
+### What NumFOCUS gives us
+- Fiscal sponsorship → **tax-deductible donations**
+- Help with grants, taxes, administration, and events
+- A professional **Code of Conduct** reporting process
+- A network of peer projects
+:::
+
+## What NumFOCUS does *not* do
+
+::: {.r-fit-text}
+NumFOCUS handles **structure**, not **decisions**.
+:::
+
+- Code decisions → project governance (consensus)
+- Spending decisions → **Committers**
+- Tie-breaker on deadlines → **CRAN Maintainer**
+
+::: notes
+People often assume joining a foundation means giving up control. It doesn't. GOVERNANCE.md has a "Finances and Funding" section that spells out who decides how money gets spent.
+:::
+
+# Funding the work {background-color="#1f3b57"}
+
+## The sustainability problem
+
+- data.table sits underneath **hundreds** of CRAN/Bioconductor packages and **thousands** indirectly
+- It is used in public health, finance, government, and academia
+- Most of the work is still **volunteer time**
+
+::: {.fragment}
+**NSF POSE (2023–2025)** showed what funding does: more contributors, more reviews, more releases.
+
+So how do we keep that going?
+:::
+
+## Funding strategy
+
+:::: {.columns}
+::: {.column width="50%"}
+### Where it comes from
+- Individual & corporate **donations** via NumFOCUS
+- **Grants**: <!-- TODO: list grants in progress, e.g. NumFOCUS SDG, R Consortium ISC, CZI EOSS, NSF -->
+- **Corporate sponsors** that depend on data.table
+:::
+::: {.column width="50%"}
+### What it pays for
+- Developer time for **review & triage**
+- Performance and CRAN-compatibility work (r-devel churn, new platforms)
+- Documentation and **translations**
+- Travel, workshops, and the **Ambassadors** program
+:::
+::::
+
+::: notes
+TODO: fill in the specific applications that are in flight and their status. Possible ask: "If your org relies on data.table, talk to us about sponsorship."
+:::
+
+# Our AI policy {background-color="#1f3b57"}
+
+## What the policy says
+
+::: {.incremental}
+- **Package code:** no AI code assistants for anything that ships in the CRAN tarball
+- **Why:** reviewers *can* judge security and quality, but nobody can verify **license / IP provenance** of generated code
+- **Peripheral files are fine:** anything in `.Rbuildignore` (CI configs, GitHub Actions, etc.) may use LLMs
+- **AI may still help you understand:** analyzing, explaining, and debugging locally are OK, as long as changes are reverted
+:::
+
+## Telling the agents directly
+
+`AGENTS.md` (added July 2026) gives guidance to the coding agents themselves:
+
+- If asked to write package code → **stop and report that this is prohibited**
+- Analyze, explain, and debug → allowed
+- Revert any prohibited edits before handing back to the human
+
+::: notes
+So the policy now lives in two places: CONTRIBUTING.md for humans and AGENTS.md for agents. There was also an "LLM repellent" addition to CONTRIBUTING.md in Nov 2025.
+:::
+
+## Why this matters for a foundational package
+
+- data.table is **MPL-2.0** and sits deep in many dependency trees
+- Unclear provenance could become a problem **for everyone downstream**
+- It also protects **reviewer time**: low-effort generated PRs cost more to review than they're worth
+
+::: {.fragment}
+### Open questions
+- How does the policy change as provenance tooling matures?
+- How do we help contributors who use AI for learning, not authoring?
+<!-- TODO: anything under active discussion among committers -->
+:::
+
+# What's shipping {background-color="#1f3b57"}
+
+## Release cadence
+
+```{r}
+#| label: releases
+rel = data.table(
+  version = c("1.17.0", "1.17.8", "1.18.0", "1.18.2.1", "1.18.4", "1.18.6"),
+  date    = as.IDate(c("2025-02-21", "2025-07-10", "2025-12-24",
+                       "2026-01-27", "2026-05-05", "2026-08-24"))
+)
+knitr::kable(rel, col.names = c("Version", "Tagged"))
+```
+
+Steady releases, each discussed in an issue and agreed by consensus
+
+## Coming in the next release (1.18.99 dev)
+
+- **GForce / lapply optimizer rewrite**: an AST walker with modular optimization paths
+  - `Map(fun, .SD)` gets optimized
+  - `sum(as.numeric(x))` and `max(x) - min(x)` now use GForce
+- `nafill()` / `setnafill()` handle **logical, factor, character, Date, POSIXct**
+- `dcast()` / `melt()` work directly on **data.frames**
+- `showProgress=` accepts an update interval in seconds
+
+## Example: the GForce rewrite
+
+```{.r}
+DT = data.table(g = sample(letters[1:3], 1e7, TRUE),
+                x = sample(1e3L, 1e7, TRUE))
+
+# Previously needed a setup step or fell back to slow, unoptimized evaluation
+DT[, .(range = max(x) - min(x),
+       total = sum(as.numeric(x))), by = g]
+
+# Map() is now optimized the same way lapply() is
+DT[, Map(sum, .SD), by = g]
+```
+
+::: notes
+Credit Ben Schwendinger for the implementation, plus Grant McDermott, Jan Gorecki, Michael Chirico, and Hugh Parsonage for the suggestions. This rewrite makes future optimizations much cheaper to add.
+:::
+
+## Breaking changes (we pre-announce these)
+
+- `froll*()`: `hasNA` is removed → use `has.nf`
+- `frollapply()`: `x`, `n` are removed → use `X`, `N`
+- `datatable.old.matrix.autoname` now defaults to `FALSE`
+- `is.numeric()` now returns `FALSE` for `IDate` / `ITime`
+
+Each one was flagged a release ahead under *"Note of intended future potential breaking changes"*
+
+# Where we're headed {background-color="#1f3b57"}
+
+## Roadmap
+
+<!-- TODO: confirm priorities with the committers -->
+
+::: {.incremental}
+- **Performance:** extend the new optimizer to more expressions
+- **Stability:** keep up with r-devel/C API changes and new platforms
+- **Ecosystem:** grow the *Seal of Approval* family (extensions & bridges like dtplyr, nc)
+- **People:** more Reviewers → more Committers, with less load on any one person
+- **Sustainability:** turn NumFOCUS sponsorship into predictable funding
+:::
+
+## How you can help
+
+:::: {.columns}
+::: {.column width="50%"}
+### Contribute
+- Triage or reproduce issues
+- Review PRs in areas you know
+- Write docs, vignettes, translations
+- Submit to **The Raft** blog
+:::
+::: {.column width="50%"}
+### Support
+- **Donate** via NumFOCUS (tax-deductible)
+- Ask your employer to **sponsor**
+- Tell us about your **use case**, since it helps grant applications
+:::
+::::
+
+## Thank you {.center}
+
+**github.com/Rdatatable/data.table**
+
+**numfocus.org/project/data-table**
+
+**rdatatable-community.github.io/The-Raft**
+
+```{r}
+#| label: refresh-git-stats
+#| eval: false
+# Re-run against a local clone to refresh the hard-coded git numbers:
+# git clone https://github.com/Rdatatable/data.table.git
+# git log --format='%aN' | sort -u | wc -l                         # all-time authors
+# git log --since='12 months ago' --format='%aN' | sort -u | wc -l # last 12 months
+# git log --since='12 months ago' --oneline | wc -l                # commits
+```
