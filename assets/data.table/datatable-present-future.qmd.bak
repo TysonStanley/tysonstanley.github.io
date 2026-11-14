@@ -1,0 +1,356 @@
+---
+title: "The present and future of `data.table`"
+subtitle: "Celebrating `data.table`'s Anniversary"
+author: "Tyson S. Barrett"
+date: today
+format:
+  revealjs:
+    theme: [default]
+    slide-number: true
+    preview-links: auto
+    incremental: false
+    code-line-numbers: false
+    footer: "github.com/Rdatatable/data.table · numfocus.org/project/data-table"
+    chalkboard: false
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+# quarto render assets/data.table/datatable-present-future.qmd
+---
+
+```{r}
+#| label: setup
+library(data.table)
+library(ggplot2)
+
+# Fallback values (pulled 2026-11-13). Live chunks below overwrite these
+# when the network/packages are available at render time.
+stats = list(
+  version_cran   = "1.18.6",
+  version_dev    = "1.18.99",
+  authors_all    = 193L,
+  authors_12mo   = 30L,
+  new_12mo       = 15L,
+  commits_12mo   = 252L,
+  downloads_mo   = NA_real_,
+  revdeps        = NA_integer_,
+  stars          = NA_integer_,
+  open_issues    = NA_integer_,
+  open_prs       = NA_integer_
+)
+
+fmt = function(x) if (is.na(x)) "—" else format(x, big.mark = ",")
+```
+
+```{r}
+#| label: live-stats
+# CRAN downloads (last 30 days) — needs {cranlogs}
+try({
+  dl = cranlogs::cran_downloads("data.table", when = "last-month")
+  stats$downloads_mo = sum(dl$count)
+}, silent = TRUE)
+
+# Direct reverse dependencies on CRAN
+try({
+  db = tools::CRAN_package_db()
+  rd = tools::package_dependencies("data.table", db = db, reverse = TRUE,
+                                   which = c("Depends", "Imports", "LinkingTo"))
+  stats$revdeps = length(rd[[1]])
+}, silent = TRUE)
+
+# GitHub stars / open issues / open PRs — needs {gh} and a GITHUB_PAT
+try({
+  repo = gh::gh("/repos/Rdatatable/data.table")
+  stats$stars = repo$stargazers_count
+  stats$open_prs = gh::gh("/search/issues",
+    q = "repo:Rdatatable/data.table type:pr state:open")$total_count
+  stats$open_issues = gh::gh("/search/issues",
+    q = "repo:Rdatatable/data.table type:issue state:open")$total_count
+}, silent = TRUE)
+```
+
+
+## {background-color="#1f3b57"}
+
+![](images/airlines.png)
+
+. . .
+
+![](images/micro.png)
+
+
+## Today's focus {.center}
+
+::: {.fragment}
+The history talk covered **how we got here**.
+:::
+
+::: {.fragment}
+This talk is about **what is happening right now** and some hints about **where we're going**
+:::
+
+
+# Where we are {background-color="#1f3b57"}
+
+## By the numbers
+
+:::: {.columns}
+::: {.column width="50%"}
+### Usage
+- **`r fmt(stats$downloads_mo)`** CRAN downloads in the last month
+- **`r fmt(stats$revdeps)`** CRAN packages depend on it directly
+- **`r fmt(stats$stars)`** GitHub stars
+- **Zero** dependencies beyond base R
+:::
+
+::: {.column width="50%"}
+### Development
+- **`r stats$version_cran`** on CRAN · **`r stats$version_dev`** in development
+- **`r stats$authors_all`** people have committed code over the project's lifetime
+- **`r stats$authors_12mo`** committed in the last 12 months **(`r stats$new_12mo` were first-timers)**
+- **`r stats$commits_12mo`** commits in the last 12 months
+:::
+::::
+
+
+## Supporting Popular Packages {.smaller .scrollable}
+
+
+|	 | Package    | Downloads (30 days)  | What it is |
+|----|------------|----------------------|------------|
+|1	 | dtplyr     | 306,927	             | data.table backend for dplyr
+|2	 | plotly     | 253,181	             | Interactive graphics
+|3	 | Hmisc      | 215,002	             | Harrell’s miscellaneous stats tools
+|4	 | prodlim    | 119,576	             | Product-limit survival estimation
+|5	 | flextable  | 104,318	             | Tables for Word, PowerPoint and HTML
+|6	 | ModelMetrics | 82,254             | Model performance metrics
+|7	 | xgboost	  | 72,042               | Gradient boosting
+|8	 | DescTools  | 65,576               | Descriptive statistics
+|9	 | fastDummies | 61,199              | Dummy-variable creation
+|10	 | rlist      | 49,934               | List manipulation
+|11	 | rio	      | 42,538               | Data import and export
+|12	 | modelsummary | 37,048             | Regression tables
+|13	 | marginaleffects | 36,806          | Marginal effects
+
+## Contributors per year
+
+```{r}
+#| label: fig-contributors
+#| fig-width: 10
+#| fig-height: 5
+contrib = data.table(
+  year    = 2015:2026,
+  authors = c(20, 16, 20, 26, 38, 17, 32, 11, 14, 47, 42, 26),
+  commits = c(407, 645, 484, 387, 546, 190, 318, 51, 152, 617, 565, 186)
+)
+contrib[, period := fifelse(year >= 2024, "NSF POSE grant & after", "Before")]
+contrib[year == 2026, label := "2026\n(YTD)"]
+contrib[is.na(label), label := as.character(year)]
+
+ggplot(contrib, aes(factor(year), authors, fill = period)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = authors), vjust = -1, size = 4.5) +
+  scale_x_discrete(labels = contrib$label) +
+  scale_fill_manual(values = c("Before" = "grey70",
+                               "NSF POSE grant & after" = "#1f77b4")) +
+  labs(x = NULL, y = "Unique commit authors", fill = NULL) +
+  theme_minimal(base_size = 16) +
+  theme(legend.position = "top", panel.grid.major.x = element_blank()) +
+  coord_cartesian(ylim = c(0, 50))
+```
+
+
+## Governance
+
+#### Benevolent Dictator to Role-based Team Decisions
+
+![](images/govdoc.png)
+
+<https://arxiv.org/pdf/2601.13466>
+
+## Who builds data.table now {.smaller}
+
+Governance defines roles that anyone can grow into:
+
+| Role | How you get there |
+|------|-------------------|
+| **Contributor** | Open an issue or PR |
+| **Reviewer** | After significant PRs to a file → listed in CODEOWNERS |
+| **Committer** | Consistent careful reviews → consensus of Committers |
+| **CRAN Maintainer** | PR to DESCRIPTION + CRAN handoff |
+| **Community Engagement Coordinator** | Runs The Raft blog, Seal of Approval, events |
+
+
+# A new home: NumFOCUS {background-color="#1f3b57"}
+
+## data.table joined NumFOCUS (2025)
+
+- Became a **NumFOCUS Sponsored Project** in July 2025
+- **First R-only package** to do so (alongside pandas, scikit-learn, Julia, …)
+- Timed to the **end of the NSF POSE grant** (Aug 2025)
+
+::: {.fragment}
+### What NumFOCUS gives us
+- Fiscal sponsorship → **tax-deductible donations**
+- Help with grants, taxes, administration, and events
+- A professional **Code of Conduct** reporting process
+- A network of peer projects
+:::
+
+## What NumFOCUS does *not* do
+
+::: {.r-fit-text}
+NumFOCUS handles **structure**, but goverannce still defines the **decision process**.
+:::
+
+- Code decisions → project governance (consensus)
+- Spending decisions → **Committers**
+- Tie-breaker on deadlines → **CRAN Maintainer**
+
+# Funding the work {background-color="#1f3b57"}
+
+## The sustainability problem
+
+- data.table sits underneath **hundreds** of CRAN/Bioconductor packages and **thousands** indirectly
+- It is used in public health, finance, government, and academia (e.g. directly by Public Health Scotland, Eurostat, Spanish National Statistics Institute, UK Institute and Faculty of Actuaries’)
+- Most of the work is still **volunteer time**
+
+::: {.fragment}
+**NSF POSE (2023–2025)** showed what funding does: more contributors, more reviews, more releases.
+
+So how do we keep that going?
+:::
+
+## Funding strategy
+
+:::: {.columns}
+::: {.column width="50%"}
+### Where it comes from
+- Individual & corporate **donations** via NumFOCUS
+- **Grants** including NSF, UKRI, and some in discussions
+- **Corporate sponsors** that depend on data.table
+:::
+::: {.column width="50%"}
+### What it pays for
+- Developer time for **review & triage**
+- Performance and CRAN-compatibility work (r-devel churn, new platforms)
+- Documentation and **translations**
+- Travel, workshops, etc.
+:::
+::::
+
+
+# Our AI policy {background-color="#1f3b57"}
+
+## What the policy says
+
+::: {.incremental}
+- **Package code:** no AI code assistants for anything that ships in the CRAN tarball
+- **Why:** reviewers *can* judge security and quality, but nobody can verify **license / IP provenance** of generated code
+- **Peripheral files are fine:** anything in `.Rbuildignore` (CI configs, GitHub Actions, etc.) may use LLMs
+- **AI may still help you understand:** analyzing, explaining, and debugging locally are OK, as long as changes are reverted
+:::
+
+## Telling the agents directly
+
+![](images/agents.png)
+
+
+## Why this matters for a foundational package {.smaller .scrollable}
+
+:::: {.columns}
+::: {.column width="50%"}
+[![](images/aiprobs.png)](https://bsky.app/profile/healthandstats.bsky.social/post/3mxb27m2w5s2w)
+:::
+::: {.column width="50%"}
+- data.table is **MPL-2.0** and sits deep in many dependency trees
+- Unclear provenance could become a problem **for everyone downstream**
+- It also protects **reviewer time**: low-effort generated PRs cost more to review than they're worth
+:::
+::::
+
+
+
+# What's shipping {background-color="#1f3b57"}
+
+## Release cadence
+
+```{r}
+#| label: releases
+rel = data.table(
+  version = c("1.17.0", "1.17.8", "1.18.0", "1.18.2.1", "1.18.4", "1.18.6"),
+  date    = as.IDate(c("2025-02-21", "2025-07-10", "2025-12-24", "2026-01-27", "2026-05-05", "2026-08-24"))
+)
+knitr::kable(rel, col.names = c("Version", "Tagged"))
+```
+
+Steady releases, each discussed in an issue and agreed by consensus
+
+## Coming in the next release (1.18.99 dev) {.smaller}
+
+- **GForce / lapply optimizer rewrite**: an AST walker with modular optimization paths
+  - `Map(fun, .SD)` gets optimized
+  - `sum(as.numeric(x))` and `max(x) - min(x)` now use GForce
+- `nafill()` / `setnafill()` handle **logical, factor, character, Date, POSIXct**
+- `dcast()` / `melt()` work directly on **data.frames**
+- `showProgress=` accepts an update interval in seconds
+
+## Example: the GForce rewrite
+
+```{.r}
+DT = data.table(g = sample(letters[1:3], 1e7, TRUE),
+                x = sample(1e3L, 1e7, TRUE))
+
+# Previously needed a setup step or fell back to slow, not anymore
+DT[, .(range = max(x) - min(x),
+       total = sum(as.numeric(x))), by = g]
+
+# Map() is now optimized the same way lapply() is
+DT[, Map(sum, .SD), by = g]
+```
+
+
+# Where we're headed {background-color="#1f3b57"}
+
+
+## Roadmap
+
+![](images/roadmap.svg)
+
+## How you can help
+
+:::: {.columns}
+::: {.column width="50%"}
+### Contribute
+- Triage or reproduce issues
+- Review PRs in areas you know (if beginner, look for beginner tag)
+- Write docs, vignettes, translations
+- Submit to **The Raft** blog
+:::
+::: {.column width="50%"}
+### Support
+- **Donate** via NumFOCUS (tax-deductible)
+- Ask your employer to **sponsor**
+- Tell us about your **use case**, since it helps grant applications
+:::
+::::
+
+## Thank you {.center}
+
+**github.com/Rdatatable/data.table**
+
+**numfocus.org/project/data-table**
+
+**rdatatable-community.github.io/The-Raft**
+
+```{r}
+#| label: refresh-git-stats
+#| eval: false
+# Re-run against a local clone to refresh the hard-coded git numbers:
+# git clone https://github.com/Rdatatable/data.table.git
+# git log --format='%aN' | sort -u | wc -l                         # all-time authors
+# git log --since='12 months ago' --format='%aN' | sort -u | wc -l # last 12 months
+# git log --since='12 months ago' --oneline | wc -l                # commits
+```

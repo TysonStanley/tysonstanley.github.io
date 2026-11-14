@@ -5,7 +5,7 @@ author: "Tyson S. Barrett"
 date: today
 format:
   revealjs:
-    theme: [default]
+    theme: [default, dt-theme.scss]
     slide-number: true
     preview-links: auto
     incremental: false
@@ -84,11 +84,11 @@ try({
 ## Today's focus {.center}
 
 ::: {.fragment}
-The history talk covered **how we got here**.
+The history talk covered [how we got here]{.hl-muted}.
 :::
 
 ::: {.fragment}
-This talk is about **what is happening right now** and some hints about **where we're going**
+This talk is about [what is happening right now]{.hl-teal} and some hints about [where we're going]{.hl-amber}
 :::
 
 
@@ -96,21 +96,37 @@ This talk is about **what is happening right now** and some hints about **where 
 
 ## By the numbers
 
-:::: {.columns}
-::: {.column width="50%"}
-### Usage
-- **`r fmt(stats$downloads_mo)`** CRAN downloads in the last month
-- **`r fmt(stats$revdeps)`** CRAN packages depend on it directly
-- **`r fmt(stats$stars)`** GitHub stars
-- **Zero** dependencies beyond base R
-:::
+[Usage]{.stat-label}
 
-::: {.column width="50%"}
-### Development
-- **`r stats$version_cran`** on CRAN · **`r stats$version_dev`** in development
-- **`r stats$authors_all`** people have committed code over the project's lifetime
-- **`r stats$authors_12mo`** committed in the last 12 months **(`r stats$new_12mo` were first-timers)**
-- **`r stats$commits_12mo`** commits in the last 12 months
+:::: {.stat-grid}
+::: {.stat .teal}
+[`r fmt(stats$downloads_mo)`]{.num} [CRAN downloads, last month]{.lbl}
+:::
+::: {.stat .teal}
+[`r fmt(stats$revdeps)`]{.num} [CRAN packages depend on it directly]{.lbl}
+:::
+::: {.stat .teal}
+[`r fmt(stats$stars)`]{.num} [GitHub stars]{.lbl}
+:::
+::: {.stat .teal}
+[0]{.num} [dependencies beyond base R]{.lbl}
+:::
+::::
+
+[Development]{.stat-label}
+
+:::: {.stat-grid}
+::: {.stat .amber}
+[`r stats$version_cran`]{.num} [on CRAN (`r stats$version_dev` in dev)]{.lbl}
+:::
+::: {.stat .amber}
+[`r stats$authors_all`]{.num} [people have committed code, all time]{.lbl}
+:::
+::: {.stat .amber}
+[`r stats$authors_12mo`]{.num} [committers in the last 12 months (`r stats$new_12mo` first-timers)]{.lbl}
+:::
+::: {.stat .amber}
+[`r stats$commits_12mo`]{.num} [commits in the last 12 months]{.lbl}
 :::
 ::::
 
@@ -187,57 +203,77 @@ Governance defines roles that anyone can grow into:
 
 ## data.table joined NumFOCUS (2025)
 
+:::: {.columns}
+::: {.column width="50%"}
+::: {.card .navy}
+### The move
 - Became a **NumFOCUS Sponsored Project** in July 2025
 - **First R-only package** to do so (alongside pandas, scikit-learn, Julia, …)
 - Timed to the **end of the NSF POSE grant** (Aug 2025)
-
-::: {.fragment}
+:::
+:::
+::: {.column width="50%" .fragment}
+::: {.card .teal}
 ### What NumFOCUS gives us
 - Fiscal sponsorship → **tax-deductible donations**
 - Help with grants, taxes, administration, and events
 - A professional **Code of Conduct** reporting process
 - A network of peer projects
 :::
+:::
+::::
 
 ## What NumFOCUS does *not* do
 
-::: {.r-fit-text}
-NumFOCUS handles **structure**, but goverannce still defines the **decision process**.
-:::
+NumFOCUS handles [structure]{.hl-blue}, but governance still defines the [decision process]{.hl-teal}.
 
-- Code decisions → project governance (consensus)
-- Spending decisions → **Committers**
-- Tie-breaker on deadlines → **CRAN Maintainer**
+<br>
+
+::: {.owner-row .teal}
+[Code decisions]{.what} [→]{.arrow} [Project governance (consensus)]{.who}
+:::
+::: {.owner-row .amber}
+[Spending decisions]{.what} [→]{.arrow} [Committers]{.who}
+:::
+::: {.owner-row .blue}
+[Tie-breaker on deadlines]{.what} [→]{.arrow} [CRAN Maintainer]{.who}
+:::
 
 # Funding the work {background-color="#1f3b57"}
 
 ## The sustainability problem
 
-- data.table sits underneath **hundreds** of CRAN/Bioconductor packages and **thousands** indirectly
+- data.table sits underneath [hundreds]{.hl-blue} of CRAN/Bioconductor packages and [thousands]{.hl-blue} indirectly
 - It is used in public health, finance, government, and academia (e.g. directly by Public Health Scotland, Eurostat, Spanish National Statistics Institute, UK Institute and Faculty of Actuaries’)
-- Most of the work is still **volunteer time**
+- Most of the work is still [volunteer time]{.hl-red}
 
 ::: {.fragment}
+::: {.card .teal}
 **NSF POSE (2023–2025)** showed what funding does: more contributors, more reviews, more releases.
 
-So how do we keep that going?
+[So how do we keep that going?]{.hl-amber}
+:::
 :::
 
 ## Funding strategy
 
 :::: {.columns}
 ::: {.column width="50%"}
+::: {.card .blue}
 ### Where it comes from
 - Individual & corporate **donations** via NumFOCUS
 - **Grants** including NSF, UKRI, and some in discussions
 - **Corporate sponsors** that depend on data.table
 :::
+:::
 ::: {.column width="50%"}
+::: {.card .teal}
 ### What it pays for
 - Developer time for **review & triage**
 - Performance and CRAN-compatibility work (r-devel churn, new platforms)
 - Documentation and **translations**
 - Travel, workshops, etc.
+:::
 :::
 ::::
 
@@ -246,7 +282,7 @@ So how do we keep that going?
 
 ## What the policy says
 
-::: {.incremental}
+::: {.incremental .policy}
 - **Package code:** no AI code assistants for anything that ships in the CRAN tarball
 - **Why:** reviewers *can* judge security and quality, but nobody can verify **license / IP provenance** of generated code
 - **Peripheral files are fine:** anything in `.Rbuildignore` (CI configs, GitHub Actions, etc.) may use LLMs
@@ -265,9 +301,11 @@ So how do we keep that going?
 [![](images/aiprobs.png)](https://bsky.app/profile/healthandstats.bsky.social/post/3mxb27m2w5s2w)
 :::
 ::: {.column width="50%"}
+::: {.card .red}
 - data.table is **MPL-2.0** and sits deep in many dependency trees
 - Unclear provenance could become a problem **for everyone downstream**
 - It also protects **reviewer time**: low-effort generated PRs cost more to review than they're worth
+:::
 :::
 ::::
 
@@ -290,12 +328,31 @@ Steady releases, each discussed in an issue and agreed by consensus
 
 ## Coming in the next release (1.18.99 dev) {.smaller}
 
-- **GForce / lapply optimizer rewrite**: an AST walker with modular optimization paths
-  - `Map(fun, .SD)` gets optimized
-  - `sum(as.numeric(x))` and `max(x) - min(x)` now use GForce
-- `nafill()` / `setnafill()` handle **logical, factor, character, Date, POSIXct**
-- `dcast()` / `melt()` work directly on **data.frames**
-- `showProgress=` accepts an update interval in seconds
+::: {.card .blue}
+### GForce / lapply optimizer rewrite
+An AST walker with modular optimization paths
+
+- `Map(fun, .SD)` gets optimized
+- `sum(as.numeric(x))` and `max(x) - min(x)` now use GForce
+:::
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.card .teal}
+`nafill()` / `setnafill()` handle **logical, factor, character, Date, POSIXct**
+:::
+:::
+::: {.column width="33%"}
+::: {.card .amber}
+`dcast()` / `melt()` work directly on **data.frames**
+:::
+:::
+::: {.column width="33%"}
+::: {.card .purple}
+`showProgress=` accepts an update interval in seconds
+:::
+:::
+::::
 
 ## Example: the GForce rewrite
 
@@ -323,21 +380,25 @@ DT[, Map(sum, .SD), by = g]
 
 :::: {.columns}
 ::: {.column width="50%"}
+::: {.card .teal}
 ### Contribute
 - Triage or reproduce issues
 - Review PRs in areas you know (if beginner, look for beginner tag)
 - Write docs, vignettes, translations
 - Submit to **The Raft** blog
 :::
+:::
 ::: {.column width="50%"}
+::: {.card .amber}
 ### Support
 - **Donate** via NumFOCUS (tax-deductible)
 - Ask your employer to **sponsor**
 - Tell us about your **use case**, since it helps grant applications
 :::
+:::
 ::::
 
-## Thank you {.center}
+## Thank you {.center background-color="#1f3b57"}
 
 **github.com/Rdatatable/data.table**
 

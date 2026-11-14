@@ -1,0 +1,124 @@
+/*-- scss:defaults --*/
+// Palette matches the section backgrounds, the contributors plot, and roadmap.svg
+$dt-navy:   #1f3b57;
+$dt-blue:   #1f77b4;
+$dt-teal:   #2a9d8f;
+$dt-amber:  #d98a1c;
+$dt-red:    #d1495b;
+$dt-purple: #8e5ec9;
+$dt-slate:  #5b6573;
+
+$presentation-heading-color: $dt-navy;
+$link-color: $dt-blue;
+$code-color: $dt-red;
+
+/*-- scss:rules --*/
+
+// ---- Text accents -------------------------------------------------------
+.reveal strong { color: $dt-navy; }
+.reveal .slides section ul li::marker { color: $dt-teal; }
+
+.reveal h3 {
+  color: $dt-teal;
+  font-size: 1.05em;
+  border-bottom: 3px solid currentColor;
+  padding-bottom: 0.15em;
+  margin-bottom: 0.5em;
+}
+
+.hl-teal   { color: $dt-teal;   font-weight: 700; }
+.hl-amber  { color: $dt-amber;  font-weight: 700; }
+.hl-red    { color: $dt-red;    font-weight: 700; }
+.hl-blue   { color: $dt-blue;   font-weight: 700; }
+.hl-muted  { color: #8a94a3; }
+
+// ---- Cards: tinted box with a colored left rule -------------------------
+@mixin dt-card($c) {
+  background: rgba($c, 0.09);
+  border-left: 8px solid $c;
+  h3 { color: $c; }
+  strong { color: darken($c, 12%); }
+  ul li::marker { color: $c; }
+}
+.reveal .card {
+  border-radius: 10px;
+  padding: 0.45em 0.9em 0.6em;
+  margin: 0 0.3em 0.5em;
+  box-sizing: border-box;
+  &.teal   { @include dt-card($dt-teal); }
+  &.amber  { @include dt-card($dt-amber); }
+  &.blue   { @include dt-card($dt-blue); }
+  &.red    { @include dt-card($dt-red); }
+  &.navy   { @include dt-card($dt-navy); }
+  &.purple { @include dt-card($dt-purple); }
+  ul { margin-left: 1em; }
+  p:last-child, ul:last-child { margin-bottom: 0; }
+}
+
+// ---- Stat tiles ("By the numbers") --------------------------------------
+.reveal .stat-label {
+  font-size: 0.6em; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: $dt-slate; margin: 0.4em 0 0.2em;
+}
+.reveal .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.45em;
+  margin-bottom: 0.4em;
+}
+.reveal .stat {
+  border-radius: 10px;
+  padding: 0.35em 0.5em 0.45em;
+  text-align: center;
+  line-height: 1.15;
+  .num { display: block; font-size: 1.45em; font-weight: 800; }
+  .lbl { display: block; font-size: 0.55em; color: #3a4350; margin-top: 0.2em; }
+  p { margin: 0; }
+  &.teal  { background: rgba($dt-teal, 0.12);  .num { color: darken($dt-teal, 6%); } }
+  &.amber { background: rgba($dt-amber, 0.13); .num { color: darken($dt-amber, 8%); } }
+}
+
+// ---- Policy list: each item becomes a colored strip ---------------------
+.reveal .policy ul { list-style: none; margin-left: 0; }
+.reveal .policy li {
+  border-left: 8px solid $dt-teal;
+  background: rgba($dt-teal, 0.08);
+  border-radius: 8px;
+  padding: 0.3em 0.7em;
+  margin-bottom: 0.4em;
+  font-size: 0.85em;
+}
+.reveal .policy li:nth-child(1) { border-color: $dt-red;   background: rgba($dt-red, 0.08); }
+.reveal .policy li:nth-child(2) { border-color: $dt-amber; background: rgba($dt-amber, 0.09); }
+
+// ---- Decision-owner rows ("What NumFOCUS does not do") ------------------
+.reveal .owner-row {
+  margin: 0.35em 0; font-size: 0.85em;
+  > p { display: flex; align-items: center; gap: 0.6em; }
+  .what { flex: 1; text-align: right; color: $dt-slate; }
+  .arrow { color: #b8c0cc; }
+  .who {
+    flex: 1; font-weight: 700; color: #fff;
+    border-radius: 999px; padding: 0.15em 0.8em;
+  }
+  &.teal  .who { background: $dt-teal; }
+  &.amber .who { background: $dt-amber; }
+  &.blue  .who { background: $dt-blue; }
+  > p { margin: 0; }
+}
+
+// ---- Tables -------------------------------------------------------------
+.reveal table thead th {
+  background: $dt-navy;
+  color: #fff;
+  border-bottom: none;
+}
+.reveal table tbody tr:nth-child(even) { background: rgba($dt-navy, 0.05); }
+
+// ---- Dark slides (section headers, thank-you) ---------------------------
+.reveal .has-dark-background,
+.reveal section.has-dark-background {
+  strong { color: #8fd3c8; }
+  a { color: #f2c27b; }
+  h1, h2, h3 { color: #fff; }
+}
