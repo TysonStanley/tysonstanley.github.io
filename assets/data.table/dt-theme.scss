@@ -35,8 +35,7 @@ $code-color: $dt-red;
 // ---- Cards: tinted box with a colored left rule -------------------------
 @mixin dt-card($c) {
   background: rgba($c, 0.09);
-  border-left: 8px solid $c;
-  h3 { color: $c; }
+  h3, .card-title { color: $c; }
   strong { color: darken($c, 12%); }
   ul li::marker { color: $c; }
 }
@@ -53,6 +52,16 @@ $code-color: $dt-red;
   &.purple { @include dt-card($dt-purple); }
   ul { margin-left: 1em; }
   p:last-child, ul:last-child { margin-bottom: 0; }
+  // Card headings are spans, not ### headings: a div that opens with a
+  // heading becomes a <section>, which reveal.js treats as a nested slide.
+  .card-title {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05em;
+    border-bottom: 3px solid currentColor;
+    padding-bottom: 0.15em;
+    margin-bottom: 0.3em;
+  }
 }
 
 // ---- Stat tiles ("By the numbers") --------------------------------------
@@ -121,4 +130,27 @@ $code-color: $dt-red;
   strong { color: #8fd3c8; }
   a { color: #f2c27b; }
   h1, h2, h3 { color: #fff; }
+}
+
+// ---- Visual extras -----------------------------------------------------
+.reveal .xkcd { text-align: center; }
+.reveal .xkcd img { margin: 0 auto; }
+.reveal .credit { display: block; font-size: 0.55em; color: #8a94a3; }
+
+.reveal .logo-row {
+  text-align: center;
+  margin-top: 0.3em;
+  .logo-caption {
+    display: block; font-size: 0.5em; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #5b6573; margin-bottom: 0.2em;
+  }
+  img { height: 48px; margin: 0 0.55em; vertical-align: middle; }
+  img.nf { height: 40px; }
+  p { margin: 0; }
+}
+
+.reveal .qr {
+  text-align: center;
+  img { border-radius: 10px; border: 6px solid #fff; margin: 0 auto; }
+  .qr-caption { display: block; font-size: 0.6em; color: #f2c27b; margin-top: 0.3em; }
 }

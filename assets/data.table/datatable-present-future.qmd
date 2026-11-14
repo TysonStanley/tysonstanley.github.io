@@ -3,6 +3,11 @@ title: "The present and future of `data.table`"
 subtitle: "Celebrating `data.table`'s Anniversary"
 author: "Tyson S. Barrett"
 date: today
+title-slide-attributes:
+  data-background-image: images/logos/datatable-hex.png
+  data-background-size: 14%
+  data-background-position: 94% 90%
+  data-background-opacity: "0.35"
 format:
   revealjs:
     theme: [default, dt-theme.scss]
@@ -130,30 +135,76 @@ This talk is about [what is happening right now]{.hl-teal} and some hints about 
 :::
 ::::
 
+```{r}
+#| label: downloads-trend
+#| fig-width: 12
+#| fig-height: 1.7
+#| eval: false
+# Monthly downloads from the Posit CRAN mirror (cranlogs). Silently skipped
+# if cranlogs/network are unavailable at render time.
+trend = NULL
+try({
+  d = data.table::as.data.table(
+    cranlogs::cran_downloads("data.table", from = "2016-01-01", to = Sys.Date() - 1))
+  trend = d[, .(n = sum(count)), by = .(month = as.IDate(format(date, "%Y-%m-01")))]
+  trend = trend[month < as.IDate(format(Sys.Date(), "%Y-%m-01"))]
+}, silent = TRUE)
+if (!is.null(trend) && nrow(trend) > 0) {
+  print(
+    ggplot(trend, aes(month, n)) +
+      geom_area(fill = "#2a9d8f", alpha = 0.18) +
+      geom_line(colour = "#2a9d8f", linewidth = 1) +
+      scale_y_continuous(labels = scales::label_number(scale_cut = scales::cut_short_scale()),
+                         n.breaks = 3) +
+      labs(x = NULL, y = NULL,
+           title = "Monthly CRAN downloads (Posit mirror), since 2016") +
+      theme_minimal(base_size = 14) +
+      theme(panel.grid.minor = element_blank(),
+            plot.title = element_text(size = 12, colour = "#5b6573", face = "bold"))
+  )
+}
+```
 
-## Supporting Popular Packages {.smaller .scrollable}
 
+## Supporting Popular Packages
 
-|	 | Package    | Downloads (30 days)  | What it is |
-|----|------------|----------------------|------------|
-|1	 | dtplyr     | 306,927	             | data.table backend for dplyr
-|2	 | plotly     | 253,181	             | Interactive graphics
-|3	 | Hmisc      | 215,002	             | Harrell’s miscellaneous stats tools
-|4	 | prodlim    | 119,576	             | Product-limit survival estimation
-|5	 | flextable  | 104,318	             | Tables for Word, PowerPoint and HTML
-|6	 | ModelMetrics | 82,254             | Model performance metrics
-|7	 | xgboost	  | 72,042               | Gradient boosting
-|8	 | DescTools  | 65,576               | Descriptive statistics
-|9	 | fastDummies | 61,199              | Dummy-variable creation
-|10	 | rlist      | 49,934               | List manipulation
-|11	 | rio	      | 42,538               | Data import and export
-|12	 | modelsummary | 37,048             | Regression tables
-|13	 | marginaleffects | 36,806          | Marginal effects
+```{r}
+#| label: revdep-packages
+#| fig-width: 12
+#| fig-height: 6.2
+pk = data.table(
+  pkg  = c("dtplyr", "plotly", "Hmisc", "prodlim", "flextable", "ModelMetrics",
+           "xgboost", "DescTools", "fastDummies", "rlist", "rio",
+           "modelsummary", "marginaleffects"),
+  dl   = c(306927, 253181, 215002, 119576, 104318, 82254,
+           72042, 65576, 61199, 49934, 42538, 37048, 36806),
+  what = c("data.table backend for dplyr", "Interactive graphics",
+           "Harrell's miscellaneous stats tools", "Product-limit survival estimation",
+           "Tables for Word, PowerPoint and HTML", "Model performance metrics",
+           "Gradient boosting", "Descriptive statistics", "Dummy-variable creation",
+           "List manipulation", "Data import and export", "Regression tables",
+           "Marginal effects")
+)
+pk[, label := paste0(format(dl, big.mark = ","), "  ·  ", what)]
+
+ggplot(pk, aes(dl, reorder(pkg, dl))) +
+  geom_col(fill = "#2a9d8f", width = 0.72) +
+  geom_text(aes(label = label), hjust = 0, nudge_x = 5000,
+            size = 4.6, colour = "#3a4350") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.02)),
+                     limits = c(0, max(pk$dl) * 1.8)) +
+  labs(x = NULL, y = NULL,
+       title = "Packages that depend on data.table · CRAN downloads, last 30 days") +
+  theme_minimal(base_size = 17) +
+  theme(panel.grid = element_blank(), axis.text.x = element_blank(),
+        axis.text.y = element_text(face = "bold", colour = "#1f3b57"),
+        plot.title = element_text(size = 14, colour = "#5b6573", face = "bold"))
+```
 
 ## Contributors per year
 
 ```{r}
-#| label: fig-contributors
+#| label: contributors
 #| fig-width: 10
 #| fig-height: 5
 contrib = data.table(
@@ -201,12 +252,13 @@ Governance defines roles that anyone can grow into:
 
 # A new home: NumFOCUS {background-color="#1f3b57"}
 
-## data.table joined NumFOCUS (2025)
+## data.table joined NumFOCUS (2025) {.smaller}
 
 :::: {.columns}
 ::: {.column width="50%"}
 ::: {.card .navy}
-### The move
+[The move]{.card-title}
+
 - Became a **NumFOCUS Sponsored Project** in July 2025
 - **First R-only package** to do so (alongside pandas, scikit-learn, Julia, …)
 - Timed to the **end of the NSF POSE grant** (Aug 2025)
@@ -214,7 +266,8 @@ Governance defines roles that anyone can grow into:
 :::
 ::: {.column width="50%" .fragment}
 ::: {.card .teal}
-### What NumFOCUS gives us
+[What NumFOCUS gives us]{.card-title}
+
 - Fiscal sponsorship → **tax-deductible donations**
 - Help with grants, taxes, administration, and events
 - A professional **Code of Conduct** reporting process
@@ -222,6 +275,12 @@ Governance defines roles that anyone can grow into:
 :::
 :::
 ::::
+
+::: {.logo-row}
+[Alongside other NumFOCUS sponsored projects]{.logo-caption}
+
+![](images/logos/numfocus.png){.nf} ![](images/logos/pandas.svg) ![](images/logos/scikit-learn.svg) ![](images/logos/numpy.svg) ![](images/logos/jupyter.svg) ![](images/logos/julia.svg)
+:::
 
 ## What NumFOCUS does *not* do
 
@@ -241,26 +300,35 @@ NumFOCUS handles [structure]{.hl-blue}, but governance still defines the [decisi
 
 # Funding the work {background-color="#1f3b57"}
 
-## The sustainability problem
+## The sustainability problem {.smaller}
 
+:::: {.columns}
+::: {.column width="62%"}
 - data.table sits underneath [hundreds]{.hl-blue} of CRAN/Bioconductor packages and [thousands]{.hl-blue} indirectly
 - It is used in public health, finance, government, and academia (e.g. directly by Public Health Scotland, Eurostat, Spanish National Statistics Institute, UK Institute and Faculty of Actuaries’)
 - Most of the work is still [volunteer time]{.hl-red}
 
-::: {.fragment}
 ::: {.card .teal}
 **NSF POSE (2023–2025)** showed what funding does: more contributors, more reviews, more releases.
 
 [So how do we keep that going?]{.hl-amber}
 :::
-:::
 
-## Funding strategy
+:::
+::: {.column width="38%" .xkcd}
+![](images/xkcd-dependency.png){height="440px"}
+
+[xkcd #2347 "Dependency" · Randall Munroe · CC BY-NC 2.5](https://xkcd.com/2347/){.credit}
+:::
+::::
+
+## Funding strategy {.smaller}
 
 :::: {.columns}
 ::: {.column width="50%"}
 ::: {.card .blue}
-### Where it comes from
+[Where it comes from]{.card-title}
+
 - Individual & corporate **donations** via NumFOCUS
 - **Grants** including NSF, UKRI, and some in discussions
 - **Corporate sponsors** that depend on data.table
@@ -268,7 +336,8 @@ NumFOCUS handles [structure]{.hl-blue}, but governance still defines the [decisi
 :::
 ::: {.column width="50%"}
 ::: {.card .teal}
-### What it pays for
+[What it pays for]{.card-title}
+
 - Developer time for **review & triage**
 - Performance and CRAN-compatibility work (r-devel churn, new platforms)
 - Documentation and **translations**
@@ -317,11 +386,31 @@ NumFOCUS handles [structure]{.hl-blue}, but governance still defines the [decisi
 
 ```{r}
 #| label: releases
+#| fig-width: 12
+#| fig-height: 4.6
 rel = data.table(
   version = c("1.17.0", "1.17.8", "1.18.0", "1.18.2.1", "1.18.4", "1.18.6"),
   date    = as.IDate(c("2025-02-21", "2025-07-10", "2025-12-24", "2026-01-27", "2026-05-05", "2026-08-24"))
 )
-knitr::kable(rel, col.names = c("Version", "Tagged"))
+rel[, `:=`(y = rep(c(1, -1), length.out = .N), lab = paste0("v", version, "\n", format(date, "%b %Y")))]
+
+ggplot(rel, aes(date, 0)) +
+  annotate("rect", xmin = as.IDate("2025-07-01"), xmax = as.IDate("2025-08-31"),
+           ymin = -Inf, ymax = Inf, fill = "#d98a1c", alpha = 0.15) +
+  annotate("text", x = as.IDate("2025-07-31"), y = 1.75,
+           label = "Joined NumFOCUS ·\nNSF POSE grant ends", size = 4.2,
+           colour = "#b06e10", fontface = "bold") +
+  geom_hline(yintercept = 0, colour = "#1f3b57", linewidth = 1.2) +
+  geom_segment(aes(xend = date, y = 0, yend = y * 0.75), colour = "#9aa5b4") +
+  geom_point(size = 5, colour = "#1f77b4") +
+  geom_label(aes(y = y * 0.95, label = lab), size = 5, label.size = 0,
+             fill = "#e8f1f8", colour = "#1f3b57", lineheight = 0.9) +
+  scale_x_date(date_breaks = "3 months", date_labels = "%b\n%Y",
+               expand = expansion(mult = 0.06)) +
+  scale_y_continuous(limits = c(-1.5, 2.1)) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal(base_size = 15) +
+  theme(panel.grid = element_blank(), axis.text.y = element_blank())
 ```
 
 Steady releases, each discussed in an issue and agreed by consensus
@@ -329,7 +418,8 @@ Steady releases, each discussed in an issue and agreed by consensus
 ## Coming in the next release (1.18.99 dev) {.smaller}
 
 ::: {.card .blue}
-### GForce / lapply optimizer rewrite
+[GForce / lapply optimizer rewrite]{.card-title}
+
 An AST walker with modular optimization paths
 
 - `Map(fun, .SD)` gets optimized
@@ -376,12 +466,13 @@ DT[, Map(sum, .SD), by = g]
 
 ![](images/roadmap.svg)
 
-## How you can help
+## How you can help {.smaller}
 
 :::: {.columns}
 ::: {.column width="50%"}
 ::: {.card .teal}
-### Contribute
+[Contribute]{.card-title}
+
 - Triage or reproduce issues
 - Review PRs in areas you know (if beginner, look for beginner tag)
 - Write docs, vignettes, translations
@@ -390,7 +481,8 @@ DT[, Map(sum, .SD), by = g]
 :::
 ::: {.column width="50%"}
 ::: {.card .amber}
-### Support
+[Support]{.card-title}
+
 - **Donate** via NumFOCUS (tax-deductible)
 - Ask your employer to **sponsor**
 - Tell us about your **use case**, since it helps grant applications
@@ -398,13 +490,22 @@ DT[, Map(sum, .SD), by = g]
 :::
 ::::
 
-## Thank you {.center background-color="#1f3b57"}
+## Thank you {.center background-color="#1f3b57" background-image="images/logos/datatable-hex.png" background-size="10%" background-position="95% 7%" background-opacity="0.25"}
 
+:::: {.columns}
+::: {.column width="62%"}
 **github.com/Rdatatable/data.table**
 
 **numfocus.org/project/data-table**
 
 **rdatatable-community.github.io/The-Raft**
+:::
+::: {.column width="38%" .qr}
+![](images/qr-numfocus-datatable.png){width="260px"}
+
+[Support data.table via NumFOCUS]{.qr-caption}
+:::
+::::
 
 ```{r}
 #| label: refresh-git-stats
