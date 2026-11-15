@@ -243,7 +243,8 @@ Governance defines roles that anyone can grow into:
 
 | Role | How you get there |
 |------|-------------------|
-| **Contributor** | Open an issue or PR |
+| **Contributor** | Open an issue or PR, give a talk, helped triage issues, written a blog post |
+| **Project Member** | Submit at least one PR with substantial contributions that were merged |
 | **Reviewer** | After significant PRs to a file → listed in CODEOWNERS |
 | **Committer** | Consistent careful reviews → consensus of Committers |
 | **CRAN Maintainer** | PR to DESCRIPTION + CRAN handoff |
@@ -260,7 +261,7 @@ Governance defines roles that anyone can grow into:
 [The move]{.card-title}
 
 - Became a **NumFOCUS Sponsored Project** in July 2025
-- **First R-only package** to do so (alongside pandas, scikit-learn, Julia, …)
+- **First R-only package** to do so (alongside pandas, scikit-learn, Julia)
 - Timed to the **end of the NSF POSE grant** (Aug 2025)
 :::
 :::
@@ -305,7 +306,7 @@ NumFOCUS handles [structure]{.hl-blue}, but governance still defines the [decisi
 :::: {.columns}
 ::: {.column width="62%"}
 - data.table sits underneath [hundreds]{.hl-blue} of CRAN/Bioconductor packages and [thousands]{.hl-blue} indirectly
-- It is used in public health, finance, government, and academia (e.g. directly by Public Health Scotland, Eurostat, Spanish National Statistics Institute, UK Institute and Faculty of Actuaries’)
+- It is used in public health, finance, government, and academia (e.g. directly by Public Health Scotland, Eurostat, Spanish National Statistics Institute, UK Institute and Faculty of Actuaries, indirectly by many others)
 - Most of the work is still [volunteer time]{.hl-red}
 
 ::: {.card .teal}
@@ -338,7 +339,7 @@ NumFOCUS handles [structure]{.hl-blue}, but governance still defines the [decisi
 ::: {.card .teal}
 [What it pays for]{.card-title}
 
-- Developer time for **review & triage**
+- Developer time for **general maintenance, new features, review & triage**
 - Performance and CRAN-compatibility work (r-devel churn, new platforms)
 - Documentation and **translations**
 - Travel, workshops, etc.
